@@ -1,0 +1,20444 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_140129154                          ║
+// ║  VA        : 0x140129154                            ║
+// ║  RVA       : 0x129154                               ║
+// ║  Type      : Annotated ASM                          ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ⚠ SUSPICIOUS PATTERNS DETECTED:
+//   [0x1401298B9] cpuid  --  CPUID: VM/hypervisor detection
+//   [0x14013A462] cpuid  --  CPUID: VM/hypervisor detection
+//   [0x14015FD67] cpuid  --  CPUID: VM/hypervisor detection
+//   [0x140160796] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x1401607A2] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x140160B1C] cpuid  --  CPUID: VM/hypervisor detection
+//   [0x140161173] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x14016117F] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x14016146E] cpuid  --  CPUID: VM/hypervisor detection
+//   [0x140161D3E] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x140161D4A] rdtsc  --  RDTSC: timing-based anti-debug
+//   [0x14016221C] cpuid  --  CPUID: VM/hypervisor detection
+//
+// ── CALLED BY (1) ──
+//   0x140024F84  ??
+//
+// ── CALLS TO (30) ──
+//   0x140129157  sub_140129154
+//   0x14012915B  sub_140129154
+//   0x14012915F  sub_140129154
+//   0x140129163  sub_140129154
+//   0x140129164  sub_140129154
+//   0x140129166  sub_140129154
+//   0x140129168  sub_140129154
+//   0x14012916A  sub_140129154
+//   0x14012916C  sub_140129154
+//   0x140129173  sub_140129154
+//   0x14012917A  sub_140129154
+//   0x140129181  sub_140129154
+//   0x140129184  sub_140129154
+//   0x14012918B  sub_140129154
+//   0x14012918E  sub_140129154
+//   0x140129192  sub_140129154
+//   0x140129196  sub_140129154
+//   0x1401291A0  sub_140129154
+//   0x1401291A3  sub_140129154
+//   0x1401291A6  sub_140129154
+//   0x1401291AC  sub_140129154
+//   0x14012959C  sub_140129154
+//   0x140129322  sub_140129154
+//   0x140129323  sub_140129154
+//   0x1401293B2  sub_140129154
+//   0x140129344  sub_140129154
+//   0x140129346  sub_140129154
+//   0x140129349  sub_140129154
+//   0x14012934B  sub_140129154
+//   0x1401293C4  sub_140129154
+//
+// ── IMPORTED API CALLS (2) ──
+//   KeAcquireSpinLockRaiseToDpc
+//   ExSystemTimeToLocalTime
+//
+// ───────────────────────────────────────────────────────
+
+; ═══════════════════════════════════════════════
+; DISASSEMBLY (Hex-Rays decompilation unavailable)
+; Function size : 237407 bytes
+; ═══════════════════════════════════════════════
+
+; ── Called by ──────────────────────────────────
+;   0x140024F84  ??
+;
+; ── Imported API calls ──────────────────────────
+;   KeAcquireSpinLockRaiseToDpc
+;   ExSystemTimeToLocalTime
+;
+; ── Instructions ───────────────────────────────
+  0000000140129154  mov     rax, rsp
+  0000000140129157  mov     [rax+10h], rbx
+  000000014012915B  mov     [rax+18h], rsi
+  000000014012915F  mov     [rax+20h], rdi
+  0000000140129163  push    rbp
+  0000000140129164  push    r12
+  0000000140129166  push    r13
+  0000000140129168  push    r14
+  000000014012916A  push    r15
+  000000014012916C  lea     rbp, [rax-248h]
+  0000000140129173  sub     rsp, 320h
+  000000014012917A  mov     rax, cs:__security_cookie
+  0000000140129181  xor     rax, rsp
+  0000000140129184  mov     [rbp+240h+var_30], rax
+  000000014012918B  mov     rsi, rcx
+  000000014012918E  mov     [rbp+240h+var_258], rcx
+  0000000140129192  lea     rcx, [rbp+240h+var_248]
+  0000000140129196  mov     rax, 1A4B6CBB6B5h
+  00000001401291A0  xor     r12d, r12d
+  00000001401291A3  cmp     rcx, rax
+  00000001401291A6  jnb     loc_14012959C
+  00000001401291AC  jmp     loc_140129322
+  00000001401291B1  db 0E8h, 6Ah, 0E6h, 0F8h, 0FFh, 0Fh, 83h
+  00000001401291B8  dq 8B0F5341000302A0h, 0F6FE6FE800016BEBh, 8C0F0001FAE4E8FFh
+  0000000140129320  add     al, [rax]
+  0000000140129322  nop
+  0000000140129323  jmp     loc_1401293B2
+  0000000140129328  dq 7E890F0002B586E8h, 0FFF8DC00E8000294h
+  0000000140129338  db 0Fh, 86h, 0D7h, 0B4h, 2 dup(0)
+  000000014012933E  fimul   [rbp+240h+var_5DF8626]
+  0000000140129344  xchg    eax, r12d
+  0000000140129346  or      ebx, [rcx-78h]
+  0000000140129349  jp      short loc_1401293C4
+  000000014012934B  sahf
+  000000014012934C  pop     rbp
+  000000014012934D  pop     r13
+  000000014012934F  pop     r14
+  0000000140129351  pop     r15
+  0000000140129353  pop     r12
+  0000000140129355  jmp     loc_140147703
+  0000000140129379  db 6Bh, 68h, 97h, 72h, 5Ah, 0F3h, 19h
+  00000001401293B2  call    sub_140221388
+  00000001401293B7  jmp     rax
+  00000001401293B9  db 0E8h, 9Ah, 0FDh, 0F6h, 0FFh, 0E8h, 0E7h
+  00000001401293C0  db 63h, 1, 0, 0Fh
+  00000001401293C4  mov     dl, ch
+  00000001401293C6  pop     rbp
+  00000001401293C7  db 0
+  00000001401293C8  dq 0FAE8FFF6FD82E800h, 3894870F0001E1h, 0FFFFFD86E95E4100h
+  0000000140129480  db 0C1h, 41h, 23h, 0CBh, 0Bh, 0C8h, 41h
+  0000000140129487  rol     ebx, 1Eh
+  000000014012948A  mov     r15d, es
+  000000014012948D  mov     eax, [rsp+330h+var_2E4]
+  0000000140129491  rcr     r9b, cl
+  0000000140129494  add     ecx, r8d
+  0000000140129497  ror     sil, 23h
+  000000014012949B  xor     eax, r15d
+  000000014012949E  mov     edx, ebx
+  00000001401294A0  or      dil, r15b
+  00000001401294A3  xor     eax, [rsp+330h+var_2D8]
+  00000001401294A7  rol     ebp, cl
+  00000001401294A9  xor     eax, [rsp+330h+var_300]
+  00000001401294AD  rol     eax, 1
+  00000001401294AF  rcr     dl, 1
+  00000001401294B1  mov     [rsp+330h+var_308], eax
+  00000001401294B5  mov     eax, r11d
+  00000001401294B8  mov     r15d, [rsp+330h+var_308]
+  00000001401294BD  and     eax, r10d
+  00000001401294C0  rol     edx, 5
+  00000001401294C3  or      r12d, 0FFFFFFCBh
+  00000001401294C7  add     edx, [rsp+330h+var_2FC]
+  00000001401294CB  and     r10d, r15d
+  00000001401294CE  lea     r8d, [rdx-70E44324h]
+  00000001401294D5  add     r8d, ecx
+  00000001401294D8  mov     ecx, r11d
+  00000001401294DB  rcl     r10d, 1
+  00000001401294DE  or      ecx, r10d
+  00000001401294E1  mov     edx, r8d
+  00000001401294E4  and     ecx, ebx; SpinLock
+  00000001401294E6  rol     r11d, 1
+  00000001401294E9  jg      loc_14014E2D3
+  00000001401294EF  jle     short loc_140129549
+  00000001401294F2  lea     esi, [rax-6Dh]
+  00000001401294F5  pop     rbp
+  00000001401294F6  jnz     short loc_140129487
+  00000001401294F8  jg      short near ptr loc_1401294FF+1
+  00000001401294FA  and     al, 6Eh
+  00000001401294FC  pop     rsp
+  00000001401294FE  push    rbp
+  00000001401294FF  jmp     near ptr 1058A1263h
+  0000000140129504  dd 5B510052h
+  0000000140129508  dq 5550A156F05CB415h, 525EFF737875BFD6h, 61E8763B5AA2E077h
+  0000000140129530  db 0Fh, 8Ch, 5Ch, 5Dh
+  0000000140129534  add     al, [rax]
+  0000000140129536  add     rsp, r12
+  0000000140129539  jl      loc_1401333A4
+  000000014012953F  nop
+  0000000140129540  nop
+  0000000140129541  nop
+  0000000140129542  nop
+  0000000140129543  nop
+  0000000140129544  nop
+  0000000140129545  jmp     short loc_14012959C
+  0000000140129547  db 0E8h
+  0000000140129548  db 28h
+  0000000140129549  cdq
+  000000014012954A  add     eax, [rax]
+  000000014012954C  jo      loc_14012F3D1
+  0000000140129552  push    rdx
+  0000000140129553  jz      loc_14015775E
+  0000000140129559  push    rbp
+  000000014012955A  jg      loc_1401327FD
+  0000000140129560  call    near ptr KeAcquireSpinLockRaiseToDpc
+  0000000140129565  call    loc_14015C182
+  000000014012956A  jz      loc_140132C71
+  0000000140129570  push    r9
+  0000000140129572  jo      loc_14012B301
+  0000000140129578  pop     r13
+  000000014012957A  mov     rsp, r11
+  000000014012957D  jmp     loc_14012A88B
+  0000000140129598  pop     rdi
+  0000000140129599  jno     short loc_140129534
+  000000014012959B  push    rsp
+  000000014012959C  cmp     [rsi+180h], r12b
+  00000001401295A3  jz      loc_140129B61
+  00000001401295A9  jmp     loc_140129659
+  00000001401295AE  dw 5DB6h
+  00000001401295B0  dq 0C779CF581F5F7964h, 0C45799AF75553A13h, 22415C7751A58DBCh
+  0000000140129658  db 0
+  0000000140129659  mov     r9, [rsi+188h]
+  0000000140129660  lea     r11, cs:19097012Ch
+  0000000140129667  mov     rax, 67730E4EA6CC5B54h
+  0000000140129671  mov     r11d, r11d
+  0000000140129674  mov     rcx, r9
+  0000000140129677  lea     rdi, cs:17CEC0DC8h
+  000000014012967E  not     rcx
+  0000000140129681  mov     edi, edi
+  0000000140129683  sub     rcx, rax
+  0000000140129686  lea     rbx, cs:1BFF0EFB3h
+  000000014012968D  ror     rcx, 22h
+  0000000140129691  mov     rax, 77F53BDE3DC538F6h
+  000000014012969B  add     rax, rcx
+  000000014012969E  mov     ebx, ebx
+  00000001401296A0  mov     rdx, 845E46DABCA282BCh
+  00000001401296AA  mov     r8, 0DD7DBFE7DD6BADE6h
+  00000001401296B4  xor     rdx, rax
+  00000001401296B7  mov     rax, 9621984DD784988h
+  00000001401296C1  imul    rdx, rcx
+  00000001401296C5  imul    r11, rax
+  00000001401296C9  mov     rcx, 0A6EFFC5825563DD3h
+  00000001401296D3  mov     eax, 0AB1E57E0h
+  00000001401296D8  add     rdx, rcx
+  00000001401296DB  xor     r8, rdx
+  00000001401296DE  lea     ecx, [rdx-8]
+  00000001401296E1  mov     r10, r11
+  00000001401296E4  xor     r10, rax
+  00000001401296E7  lea     rdx, cs:1BFF7432Bh
+  00000001401296EE  xor     ecx, 0FFFFFFE8h
+  00000001401296F1  mov     edx, edx
+  00000001401296F3  sub     ecx, 1Ah
+  00000001401296F6  mov     rax, 8E1326474C346E4Ch
+  0000000140129700  imul    r10, rax
+  0000000140129704  and     ecx, 3Fh
+  0000000140129707  mov     rax, 12C43309BAF09310h
+  0000000140129711  rol     r8, cl
+  0000000140129714  mov     rcx, 0DEB39C62B7013D38h
+  000000014012971E  imul    rdi, rax
+  0000000140129722  bswap   r8
+  0000000140129725  mov     rax, 23D0C003D0A2155Ch
+  000000014012972F  xor     r8, rax
+  0000000140129732  mov     rax, 109621984DD78498h
+  000000014012973C  imul    r8, rax
+  0000000140129740  mov     rax, r11
+  0000000140129743  imul    rax, rcx
+  0000000140129747  mov     rcx, 7FD14A40C02F7136h
+  0000000140129751  sub     r8, rax
+  0000000140129754  mov     rax, 3419E1AC6DBA0449h
+  000000014012975E  add     r8, rax
+  0000000140129761  mov     rax, r8
+  0000000140129764  jmp     short loc_1401297C9
+  0000000140129766  fisubr  dword ptr [rbx+58h]
+  0000000140129769  jb      short loc_14012975E
+  000000014012976B  pop     rbx
+  000000014012976C  push    rbx
+  000000014012976E  pop     r13
+  0000000140129770  pop     r12
+  0000000140129772  pop     rbp
+  0000000140129773  jmp     loc_1401367A7
+  0000000140129778  add     rsp, rbp
+  000000014012977B  jle     loc_14013DB8B
+  0000000140129781  push    r12
+  0000000140129783  jp      loc_1401354D9
+  0000000140129789  push    r10
+  000000014012978B  jnp     loc_14012D88B
+  0000000140129791  jmp     loc_14015CDED
+  0000000140129796  dw 8148h
+  0000000140129798  dq 348D0F00000698C4h, 0FFF6F8F8E8000089h, 798D0F0002FAA5E8h
+  00000001401297C9  xor     rax, rcx
+  00000001401297CC  mov     rcx, 91C3863CAF805757h
+  00000001401297D6  imul    rdx, rcx
+  00000001401297DA  rol     rax, 3
+  00000001401297DE  mov     rcx, 0B9DC46EB0DFA3330h
+  00000001401297E8  imul    rax, rcx
+  00000001401297EC  xor     rdx, rax
+  00000001401297EF  mov     rax, 0C9B03A28D7B05821h
+  00000001401297F9  xor     rdx, rax
+  00000001401297FC  mov     rcx, rdx
+  00000001401297FF  mov     rax, rdx
+  0000000140129802  shr     rcx, 20h
+  0000000140129806  shl     rax, 20h
+  000000014012980A  imul    rcx, rax
+  000000014012980E  mov     rax, 417FDAFF458E011Ch
+  0000000140129818  add     rcx, rax
+  000000014012981B  mov     rax, 0B2CE5EB842F5710h
+  0000000140129825  or      rcx, rdx
+  0000000140129828  mov     rdx, 4B249CF999B683C6h
+  0000000140129832  add     rax, rcx
+  0000000140129835  xor     rdx, rax
+  0000000140129838  mov     rax, 5459AD34CB779441h
+  0000000140129842  imul    rdx, rcx
+  0000000140129846  mov     rcx, 438745BE17069DAh
+  0000000140129850  add     rdx, rcx
+  0000000140129853  lea     ecx, [rdx-0Ch]
+  0000000140129856  xor     ecx, 0FFFFFFF8h
+  0000000140129859  sub     ecx, 0Dh
+  000000014012985C  and     ecx, 3Fh
+  000000014012985F  imul    rbx, rax
+  0000000140129863  mov     rax, 477ECF384850EFB3h
+  000000014012986D  add     rax, rdx
+  0000000140129870  xor     rbx, rax
+  0000000140129873  mov     rax, r10
+  0000000140129876  shr     rax, 1
+  0000000140129879  ror     rbx, cl
+  000000014012987C  xor     ecx, ecx
+  000000014012987E  imul    r8, rbx
+  0000000140129882  xor     r8, rax
+  0000000140129885  mov     rax, 84B10CC26EBC24Ch
+  000000014012988F  imul    r8, rax
+  0000000140129893  mov     rax, 233107F92E8DC8C0h
+  000000014012989D  add     r8, rax
+  00000001401298A0  mov     rax, 60C6D5ED4005E810h
+  00000001401298AA  imul    r8, r9
+  00000001401298AE  sub     r8, rdi
+  00000001401298B1  add     r8, rax
+  00000001401298B4  mov     eax, 1
+  00000001401298B9  cpuid  ; <<< CPUID: VM/hypervisor detection
+  00000001401298BB  mov     [rbp+240h+var_270], ecx
+  00000001401298BE  jmp     short loc_14012990D
+  00000001401298C0  pop     r13
+  00000001401298C2  jmp     loc_14014EC71
+  00000001401298C7  db 0E8h
+  00000001401298C8  dq 0FC6D820F0000973Bh, 9DE873217D79FFFFh, 28D7E8FFF6F9h
+  00000001401298E8  db 0C4h, 0Fh, 83h, 1Bh, 89h, 2, 0
+  00000001401298EF  push    r15
+  00000001401298F1  ja      loc_14012C94D
+  00000001401298F7  call    loc_1401315C1
+  00000001401298FC  jo      loc_14015FCEA
+  0000000140129902  call    loc_14014A1D7
+  0000000140129907  jo      loc_14014CE3A
+  000000014012990D  mov     [rbp+240h+var_26C], edx
+  0000000140129910  mov     rdx, 0F62208C4B052F52Eh
+  000000014012991A  mov     [rbp+240h+var_274], ebx
+  000000014012991D  lea     ecx, [r8-0Ch]
+  0000000140129921  mov     ebx, eax
+  0000000140129923  and     ecx, 3Fh
+  0000000140129926  mov     rax, rdi
+  0000000140129929  xor     rax, r11
+  000000014012992C  add     rax, r11
+  000000014012992F  imul    rax, r10
+  0000000140129933  add     rdx, rax
+  0000000140129936  mov     eax, ebx
+  0000000140129938  xor     rax, r8
+  000000014012993B  add     rdx, rdi
+  000000014012993E  imul    rdx, rax
+  0000000140129942  mov     rax, 0CB28724FD8B5AE74h
+  000000014012994C  xor     rdx, rax
+  000000014012994F  rol     rdx, cl
+  0000000140129952  mov     rcx, 8B7D5A3BE7D1FD9Ah
+  000000014012995C  mov     rax, rdx
+  000000014012995F  ror     rax, 20h
+  0000000140129963  xor     rax, rcx
+  0000000140129966  add     rax, rdx
+  0000000140129969  mov     rdx, 434D6293494B35E8h
+  0000000140129973  mov     rcx, rax
+  0000000140129976  shr     rcx, 1
+  0000000140129979  xor     rcx, rax
+  000000014012997C  mov     rax, 71F15A94DFBD4106h
+  0000000140129986  sub     rcx, rax
+  0000000140129989  lea     rax, cs:1BFF58315h
+  0000000140129990  mov     eax, eax
+  0000000140129992  imul    rax, rdx
+  0000000140129996  mov     rdx, 597E95281E929CA5h
+  00000001401299A0  xor     rcx, rax
+  00000001401299A3  lea     rax, cs:1BFFA4623h
+  00000001401299AA  mov     eax, eax
+  00000001401299AC  imul    rax, rdx
+  00000001401299B0  mov     rdx, 551C18A58F7D930h
+  00000001401299BA  xor     rcx, rax
+  00000001401299BD  mov     rax, 0C1E9FC2A9ED575EBh
+  00000001401299C7  add     rax, rcx
+  00000001401299CA  xor     rax, rdx
+  00000001401299CD  imul    rax, rcx
+  00000001401299D1  mov     rcx, 7407F972584C32C0h
+  00000001401299DB  add     rax, rcx
+  00000001401299DE  mov     rcx, rax
+  00000001401299E1  not     rcx
+  00000001401299E4  imul    rcx, rax
+  00000001401299E8  mov     rax, 4E6B6FF3D82A08A4h
+  00000001401299F2  xor     rcx, rax
+  00000001401299F5  jmp     short loc_140129A6F
+  00000001401299F7  db 0E8h
+  00000001401299F8  dq 0F9D7870FFFF7E81Ch, 8341E8758B48FFFFh, 100A638443AF3h
+  0000000140129A68  db 0, 0Fh, 82h, 0C9h, 0E7h, 2, 0
+  0000000140129A6F  mov     rax, 0FD5FE716BC7D27DBh
+  0000000140129A79  bswap   rcx
+  0000000140129A7C  xor     rcx, rax
+  0000000140129A7F  mov     rax, 0C3B87067D8B5E8D4h
+  0000000140129A89  xor     rdi, rax
+  0000000140129A8C  add     rcx, r8
+  0000000140129A8F  add     rdi, rbx
+  0000000140129A92  imul    rcx, rdi
+  0000000140129A96  xor     rcx, [rsi+190h]
+  0000000140129A9D  jmp     loc_140129DC2
+  0000000140129AA2  mov     rsp, r11
+  0000000140129AA5  pop     r15
+  0000000140129AA7  pop     r14
+  0000000140129AA9  jmp     loc_140158779
+  0000000140129AAE  dw 29DCh
+  0000000140129AB0  dq 3A97B8B7079D35Ah, 61595ED3175E7150h, 0B4DA587F2447CCC2h
+  0000000140129B60  db 0B7h
+  0000000140129B61  mov     rcx, r12
+  0000000140129B64  jmp     loc_140129DC2
+  0000000140129B69  pop     r13
+  0000000140129B6B  pop     rbp
+  0000000140129B6C  pop     r14
+  0000000140129B6E  jmp     loc_14012933E
+  0000000140129DC0  add     eax, [rax]
+  0000000140129DC2  mov     [rbp+240h+var_288], rcx
+  0000000140129DC6  mov     rax, 3A19AE1F8h
+  0000000140129DD0  lea     rcx, [rbp+240h+var_288]
+  0000000140129DD4  cmp     rcx, rax
+  0000000140129DD7  jnb     loc_140139FC0
+  0000000140129DDD  jmp     loc_140129F47
+  0000000140129DE2  lea     rcx, [rbp+240h+var_268]
+  0000000140129DE6  mov     rax, 3A19AE205h
+  0000000140129DF0  sub     r10b, al
+  0000000140129DF3  cmp     rcx, rax
+  0000000140129DF6  shr     r13d, 1
+  0000000140129DF9  jo      loc_140145BEE
+  0000000140129DFF  pop     r12
+  0000000140129E01  pop     rbp
+  0000000140129E02  pop     r15
+  0000000140129E04  pop     r13
+  0000000140129E06  mov     rsp, r11
+  0000000140129E09  jmp     loc_14013A8FE
+  0000000140129E0E  dw 8B44h
+  0000000140129E10  dq 1BBCDCC18128247Ch, 0C3C1C90344E9D08Fh, 0F8C73341F002401Eh
+  0000000140129F40  add     byte ptr [rbp+240h+var_258+1], bl
+  0000000140129F43  cmp     esp, [rdx]
+  0000000140129F45  add     eax, [rax]
+  0000000140129F47  xor     edx, edx
+  0000000140129F49  lea     rcx, [rbp+240h+var_240]
+  0000000140129F4D  lea     r8d, [rdx+5Ch]
+  0000000140129F51  jmp     loc_14012A2FC
+  0000000140129F56  rol     edi, 1
+  0000000140129F58  mov     eax, r11d
+  0000000140129F5B  rol     r12b, 7Ah
+  0000000140129F5F  rol     eax, 5
+  0000000140129F62  test    bpl, al
+  0000000140129F65  add     eax, 6ED9EBA1h
+  0000000140129F6A  clc
+  0000000140129F6B  mov     [rsp+340h+var_2E0], edi
+  0000000140129F6F  add     eax, edx
+  0000000140129F71  sbb     r13b, 4
+  0000000140129F75  add     edi, 6ED9EBA1h
+  0000000140129F7B  add     ecx, eax
+  0000000140129F7D  add     ebx, ecx
+  0000000140129F7F  mov     ecx, r11d
+  0000000140129F82  xor     ecx, r10d
+  0000000140129F85  rcl     r15d, cl
+  0000000140129F88  mov     eax, ebx
+  0000000140129F8A  rol     eax, 5
+  0000000140129F8D  shr     esi, 1
+  0000000140129F8F  xor     ecx, r9d
+  0000000140129F92  rcr     sil, cl
+  0000000140129F95  add     eax, edi
+  0000000140129F97  add     ecx, eax
+  0000000140129F99  rcr     r9b, 0E1h
+  0000000140129F9D  add     r8d, ecx
+  0000000140129FA0  mov     edi, [rsp+340h+var_31C]
+  0000000140129FA4  mov     ecx, ebx
+  0000000140129FA6  rcr     r12d, 1
+  0000000140129FA9  mov     r14d, [rsp+340h+var_2DC]
+  0000000140129FAE  not     dil
+  0000000140129FB1  mov     eax, r8d
+  0000000140129FB4  ror     r12d, 1
+  0000000140129FB7  xor     r14d, [rsp+340h+var_304]
+  0000000140129FBC  rol     eax, 5
+  0000000140129FBF  cmp     r10b, al
+  0000000140129FC2  xor     r14d, edi
+  0000000140129FC5  sal     r9d, 1
+  0000000140129FC8  xor     r14d, esi
+  0000000140129FCB  sar     ecx, 1
+  0000000140129FCD  rol     ebx, 1Eh
+  0000000140129FD0  rol     r14d, 1
+  0000000140129FD3  mov     [rsp+340h+var_314], r14d
+  0000000140129FD8  mov     r14d, r12d
+  0000000140129FDB  add     r14d, 6ED9EBA1h
+  0000000140129FE2  xor     ecx, 0FFFFFFEFh
+  0000000140129FE5  add     eax, r14d
+  0000000140129FE8  rcl     ecx, cl
+  0000000140129FEA  rol     r11d, 1Eh
+  0000000140129FEE  stc
+  0000000140129FEF  xor     ecx, r11d
+  0000000140129FF2  mov     r14d, edx
+  0000000140129FF5  shr     r12b, 1
+  0000000140129FF8  xor     r14d, [rsp+340h+var_318]
+  0000000140129FFD  rcr     r11b, 1
+  000000014012A000  xor     ecx, r10d
+  000000014012A003  add     r14d, 34h ; '4'
+  000000014012A007  add     ecx, eax
+  000000014012A009  xor     r14d, [rsp+340h+var_310]
+  000000014012A00E  add     r9d, ecx
+  000000014012A011  mov     eax, ebx
+  000000014012A013  and     r9b, 0C0h
+  000000014012A017  and     eax, r11d
+  000000014012A01A  and     bpl, al
+  000000014012A01D  mov     ecx, ebx
+  000000014012A01F  or      ecx, r11d
+  000000014012A022  xor     r11b, al
+  000000014012A025  xor     r14d, r15d
+  000000014012A028  mov     r15d, [rsp+340h+var_2FC]
+  000000014012A02D  sbb     sil, 51h ; 'Q'
+  000000014012A031  and     ecx, r8d
+  000000014012A034  or      ecx, eax
+  000000014012A036  rol     r8d, 1Eh
+  000000014012A03A  rcr     r10b, cl
+  000000014012A03D  mov     eax, [rsp+340h+var_2E0]
+  000000014012A041  rcl     bpl, 0FFh
+  000000014012A045  add     ecx, 8F1BBCDCh
+  000000014012A04B  clc
+  000000014012A04C  xor     eax, r15d
+  000000014012A04F  sal     r11d, 1
+  000000014012A052  jge     loc_14015F168
+  000000014012A058  mov     eax, r10d
+  000000014012A05B  sal     r11d, cl
+  000000014012A05E  xor     r14d, [rsp+340h+var_2EC]
+  000000014012A063  test    cl, 91h
+  000000014012A066  and     eax, r9d
+  000000014012A069  sal     r13d, 1
+  000000014012A06C  mov     r15d, [rsp+340h+var_2DC]
+  000000014012A071  or      ecx, eax
+  000000014012A073  xor     r15d, [rsp+340h+var_2FC]
+  000000014012A078  add     r12d, 0FFFFFF92h
+  000000014012A07C  add     ecx, r8d
+  000000014012A07F  xor     r15d, [rsp+340h+var_2F4]
+  000000014012A084  xor     r14d, esi
+  000000014012A087  xor     r15d, [rsp+340h+var_30C]
+  000000014012A08C  sbb     dl, al
+  000000014012A08E  add     r9d, 8F1BBCDCh
+  000000014012A095  mov     esi, [rsp+340h+var_2F0]
+  000000014012A099  mov     r11d, ebx
+  000000014012A09C  sbb     bl, al
+  000000014012A09E  xor     esi, [rsp+340h+var_314]
+  000000014012A0A2  rol     r13b, cl
+  000000014012A0A5  xor     esi, [rsp+340h+var_2F4]
+  000000014012A0A9  and     bpl, 9Dh
+  000000014012A0AD  rol     r12d, 1
+  000000014012A0B0  add     ebp, ebp
+  000000014012A0B2  rol     edi, 1Eh
+  000000014012A0B5  ror     bl, 1
+  000000014012A0B7  xor     esi, r12d
+  000000014012A0BA  rol     r11d, 5
+  000000014012A0BE  mov     ebx, ecx
+  000000014012A0C0  mov     eax, edi
+  000000014012A0C2  add     r12d, 0FFFFFFC7h
+  000000014012A0C6  and     eax, r10d
+  000000014012A0C9  sar     r15d, 1
+  000000014012A0CC  mov     [rsp+340h+var_300], r12d
+  000000014012A0D1  add     r11d, r12d
+  000000014012A0D4  rol     r15d, 1
+  000000014012A0D7  sub     r10b, al
+  000000014012A0DA  add     r11d, ecx
+  000000014012A0DD  rol     r12b, 0EFh
+  000000014012A0E1  rol     r14d, 1
+  000000014012A0E4  rol     esi, 1
+  000000014012A0E6  rcr     ecx, 1
+  000000014012A0E8  mov     r8d, r11d
+  000000014012A0EB  sbb     r12d, r15d
+  000000014012A0EE  rol     r8d, 5
+  000000014012A0F2  mov     ecx, edi
+  000000014012A0F4  sbb     r9d, ecx
+  000000014012A0F7  or      ecx, r10d
+  000000014012A0FA  rcl     r14b, 0A7h
+  000000014012A0FE  mov     [rsp+340h+var_30C], r15d
+  000000014012A103  and     ecx, ebx
+  000000014012A105  mov     [rsp+340h+var_2F8], r14d
+  000000014012A10A  or      ecx, eax
+  000000014012A10C  rol     ebx, 1Eh
+  000000014012A10F  add     ecx, r9d
+  000000014012A112  mov     [rsp+340h+var_310], esi
+  000000014012A116  add     r8d, r15d
+  000000014012A119  sar     edx, 1
+  000000014012A11B  mov     eax, ebx
+  000000014012A11D  add     r8d, ecx
+  000000014012A120  and     esi, esi
+  000000014012A122  and     eax, edi
+  000000014012A124  mov     edx, r8d
+  000000014012A127  sbb     dil, al
+  000000014012A12A  mov     ecx, ebx
+  000000014012A12C  sbb     cl, 7
+  000000014012A12F  or      ecx, edi
+  000000014012A131  or      r12d, eax
+  000000014012A134  rol     edx, 5
+  000000014012A137  and     ecx, r11d
+  000000014012A13A  ror     dil, 18h
+  000000014012A13E  mov     r12d, r13d
+  000000014012A141  ror     r8b, cl
+  000000014012A144  xor     r12d, [rsp+340h+var_318]
+  000000014012A149  ror     sil, 1
+  000000014012A14C  or      ecx, eax
+  000000014012A14E  jno     loc_140147A27
+  000000014012A154  add     rsp, r10
+  000000014012A157  jz      loc_14013C8A2
+  000000014012A15D  xor     ecx, edx
+  000000014012A15F  xor     bl, al
+  000000014012A161  mov     eax, r9d
+  000000014012A164  sal     dl, 1
+  000000014012A166  xor     ecx, r8d
+  000000014012A169  rol     eax, 5
+  000000014012A16C  sal     r15b, 1
+  000000014012A16F  add     eax, r10d
+  000000014012A172  rcr     r11d, 1
+  000000014012A175  add     ecx, eax
+  000000014012A177  mov     r12d, [rbp+240h+var_294]
+  000000014012A17B  or      edi, edi
+  000000014012A17D  xor     r12d, r13d
+  000000014012A180  rol     r8d, 1Eh
+  000000014012A184  xor     r12d, [rsp+340h+var_314]
+  000000014012A189  lea     r10d, [r15+6ED9EBA1h]
+  000000014012A190  rcl     r10d, cl
+  000000014012A193  mov     r13d, [rbp+240h+var_298]
+  000000014012A197  add     r10d, ecx
+  000000014012A19A  xor     r13d, [rsp+340h+var_318]
+  000000014012A19F  ror     r15d, cl
+  000000014012A1A2  mov     ecx, r8d
+  000000014012A1A5  dec     dl
+  000000014012A1A7  xor     r13d, [rsp+340h+var_308]
+  000000014012A1AC  rcr     r8d, cl
+  000000014012A1AF  xor     ecx, ebx
+  000000014012A1B1  sub     bpl, al
+  000000014012A1B4  xor     ecx, r9d
+  000000014012A1B7  xor     r13d, edi
+  000000014012A1BA  rol     r13d, 1
+  000000014012A1BD  neg     cl
+  000000014012A1BF  xor     r12d, esi
+  000000014012A1C2  mov     [rsp+340h+var_30C], r13d
+  000000014012A1C7  mov     eax, r10d
+  000000014012A1CA  inc     r12d
+  000000014012A1CD  rol     eax, 5
+  000000014012A1D0  cmp     r12b, 0F5h
+  000000014012A1D4  add     eax, edx
+  000000014012A1D6  add     bpl, 28h ; '('
+  000000014012A1DA  rol     r9d, 1Eh
+  000000014012A1DE  sar     r12d, cl
+  000000014012A1E1  add     ecx, eax
+  000000014012A1E3  or      sil, bl
+  000000014012A1E6  rol     r12d, 1
+  000000014012A1E9  mov     [rsp+340h+var_300], r12d
+  000000014012A1EE  shr     dl, cl
+  000000014012A1F0  lea     edx, [r12+6ED9EBA1h]
+  000000014012A1F8  cmc
+  000000014012A1F9  add     edx, ecx
+  000000014012A1FB  mov     ecx, r9d
+  000000014012A1FE  xor     ecx, r8d
+  000000014012A201  mov     eax, edx
+  000000014012A203  or      ebp, 0FFFFFF9Eh
+  000000014012A206  rol     eax, 5
+  000000014012A209  xor     ecx, r10d
+  000000014012A20C  sub     dil, al
+  000000014012A20F  add     eax, ebx
+  000000014012A211  rol     r10d, 1Eh
+  000000014012A215  add     ecx, eax
+  000000014012A217  sal     r10b, cl
+  000000014012A21A  lea     ebx, [r13+6ED9EBA1h]
+  000000014012A221  rol     r11d, 1
+  000000014012A224  mov     r13d, [rbp+240h+var_294]
+  000000014012A228  add     ebx, ecx
+  000000014012A22A  add     bpl, al
+  000000014012A22D  xor     r13d, [rsp+340h+var_2F4]
+  000000014012A232  mov     eax, ebx
+  000000014012A234  rol     eax, 5
+  000000014012A237  xor     r13d, r15d
+  000000014012A23A  mov     r15d, [rsp+340h+var_2F0]
+  000000014012A23F  ror     sil, 1
+  000000014012A242  add     eax, r8d
+  000000014012A245  xor     r13b, 90h
+  000000014012A249  xor     r13d, r14d
+  000000014012A24C  mov     ecx, r10d
+  000000014012A24F  jge     loc_140143CE2
+  000000014012A255  pop     rbp
+  000000014012A256  mov     rsp, r11
+  000000014012A259  jmp     loc_1401435E2
+  000000014012A25E  dw 5741h
+  000000014012A260  dq 705AFFFFF558890Fh, 42008B43795125D5h, 0C37777707A2D768Bh
+  000000014012A2F8  rol     bl, cl
+  000000014012A2FA  add     al, [rax]
+  000000014012A2FC  call    sub_140096100
+  000000014012A301  jmp     loc_14012A539
+  000000014012A306  add     rsp, r12
+  000000014012A309  jbe     loc_14015C8F6
+  000000014012A30F  xor     edx, r13d
+  000000014012A312  xor     r8b, al
+  000000014012A315  xor     edx, dword ptr [rsp+240h+var_1CC]
+  000000014012A319  rcr     bpl, 41h
+  000000014012A31D  rol     edx, 1
+  000000014012A31F  mov     r8b, al
+  000000014012A322  lea     esi, [r10+5A827999h]
+  000000014012A329  and     dl, al
+  000000014012A32B  add     esi, ecx
+  000000014012A32D  mov     [rsp+240h+var_210], edx
+  000000014012A331  add     edx, 5A827999h
+  000000014012A337  xor     r11b, al
+  000000014012A33A  mov     eax, esi
+  000000014012A33C  rol     eax, 5
+  000000014012A33F  movsxd  r8d, edi
+  000000014012A342  mov     ecx, r8d
+  000000014012A345  add     dil, 39h ; '9'
+  000000014012A349  add     eax, r11d
+  000000014012A34C  add     edx, r11d
+  000000014012A34F  xor     ecx, ebx
+  000000014012A351  sal     r15b, 1
+  000000014012A354  and     ecx, r9d
+  000000014012A357  rol     r9d, 1Eh
+  000000014012A35B  and     r12d, r15d
+  000000014012A35E  xor     ecx, ebx
+  000000014012A360  rcl     r8b, cl
+  000000014012A363  mov     r11d, r9d
+  000000014012A366  add     ecx, eax
+  000000014012A368  xor     ebx, 0FFFFFF82h
+  000000014012A36B  xor     r11d, r8d
+  000000014012A36E  and     r11d, esi
+  000000014012A371  rol     dl, cl
+  000000014012A373  add     edi, ecx
+  000000014012A375  xor     r11d, r8d
+  000000014012A378  rol     esi, 1Eh
+  000000014012A37B  mov     eax, edi
+  000000014012A37D  rol     eax, 5
+  000000014012A380  add     eax, edx
+  000000014012A382  not     r13b
+  000000014012A385  mov     edx, r10d
+  000000014012A388  ror     bpl, cl
+  000000014012A38B  xor     edx, r15d
+  000000014012A38E  add     r11d, eax
+  000000014012A391  rol     r10d, cl
+  000000014012A394  xor     edx, [rbp+240h+var_2C0]
+  000000014012A397  xor     bpl, 0A7h
+  000000014012A39B  add     r11d, ebx
+  000000014012A39E  add     ecx, 61h ; 'a'
+  000000014012A3A1  xor     edx, r12d
+  000000014012A3A4  rcl     r14d, cl
+  000000014012A3A7  mov     r10d, esi
+  000000014012A3AA  xor     r10d, r9d
+  000000014012A3AD  clc
+  000000014012A3AE  rol     edx, 1
+  000000014012A3B0  or      r12d, ebx
+  000000014012A3B3  and     r10d, edi
+  000000014012A3B6  mov     [rsp+240h+var_1FC], edx
+  000000014012A3BA  add     edx, 5A827999h
+  000000014012A3C0  xor     r10d, r9d
+  000000014012A3C3  mov     eax, r11d
+  000000014012A3C6  rol     eax, 5
+  000000014012A3C9  add     eax, edx
+  000000014012A3CB  ror     r8b, cl
+  000000014012A3CE  add     r10d, eax
+  000000014012A3D1  movsxd  edx, r11d
+  000000014012A3D4  add     r10d, r8d
+  000000014012A3D7  mov     edx, [rsp+240h+var_208]
+  000000014012A3DB  mov     eax, r10d
+  000000014012A3DE  sar     ecx, cl
+  000000014012A3E0  mov     r12d, [rbp+240h+var_2A4]
+  000000014012A3E4  xor     edx, r12d
+  000000014012A3E7  xor     edx, [rbp+240h+var_2BC]
+  000000014012A3EA  test    bl, al
+  000000014012A3EC  rol     eax, 5
+  000000014012A3EF  sub     bl, al
+  000000014012A3F1  xor     edx, r13d
+  000000014012A3F4  xor     edi, r11d
+  000000014012A3F7  js      loc_14014D539
+  000000014012A3FD  mov     rsp, r11
+  000000014012A400  pop     r12
+  000000014012A402  jmp     loc_14013C757
+  000000014012A407  jmp     loc_14013D0C5
+  000000014012A40C  dd 0E58C0F53h
+  000000014012A410  idiv    bh
+  000000014012A412  inc     dword ptr [rcx+5Eh]
+  000000014012A415  jmp     loc_14013EF0C
+  000000014012A41A  rol     ecx, 5
+  000000014012A41D  mov     r12d, r14d
+  000000014012A420  xor     r12d, [rsp+350h+var_324]
+  000000014012A425  add     ebx, ecx
+  000000014012A427  xor     r12d, [rsp+350h+var_328]
+  000000014012A42C  or      ebp, 42h
+  000000014012A42F  add     ebx, eax
+  000000014012A431  xor     r12d, [rsp+350h+var_2EC]
+  000000014012A436  mov     eax, edx
+  000000014012A438  xor     eax, r10d
+  000000014012A43B  rol     edx, 1Eh
+  000000014012A43E  xor     eax, r9d
+  000000014012A441  sar     r9b, 1
+  000000014012A444  rol     r12d, 1
+  000000014012A447  or      dl, 0C0h
+  000000014012A44A  add     eax, 0CA62C1D6h
+  000000014012A44F  rcr     r14b, 1
+  000000014012A452  mov     [rsp+350h+var_308], r12d
+  000000014012A457  add     eax, r13d
+  000000014012A45A  mov     ecx, ebx
+  000000014012A45C  sal     dl, 0FCh
+  000000014012A45F  rol     ecx, 5
+  000000014012A462  mov     edi, r15d
+  000000014012A465  sar     ebp, cl
+  000000014012A467  xor     edi, [rsp+350h+var_320]
+  000000014012A46B  add     r8d, ecx
+  000000014012A46E  xor     edi, [rsp+350h+var_330]
+  000000014012A472  add     r8d, eax
+  000000014012A475  sub     r12d, r11d
+  000000014012A478  xor     edi, [rsp+350h+var_30C]
+  000000014012A47C  mov     eax, ebx
+  000000014012A47E  xor     eax, edx
+  000000014012A480  rol     r8d, 1
+  000000014012A483  rol     edi, 1
+  000000014012A485  xor     eax, r10d
+  000000014012A488  rol     ebx, 1Eh
+  000000014012A48B  ror     r14b, cl
+  000000014012A48E  add     eax, 0CA62C1D6h
+  000000014012A493  xor     r15b, 2Eh
+  000000014012A497  mov     [rsp+350h+var_30C], edi
+  000000014012A49B  sar     r12d, cl
+  000000014012A49E  add     eax, r12d
+  000000014012A4A1  mov     ecx, r8d
+  000000014012A4A4  rol     ecx, 5
+  000000014012A4A7  mov     r11d, r13d
+  000000014012A4AA  shr     edi, cl
+  000000014012A4AC  xor     r11d, [rsp+350h+var_31C]
+  000000014012A4B1  add     r9d, ecx
+  000000014012A4B4  xor     r11d, [rsp+350h+var_32C]
+  000000014012A4B9  rcr     r9b, cl
+  000000014012A4BC  add     r9d, eax
+  000000014012A4BF  xor     r11d, [rsp+350h+var_328]
+  000000014012A4C4  cmp     ebx, esp
+  000000014012A4C6  mov     eax, r8d
+  000000014012A4C9  dec     r12b
+  000000014012A4CC  xor     eax, ebx
+  000000014012A4CE  rol     r11d, 1
+  000000014012A4D1  sar     bpl, cl
+  000000014012A4D4  xor     eax, edx
+  000000014012A4D6  stc
+  000000014012A4D7  rol     r8d, 1Eh
+  000000014012A4DB  add     eax, 0CA62C1D6h
+  000000014012A4E0  ror     ebp, 1
+  000000014012A4E2  mov     [rsp+350h+var_328], r11d
+  000000014012A4E7  and     sil, al
+  000000014012A4EA  add     eax, edi
+  000000014012A4EC  sar     r11b, cl
+  000000014012A4EF  mov     ecx, r9d
+  000000014012A4F2  rol     ecx, 5
+  000000014012A4F5  test    r12b, al
+  000000014012A4F8  add     r10d, ecx
+  000000014012A4FB  jg      loc_14014D7B3
+  000000014012A501  pop     r15
+  000000014012A503  pop     rbp
+  000000014012A504  jmp     loc_14013F7AA
+  000000014012A509  db 66h, 7Ah, 0F2h, 56h, 0B1h, 0, 52h
+  000000014012A510  dq 8B7DF7074861C7E8h, 0E85D74C27A76594Ah, 35594860F50415Fh
+  000000014012A538  db 0
+  000000014012A539  lea     rcx, [rbp+240h+var_240]
+  000000014012A53D  mov     [rbp+240h+var_240], 67452301h
+  000000014012A544  mov     rax, 1A4B6CBB6B7h
+  000000014012A54E  mov     [rbp+240h+var_23C], 0EFCDAB89h
+  000000014012A555  mov     [rbp+240h+var_238], 98BADCFEh
+  000000014012A55C  mov     [rbp+240h+var_234], 10325476h
+  000000014012A563  mov     [rbp+240h+var_230], 0C3D2E1F0h
+  000000014012A56A  cmp     rcx, rax
+  000000014012A56D  jnb     loc_14012A88B
+  000000014012A573  jmp     loc_14012A6F1
+  000000014012A578  dq 6B50820FE70349h, 8D0FFFF91E92E800h, 0A7D1020F00030E5Ch
+  000000014012A6B8  db 0FFh
+  000000014012A6B9  call    loc_14013B1C6
+  000000014012A6BE  jle     loc_140137068
+  000000014012A6C4  call    near ptr ExSystemTimeToLocalTime
+  000000014012A6C9  call    near ptr qword_1401298C8+0Eh
+  000000014012A6CE  jg      loc_140148CB2
+  000000014012A6D4  retn
+  000000014012A6D5  db 8Dh, 76h, 53h
+  000000014012A6D8  dq 57F2BBE898CBC653h, 7B757ED48D1519EBh, 2751F7A38E40545Bh
+  000000014012A6F0  pop     rdi
+  000000014012A6F1  nop
+  000000014012A6F2  jmp     loc_14012A7B2
+  000000014012A6F7  db 5Ah
+  000000014012A6F8  dq 0DC8DE072485FC38Dh, 7C19BDB77F775679h, 58527A7B5B4571E7h
+  000000014012A730  db 51h, 14h, 1, 0
+  000000014012A734  inc     dword ptr [rbp+240h+var_1CC]
+  000000014012A737  shr     r11d, 1
+  000000014012A73A  jbe     loc_1401475CD
+  000000014012A740  add     rsp, 488h
+  000000014012A747  jz      loc_140162E74
+  000000014012A74D  pop     r15
+  000000014012A74F  pop     rbp
+  000000014012A750  jmp     loc_140139EAD
+  000000014012A755  db 7Dh, 0E8h, 96h
+  000000014012A758  dq 0E855E8C8301F0354h, 5DFF597A7378E850h, 7B5EBA5B7C7C7357h
+  000000014012A7B0  db 47h, 0C5h
+  000000014012A7B2  call    sub_14029A429
+  000000014012A7B7  jmp     rax
+  000000014012A7B9  db 49h, 3, 0E4h, 0Fh, 84h, 2Dh, 0FFh
+  000000014012A7C0  dq 0E8FFF6EA39E8FFFFh, 67CC8D0F00007015h, 0F000358F3E80003h
+  000000014012A880  pop     rbp
+  000000014012A881  mov     rsp, r11
+  000000014012A884  pop     r14
+  000000014012A886  jmp     loc_1401627A9
+  000000014012A88B  mov     rax, [rbp+240h+var_22C+4]
+  000000014012A88F  mov     rcx, rax
+  000000014012A892  add     eax, 8
+  000000014012A895  and     ecx, 3Fh
+  000000014012A898  mov     dword ptr [rbp+240h+var_22C+4], eax
+  000000014012A89B  cmp     eax, 8
+  000000014012A89E  jnb     loc_14012AA65
+  000000014012A8A4  jmp     short loc_14012A920
+  000000014012A8A6  dw 0D7B7h
+  000000014012A8A8  dq 0A9712F4A8B7E2053h, 77780150895973FFh, 84785EF65B845D51h
+  000000014012A920  inc     dword ptr [rbp+240h+var_22C]
+  000000014012A923  jmp     loc_14012AA65
+  000000014012A928  dq 813D820FE00348h, 760C4814800h, 12E800007A4E8C0Fh, 23D5B8A0F00032Ah
+  000000014012AA60  db 8Fh, 0A8h, 0F4h, 2 dup(0FFh)
+  000000014012AA65  mov     r8d, 40h ; '@'
+  000000014012AA6B  sub     r8, rcx
+  000000014012AA6E  mov     [rbp+240h+var_290], r8
+  000000014012AA72  cmp     r8, 8
+  000000014012AA76  ja      loc_140131D6C
+  000000014012AA7C  jmp     loc_14012AC74
+  000000014012AA81  db 41h, 50h, 0Fh, 8Ah, 0BEh, 0F4h, 0FFh
+  000000014012AA88  dq 0D22D870FE00349FFh, 3C52DE865D7F0000h, 5E758D71FF56677Bh
+  000000014012AC70  db 60h, 98h, 2 dup(0)
+  000000014012AC74  lea     rax, [rbp+240h+var_224]
+  000000014012AC78  add     rcx, rax
+  000000014012AC7B  lea     rdx, [rbp+240h+var_288]
+  000000014012AC7F  jmp     short loc_14012ACF1
+  000000014012AC81  db 0E8h, 7Ah, 0E3h, 0F6h, 0FFh, 0E8h, 0Fh
+  000000014012AC88  dq 1427B870F000042h, 36959850F5500h, 0F08C0FFFF8BE63E8h
+  000000014012ACF0  db 7Ch
+  000000014012ACF1  call    sub_140095E40
+  000000014012ACF6  jmp     loc_14012AE5D
+  000000014012ACFB  db 0E8h, 47h, 0E8h, 2 dup(0FFh)
+  000000014012AD00  dq 5D41FFFFE464800Fh, 0E6D4E9E38B495E41h, 0E8FFF6E401E8FFFFh
+  000000014012AE58  db 8Fh, 4, 0FBh, 2 dup(0FFh)
+  000000014012AE5D  mov     rdx, r12
+  000000014012AE60  jmp     loc_14012B010
+  000000014012AE65  db 0E8h, 16h, 0FAh
+  000000014012AE68  dq 0AAEF8D0FFFFFh, 7A56CE578D13853Dh, 5A7D2E52C9AE79F9h
+  000000014012B010  movzx   eax, [rbp+rdx+240h+var_223]
+  000000014012B015  movzx   ecx, [rbp+rdx+240h+var_224]
+  000000014012B01A  shl     ecx, 8
+  000000014012B01D  or      ecx, eax
+  000000014012B01F  movzx   eax, [rbp+rdx+240h+var_222]
+  000000014012B024  shl     ecx, 8
+  000000014012B027  or      ecx, eax
+  000000014012B029  movzx   eax, [rbp+rdx+240h+var_221]
+  000000014012B02E  shl     ecx, 8
+  000000014012B031  or      ecx, eax
+  000000014012B033  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014012B037  add     rdx, 4
+  000000014012B03B  cmp     rdx, 40h ; '@'
+  000000014012B03F  jl      short loc_14012B010
+  000000014012B041  jmp     short loc_14012B0B9
+  000000014012B043  db 53h, 0Fh, 80h, 0A7h, 0F6h
+  000000014012B048  dq 39E95C415E41FFFFh, 5D415D5C41FFFFF5h, 0E30348FFFFE5DDE9h
+  000000014012B0B8  db 79h
+  000000014012B0B9  mov     r10d, [rbp+240h+var_238]
+  000000014012B0BD  mov     r9d, [rbp+240h+var_234]
+  000000014012B0C1  mov     ecx, r9d
+  000000014012B0C4  mov     ebx, [rbp+240h+var_240]
+  000000014012B0C7  xor     ecx, r10d
+  000000014012B0CA  mov     edx, [rbp+240h+var_23C]
+  000000014012B0CD  mov     eax, ebx
+  000000014012B0CF  and     ecx, edx
+  000000014012B0D1  mov     r8d, [rbp+240h+var_230]
+  000000014012B0D5  xor     ecx, r9d
+  000000014012B0D8  mov     r14d, [rsp+340h+var_2C8]
+  000000014012B0DD  mov     r15d, [rsp+340h+var_2C4]
+  000000014012B0E2  add     r8d, 5A827999h
+  000000014012B0E9  mov     r12d, [rbp+240h+var_2C0]
+  000000014012B0ED  add     r9d, 5A827999h
+  000000014012B0F4  mov     r13d, [rbp+240h+var_2BC]
+  000000014012B0F8  rol     eax, 5
+  000000014012B0FB  add     eax, [rsp+340h+var_2D0]
+  000000014012B0FF  add     ecx, eax
+  000000014012B101  rol     edx, 1Eh
+  000000014012B104  add     r8d, ecx
+  000000014012B107  mov     ecx, edx
+  000000014012B109  xor     ecx, r10d
+  000000014012B10C  mov     eax, r8d
+  000000014012B10F  and     ecx, ebx
+  000000014012B111  rol     eax, 5
+  000000014012B114  add     eax, [rsp+340h+var_2CC]
+  000000014012B118  xor     ecx, r10d
+  000000014012B11B  add     ecx, eax
+  000000014012B11D  rol     ebx, 1Eh
+  000000014012B120  add     r9d, ecx
+  000000014012B123  add     r10d, 5A827999h
+  000000014012B12A  mov     ecx, ebx
+  000000014012B12C  mov     eax, r9d
+  000000014012B12F  xor     ecx, edx
+  000000014012B131  rol     eax, 5
+  000000014012B134  and     ecx, r8d
+  000000014012B137  add     eax, r14d
+  000000014012B13A  xor     ecx, edx
+  000000014012B13C  rol     r8d, 1Eh
+  000000014012B140  add     ecx, eax
+  000000014012B142  add     r10d, ecx
+  000000014012B145  mov     ecx, r8d
+  000000014012B148  xor     ecx, ebx
+  000000014012B14A  mov     eax, r10d
+  000000014012B14D  and     ecx, r9d
+  000000014012B150  rol     eax, 5
+  000000014012B153  xor     ecx, ebx
+  000000014012B155  rol     r9d, 1Eh
+  000000014012B159  add     eax, edx
+  000000014012B15B  jmp     loc_14012B301
+  000000014012B160  dq 0A45000000D89D8Bh, 0D34100000040B8FAh, 0E183C78441CB8BECh
+  000000014012B300  db 0FFh
+  000000014012B301  lea     edx, [r15+5A827999h]
+  000000014012B308  add     ecx, eax
+  000000014012B30A  add     edx, ecx
+  000000014012B30C  mov     ecx, r9d
+  000000014012B30F  xor     ecx, r8d
+  000000014012B312  mov     eax, edx
+  000000014012B314  and     ecx, r10d
+  000000014012B317  rol     eax, 5
+  000000014012B31A  xor     ecx, r8d
+  000000014012B31D  rol     r10d, 1Eh
+  000000014012B321  add     eax, ebx
+  000000014012B323  lea     ebx, [r12+5A827999h]
+  000000014012B32B  add     ecx, eax
+  000000014012B32D  add     ebx, ecx
+  000000014012B32F  mov     ecx, r10d
+  000000014012B332  xor     ecx, r9d
+  000000014012B335  mov     eax, ebx
+  000000014012B337  and     ecx, edx
+  000000014012B339  rol     eax, 5
+  000000014012B33C  add     eax, r8d
+  000000014012B33F  rol     edx, 1Eh
+  000000014012B342  xor     ecx, r9d
+  000000014012B345  lea     r8d, [r13+5A827999h]
+  000000014012B34C  add     ecx, eax
+  000000014012B34E  add     r8d, ecx
+  000000014012B351  mov     ecx, edx
+  000000014012B353  xor     ecx, r10d
+  000000014012B356  mov     eax, r8d
+  000000014012B359  and     ecx, ebx
+  000000014012B35B  rol     eax, 5
+  000000014012B35E  xor     ecx, r10d
+  000000014012B361  add     eax, r9d
+  000000014012B364  rol     ebx, 1Eh
+  000000014012B367  add     ecx, eax
+  000000014012B369  mov     r9d, [rbp+240h+var_2B8]
+  000000014012B36D  add     r9d, 5A827999h
+  000000014012B374  add     r9d, ecx
+  000000014012B377  mov     ecx, ebx
+  000000014012B379  xor     ecx, edx
+  000000014012B37B  mov     eax, r9d
+  000000014012B37E  and     ecx, r8d
+  000000014012B381  rol     eax, 5
+  000000014012B384  xor     ecx, edx
+  000000014012B386  rol     r8d, 1Eh
+  000000014012B38A  add     eax, r10d
+  000000014012B38D  mov     r10d, [rbp+240h+var_2B4]
+  000000014012B391  add     ecx, eax
+  000000014012B393  add     r10d, 5A827999h
+  000000014012B39A  add     r10d, ecx
+  000000014012B39D  mov     ecx, r8d
+  000000014012B3A0  jmp     loc_14012B5C7
+  000000014012B3A5  db 8Bh, 45h, 0A4h
+  000000014012B3A8  dq 0E81A44C33341D903h, 8B44F1D341CA8B41h, 5D3344C93341A85Dh
+  000000014012B5C7  xor     ecx, ebx
+  000000014012B5C9  mov     eax, r10d
+  000000014012B5CC  and     ecx, r9d
+  000000014012B5CF  rol     eax, 5
+  000000014012B5D2  xor     ecx, ebx
+  000000014012B5D4  rol     r9d, 1Eh
+  000000014012B5D8  add     eax, edx
+  000000014012B5DA  mov     edx, [rbp+240h+var_2B0]
+  000000014012B5DD  add     ecx, eax
+  000000014012B5DF  add     edx, 5A827999h
+  000000014012B5E5  add     edx, ecx
+  000000014012B5E7  mov     ecx, r9d
+  000000014012B5EA  xor     ecx, r8d
+  000000014012B5ED  mov     eax, edx
+  000000014012B5EF  and     ecx, r10d
+  000000014012B5F2  rol     eax, 5
+  000000014012B5F5  xor     ecx, r8d
+  000000014012B5F8  rol     r10d, 1Eh
+  000000014012B5FC  add     eax, ebx
+  000000014012B5FE  mov     ebx, [rbp+240h+var_2AC]
+  000000014012B601  add     ecx, eax
+  000000014012B603  add     ebx, 5A827999h
+  000000014012B609  add     ebx, ecx
+  000000014012B60B  mov     ecx, r10d
+  000000014012B60E  xor     ecx, r9d
+  000000014012B611  mov     eax, ebx
+  000000014012B613  and     ecx, edx
+  000000014012B615  rol     eax, 5
+  000000014012B618  xor     ecx, r9d
+  000000014012B61B  rol     edx, 1Eh
+  000000014012B61E  add     eax, r8d
+  000000014012B621  mov     r8d, [rbp+240h+var_2A8]
+  000000014012B625  add     ecx, eax
+  000000014012B627  add     r8d, 5A827999h
+  000000014012B62E  add     r8d, ecx
+  000000014012B631  mov     ecx, edx
+  000000014012B633  xor     ecx, r10d
+  000000014012B636  mov     eax, r8d
+  000000014012B639  and     ecx, ebx
+  000000014012B63B  rol     eax, 5
+  000000014012B63E  xor     ecx, r10d
+  000000014012B641  rol     ebx, 1Eh
+  000000014012B644  add     eax, r9d
+  000000014012B647  mov     r9d, [rbp+240h+var_2A4]
+  000000014012B64B  add     ecx, eax
+  000000014012B64D  add     r9d, 5A827999h
+  000000014012B654  add     r9d, ecx
+  000000014012B657  mov     ecx, ebx
+  000000014012B659  xor     ecx, edx
+  000000014012B65B  mov     eax, r9d
+  000000014012B65E  jmp     short loc_14012B6C2
+  000000014012B660  push    rbp
+  000000014012B661  jp      loc_1401298EF
+  000000014012B667  add     rsp, 288h
+  000000014012B66E  jle     loc_14014F3CF
+  000000014012B674  pop     r14
+  000000014012B676  pop     rbp
+  000000014012B677  mov     rsp, r11
+  000000014012B67A  jmp     short loc_14012B6C2
+  000000014012B67C  dd 0FFE396E8h
+  000000014012B680  dq 0E8000069B98A0FFFh, 0DD10890FFFF8CE9Ch, 0E8FFF6D9F9E8FFFFh
+  000000014012B6C0  db 2 dup(0)
+  000000014012B6C2  and     ecx, r8d
+  000000014012B6C5  rol     eax, 5
+  000000014012B6C8  add     eax, r10d
+  000000014012B6CB  rol     r8d, 1Eh
+  000000014012B6CF  mov     r10d, [rbp+240h+var_2A0]
+  000000014012B6D3  xor     ecx, edx
+  000000014012B6D5  add     ecx, eax
+  000000014012B6D7  add     r10d, 5A827999h
+  000000014012B6DE  add     r10d, ecx
+  000000014012B6E1  mov     ecx, r8d
+  000000014012B6E4  mov     eax, r10d
+  000000014012B6E7  rol     eax, 5
+  000000014012B6EA  mov     r11d, [rbp+240h+var_294]
+  000000014012B6EE  xor     ecx, ebx
+  000000014012B6F0  mov     edi, [rbp+240h+var_298]
+  000000014012B6F3  and     ecx, r9d
+  000000014012B6F6  xor     edi, [rbp+240h+var_2AC]
+  000000014012B6F9  xor     ecx, ebx
+  000000014012B6FB  mov     esi, [rbp+240h+var_294]
+  000000014012B6FE  add     eax, edx
+  000000014012B700  add     ecx, eax
+  000000014012B702  xor     esi, [rbp+240h+var_2A8]
+  000000014012B705  mov     edx, [rbp+240h+var_29C]
+  000000014012B708  add     r11d, 5A827999h
+  000000014012B70F  rol     r9d, 1Eh
+  000000014012B713  add     edx, 5A827999h
+  000000014012B719  add     edx, ecx
+  000000014012B71B  xor     edi, r15d
+  000000014012B71E  xor     edi, [rsp+340h+var_2CC]
+  000000014012B722  mov     ecx, r9d
+  000000014012B725  xor     ecx, r8d
+  000000014012B728  rol     edi, 1
+  000000014012B72A  and     ecx, r10d
+  000000014012B72D  mov     [rsp+340h+var_2E0], edi
+  000000014012B731  xor     ecx, r8d
+  000000014012B734  rol     r10d, 1Eh
+  000000014012B738  mov     eax, edx
+  000000014012B73A  xor     esi, r12d
+  000000014012B73D  rol     eax, 5
+  000000014012B740  xor     esi, r14d
+  000000014012B743  add     eax, ebx
+  000000014012B745  rol     esi, 1
+  000000014012B747  mov     ebx, [rbp+240h+var_298]
+  000000014012B74A  add     ecx, eax
+  000000014012B74C  add     ebx, 5A827999h
+  000000014012B752  mov     [rsp+340h+var_2E4], esi
+  000000014012B756  add     ebx, ecx
+  000000014012B758  mov     ecx, r10d
+  000000014012B75B  xor     ecx, r9d
+  000000014012B75E  mov     eax, ebx
+  000000014012B760  jmp     loc_14012B896
+  000000014012B765  db 0E8h, 4Eh, 0BAh
+  000000014012B768  dq 76BE8A0FFFF8h, 0DC8B416024743344h, 44DF3324247C3344h
+  000000014012B890  jl      loc_1401345FF
+  000000014012B896  and     ecx, edx
+  000000014012B898  rol     eax, 5
+  000000014012B89B  xor     ecx, r9d
+  000000014012B89E  rol     edx, 1Eh
+  000000014012B8A1  add     eax, r8d
+  000000014012B8A4  mov     r8d, [rbp+240h+var_29C]
+  000000014012B8A8  xor     r8d, [rbp+240h+var_2B0]
+  000000014012B8AC  add     ecx, eax
+  000000014012B8AE  add     r11d, ecx
+  000000014012B8B1  xor     r8d, r14d
+  000000014012B8B4  xor     r8d, [rsp+340h+var_2D0]
+  000000014012B8B9  mov     eax, r11d
+  000000014012B8BC  rol     eax, 5
+  000000014012B8BF  mov     ecx, edx
+  000000014012B8C1  xor     ecx, r10d
+  000000014012B8C4  rol     r8d, 1
+  000000014012B8C7  and     ecx, ebx
+  000000014012B8C9  mov     [rsp+340h+var_314], r8d
+  000000014012B8CE  xor     ecx, r10d
+  000000014012B8D1  rol     ebx, 1Eh
+  000000014012B8D4  add     eax, r8d
+  000000014012B8D7  lea     r8d, [r9+5A827999h]
+  000000014012B8DE  add     ecx, eax
+  000000014012B8E0  lea     r9d, [r10+5A827999h]
+  000000014012B8E7  add     r8d, ecx
+  000000014012B8EA  mov     ecx, ebx
+  000000014012B8EC  xor     ecx, edx
+  000000014012B8EE  mov     eax, r8d
+  000000014012B8F1  and     ecx, r11d
+  000000014012B8F4  rol     eax, 5
+  000000014012B8F7  xor     ecx, edx
+  000000014012B8F9  rol     r11d, 1Eh
+  000000014012B8FD  add     eax, edi
+  000000014012B8FF  add     ecx, eax
+  000000014012B901  add     r9d, ecx
+  000000014012B904  mov     ecx, r11d
+  000000014012B907  xor     ecx, ebx
+  000000014012B909  mov     eax, r9d
+  000000014012B90C  and     ecx, r8d
+  000000014012B90F  rol     eax, 5
+  000000014012B912  xor     ecx, ebx
+  000000014012B914  add     eax, esi
+  000000014012B916  add     ecx, eax
+  000000014012B918  mov     r14d, [rbp+240h+var_2A4]
+  000000014012B91C  lea     r10d, [rdx+5A827999h]
+  000000014012B923  mov     edx, [rsp+340h+var_314]
+  000000014012B927  add     r10d, ecx
+  000000014012B92A  xor     edx, r14d
+  000000014012B92D  rol     r8d, 1Eh
+  000000014012B931  xor     edx, r13d
+  000000014012B934  jmp     loc_14012B9C0
+  000000014012B939  db 48h, 3, 0E5h, 0Fh, 85h, 79h, 82h
+  000000014012B940  dq 0E8FFF6D811E80000h, 2AB5890FFFFFF3A5h, 0FFFFFEE6BE80001h
+  000000014012B9C0  mov     ecx, r8d
+  000000014012B9C3  xor     ecx, r11d
+  000000014012B9C6  xor     edx, r15d
+  000000014012B9C9  mov     r15d, [rbp+240h+var_2A0]
+  000000014012B9CD  and     ecx, r9d
+  000000014012B9D0  xor     ecx, r11d
+  000000014012B9D3  rol     r9d, 1Eh
+  000000014012B9D7  rol     edx, 1
+  000000014012B9D9  mov     eax, r10d
+  000000014012B9DC  rol     eax, 5
+  000000014012B9DF  add     eax, ebx
+  000000014012B9E1  mov     [rsp+340h+var_304], edx
+  000000014012B9E5  add     ecx, eax
+  000000014012B9E7  add     edx, 5A827999h
+  000000014012B9ED  add     edx, ecx
+  000000014012B9EF  mov     ebx, edi
+  000000014012B9F1  xor     ebx, r15d
+  000000014012B9F4  mov     ecx, r9d
+  000000014012B9F7  xor     ebx, [rbp+240h+var_2B8]
+  000000014012B9FA  xor     ecx, r8d
+  000000014012B9FD  xor     ecx, r10d
+  000000014012BA00  xor     ebx, r12d
+  000000014012BA03  mov     r12d, [rbp+240h+var_29C]
+  000000014012BA07  mov     eax, edx
+  000000014012BA09  rol     eax, 5
+  000000014012BA0C  xor     esi, r12d
+  000000014012BA0F  xor     esi, [rbp+240h+var_2B4]
+  000000014012BA12  add     eax, 6ED9EBA1h
+  000000014012BA17  add     eax, r11d
+  000000014012BA1A  rol     ebx, 1
+  000000014012BA1C  add     ecx, eax
+  000000014012BA1E  mov     [rsp+340h+var_318], ebx
+  000000014012BA22  add     ebx, ecx
+  000000014012BA24  rol     r10d, 1Eh
+  000000014012BA28  xor     esi, r13d
+  000000014012BA2B  mov     eax, ebx
+  000000014012BA2D  mov     r13d, [rbp+240h+var_298]
+  000000014012BA31  mov     ecx, r10d
+  000000014012BA34  rol     eax, 5
+  000000014012BA37  xor     ecx, r9d
+  000000014012BA3A  add     r8d, eax
+  000000014012BA3D  rol     esi, 1
+  000000014012BA3F  mov     eax, [rsp+340h+var_304]
+  000000014012BA43  xor     ecx, edx
+  000000014012BA45  xor     eax, r13d
+  000000014012BA48  rol     edx, 1Eh
+  000000014012BA4B  xor     eax, [rbp+240h+var_2B0]
+  000000014012BA4E  add     ecx, 6ED9EBA1h
+  000000014012BA54  xor     eax, [rbp+240h+var_2B8]
+  000000014012BA57  add     r8d, ecx
+  000000014012BA5A  jmp     short loc_14012BAD4
+  000000014012BA5C  dd 943E8B0Fh
+  000000014012BA60  dq 97B06F718D2E0001h, 5AAD8D087C53F170h, 0FF5C2B788277517Ah
+  000000014012BAD0  out     6Eh, al
+  000000014012BAD2  add     eax, [rax]
+  000000014012BAD4  rol     eax, 1
+  000000014012BAD6  add     r8d, esi
+  000000014012BAD9  mov     [rsp+340h+var_308], eax
+  000000014012BADD  mov     ecx, edx
+  000000014012BADF  xor     ecx, r10d
+  000000014012BAE2  mov     [rsp+340h+var_320], esi
+  000000014012BAE6  xor     ecx, ebx
+  000000014012BAE8  mov     eax, r8d
+  000000014012BAEB  rol     eax, 5
+  000000014012BAEE  add     eax, r9d
+  000000014012BAF1  rol     ebx, 1Eh
+  000000014012BAF4  mov     r9d, [rsp+340h+var_308]
+  000000014012BAF9  add     ecx, eax
+  000000014012BAFB  mov     eax, [rsp+340h+var_318]
+  000000014012BAFF  add     r9d, 6ED9EBA1h
+  000000014012BB06  xor     eax, [rbp+240h+var_294]
+  000000014012BB09  add     r9d, ecx
+  000000014012BB0C  xor     eax, [rbp+240h+var_2AC]
+  000000014012BB0F  mov     ecx, ebx
+  000000014012BB11  xor     eax, [rbp+240h+var_2B4]
+  000000014012BB14  rol     eax, 1
+  000000014012BB16  mov     [rsp+340h+var_30C], eax
+  000000014012BB1A  mov     eax, r9d
+  000000014012BB1D  rol     eax, 5
+  000000014012BB20  add     eax, r10d
+  000000014012BB23  xor     ecx, edx
+  000000014012BB25  mov     r10d, [rsp+340h+var_30C]
+  000000014012BB2A  xor     ecx, r8d
+  000000014012BB2D  add     ecx, eax
+  000000014012BB2F  rol     r8d, 1Eh
+  000000014012BB33  mov     eax, [rsp+340h+var_314]
+  000000014012BB37  add     r10d, 6ED9EBA1h
+  000000014012BB3E  xor     eax, esi
+  000000014012BB40  add     r10d, ecx
+  000000014012BB43  xor     eax, [rbp+240h+var_2A8]
+  000000014012BB46  mov     ecx, r8d
+  000000014012BB49  xor     eax, [rbp+240h+var_2B0]
+  000000014012BB4C  xor     ecx, ebx
+  000000014012BB4E  rol     eax, 1
+  000000014012BB50  xor     ecx, r9d
+  000000014012BB53  mov     [rsp+340h+var_31C], eax
+  000000014012BB57  mov     eax, r10d
+  000000014012BB5A  mov     esi, [rsp+340h+var_31C]
+  000000014012BB5E  rol     eax, 5
+  000000014012BB61  add     eax, edx
+  000000014012BB63  rol     r9d, 1Eh
+  000000014012BB67  add     ecx, eax
+  000000014012BB69  mov     eax, edi
+  000000014012BB6B  xor     eax, [rsp+340h+var_308]
+  000000014012BB6F  lea     edx, [rsi+6ED9EBA1h]
+  000000014012BB75  jmp     loc_14012BC0F
+  000000014012BB7A  dw 5C41h, 5D41h, 1AE9h
+  000000014012BB80  dq 19820F5341FFFFFFh, 502315AD1F00022Bh, 71BC8E77265EA952h
+  000000014012BC08  db 0, 0Fh, 89h, 0C0h, 37h, 2, 0
+  000000014012BC0F  xor     esi, [rsp+340h+var_304]
+  000000014012BC13  xor     eax, r14d
+  000000014012BC16  xor     eax, [rbp+240h+var_2AC]
+  000000014012BC19  add     edx, ecx
+  000000014012BC1B  rol     eax, 1
+  000000014012BC1D  xor     esi, r12d
+  000000014012BC20  mov     [rsp+340h+var_2F0], eax
+  000000014012BC24  xor     esi, r14d
+  000000014012BC27  mov     edi, [rsp+340h+var_2F0]
+  000000014012BC2B  mov     ecx, r9d
+  000000014012BC2E  xor     ecx, r8d
+  000000014012BC31  rol     esi, 1
+  000000014012BC33  xor     ecx, r10d
+  000000014012BC36  mov     [rsp+340h+var_2DC], esi
+  000000014012BC3A  rol     r10d, 1Eh
+  000000014012BC3E  mov     eax, edx
+  000000014012BC40  rol     eax, 5
+  000000014012BC43  add     eax, ebx
+  000000014012BC45  lea     ebx, [rdi+6ED9EBA1h]
+  000000014012BC4B  add     ecx, eax
+  000000014012BC4D  mov     eax, [rsp+340h+var_2E4]
+  000000014012BC51  xor     eax, [rsp+340h+var_30C]
+  000000014012BC55  add     ebx, ecx
+  000000014012BC57  xor     eax, r15d
+  000000014012BC5A  mov     ecx, r10d
+  000000014012BC5D  xor     eax, [rbp+240h+var_2A8]
+  000000014012BC60  xor     ecx, r9d
+  000000014012BC63  rol     eax, 1
+  000000014012BC65  xor     ecx, edx
+  000000014012BC67  mov     [rsp+340h+var_2EC], eax
+  000000014012BC6B  mov     eax, ebx
+  000000014012BC6D  mov     r11d, [rsp+340h+var_2EC]
+  000000014012BC72  rol     eax, 5
+  000000014012BC75  add     eax, r8d
+  000000014012BC78  rol     edx, 1Eh
+  000000014012BC7B  add     ecx, eax
+  000000014012BC7D  lea     r8d, [r11+6ED9EBA1h]
+  000000014012BC84  add     r8d, ecx
+  000000014012BC87  mov     ecx, edx
+  000000014012BC89  xor     ecx, r10d
+  000000014012BC8C  mov     eax, r8d
+  000000014012BC8F  xor     ecx, ebx
+  000000014012BC91  rol     eax, 5
+  000000014012BC94  add     eax, r9d
+  000000014012BC97  rol     ebx, 1Eh
+  000000014012BC9A  lea     r9d, [rsi+6ED9EBA1h]
+  000000014012BCA1  add     ecx, eax
+  000000014012BCA3  mov     esi, edi
+  000000014012BCA5  add     r9d, ecx
+  000000014012BCA8  mov     edi, [rsp+340h+var_318]
+  000000014012BCAC  jmp     loc_14012BD7E
+  000000014012BCB1  db 0E8h, 62h, 0D4h, 0F6h, 0FFh, 0E8h, 0D1h
+  000000014012BCB8  dq 2B178840FFFFFE8h, 0D6E88D0FE3034800h, 4A77EE3A74E6FFFFh
+  000000014012BD78  js      loc_140151CDA
+  000000014012BD7E  xor     esi, edi
+  000000014012BD80  xor     esi, r13d
+  000000014012BD83  xor     esi, r15d
+  000000014012BD86  rol     esi, 1
+  000000014012BD88  mov     [rsp+340h+var_318], esi
+  000000014012BD8C  mov     r14d, r11d
+  000000014012BD8F  mov     eax, r9d
+  000000014012BD92  mov     r11d, [rsp+340h+var_2E4]
+  000000014012BD97  mov     ecx, ebx
+  000000014012BD99  xor     ecx, edx
+  000000014012BD9B  rol     eax, 5
+  000000014012BD9E  xor     ecx, r8d
+  000000014012BDA1  add     eax, r10d
+  000000014012BDA4  add     ecx, eax
+  000000014012BDA6  rol     r8d, 1Eh
+  000000014012BDAA  lea     r10d, [rsi+6ED9EBA1h]
+  000000014012BDB1  mov     esi, [rsp+340h+var_320]
+  000000014012BDB5  add     r10d, ecx
+  000000014012BDB8  xor     r14d, esi
+  000000014012BDBB  xor     r14d, [rbp+240h+var_294]
+  000000014012BDBF  mov     ecx, r8d
+  000000014012BDC2  xor     ecx, ebx
+  000000014012BDC4  xor     r14d, r12d
+  000000014012BDC7  mov     r12d, [rsp+340h+var_314]
+  000000014012BDCC  xor     ecx, r9d
+  000000014012BDCF  rol     r9d, 1Eh
+  000000014012BDD3  xor     r11d, r12d
+  000000014012BDD6  rol     r14d, 1
+  000000014012BDD9  mov     eax, r10d
+  000000014012BDDC  rol     eax, 5
+  000000014012BDDF  mov     r15d, r12d
+  000000014012BDE2  xor     r15d, [rsp+340h+var_2DC]
+  000000014012BDE7  add     eax, edx
+  000000014012BDE9  mov     r12d, [rsp+340h+var_31C]
+  000000014012BDEE  add     ecx, eax
+  000000014012BDF0  lea     edx, [r14+6ED9EBA1h]
+  000000014012BDF7  mov     [rsp+340h+var_2F4], r14d
+  000000014012BDFC  xor     r11d, [rsp+340h+var_2F4]
+  000000014012BE01  add     edx, ecx
+  000000014012BE03  mov     r14d, [rsp+340h+var_308]
+  000000014012BE08  mov     ecx, r9d
+  000000014012BE0B  xor     ecx, r8d
+  000000014012BE0E  xor     r15d, r14d
+  000000014012BE11  xor     ecx, r10d
+  000000014012BE14  xor     r15d, r13d
+  000000014012BE17  mov     r13d, [rsp+340h+var_2E0]
+  000000014012BE1C  xor     r11d, r12d
+  000000014012BE1F  xor     r13d, [rsp+340h+var_318]
+  000000014012BE24  mov     eax, edx
+  000000014012BE26  rol     eax, 5
+  000000014012BE29  jmp     short loc_14012BEAA
+  000000014012BE2B  db 0E8h, 68h, 0A6h, 0F8h, 0FFh
+  000000014012BE30  dq 79E80000AC7F800Fh, 0BFA1810F0001B2h, 0B7E8FFF6D3FAE800h
+  000000014012BEA8  add     [rax], eax
+  000000014012BEAA  add     eax, ebx
+  000000014012BEAC  rol     r15d, 1
+  000000014012BEAF  add     ecx, eax
+  000000014012BEB1  rol     r11d, 1
+  000000014012BEB4  rol     r10d, 1Eh
+  000000014012BEB8  mov     [rsp+340h+var_314], r15d
+  000000014012BEBD  lea     ebx, [r15+6ED9EBA1h]
+  000000014012BEC4  mov     [rsp+340h+var_320], r11d
+  000000014012BEC9  mov     r15d, [rsp+340h+var_30C]
+  000000014012BECE  add     ebx, ecx
+  000000014012BED0  xor     r13d, r15d
+  000000014012BED3  mov     ecx, r9d
+  000000014012BED6  xor     r13d, [rbp+240h+var_294]
+  000000014012BEDA  xor     ecx, edx
+  000000014012BEDC  xor     ecx, r10d
+  000000014012BEDF  rol     r13d, 1
+  000000014012BEE2  mov     eax, ebx
+  000000014012BEE4  rol     edx, 1Eh
+  000000014012BEE7  rol     eax, 5
+  000000014012BEEA  add     eax, r8d
+  000000014012BEED  mov     [rsp+340h+var_308], r13d
+  000000014012BEF2  add     ecx, eax
+  000000014012BEF4  lea     r8d, [r13+6ED9EBA1h]
+  000000014012BEFB  add     r8d, ecx
+  000000014012BEFE  mov     ecx, ebx
+  000000014012BF00  xor     ecx, edx
+  000000014012BF02  rol     ebx, 1Eh
+  000000014012BF05  xor     ecx, r10d
+  000000014012BF08  mov     eax, r8d
+  000000014012BF0B  rol     eax, 5
+  000000014012BF0E  add     eax, r9d
+  000000014012BF11  lea     r9d, [r11+6ED9EBA1h]
+  000000014012BF18  mov     r11d, [rsp+340h+var_2E0]
+  000000014012BF1D  add     ecx, eax
+  000000014012BF1F  add     r9d, ecx
+  000000014012BF22  xor     r11d, [rsp+340h+var_314]
+  000000014012BF27  xor     r11d, [rsp+340h+var_2F0]
+  000000014012BF2C  mov     eax, r9d
+  000000014012BF2F  xor     r11d, [rsp+340h+var_304]
+  000000014012BF34  mov     ecx, r8d
+  000000014012BF37  rol     eax, 5
+  000000014012BF3A  xor     ecx, ebx
+  000000014012BF3C  xor     ecx, edx
+  000000014012BF3E  rol     r11d, 1
+  000000014012BF41  add     eax, r11d
+  000000014012BF44  mov     [rsp+340h+var_2E0], r11d
+  000000014012BF49  add     ecx, eax
+  000000014012BF4B  rol     r8d, 1Eh
+  000000014012BF4F  lea     r11d, [r10+6ED9EBA1h]
+  000000014012BF56  mov     r10d, [rsp+340h+var_2E4]
+  000000014012BF5B  jmp     loc_14012C1B7
+  000000014012BF60  dq 0CA334105C0C1C28Bh, 0FE401EC2C141C303h, 8B94F18341C803C7h
+  000000014012C1B0  db 41h, 5Ch, 0E9h, 0A7h, 0E0h, 2 dup(0FFh)
+  000000014012C1B7  add     r11d, ecx
+  000000014012C1BA  xor     r10d, r13d
+  000000014012C1BD  xor     r10d, [rsp+340h+var_2EC]
+  000000014012C1C2  mov     ecx, r9d
+  000000014012C1C5  mov     r13d, [rsp+340h+var_318]
+  000000014012C1CA  xor     ecx, r8d
+  000000014012C1CD  xor     ecx, ebx
+  000000014012C1CF  rol     r9d, 1Eh
+  000000014012C1D3  xor     r10d, edi
+  000000014012C1D6  mov     eax, r11d
+  000000014012C1D9  rol     eax, 5
+  000000014012C1DC  rol     r10d, 1
+  000000014012C1DF  add     eax, r10d
+  000000014012C1E2  mov     [rsp+340h+var_2E4], r10d
+  000000014012C1E7  add     ecx, eax
+  000000014012C1E9  lea     r10d, [rdx+6ED9EBA1h]
+  000000014012C1F0  mov     edx, [rsp+340h+var_320]
+  000000014012C1F4  add     r10d, ecx
+  000000014012C1F7  xor     edx, [rsp+340h+var_2DC]
+  000000014012C1FB  mov     eax, r10d
+  000000014012C1FE  rol     eax, 5
+  000000014012C201  xor     edx, esi
+  000000014012C203  xor     edx, [rsp+340h+var_304]
+  000000014012C207  add     eax, 6ED9EBA1h
+  000000014012C20C  rol     edx, 1
+  000000014012C20E  mov     ecx, r11d
+  000000014012C211  add     eax, edx
+  000000014012C213  rol     r11d, 1Eh
+  000000014012C217  xor     ecx, r9d
+  000000014012C21A  mov     [rsp+340h+var_2FC], edx
+  000000014012C21E  xor     ecx, r8d
+  000000014012C221  add     ecx, eax
+  000000014012C223  mov     eax, [rsp+340h+var_2E0]
+  000000014012C227  xor     eax, r13d
+  000000014012C22A  add     ebx, ecx
+  000000014012C22C  xor     eax, r14d
+  000000014012C22F  mov     ecx, r10d
+  000000014012C232  xor     eax, edi
+  000000014012C234  rol     r10d, 1Eh
+  000000014012C238  rol     eax, 1
+  000000014012C23A  xor     ecx, r11d
+  000000014012C23D  mov     [rsp+340h+var_300], eax
+  000000014012C241  xor     ecx, r9d
+  000000014012C244  mov     eax, ebx
+  000000014012C246  rol     eax, 5
+  000000014012C249  add     eax, 6ED9EBA1h
+  000000014012C24E  add     eax, [rsp+340h+var_300]
+  000000014012C252  add     ecx, eax
+  000000014012C254  mov     eax, [rsp+340h+var_2E4]
+  000000014012C258  xor     eax, [rsp+340h+var_2F4]
+  000000014012C25C  jmp     loc_14012C404
+  000000014012C261  db 48h, 0B8h, 7Ah, 0E6h, 0E3h, 7Ch, 71h
+  000000014012C268  dq 0C148D9D041A546ABh, 48CDD1C8334834C9h, 0BEFFEEC2535336B8h
+  000000014012C400  db 50h, 0B0h, 0C0h, 5
+  000000014012C404  add     r8d, ecx
+  000000014012C407  xor     eax, r15d
+  000000014012C40A  mov     ecx, ebx
+  000000014012C40C  xor     eax, esi
+  000000014012C40E  rol     ebx, 1Eh
+  000000014012C411  rol     eax, 1
+  000000014012C413  xor     ecx, r10d
+  000000014012C416  mov     [rsp+340h+var_2F8], eax
+  000000014012C41A  xor     ecx, r11d
+  000000014012C41D  mov     esi, [rsp+340h+var_2F8]
+  000000014012C421  mov     eax, r8d
+  000000014012C424  add     esi, 6ED9EBA1h
+  000000014012C42A  rol     eax, 5
+  000000014012C42D  add     eax, esi
+  000000014012C42F  add     ecx, eax
+  000000014012C431  add     r9d, ecx
+  000000014012C434  xor     edx, [rsp+340h+var_314]
+  000000014012C438  mov     esi, [rsp+340h+var_2F0]
+  000000014012C43C  xor     edx, r12d
+  000000014012C43F  xor     edx, r14d
+  000000014012C442  mov     ecx, r8d
+  000000014012C445  mov     r14d, [rsp+340h+var_2F8]
+  000000014012C44A  xor     ecx, ebx
+  000000014012C44C  rol     edx, 1
+  000000014012C44E  xor     ecx, r10d
+  000000014012C451  mov     [rsp+340h+var_2E8], edx
+  000000014012C455  mov     eax, r9d
+  000000014012C458  add     edx, 6ED9EBA1h
+  000000014012C45E  rol     eax, 5
+  000000014012C461  add     eax, edx
+  000000014012C463  rol     r8d, 1Eh
+  000000014012C467  mov     edx, [rsp+340h+var_300]
+  000000014012C46B  add     ecx, eax
+  000000014012C46D  xor     edx, [rsp+340h+var_308]
+  000000014012C471  add     r11d, ecx
+  000000014012C474  xor     edx, esi
+  000000014012C476  mov     eax, r11d
+  000000014012C479  xor     edx, r15d
+  000000014012C47C  rol     eax, 5
+  000000014012C47F  mov     r15d, [rsp+340h+var_320]
+  000000014012C484  mov     edi, r9d
+  000000014012C487  rol     edx, 1
+  000000014012C489  xor     edi, r8d
+  000000014012C48C  mov     [rsp+340h+var_310], edx
+  000000014012C490  xor     edi, ebx
+  000000014012C492  add     edx, 6ED9EBA1h
+  000000014012C498  rol     r9d, 1Eh
+  000000014012C49C  add     eax, edx
+  000000014012C49E  xor     r14d, r15d
+  000000014012C4A1  xor     r14d, [rsp+340h+var_2EC]
+  000000014012C4A6  jmp     short loc_14012C524
+  000000014012C4A8  dq 0FFFFE792850F5041h, 0F6CCFFE8F4745241h, 8F0FFFFFD0F0E8FFh
+  000000014012C520  db 30h, 73h, 2, 0
+  000000014012C524  add     edi, eax
+  000000014012C526  xor     r14d, r12d
+  000000014012C529  add     edi, r10d
+  000000014012C52C  mov     r12d, [rsp+340h+var_2E8]
+  000000014012C531  mov     edx, edi
+  000000014012C533  xor     r12d, [rsp+340h+var_2E0]
+  000000014012C538  mov     ecx, r9d
+  000000014012C53B  xor     r12d, [rsp+340h+var_2DC]
+  000000014012C540  or      ecx, r8d
+  000000014012C543  and     ecx, r11d
+  000000014012C546  rol     edx, 5
+  000000014012C549  xor     r12d, esi
+  000000014012C54C  rol     r11d, 1Eh
+  000000014012C550  mov     esi, [rsp+340h+var_310]
+  000000014012C554  add     ebx, edx
+  000000014012C556  xor     esi, [rsp+340h+var_2E4]
+  000000014012C55A  mov     eax, r9d
+  000000014012C55D  and     eax, r8d
+  000000014012C560  rol     r14d, 1
+  000000014012C563  or      ecx, eax
+  000000014012C565  rol     r12d, 1
+  000000014012C568  add     ecx, 8F1BBCDCh
+  000000014012C56E  mov     [rsp+340h+var_304], r12d
+  000000014012C573  add     ecx, r14d
+  000000014012C576  mov     [rsp+340h+var_2F0], r14d
+  000000014012C57B  add     ebx, ecx
+  000000014012C57D  xor     esi, r13d
+  000000014012C580  xor     esi, [rsp+340h+var_2EC]
+  000000014012C584  add     r12d, 8F1BBCDCh
+  000000014012C58B  rol     esi, 1
+  000000014012C58D  mov     ecx, r11d
+  000000014012C590  or      ecx, r9d
+  000000014012C593  mov     [rsp+340h+var_30C], esi
+  000000014012C597  and     ecx, edi
+  000000014012C599  mov     eax, r11d
+  000000014012C59C  and     eax, r9d
+  000000014012C59F  rol     edi, 1Eh
+  000000014012C5A2  or      ecx, eax
+  000000014012C5A4  mov     edx, ebx
+  000000014012C5A6  rol     edx, 5
+  000000014012C5A9  add     ecx, r12d
+  000000014012C5AC  add     r8d, edx
+  000000014012C5AF  add     r8d, ecx
+  000000014012C5B2  mov     ecx, edi
+  000000014012C5B4  mov     edx, r8d
+  000000014012C5B7  or      ecx, r11d
+  000000014012C5BA  rol     edx, 5
+  000000014012C5BD  and     ecx, ebx
+  000000014012C5BF  mov     r12d, [rsp+340h+var_2FC]
+  000000014012C5C4  add     r9d, edx
+  000000014012C5C7  jmp     loc_14012C727
+  000000014012C5CC  dd 708D0F55h
+  000000014012C5D0  dq 525C5C137BFFFFE4h, 0CA1EE8052B477659h, 0FFFFFE8B6E8FFF6h
+  000000014012C720  db 55h, 5Bh, 78h, 0CCh, 73h, 68h, 50h
+  000000014012C727  add     esi, 8F1BBCDCh
+  000000014012C72D  rol     ebx, 1Eh
+  000000014012C730  mov     eax, edi
+  000000014012C732  mov     r10d, r14d
+  000000014012C735  and     eax, r11d
+  000000014012C738  xor     r10d, r12d
+  000000014012C73B  or      ecx, eax
+  000000014012C73D  mov     eax, ebx
+  000000014012C73F  add     ecx, esi
+  000000014012C741  and     eax, edi
+  000000014012C743  mov     esi, [rsp+340h+var_2F4]
+  000000014012C747  add     r9d, ecx
+  000000014012C74A  xor     r10d, esi
+  000000014012C74D  mov     edx, r9d
+  000000014012C750  xor     r10d, [rsp+340h+var_2DC]
+  000000014012C755  mov     ecx, ebx
+  000000014012C757  or      ecx, edi
+  000000014012C759  rol     edx, 5
+  000000014012C75C  and     ecx, r8d
+  000000014012C75F  rol     r10d, 1
+  000000014012C762  or      ecx, eax
+  000000014012C764  rol     r8d, 1Eh
+  000000014012C768  add     ecx, r10d
+  000000014012C76B  mov     [rsp+340h+var_2DC], r10d
+  000000014012C770  add     ecx, 8F1BBCDCh
+  000000014012C776  lea     r10d, [r11+rdx]
+  000000014012C77A  mov     r11d, [rsp+340h+var_304]
+  000000014012C77F  add     r10d, ecx
+  000000014012C782  xor     r11d, [rsp+340h+var_300]
+  000000014012C787  mov     edx, r10d
+  000000014012C78A  xor     r11d, [rsp+340h+var_314]
+  000000014012C78F  mov     ecx, r8d
+  000000014012C792  or      ecx, ebx
+  000000014012C794  rol     edx, 5
+  000000014012C797  and     ecx, r9d
+  000000014012C79A  xor     r11d, r13d
+  000000014012C79D  rol     r11d, 1
+  000000014012C7A0  mov     eax, r8d
+  000000014012C7A3  and     eax, ebx
+  000000014012C7A5  rol     r9d, 1Eh
+  000000014012C7A9  or      ecx, eax
+  000000014012C7AB  mov     [rsp+340h+var_2F4], r11d
+  000000014012C7B0  mov     eax, [rsp+340h+var_30C]
+  000000014012C7B4  add     ecx, r11d
+  000000014012C7B7  xor     eax, [rsp+340h+var_2F8]
+  000000014012C7BB  lea     r11d, [rdi+rdx]
+  000000014012C7BF  xor     eax, [rsp+340h+var_308]
+  000000014012C7C3  add     ecx, 8F1BBCDCh
+  000000014012C7C9  xor     eax, esi
+  000000014012C7CB  add     r11d, ecx
+  000000014012C7CE  jmp     loc_14012C94D
+  000000014012C7D3  db 8Bh, 5Dh, 78h, 83h, 0C7h
+  000000014012C7D8  dq 854100000040B8C8h, 3FE183FAD1CB8BE4h, 83F4D241C88BC12Bh
+  000000014012C948  db 81h, 52h, 9Bh, 2, 0
+  000000014012C94D  mov     esi, [rsp+340h+var_2DC]
+  000000014012C951  mov     edx, r11d
+  000000014012C954  xor     esi, [rsp+340h+var_2E8]
+  000000014012C958  mov     ecx, r9d
+  000000014012C95B  or      ecx, r8d
+  000000014012C95E  rol     eax, 1
+  000000014012C960  and     ecx, r10d
+  000000014012C963  mov     [rsp+340h+var_2EC], eax
+  000000014012C967  rol     edx, 5
+  000000014012C96A  xor     esi, r15d
+  000000014012C96D  add     edx, [rsp+340h+var_2EC]
+  000000014012C971  mov     eax, r9d
+  000000014012C974  xor     esi, [rsp+340h+var_314]
+  000000014012C978  and     eax, r8d
+  000000014012C97B  or      ecx, eax
+  000000014012C97D  rol     r10d, 1Eh
+  000000014012C981  add     ecx, ebx
+  000000014012C983  rol     esi, 1
+  000000014012C985  lea     ebx, [rdx-70E44324h]
+  000000014012C98B  mov     [rsp+340h+var_314], esi
+  000000014012C98F  add     ebx, ecx
+  000000014012C991  mov     eax, r10d
+  000000014012C994  mov     ecx, r10d
+  000000014012C997  mov     edx, ebx
+  000000014012C999  or      ecx, r9d
+  000000014012C99C  rol     edx, 5
+  000000014012C99F  and     ecx, r11d
+  000000014012C9A2  and     eax, r9d
+  000000014012C9A5  or      ecx, eax
+  000000014012C9A7  mov     r14d, [rsp+340h+var_2E0]
+  000000014012C9AC  add     ecx, r8d
+  000000014012C9AF  mov     edi, [rsp+340h+var_2F0]
+  000000014012C9B3  lea     r8d, [rsi+rdx]
+  000000014012C9B7  xor     edi, [rsp+340h+var_2E4]
+  000000014012C9BB  add     ecx, 8F1BBCDCh
+  000000014012C9C1  mov     esi, [rsp+340h+var_2F4]
+  000000014012C9C5  add     r8d, ecx
+  000000014012C9C8  xor     esi, [rsp+340h+var_310]
+  000000014012C9CC  xor     edi, r15d
+  000000014012C9CF  xor     edi, [rsp+340h+var_2EC]
+  000000014012C9D3  xor     esi, r14d
+  000000014012C9D6  xor     esi, [rsp+340h+var_308]
+  000000014012C9DA  mov     edx, r8d
+  000000014012C9DD  mov     r15d, [rsp+340h+var_304]
+  000000014012C9E2  rol     edx, 5
+  000000014012C9E5  xor     r15d, r12d
+  000000014012C9E8  rol     esi, 1
+  000000014012C9EA  xor     r15d, r14d
+  000000014012C9ED  xor     r15d, [rsp+340h+var_314]
+  000000014012C9F2  mov     r14d, [rsp+340h+var_300]
+  000000014012C9F7  jmp     loc_14012CC6D
+  000000014012C9FC  dd 0FFF440E8h
+  000000014012CA00  dq 4800034D3D810FFFh, 5B848C2FFD84D8Dh, 4800000003A19AE2h
+  000000014012CC68  db 8Ah, 13h, 72h, 2, 0
+  000000014012CC6D  rol     r11d, 1Eh
+  000000014012CC71  mov     [rsp+340h+var_308], esi
+  000000014012CC75  mov     ecx, r11d
+  000000014012CC78  or      ecx, r10d
+  000000014012CC7B  rol     edi, 1
+  000000014012CC7D  and     ecx, ebx
+  000000014012CC7F  rol     r15d, 1
+  000000014012CC82  rol     ebx, 1Eh
+  000000014012CC85  mov     eax, r11d
+  000000014012CC88  and     eax, r10d
+  000000014012CC8B  mov     [rsp+340h+var_2E0], edi
+  000000014012CC8F  or      ecx, eax
+  000000014012CC91  mov     [rsp+340h+var_31C], r15d
+  000000014012CC96  add     ecx, r9d
+  000000014012CC99  mov     eax, ebx
+  000000014012CC9B  add     ecx, 8F1BBCDCh
+  000000014012CCA1  lea     r9d, [rsi+rdx]
+  000000014012CCA5  mov     esi, [rsp+340h+var_30C]
+  000000014012CCA9  add     r9d, ecx
+  000000014012CCAC  and     eax, r11d
+  000000014012CCAF  mov     edx, r9d
+  000000014012CCB2  rol     edx, 5
+  000000014012CCB5  xor     esi, r14d
+  000000014012CCB8  xor     esi, [rsp+340h+var_2E4]
+  000000014012CCBC  mov     ecx, ebx
+  000000014012CCBE  xor     esi, [rsp+340h+var_308]
+  000000014012CCC2  or      ecx, r11d
+  000000014012CCC5  and     ecx, r8d
+  000000014012CCC8  rol     esi, 1
+  000000014012CCCA  or      ecx, eax
+  000000014012CCCC  rol     r8d, 1Eh
+  000000014012CCD0  add     ecx, r10d
+  000000014012CCD3  mov     [rsp+340h+var_300], esi
+  000000014012CCD7  add     ecx, 8F1BBCDCh
+  000000014012CCDD  lea     r10d, [rdi+rdx]
+  000000014012CCE1  add     r10d, ecx
+  000000014012CCE4  mov     eax, r8d
+  000000014012CCE7  and     eax, ebx
+  000000014012CCE9  mov     edx, r10d
+  000000014012CCEC  rol     edx, 5
+  000000014012CCEF  mov     ecx, r8d
+  000000014012CCF2  or      ecx, ebx
+  000000014012CCF4  and     ecx, r9d
+  000000014012CCF7  rol     r9d, 1Eh
+  000000014012CCFB  or      ecx, eax
+  000000014012CCFD  mov     eax, r9d
+  000000014012CD00  add     ecx, r11d
+  000000014012CD03  and     eax, r8d
+  000000014012CD06  add     ecx, 8F1BBCDCh
+  000000014012CD0C  lea     r11d, [r15+rdx]
+  000000014012CD10  jmp     loc_14012CE91
+  000000014012CD15  db 0E8h, 26h, 0E0h
+  000000014012CD18  dq 22E94810FFFF8h, 14E83800FE30349h, 0E95C415F415D4100h
+  000000014012CE90  db 0
+  000000014012CE91  add     r11d, ecx
+  000000014012CE94  mov     ecx, r9d
+  000000014012CE97  or      ecx, r8d
+  000000014012CE9A  mov     edx, r11d
+  000000014012CE9D  and     ecx, r10d
+  000000014012CEA0  rol     edx, 5
+  000000014012CEA3  or      ecx, eax
+  000000014012CEA5  add     ecx, ebx
+  000000014012CEA7  add     ecx, 8F1BBCDCh
+  000000014012CEAD  lea     ebx, [rsi+rdx]
+  000000014012CEB0  mov     edi, [rsp+340h+var_2DC]
+  000000014012CEB4  add     ebx, ecx
+  000000014012CEB6  xor     edi, [rsp+340h+var_2F8]
+  000000014012CEBA  mov     edx, ebx
+  000000014012CEBC  mov     r13d, [rsp+340h+var_2F4]
+  000000014012CEC1  xor     edi, r12d
+  000000014012CEC4  xor     edi, [rsp+340h+var_2E0]
+  000000014012CEC8  xor     r13d, [rsp+340h+var_2E8]
+  000000014012CECD  mov     r12d, [rsp+340h+var_310]
+  000000014012CED2  xor     r13d, r14d
+  000000014012CED5  xor     r12d, [rsp+340h+var_2F8]
+  000000014012CEDA  xor     r13d, r15d
+  000000014012CEDD  mov     r14d, [rsp+340h+var_2F0]
+  000000014012CEE2  xor     r12d, esi
+  000000014012CEE5  xor     r14d, [rsp+340h+var_2E8]
+  000000014012CEEA  xor     r12d, [rsp+340h+var_2EC]
+  000000014012CEEF  rol     edx, 5
+  000000014012CEF2  rol     r10d, 1Eh
+  000000014012CEF6  rol     edi, 1
+  000000014012CEF8  mov     ecx, r10d
+  000000014012CEFB  or      ecx, r9d
+  000000014012CEFE  rol     r13d, 1
+  000000014012CF01  and     ecx, r11d
+  000000014012CF04  rol     r12d, 1
+  000000014012CF07  rol     r11d, 1Eh
+  000000014012CF0B  xor     r14d, edi
+  000000014012CF0E  xor     r14d, [rsp+340h+var_314]
+  000000014012CF13  mov     eax, r10d
+  000000014012CF16  and     eax, r9d
+  000000014012CF19  rol     r14d, 1
+  000000014012CF1C  or      ecx, eax
+  000000014012CF1E  mov     [rsp+340h+var_2E4], edi
+  000000014012CF22  add     ecx, r8d
+  000000014012CF25  mov     [rsp+340h+var_2FC], r13d
+  000000014012CF2A  add     ecx, 8F1BBCDCh
+  000000014012CF30  mov     [rsp+340h+var_320], r12d
+  000000014012CF35  lea     r8d, [rdi+rdx]
+  000000014012CF39  mov     [rsp+340h+var_318], r14d
+  000000014012CF3E  mov     edi, [rsp+340h+var_304]
+  000000014012CF42  add     r8d, ecx
+  000000014012CF45  jmp     short loc_14012CFB3
+  000000014012CF47  push    rbp
+  000000014012CF48  jnp     loc_14015743D
+  000000014012CF4E  pop     r15
+  000000014012CF50  jmp     loc_14015CBF9
+  000000014012CF55  db 4Ah, 55h, 6
+  000000014012CF58  dq 0E285B92A01A68BD6h, 0FFF8AC50E860E7B8h, 0D5E8000330ED800Fh
+  000000014012CFB0  db 0D9h, 2 dup(0FFh)
+  000000014012CFB3  xor     edi, [rsp+340h+var_310]
+  000000014012CFB7  mov     edx, r8d
+  000000014012CFBA  rol     edx, 5
+  000000014012CFBD  mov     ecx, r11d
+  000000014012CFC0  or      ecx, r10d
+  000000014012CFC3  mov     eax, r11d
+  000000014012CFC6  and     ecx, ebx
+  000000014012CFC8  and     eax, r10d
+  000000014012CFCB  or      ecx, eax
+  000000014012CFCD  rol     ebx, 1Eh
+  000000014012CFD0  add     ecx, r9d
+  000000014012CFD3  mov     eax, ebx
+  000000014012CFD5  add     ecx, 8F1BBCDCh
+  000000014012CFDB  lea     r9d, [rdx+r13]
+  000000014012CFDF  add     r9d, ecx
+  000000014012CFE2  and     eax, r11d
+  000000014012CFE5  mov     edx, r9d
+  000000014012CFE8  mov     ecx, ebx
+  000000014012CFEA  or      ecx, r11d
+  000000014012CFED  rol     edx, 5
+  000000014012CFF0  and     ecx, r8d
+  000000014012CFF3  rol     r8d, 1Eh
+  000000014012CFF7  or      ecx, eax
+  000000014012CFF9  mov     eax, r8d
+  000000014012CFFC  add     ecx, r10d
+  000000014012CFFF  and     eax, ebx
+  000000014012D001  add     ecx, 8F1BBCDCh
+  000000014012D007  lea     r10d, [r12+rdx]
+  000000014012D00B  add     r10d, ecx
+  000000014012D00E  mov     ecx, r8d
+  000000014012D011  or      ecx, ebx
+  000000014012D013  mov     edx, r10d
+  000000014012D016  and     ecx, r9d
+  000000014012D019  rol     edx, 5
+  000000014012D01C  or      ecx, eax
+  000000014012D01E  rol     r9d, 1Eh
+  000000014012D022  add     ecx, r11d
+  000000014012D025  add     ecx, 8F1BBCDCh
+  000000014012D02B  lea     r11d, [r14+rdx]
+  000000014012D02F  add     r11d, ecx
+  000000014012D032  xor     edi, r13d
+  000000014012D035  xor     edi, [rsp+340h+var_308]
+  000000014012D039  mov     edx, r11d
+  000000014012D03C  mov     esi, [rsp+340h+var_30C]
+  000000014012D040  mov     ecx, r9d
+  000000014012D043  xor     esi, [rsp+340h+var_2F0]
+  000000014012D047  or      ecx, r8d
+  000000014012D04A  mov     r15d, [rsp+340h+var_2DC]
+  000000014012D04F  and     ecx, r10d
+  000000014012D052  xor     r15d, [rsp+340h+var_304]
+  000000014012D057  jmp     loc_14012D126
+  000000014012D05C  pop     r14
+  000000014012D05E  mov     rsp, r11
+  000000014012D061  jmp     loc_140145691
+  000000014012D066  dw 5E8h
+  000000014012D068  dq 0FFFFC4E2E8FFF6C1h, 38E80002ECF4810Fh, 0FFECDA8A0F000278h
+  000000014012D120  db 0Fh, 8Bh, 0ADh, 0F4h, 2 dup(0FFh)
+  000000014012D126  xor     esi, r12d
+  000000014012D129  xor     esi, [rsp+340h+var_2E0]
+  000000014012D12D  xor     r15d, r14d
+  000000014012D130  xor     r15d, [rsp+340h+var_31C]
+  000000014012D135  mov     eax, r9d
+  000000014012D138  mov     r14d, [rsp+340h+var_2F4]
+  000000014012D13D  and     eax, r8d
+  000000014012D140  xor     r14d, [rsp+340h+var_30C]
+  000000014012D145  or      ecx, eax
+  000000014012D147  add     ecx, ebx
+  000000014012D149  rol     edx, 5
+  000000014012D14C  add     ecx, 8F1BBCDCh
+  000000014012D152  rol     edi, 1
+  000000014012D154  xor     r14d, edi
+  000000014012D157  rol     r10d, 1Eh
+  000000014012D15B  xor     r14d, [rsp+340h+var_300]
+  000000014012D160  mov     eax, r10d
+  000000014012D163  and     eax, r9d
+  000000014012D166  mov     [rsp+340h+var_310], edi
+  000000014012D16A  lea     ebx, [rdi+rdx]
+  000000014012D16D  rol     esi, 1
+  000000014012D16F  mov     edi, [rsp+340h+var_2DC]
+  000000014012D173  add     ebx, ecx
+  000000014012D175  mov     edx, ebx
+  000000014012D177  rol     r15d, 1
+  000000014012D17A  rol     edx, 5
+  000000014012D17D  mov     ecx, r10d
+  000000014012D180  or      ecx, r9d
+  000000014012D183  rol     r14d, 1
+  000000014012D186  and     ecx, r11d
+  000000014012D189  mov     [rsp+340h+var_2F0], esi
+  000000014012D18D  or      ecx, eax
+  000000014012D18F  rol     r11d, 1Eh
+  000000014012D193  add     ecx, r8d
+  000000014012D196  mov     [rsp+340h+var_2F8], r15d
+  000000014012D19B  add     ecx, 8F1BBCDCh
+  000000014012D1A1  mov     [rsp+340h+var_30C], r14d
+  000000014012D1A6  lea     r8d, [rsi+rdx]
+  000000014012D1AA  xor     edi, esi
+  000000014012D1AC  xor     edi, [rsp+340h+var_2E4]
+  000000014012D1B0  add     r8d, ecx
+  000000014012D1B3  xor     edi, [rsp+340h+var_2EC]
+  000000014012D1B7  mov     edx, r8d
+  000000014012D1BA  rol     edx, 5
+  000000014012D1BD  mov     ecx, r11d
+  000000014012D1C0  or      ecx, r10d
+  000000014012D1C3  rol     edi, 1
+  000000014012D1C5  and     ecx, ebx
+  000000014012D1C7  mov     [rsp+340h+var_2DC], edi
+  000000014012D1CB  rol     ebx, 1Eh
+  000000014012D1CE  jmp     loc_14012D353
+  000000014012D1D3  db 0E8h, 80h, 99h, 2, 0
+  000000014012D1D8  dq 544100020F488C0Fh, 7F43000150118B0Fh, 73F377C5C517E0Eh
+  000000014012D353  mov     eax, r11d
+  000000014012D356  and     eax, r10d
+  000000014012D359  or      ecx, eax
+  000000014012D35B  mov     eax, ebx
+  000000014012D35D  add     ecx, r9d
+  000000014012D360  and     eax, r11d
+  000000014012D363  add     ecx, 8F1BBCDCh
+  000000014012D369  lea     r9d, [r15+rdx]
+  000000014012D36D  add     r9d, ecx
+  000000014012D370  mov     ecx, ebx
+  000000014012D372  or      ecx, r11d
+  000000014012D375  mov     edx, r9d
+  000000014012D378  and     ecx, r8d
+  000000014012D37B  rol     edx, 5
+  000000014012D37E  or      ecx, eax
+  000000014012D380  rol     r8d, 1Eh
+  000000014012D384  add     ecx, r10d
+  000000014012D387  add     ecx, 8F1BBCDCh
+  000000014012D38D  lea     r10d, [r14+rdx]
+  000000014012D391  add     r10d, ecx
+  000000014012D394  mov     edx, r10d
+  000000014012D397  rol     edx, 5
+  000000014012D39A  add     r11d, 8F1BBCDCh
+  000000014012D3A1  add     edx, edi
+  000000014012D3A3  mov     ecx, r8d
+  000000014012D3A6  mov     eax, r8d
+  000000014012D3A9  and     eax, ebx
+  000000014012D3AB  or      ecx, ebx
+  000000014012D3AD  and     ecx, r9d
+  000000014012D3B0  rol     r9d, 1Eh
+  000000014012D3B4  or      ecx, eax
+  000000014012D3B6  mov     eax, r9d
+  000000014012D3B9  add     ecx, r11d
+  000000014012D3BC  xor     eax, r8d
+  000000014012D3BF  mov     r11d, [rsp+340h+var_2F4]
+  000000014012D3C4  xor     eax, r10d
+  000000014012D3C7  add     eax, ebx
+  000000014012D3C9  rol     r10d, 1Eh
+  000000014012D3CD  add     eax, 0CA62C1D6h
+  000000014012D3D2  add     edx, ecx
+  000000014012D3D4  xor     r11d, r15d
+  000000014012D3D7  mov     ecx, edx
+  000000014012D3D9  xor     r11d, r13d
+  000000014012D3DC  rol     ecx, 5
+  000000014012D3DF  xor     r11d, [rsp+340h+var_314]
+  000000014012D3E4  mov     r13d, r14d
+  000000014012D3E7  xor     r13d, r12d
+  000000014012D3EA  rol     r11d, 1
+  000000014012D3ED  xor     r13d, [rsp+340h+var_308]
+  000000014012D3F2  mov     r12d, edi
+  000000014012D3F5  jmp     short loc_14012D44E
+  000000014012D3F7  db 55h
+  000000014012D3F8  dq 0F550002A56A8F0Fh, 850F560000CFD084h, 0F6BBEFE800000BC6h
+  000000014012D448  movsd
+  000000014012D449  mov     esi, 8DE55078h
+  000000014012D44E  xor     r12d, [rsp+340h+var_318]
+  000000014012D453  mov     edi, r11d
+  000000014012D456  xor     edi, [rsp+340h+var_310]
+  000000014012D45A  xor     r12d, [rsp+340h+var_2E0]
+  000000014012D45F  lea     ebx, [r11+rcx]
+  000000014012D463  xor     r12d, [rsp+340h+var_314]
+  000000014012D468  add     ebx, eax
+  000000014012D46A  xor     edi, [rsp+340h+var_31C]
+  000000014012D46E  mov     ecx, ebx
+  000000014012D470  xor     edi, [rsp+340h+var_308]
+  000000014012D474  mov     eax, r10d
+  000000014012D477  xor     r13d, [rsp+340h+var_2EC]
+  000000014012D47C  xor     eax, r9d
+  000000014012D47F  xor     eax, edx
+  000000014012D481  rol     ecx, 5
+  000000014012D484  add     eax, r8d
+  000000014012D487  mov     [rsp+340h+var_2F4], r11d
+  000000014012D48C  add     eax, 0CA62C1D6h
+  000000014012D491  rol     r13d, 1
+  000000014012D494  rol     edx, 1Eh
+  000000014012D497  mov     r11d, r13d
+  000000014012D49A  rol     r12d, 1
+  000000014012D49D  xor     r11d, esi
+  000000014012D4A0  xor     r11d, [rsp+340h+var_300]
+  000000014012D4A5  xor     r11d, [rsp+340h+var_2E0]
+  000000014012D4AA  lea     r8d, [rcx+r13]
+  000000014012D4AE  add     r8d, eax
+  000000014012D4B1  rol     edi, 1
+  000000014012D4B3  mov     ecx, r8d
+  000000014012D4B6  mov     [rsp+340h+var_2E8], r13d
+  000000014012D4BB  rol     ecx, 5
+  000000014012D4BE  mov     eax, edx
+  000000014012D4C0  xor     eax, r10d
+  000000014012D4C3  mov     [rsp+340h+var_304], r12d
+  000000014012D4C8  xor     eax, ebx
+  000000014012D4CA  mov     [rsp+340h+var_314], edi
+  000000014012D4CE  add     eax, r9d
+  000000014012D4D1  rol     ebx, 1Eh
+  000000014012D4D4  add     eax, 0CA62C1D6h
+  000000014012D4D9  lea     r9d, [r12+rcx]
+  000000014012D4DD  add     r9d, eax
+  000000014012D4E0  mov     eax, ebx
+  000000014012D4E2  xor     eax, edx
+  000000014012D4E4  mov     ecx, r9d
+  000000014012D4E7  xor     eax, r8d
+  000000014012D4EA  rol     ecx, 5
+  000000014012D4ED  add     eax, r10d
+  000000014012D4F0  rol     r8d, 1Eh
+  000000014012D4F4  add     eax, 0CA62C1D6h
+  000000014012D4F9  lea     r10d, [rdi+rcx]
+  000000014012D4FD  jmp     short loc_14012D57B
+  000000014012D4FF  call    loc_140129B69
+  000000014012D504  jl      loc_14013F48B
+  000000014012D50A  pop     r12
+  000000014012D50C  pop     rbp
+  000000014012D50D  pop     r15
+  000000014012D50F  jmp     loc_14013409B
+  000000014012D514  dd 80C48148h
+  000000014012D518  dq 1C7D820F000003h, 6D9F840F5100h, 9F3E8FFF6BCA3E8h, 0FFFFD25C870F0003h
+  000000014012D578  mov     word ptr [rdx+70h], ss
+  000000014012D57B  add     r10d, eax
+  000000014012D57E  rol     r11d, 1
+  000000014012D581  mov     [rsp+340h+var_308], r11d
+  000000014012D586  xor     edi, r14d
+  000000014012D589  mov     eax, r8d
+  000000014012D58C  xor     eax, ebx
+  000000014012D58E  mov     ecx, r10d
+  000000014012D591  xor     eax, r9d
+  000000014012D594  rol     ecx, 5
+  000000014012D597  add     eax, 0CA62C1D6h
+  000000014012D59C  rol     r9d, 1Eh
+  000000014012D5A0  add     eax, r11d
+  000000014012D5A3  add     edx, ecx
+  000000014012D5A5  xor     r11d, [rsp+340h+var_2DC]
+  000000014012D5AA  add     edx, eax
+  000000014012D5AC  xor     r11d, [rsp+340h+var_320]
+  000000014012D5B1  mov     eax, r9d
+  000000014012D5B4  xor     r11d, [rsp+340h+var_2E4]
+  000000014012D5B9  xor     eax, r8d
+  000000014012D5BC  xor     eax, r10d
+  000000014012D5BF  rol     r11d, 1
+  000000014012D5C2  add     eax, 0CA62C1D6h
+  000000014012D5C7  rol     r10d, 1Eh
+  000000014012D5CB  mov     ecx, edx
+  000000014012D5CD  mov     esi, r12d
+  000000014012D5D0  xor     esi, r15d
+  000000014012D5D3  rol     ecx, 5
+  000000014012D5D6  xor     esi, [rsp+340h+var_2E4]
+  000000014012D5DA  add     ebx, ecx
+  000000014012D5DC  xor     esi, [rsp+340h+var_31C]
+  000000014012D5E0  mov     r15d, [rsp+340h+var_2FC]
+  000000014012D5E5  xor     edi, r15d
+  000000014012D5E8  xor     edi, [rsp+340h+var_300]
+  000000014012D5EC  rol     esi, 1
+  000000014012D5EE  add     eax, esi
+  000000014012D5F0  rol     edi, 1
+  000000014012D5F2  add     ebx, eax
+  000000014012D5F4  mov     [rsp+340h+var_31C], esi
+  000000014012D5F8  mov     eax, r10d
+  000000014012D5FB  mov     [rsp+340h+var_2FC], r11d
+  000000014012D600  xor     eax, r9d
+  000000014012D603  mov     ecx, ebx
+  000000014012D605  xor     eax, edx
+  000000014012D607  rol     ecx, 5
+  000000014012D60A  add     eax, 0CA62C1D6h
+  000000014012D60F  rol     edx, 1Eh
+  000000014012D612  add     eax, edi
+  000000014012D614  add     r8d, ecx
+  000000014012D617  add     r8d, eax
+  000000014012D61A  mov     r14d, esi
+  000000014012D61D  jmp     loc_14012D88B
+  000000014012D622  dw 0F50h, 5C84h, 143h
+  000000014012D628  dq 177A517F958BE900h, 0EC9011332738B78h, 725F5F55AB76C482h
+  000000014012D888  db 1Eh, 2, 0
+  000000014012D88B  xor     r14d, [rsp+340h+var_2F4]
+  000000014012D890  mov     ecx, r8d
+  000000014012D893  mov     esi, [rsp+340h+var_318]
+  000000014012D897  mov     eax, edx
+  000000014012D899  xor     eax, r10d
+  000000014012D89C  rol     ecx, 5
+  000000014012D89F  xor     eax, ebx
+  000000014012D8A1  add     r9d, ecx
+  000000014012D8A4  add     eax, 0CA62C1D6h
+  000000014012D8A9  rol     ebx, 1Eh
+  000000014012D8AC  add     eax, r11d
+  000000014012D8AF  xor     r14d, esi
+  000000014012D8B2  add     r9d, eax
+  000000014012D8B5  xor     r14d, r15d
+  000000014012D8B8  rol     r14d, 1
+  000000014012D8BB  mov     eax, ebx
+  000000014012D8BD  xor     eax, edx
+  000000014012D8BF  mov     [rsp+340h+var_318], r14d
+  000000014012D8C4  xor     eax, r8d
+  000000014012D8C7  mov     ecx, r9d
+  000000014012D8CA  rol     ecx, 5
+  000000014012D8CD  add     eax, 0CA62C1D6h
+  000000014012D8D2  add     r10d, ecx
+  000000014012D8D5  rol     r8d, 1Eh
+  000000014012D8D9  add     eax, r14d
+  000000014012D8DC  mov     r15d, edi
+  000000014012D8DF  xor     r15d, r13d
+  000000014012D8E2  add     r10d, eax
+  000000014012D8E5  xor     r15d, [rsp+340h+var_310]
+  000000014012D8EA  mov     ecx, r10d
+  000000014012D8ED  xor     r15d, [rsp+340h+var_320]
+  000000014012D8F2  rol     r15d, 1
+  000000014012D8F5  rol     ecx, 5
+  000000014012D8F8  mov     [rsp+340h+var_320], r15d
+  000000014012D8FD  add     edx, ecx
+  000000014012D8FF  mov     r13d, r11d
+  000000014012D902  xor     r13d, r12d
+  000000014012D905  mov     eax, r8d
+  000000014012D908  xor     r13d, [rsp+340h+var_2F0]
+  000000014012D90D  xor     eax, ebx
+  000000014012D90F  xor     eax, r9d
+  000000014012D912  xor     r13d, esi
+  000000014012D915  add     eax, 0CA62C1D6h
+  000000014012D91A  rol     r9d, 1Eh
+  000000014012D91E  add     eax, r15d
+  000000014012D921  rol     r13d, 1
+  000000014012D924  add     edx, eax
+  000000014012D926  mov     r12d, r14d
+  000000014012D929  xor     r12d, [rsp+340h+var_314]
+  000000014012D92E  mov     r14d, r15d
+  000000014012D931  jmp     loc_14012DB8E
+  000000014012D936  dw 752Ah
+  000000014012D938  dq 7B75533771FC76B1h, 7379545E76378DD8h, 0C3E87FBE57001B74h
+  000000014012DB88  jle     loc_140145495
+  000000014012DB8E  xor     r14d, [rsp+340h+var_308]
+  000000014012DB93  mov     esi, edx
+  000000014012DB95  xor     r12d, [rsp+340h+var_2F8]
+  000000014012DB9A  mov     eax, r9d
+  000000014012DB9D  xor     r14d, [rsp+340h+var_30C]
+  000000014012DBA2  xor     eax, r10d
+  000000014012DBA5  xor     r12d, [rsp+340h+var_310]
+  000000014012DBAA  xor     eax, r8d
+  000000014012DBAD  xor     r14d, [rsp+340h+var_2F0]
+  000000014012DBB2  add     eax, 0CA62C1D6h
+  000000014012DBB7  add     eax, r13d
+  000000014012DBBA  rol     r10d, 1Eh
+  000000014012DBBE  rol     esi, 5
+  000000014012DBC1  mov     r15d, r13d
+  000000014012DBC4  xor     r15d, [rsp+340h+var_31C]
+  000000014012DBC9  add     esi, ebx
+  000000014012DBCB  xor     r15d, [rsp+340h+var_2DC]
+  000000014012DBD0  add     esi, eax
+  000000014012DBD2  xor     r15d, [rsp+340h+var_2F8]
+  000000014012DBD7  mov     eax, edx
+  000000014012DBD9  xor     eax, r10d
+  000000014012DBDC  rol     edx, 1Eh
+  000000014012DBDF  xor     eax, r9d
+  000000014012DBE2  rol     r12d, 1
+  000000014012DBE5  add     eax, 0CA62C1D6h
+  000000014012DBEA  rol     r14d, 1
+  000000014012DBED  add     eax, r12d
+  000000014012DBF0  rol     r15d, 1
+  000000014012DBF3  mov     ecx, esi
+  000000014012DBF5  mov     ebx, r12d
+  000000014012DBF8  xor     ebx, edi
+  000000014012DBFA  rol     ecx, 5
+  000000014012DBFD  xor     ebx, [rsp+340h+var_2F4]
+  000000014012DC01  add     r8d, ecx
+  000000014012DC04  xor     ebx, [rsp+340h+var_30C]
+  000000014012DC08  add     r8d, eax
+  000000014012DC0B  mov     eax, esi
+  000000014012DC0D  rol     ebx, 1
+  000000014012DC0F  xor     eax, edx
+  000000014012DC11  rol     esi, 1Eh
+  000000014012DC14  xor     eax, r10d
+  000000014012DC17  mov     r11d, r8d
+  000000014012DC1A  add     eax, 0CA62C1D6h
+  000000014012DC1F  rol     r11d, 5
+  000000014012DC23  add     eax, r14d
+  000000014012DC26  add     r11d, r9d
+  000000014012DC29  add     r11d, eax
+  000000014012DC2C  mov     eax, r8d
+  000000014012DC2F  xor     eax, esi
+  000000014012DC31  rol     r8d, 1Eh
+  000000014012DC35  jmp     short loc_14012DC9B
+  000000014012DC37  db 0E8h
+  000000014012DC38  dq 0BF31890FFFF8A454h, 0FFFFFB7AAE8FFFFh, 0D0CEE80000091E8Ch
+  000000014012DC98  db 13h, 1, 0
+  000000014012DC9B  xor     eax, edx
+  000000014012DC9D  mov     ecx, r11d
+  000000014012DCA0  add     eax, 0CA62C1D6h
+  000000014012DCA5  rol     ecx, 5
+  000000014012DCA8  add     eax, r15d
+  000000014012DCAB  add     r10d, ecx
+  000000014012DCAE  add     r10d, eax
+  000000014012DCB1  mov     eax, r11d
+  000000014012DCB4  xor     eax, r8d
+  000000014012DCB7  mov     edi, r10d
+  000000014012DCBA  xor     eax, esi
+  000000014012DCBC  rol     edi, 5
+  000000014012DCBF  add     eax, 0CA62C1D6h
+  000000014012DCC4  add     edi, edx
+  000000014012DCC6  add     eax, ebx
+  000000014012DCC8  xor     r15d, [rsp+340h+var_318]
+  000000014012DCCD  add     edi, eax
+  000000014012DCCF  xor     r15d, [rsp+340h+var_304]
+  000000014012DCD4  mov     eax, r10d
+  000000014012DCD7  xor     r14d, [rsp+340h+var_2FC]
+  000000014012DCDC  mov     r9d, edi
+  000000014012DCDF  xor     r15d, [rsp+340h+var_2F4]
+  000000014012DCE4  xor     ebx, [rsp+340h+var_320]
+  000000014012DCE8  xor     r14d, [rsp+340h+var_2E8]
+  000000014012DCED  xor     ebx, [rsp+340h+var_314]
+  000000014012DCF1  xor     r14d, [rsp+340h+var_2DC]
+  000000014012DCF6  xor     ebx, [rsp+340h+var_2E8]
+  000000014012DCFA  rol     r15d, 1
+  000000014012DCFD  rol     r14d, 1
+  000000014012DD00  rol     r11d, 1Eh
+  000000014012DD04  xor     eax, r11d
+  000000014012DD07  rol     r10d, 1Eh
+  000000014012DD0B  xor     eax, r8d
+  000000014012DD0E  rol     ebx, 1
+  000000014012DD10  add     eax, 0CA62C1D6h
+  000000014012DD15  rol     r9d, 5
+  000000014012DD19  add     eax, r14d
+  000000014012DD1C  add     r9d, esi
+  000000014012DD1F  mov     esi, [rbp+240h+var_23C]
+  000000014012DD22  add     r9d, eax
+  000000014012DD25  add     ebx, r11d
+  000000014012DD28  xor     r14d, r13d
+  000000014012DD2B  xor     r14d, [rsp+340h+var_308]
+  000000014012DD30  mov     eax, edi
+  000000014012DD32  xor     r14d, [rsp+340h+var_304]
+  000000014012DD37  xor     eax, r10d
+  000000014012DD3A  xor     eax, r11d
+  000000014012DD3D  rol     edi, 1Eh
+  000000014012DD40  mov     r11d, [rbp+240h+var_234]
+  000000014012DD44  add     eax, 0CA62C1D6h
+  000000014012DD49  jmp     loc_14012DFD2
+  000000014012DD4E  dw 349h
+  000000014012DD50  dq 44FFFFD362830FE1h, 5C1C1CA8B41D003h, 4DED804140247C33h
+  000000014012DFD0  db 0CAh, 0B3h
+  000000014012DFD2  add     eax, r15d
+  000000014012DFD5  rol     r14d, 1
+  000000014012DFD8  xor     r15d, r12d
+  000000014012DFDB  mov     ecx, r9d
+  000000014012DFDE  xor     r15d, [rsp+340h+var_31C]
+  000000014012DFE3  xor     r15d, [rsp+340h+var_314]
+  000000014012DFE8  rol     ecx, 5
+  000000014012DFEB  add     r8d, ecx
+  000000014012DFEE  rol     r15d, 1
+  000000014012DFF1  add     r8d, eax
+  000000014012DFF4  mov     ecx, r9d
+  000000014012DFF7  xor     ecx, edi
+  000000014012DFF9  rol     r9d, 1Eh
+  000000014012DFFD  xor     ecx, r10d
+  000000014012E000  lea     eax, [r10+r14]
+  000000014012E004  mov     r10d, [rbp+240h+var_238]
+  000000014012E008  add     ecx, 0CA62C1D6h
+  000000014012E00E  mov     edx, r8d
+  000000014012E011  rol     edx, 5
+  000000014012E014  add     ebx, edx
+  000000014012E016  add     ebx, ecx
+  000000014012E018  mov     ecx, r8d
+  000000014012E01B  xor     ecx, r9d
+  000000014012E01E  rol     r8d, 1Eh
+  000000014012E022  xor     ecx, edi
+  000000014012E024  mov     edx, ebx
+  000000014012E026  rol     edx, 5
+  000000014012E029  add     ecx, 0CA62C1D6h
+  000000014012E02F  add     edx, eax
+  000000014012E031  add     ecx, edx
+  000000014012E033  add     esi, ecx
+  000000014012E035  mov     eax, ecx
+  000000014012E037  rol     eax, 5
+  000000014012E03A  add     r15d, eax
+  000000014012E03D  mov     [rbp+240h+var_23C], esi
+  000000014012E040  mov     eax, ebx
+  000000014012E042  rol     ebx, 1Eh
+  000000014012E045  xor     eax, r8d
+  000000014012E048  xor     eax, r9d
+  000000014012E04B  add     eax, 0CA62C1D6h
+  000000014012E050  add     eax, edi
+  000000014012E052  add     eax, [rbp+240h+var_240]
+  000000014012E055  add     r15d, eax
+  000000014012E058  add     r10d, ebx
+  000000014012E05B  mov     [rbp+240h+var_240], r15d
+  000000014012E05F  mov     [rbp+240h+var_238], r10d
+  000000014012E063  mov     r14d, [rbp+240h+var_230]
+  000000014012E067  add     r11d, r8d
+  000000014012E06A  mov     rax, [rbp+240h+var_290]
+  000000014012E06E  add     r14d, r9d
+  000000014012E071  jmp     loc_14012E1BA
+  000000014012E076  dw 5341h
+  000000014012E078  dq 81480001FE998E0Fh, 890F00000750C4h, 0FFF8DDC0E8FFFFDAh
+  000000014012E1BA  mov     [rbp+240h+var_234], r11d
+  000000014012E1BE  mov     [rbp+240h+var_230], r14d
+  000000014012E1C2  lea     rcx, [rax+3Fh]
+  000000014012E1C6  mov     [rbp+240h+var_280], rcx
+  000000014012E1CA  cmp     rcx, 8
+  000000014012E1CE  jnb     loc_140131AD9
+  000000014012E1D4  jmp     short loc_14012E252
+  000000014012E1D6  dw 8DE8h
+  000000014012E1D8  dq 686CE8FFF6B0h, 0F55FFFFB709850Fh, 4090F30001DC7E8Fh
+  000000014012E238  db 58h, 5Bh, 57h, 70h, 74h, 4
+  000000014012E23E  pop     r14
+  000000014012E240  pop     r13
+  000000014012E242  pop     rbp
+  000000014012E243  jmp     loc_14014D37F
+  000000014012E248  pop     r12
+  000000014012E24A  mov     rsp, r11
+  000000014012E24D  jmp     loc_14013D0C5
+  000000014012E252  lea     rdx, [rsp+340h+var_2D0]
+  000000014012E257  sub     rdx, rax
+  000000014012E25A  lea     rax, [rbp+240h+var_288]
+  000000014012E25E  sub     rdx, rax
+  000000014012E261  sub     rdx, 2
+  000000014012E265  mov     [rbp+240h+var_260], rdx
+  000000014012E269  jmp     loc_14012E4FB
+  000000014012E26E  dw 8B4Ch
+  000000014012E270  dq 0EC1D8D4CD08A4046h, 0D08B49C08B3884E3h, 0D2F748F8C1AF0F48h
+  000000014012E4F8  add     [r8], al
+  000000014012E4FB  lea     rbx, [rsp+rcx+340h+var_2C8+3]
+  000000014012E500  mov     r8d, 10h
+  000000014012E506  jmp     short loc_14012E56B
+  000000014012E508  dq 0FFFFF44C8A0F5441h, 5F8D76515398008Dh, 87E8FFF6ACBAE859h
+  000000014012E568  db 0E1h, 1, 0
+  000000014012E56B  movzx   eax, byte ptr [rbx-1]
+  000000014012E56F  movzx   ecx, byte ptr [rbx-2]
+  000000014012E573  shl     ecx, 8
+  000000014012E576  or      ecx, eax
+  000000014012E578  movzx   eax, byte ptr [rbx]
+  000000014012E57B  shl     ecx, 8
+  000000014012E57E  or      ecx, eax
+  000000014012E580  movzx   eax, byte ptr [rbx+1]
+  000000014012E584  shl     ecx, 8
+  000000014012E587  or      ecx, eax
+  000000014012E589  mov     [rbx+rdx], ecx
+  000000014012E58C  lea     rbx, [rbx+4]
+  000000014012E590  sub     r8, 1
+  000000014012E594  jnz     short loc_14012E56B
+  000000014012E596  jmp     loc_14012E95C
+  000000014012E59B  db 0E8h, 48h, 0DEh, 0F7h, 0FFh
+  000000014012E5A0  dq 8B48FFFFCF10840Fh, 41C90F48E82244CBh, 0B848C8334887F483h
+  000000014012E958  rol     byte ptr [rax+rax+0], cl
+  000000014012E95C  mov     r12d, [rbp+240h+var_2C0]
+  000000014012E960  add     r14d, 5A827999h
+  000000014012E967  mov     r13d, [rbp+240h+var_2BC]
+  000000014012E96B  mov     eax, r15d
+  000000014012E96E  rol     eax, 5
+  000000014012E971  mov     ebx, r15d
+  000000014012E974  add     eax, [rsp+340h+var_2D0]
+  000000014012E978  mov     r8d, r11d
+  000000014012E97B  xor     r8d, r10d
+  000000014012E97E  rol     ebx, 1Eh
+  000000014012E981  and     r8d, esi
+  000000014012E984  mov     ecx, ebx
+  000000014012E986  xor     r8d, r11d
+  000000014012E989  mov     edx, esi
+  000000014012E98B  add     r8d, eax
+  000000014012E98E  rol     edx, 1Eh
+  000000014012E991  xor     ecx, edx
+  000000014012E993  add     r8d, r14d
+  000000014012E996  mov     r14d, [rsp+340h+var_2C8]
+  000000014012E99B  and     ecx, r8d
+  000000014012E99E  xor     ecx, edx
+  000000014012E9A0  mov     eax, r8d
+  000000014012E9A3  rol     eax, 5
+  000000014012E9A6  mov     r9d, edx
+  000000014012E9A9  add     eax, 5A827999h
+  000000014012E9AE  rol     r8d, 1Eh
+  000000014012E9B2  add     eax, [rsp+340h+var_2CC]
+  000000014012E9B6  xor     r9d, r10d
+  000000014012E9B9  and     r9d, r15d
+  000000014012E9BC  mov     r15d, [rsp+340h+var_2C4]
+  000000014012E9C1  xor     r9d, r10d
+  000000014012E9C4  add     r9d, eax
+  000000014012E9C7  add     r9d, r11d
+  000000014012E9CA  mov     eax, r9d
+  000000014012E9CD  rol     eax, 5
+  000000014012E9D0  add     eax, 5A827999h
+  000000014012E9D5  add     eax, r14d
+  000000014012E9D8  add     ecx, eax
+  000000014012E9DA  add     r10d, ecx
+  000000014012E9DD  mov     ecx, r8d
+  000000014012E9E0  xor     ecx, ebx
+  000000014012E9E2  mov     eax, r10d
+  000000014012E9E5  and     ecx, r9d
+  000000014012E9E8  rol     eax, 5
+  000000014012E9EB  xor     ecx, ebx
+  000000014012E9ED  rol     r9d, 1Eh
+  000000014012E9F1  add     eax, edx
+  000000014012E9F3  lea     edx, [r15+5A827999h]
+  000000014012E9FA  add     ecx, eax
+  000000014012E9FC  add     edx, ecx
+  000000014012E9FE  jmp     loc_14012EAE6
+  000000014012EA03  db 41h, 5Dh, 41h, 5Eh, 5Dh
+  000000014012EA08  dq 0F5441FFFFE9F8E9h, 37AC56FFFFFB568Fh, 0CBE4705652557573h
+  000000014012EAE0  jbe     loc_140146170
+  000000014012EAE6  mov     ecx, r9d
+  000000014012EAE9  xor     ecx, r8d
+  000000014012EAEC  mov     eax, edx
+  000000014012EAEE  and     ecx, r10d
+  000000014012EAF1  rol     eax, 5
+  000000014012EAF4  xor     ecx, r8d
+  000000014012EAF7  rol     r10d, 1Eh
+  000000014012EAFB  add     eax, ebx
+  000000014012EAFD  lea     ebx, [r12+5A827999h]
+  000000014012EB05  add     ecx, eax
+  000000014012EB07  add     ebx, ecx
+  000000014012EB09  mov     ecx, r10d
+  000000014012EB0C  xor     ecx, r9d
+  000000014012EB0F  mov     eax, ebx
+  000000014012EB11  and     ecx, edx
+  000000014012EB13  rol     eax, 5
+  000000014012EB16  xor     ecx, r9d
+  000000014012EB19  rol     edx, 1Eh
+  000000014012EB1C  add     eax, r8d
+  000000014012EB1F  lea     r8d, [r13+5A827999h]
+  000000014012EB26  add     ecx, eax
+  000000014012EB28  add     r8d, ecx
+  000000014012EB2B  mov     ecx, edx
+  000000014012EB2D  xor     ecx, r10d
+  000000014012EB30  mov     eax, r8d
+  000000014012EB33  and     ecx, ebx
+  000000014012EB35  rol     eax, 5
+  000000014012EB38  add     eax, r9d
+  000000014012EB3B  xor     ecx, r10d
+  000000014012EB3E  mov     r9d, [rbp+240h+var_2B8]
+  000000014012EB42  add     ecx, eax
+  000000014012EB44  rol     ebx, 1Eh
+  000000014012EB47  add     r9d, 5A827999h
+  000000014012EB4E  add     r9d, ecx
+  000000014012EB51  mov     ecx, ebx
+  000000014012EB53  xor     ecx, edx
+  000000014012EB55  mov     eax, r9d
+  000000014012EB58  and     ecx, r8d
+  000000014012EB5B  rol     eax, 5
+  000000014012EB5E  xor     ecx, edx
+  000000014012EB60  rol     r8d, 1Eh
+  000000014012EB64  add     eax, r10d
+  000000014012EB67  mov     r10d, [rbp+240h+var_2B4]
+  000000014012EB6B  add     ecx, eax
+  000000014012EB6D  add     r10d, 5A827999h
+  000000014012EB74  add     r10d, ecx
+  000000014012EB77  mov     ecx, r8d
+  000000014012EB7A  xor     ecx, ebx
+  000000014012EB7C  mov     eax, r10d
+  000000014012EB7F  and     ecx, r9d
+  000000014012EB82  jmp     loc_14012ECC7
+  000000014012EB87  db 41h
+  000000014012EB88  dq 0C8035A827999978Dh, 41F385C98B41D103h, 41CA2341C28BC833h
+  000000014012ECC0  db 0E3h, 0Fh, 82h, 70h, 0FEh, 1, 0
+  000000014012ECC7  rol     eax, 5
+  000000014012ECCA  xor     ecx, ebx
+  000000014012ECCC  rol     r9d, 1Eh
+  000000014012ECD0  add     eax, edx
+  000000014012ECD2  mov     edx, [rbp+240h+var_2B0]
+  000000014012ECD5  add     ecx, eax
+  000000014012ECD7  add     edx, 5A827999h
+  000000014012ECDD  add     edx, ecx
+  000000014012ECDF  mov     ecx, r9d
+  000000014012ECE2  xor     ecx, r8d
+  000000014012ECE5  mov     eax, edx
+  000000014012ECE7  and     ecx, r10d
+  000000014012ECEA  rol     eax, 5
+  000000014012ECED  xor     ecx, r8d
+  000000014012ECF0  rol     r10d, 1Eh
+  000000014012ECF4  add     eax, ebx
+  000000014012ECF6  mov     ebx, [rbp+240h+var_2AC]
+  000000014012ECF9  add     ecx, eax
+  000000014012ECFB  add     ebx, 5A827999h
+  000000014012ED01  add     ebx, ecx
+  000000014012ED03  mov     ecx, r10d
+  000000014012ED06  xor     ecx, r9d
+  000000014012ED09  mov     eax, ebx
+  000000014012ED0B  and     ecx, edx
+  000000014012ED0D  rol     eax, 5
+  000000014012ED10  xor     ecx, r9d
+  000000014012ED13  rol     edx, 1Eh
+  000000014012ED16  add     eax, r8d
+  000000014012ED19  mov     r8d, [rbp+240h+var_2A8]
+  000000014012ED1D  add     ecx, eax
+  000000014012ED1F  add     r8d, 5A827999h
+  000000014012ED26  add     r8d, ecx
+  000000014012ED29  mov     ecx, edx
+  000000014012ED2B  xor     ecx, r10d
+  000000014012ED2E  mov     eax, r8d
+  000000014012ED31  and     ecx, ebx
+  000000014012ED33  rol     eax, 5
+  000000014012ED36  xor     ecx, r10d
+  000000014012ED39  rol     ebx, 1Eh
+  000000014012ED3C  add     eax, r9d
+  000000014012ED3F  mov     r9d, [rbp+240h+var_2A4]
+  000000014012ED43  add     ecx, eax
+  000000014012ED45  add     r9d, 5A827999h
+  000000014012ED4C  add     r9d, ecx
+  000000014012ED4F  mov     ecx, ebx
+  000000014012ED51  xor     ecx, edx
+  000000014012ED53  mov     eax, r9d
+  000000014012ED56  and     ecx, r8d
+  000000014012ED59  rol     eax, 5
+  000000014012ED5C  add     eax, r10d
+  000000014012ED5F  jmp     loc_14012EE9A
+  000000014012ED64  dd 7675588Dh
+  000000014012ED68  dq 8D76559C32E81C70h, 0A8688EF95D728B28h, 0AE355A707F563C5Fh
+  000000014012EE98  db 2 dup(0FFh)
+  000000014012EE9A  rol     r8d, 1Eh
+  000000014012EE9E  mov     r10d, [rbp+240h+var_2A0]
+  000000014012EEA2  xor     ecx, edx
+  000000014012EEA4  add     ecx, eax
+  000000014012EEA6  add     r10d, 5A827999h
+  000000014012EEAD  add     r10d, ecx
+  000000014012EEB0  mov     ecx, r8d
+  000000014012EEB3  xor     ecx, ebx
+  000000014012EEB5  mov     eax, r10d
+  000000014012EEB8  and     ecx, r9d
+  000000014012EEBB  rol     eax, 5
+  000000014012EEBE  xor     ecx, ebx
+  000000014012EEC0  mov     r11d, [rbp+240h+var_294]
+  000000014012EEC4  add     eax, edx
+  000000014012EEC6  add     ecx, eax
+  000000014012EEC8  mov     edx, [rbp+240h+var_29C]
+  000000014012EECB  mov     edi, [rbp+240h+var_298]
+  000000014012EECE  add     edx, 5A827999h
+  000000014012EED4  xor     edi, [rbp+240h+var_2AC]
+  000000014012EED7  add     edx, ecx
+  000000014012EED9  mov     esi, [rbp+240h+var_294]
+  000000014012EEDC  add     r11d, 5A827999h
+  000000014012EEE3  xor     esi, [rbp+240h+var_2A8]
+  000000014012EEE6  mov     eax, edx
+  000000014012EEE8  rol     eax, 5
+  000000014012EEEB  xor     edi, r15d
+  000000014012EEEE  xor     edi, [rsp+340h+var_2CC]
+  000000014012EEF2  add     eax, ebx
+  000000014012EEF4  mov     ebx, [rbp+240h+var_298]
+  000000014012EEF7  xor     esi, r12d
+  000000014012EEFA  rol     r9d, 1Eh
+  000000014012EEFE  add     ebx, 5A827999h
+  000000014012EF04  mov     ecx, r9d
+  000000014012EF07  rol     edi, 1
+  000000014012EF09  xor     ecx, r8d
+  000000014012EF0C  mov     [rsp+340h+var_30C], edi
+  000000014012EF10  and     ecx, r10d
+  000000014012EF13  xor     esi, r14d
+  000000014012EF16  xor     ecx, r8d
+  000000014012EF19  rol     r10d, 1Eh
+  000000014012EF1D  add     ecx, eax
+  000000014012EF1F  rol     esi, 1
+  000000014012EF21  add     ebx, ecx
+  000000014012EF23  mov     [rsp+340h+var_314], esi
+  000000014012EF27  mov     ecx, r10d
+  000000014012EF2A  mov     eax, ebx
+  000000014012EF2C  xor     ecx, r9d
+  000000014012EF2F  rol     eax, 5
+  000000014012EF32  and     ecx, edx
+  000000014012EF34  add     eax, r8d
+  000000014012EF37  jmp     loc_14012F19E
+  000000014012EF3C  dd 7C458D48h
+  000000014012EF40  dq 48C80348BEE78040h, 334100000170958Dh, 8BFFFFE3F78E0FCDh
+  000000014012F198  db 0Fh, 8Eh, 0ABh, 0B7h, 2 dup(0FFh)
+  000000014012F19E  mov     r8d, [rbp+240h+var_29C]
+  000000014012F1A2  xor     ecx, r9d
+  000000014012F1A5  xor     r8d, [rbp+240h+var_2B0]
+  000000014012F1A9  add     ecx, eax
+  000000014012F1AB  add     r11d, ecx
+  000000014012F1AE  rol     edx, 1Eh
+  000000014012F1B1  xor     r8d, r14d
+  000000014012F1B4  mov     eax, r11d
+  000000014012F1B7  xor     r8d, [rsp+340h+var_2D0]
+  000000014012F1BC  mov     ecx, edx
+  000000014012F1BE  xor     ecx, r10d
+  000000014012F1C1  rol     eax, 5
+  000000014012F1C4  and     ecx, ebx
+  000000014012F1C6  rol     r8d, 1
+  000000014012F1C9  xor     ecx, r10d
+  000000014012F1CC  rol     ebx, 1Eh
+  000000014012F1CF  add     eax, r8d
+  000000014012F1D2  mov     [rsp+340h+var_310], r8d
+  000000014012F1D7  add     ecx, eax
+  000000014012F1D9  lea     r8d, [r9+5A827999h]
+  000000014012F1E0  add     r8d, ecx
+  000000014012F1E3  lea     r9d, [r10+5A827999h]
+  000000014012F1EA  mov     eax, r8d
+  000000014012F1ED  lea     r10d, [rdx+5A827999h]
+  000000014012F1F4  rol     eax, 5
+  000000014012F1F7  mov     ecx, ebx
+  000000014012F1F9  xor     ecx, edx
+  000000014012F1FB  add     eax, edi
+  000000014012F1FD  and     ecx, r11d
+  000000014012F200  rol     r11d, 1Eh
+  000000014012F204  xor     ecx, edx
+  000000014012F206  add     ecx, eax
+  000000014012F208  add     r9d, ecx
+  000000014012F20B  mov     ecx, r11d
+  000000014012F20E  xor     ecx, ebx
+  000000014012F210  mov     eax, r9d
+  000000014012F213  and     ecx, r8d
+  000000014012F216  rol     eax, 5
+  000000014012F219  xor     ecx, ebx
+  000000014012F21B  add     eax, esi
+  000000014012F21D  add     ecx, eax
+  000000014012F21F  add     r10d, ecx
+  000000014012F222  rol     r8d, 1Eh
+  000000014012F226  mov     edx, [rsp+340h+var_310]
+  000000014012F22A  mov     r14d, edi
+  000000014012F22D  xor     edx, [rbp+240h+var_2A4]
+  000000014012F230  mov     ecx, r8d
+  000000014012F233  xor     ecx, r11d
+  000000014012F236  xor     edx, r13d
+  000000014012F239  and     ecx, r9d
+  000000014012F23C  jmp     loc_14012F3D1
+  000000014012F241  db 0E8h, 0C6h, 0B1h, 2 dup(0FFh), 0Fh, 8Ch
+  000000014012F248  dq 0F69FD7E8FFFFED2Dh, 8A0FFFFFE0DFE8FFh, 0F69EB7E800028FDCh
+  000000014012F3C0  db 0Fh, 87h, 0CFh, 0FDh, 2 dup(0FFh)
+  000000014012F3C6  call    loc_140134B91
+  000000014012F3CB  ja      loc_140160F14
+  000000014012F3D1  xor     edx, r15d
+  000000014012F3D4  mov     r15d, [rbp+240h+var_2A0]
+  000000014012F3D8  xor     ecx, r11d
+  000000014012F3DB  xor     r14d, r15d
+  000000014012F3DE  rol     edx, 1
+  000000014012F3E0  xor     r14d, [rbp+240h+var_2B8]
+  000000014012F3E4  mov     eax, r10d
+  000000014012F3E7  rol     eax, 5
+  000000014012F3EA  xor     r14d, r12d
+  000000014012F3ED  mov     r12d, [rbp+240h+var_29C]
+  000000014012F3F1  add     eax, edx
+  000000014012F3F3  add     ecx, eax
+  000000014012F3F5  rol     r14d, 1
+  000000014012F3F8  mov     [rsp+340h+var_300], edx
+  000000014012F3FC  xor     esi, r12d
+  000000014012F3FF  xor     esi, [rbp+240h+var_2B4]
+  000000014012F402  lea     edx, [rbx+5A827999h]
+  000000014012F408  add     edx, ecx
+  000000014012F40A  rol     r9d, 1Eh
+  000000014012F40E  mov     [rsp+340h+var_2F8], r14d
+  000000014012F413  xor     esi, r13d
+  000000014012F416  mov     r13d, [rbp+240h+var_298]
+  000000014012F41A  mov     eax, edx
+  000000014012F41C  rol     eax, 5
+  000000014012F41F  mov     ebx, r10d
+  000000014012F422  add     eax, 6ED9EBA1h
+  000000014012F427  rol     r10d, 1Eh
+  000000014012F42B  add     eax, r14d
+  000000014012F42E  rol     esi, 1
+  000000014012F430  xor     r14d, [rbp+240h+var_294]
+  000000014012F434  xor     ebx, r9d
+  000000014012F437  xor     r14d, [rbp+240h+var_2AC]
+  000000014012F43B  xor     ebx, r8d
+  000000014012F43E  xor     r14d, [rbp+240h+var_2B4]
+  000000014012F442  add     ebx, eax
+  000000014012F444  add     ebx, r11d
+  000000014012F447  rol     r14d, 1
+  000000014012F44A  mov     eax, ebx
+  000000014012F44C  mov     [rsp+340h+var_318], esi
+  000000014012F450  rol     eax, 5
+  000000014012F453  mov     ecx, edx
+  000000014012F455  add     eax, 6ED9EBA1h
+  000000014012F45A  rol     edx, 1Eh
+  000000014012F45D  add     eax, esi
+  000000014012F45F  mov     [rsp+340h+var_320], r14d
+  000000014012F464  xor     ecx, r10d
+  000000014012F467  xor     ecx, r9d
+  000000014012F46A  add     ecx, eax
+  000000014012F46C  mov     eax, [rsp+340h+var_300]
+  000000014012F470  xor     eax, r13d
+  000000014012F473  jmp     loc_14012F5ED
+  000000014012F478  dq 928A0FFFF8756BE8h, 0FFFFE0CCE8000053h, 0F56FFFFC008850Fh
+  000000014012F5E8  db 82h, 0AEh, 0EFh, 2 dup(0FFh)
+  000000014012F5ED  add     r8d, ecx
+  000000014012F5F0  xor     eax, [rbp+240h+var_2B0]
+  000000014012F5F3  mov     ecx, ebx
+  000000014012F5F5  xor     eax, [rbp+240h+var_2B8]
+  000000014012F5F8  xor     ecx, edx
+  000000014012F5FA  rol     eax, 1
+  000000014012F5FC  xor     ecx, r10d
+  000000014012F5FF  mov     [rsp+340h+var_31C], eax
+  000000014012F603  mov     eax, r8d
+  000000014012F606  mov     edi, [rsp+340h+var_31C]
+  000000014012F60A  rol     eax, 5
+  000000014012F60D  add     edi, 6ED9EBA1h
+  000000014012F613  add     eax, edi
+  000000014012F615  rol     ebx, 1Eh
+  000000014012F618  add     ecx, eax
+  000000014012F61A  add     r9d, ecx
+  000000014012F61D  mov     ecx, r8d
+  000000014012F620  xor     ecx, ebx
+  000000014012F622  mov     eax, r9d
+  000000014012F625  rol     eax, 5
+  000000014012F628  xor     ecx, edx
+  000000014012F62A  add     eax, 6ED9EBA1h
+  000000014012F62F  add     eax, r14d
+  000000014012F632  add     ecx, eax
+  000000014012F634  add     r10d, ecx
+  000000014012F637  rol     r8d, 1Eh
+  000000014012F63B  mov     r11d, esi
+  000000014012F63E  lea     edi, [rbx+6ED9EBA1h]
+  000000014012F644  xor     r11d, [rsp+340h+var_310]
+  000000014012F649  mov     ecx, r9d
+  000000014012F64C  xor     r11d, [rbp+240h+var_2A8]
+  000000014012F650  xor     ecx, r8d
+  000000014012F653  xor     r11d, [rbp+240h+var_2B0]
+  000000014012F657  xor     ecx, ebx
+  000000014012F659  mov     esi, [rsp+340h+var_31C]
+  000000014012F65D  add     ecx, 6ED9EBA1h
+  000000014012F663  xor     esi, [rsp+340h+var_30C]
+  000000014012F667  mov     ebx, r14d
+  000000014012F66A  xor     esi, [rbp+240h+var_2A4]
+  000000014012F66D  mov     eax, r10d
+  000000014012F670  xor     esi, [rbp+240h+var_2AC]
+  000000014012F673  xor     ebx, [rsp+340h+var_314]
+  000000014012F677  rol     eax, 5
+  000000014012F67A  xor     ebx, r15d
+  000000014012F67D  xor     ebx, [rbp+240h+var_2A8]
+  000000014012F680  rol     r11d, 1
+  000000014012F683  mov     [rsp+340h+var_304], r11d
+  000000014012F688  add     r11d, eax
+  000000014012F68B  add     r11d, ecx
+  000000014012F68E  rol     esi, 1
+  000000014012F690  jmp     loc_14012F7F2
+  000000014012F695  db 0E8h, 0EEh, 9Ah
+  000000014012F698  dq 0FFFFFE5AEE8FFF6h, 87B6E8FFFFEB0D8Ch, 1419C8D0FFFF8h
+  000000014012F7F0  add     al, [rax]
+  000000014012F7F2  add     r11d, edx
+  000000014012F7F5  rol     r9d, 1Eh
+  000000014012F7F9  rol     ebx, 1
+  000000014012F7FB  mov     eax, r11d
+  000000014012F7FE  rol     eax, 5
+  000000014012F801  mov     ecx, r10d
+  000000014012F804  add     eax, esi
+  000000014012F806  rol     r10d, 1Eh
+  000000014012F80A  xor     ecx, r9d
+  000000014012F80D  mov     [rsp+340h+var_2F0], esi
+  000000014012F811  mov     edx, [rsp+340h+var_2F0]
+  000000014012F815  lea     esi, [r8+6ED9EBA1h]
+  000000014012F81C  xor     edx, [rsp+340h+var_2F8]
+  000000014012F820  xor     ecx, r8d
+  000000014012F823  mov     r8d, [rsp+340h+var_304]
+  000000014012F828  add     ecx, eax
+  000000014012F82A  xor     r8d, [rsp+340h+var_300]
+  000000014012F82F  add     edi, ecx
+  000000014012F831  xor     edx, r13d
+  000000014012F834  mov     [rsp+340h+var_2EC], ebx
+  000000014012F838  xor     edx, r15d
+  000000014012F83B  xor     r8d, r12d
+  000000014012F83E  xor     r8d, [rbp+240h+var_2A4]
+  000000014012F842  mov     eax, edi
+  000000014012F844  rol     eax, 5
+  000000014012F847  mov     ecx, r11d
+  000000014012F84A  add     eax, ebx
+  000000014012F84C  rol     edx, 1
+  000000014012F84E  xor     ecx, r10d
+  000000014012F851  rol     r11d, 1Eh
+  000000014012F855  xor     ecx, r9d
+  000000014012F858  rol     r8d, 1
+  000000014012F85B  add     ecx, eax
+  000000014012F85D  mov     [rsp+340h+var_2E8], edx
+  000000014012F861  add     esi, ecx
+  000000014012F863  mov     [rsp+340h+var_2E0], r8d
+  000000014012F868  mov     r14d, edi
+  000000014012F86B  mov     eax, esi
+  000000014012F86D  rol     eax, 5
+  000000014012F870  xor     r14d, r11d
+  000000014012F873  add     eax, 6ED9EBA1h
+  000000014012F878  rol     edi, 1Eh
+  000000014012F87B  add     eax, r8d
+  000000014012F87E  xor     r14d, r10d
+  000000014012F881  add     r14d, eax
+  000000014012F884  mov     ecx, esi
+  000000014012F886  xor     ecx, edi
+  000000014012F888  add     r14d, r9d
+  000000014012F88B  xor     ecx, r11d
+  000000014012F88E  mov     eax, r14d
+  000000014012F891  jmp     short loc_14012F8FC
+  000000014012F893  db 0E8h, 2Ch, 0C8h, 0F7h, 0FFh
+  000000014012F898  dq 81480002BE938E0Fh, 0BD820F000006F0C4h, 1662870F520000BEh
+  000000014012F8F8  db 31h, 0AFh, 2 dup(0FFh)
+  000000014012F8FC  rol     eax, 5
+  000000014012F8FF  add     ecx, 6ED9EBA1h
+  000000014012F905  add     edx, eax
+  000000014012F907  add     edx, ecx
+  000000014012F909  add     edx, r10d
+  000000014012F90C  mov     r15d, [rsp+340h+var_318]
+  000000014012F911  mov     ecx, r14d
+  000000014012F914  xor     ebx, r15d
+  000000014012F917  rol     esi, 1Eh
+  000000014012F91A  xor     ebx, [rbp+240h+var_294]
+  000000014012F91D  xor     ecx, esi
+  000000014012F91F  xor     ecx, edi
+  000000014012F921  rol     r14d, 1Eh
+  000000014012F925  add     ecx, 6ED9EBA1h
+  000000014012F92B  xor     ebx, r12d
+  000000014012F92E  mov     r12d, [rsp+340h+var_31C]
+  000000014012F933  lea     r9d, [rsi+6ED9EBA1h]
+  000000014012F93A  xor     r8d, r12d
+  000000014012F93D  rol     ebx, 1
+  000000014012F93F  xor     r8d, [rsp+340h+var_310]
+  000000014012F944  lea     r10d, [r14+6ED9EBA1h]
+  000000014012F94B  xor     r8d, r13d
+  000000014012F94E  mov     [rsp+340h+var_308], ebx
+  000000014012F952  mov     r13d, [rsp+340h+var_2E8]
+  000000014012F957  mov     eax, edx
+  000000014012F959  rol     eax, 5
+  000000014012F95C  add     ebx, eax
+  000000014012F95E  rol     r8d, 1
+  000000014012F961  add     ebx, ecx
+  000000014012F963  mov     [rsp+340h+var_318], r8d
+  000000014012F968  add     ebx, r11d
+  000000014012F96B  mov     ecx, edx
+  000000014012F96D  xor     ecx, r14d
+  000000014012F970  rol     edx, 1Eh
+  000000014012F973  xor     ecx, esi
+  000000014012F975  mov     eax, ebx
+  000000014012F977  mov     esi, [rsp+340h+var_304]
+  000000014012F97B  rol     eax, 5
+  000000014012F97E  add     eax, r8d
+  000000014012F981  lea     r8d, [rdi+6ED9EBA1h]
+  000000014012F988  mov     edi, [rsp+340h+var_320]
+  000000014012F98C  add     ecx, eax
+  000000014012F98E  add     r8d, ecx
+  000000014012F991  xor     r13d, edi
+  000000014012F994  xor     r13d, [rsp+340h+var_30C]
+  000000014012F999  mov     eax, r8d
+  000000014012F99C  xor     r13d, [rbp+240h+var_294]
+  000000014012F9A0  mov     ecx, ebx
+  000000014012F9A2  rol     eax, 5
+  000000014012F9A5  xor     ecx, edx
+  000000014012F9A7  jmp     loc_14012FA37
+  000000014012F9AC  dd 4ACA50A6h
+  000000014012F9B0  dq 0F6207E3E567EEF54h, 0E95E415C415C849Ch, 411445FFFFFFF3CBh
+  000000014012F9D0  pop     rbp
+  000000014012F9D1  pop     r12
+  000000014012F9D3  pop     r14
+  000000014012F9D5  mov     rsp, r11
+  000000014012F9D8  jmp     loc_14012A30F
+  000000014012F9DD  db 41h, 5Fh, 0E9h
+  000000014012F9E0  dq 24E95D41FFFFDD7Fh, 0FFF69878E8FFFFA9h, 5A830FFFFF976FE8h
+  000000014012FA30  db 0FFh, 0Fh, 8Ch, 95h, 6, 2 dup(0)
+  000000014012FA37  xor     ecx, r14d
+  000000014012FA3A  rol     r13d, 1
+  000000014012FA3D  mov     r14d, [rsp+340h+var_2F0]
+  000000014012FA42  add     eax, r13d
+  000000014012FA45  add     ecx, eax
+  000000014012FA47  mov     [rsp+340h+var_2DC], r13d
+  000000014012FA4C  mov     r13d, [rsp+340h+var_308]
+  000000014012FA51  add     r9d, ecx
+  000000014012FA54  xor     r13d, esi
+  000000014012FA57  rol     ebx, 1Eh
+  000000014012FA5A  xor     r13d, [rsp+340h+var_314]
+  000000014012FA5F  mov     ecx, r8d
+  000000014012FA62  xor     r13d, [rsp+340h+var_310]
+  000000014012FA67  xor     ecx, ebx
+  000000014012FA69  xor     ecx, edx
+  000000014012FA6B  rol     r13d, 1
+  000000014012FA6E  rol     r8d, 1Eh
+  000000014012FA72  mov     eax, r9d
+  000000014012FA75  rol     eax, 5
+  000000014012FA78  add     eax, r13d
+  000000014012FA7B  mov     [rsp+340h+var_2F4], r13d
+  000000014012FA80  add     ecx, eax
+  000000014012FA82  mov     eax, [rsp+340h+var_318]
+  000000014012FA86  xor     eax, r14d
+  000000014012FA89  add     r10d, ecx
+  000000014012FA8C  xor     eax, [rsp+340h+var_300]
+  000000014012FA90  mov     ecx, r9d
+  000000014012FA93  xor     eax, [rsp+340h+var_30C]
+  000000014012FA97  xor     ecx, r8d
+  000000014012FA9A  rol     eax, 1
+  000000014012FA9C  xor     ecx, ebx
+  000000014012FA9E  mov     [rsp+340h+var_31C], eax
+  000000014012FAA2  mov     eax, r10d
+  000000014012FAA5  rol     eax, 5
+  000000014012FAA8  add     eax, edx
+  000000014012FAAA  add     ecx, eax
+  000000014012FAAC  mov     eax, [rsp+340h+var_2DC]
+  000000014012FAB0  xor     eax, [rsp+340h+var_2EC]
+  000000014012FAB4  xor     eax, [rsp+340h+var_2F8]
+  000000014012FAB8  xor     eax, [rsp+340h+var_314]
+  000000014012FABC  mov     edx, [rsp+340h+var_31C]
+  000000014012FAC0  mov     r11d, [rsp+340h+var_308]
+  000000014012FAC5  add     edx, 6ED9EBA1h
+  000000014012FACB  rol     eax, 1
+  000000014012FACD  add     edx, ecx
+  000000014012FACF  mov     [rsp+340h+var_310], eax
+  000000014012FAD3  xor     r11d, edi
+  000000014012FAD6  xor     r11d, r15d
+  000000014012FAD9  rol     r9d, 1Eh
+  000000014012FADD  xor     r11d, [rsp+340h+var_310]
+  000000014012FAE2  jmp     short loc_14012FB3C
+  000000014012FAE4  dd 0E6850F56h
+  000000014012FAE8  dq 0FFFFCD2BE8000186h, 0C2E8000049DE800Fh, 0FFACC1880FFFFFFBh
+  000000014012FB38  retf
+  000000014012FB39  db 2Ch, 3, 0
+  000000014012FB3C  mov     ecx, r9d
+  000000014012FB3F  xor     ecx, r8d
+  000000014012FB42  rol     r11d, 1
+  000000014012FB45  xor     ecx, r10d
+  000000014012FB48  mov     [rsp+340h+var_2F0], r11d
+  000000014012FB4D  rol     r10d, 1Eh
+  000000014012FB51  mov     eax, edx
+  000000014012FB53  rol     eax, 5
+  000000014012FB56  add     eax, ebx
+  000000014012FB58  mov     ebx, [rsp+340h+var_310]
+  000000014012FB5C  add     ecx, eax
+  000000014012FB5E  add     ebx, 6ED9EBA1h
+  000000014012FB64  add     ebx, ecx
+  000000014012FB66  mov     eax, r13d
+  000000014012FB69  xor     eax, [rsp+340h+var_2E0]
+  000000014012FB6D  mov     ecx, r10d
+  000000014012FB70  mov     r13d, [rsp+340h+var_2E8]
+  000000014012FB75  xor     eax, r15d
+  000000014012FB78  xor     eax, [rsp+340h+var_300]
+  000000014012FB7C  xor     ecx, r9d
+  000000014012FB7F  mov     r15d, [rsp+340h+var_318]
+  000000014012FB84  xor     ecx, edx
+  000000014012FB86  rol     eax, 1
+  000000014012FB88  mov     [rsp+340h+var_300], eax
+  000000014012FB8C  mov     eax, ebx
+  000000014012FB8E  rol     eax, 5
+  000000014012FB91  add     eax, r8d
+  000000014012FB94  rol     edx, 1Eh
+  000000014012FB97  mov     r8d, [rsp+340h+var_300]
+  000000014012FB9C  add     ecx, eax
+  000000014012FB9E  add     r8d, 6ED9EBA1h
+  000000014012FBA5  mov     eax, r13d
+  000000014012FBA8  xor     eax, r12d
+  000000014012FBAB  add     r8d, ecx
+  000000014012FBAE  xor     eax, [rsp+340h+var_2F8]
+  000000014012FBB2  mov     ecx, edx
+  000000014012FBB4  xor     eax, [rsp+340h+var_31C]
+  000000014012FBB8  xor     ecx, r10d
+  000000014012FBBB  rol     eax, 1
+  000000014012FBBD  xor     ecx, ebx
+  000000014012FBBF  mov     [rsp+340h+var_30C], eax
+  000000014012FBC3  mov     eax, r8d
+  000000014012FBC6  rol     eax, 5
+  000000014012FBC9  add     eax, r9d
+  000000014012FBCC  rol     ebx, 1Eh
+  000000014012FBCF  mov     r9d, [rsp+340h+var_30C]
+  000000014012FBD4  add     ecx, eax
+  000000014012FBD6  add     r9d, 6ED9EBA1h
+  000000014012FBDD  add     r9d, ecx
+  000000014012FBE0  mov     ecx, ebx
+  000000014012FBE2  jmp     loc_14012FD2B
+  000000014012FBE7  db 0E8h
+  000000014012FBE8  dq 0B6DC8C0FFFF6C414h, 59F57CE8BB66FFFFh, 74E2E507F739750h
+  000000014012FD28  db 0ACh, 2 dup(0FFh)
+  000000014012FD2B  xor     ecx, edx
+  000000014012FD2D  mov     eax, r9d
+  000000014012FD30  rol     eax, 5
+  000000014012FD33  xor     ecx, r8d
+  000000014012FD36  add     eax, r10d
+  000000014012FD39  rol     r8d, 1Eh
+  000000014012FD3D  lea     r10d, [r11+6ED9EBA1h]
+  000000014012FD44  add     ecx, eax
+  000000014012FD46  add     r10d, ecx
+  000000014012FD49  mov     r11d, r15d
+  000000014012FD4C  xor     r11d, esi
+  000000014012FD4F  mov     eax, r10d
+  000000014012FD52  xor     r11d, r12d
+  000000014012FD55  xor     r11d, [rsp+340h+var_300]
+  000000014012FD5A  rol     r11d, 1
+  000000014012FD5D  mov     [rsp+340h+var_314], r11d
+  000000014012FD62  rol     eax, 5
+  000000014012FD65  mov     r12d, [rsp+340h+var_2DC]
+  000000014012FD6A  add     eax, edx
+  000000014012FD6C  xor     r12d, r14d
+  000000014012FD6F  mov     ecx, ebx
+  000000014012FD71  xor     ecx, r9d
+  000000014012FD74  xor     r12d, edi
+  000000014012FD77  xor     r12d, [rsp+340h+var_30C]
+  000000014012FD7C  xor     ecx, r8d
+  000000014012FD7F  add     ecx, eax
+  000000014012FD81  mov     edi, [rsp+340h+var_2EC]
+  000000014012FD85  rol     r9d, 1Eh
+  000000014012FD89  add     r11d, 6ED9EBA1h
+  000000014012FD90  add     r11d, ecx
+  000000014012FD93  rol     r12d, 1
+  000000014012FD96  mov     eax, r11d
+  000000014012FD99  mov     [rsp+340h+var_320], r12d
+  000000014012FD9E  rol     eax, 5
+  000000014012FDA1  mov     ecx, r10d
+  000000014012FDA4  add     eax, ebx
+  000000014012FDA6  rol     r10d, 1Eh
+  000000014012FDAA  xor     ecx, r9d
+  000000014012FDAD  lea     ebx, [r12+6ED9EBA1h]
+  000000014012FDB5  xor     ecx, r8d
+  000000014012FDB8  add     ecx, eax
+  000000014012FDBA  mov     eax, [rsp+340h+var_2F4]
+  000000014012FDBE  xor     eax, edi
+  000000014012FDC0  add     ebx, ecx
+  000000014012FDC2  xor     eax, esi
+  000000014012FDC4  mov     edx, ebx
+  000000014012FDC6  xor     eax, [rsp+340h+var_2F0]
+  000000014012FDCA  mov     ecx, r10d
+  000000014012FDCD  mov     esi, [rsp+340h+var_2E0]
+  000000014012FDD1  or      ecx, r9d
+  000000014012FDD4  jmp     loc_14012FFBF
+  000000014012FDD9  db 0E8h, 47h, 0C3h, 0F7h, 0FFh, 0Fh, 8Fh
+  000000014012FDE0  dq 0FE2034800007C67h, 0F5341FFFFE93984h, 5D5F41FFFFD8788Ah
+  000000014012FFB8  jrcxz   loc_140130017
+  000000014012FFBA  jmp     loc_140161AA5
+  000000014012FFBF  rol     eax, 1
+  000000014012FFC1  and     ecx, r11d
+  000000014012FFC4  mov     [rsp+340h+var_2EC], eax
+  000000014012FFC8  mov     eax, r10d
+  000000014012FFCB  and     eax, r9d
+  000000014012FFCE  rol     edx, 5
+  000000014012FFD1  or      ecx, eax
+  000000014012FFD3  rol     r11d, 1Eh
+  000000014012FFD7  add     ecx, 8F1BBCDCh
+  000000014012FFDD  add     r8d, edx
+  000000014012FFE0  add     ecx, [rsp+340h+var_2EC]
+  000000014012FFE4  mov     eax, esi
+  000000014012FFE6  xor     eax, r14d
+  000000014012FFE9  add     r8d, ecx
+  000000014012FFEC  xor     eax, [rsp+340h+var_314]
+  000000014012FFF0  mov     ecx, r11d
+  000000014012FFF3  mov     r14d, [rsp+340h+var_31C]
+  000000014012FFF8  or      ecx, r10d
+  000000014012FFFB  xor     eax, r14d
+  000000014012FFFE  and     ecx, ebx
+  0000000140130000  rol     eax, 1
+  0000000140130002  mov     edx, r8d
+  0000000140130005  mov     [rsp+340h+var_2E0], eax
+  0000000140130009  mov     eax, r11d
+  000000014013000C  and     eax, r10d
+  000000014013000F  rol     edx, 5
+  0000000140130012  or      ecx, eax
+  0000000140130014  rol     ebx, 1Eh
+  0000000140130017  add     ecx, 8F1BBCDCh
+  000000014013001D  add     r9d, edx
+  0000000140130020  add     ecx, [rsp+340h+var_2E0]
+  0000000140130024  mov     eax, r13d
+  0000000140130027  xor     eax, edi
+  0000000140130029  add     r9d, ecx
+  000000014013002C  xor     eax, r12d
+  000000014013002F  mov     ecx, ebx
+  0000000140130031  mov     r12d, [rsp+340h+var_310]
+  0000000140130036  or      ecx, r11d
+  0000000140130039  xor     eax, r12d
+  000000014013003C  and     ecx, r8d
+  000000014013003F  rol     eax, 1
+  0000000140130041  mov     edx, r9d
+  0000000140130044  mov     [rsp+340h+var_2E4], eax
+  0000000140130048  mov     eax, ebx
+  000000014013004A  and     eax, r11d
+  000000014013004D  rol     edx, 5
+  0000000140130050  or      ecx, eax
+  0000000140130052  add     ecx, 8F1BBCDCh
+  0000000140130058  add     ecx, [rsp+340h+var_2E4]
+  000000014013005C  add     r10d, edx
+  000000014013005F  jmp     short loc_1401300CC
+  0000000140130061  mov     r8d, 40h ; '@'
+  0000000140130067  add     r15d, 0FFFFFFCDh
+  000000014013006B  sub     r8, rcx
+  000000014013006E  sbb     edx, 4Ch ; 'L'
+  0000000140130071  mov     [rbp+240h+var_290], r8
+  0000000140130075  rcl     r14b, 1
+  0000000140130078  cmp     rdi, r8
+  000000014013007B  jbe     loc_14015D7CB
+  0000000140130081  mov     rsp, r11
+  0000000140130084  pop     r12
+  0000000140130086  pop     r15
+  0000000140130088  jmp     loc_14015DADB
+  000000014013008D  db 0E8h, 97h, 0D5h
+  0000000140130090  dq 0FFFFD912860FFFFFh, 0F8A0FFFF882B3E8h, 0FFF7C398E80000CBh
+  00000001401300C8  db 1Ah, 0E3h, 2 dup(0FFh)
+  00000001401300CC  mov     eax, [rsp+340h+var_308]
+  00000001401300D0  add     r10d, ecx
+  00000001401300D3  mov     edi, [rsp+340h+var_2F4]
+  00000001401300D7  xor     eax, esi
+  00000001401300D9  xor     eax, [rsp+340h+var_2EC]
+  00000001401300DD  xor     edi, r15d
+  00000001401300E0  mov     esi, [rsp+340h+var_300]
+  00000001401300E4  mov     edx, r10d
+  00000001401300E7  xor     eax, esi
+  00000001401300E9  rol     edx, 5
+  00000001401300EC  rol     eax, 1
+  00000001401300EE  add     r11d, edx
+  00000001401300F1  mov     [rsp+340h+var_2E8], eax
+  00000001401300F5  xor     edi, [rsp+340h+var_2E8]
+  00000001401300F9  xor     edi, [rsp+340h+var_314]
+  00000001401300FD  rol     r8d, 1Eh
+  0000000140130101  mov     ecx, r8d
+  0000000140130104  rol     edi, 1
+  0000000140130106  or      ecx, ebx
+  0000000140130108  mov     [rsp+340h+var_318], edi
+  000000014013010C  and     ecx, r9d
+  000000014013010F  mov     eax, r8d
+  0000000140130112  and     eax, ebx
+  0000000140130114  rol     r9d, 1Eh
+  0000000140130118  or      ecx, eax
+  000000014013011A  mov     eax, r15d
+  000000014013011D  add     ecx, 8F1BBCDCh
+  0000000140130123  xor     eax, r13d
+  0000000140130126  add     ecx, [rsp+340h+var_2E8]
+  000000014013012A  xor     eax, [rsp+340h+var_2E0]
+  000000014013012E  add     r11d, ecx
+  0000000140130131  xor     eax, [rsp+340h+var_30C]
+  0000000140130135  mov     ecx, r9d
+  0000000140130138  or      ecx, r8d
+  000000014013013B  rol     eax, 1
+  000000014013013D  and     ecx, r10d
+  0000000140130140  mov     [rsp+340h+var_2F8], eax
+  0000000140130144  rol     r10d, 1Eh
+  0000000140130148  mov     eax, r9d
+  000000014013014B  and     eax, r8d
+  000000014013014E  mov     edx, r11d
+  0000000140130151  or      ecx, eax
+  0000000140130153  rol     edx, 5
+  0000000140130156  mov     eax, [rsp+340h+var_2DC]
+  000000014013015A  add     ecx, 8F1BBCDCh
+  0000000140130160  add     ecx, [rsp+340h+var_2F8]
+  0000000140130164  add     ebx, edx
+  0000000140130166  xor     eax, [rsp+340h+var_308]
+  000000014013016A  add     ebx, ecx
+  000000014013016C  xor     eax, [rsp+340h+var_2E4]
+  0000000140130170  jmp     loc_14013039C
+  0000000140130175  db 70h, 5Dh, 70h
+  0000000140130178  dq 48C2B37D757247A9h, 3024A8E0F5741h, 0FFFFA17F8A0F5241h
+  0000000140130398  db 8Fh, 0E1h, 9Ah, 88h
+  000000014013039C  mov     edx, ebx
+  000000014013039E  xor     eax, [rsp+340h+var_2F0]
+  00000001401303A2  mov     ecx, r10d
+  00000001401303A5  or      ecx, r9d
+  00000001401303A8  rol     eax, 1
+  00000001401303AA  and     ecx, r11d
+  00000001401303AD  mov     [rsp+340h+var_304], eax
+  00000001401303B1  rol     edx, 5
+  00000001401303B4  mov     eax, r10d
+  00000001401303B7  and     eax, r9d
+  00000001401303BA  rol     r11d, 1Eh
+  00000001401303BE  or      ecx, eax
+  00000001401303C0  add     r8d, edx
+  00000001401303C3  add     ecx, 8F1BBCDCh
+  00000001401303C9  mov     eax, r11d
+  00000001401303CC  add     ecx, [rsp+340h+var_304]
+  00000001401303D0  and     eax, r10d
+  00000001401303D3  add     r8d, ecx
+  00000001401303D6  mov     ecx, r11d
+  00000001401303D9  or      ecx, r10d
+  00000001401303DC  mov     edx, r8d
+  00000001401303DF  and     ecx, ebx
+  00000001401303E1  rol     edx, 5
+  00000001401303E4  or      ecx, eax
+  00000001401303E6  add     r9d, edx
+  00000001401303E9  add     ecx, 8F1BBCDCh
+  00000001401303EF  add     ecx, edi
+  00000001401303F1  add     r9d, ecx
+  00000001401303F4  rol     ebx, 1Eh
+  00000001401303F7  mov     r15d, [rsp+340h+var_2DC]
+  00000001401303FC  mov     ecx, ebx
+  00000001401303FE  xor     r15d, [rsp+340h+var_2F8]
+  0000000140130403  or      ecx, r11d
+  0000000140130406  xor     r15d, [rsp+340h+var_320]
+  000000014013040B  and     ecx, r8d
+  000000014013040E  xor     r15d, r14d
+  0000000140130411  rol     r8d, 1Eh
+  0000000140130415  rol     r15d, 1
+  0000000140130418  mov     eax, ebx
+  000000014013041A  mov     [rsp+340h+var_2DC], r15d
+  000000014013041F  and     eax, r11d
+  0000000140130422  or      ecx, eax
+  0000000140130424  add     r15d, 8F1BBCDCh
+  000000014013042B  add     ecx, r15d
+  000000014013042E  mov     eax, r8d
+  0000000140130431  mov     r15d, [rsp+340h+var_2F4]
+  0000000140130436  and     eax, ebx
+  0000000140130438  xor     r15d, [rsp+340h+var_304]
+  000000014013043D  mov     edx, r9d
+  0000000140130440  xor     r15d, [rsp+340h+var_2EC]
+  0000000140130445  jmp     loc_1401305D9
+  000000014013044A  dw 8B44h, 855h, 8041h
+  0000000140130450  dq 0D3410C4D8B44CFE9h, 41005D8BC98B41C2h, 44C38B04558BCA33h
+  00000001401305D8  pop     rbx
+  00000001401305D9  xor     r15d, r12d
+  00000001401305DC  rol     edx, 5
+  00000001401305DF  add     r10d, edx
+  00000001401305E2  rol     r15d, 1
+  00000001401305E5  add     r10d, ecx
+  00000001401305E8  mov     [rsp+340h+var_2F4], r15d
+  00000001401305ED  add     r15d, 8F1BBCDCh
+  00000001401305F4  mov     ecx, r8d
+  00000001401305F7  or      ecx, ebx
+  00000001401305F9  mov     edx, r10d
+  00000001401305FC  and     ecx, r9d
+  00000001401305FF  rol     edx, 5
+  0000000140130602  or      ecx, eax
+  0000000140130604  rol     r9d, 1Eh
+  0000000140130608  add     ecx, r15d
+  000000014013060B  add     r11d, edx
+  000000014013060E  add     r11d, ecx
+  0000000140130611  mov     r15d, edi
+  0000000140130614  xor     r15d, [rsp+340h+var_2E0]
+  0000000140130619  mov     edx, r11d
+  000000014013061C  mov     edi, [rsp+340h+var_2DC]
+  0000000140130620  xor     r15d, esi
+  0000000140130623  xor     edi, [rsp+340h+var_2E4]
+  0000000140130627  xor     r15d, r14d
+  000000014013062A  mov     r14d, [rsp+340h+var_30C]
+  000000014013062F  mov     ecx, r9d
+  0000000140130632  or      ecx, r8d
+  0000000140130635  rol     edx, 5
+  0000000140130638  and     ecx, r10d
+  000000014013063B  rol     r15d, 1
+  000000014013063E  add     ebx, edx
+  0000000140130640  rol     r10d, 1Eh
+  0000000140130644  xor     edi, r14d
+  0000000140130647  mov     [rsp+340h+var_31C], r15d
+  000000014013064C  xor     edi, r12d
+  000000014013064F  mov     eax, r9d
+  0000000140130652  mov     r12d, [rsp+340h+var_2F4]
+  0000000140130657  and     eax, r8d
+  000000014013065A  xor     r12d, [rsp+340h+var_2E8]
+  000000014013065F  or      ecx, eax
+  0000000140130661  xor     r12d, [rsp+340h+var_2F0]
+  0000000140130666  add     ecx, 8F1BBCDCh
+  000000014013066C  add     ecx, r15d
+  000000014013066F  rol     edi, 1
+  0000000140130671  add     ebx, ecx
+  0000000140130673  mov     [rsp+340h+var_310], edi
+  0000000140130677  mov     ecx, r10d
+  000000014013067A  mov     eax, r10d
+  000000014013067D  or      ecx, r9d
+  0000000140130680  and     eax, r9d
+  0000000140130683  jmp     loc_140130794
+  0000000140130688  dq 0CDA6E8FFF68B9BE8h, 0FFFF90F9850FFFFFh
+  0000000140130698  db 41h, 5Fh, 0E9h, 0CEh, 0CFh, 2 dup(0FFh)
+  000000014013069F  push    rcx
+  00000001401306A0  retf
+  00000001401306A1  db 3Dh, 53h, 64h, 96h, 0FFh, 2 dup(3Ah)
+  00000001401306A8  dq 56C323C25DB74854h, 77A3F2E5C97674D4h, 760264C9E8B75C07h
+  0000000140130790  db 0C7h, 0CEh, 2 dup(0FFh)
+  0000000140130794  and     ecx, r11d
+  0000000140130797  mov     edx, ebx
+  0000000140130799  or      ecx, eax
+  000000014013079B  rol     edx, 5
+  000000014013079E  add     ecx, 8F1BBCDCh
+  00000001401307A4  rol     r11d, 1Eh
+  00000001401307A8  add     ecx, edi
+  00000001401307AA  add     r8d, edx
+  00000001401307AD  add     r8d, ecx
+  00000001401307B0  xor     r12d, esi
+  00000001401307B3  mov     r13d, r15d
+  00000001401307B6  rol     r12d, 1
+  00000001401307B9  xor     r13d, [rsp+340h+var_2F8]
+  00000001401307BE  mov     r15d, edi
+  00000001401307C1  xor     r13d, [rsp+340h+var_314]
+  00000001401307C6  mov     ecx, r11d
+  00000001401307C9  xor     r15d, [rsp+340h+var_304]
+  00000001401307CE  or      ecx, r10d
+  00000001401307D1  xor     r15d, [rsp+340h+var_320]
+  00000001401307D6  and     ecx, ebx
+  00000001401307D8  xor     r15d, [rsp+340h+var_2F0]
+  00000001401307DD  xor     r13d, r14d
+  00000001401307E0  rol     ebx, 1Eh
+  00000001401307E3  mov     eax, r11d
+  00000001401307E6  and     eax, r10d
+  00000001401307E9  rol     r13d, 1
+  00000001401307EC  or      ecx, eax
+  00000001401307EE  rol     r15d, 1
+  00000001401307F1  add     ecx, 8F1BBCDCh
+  00000001401307F7  mov     [rsp+340h+var_30C], r12d
+  00000001401307FC  add     ecx, r12d
+  00000001401307FF  mov     [rsp+340h+var_2FC], r13d
+  0000000140130804  mov     eax, ebx
+  0000000140130806  mov     [rsp+340h+var_300], r15d
+  000000014013080B  and     eax, r11d
+  000000014013080E  mov     edx, r8d
+  0000000140130811  rol     edx, 5
+  0000000140130814  mov     r14d, r12d
+  0000000140130817  xor     r14d, [rsp+340h+var_318]
+  000000014013081C  add     r9d, edx
+  000000014013081F  xor     r14d, [rsp+340h+var_2EC]
+  0000000140130824  add     r9d, ecx
+  0000000140130827  xor     r14d, [rsp+340h+var_314]
+  000000014013082C  mov     ecx, ebx
+  000000014013082E  or      ecx, r11d
+  0000000140130831  rol     r14d, 1
+  0000000140130834  and     ecx, r8d
+  0000000140130837  mov     [rsp+340h+var_314], r14d
+  000000014013083C  or      ecx, eax
+  000000014013083E  rol     r8d, 1Eh
+  0000000140130842  jmp     loc_140130993
+  0000000140130847  db 33h
+  0000000140130848  dq 0D041C0D1C93341C7h, 0C28B414C244489FAh, 0FAD0C20305C0C1F9h
+  0000000140130988  call    loc_14016291C
+  000000014013098D  jo      loc_14015851C
+  0000000140130993  add     ecx, 8F1BBCDCh
+  0000000140130999  mov     edx, r9d
+  000000014013099C  add     ecx, r13d
+  000000014013099F  rol     edx, 5
+  00000001401309A2  add     r10d, edx
+  00000001401309A5  mov     eax, r8d
+  00000001401309A8  add     r10d, ecx
+  00000001401309AB  and     eax, ebx
+  00000001401309AD  mov     edx, r10d
+  00000001401309B0  mov     ecx, r8d
+  00000001401309B3  or      ecx, ebx
+  00000001401309B5  rol     edx, 5
+  00000001401309B8  and     ecx, r9d
+  00000001401309BB  add     r11d, edx
+  00000001401309BE  or      ecx, eax
+  00000001401309C0  rol     r9d, 1Eh
+  00000001401309C4  add     ecx, 8F1BBCDCh
+  00000001401309CA  mov     eax, r9d
+  00000001401309CD  add     ecx, r15d
+  00000001401309D0  and     eax, r8d
+  00000001401309D3  add     r11d, ecx
+  00000001401309D6  mov     esi, r13d
+  00000001401309D9  xor     esi, [rsp+340h+var_2DC]
+  00000001401309DD  mov     ecx, r9d
+  00000001401309E0  xor     esi, [rsp+340h+var_2E0]
+  00000001401309E4  or      ecx, r8d
+  00000001401309E7  xor     esi, [rsp+340h+var_320]
+  00000001401309EB  and     ecx, r10d
+  00000001401309EE  or      ecx, eax
+  00000001401309F0  rol     r10d, 1Eh
+  00000001401309F4  add     ecx, 8F1BBCDCh
+  00000001401309FA  rol     esi, 1
+  00000001401309FC  add     ecx, r14d
+  00000001401309FF  mov     [rsp+340h+var_2F0], esi
+  0000000140130A03  mov     edi, r11d
+  0000000140130A06  rol     edi, 5
+  0000000140130A09  add     edi, ebx
+  0000000140130A0B  add     edi, ecx
+  0000000140130A0D  mov     ecx, r10d
+  0000000140130A10  mov     ebx, edi
+  0000000140130A12  rol     ebx, 5
+  0000000140130A15  xor     r15d, [rsp+340h+var_2F4]
+  0000000140130A1A  or      ecx, r9d
+  0000000140130A1D  xor     r15d, [rsp+340h+var_2E4]
+  0000000140130A22  and     ecx, r11d
+  0000000140130A25  xor     r15d, [rsp+340h+var_2EC]
+  0000000140130A2A  add     ebx, r8d
+  0000000140130A2D  xor     r14d, [rsp+340h+var_31C]
+  0000000140130A32  mov     eax, r10d
+  0000000140130A35  xor     r14d, [rsp+340h+var_2E8]
+  0000000140130A3A  jmp     loc_140130BE3
+  0000000140130A3F  db 0E8h
+  0000000140130A40  dq 0E802890FFFF864F4h, 0E1880FE40349FFFFh, 0FFF68680E8FFFFF1h
+  0000000140130BE0  db 1Fh, 3, 0
+  0000000140130BE3  and     eax, r9d
+  0000000140130BE6  or      ecx, eax
+  0000000140130BE8  xor     r14d, [rsp+340h+var_2E0]
+  0000000140130BED  add     ecx, 8F1BBCDCh
+  0000000140130BF3  rol     r11d, 1Eh
+  0000000140130BF7  add     ecx, esi
+  0000000140130BF9  rol     r15d, 1
+  0000000140130BFC  xor     esi, [rsp+340h+var_310]
+  0000000140130C00  add     ebx, ecx
+  0000000140130C02  xor     esi, [rsp+340h+var_2F8]
+  0000000140130C06  mov     ecx, r11d
+  0000000140130C09  xor     esi, [rsp+340h+var_2E4]
+  0000000140130C0D  or      ecx, r10d
+  0000000140130C10  and     ecx, edi
+  0000000140130C12  mov     [rsp+340h+var_320], r15d
+  0000000140130C17  rol     edi, 1Eh
+  0000000140130C1A  mov     eax, r11d
+  0000000140130C1D  and     eax, r10d
+  0000000140130C20  rol     r14d, 1
+  0000000140130C23  or      ecx, eax
+  0000000140130C25  rol     esi, 1
+  0000000140130C27  add     ecx, 8F1BBCDCh
+  0000000140130C2D  mov     [rsp+340h+var_2EC], r14d
+  0000000140130C32  add     ecx, r15d
+  0000000140130C35  mov     [rsp+340h+var_308], esi
+  0000000140130C39  xor     r15d, r12d
+  0000000140130C3C  mov     r8d, ebx
+  0000000140130C3F  rol     r8d, 5
+  0000000140130C43  mov     eax, edi
+  0000000140130C45  add     r8d, r9d
+  0000000140130C48  and     eax, r11d
+  0000000140130C4B  add     r8d, ecx
+  0000000140130C4E  mov     ecx, edi
+  0000000140130C50  or      ecx, r11d
+  0000000140130C53  mov     edx, r8d
+  0000000140130C56  and     ecx, ebx
+  0000000140130C58  rol     edx, 5
+  0000000140130C5B  or      ecx, eax
+  0000000140130C5D  rol     ebx, 1Eh
+  0000000140130C60  add     ecx, 8F1BBCDCh
+  0000000140130C66  add     r10d, edx
+  0000000140130C69  add     ecx, r14d
+  0000000140130C6C  mov     eax, ebx
+  0000000140130C6E  add     r10d, ecx
+  0000000140130C71  and     eax, edi
+  0000000140130C73  mov     ecx, ebx
+  0000000140130C75  mov     r9d, r10d
+  0000000140130C78  or      ecx, edi
+  0000000140130C7A  rol     r9d, 5
+  0000000140130C7E  and     ecx, r8d
+  0000000140130C81  jmp     loc_140130DB9
+  0000000140130C86  dw 5641h
+  0000000140130C88  dq 5341000273388F0Fh, 0E2E8FFFFF061880Fh, 0E7788D06ADCD8DE8h
+  0000000140130DB9  add     r9d, r11d
+  0000000140130DBC  mov     r11d, [rsp+340h+var_304]
+  0000000140130DC1  or      ecx, eax
+  0000000140130DC3  add     ecx, 8F1BBCDCh
+  0000000140130DC9  rol     r8d, 1Eh
+  0000000140130DCD  add     ecx, esi
+  0000000140130DCF  xor     r15d, r11d
+  0000000140130DD2  xor     r15d, [rsp+340h+var_2E8]
+  0000000140130DD7  add     r9d, ecx
+  0000000140130DDA  rol     r15d, 1
+  0000000140130DDD  mov     ecx, r8d
+  0000000140130DE0  or      ecx, ebx
+  0000000140130DE2  mov     [rsp+340h+var_304], r15d
+  0000000140130DE7  and     ecx, r10d
+  0000000140130DEA  mov     eax, r8d
+  0000000140130DED  and     eax, ebx
+  0000000140130DEF  mov     edx, r9d
+  0000000140130DF2  or      ecx, eax
+  0000000140130DF4  rol     edx, 5
+  0000000140130DF7  add     ecx, 8F1BBCDCh
+  0000000140130DFD  add     edx, edi
+  0000000140130DFF  add     ecx, r15d
+  0000000140130E02  add     edx, ecx
+  0000000140130E04  rol     r10d, 1Eh
+  0000000140130E08  mov     eax, r9d
+  0000000140130E0B  mov     ecx, edx
+  0000000140130E0D  xor     eax, r10d
+  0000000140130E10  rol     ecx, 5
+  0000000140130E13  xor     eax, r8d
+  0000000140130E16  rol     r9d, 1Eh
+  0000000140130E1A  add     eax, 0CA62C1D6h
+  0000000140130E1F  add     ebx, ecx
+  0000000140130E21  mov     r12d, r14d
+  0000000140130E24  xor     r12d, r13d
+  0000000140130E27  mov     r13d, esi
+  0000000140130E2A  xor     r12d, [rsp+340h+var_318]
+  0000000140130E2F  xor     r13d, [rsp+340h+var_300]
+  0000000140130E34  xor     r12d, [rsp+340h+var_2F8]
+  0000000140130E39  xor     r13d, [rsp+340h+var_2DC]
+  0000000140130E3E  xor     r13d, r11d
+  0000000140130E41  rol     r12d, 1
+  0000000140130E44  add     eax, r12d
+  0000000140130E47  rol     r13d, 1
+  0000000140130E4A  add     ebx, eax
+  0000000140130E4C  mov     [rsp+340h+var_2F8], r12d
+  0000000140130E51  mov     eax, edx
+  0000000140130E53  mov     [rsp+340h+var_2E0], r13d
+  0000000140130E58  xor     eax, r9d
+  0000000140130E5B  rol     edx, 1Eh
+  0000000140130E5E  xor     eax, r10d
+  0000000140130E61  jmp     loc_1401310D1
+  0000000140130E66  dw 2DE8h
+  0000000140130E68  dq 0FFFFDD17E8FFF682h, 0F53FFFFC200890Fh, 495E4100000BA48Eh
+  00000001401310D0  db 0FFh
+  00000001401310D1  mov     ecx, ebx
+  00000001401310D3  add     eax, 0CA62C1D6h
+  00000001401310D8  rol     ecx, 5
+  00000001401310DB  add     eax, r13d
+  00000001401310DE  add     r8d, ecx
+  00000001401310E1  add     r8d, eax
+  00000001401310E4  mov     r11d, r15d
+  00000001401310E7  xor     r11d, [rsp+340h+var_314]
+  00000001401310EC  mov     eax, ebx
+  00000001401310EE  xor     r11d, [rsp+340h+var_2F4]
+  00000001401310F3  xor     eax, edx
+  00000001401310F5  xor     r11d, [rsp+340h+var_318]
+  00000001401310FA  xor     eax, r9d
+  00000001401310FD  add     eax, 0CA62C1D6h
+  0000000140131102  rol     r11d, 1
+  0000000140131105  add     eax, r11d
+  0000000140131108  rol     ebx, 1Eh
+  000000014013110B  mov     ecx, r8d
+  000000014013110E  mov     [rsp+340h+var_318], r11d
+  0000000140131113  rol     ecx, 5
+  0000000140131116  mov     edi, r12d
+  0000000140131119  xor     edi, [rsp+340h+var_2F0]
+  000000014013111D  add     r10d, ecx
+  0000000140131120  xor     edi, [rsp+340h+var_31C]
+  0000000140131124  add     r10d, eax
+  0000000140131127  xor     edi, [rsp+340h+var_2DC]
+  000000014013112B  mov     eax, r8d
+  000000014013112E  xor     eax, ebx
+  0000000140131130  rol     edi, 1
+  0000000140131132  xor     eax, edx
+  0000000140131134  rol     r8d, 1Eh
+  0000000140131138  add     eax, 0CA62C1D6h
+  000000014013113D  mov     [rsp+340h+var_2E8], edi
+  0000000140131141  add     eax, edi
+  0000000140131143  mov     ecx, r10d
+  0000000140131146  rol     ecx, 5
+  0000000140131149  mov     esi, r13d
+  000000014013114C  xor     esi, [rsp+340h+var_320]
+  0000000140131150  add     r9d, ecx
+  0000000140131153  xor     esi, [rsp+340h+var_310]
+  0000000140131157  add     r9d, eax
+  000000014013115A  xor     esi, [rsp+340h+var_2F4]
+  000000014013115E  mov     eax, r10d
+  0000000140131161  xor     eax, r8d
+  0000000140131164  rol     esi, 1
+  0000000140131166  xor     eax, ebx
+  0000000140131168  mov     [rsp+340h+var_2F4], esi
+  000000014013116C  mov     ecx, r9d
+  000000014013116F  mov     [rsp+340h+var_2D0], esi
+  0000000140131173  rol     ecx, 5
+  0000000140131176  jmp     short loc_1401311E6
+  0000000140131178  dq 27A168F0FE30348h, 8F0F0002DFE2E800h, 7852B59DFFFF9B86h
+  00000001401311E0  jb      loc_140152602
+  00000001401311E6  add     eax, 0CA62C1D6h
+  00000001401311EB  add     edx, ecx
+  00000001401311ED  add     eax, esi
+  00000001401311EF  xor     edi, [rsp+340h+var_308]
+  00000001401311F3  add     edx, eax
+  00000001401311F5  xor     edi, [rsp+340h+var_2FC]
+  00000001401311F9  mov     r14d, r11d
+  00000001401311FC  xor     r14d, [rsp+340h+var_2EC]
+  0000000140131201  mov     eax, r9d
+  0000000140131204  xor     r14d, [rsp+340h+var_30C]
+  0000000140131209  mov     ecx, edx
+  000000014013120B  xor     r14d, [rsp+340h+var_31C]
+  0000000140131210  mov     r11d, esi
+  0000000140131213  xor     edi, [rsp+340h+var_310]
+  0000000140131217  xor     r11d, r15d
+  000000014013121A  xor     r11d, [rsp+340h+var_300]
+  000000014013121F  xor     r11d, [rsp+340h+var_30C]
+  0000000140131224  rol     ecx, 5
+  0000000140131227  add     ebx, ecx
+  0000000140131229  rol     r10d, 1Eh
+  000000014013122D  xor     eax, r10d
+  0000000140131230  rol     r14d, 1
+  0000000140131233  xor     eax, r8d
+  0000000140131236  rol     r9d, 1Eh
+  000000014013123A  add     eax, 0CA62C1D6h
+  000000014013123F  rol     edi, 1
+  0000000140131241  add     eax, r14d
+  0000000140131244  rol     r11d, 1
+  0000000140131247  add     ebx, eax
+  0000000140131249  mov     [rsp+340h+var_2DC], r14d
+  000000014013124E  mov     eax, r9d
+  0000000140131251  mov     [rsp+340h+var_2CC], r14d
+  0000000140131256  xor     eax, r10d
+  0000000140131259  mov     [rsp+340h+var_31C], edi
+  000000014013125D  xor     eax, edx
+  000000014013125F  mov     [rsp+340h+var_2C8], edi
+  0000000140131263  add     eax, 0CA62C1D6h
+  0000000140131268  rol     edx, 1Eh
+  000000014013126B  add     eax, edi
+  000000014013126D  mov     [rsp+340h+var_310], r11d
+  0000000140131272  mov     ecx, ebx
+  0000000140131274  mov     [rsp+340h+var_2C4], r11d
+  0000000140131279  rol     ecx, 5
+  000000014013127C  mov     r15d, r14d
+  000000014013127F  add     r8d, ecx
+  0000000140131282  xor     r15d, r12d
+  0000000140131285  xor     r15d, [rsp+340h+var_314]
+  000000014013128A  add     r8d, eax
+  000000014013128D  xor     r15d, [rsp+340h+var_2FC]
+  0000000140131292  mov     eax, ebx
+  0000000140131294  jmp     loc_14013140C
+  0000000140131299  db 0E8h, 2Ah, 7Eh, 0F6h, 0FFh, 0E8h, 30h
+  00000001401312A0  dq 0C7A0870F00007Ah, 860FFFF8695AE800h, 54D6BFE8FFFFCF45h
+  0000000140131408  db 2Dh, 8Bh, 9Bh, 5Ah
+  000000014013140C  xor     eax, edx
+  000000014013140E  rol     ebx, 1Eh
+  0000000140131411  xor     eax, r9d
+  0000000140131414  rol     r15d, 1
+  0000000140131417  add     eax, 0CA62C1D6h
+  000000014013141C  mov     [rbp+240h+var_2C0], r15d
+  0000000140131420  add     eax, r11d
+  0000000140131423  mov     ecx, r8d
+  0000000140131426  rol     ecx, 5
+  0000000140131429  mov     r12d, edi
+  000000014013142C  add     r10d, ecx
+  000000014013142F  xor     r12d, r13d
+  0000000140131432  xor     r12d, [rsp+340h+var_2F0]
+  0000000140131437  add     r10d, eax
+  000000014013143A  xor     r12d, [rsp+340h+var_300]
+  000000014013143F  mov     eax, r8d
+  0000000140131442  xor     eax, ebx
+  0000000140131444  rol     r8d, 1Eh
+  0000000140131448  xor     eax, edx
+  000000014013144A  rol     r12d, 1
+  000000014013144D  add     eax, 0CA62C1D6h
+  0000000140131452  mov     [rbp+240h+var_2BC], r12d
+  0000000140131456  add     eax, r15d
+  0000000140131459  mov     ecx, r10d
+  000000014013145C  rol     ecx, 5
+  000000014013145F  add     r9d, ecx
+  0000000140131462  add     r9d, eax
+  0000000140131465  mov     eax, r10d
+  0000000140131468  xor     eax, r8d
+  000000014013146B  mov     ecx, r9d
+  000000014013146E  xor     eax, ebx
+  0000000140131470  rol     ecx, 5
+  0000000140131473  add     eax, 0CA62C1D6h
+  0000000140131478  add     edx, ecx
+  000000014013147A  mov     r13d, [rsp+340h+var_318]
+  000000014013147F  add     eax, r12d
+  0000000140131482  xor     r13d, [rsp+340h+var_320]
+  0000000140131487  add     edx, eax
+  0000000140131489  xor     r13d, [rsp+340h+var_314]
+  000000014013148E  mov     eax, r9d
+  0000000140131491  rol     r9d, 1Eh
+  0000000140131495  xor     r13d, r11d
+  0000000140131498  rol     r10d, 1Eh
+  000000014013149C  mov     ecx, edx
+  000000014013149E  xor     eax, r10d
+  00000001401314A1  rol     ecx, 5
+  00000001401314A4  xor     eax, r8d
+  00000001401314A7  rol     r13d, 1
+  00000001401314AA  add     eax, 0CA62C1D6h
+  00000001401314AF  mov     [rbp+240h+var_2B8], r13d
+  00000001401314B3  jmp     loc_1401315C1
+  00000001401314B8  dq 0FF9781E95C415E41h, 850FFFF67CE2E8FFh, 57A78D4CFFFFA7F5h
+  00000001401315C0  db 0FFh
+  00000001401315C1  add     eax, r13d
+  00000001401315C4  add     ebx, ecx
+  00000001401315C6  add     ebx, eax
+  00000001401315C8  mov     edi, r15d
+  00000001401315CB  xor     edi, [rsp+340h+var_2E8]
+  00000001401315CF  mov     eax, edx
+  00000001401315D1  xor     edi, [rsp+340h+var_2EC]
+  00000001401315D5  xor     eax, r9d
+  00000001401315D8  xor     edi, [rsp+340h+var_2F0]
+  00000001401315DC  xor     eax, r10d
+  00000001401315DF  add     eax, 0CA62C1D6h
+  00000001401315E4  rol     edi, 1
+  00000001401315E6  add     eax, edi
+  00000001401315E8  rol     edx, 1Eh
+  00000001401315EB  mov     ecx, ebx
+  00000001401315ED  mov     [rsp+340h+var_2FC], edi
+  00000001401315F1  rol     ecx, 5
+  00000001401315F4  mov     r14d, r12d
+  00000001401315F7  xor     r14d, esi
+  00000001401315FA  mov     [rbp+240h+var_2B4], edi
+  00000001401315FD  xor     r14d, [rsp+340h+var_308]
+  0000000140131602  add     r8d, ecx
+  0000000140131605  xor     r14d, [rsp+340h+var_320]
+  000000014013160A  add     r8d, eax
+  000000014013160D  mov     esi, [rsp+340h+var_2DC]
+  0000000140131611  mov     eax, ebx
+  0000000140131613  xor     eax, edx
+  0000000140131615  rol     r14d, 1
+  0000000140131618  xor     eax, r9d
+  000000014013161B  rol     ebx, 1Eh
+  000000014013161E  add     eax, 0CA62C1D6h
+  0000000140131623  mov     [rbp+240h+var_2B0], r14d
+  0000000140131627  add     eax, r14d
+  000000014013162A  xor     esi, r13d
+  000000014013162D  xor     esi, [rsp+340h+var_304]
+  0000000140131631  mov     ecx, r8d
+  0000000140131634  xor     esi, [rsp+340h+var_2EC]
+  0000000140131638  rol     esi, 1
+  000000014013163A  rol     ecx, 5
+  000000014013163D  add     r10d, ecx
+  0000000140131640  mov     [rbp+240h+var_2AC], esi
+  0000000140131643  add     r10d, eax
+  0000000140131646  mov     eax, r8d
+  0000000140131649  xor     eax, ebx
+  000000014013164B  rol     r8d, 1Eh
+  000000014013164F  xor     eax, edx
+  0000000140131651  mov     r11d, r10d
+  0000000140131654  add     eax, 0CA62C1D6h
+  0000000140131659  rol     r11d, 5
+  000000014013165D  add     r11d, r9d
+  0000000140131660  jmp     loc_1401317E1
+  0000000140131665  db 48h, 8Dh, 45h
+  0000000140131668  dq 48C80348F303417Ch, 0F22D2C041D8558Dh, 5D5F41FFFF95CC83h
+  00000001401317E0  db 0
+  00000001401317E1  add     eax, esi
+  00000001401317E3  mov     r9d, [rsp+340h+var_31C]
+  00000001401317E8  add     r11d, eax
+  00000001401317EB  xor     r9d, edi
+  00000001401317EE  mov     eax, r10d
+  00000001401317F1  xor     r9d, [rsp+340h+var_2F8]
+  00000001401317F6  xor     eax, r8d
+  00000001401317F9  xor     r9d, [rsp+340h+var_308]
+  00000001401317FE  mov     edi, r11d
+  0000000140131801  rol     r9d, 1
+  0000000140131804  xor     eax, ebx
+  0000000140131806  rol     edi, 5
+  0000000140131809  mov     [rsp+340h+var_31C], r9d
+  000000014013180E  mov     [rbp+240h+var_2A8], r9d
+  0000000140131812  add     r9d, 0CA62C1D6h
+  0000000140131819  xor     r14d, [rsp+340h+var_2E0]
+  000000014013181E  add     eax, r9d
+  0000000140131821  xor     r14d, [rsp+340h+var_304]
+  0000000140131826  add     edi, edx
+  0000000140131828  xor     r14d, [rsp+340h+var_310]
+  000000014013182D  add     edi, eax
+  000000014013182F  mov     edx, [rsp+340h+var_31C]
+  0000000140131833  xor     esi, r15d
+  0000000140131836  xor     esi, [rsp+340h+var_318]
+  000000014013183A  xor     edx, r12d
+  000000014013183D  xor     edx, [rsp+340h+var_2E8]
+  0000000140131841  mov     eax, r11d
+  0000000140131844  xor     edx, [rsp+340h+var_2E0]
+  0000000140131848  mov     r9d, edi
+  000000014013184B  xor     esi, [rsp+340h+var_2F8]
+  000000014013184F  rol     r10d, 1Eh
+  0000000140131853  xor     eax, r10d
+  0000000140131856  rol     r14d, 1
+  0000000140131859  xor     eax, r8d
+  000000014013185C  rol     edx, 1
+  000000014013185E  add     eax, 0CA62C1D6h
+  0000000140131863  mov     [rbp+240h+var_2A4], r14d
+  0000000140131867  add     eax, r14d
+  000000014013186A  mov     [rbp+240h+var_29C], edx
+  000000014013186D  add     edx, 0CA62C1D6h
+  0000000140131873  rol     r9d, 5
+  0000000140131877  add     r9d, ebx
+  000000014013187A  rol     r11d, 1Eh
+  000000014013187E  add     r9d, eax
+  0000000140131881  rol     esi, 1
+  0000000140131883  xor     r14d, r13d
+  0000000140131886  mov     [rbp+240h+var_2A0], esi
+  0000000140131889  xor     r14d, [rsp+340h+var_2F4]
+  000000014013188E  mov     eax, edi
+  0000000140131890  xor     r14d, [rsp+340h+var_318]
+  0000000140131895  jmp     short loc_1401318F6
+  0000000140131897  pop     r12
+  0000000140131899  jmp     loc_1401540F7
+  000000014013189E  pop     r14
+  00000001401318A0  jmp     loc_14015C8F6
+  00000001401318A5  pop     rbp
+  00000001401318A6  pop     r14
+  00000001401318A8  pop     r15
+  00000001401318AA  jmp     loc_14012F3C6
+  00000001401318AF  add     rsp, 1E8h
+  00000001401318B6  jz      loc_14015017D
+  00000001401318BC  call    loc_1401294EF
+  00000001401318C1  jp      loc_14012E23E
+  00000001401318C7  jmp     loc_14013E0CB
+  00000001401318CC  dd 0D0C48148h
+  00000001401318D0  dq 0E905880F000000h, 16E8FFF6799AE800h, 10A2A8A0F00018Ch
+  00000001401318F0  db 0Fh, 85h, 0B6h, 0F4h, 2 dup(0FFh)
+  00000001401318F6  xor     eax, r11d
+  00000001401318F9  xor     eax, r10d
+  00000001401318FC  rol     edi, 1Eh
+  00000001401318FF  add     eax, 0CA62C1D6h
+  0000000140131904  rol     r14d, 1
+  0000000140131907  add     eax, esi
+  0000000140131909  mov     [rbp+240h+var_298], r14d
+  000000014013190D  mov     ecx, r9d
+  0000000140131910  add     r14d, 0CA62C1D6h
+  0000000140131917  rol     ecx, 5
+  000000014013191A  add     r8d, ecx
+  000000014013191D  add     r8d, eax
+  0000000140131920  mov     eax, r9d
+  0000000140131923  xor     eax, edi
+  0000000140131925  rol     r9d, 1Eh
+  0000000140131929  xor     eax, r11d
+  000000014013192C  mov     ebx, r8d
+  000000014013192F  add     eax, edx
+  0000000140131931  rol     ebx, 5
+  0000000140131934  add     ebx, r10d
+  0000000140131937  mov     r10d, [rsp+340h+var_2DC]
+  000000014013193C  add     ebx, eax
+  000000014013193E  xor     r10d, esi
+  0000000140131941  xor     r10d, [rsp+340h+var_2FC]
+  0000000140131946  mov     eax, r8d
+  0000000140131949  xor     r10d, [rsp+340h+var_2E8]
+  000000014013194E  xor     eax, r9d
+  0000000140131951  xor     eax, edi
+  0000000140131953  rol     r10d, 1
+  0000000140131956  add     eax, r14d
+  0000000140131959  rol     r8d, 1Eh
+  000000014013195D  mov     edx, ebx
+  000000014013195F  mov     [rbp+240h+var_294], r10d
+  0000000140131963  rol     edx, 5
+  0000000140131966  add     r10d, 0CA62C1D6h
+  000000014013196D  add     edx, r11d
+  0000000140131970  add     edx, eax
+  0000000140131972  mov     eax, ebx
+  0000000140131974  xor     eax, r8d
+  0000000140131977  mov     r15d, edx
+  000000014013197A  xor     eax, r9d
+  000000014013197D  rol     r15d, 5
+  0000000140131981  add     eax, r10d
+  0000000140131984  add     eax, edi
+  0000000140131986  add     eax, [rbp+240h+var_240]
+  0000000140131989  add     r15d, eax
+  000000014013198C  mov     esi, [rbp+240h+var_23C]
+  000000014013198F  mov     r10d, [rbp+240h+var_238]
+  0000000140131993  add     esi, edx
+  0000000140131995  mov     rdx, [rbp+240h+var_260]
+  0000000140131999  jmp     loc_140131A21
+  000000014013199E  dw 47E8h
+  00000001401319A0  dq 0FFBB8F820F000152h, 99F3850FE30349FFh, 0CA7F7A664D50FFFFh
+  0000000140131A20  db 0FFh
+  0000000140131A21  mov     r11d, [rbp+240h+var_234]
+  0000000140131A25  sub     rdx, 40h ; '@'
+  0000000140131A29  mov     r14d, [rbp+240h+var_230]
+  0000000140131A2D  add     r11d, r8d
+  0000000140131A30  mov     rax, [rbp+240h+var_290]
+  0000000140131A34  add     r14d, r9d
+  0000000140131A37  mov     rcx, [rbp+240h+var_280]
+  0000000140131A3B  add     rax, 40h ; '@'
+  0000000140131A3F  rol     ebx, 1Eh
+  0000000140131A42  add     rcx, 40h ; '@'
+  0000000140131A46  add     r10d, ebx
+  0000000140131A49  mov     [rbp+240h+var_240], r15d
+  0000000140131A4D  mov     [rbp+240h+var_23C], esi
+  0000000140131A50  mov     [rbp+240h+var_238], r10d
+  0000000140131A54  mov     [rbp+240h+var_234], r11d
+  0000000140131A58  mov     [rbp+240h+var_230], r14d
+  0000000140131A5C  mov     [rbp+240h+var_290], rax
+  0000000140131A60  mov     [rbp+240h+var_260], rdx
+  0000000140131A64  mov     [rbp+240h+var_280], rcx
+  0000000140131A68  cmp     rcx, 8
+  0000000140131A6C  jb      loc_14012E4FB
+  0000000140131A72  jmp     short loc_140131AD9
+  0000000140131A74  dd 0F85BC7E8h
+  0000000140131A78  dq 0E8FFFF76E5830FFFh, 52AFE8FFF677BCh, 0E800008AE2820F00h
+  0000000140131AD9  xor     r12d, r12d
+  0000000140131ADC  mov     ecx, r12d
+  0000000140131ADF  jmp     loc_140131EBF
+  0000000140131AE4  dd 577C5433h
+  0000000140131AE8  dq 0FC09565754057B79h, 7A551F5F528E8BACh, 0CB8C7C458D485678h
+  0000000140131D68  db 8Bh, 4, 1, 0
+  0000000140131D6C  mov     rax, r12
+  0000000140131D6F  jmp     loc_140131EBF
+  0000000140131D74  dd 5E415C41h
+  0000000140131D78  dq 0E9FFFFEF07E95D41h, 0F8484FE800001B53h, 0E8FFFFEBF9800FFFh
+  0000000140131EB8  db 0FFh, 0Fh, 8Ch, 0F0h, 0F9h, 2 dup(0FFh)
+  0000000140131EBF  mov     r8d, 8
+  0000000140131EC5  lea     rdx, [rbp+240h+var_288]
+  0000000140131EC9  sub     r8, rax
+  0000000140131ECC  add     rdx, rax
+  0000000140131ECF  lea     rax, [rbp+240h+var_224]
+  0000000140131ED3  add     rcx, rax
+  0000000140131ED6  jmp     loc_140132040
+  0000000140131EDB  db 33h, 0C2h, 0C1h, 0C3h, 1Eh
+  0000000140131EE0  dq 0D141C1334191C180h, 62C1D605CED040C7h, 41807D8944ED0BCAh
+  0000000140132040  call    sub_140095E40
+  0000000140132045  jmp     loc_1401320D7
+  000000014013204A  dw 0EE8h, 0FF90h, 0FFFh
+  0000000140132050  dq 70DEE80000F30887h, 0FFFFF7A85E8FFF6h, 830F51FFFF7A0A82h
+  00000001401320D0  db 0, 0Fh, 80h, 0FCh, 0A4h, 2 dup(0FFh)
+  00000001401320D7  lea     rcx, [rbp+240h+var_240]
+  00000001401320DB  mov     rax, 1A4B6CBB6B8h
+  00000001401320E5  cmp     rcx, rax
+  00000001401320E8  jnb     loc_140132665
+  00000001401320EE  jmp     loc_14013223A
+  00000001401320F3  db 0E8h, 0EEh, 0F0h, 2 dup(0FFh)
+  00000001401320F8  dq 0BDE8FFFFCBAE860Fh, 0FFFF976AE8FFF670h, 33450002EE90850Fh
+  0000000140132238  add     al, [rax]
+  000000014013223A  nop
+  000000014013223B  jmp     loc_14013238C
+  0000000140132240  mov     rsp, r11
+  0000000140132243  pop     r12
+  0000000140132245  jmp     loc_14012DC9B
+  000000014013224A  dw 59E8h, 0F66Eh, 0E8FFh
+  0000000140132250  retn
+  0000000140132251  db 0B0h, 2 dup(0FFh), 0Fh, 8Eh, 30h, 0AEh
+  0000000140132258  dq 0D30345C48B49FFFFh, 0F5E8FFFF96308C0Fh, 0FFFFE94DE8FFF66Dh
+  0000000140132388  db 82h, 0FDh, 2 dup(0FFh)
+  000000014013238C  call    sub_14026F3A9
+  0000000140132391  jmp     rax
+  0000000140132393  db 41h, 5Ch, 0E9h, 2Ah, 0A1h
+  0000000140132398  dq 5C0C48148FFFFh, 49FFFFE8EF830F00h, 0FFFFD8428B0FE003h
+  0000000140132660  xchg    bl, dl
+  0000000140132662  add     [r8], r8d
+  0000000140132665  mov     ebx, dword ptr [rbp+240h+var_22C+4]
+  0000000140132668  mov     eax, 40h ; '@'
+  000000014013266D  mov     ecx, ebx
+  000000014013266F  and     ecx, 3Fh
+  0000000140132672  sub     eax, ecx
+  0000000140132674  mov     ecx, eax
+  0000000140132676  cmp     eax, 8
+  0000000140132679  lea     rdi, [rax+40h]
+  000000014013267D  cmova   rdi, rcx
+  0000000140132681  xor     edx, edx
+  0000000140132683  lea     rcx, [rbp+240h+var_120]
+  000000014013268A  mov     [rbp-38h], rdi
+  000000014013268E  lea     r8, [rdi-8]
+  0000000140132692  jmp     loc_1401327FD
+  0000000140132697  db 0E8h
+  0000000140132698  dq 0FF6C92E8FFF66B6Ch, 0E8FFFFF5968E0FFFh, 0CE1B860FFFF83D24h
+  00000001401327F8  db 81h, 5Ah, 0E9h, 2 dup(0)
+  00000001401327FD  call    sub_140096100
+  0000000140132802  jmp     loc_140132958
+  0000000140132807  db 0E8h
+  0000000140132808  dq 4346810FFFF846DCh, 0FFFF85AD9E80002h, 0D53341FFFF6F8682h
+  0000000140132958  mov     r8d, dword ptr [rbp+240h+var_22C]
+  000000014013295C  lea     edx, ds:0[rbx*8]
+  0000000140132963  mov     [rbp+240h+var_120], 80h
+  000000014013296A  mov     eax, ebx
+  000000014013296C  shr     eax, 1Dh
+  000000014013296F  add     ebx, edi
+  0000000140132971  lea     ecx, ds:0[r8*8]
+  0000000140132979  or      ecx, eax
+  000000014013297B  mov     eax, ecx
+  000000014013297D  shr     eax, 18h
+  0000000140132980  mov     [rbp+rdi+240h+var_128], al
+  0000000140132987  mov     eax, ecx
+  0000000140132989  shr     eax, 10h
+  000000014013298C  mov     [rbp+rdi+240h+var_127], al
+  0000000140132993  mov     eax, ecx
+  0000000140132995  shr     eax, 8
+  0000000140132998  mov     [rbp+rdi+240h+var_126], al
+  000000014013299F  mov     eax, edx
+  00000001401329A1  shr     eax, 18h
+  00000001401329A4  mov     [rbp+rdi+240h+var_125], cl
+  00000001401329AB  mov     rcx, [rbp+240h+var_22C+4]
+  00000001401329AF  mov     [rbp+rdi+240h+var_124], al
+  00000001401329B6  and     ecx, 3Fh
+  00000001401329B9  mov     eax, edx
+  00000001401329BB  mov     dword ptr [rbp+240h+var_22C+4], ebx
+  00000001401329BE  shr     eax, 10h
+  00000001401329C1  mov     [rbp+rdi+240h+var_123], al
+  00000001401329C8  mov     eax, edx
+  00000001401329CA  shr     eax, 8
+  00000001401329CD  mov     [rbp+rdi+240h+var_122], al
+  00000001401329D4  mov     eax, ebx
+  00000001401329D6  mov     [rbp+rdi+240h+var_121], dl
+  00000001401329DD  cmp     rax, rdi
+  00000001401329E0  jnb     loc_140132AE9
+  00000001401329E6  jmp     loc_140132A6E
+  00000001401329EB  db 0E8h, 88h, 68h, 0F6h, 0FFh
+  00000001401329F0  dq 498B0FFFFFCCE1E8h, 870FE503480002EDh, 0F842D7E80002715Bh
+  0000000140132A68  db 0Fh, 88h, 7, 7Eh, 2 dup(0FFh)
+  0000000140132A6E  inc     r8d
+  0000000140132A71  mov     dword ptr [rbp+240h+var_22C], r8d
+  0000000140132A75  jmp     short loc_140132AE9
+  0000000140132A77  db 0E8h
+  0000000140132A78  dq 78848D0FFFF66744h, 0FFFFFFE96E8FFFFh, 6636E8FFFFEF5A8Fh
+  0000000140132AE8  db 0FFh
+  0000000140132AE9  mov     r8d, 40h ; '@'
+  0000000140132AEF  sub     r8, rcx
+  0000000140132AF2  mov     [rbp+240h+var_290], r8
+  0000000140132AF6  cmp     rdi, r8
+  0000000140132AF9  jb      loc_1401395A5
+  0000000140132AFF  jmp     loc_140132C71
+  0000000140132B04  dd 0FE50348h
+  0000000140132B08  dq 6546E8FFFF68958Fh, 0F0001DB7CE8FFF6h, 439EE8FFFFAC4F8Ah
+  0000000140132C70  db 0
+  0000000140132C71  lea     rax, [rbp+240h+var_224]
+  0000000140132C75  add     rcx, rax
+  0000000140132C78  lea     rdx, [rbp+240h+var_120]
+  0000000140132C7F  jmp     loc_140132E2E
+  0000000140132C84  dd 0EDB6E41Ah
+  0000000140132C88  dq 5AAA18529657FF97h, 75BF8BD4DD7D2F75h, 5641C333E83B53E8h
+  0000000140132E28  db 0FEh, 76h, 0EAh, 95h, 0DFh, 7Dh
+  0000000140132E2E  call    sub_140095E40
+  0000000140132E33  jmp     short loc_140132E9E
+  0000000140132E35  db 41h, 54h, 0Fh
+  0000000140132E38  dq 0C48148FFFFA5C189h, 0FE54890F00000670h, 3B810FE60348FFFFh
+  0000000140132E98  jge     loc_14013069F
+  0000000140132E9E  mov     rdx, r12
+  0000000140132EA1  jmp     loc_140133007
+  0000000140132EA6  dw 5641h
+  0000000140132EA8  dq 8148000257A58E0Fh, 29870F00000290C4h, 0FFF85560E8FFFF6Ch
+  0000000140133000  imul    ebx, [rbp+240h+var_2B8+3], 5E3A0449h
+  0000000140133007  movzx   eax, [rbp+rdx+240h+var_223]
+  000000014013300C  movzx   ecx, [rbp+rdx+240h+var_224]
+  0000000140133011  shl     ecx, 8
+  0000000140133014  or      ecx, eax
+  0000000140133016  movzx   eax, [rbp+rdx+240h+var_222]
+  000000014013301B  shl     ecx, 8
+  000000014013301E  or      ecx, eax
+  0000000140133020  movzx   eax, [rbp+rdx+240h+var_221]
+  0000000140133025  shl     ecx, 8
+  0000000140133028  or      ecx, eax
+  000000014013302A  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014013302E  add     rdx, 4
+  0000000140133032  cmp     rdx, 40h ; '@'
+  0000000140133036  jl      short loc_140133007
+  0000000140133038  jmp     loc_140133259
+  000000014013303D  db 5, 0D6h, 0C1h
+  0000000140133040  dq 0CA0244C98B41CA62h, 0C141D7F640C70341h, 41CF33C003441EC1h
+  0000000140133259  mov     r10d, [rbp+240h+var_238]
+  000000014013325D  mov     r9d, [rbp+240h+var_234]
+  0000000140133261  mov     ecx, r9d
+  0000000140133264  mov     ebx, [rbp+240h+var_240]
+  0000000140133267  xor     ecx, r10d
+  000000014013326A  mov     edx, [rbp+240h+var_23C]
+  000000014013326D  mov     eax, ebx
+  000000014013326F  and     ecx, edx
+  0000000140133271  mov     r8d, [rbp+240h+var_230]
+  0000000140133275  xor     ecx, r9d
+  0000000140133278  mov     r14d, [rsp+340h+var_2C8]
+  000000014013327D  mov     r15d, [rsp+340h+var_2C4]
+  0000000140133282  add     r8d, 5A827999h
+  0000000140133289  mov     r12d, [rbp+240h+var_2C0]
+  000000014013328D  add     r9d, 5A827999h
+  0000000140133294  mov     r13d, [rbp+240h+var_2BC]
+  0000000140133298  rol     eax, 5
+  000000014013329B  add     eax, [rsp+340h+var_2D0]
+  000000014013329F  add     ecx, eax
+  00000001401332A1  rol     edx, 1Eh
+  00000001401332A4  add     r8d, ecx
+  00000001401332A7  mov     ecx, edx
+  00000001401332A9  xor     ecx, r10d
+  00000001401332AC  mov     eax, r8d
+  00000001401332AF  and     ecx, ebx
+  00000001401332B1  rol     eax, 5
+  00000001401332B4  add     eax, [rsp+340h+var_2CC]
+  00000001401332B8  xor     ecx, r10d
+  00000001401332BB  add     ecx, eax
+  00000001401332BD  rol     ebx, 1Eh
+  00000001401332C0  add     r9d, ecx
+  00000001401332C3  add     r10d, 5A827999h
+  00000001401332CA  mov     ecx, ebx
+  00000001401332CC  mov     eax, r9d
+  00000001401332CF  xor     ecx, edx
+  00000001401332D1  rol     eax, 5
+  00000001401332D4  and     ecx, r8d
+  00000001401332D7  add     eax, r14d
+  00000001401332DA  xor     ecx, edx
+  00000001401332DC  rol     r8d, 1Eh
+  00000001401332E0  add     ecx, eax
+  00000001401332E2  add     r10d, ecx
+  00000001401332E5  mov     ecx, r8d
+  00000001401332E8  xor     ecx, ebx
+  00000001401332EA  mov     eax, r10d
+  00000001401332ED  and     ecx, r9d
+  00000001401332F0  rol     eax, 5
+  00000001401332F3  xor     ecx, ebx
+  00000001401332F5  rol     r9d, 1Eh
+  00000001401332F9  add     eax, edx
+  00000001401332FB  jmp     loc_1401333A4
+  0000000140133300  dq 49810F00027766E8h, 0FFF83C50E8FFFF5Eh, 0F55FFFFCC6C890Fh
+  00000001401333A0  add     dh, dl
+  00000001401333A2  push    rbp
+  00000001401333A4  lea     edx, [r15+5A827999h]
+  00000001401333AB  add     ecx, eax
+  00000001401333AD  add     edx, ecx
+  00000001401333AF  mov     ecx, r9d
+  00000001401333B2  xor     ecx, r8d
+  00000001401333B5  mov     eax, edx
+  00000001401333B7  and     ecx, r10d
+  00000001401333BA  rol     eax, 5
+  00000001401333BD  xor     ecx, r8d
+  00000001401333C0  rol     r10d, 1Eh
+  00000001401333C4  add     eax, ebx
+  00000001401333C6  lea     ebx, [r12+5A827999h]
+  00000001401333CE  add     ecx, eax
+  00000001401333D0  add     ebx, ecx
+  00000001401333D2  mov     ecx, r10d
+  00000001401333D5  xor     ecx, r9d
+  00000001401333D8  mov     eax, ebx
+  00000001401333DA  and     ecx, edx
+  00000001401333DC  rol     eax, 5
+  00000001401333DF  add     eax, r8d
+  00000001401333E2  rol     edx, 1Eh
+  00000001401333E5  xor     ecx, r9d
+  00000001401333E8  lea     r8d, [r13+5A827999h]
+  00000001401333EF  add     ecx, eax
+  00000001401333F1  add     r8d, ecx
+  00000001401333F4  mov     ecx, edx
+  00000001401333F6  xor     ecx, r10d
+  00000001401333F9  mov     eax, r8d
+  00000001401333FC  and     ecx, ebx
+  00000001401333FE  rol     eax, 5
+  0000000140133401  xor     ecx, r10d
+  0000000140133404  add     eax, r9d
+  0000000140133407  rol     ebx, 1Eh
+  000000014013340A  add     ecx, eax
+  000000014013340C  mov     r9d, [rbp+240h+var_2B8]
+  0000000140133410  add     r9d, 5A827999h
+  0000000140133417  add     r9d, ecx
+  000000014013341A  mov     ecx, ebx
+  000000014013341C  xor     ecx, edx
+  000000014013341E  mov     eax, r9d
+  0000000140133421  and     ecx, r8d
+  0000000140133424  rol     eax, 5
+  0000000140133427  xor     ecx, edx
+  0000000140133429  rol     r8d, 1Eh
+  000000014013342D  add     eax, r10d
+  0000000140133430  mov     r10d, [rbp+240h+var_2B4]
+  0000000140133434  add     ecx, eax
+  0000000140133436  add     r10d, 5A827999h
+  000000014013343D  add     r10d, ecx
+  0000000140133440  mov     ecx, r8d
+  0000000140133443  jmp     short loc_1401334B0
+  0000000140133445  db 41h, 57h, 0Fh
+  0000000140133448  dq 0F5641FFFFE8EB8Ch, 0D5F0E8000216688Ch, 0FFFF7C10850FFFFFh
+  00000001401334B0  xor     ecx, ebx
+  00000001401334B2  mov     eax, r10d
+  00000001401334B5  and     ecx, r9d
+  00000001401334B8  rol     eax, 5
+  00000001401334BB  xor     ecx, ebx
+  00000001401334BD  rol     r9d, 1Eh
+  00000001401334C1  add     eax, edx
+  00000001401334C3  mov     edx, [rbp+240h+var_2B0]
+  00000001401334C6  add     ecx, eax
+  00000001401334C8  add     edx, 5A827999h
+  00000001401334CE  add     edx, ecx
+  00000001401334D0  mov     ecx, r9d
+  00000001401334D3  xor     ecx, r8d
+  00000001401334D6  mov     eax, edx
+  00000001401334D8  and     ecx, r10d
+  00000001401334DB  rol     eax, 5
+  00000001401334DE  xor     ecx, r8d
+  00000001401334E1  rol     r10d, 1Eh
+  00000001401334E5  add     eax, ebx
+  00000001401334E7  mov     ebx, [rbp+240h+var_2AC]
+  00000001401334EA  add     ecx, eax
+  00000001401334EC  add     ebx, 5A827999h
+  00000001401334F2  add     ebx, ecx
+  00000001401334F4  mov     ecx, r10d
+  00000001401334F7  xor     ecx, r9d
+  00000001401334FA  mov     eax, ebx
+  00000001401334FC  and     ecx, edx
+  00000001401334FE  rol     eax, 5
+  0000000140133501  xor     ecx, r9d
+  0000000140133504  rol     edx, 1Eh
+  0000000140133507  add     eax, r8d
+  000000014013350A  mov     r8d, [rbp+240h+var_2A8]
+  000000014013350E  add     ecx, eax
+  0000000140133510  add     r8d, 5A827999h
+  0000000140133517  add     r8d, ecx
+  000000014013351A  mov     ecx, edx
+  000000014013351C  xor     ecx, r10d
+  000000014013351F  mov     eax, r8d
+  0000000140133522  and     ecx, ebx
+  0000000140133524  rol     eax, 5
+  0000000140133527  xor     ecx, r10d
+  000000014013352A  rol     ebx, 1Eh
+  000000014013352D  add     eax, r9d
+  0000000140133530  mov     r9d, [rbp+240h+var_2A4]
+  0000000140133534  add     ecx, eax
+  0000000140133536  add     r9d, 5A827999h
+  000000014013353D  add     r9d, ecx
+  0000000140133540  mov     ecx, ebx
+  0000000140133542  xor     ecx, edx
+  0000000140133544  mov     eax, r9d
+  0000000140133547  jmp     loc_1401335E8
+  000000014013354C  dd 0F65D17E8h
+  0000000140133550  dq 8E0FFFFF5FD3E8FFh, 5D41545FFFFFFF04h, 0FFFFC6D7E95F415Dh
+  00000001401335E8  and     ecx, r8d
+  00000001401335EB  rol     eax, 5
+  00000001401335EE  add     eax, r10d
+  00000001401335F1  rol     r8d, 1Eh
+  00000001401335F5  mov     r10d, [rbp+240h+var_2A0]
+  00000001401335F9  xor     ecx, edx
+  00000001401335FB  add     ecx, eax
+  00000001401335FD  add     r10d, 5A827999h
+  0000000140133604  add     r10d, ecx
+  0000000140133607  mov     ecx, r8d
+  000000014013360A  mov     eax, r10d
+  000000014013360D  rol     eax, 5
+  0000000140133610  mov     r11d, [rbp+240h+var_294]
+  0000000140133614  xor     ecx, ebx
+  0000000140133616  mov     edi, [rbp+240h+var_298]
+  0000000140133619  and     ecx, r9d
+  000000014013361C  xor     edi, [rbp+240h+var_2AC]
+  000000014013361F  xor     ecx, ebx
+  0000000140133621  mov     esi, [rbp+240h+var_294]
+  0000000140133624  add     eax, edx
+  0000000140133626  add     ecx, eax
+  0000000140133628  xor     esi, [rbp+240h+var_2A8]
+  000000014013362B  mov     edx, [rbp+240h+var_29C]
+  000000014013362E  add     r11d, 5A827999h
+  0000000140133635  rol     r9d, 1Eh
+  0000000140133639  add     edx, 5A827999h
+  000000014013363F  add     edx, ecx
+  0000000140133641  xor     edi, r15d
+  0000000140133644  xor     edi, [rsp+340h+var_2CC]
+  0000000140133648  mov     ecx, r9d
+  000000014013364B  xor     ecx, r8d
+  000000014013364E  rol     edi, 1
+  0000000140133650  and     ecx, r10d
+  0000000140133653  mov     [rsp+340h+var_2F4], edi
+  0000000140133657  xor     ecx, r8d
+  000000014013365A  rol     r10d, 1Eh
+  000000014013365E  mov     eax, edx
+  0000000140133660  xor     esi, r12d
+  0000000140133663  rol     eax, 5
+  0000000140133666  xor     esi, r14d
+  0000000140133669  add     eax, ebx
+  000000014013366B  rol     esi, 1
+  000000014013366D  mov     ebx, [rbp+240h+var_298]
+  0000000140133670  add     ecx, eax
+  0000000140133672  add     ebx, 5A827999h
+  0000000140133678  mov     [rsp+340h+var_2E4], esi
+  000000014013367C  add     ebx, ecx
+  000000014013367E  mov     ecx, r10d
+  0000000140133681  xor     ecx, r9d
+  0000000140133684  mov     eax, ebx
+  0000000140133686  jmp     loc_1401337DA
+  000000014013368B  db 0E8h, 7Bh, 35h, 2 dup(0)
+  0000000140133690  dq 99E8000245978C0Fh, 0FF75A18C0FFFFF70h, 6D5D8E0FE40349FFh
+  00000001401337D8  db 2 dup(0FFh)
+  00000001401337DA  and     ecx, edx
+  00000001401337DC  rol     eax, 5
+  00000001401337DF  xor     ecx, r9d
+  00000001401337E2  rol     edx, 1Eh
+  00000001401337E5  add     eax, r8d
+  00000001401337E8  mov     r8d, [rbp+240h+var_29C]
+  00000001401337EC  xor     r8d, [rbp+240h+var_2B0]
+  00000001401337F0  add     ecx, eax
+  00000001401337F2  add     r11d, ecx
+  00000001401337F5  xor     r8d, r14d
+  00000001401337F8  xor     r8d, [rsp+340h+var_2D0]
+  00000001401337FD  mov     eax, r11d
+  0000000140133800  rol     eax, 5
+  0000000140133803  mov     ecx, edx
+  0000000140133805  xor     ecx, r10d
+  0000000140133808  rol     r8d, 1
+  000000014013380B  and     ecx, ebx
+  000000014013380D  mov     [rsp+340h+var_320], r8d
+  0000000140133812  xor     ecx, r10d
+  0000000140133815  rol     ebx, 1Eh
+  0000000140133818  add     eax, r8d
+  000000014013381B  lea     r8d, [r9+5A827999h]
+  0000000140133822  add     ecx, eax
+  0000000140133824  lea     r9d, [r10+5A827999h]
+  000000014013382B  add     r8d, ecx
+  000000014013382E  mov     ecx, ebx
+  0000000140133830  xor     ecx, edx
+  0000000140133832  mov     eax, r8d
+  0000000140133835  and     ecx, r11d
+  0000000140133838  rol     eax, 5
+  000000014013383B  xor     ecx, edx
+  000000014013383D  rol     r11d, 1Eh
+  0000000140133841  add     eax, edi
+  0000000140133843  add     ecx, eax
+  0000000140133845  add     r9d, ecx
+  0000000140133848  mov     ecx, r11d
+  000000014013384B  xor     ecx, ebx
+  000000014013384D  mov     eax, r9d
+  0000000140133850  and     ecx, r8d
+  0000000140133853  rol     eax, 5
+  0000000140133856  xor     ecx, ebx
+  0000000140133858  add     eax, esi
+  000000014013385A  add     ecx, eax
+  000000014013385C  mov     r14d, [rbp+240h+var_2A4]
+  0000000140133860  lea     r10d, [rdx+5A827999h]
+  0000000140133867  mov     edx, [rsp+340h+var_320]
+  000000014013386B  add     r10d, ecx
+  000000014013386E  xor     edx, r14d
+  0000000140133871  rol     r8d, 1Eh
+  0000000140133875  xor     edx, r13d
+  0000000140133878  jmp     short loc_1401338D7
+  000000014013387A  dw 0F55h, 7A83h, 0FFF1h
+  0000000140133880  dq 378C48148FFh, 745BFFFFACC28C0Fh, 415B7E145F9C718Bh
+  00000001401338D0  db 0FFh, 0Fh, 88h, 7Dh, 68h, 2 dup(0FFh)
+  00000001401338D7  mov     ecx, r8d
+  00000001401338DA  xor     ecx, r11d
+  00000001401338DD  xor     edx, r15d
+  00000001401338E0  mov     r15d, [rbp+240h+var_2A0]
+  00000001401338E4  and     ecx, r9d
+  00000001401338E7  xor     ecx, r11d
+  00000001401338EA  rol     r9d, 1Eh
+  00000001401338EE  rol     edx, 1
+  00000001401338F0  mov     eax, r10d
+  00000001401338F3  rol     eax, 5
+  00000001401338F6  add     eax, ebx
+  00000001401338F8  mov     [rsp+340h+var_314], edx
+  00000001401338FC  add     ecx, eax
+  00000001401338FE  add     edx, 5A827999h
+  0000000140133904  add     edx, ecx
+  0000000140133906  mov     ebx, edi
+  0000000140133908  xor     ebx, r15d
+  000000014013390B  mov     ecx, r9d
+  000000014013390E  xor     ebx, [rbp+240h+var_2B8]
+  0000000140133911  xor     ecx, r8d
+  0000000140133914  xor     ecx, r10d
+  0000000140133917  xor     ebx, r12d
+  000000014013391A  mov     r12d, [rbp+240h+var_29C]
+  000000014013391E  mov     eax, edx
+  0000000140133920  rol     eax, 5
+  0000000140133923  xor     esi, r12d
+  0000000140133926  xor     esi, [rbp+240h+var_2B4]
+  0000000140133929  add     eax, 6ED9EBA1h
+  000000014013392E  add     eax, r11d
+  0000000140133931  rol     ebx, 1
+  0000000140133933  add     ecx, eax
+  0000000140133935  mov     [rsp+340h+var_2FC], ebx
+  0000000140133939  add     ebx, ecx
+  000000014013393B  rol     r10d, 1Eh
+  000000014013393F  xor     esi, r13d
+  0000000140133942  mov     eax, ebx
+  0000000140133944  mov     r13d, [rbp+240h+var_298]
+  0000000140133948  mov     ecx, r10d
+  000000014013394B  rol     eax, 5
+  000000014013394E  xor     ecx, r9d
+  0000000140133951  add     r8d, eax
+  0000000140133954  rol     esi, 1
+  0000000140133956  xor     ecx, edx
+  0000000140133958  mov     eax, r13d
+  000000014013395B  xor     eax, [rbp+240h+var_2B0]
+  000000014013395E  add     ecx, 6ED9EBA1h
+  0000000140133964  xor     eax, [rbp+240h+var_2B8]
+  0000000140133967  add     r8d, ecx
+  000000014013396A  xor     eax, [rsp+340h+var_314]
+  000000014013396E  add     r8d, esi
+  0000000140133971  jmp     loc_140133BBB
+  0000000140133976  mov     rsp, r11
+  0000000140133979  pop     r15
+  000000014013397B  pop     r13
+  000000014013397D  jmp     loc_14013C3E2
+  0000000140133982  dw 8C0Fh, 1135h, 2
+  0000000140133988  dq 0C58D0FFFF8413BE8h, 2F8C48148000231h, 1904E840F0000h
+  0000000140133BB8  db 7Bh, 2, 0
+  0000000140133BBB  rol     eax, 1
+  0000000140133BBD  mov     [rsp+340h+var_31C], eax
+  0000000140133BC1  mov     eax, r8d
+  0000000140133BC4  rol     eax, 5
+  0000000140133BC7  add     eax, r9d
+  0000000140133BCA  rol     edx, 1Eh
+  0000000140133BCD  mov     r9d, [rsp+340h+var_31C]
+  0000000140133BD2  mov     ecx, edx
+  0000000140133BD4  xor     ecx, r10d
+  0000000140133BD7  add     r9d, 6ED9EBA1h
+  0000000140133BDE  xor     ecx, ebx
+  0000000140133BE0  rol     ebx, 1Eh
+  0000000140133BE3  add     ecx, eax
+  0000000140133BE5  mov     eax, [rbp+240h+var_294]
+  0000000140133BE8  xor     eax, [rbp+240h+var_2AC]
+  0000000140133BEB  add     r9d, ecx
+  0000000140133BEE  xor     eax, [rbp+240h+var_2B4]
+  0000000140133BF1  mov     ecx, ebx
+  0000000140133BF3  xor     eax, [rsp+340h+var_2FC]
+  0000000140133BF7  rol     eax, 1
+  0000000140133BF9  mov     [rsp+340h+var_310], eax
+  0000000140133BFD  mov     eax, r9d
+  0000000140133C00  rol     eax, 5
+  0000000140133C03  xor     ecx, edx
+  0000000140133C05  add     eax, r10d
+  0000000140133C08  xor     ecx, r8d
+  0000000140133C0B  add     ecx, eax
+  0000000140133C0D  mov     r10d, [rsp+340h+var_310]
+  0000000140133C12  mov     eax, [rsp+340h+var_320]
+  0000000140133C16  add     r10d, 6ED9EBA1h
+  0000000140133C1D  xor     eax, [rbp+240h+var_2A8]
+  0000000140133C20  add     r10d, ecx
+  0000000140133C23  xor     eax, [rbp+240h+var_2B0]
+  0000000140133C26  mov     r11d, r12d
+  0000000140133C29  xor     eax, esi
+  0000000140133C2B  rol     r8d, 1Eh
+  0000000140133C2F  rol     eax, 1
+  0000000140133C31  xor     r11d, r14d
+  0000000140133C34  mov     [rsp+340h+var_300], eax
+  0000000140133C38  mov     ecx, r8d
+  0000000140133C3B  xor     r11d, [rsp+340h+var_300]
+  0000000140133C40  xor     ecx, ebx
+  0000000140133C42  xor     r11d, [rsp+340h+var_314]
+  0000000140133C47  xor     ecx, r9d
+  0000000140133C4A  rol     r11d, 1
+  0000000140133C4D  mov     eax, r10d
+  0000000140133C50  rol     eax, 5
+  0000000140133C53  add     eax, edx
+  0000000140133C55  rol     r9d, 1Eh
+  0000000140133C59  add     ecx, eax
+  0000000140133C5B  jmp     short loc_140133CD4
+  0000000140133C5D  db 0E8h, 0EDh, 0D8h
+  0000000140133C60  dq 18698880FFFFFh, 0FFD237830FE50348h, 820FFFFFDB31E8FFh
+  0000000140133CD0  db 0F1h, 89h, 2, 0
+  0000000140133CD4  mov     edx, [rsp+340h+var_300]
+  0000000140133CD8  mov     [rsp+340h+var_308], r11d
+  0000000140133CDD  mov     eax, edi
+  0000000140133CDF  xor     eax, r14d
+  0000000140133CE2  add     edx, 6ED9EBA1h
+  0000000140133CE8  xor     eax, [rbp+240h+var_2AC]
+  0000000140133CEB  add     edx, ecx
+  0000000140133CED  xor     eax, [rsp+340h+var_31C]
+  0000000140133CF1  mov     ecx, r9d
+  0000000140133CF4  rol     eax, 1
+  0000000140133CF6  xor     ecx, r8d
+  0000000140133CF9  mov     [rsp+340h+var_318], eax
+  0000000140133CFD  xor     ecx, r10d
+  0000000140133D00  mov     edi, [rsp+340h+var_318]
+  0000000140133D04  mov     eax, edx
+  0000000140133D06  rol     eax, 5
+  0000000140133D09  add     eax, ebx
+  0000000140133D0B  rol     r10d, 1Eh
+  0000000140133D0F  add     ecx, eax
+  0000000140133D11  mov     eax, [rsp+340h+var_2E4]
+  0000000140133D15  xor     eax, r15d
+  0000000140133D18  lea     ebx, [rdi+6ED9EBA1h]
+  0000000140133D1E  xor     eax, [rbp+240h+var_2A8]
+  0000000140133D21  add     ebx, ecx
+  0000000140133D23  xor     eax, [rsp+340h+var_310]
+  0000000140133D27  mov     ecx, r10d
+  0000000140133D2A  xor     ecx, r9d
+  0000000140133D2D  rol     eax, 1
+  0000000140133D2F  mov     [rsp+340h+var_30C], eax
+  0000000140133D33  xor     ecx, edx
+  0000000140133D35  mov     eax, ebx
+  0000000140133D37  rol     edx, 1Eh
+  0000000140133D3A  rol     eax, 5
+  0000000140133D3D  add     eax, r8d
+  0000000140133D40  mov     r8d, [rsp+340h+var_30C]
+  0000000140133D45  add     ecx, eax
+  0000000140133D47  add     r8d, 6ED9EBA1h
+  0000000140133D4E  add     r8d, ecx
+  0000000140133D51  mov     ecx, edx
+  0000000140133D53  xor     ecx, r10d
+  0000000140133D56  mov     eax, r8d
+  0000000140133D59  xor     ecx, ebx
+  0000000140133D5B  rol     eax, 5
+  0000000140133D5E  add     eax, r9d
+  0000000140133D61  rol     ebx, 1Eh
+  0000000140133D64  lea     r9d, [r11+6ED9EBA1h]
+  0000000140133D6B  add     ecx, eax
+  0000000140133D6D  mov     r11d, r13d
+  0000000140133D70  add     r9d, ecx
+  0000000140133D73  xor     r11d, r15d
+  0000000140133D76  jmp     loc_14013409B
+  0000000140133D7B  db 48h, 81h, 0C4h, 20h, 7
+  0000000140133D80  dq 0FFFF69948C0F0000h, 3E870FFFF837EBE8h, 880FC48B49FFFFD3h
+  0000000140134098  db 0D4h, 2 dup(0FFh)
+  000000014013409B  xor     r11d, edi
+  000000014013409E  mov     edi, [rsp+340h+var_2FC]
+  00000001401340A2  xor     r11d, edi
+  00000001401340A5  rol     r11d, 1
+  00000001401340A8  mov     [rsp+340h+var_2FC], r11d
+  00000001401340AD  mov     r14d, [rbp+240h+var_294]
+  00000001401340B1  mov     eax, r9d
+  00000001401340B4  mov     r15d, [rsp+340h+var_300]
+  00000001401340B9  xor     r14d, r12d
+  00000001401340BC  xor     r14d, [rsp+340h+var_30C]
+  00000001401340C1  mov     ecx, ebx
+  00000001401340C3  mov     r12d, [rsp+340h+var_320]
+  00000001401340C8  xor     ecx, edx
+  00000001401340CA  xor     ecx, r8d
+  00000001401340CD  rol     eax, 5
+  00000001401340D0  add     eax, r10d
+  00000001401340D3  rol     r8d, 1Eh
+  00000001401340D7  add     ecx, eax
+  00000001401340D9  lea     r10d, [r11+6ED9EBA1h]
+  00000001401340E0  add     r10d, ecx
+  00000001401340E3  xor     r12d, r13d
+  00000001401340E6  xor     r12d, [rsp+340h+var_308]
+  00000001401340EB  xor     r14d, esi
+  00000001401340EE  mov     r13d, [rsp+340h+var_2F4]
+  00000001401340F3  mov     ecx, r8d
+  00000001401340F6  xor     r13d, [rbp+240h+var_294]
+  00000001401340FA  xor     ecx, ebx
+  00000001401340FC  xor     ecx, r9d
+  00000001401340FF  rol     r14d, 1
+  0000000140134102  xor     r13d, r11d
+  0000000140134105  rol     r9d, 1Eh
+  0000000140134109  mov     r11d, [rsp+340h+var_310]
+  000000014013410E  mov     eax, r10d
+  0000000140134111  rol     eax, 5
+  0000000140134114  xor     r13d, r11d
+  0000000140134117  add     eax, edx
+  0000000140134119  rol     r13d, 1
+  000000014013411C  add     ecx, eax
+  000000014013411E  mov     [rsp+340h+var_304], r13d
+  0000000140134123  lea     edx, [r14+6ED9EBA1h]
+  000000014013412A  mov     [rsp+340h+var_2E8], r14d
+  000000014013412F  mov     r14d, [rsp+340h+var_31C]
+  0000000140134134  add     edx, ecx
+  0000000140134136  mov     ecx, r9d
+  0000000140134139  xor     r12d, r14d
+  000000014013413C  xor     ecx, r8d
+  000000014013413F  rol     r12d, 1
+  0000000140134142  xor     ecx, r10d
+  0000000140134145  mov     [rsp+340h+var_2EC], r12d
+  000000014013414A  rol     r10d, 1Eh
+  000000014013414E  jmp     loc_1401342C7
+  0000000140134153  db 0E8h, 46h, 73h, 2 dup(0FFh)
+  0000000140134158  dq 4B8DFFFFD973850Fh, 0E983D02204F1830Ch, 0F6413FE183FAD016h
+  00000001401342C0  db 0CAh, 0Fh, 83h, 2Fh, 73h, 2, 0
+  00000001401342C7  mov     eax, edx
+  00000001401342C9  rol     eax, 5
+  00000001401342CC  add     eax, ebx
+  00000001401342CE  lea     ebx, [r12+6ED9EBA1h]
+  00000001401342D6  add     ecx, eax
+  00000001401342D8  add     ebx, ecx
+  00000001401342DA  mov     ecx, r10d
+  00000001401342DD  xor     ecx, r9d
+  00000001401342E0  mov     eax, ebx
+  00000001401342E2  rol     eax, 5
+  00000001401342E5  xor     ecx, edx
+  00000001401342E7  add     eax, r8d
+  00000001401342EA  rol     edx, 1Eh
+  00000001401342ED  add     ecx, eax
+  00000001401342EF  lea     r8d, [r13+6ED9EBA1h]
+  00000001401342F6  mov     r13d, [rsp+340h+var_2E4]
+  00000001401342FB  add     r8d, ecx
+  00000001401342FE  xor     r13d, [rsp+340h+var_320]
+  0000000140134303  mov     eax, r8d
+  0000000140134306  xor     r13d, [rsp+340h+var_2E8]
+  000000014013430B  mov     ecx, edx
+  000000014013430D  rol     eax, 5
+  0000000140134310  xor     r13d, r15d
+  0000000140134313  add     eax, r9d
+  0000000140134316  rol     r13d, 1
+  0000000140134319  xor     ecx, r10d
+  000000014013431C  mov     [rsp+340h+var_31C], r13d
+  0000000140134321  xor     ecx, ebx
+  0000000140134323  rol     ebx, 1Eh
+  0000000140134326  add     ecx, eax
+  0000000140134328  mov     eax, [rsp+340h+var_2F4]
+  000000014013432C  lea     r9d, [r13+6ED9EBA1h]
+  0000000140134333  xor     eax, r12d
+  0000000140134336  mov     r13d, [rsp+340h+var_318]
+  000000014013433B  add     r9d, ecx
+  000000014013433E  xor     eax, r13d
+  0000000140134341  xor     eax, [rsp+340h+var_314]
+  0000000140134345  mov     ecx, ebx
+  0000000140134347  rol     eax, 1
+  0000000140134349  xor     ecx, edx
+  000000014013434B  mov     [rsp+340h+var_2F4], eax
+  000000014013434F  xor     ecx, r8d
+  0000000140134352  mov     r12d, [rsp+340h+var_2FC]
+  0000000140134357  mov     eax, r9d
+  000000014013435A  rol     eax, 5
+  000000014013435D  add     eax, r10d
+  0000000140134360  rol     r8d, 1Eh
+  0000000140134364  add     ecx, eax
+  0000000140134366  mov     r10d, [rsp+340h+var_2F4]
+  000000014013436B  mov     eax, [rsp+340h+var_2E4]
+  000000014013436F  jmp     loc_1401344D4
+  0000000140134374  dd 0F650BFE8h
+  0000000140134378  dq 0E8FFFFCE518B0FFFh, 8CDC8B0FFFF621CCh, 41755EAE765BFFFFh
+  00000001401344D0  db 87h, 78h, 2 dup(0FFh)
+  00000001401344D4  add     r10d, 6ED9EBA1h
+  00000001401344DB  xor     eax, [rsp+340h+var_304]
+  00000001401344DF  add     r10d, ecx
+  00000001401344E2  xor     eax, [rsp+340h+var_30C]
+  00000001401344E6  mov     ecx, r8d
+  00000001401344E9  xor     eax, edi
+  00000001401344EB  xor     ecx, ebx
+  00000001401344ED  rol     eax, 1
+  00000001401344EF  xor     ecx, r9d
+  00000001401344F2  mov     [rsp+340h+var_2E4], eax
+  00000001401344F6  mov     eax, r10d
+  00000001401344F9  rol     eax, 5
+  00000001401344FC  add     eax, edx
+  00000001401344FE  rol     r9d, 1Eh
+  0000000140134502  add     ecx, eax
+  0000000140134504  mov     edx, [rsp+340h+var_2E4]
+  0000000140134508  mov     eax, [rsp+340h+var_31C]
+  000000014013450C  add     edx, 6ED9EBA1h
+  0000000140134512  xor     eax, [rsp+340h+var_308]
+  0000000140134516  add     edx, ecx
+  0000000140134518  xor     eax, esi
+  000000014013451A  mov     ecx, r9d
+  000000014013451D  xor     eax, [rsp+340h+var_314]
+  0000000140134521  xor     ecx, r8d
+  0000000140134524  rol     eax, 1
+  0000000140134526  xor     ecx, r10d
+  0000000140134529  mov     [rsp+340h+var_320], eax
+  000000014013452D  mov     eax, edx
+  000000014013452F  rol     eax, 5
+  0000000140134532  add     eax, ebx
+  0000000140134534  rol     r10d, 1Eh
+  0000000140134538  mov     ebx, [rsp+340h+var_320]
+  000000014013453C  add     ecx, eax
+  000000014013453E  mov     eax, [rsp+340h+var_2F4]
+  0000000140134542  add     ebx, 6ED9EBA1h
+  0000000140134548  xor     eax, r12d
+  000000014013454B  add     ebx, ecx
+  000000014013454D  xor     eax, r14d
+  0000000140134550  mov     ecx, r10d
+  0000000140134553  xor     eax, edi
+  0000000140134555  xor     ecx, r9d
+  0000000140134558  rol     eax, 1
+  000000014013455A  xor     ecx, edx
+  000000014013455C  mov     [rsp+340h+var_310], eax
+  0000000140134560  mov     eax, ebx
+  0000000140134562  mov     edi, [rsp+340h+var_310]
+  0000000140134566  rol     eax, 5
+  0000000140134569  add     eax, r8d
+  000000014013456C  rol     edx, 1Eh
+  000000014013456F  add     ecx, eax
+  0000000140134571  jmp     loc_1401345FF
+  0000000140134576  dw 8DE8h
+  0000000140134578  dq 0FFF74E830FFFF82Ch, 5873788D344570FFh, 7650743770727F74h
+  00000001401345F8  db 0E8h, 13h, 3Fh, 0F8h, 0FFh, 77h, 0
+  00000001401345FF  mov     eax, [rsp+340h+var_2E4]
+  0000000140134603  xor     eax, [rsp+340h+var_2E8]
+  0000000140134607  lea     r8d, [rdi+6ED9EBA1h]
+  000000014013460E  xor     eax, r11d
+  0000000140134611  add     r8d, ecx
+  0000000140134614  xor     eax, esi
+  0000000140134616  mov     ecx, edx
+  0000000140134618  rol     eax, 1
+  000000014013461A  xor     ecx, r10d
+  000000014013461D  mov     [rsp+340h+var_314], eax
+  0000000140134621  xor     ecx, ebx
+  0000000140134623  mov     esi, [rsp+340h+var_314]
+  0000000140134627  mov     eax, r8d
+  000000014013462A  rol     eax, 5
+  000000014013462D  add     eax, r9d
+  0000000140134630  add     ecx, eax
+  0000000140134632  lea     r9d, [rsi+6ED9EBA1h]
+  0000000140134639  xor     esi, [rsp+340h+var_31C]
+  000000014013463D  add     r9d, ecx
+  0000000140134640  mov     eax, [rsp+340h+var_320]
+  0000000140134644  xor     eax, [rsp+340h+var_2EC]
+  0000000140134648  xor     eax, r15d
+  000000014013464B  rol     ebx, 1Eh
+  000000014013464E  xor     eax, r14d
+  0000000140134651  mov     ecx, ebx
+  0000000140134653  mov     r14d, [rsp+340h+var_304]
+  0000000140134658  xor     ecx, edx
+  000000014013465A  xor     ecx, r8d
+  000000014013465D  rol     eax, 1
+  000000014013465F  mov     [rsp+340h+var_300], eax
+  0000000140134663  xor     edi, r14d
+  0000000140134666  xor     edi, r13d
+  0000000140134669  rol     r8d, 1Eh
+  000000014013466D  xor     edi, r11d
+  0000000140134670  mov     eax, r9d
+  0000000140134673  rol     eax, 5
+  0000000140134676  add     eax, r10d
+  0000000140134679  rol     edi, 1
+  000000014013467B  mov     r10d, [rsp+340h+var_300]
+  0000000140134680  add     ecx, eax
+  0000000140134682  add     r10d, 6ED9EBA1h
+  0000000140134689  mov     [rsp+340h+var_304], edi
+  000000014013468D  add     r10d, ecx
+  0000000140134690  mov     ecx, r8d
+  0000000140134693  xor     ecx, ebx
+  0000000140134695  lea     r11d, [rdi+6ED9EBA1h]
+  000000014013469C  mov     edi, [rsp+340h+var_30C]
+  00000001401346A0  xor     ecx, r9d
+  00000001401346A3  rol     r9d, 1Eh
+  00000001401346A7  xor     esi, edi
+  00000001401346A9  jmp     loc_140134815
+  00000001401346AE  dw 0FDE8h
+  00000001401346B0  dq 2A07FE8FFF649h, 0D5E800004A15840Fh, 0FF9D288F0FFFFFE5h
+  0000000140134810  db 85h, 0Bh, 85h, 2 dup(0FFh)
+  0000000140134815  xor     esi, r15d
+  0000000140134818  mov     eax, r10d
+  000000014013481B  rol     eax, 5
+  000000014013481E  add     eax, edx
+  0000000140134820  rol     esi, 1
+  0000000140134822  add     ecx, eax
+  0000000140134824  mov     [rsp+340h+var_30C], esi
+  0000000140134828  add     r11d, ecx
+  000000014013482B  mov     eax, r9d
+  000000014013482E  and     eax, r8d
+  0000000140134831  mov     edx, r11d
+  0000000140134834  rol     edx, 5
+  0000000140134837  mov     ecx, r9d
+  000000014013483A  or      ecx, r8d
+  000000014013483D  and     ecx, r10d
+  0000000140134840  rol     r10d, 1Eh
+  0000000140134844  or      ecx, eax
+  0000000140134846  mov     eax, [rsp+340h+var_300]
+  000000014013484A  xor     eax, [rsp+340h+var_2F4]
+  000000014013484E  add     ecx, ebx
+  0000000140134850  xor     eax, [rsp+340h+var_308]
+  0000000140134854  lea     ebx, [rsi+rdx]
+  0000000140134857  xor     eax, r13d
+  000000014013485A  add     ecx, 8F1BBCDCh
+  0000000140134860  mov     r13d, [rsp+340h+var_304]
+  0000000140134865  add     ebx, ecx
+  0000000140134867  xor     r13d, [rsp+340h+var_2E4]
+  000000014013486C  mov     edx, ebx
+  000000014013486E  rol     eax, 1
+  0000000140134870  xor     r13d, r12d
+  0000000140134873  mov     [rsp+340h+var_2F8], eax
+  0000000140134877  xor     r13d, edi
+  000000014013487A  rol     edx, 5
+  000000014013487D  mov     ecx, r10d
+  0000000140134880  add     edx, [rsp+340h+var_2F8]
+  0000000140134884  or      ecx, r9d
+  0000000140134887  and     ecx, r11d
+  000000014013488A  rol     r13d, 1
+  000000014013488D  mov     eax, r10d
+  0000000140134890  rol     r11d, 1Eh
+  0000000140134894  and     eax, r9d
+  0000000140134897  mov     [rsp+340h+var_2F0], r13d
+  000000014013489C  or      ecx, eax
+  000000014013489E  add     ecx, r8d
+  00000001401348A1  lea     r8d, [rdx-70E44324h]
+  00000001401348A8  add     r8d, ecx
+  00000001401348AB  mov     edx, r8d
+  00000001401348AE  rol     edx, 5
+  00000001401348B1  mov     edi, [rsp+340h+var_2E8]
+  00000001401348B5  mov     ecx, r10d
+  00000001401348B8  jmp     short loc_140134923
+  00000001401348BA  dw 5441h, 860Fh, 5E12h
+  00000001401348C0  dq 0E8FFF648C1E8FFFFh, 0C1818C0F00016F60h, 0FFFF82661E8FFFFh
+  0000000140134920  db 0F8h, 2 dup(0FFh)
+  0000000140134923  or      ecx, r11d
+  0000000140134926  mov     eax, r10d
+  0000000140134929  and     eax, r11d
+  000000014013492C  and     ecx, ebx
+  000000014013492E  or      ecx, eax
+  0000000140134930  rol     ebx, 1Eh
+  0000000140134933  add     ecx, r9d
+  0000000140134936  mov     eax, esi
+  0000000140134938  mov     esi, [rsp+340h+var_2EC]
+  000000014013493C  lea     r9d, [rdx+r13]
+  0000000140134940  mov     r13d, [rsp+340h+var_320]
+  0000000140134945  add     ecx, 8F1BBCDCh
+  000000014013494B  xor     eax, r13d
+  000000014013494E  add     r9d, ecx
+  0000000140134951  xor     eax, edi
+  0000000140134953  mov     ecx, ebx
+  0000000140134955  xor     eax, [rsp+340h+var_308]
+  0000000140134959  or      ecx, r11d
+  000000014013495C  rol     eax, 1
+  000000014013495E  and     ecx, r8d
+  0000000140134961  mov     [rsp+340h+var_2E8], eax
+  0000000140134965  mov     edx, r9d
+  0000000140134968  rol     edx, 5
+  000000014013496B  mov     eax, ebx
+  000000014013496D  add     edx, [rsp+340h+var_2E8]
+  0000000140134971  and     eax, r11d
+  0000000140134974  or      ecx, eax
+  0000000140134976  rol     r8d, 1Eh
+  000000014013497A  mov     eax, [rsp+340h+var_2F8]
+  000000014013497E  add     ecx, r10d
+  0000000140134981  xor     eax, [rsp+340h+var_310]
+  0000000140134985  xor     eax, esi
+  0000000140134987  lea     r10d, [rdx-70E44324h]
+  000000014013498E  xor     eax, r12d
+  0000000140134991  add     r10d, ecx
+  0000000140134994  rol     eax, 1
+  0000000140134996  mov     edx, r10d
+  0000000140134999  mov     [rsp+340h+var_2EC], eax
+  000000014013499D  mov     ecx, r8d
+  00000001401349A0  or      ecx, ebx
+  00000001401349A2  rol     edx, 5
+  00000001401349A5  and     ecx, r9d
+  00000001401349A8  add     r11d, edx
+  00000001401349AB  rol     r9d, 1Eh
+  00000001401349AF  mov     eax, r8d
+  00000001401349B2  and     eax, ebx
+  00000001401349B4  or      ecx, eax
+  00000001401349B6  mov     eax, [rsp+340h+var_2F0]
+  00000001401349BA  xor     eax, [rsp+340h+var_314]
+  00000001401349BE  add     ecx, 8F1BBCDCh
+  00000001401349C4  jmp     loc_140134A4C
+  00000001401349C9  db 0E8h, 7Ah, 48h, 0F6h, 0FFh, 0Fh, 89h
+  00000001401349D0  dq 5C415D41FFFFE421h, 41FFFFFEDBE95F41h, 410001751F8C0F57h
+  0000000140134A48  db 0B8h, 71h, 2 dup(0FFh)
+  0000000140134A4C  add     ecx, [rsp+340h+var_2EC]
+  0000000140134A50  xor     eax, r14d
+  0000000140134A53  xor     eax, edi
+  0000000140134A55  add     r11d, ecx
+  0000000140134A58  rol     eax, 1
+  0000000140134A5A  mov     ecx, r9d
+  0000000140134A5D  mov     [rsp+340h+var_2E0], eax
+  0000000140134A61  or      ecx, r8d
+  0000000140134A64  and     ecx, r10d
+  0000000140134A67  mov     eax, r9d
+  0000000140134A6A  and     eax, r8d
+  0000000140134A6D  rol     r10d, 1Eh
+  0000000140134A71  or      ecx, eax
+  0000000140134A73  mov     edx, r11d
+  0000000140134A76  mov     eax, [rsp+340h+var_2E8]
+  0000000140134A7A  add     ecx, 8F1BBCDCh
+  0000000140134A80  xor     eax, [rsp+340h+var_300]
+  0000000140134A84  add     ecx, [rsp+340h+var_2E0]
+  0000000140134A88  xor     eax, [rsp+340h+var_31C]
+  0000000140134A8C  rol     edx, 5
+  0000000140134A8F  xor     eax, esi
+  0000000140134A91  add     ebx, edx
+  0000000140134A93  rol     eax, 1
+  0000000140134A95  add     ebx, ecx
+  0000000140134A97  mov     [rsp+340h+var_2DC], eax
+  0000000140134A9B  mov     edx, ebx
+  0000000140134A9D  mov     ecx, r10d
+  0000000140134AA0  rol     edx, 5
+  0000000140134AA3  or      ecx, r9d
+  0000000140134AA6  mov     esi, [rsp+340h+var_2EC]
+  0000000140134AAA  and     ecx, r11d
+  0000000140134AAD  xor     esi, [rsp+340h+var_304]
+  0000000140134AB1  add     r8d, edx
+  0000000140134AB4  xor     esi, [rsp+340h+var_2F4]
+  0000000140134AB8  mov     eax, r10d
+  0000000140134ABB  mov     r15d, [rsp+340h+var_2E0]
+  0000000140134AC0  and     eax, r9d
+  0000000140134AC3  xor     r15d, [rsp+340h+var_30C]
+  0000000140134AC8  or      ecx, eax
+  0000000140134ACA  xor     r15d, [rsp+340h+var_2E4]
+  0000000140134ACF  add     ecx, 8F1BBCDCh
+  0000000140134AD5  add     ecx, [rsp+340h+var_2DC]
+  0000000140134AD9  xor     esi, r14d
+  0000000140134ADC  xor     r15d, [rsp+340h+var_31C]
+  0000000140134AE1  add     r8d, ecx
+  0000000140134AE4  mov     r14d, [rsp+340h+var_2DC]
+  0000000140134AE9  mov     edx, r8d
+  0000000140134AEC  xor     r14d, [rsp+340h+var_2F8]
+  0000000140134AF1  rol     edx, 5
+  0000000140134AF4  xor     r14d, r13d
+  0000000140134AF7  jmp     loc_140134B91
+  0000000140134AFC  dd 0FE00348h
+  0000000140134B00  dq 73BB51FFFFA79B84h, 538D0FFFF833A3E8h, 0FFF64620E80002B4h
+  0000000140134B90  db 26h
+  0000000140134B91  xor     r14d, [rsp+340h+var_2F4]
+  0000000140134B96  add     r9d, edx
+  0000000140134B99  rol     r11d, 1Eh
+  0000000140134B9D  rol     esi, 1
+  0000000140134B9F  mov     ecx, r11d
+  0000000140134BA2  or      ecx, r10d
+  0000000140134BA5  rol     r15d, 1
+  0000000140134BA8  and     ecx, ebx
+  0000000140134BAA  rol     r14d, 1
+  0000000140134BAD  rol     ebx, 1Eh
+  0000000140134BB0  mov     eax, r11d
+  0000000140134BB3  and     eax, r10d
+  0000000140134BB6  mov     [rsp+340h+var_2FC], esi
+  0000000140134BBA  or      ecx, eax
+  0000000140134BBC  mov     [rsp+340h+var_318], r15d
+  0000000140134BC1  add     ecx, 8F1BBCDCh
+  0000000140134BC7  mov     [rsp+340h+var_320], r14d
+  0000000140134BCC  add     ecx, esi
+  0000000140134BCE  mov     eax, ebx
+  0000000140134BD0  add     r9d, ecx
+  0000000140134BD3  and     eax, r11d
+  0000000140134BD6  mov     edx, r9d
+  0000000140134BD9  mov     ecx, ebx
+  0000000140134BDB  or      ecx, r11d
+  0000000140134BDE  rol     edx, 5
+  0000000140134BE1  and     ecx, r8d
+  0000000140134BE4  add     r10d, edx
+  0000000140134BE7  or      ecx, eax
+  0000000140134BE9  rol     r8d, 1Eh
+  0000000140134BED  add     ecx, 8F1BBCDCh
+  0000000140134BF3  mov     eax, r8d
+  0000000140134BF6  add     ecx, r15d
+  0000000140134BF9  and     eax, ebx
+  0000000140134BFB  add     r10d, ecx
+  0000000140134BFE  mov     edi, esi
+  0000000140134C00  xor     edi, [rsp+340h+var_2F0]
+  0000000140134C04  mov     ecx, r8d
+  0000000140134C07  xor     edi, [rsp+340h+var_310]
+  0000000140134C0B  or      ecx, ebx
+  0000000140134C0D  xor     edi, [rsp+340h+var_2E4]
+  0000000140134C11  and     ecx, r9d
+  0000000140134C14  or      ecx, eax
+  0000000140134C16  rol     r9d, 1Eh
+  0000000140134C1A  add     ecx, 8F1BBCDCh
+  0000000140134C20  rol     edi, 1
+  0000000140134C22  add     ecx, r14d
+  0000000140134C25  mov     [rsp+340h+var_31C], edi
+  0000000140134C29  mov     edx, r10d
+  0000000140134C2C  mov     eax, r9d
+  0000000140134C2F  rol     edx, 5
+  0000000140134C32  jmp     loc_140134D95
+  0000000140134C37  db 0E8h
+  0000000140134C38  dq 0D4498D0FFFF811D4h, 58E473705771FFFFh, 0F865AED5068D916h
+  0000000140134D90  db 87h, 0C8h, 0EEh, 2 dup(0FFh)
+  0000000140134D95  and     eax, r8d
+  0000000140134D98  add     r11d, edx
+  0000000140134D9B  add     r11d, ecx
+  0000000140134D9E  mov     ecx, r9d
+  0000000140134DA1  or      ecx, r8d
+  0000000140134DA4  mov     edx, r11d
+  0000000140134DA7  and     ecx, r10d
+  0000000140134DAA  rol     edx, 5
+  0000000140134DAD  or      ecx, eax
+  0000000140134DAF  add     ecx, 8F1BBCDCh
+  0000000140134DB5  xor     r15d, [rsp+340h+var_2E8]
+  0000000140134DBA  add     ecx, edi
+  0000000140134DBC  xor     r15d, [rsp+340h+var_314]
+  0000000140134DC1  add     ebx, edx
+  0000000140134DC3  add     ebx, ecx
+  0000000140134DC5  rol     r10d, 1Eh
+  0000000140134DC9  xor     r15d, r13d
+  0000000140134DCC  mov     ecx, r10d
+  0000000140134DCF  or      ecx, r9d
+  0000000140134DD2  rol     r15d, 1
+  0000000140134DD5  and     ecx, r11d
+  0000000140134DD8  mov     [rsp+340h+var_308], r15d
+  0000000140134DDD  rol     r11d, 1Eh
+  0000000140134DE1  mov     eax, r10d
+  0000000140134DE4  and     eax, r9d
+  0000000140134DE7  mov     r12d, edi
+  0000000140134DEA  xor     r12d, [rsp+340h+var_2E0]
+  0000000140134DEF  or      ecx, eax
+  0000000140134DF1  xor     r12d, [rsp+340h+var_304]
+  0000000140134DF6  add     ecx, 8F1BBCDCh
+  0000000140134DFC  xor     r12d, [rsp+340h+var_314]
+  0000000140134E01  add     ecx, r15d
+  0000000140134E04  mov     eax, r11d
+  0000000140134E07  rol     r12d, 1
+  0000000140134E0A  and     eax, r10d
+  0000000140134E0D  mov     [rsp+340h+var_2E4], r12d
+  0000000140134E12  mov     edx, ebx
+  0000000140134E14  mov     r13d, r14d
+  0000000140134E17  xor     r13d, [rsp+340h+var_2EC]
+  0000000140134E1C  mov     esi, r15d
+  0000000140134E1F  xor     esi, [rsp+340h+var_2DC]
+  0000000140134E23  xor     r13d, [rsp+340h+var_300]
+  0000000140134E28  xor     esi, [rsp+340h+var_30C]
+  0000000140134E2C  xor     r13d, [rsp+340h+var_310]
+  0000000140134E31  xor     esi, [rsp+340h+var_300]
+  0000000140134E35  rol     edx, 5
+  0000000140134E38  add     r8d, edx
+  0000000140134E3B  rol     r13d, 1
+  0000000140134E3E  add     r8d, ecx
+  0000000140134E41  rol     esi, 1
+  0000000140134E43  jmp     loc_140134EDA
+  0000000140134E48  dq 0CE830FFFF80B83E8h, 0C4FFCC53C3FFFF56h, 2F86A558CBE35D70h
+  0000000140134ED8  db 2 dup(0FFh)
+  0000000140134EDA  mov     ecx, r11d
+  0000000140134EDD  mov     [rsp+340h+var_2F4], r13d
+  0000000140134EE2  or      ecx, r10d
+  0000000140134EE5  mov     [rsp+340h+var_314], esi
+  0000000140134EE9  and     ecx, ebx
+  0000000140134EEB  mov     edx, r8d
+  0000000140134EEE  or      ecx, eax
+  0000000140134EF0  rol     edx, 5
+  0000000140134EF3  add     ecx, 8F1BBCDCh
+  0000000140134EF9  rol     ebx, 1Eh
+  0000000140134EFC  add     ecx, r13d
+  0000000140134EFF  add     r9d, edx
+  0000000140134F02  add     r9d, ecx
+  0000000140134F05  mov     eax, ebx
+  0000000140134F07  and     eax, r11d
+  0000000140134F0A  mov     edx, r9d
+  0000000140134F0D  rol     edx, 5
+  0000000140134F10  mov     ecx, ebx
+  0000000140134F12  or      ecx, r11d
+  0000000140134F15  add     r10d, edx
+  0000000140134F18  and     ecx, r8d
+  0000000140134F1B  mov     edi, r13d
+  0000000140134F1E  or      ecx, eax
+  0000000140134F20  rol     r8d, 1Eh
+  0000000140134F24  add     ecx, 8F1BBCDCh
+  0000000140134F2A  mov     eax, r8d
+  0000000140134F2D  add     ecx, r12d
+  0000000140134F30  and     eax, ebx
+  0000000140134F32  add     r10d, ecx
+  0000000140134F35  mov     ecx, r8d
+  0000000140134F38  or      ecx, ebx
+  0000000140134F3A  mov     edx, r10d
+  0000000140134F3D  and     ecx, r9d
+  0000000140134F40  rol     edx, 5
+  0000000140134F43  or      ecx, eax
+  0000000140134F45  rol     r9d, 1Eh
+  0000000140134F49  add     ecx, 8F1BBCDCh
+  0000000140134F4F  add     r11d, edx
+  0000000140134F52  add     ecx, esi
+  0000000140134F54  add     r11d, ecx
+  0000000140134F57  xor     edi, [rsp+340h+var_2FC]
+  0000000140134F5B  xor     edi, [rsp+340h+var_2F8]
+  0000000140134F5F  mov     ecx, r9d
+  0000000140134F62  xor     edi, [rsp+340h+var_304]
+  0000000140134F66  or      ecx, r8d
+  0000000140134F69  xor     esi, [rsp+340h+var_320]
+  0000000140134F6D  and     ecx, r10d
+  0000000140134F70  xor     esi, [rsp+340h+var_2E8]
+  0000000140134F74  mov     eax, r9d
+  0000000140134F77  xor     esi, [rsp+340h+var_2F8]
+  0000000140134F7B  jmp     loc_1401350FA
+  0000000140134F80  dq 2666D820FE70348h, 850FFFF82022E800h, 0F641DFE8FFFF5D95h
+  00000001401350F8  db 2 dup(0FFh)
+  00000001401350FA  and     eax, r8d
+  00000001401350FD  or      ecx, eax
+  00000001401350FF  rol     edi, 1
+  0000000140135101  add     ecx, 8F1BBCDCh
+  0000000140135107  rol     r10d, 1Eh
+  000000014013510B  add     ecx, edi
+  000000014013510D  mov     [rsp+340h+var_310], edi
+  0000000140135111  xor     edi, [rsp+340h+var_31C]
+  0000000140135115  mov     eax, r10d
+  0000000140135118  xor     edi, [rsp+340h+var_2EC]
+  000000014013511C  and     eax, r9d
+  000000014013511F  xor     edi, [rsp+340h+var_2F0]
+  0000000140135123  mov     edx, r11d
+  0000000140135126  rol     edx, 5
+  0000000140135129  mov     r14d, r12d
+  000000014013512C  xor     r14d, [rsp+340h+var_318]
+  0000000140135131  add     ebx, edx
+  0000000140135133  xor     r14d, [rsp+340h+var_2F0]
+  0000000140135138  add     ebx, ecx
+  000000014013513A  xor     r14d, [rsp+340h+var_30C]
+  000000014013513F  mov     ecx, r10d
+  0000000140135142  or      ecx, r9d
+  0000000140135145  rol     r14d, 1
+  0000000140135148  and     ecx, r11d
+  000000014013514B  mov     [rsp+340h+var_30C], r14d
+  0000000140135150  or      ecx, eax
+  0000000140135152  rol     r11d, 1Eh
+  0000000140135156  add     ecx, 8F1BBCDCh
+  000000014013515C  rol     esi, 1
+  000000014013515E  add     ecx, r14d
+  0000000140135161  rol     edi, 1
+  0000000140135163  xor     r14d, r15d
+  0000000140135166  mov     [rsp+340h+var_304], esi
+  000000014013516A  xor     r14d, [rsp+340h+var_2E0]
+  000000014013516F  mov     edx, ebx
+  0000000140135171  xor     r14d, [rsp+340h+var_2E8]
+  0000000140135176  mov     eax, r11d
+  0000000140135179  rol     edx, 5
+  000000014013517C  and     eax, r10d
+  000000014013517F  add     r8d, edx
+  0000000140135182  rol     r14d, 1
+  0000000140135185  add     r8d, ecx
+  0000000140135188  mov     [rsp+340h+var_300], edi
+  000000014013518C  mov     edx, r8d
+  000000014013518F  mov     [rsp+340h+var_2E8], r14d
+  0000000140135194  rol     edx, 5
+  0000000140135197  mov     ecx, r11d
+  000000014013519A  or      ecx, r10d
+  000000014013519D  add     r9d, edx
+  00000001401351A0  and     ecx, ebx
+  00000001401351A2  jmp     loc_1401352EC
+  00000001401351A7  db 0E8h
+  00000001401351A8  dq 2C308C0FFFFF4035h, 0C0D1F9C98B410000h, 244489C83341C3D1h
+  00000001401352E8  db 0BCh, 71h, 2 dup(0FFh)
+  00000001401352EC  rol     ebx, 1Eh
+  00000001401352EF  or      ecx, eax
+  00000001401352F1  mov     eax, ebx
+  00000001401352F3  add     ecx, 8F1BBCDCh
+  00000001401352F9  and     eax, r11d
+  00000001401352FC  add     ecx, esi
+  00000001401352FE  add     r9d, ecx
+  0000000140135301  mov     ecx, ebx
+  0000000140135303  or      ecx, r11d
+  0000000140135306  mov     edx, r9d
+  0000000140135309  and     ecx, r8d
+  000000014013530C  rol     edx, 5
+  000000014013530F  or      ecx, eax
+  0000000140135311  rol     r8d, 1Eh
+  0000000140135315  add     r10d, edx
+  0000000140135318  add     ecx, 8F1BBCDCh
+  000000014013531E  add     ecx, edi
+  0000000140135320  add     r10d, ecx
+  0000000140135323  mov     ecx, r8d
+  0000000140135326  mov     edx, r10d
+  0000000140135329  rol     edx, 5
+  000000014013532C  or      ecx, ebx
+  000000014013532E  and     ecx, r9d
+  0000000140135331  add     edx, r11d
+  0000000140135334  rol     r9d, 1Eh
+  0000000140135338  mov     eax, r8d
+  000000014013533B  and     eax, ebx
+  000000014013533D  mov     r15d, esi
+  0000000140135340  or      ecx, eax
+  0000000140135342  xor     r15d, r13d
+  0000000140135345  xor     r15d, [rsp+340h+var_2DC]
+  000000014013534A  add     ecx, 8F1BBCDCh
+  0000000140135350  xor     r15d, [rsp+340h+var_2EC]
+  0000000140135355  add     ecx, r14d
+  0000000140135358  add     edx, ecx
+  000000014013535A  rol     r15d, 1
+  000000014013535D  mov     r13d, edi
+  0000000140135360  mov     [rsp+340h+var_2F0], r15d
+  0000000140135365  xor     r13d, r12d
+  0000000140135368  mov     eax, r10d
+  000000014013536B  xor     r13d, [rsp+340h+var_2FC]
+  0000000140135370  xor     eax, r9d
+  0000000140135373  xor     r13d, [rsp+340h+var_2E0]
+  0000000140135378  xor     eax, r8d
+  000000014013537B  add     eax, 0CA62C1D6h
+  0000000140135380  rol     r10d, 1Eh
+  0000000140135384  add     eax, r15d
+  0000000140135387  rol     r13d, 1
+  000000014013538A  mov     ecx, edx
+  000000014013538C  mov     [rsp+340h+var_2EC], r13d
+  0000000140135391  jmp     loc_1401354D9
+  0000000140135396  dw 25E8h
+  0000000140135398  dq 0FFF44E8C0FFFF82Fh, 870FFFF63D12E8FFh, 0F8047FE80001803Ah
+  00000001401354D8  db 0FFh
+  00000001401354D9  rol     ecx, 5
+  00000001401354DC  mov     r12d, r14d
+  00000001401354DF  xor     r12d, [rsp+340h+var_314]
+  00000001401354E4  add     ebx, ecx
+  00000001401354E6  xor     r12d, [rsp+340h+var_318]
+  00000001401354EB  add     ebx, eax
+  00000001401354ED  xor     r12d, [rsp+340h+var_2DC]
+  00000001401354F2  mov     eax, edx
+  00000001401354F4  xor     eax, r10d
+  00000001401354F7  rol     edx, 1Eh
+  00000001401354FA  xor     eax, r9d
+  00000001401354FD  rol     r12d, 1
+  0000000140135500  add     eax, 0CA62C1D6h
+  0000000140135505  mov     [rsp+340h+var_2F8], r12d
+  000000014013550A  add     eax, r13d
+  000000014013550D  mov     ecx, ebx
+  000000014013550F  rol     ecx, 5
+  0000000140135512  mov     edi, r15d
+  0000000140135515  xor     edi, [rsp+340h+var_310]
+  0000000140135519  add     r8d, ecx
+  000000014013551C  xor     edi, [rsp+340h+var_320]
+  0000000140135520  add     r8d, eax
+  0000000140135523  xor     edi, [rsp+340h+var_2FC]
+  0000000140135527  mov     eax, ebx
+  0000000140135529  xor     eax, edx
+  000000014013552B  rol     edi, 1
+  000000014013552D  xor     eax, r10d
+  0000000140135530  rol     ebx, 1Eh
+  0000000140135533  add     eax, 0CA62C1D6h
+  0000000140135538  mov     [rsp+340h+var_2FC], edi
+  000000014013553C  add     eax, r12d
+  000000014013553F  mov     ecx, r8d
+  0000000140135542  rol     ecx, 5
+  0000000140135545  mov     r11d, r13d
+  0000000140135548  xor     r11d, [rsp+340h+var_30C]
+  000000014013554D  add     r9d, ecx
+  0000000140135550  xor     r11d, [rsp+340h+var_31C]
+  0000000140135555  add     r9d, eax
+  0000000140135558  xor     r11d, [rsp+340h+var_318]
+  000000014013555D  mov     eax, r8d
+  0000000140135560  xor     eax, ebx
+  0000000140135562  rol     r11d, 1
+  0000000140135565  xor     eax, edx
+  0000000140135567  rol     r8d, 1Eh
+  000000014013556B  add     eax, 0CA62C1D6h
+  0000000140135570  mov     [rsp+340h+var_318], r11d
+  0000000140135575  add     eax, edi
+  0000000140135577  mov     ecx, r9d
+  000000014013557A  rol     ecx, 5
+  000000014013557D  add     r10d, ecx
+  0000000140135580  jmp     loc_1401356E8
+  0000000140135585  db 0E8h, 0F6h, 82h
+  0000000140135588  dq 2A1C1840FFFFFh, 0FFFFCDFB860F5141h, 0E8FFFF82D6880F50h
+  00000001401356E8  add     r10d, eax
+  00000001401356EB  mov     ecx, r10d
+  00000001401356EE  rol     ecx, 5
+  00000001401356F1  xor     edi, [rsp+340h+var_300]
+  00000001401356F5  add     edx, ecx
+  00000001401356F7  xor     edi, [rsp+340h+var_2F4]
+  00000001401356FB  mov     eax, r9d
+  00000001401356FE  xor     edi, [rsp+340h+var_31C]
+  0000000140135702  xor     eax, r8d
+  0000000140135705  xor     eax, ebx
+  0000000140135707  rol     r9d, 1Eh
+  000000014013570B  add     eax, 0CA62C1D6h
+  0000000140135710  rol     edi, 1
+  0000000140135712  add     eax, r11d
+  0000000140135715  mov     esi, r12d
+  0000000140135718  xor     esi, [rsp+340h+var_304]
+  000000014013571C  add     edx, eax
+  000000014013571E  xor     esi, [rsp+340h+var_308]
+  0000000140135722  xor     r11d, r14d
+  0000000140135725  xor     esi, [rsp+340h+var_320]
+  0000000140135729  mov     eax, r10d
+  000000014013572C  xor     r11d, [rsp+340h+var_2E4]
+  0000000140135731  xor     eax, r9d
+  0000000140135734  xor     r11d, [rsp+340h+var_308]
+  0000000140135739  xor     eax, r8d
+  000000014013573C  add     eax, 0CA62C1D6h
+  0000000140135741  rol     esi, 1
+  0000000140135743  add     eax, esi
+  0000000140135745  rol     r10d, 1Eh
+  0000000140135749  rol     r11d, 1
+  000000014013574C  mov     ecx, edx
+  000000014013574E  rol     ecx, 5
+  0000000140135751  mov     r14d, esi
+  0000000140135754  add     ebx, ecx
+  0000000140135756  mov     [rsp+340h+var_320], esi
+  000000014013575A  mov     esi, [rsp+340h+var_314]
+  000000014013575E  add     ebx, eax
+  0000000140135760  xor     r14d, r15d
+  0000000140135763  mov     [rsp+340h+var_31C], r11d
+  0000000140135768  xor     r14d, esi
+  000000014013576B  mov     eax, edx
+  000000014013576D  xor     r14d, [rsp+340h+var_2F4]
+  0000000140135772  xor     eax, r10d
+  0000000140135775  xor     eax, r9d
+  0000000140135778  rol     edx, 1Eh
+  000000014013577B  add     eax, 0CA62C1D6h
+  0000000140135780  rol     r14d, 1
+  0000000140135783  add     eax, edi
+  0000000140135785  mov     [rsp+340h+var_314], r14d
+  000000014013578A  mov     ecx, ebx
+  000000014013578C  jmp     loc_14013581D
+  0000000140135791  db 7Ah, 0E0h, 0CEh, 54h, 0B5h, 54h, 48h
+  0000000140135798  dq 820F00000410C481h, 0F638EFE8FFFF77D5h, 850FFFFF54BBE8FFh
+  0000000140135818  db 84h, 0Ah, 4Fh, 2 dup(0FFh)
+  000000014013581D  mov     r15d, edi
+  0000000140135820  rol     ecx, 5
+  0000000140135823  xor     r15d, r13d
+  0000000140135826  xor     r15d, [rsp+340h+var_310]
+  000000014013582B  add     r8d, ecx
+  000000014013582E  xor     r15d, [rsp+340h+var_2E4]
+  0000000140135833  add     r8d, eax
+  0000000140135836  mov     eax, ebx
+  0000000140135838  rol     r15d, 1
+  000000014013583B  xor     eax, edx
+  000000014013583D  rol     ebx, 1Eh
+  0000000140135840  xor     eax, r10d
+  0000000140135843  mov     [rsp+340h+var_308], r15d
+  0000000140135848  add     eax, 0CA62C1D6h
+  000000014013584D  mov     ecx, r8d
+  0000000140135850  add     eax, r11d
+  0000000140135853  rol     ecx, 5
+  0000000140135856  add     r9d, ecx
+  0000000140135859  add     r9d, eax
+  000000014013585C  mov     eax, r8d
+  000000014013585F  xor     eax, ebx
+  0000000140135861  rol     r8d, 1Eh
+  0000000140135865  xor     eax, edx
+  0000000140135867  mov     ecx, r9d
+  000000014013586A  add     eax, 0CA62C1D6h
+  000000014013586F  rol     ecx, 5
+  0000000140135872  add     eax, r14d
+  0000000140135875  add     r10d, ecx
+  0000000140135878  add     r10d, eax
+  000000014013587B  mov     eax, r9d
+  000000014013587E  mov     ecx, r10d
+  0000000140135881  xor     eax, r8d
+  0000000140135884  rol     ecx, 5
+  0000000140135887  xor     eax, ebx
+  0000000140135889  add     eax, 0CA62C1D6h
+  000000014013588E  rol     r9d, 1Eh
+  0000000140135892  add     eax, r15d
+  0000000140135895  add     edx, ecx
+  0000000140135897  add     edx, eax
+  0000000140135899  mov     r13d, r11d
+  000000014013589C  xor     r13d, r12d
+  000000014013589F  mov     eax, r10d
+  00000001401358A2  xor     r13d, [rsp+340h+var_30C]
+  00000001401358A7  xor     eax, r9d
+  00000001401358AA  xor     eax, r8d
+  00000001401358AD  rol     r10d, 1Eh
+  00000001401358B1  add     eax, 0CA62C1D6h
+  00000001401358B6  xor     r13d, esi
+  00000001401358B9  mov     r12d, r14d
+  00000001401358BC  rol     r13d, 1
+  00000001401358BF  jmp     loc_14013595F
+  00000001401358C4  dd 794477EDh
+  00000001401358C8  dq 0CB8F2431359DCD5Bh, 7A551E9467727C7Eh, 7F8BC97E3F8D7555h
+  0000000140135958  db 0E7h, 0Fh, 87h, 0B8h, 0A2h, 2 dup(0FFh)
+  000000014013595F  xor     r12d, [rsp+340h+var_2FC]
+  0000000140135964  add     eax, r13d
+  0000000140135967  xor     r12d, [rsp+340h+var_304]
+  000000014013596C  mov     r14d, r15d
+  000000014013596F  xor     r14d, [rsp+340h+var_318]
+  0000000140135974  mov     esi, edx
+  0000000140135976  xor     r14d, [rsp+340h+var_300]
+  000000014013597B  mov     r15d, r13d
+  000000014013597E  xor     r15d, [rsp+340h+var_320]
+  0000000140135983  xor     r15d, [rsp+340h+var_2E8]
+  0000000140135988  xor     r12d, [rsp+340h+var_310]
+  000000014013598D  xor     r14d, [rsp+340h+var_30C]
+  0000000140135992  xor     r15d, [rsp+340h+var_304]
+  0000000140135997  rol     esi, 5
+  000000014013599A  add     esi, ebx
+  000000014013599C  rol     r12d, 1
+  000000014013599F  add     esi, eax
+  00000001401359A1  rol     r14d, 1
+  00000001401359A4  mov     eax, edx
+  00000001401359A6  rol     r15d, 1
+  00000001401359A9  xor     eax, r10d
+  00000001401359AC  rol     edx, 1Eh
+  00000001401359AF  xor     eax, r9d
+  00000001401359B2  mov     ecx, esi
+  00000001401359B4  add     eax, 0CA62C1D6h
+  00000001401359B9  rol     ecx, 5
+  00000001401359BC  add     eax, r12d
+  00000001401359BF  add     r8d, ecx
+  00000001401359C2  add     r8d, eax
+  00000001401359C5  mov     ebx, r12d
+  00000001401359C8  xor     ebx, edi
+  00000001401359CA  mov     eax, esi
+  00000001401359CC  xor     ebx, [rsp+340h+var_2F0]
+  00000001401359D0  xor     eax, edx
+  00000001401359D2  xor     ebx, [rsp+340h+var_300]
+  00000001401359D6  xor     eax, r10d
+  00000001401359D9  add     eax, 0CA62C1D6h
+  00000001401359DE  rol     esi, 1Eh
+  00000001401359E1  add     eax, r14d
+  00000001401359E4  rol     ebx, 1
+  00000001401359E6  mov     r11d, r8d
+  00000001401359E9  rol     r11d, 5
+  00000001401359ED  add     r11d, r9d
+  00000001401359F0  add     r11d, eax
+  00000001401359F3  mov     eax, r8d
+  00000001401359F6  xor     eax, esi
+  00000001401359F8  rol     r8d, 1Eh
+  00000001401359FC  xor     eax, edx
+  00000001401359FE  mov     ecx, r11d
+  0000000140135A01  add     eax, 0CA62C1D6h
+  0000000140135A06  jmp     loc_140135C39
+  0000000140135A0B  db 2 dup(0C1h), 5, 44h, 2Ah
+  0000000140135A10  dq 4C245C8944C233C8h, 0C2C1C08545C00341h, 62C1D605F823411Eh
+  0000000140135C38  db 0FFh
+  0000000140135C39  rol     ecx, 5
+  0000000140135C3C  add     eax, r15d
+  0000000140135C3F  add     r10d, ecx
+  0000000140135C42  add     r10d, eax
+  0000000140135C45  mov     eax, r11d
+  0000000140135C48  xor     eax, r8d
+  0000000140135C4B  rol     r11d, 1Eh
+  0000000140135C4F  xor     eax, esi
+  0000000140135C51  mov     edi, r10d
+  0000000140135C54  rol     edi, 5
+  0000000140135C57  add     eax, 0CA62C1D6h
+  0000000140135C5C  add     eax, ebx
+  0000000140135C5E  add     edi, edx
+  0000000140135C60  add     edi, eax
+  0000000140135C62  xor     r14d, [rsp+340h+var_31C]
+  0000000140135C67  xor     r15d, [rsp+340h+var_314]
+  0000000140135C6C  mov     eax, r10d
+  0000000140135C6F  xor     r15d, [rsp+340h+var_2F8]
+  0000000140135C74  xor     eax, r11d
+  0000000140135C77  xor     r14d, [rsp+340h+var_2EC]
+  0000000140135C7C  xor     eax, r8d
+  0000000140135C7F  xor     r15d, [rsp+340h+var_2F0]
+  0000000140135C84  add     eax, 0CA62C1D6h
+  0000000140135C89  xor     ebx, [rsp+340h+var_308]
+  0000000140135C8D  mov     r9d, edi
+  0000000140135C90  xor     r14d, [rsp+340h+var_2E8]
+  0000000140135C95  xor     ebx, [rsp+340h+var_2FC]
+  0000000140135C99  xor     ebx, [rsp+340h+var_2EC]
+  0000000140135C9D  rol     r15d, 1
+  0000000140135CA0  rol     r14d, 1
+  0000000140135CA3  add     eax, r14d
+  0000000140135CA6  rol     r10d, 1Eh
+  0000000140135CAA  rol     ebx, 1
+  0000000140135CAC  xor     r14d, r13d
+  0000000140135CAF  xor     r14d, [rsp+340h+var_318]
+  0000000140135CB4  add     ebx, r11d
+  0000000140135CB7  xor     r14d, [rsp+340h+var_2F8]
+  0000000140135CBC  rol     r9d, 5
+  0000000140135CC0  add     r9d, esi
+  0000000140135CC3  rol     r14d, 1
+  0000000140135CC6  mov     esi, [rbp+240h+var_23C]
+  0000000140135CC9  add     r9d, eax
+  0000000140135CCC  mov     eax, edi
+  0000000140135CCE  mov     ecx, r9d
+  0000000140135CD1  xor     eax, r10d
+  0000000140135CD4  rol     ecx, 5
+  0000000140135CD7  xor     eax, r11d
+  0000000140135CDA  rol     edi, 1Eh
+  0000000140135CDD  mov     r11d, [rbp+240h+var_234]
+  0000000140135CE1  add     r8d, ecx
+  0000000140135CE4  jmp     loc_140135E5F
+  0000000140135CE9  db 0E8h, 0D1h, 0FAh, 2 dup(0FFh), 0Fh, 81h
+  0000000140135CF0  dq 8B0F514100011641h, 772A3E4DFFFF5EF0h, 0BB8AB1B25954725Bh
+  0000000140135E58  db 0FFh, 0Fh, 84h, 8Ah, 0BAh, 2 dup(0FFh)
+  0000000140135E5F  add     eax, 0CA62C1D6h
+  0000000140135E64  mov     ecx, r9d
+  0000000140135E67  add     eax, r15d
+  0000000140135E6A  rol     r9d, 1Eh
+  0000000140135E6E  add     r8d, eax
+  0000000140135E71  xor     ecx, edi
+  0000000140135E73  xor     ecx, r10d
+  0000000140135E76  lea     eax, [r10+r14]
+  0000000140135E7A  mov     r10d, [rbp+240h+var_238]
+  0000000140135E7E  add     ecx, 0CA62C1D6h
+  0000000140135E84  mov     r14d, [rbp+240h+var_230]
+  0000000140135E88  xor     r15d, r12d
+  0000000140135E8B  xor     r15d, [rsp+340h+var_320]
+  0000000140135E90  mov     edx, r8d
+  0000000140135E93  xor     r15d, [rsp+340h+var_2FC]
+  0000000140135E98  rol     edx, 5
+  0000000140135E9B  add     ebx, edx
+  0000000140135E9D  rol     r15d, 1
+  0000000140135EA0  add     ebx, ecx
+  0000000140135EA2  mov     ecx, r8d
+  0000000140135EA5  xor     ecx, r9d
+  0000000140135EA8  rol     r8d, 1Eh
+  0000000140135EAC  xor     ecx, edi
+  0000000140135EAE  mov     edx, ebx
+  0000000140135EB0  rol     edx, 5
+  0000000140135EB3  add     ecx, 0CA62C1D6h
+  0000000140135EB9  add     edx, eax
+  0000000140135EBB  add     edi, 0CA62C1D6h
+  0000000140135EC1  add     ecx, edx
+  0000000140135EC3  add     esi, ecx
+  0000000140135EC5  mov     eax, ecx
+  0000000140135EC7  rol     eax, 5
+  0000000140135ECA  add     r15d, eax
+  0000000140135ECD  mov     [rbp+240h+var_23C], esi
+  0000000140135ED0  mov     eax, ebx
+  0000000140135ED2  rol     ebx, 1Eh
+  0000000140135ED5  xor     eax, r8d
+  0000000140135ED8  add     r10d, ebx
+  0000000140135EDB  xor     eax, r9d
+  0000000140135EDE  mov     [rbp+240h+var_238], r10d
+  0000000140135EE2  add     eax, edi
+  0000000140135EE4  add     eax, [rbp+240h+var_240]
+  0000000140135EE7  add     r15d, eax
+  0000000140135EEA  add     r11d, r8d
+  0000000140135EED  mov     [rbp+240h+var_240], r15d
+  0000000140135EF1  mov     [rbp+240h+var_234], r11d
+  0000000140135EF5  mov     rax, [rbp+240h+var_290]
+  0000000140135EF9  add     r14d, r9d
+  0000000140135EFC  mov     rdi, [rbp-38h]
+  0000000140135F00  mov     [rbp+240h+var_230], r14d
+  0000000140135F04  jmp     loc_140135FAD
+  0000000140135F09  db 48h, 8Dh, 54h, 24h, 70h, 48h, 2Bh
+  0000000140135F10  dq 48C28CD8458D48D0h, 0EA8348F8D041D02Bh, 0E98C0FC855894802h
+  0000000140135FA8  db 87h, 27h, 5Bh, 2 dup(0FFh)
+  0000000140135FAD  lea     rcx, [rax+3Fh]
+  0000000140135FB1  mov     [rbp+240h+var_260], rcx
+  0000000140135FB5  cmp     rcx, rdi
+  0000000140135FB8  jnb     loc_14013950E
+  0000000140135FBE  jmp     short loc_140136010
+  0000000140135FC0  dq 0E98E0F00013281E8h, 0D3E7E8FFFF45h, 5C41FFFF6097880Fh
+  0000000140136010  lea     rdx, [rsp+340h+var_2D0]
+  0000000140136015  sub     rdx, rax
+  0000000140136018  lea     rax, [rbp+240h+var_120]
+  000000014013601F  sub     rdx, rax
+  0000000140136022  sub     rdx, 2
+  0000000140136026  mov     [rbp+240h+var_280], rdx
+  000000014013602A  jmp     loc_1401362CE
+  000000014013602F  db 48h
+  0000000140136030  dq 8B0F00000160C481h, 0F8DF0341FFFF9674h, 41C28BD803847589h
+  00000001401362C8  jnz     loc_14015BD6A
+  00000001401362CE  lea     rbx, [rbp+rcx+240h+var_15D]
+  00000001401362D6  mov     r8d, 10h
+  00000001401362DC  jmp     loc_14013638E
+  00000001401362E1  db 70h, 91h, 0Fh, 5Ch, 6Bh, 62h, 0EFh
+  00000001401362E8  dq 1DE8FFF62F8AE885h, 0FF90D88D0FFFFF4Dh, 870FFFFF3FECE8FFh
+  0000000140136388  db 0Fh, 8Fh, 1Bh, 0B6h, 2 dup(0FFh)
+  000000014013638E  movzx   eax, byte ptr [rbx-1]
+  0000000140136392  movzx   ecx, byte ptr [rbx-2]
+  0000000140136396  shl     ecx, 8
+  0000000140136399  or      ecx, eax
+  000000014013639B  movzx   eax, byte ptr [rbx]
+  000000014013639E  shl     ecx, 8
+  00000001401363A1  or      ecx, eax
+  00000001401363A3  movzx   eax, byte ptr [rbx+1]
+  00000001401363A7  shl     ecx, 8
+  00000001401363AA  or      ecx, eax
+  00000001401363AC  mov     [rbx+rdx], ecx
+  00000001401363AF  lea     rbx, [rbx+4]
+  00000001401363B3  sub     r8, 1
+  00000001401363B7  jnz     short loc_14013638E
+  00000001401363B9  jmp     short loc_140136421
+  00000001401363BB  db 0E8h, 0CBh, 44h, 2 dup(0FFh)
+  00000001401363C0  dq 0F90FFFFC8F2810Fh, 860F52FFFF2E078Fh, 0FE50348FFFF7899h
+  0000000140136420  db 0FFh
+  0000000140136421  mov     r12d, [rbp+240h+var_2C0]
+  0000000140136425  add     r14d, 5A827999h
+  000000014013642C  mov     r13d, [rbp+240h+var_2BC]
+  0000000140136430  mov     eax, r15d
+  0000000140136433  rol     eax, 5
+  0000000140136436  mov     ebx, r15d
+  0000000140136439  add     eax, [rsp+340h+var_2D0]
+  000000014013643D  mov     r8d, r11d
+  0000000140136440  xor     r8d, r10d
+  0000000140136443  rol     ebx, 1Eh
+  0000000140136446  and     r8d, esi
+  0000000140136449  mov     ecx, ebx
+  000000014013644B  xor     r8d, r11d
+  000000014013644E  mov     edx, esi
+  0000000140136450  add     r8d, eax
+  0000000140136453  rol     edx, 1Eh
+  0000000140136456  xor     ecx, edx
+  0000000140136458  add     r8d, r14d
+  000000014013645B  mov     r14d, [rsp+340h+var_2C8]
+  0000000140136460  and     ecx, r8d
+  0000000140136463  xor     ecx, edx
+  0000000140136465  mov     eax, r8d
+  0000000140136468  rol     eax, 5
+  000000014013646B  mov     r9d, edx
+  000000014013646E  add     eax, 5A827999h
+  0000000140136473  rol     r8d, 1Eh
+  0000000140136477  add     eax, [rsp+340h+var_2CC]
+  000000014013647B  xor     r9d, r10d
+  000000014013647E  and     r9d, r15d
+  0000000140136481  mov     r15d, [rsp+340h+var_2C4]
+  0000000140136486  xor     r9d, r10d
+  0000000140136489  add     r9d, eax
+  000000014013648C  add     r9d, r11d
+  000000014013648F  mov     eax, r9d
+  0000000140136492  rol     eax, 5
+  0000000140136495  add     eax, 5A827999h
+  000000014013649A  add     eax, r14d
+  000000014013649D  add     ecx, eax
+  000000014013649F  add     r10d, ecx
+  00000001401364A2  mov     ecx, ebx
+  00000001401364A4  xor     ecx, r8d
+  00000001401364A7  mov     eax, r10d
+  00000001401364AA  and     ecx, r9d
+  00000001401364AD  rol     eax, 5
+  00000001401364B0  xor     ecx, ebx
+  00000001401364B2  rol     r9d, 1Eh
+  00000001401364B6  add     eax, edx
+  00000001401364B8  lea     edx, [r15+5A827999h]
+  00000001401364BF  add     ecx, eax
+  00000001401364C1  add     edx, ecx
+  00000001401364C3  jmp     loc_1401367A7
+  00000001401364C8  dq 3348C90F48CB8B48h, 0D426E932FEB848C8h, 0C10348C6D11C9A52h
+  00000001401367A0  db 0FFh, 0Fh, 81h, 0CFh, 0BAh, 2 dup(0FFh)
+  00000001401367A7  mov     ecx, r9d
+  00000001401367AA  xor     ecx, r8d
+  00000001401367AD  mov     eax, edx
+  00000001401367AF  and     ecx, r10d
+  00000001401367B2  rol     eax, 5
+  00000001401367B5  xor     ecx, r8d
+  00000001401367B8  rol     r10d, 1Eh
+  00000001401367BC  add     eax, ebx
+  00000001401367BE  lea     ebx, [r12+5A827999h]
+  00000001401367C6  add     ecx, eax
+  00000001401367C8  add     ebx, ecx
+  00000001401367CA  mov     ecx, r10d
+  00000001401367CD  xor     ecx, r9d
+  00000001401367D0  mov     eax, ebx
+  00000001401367D2  and     ecx, edx
+  00000001401367D4  rol     eax, 5
+  00000001401367D7  xor     ecx, r9d
+  00000001401367DA  rol     edx, 1Eh
+  00000001401367DD  add     eax, r8d
+  00000001401367E0  lea     r8d, [r13+5A827999h]
+  00000001401367E7  add     ecx, eax
+  00000001401367E9  add     r8d, ecx
+  00000001401367EC  mov     ecx, edx
+  00000001401367EE  xor     ecx, r10d
+  00000001401367F1  mov     eax, r8d
+  00000001401367F4  and     ecx, ebx
+  00000001401367F6  rol     eax, 5
+  00000001401367F9  add     eax, r9d
+  00000001401367FC  xor     ecx, r10d
+  00000001401367FF  mov     r9d, [rbp+240h+var_2B8]
+  0000000140136803  add     ecx, eax
+  0000000140136805  rol     ebx, 1Eh
+  0000000140136808  add     r9d, 5A827999h
+  000000014013680F  add     r9d, ecx
+  0000000140136812  mov     ecx, ebx
+  0000000140136814  xor     ecx, edx
+  0000000140136816  mov     eax, r9d
+  0000000140136819  and     ecx, r8d
+  000000014013681C  rol     eax, 5
+  000000014013681F  xor     ecx, edx
+  0000000140136821  rol     r8d, 1Eh
+  0000000140136825  add     eax, r10d
+  0000000140136828  mov     r10d, [rbp+240h+var_2B4]
+  000000014013682C  add     ecx, eax
+  000000014013682E  add     r10d, 5A827999h
+  0000000140136835  add     r10d, ecx
+  0000000140136838  mov     ecx, r8d
+  000000014013683B  xor     ecx, ebx
+  000000014013683D  mov     eax, r10d
+  0000000140136840  and     ecx, r9d
+  0000000140136843  jmp     short loc_14013689B
+  0000000140136845  db 0E8h, 2Eh, 2Ah
+  0000000140136848  dq 0FFFFF864BE8FFF6h, 7D11E8FFFF296F84h, 61658E0FFFFFh
+  0000000140136898  db 2Ch, 2 dup(0FFh)
+  000000014013689B  rol     eax, 5
+  000000014013689E  xor     ecx, ebx
+  00000001401368A0  rol     r9d, 1Eh
+  00000001401368A4  add     eax, edx
+  00000001401368A6  mov     edx, [rbp+240h+var_2B0]
+  00000001401368A9  add     ecx, eax
+  00000001401368AB  add     edx, 5A827999h
+  00000001401368B1  add     edx, ecx
+  00000001401368B3  mov     ecx, r9d
+  00000001401368B6  xor     ecx, r8d
+  00000001401368B9  mov     eax, edx
+  00000001401368BB  and     ecx, r10d
+  00000001401368BE  rol     eax, 5
+  00000001401368C1  xor     ecx, r8d
+  00000001401368C4  rol     r10d, 1Eh
+  00000001401368C8  add     eax, ebx
+  00000001401368CA  mov     ebx, [rbp+240h+var_2AC]
+  00000001401368CD  add     ecx, eax
+  00000001401368CF  add     ebx, 5A827999h
+  00000001401368D5  add     ebx, ecx
+  00000001401368D7  mov     ecx, r10d
+  00000001401368DA  xor     ecx, r9d
+  00000001401368DD  mov     eax, ebx
+  00000001401368DF  and     ecx, edx
+  00000001401368E1  rol     eax, 5
+  00000001401368E4  xor     ecx, r9d
+  00000001401368E7  rol     edx, 1Eh
+  00000001401368EA  add     eax, r8d
+  00000001401368ED  mov     r8d, [rbp+240h+var_2A8]
+  00000001401368F1  add     ecx, eax
+  00000001401368F3  add     r8d, 5A827999h
+  00000001401368FA  add     r8d, ecx
+  00000001401368FD  mov     ecx, edx
+  00000001401368FF  xor     ecx, r10d
+  0000000140136902  mov     eax, r8d
+  0000000140136905  and     ecx, ebx
+  0000000140136907  rol     eax, 5
+  000000014013690A  xor     ecx, r10d
+  000000014013690D  rol     ebx, 1Eh
+  0000000140136910  add     eax, r9d
+  0000000140136913  mov     r9d, [rbp+240h+var_2A4]
+  0000000140136917  add     ecx, eax
+  0000000140136919  add     r9d, 5A827999h
+  0000000140136920  add     r9d, ecx
+  0000000140136923  mov     ecx, ebx
+  0000000140136925  xor     ecx, edx
+  0000000140136927  mov     eax, r9d
+  000000014013692A  and     ecx, r8d
+  000000014013692D  rol     eax, 5
+  0000000140136930  add     eax, r10d
+  0000000140136933  jmp     short loc_1401369A0
+  0000000140136935  db 0E8h, 36h, 29h
+  0000000140136938  dq 0FFFFFB7BFE8FFF6h, 0E1034900028F0587h, 0EDE8FFFF2BD08C0Fh
+  00000001401369A0  rol     r8d, 1Eh
+  00000001401369A4  mov     r10d, [rbp+240h+var_2A0]
+  00000001401369A8  xor     ecx, edx
+  00000001401369AA  add     ecx, eax
+  00000001401369AC  add     r10d, 5A827999h
+  00000001401369B3  add     r10d, ecx
+  00000001401369B6  mov     ecx, r8d
+  00000001401369B9  xor     ecx, ebx
+  00000001401369BB  mov     eax, r10d
+  00000001401369BE  and     ecx, r9d
+  00000001401369C1  rol     eax, 5
+  00000001401369C4  xor     ecx, ebx
+  00000001401369C6  mov     r11d, [rbp+240h+var_294]
+  00000001401369CA  add     eax, edx
+  00000001401369CC  add     ecx, eax
+  00000001401369CE  mov     edx, [rbp+240h+var_29C]
+  00000001401369D1  mov     edi, [rbp+240h+var_298]
+  00000001401369D4  add     edx, 5A827999h
+  00000001401369DA  xor     edi, [rbp+240h+var_2AC]
+  00000001401369DD  add     edx, ecx
+  00000001401369DF  mov     esi, [rbp+240h+var_294]
+  00000001401369E2  add     r11d, 5A827999h
+  00000001401369E9  xor     esi, [rbp+240h+var_2A8]
+  00000001401369EC  mov     eax, edx
+  00000001401369EE  rol     eax, 5
+  00000001401369F1  xor     edi, r15d
+  00000001401369F4  xor     edi, [rsp+340h+var_2CC]
+  00000001401369F8  add     eax, ebx
+  00000001401369FA  mov     ebx, [rbp+240h+var_298]
+  00000001401369FD  xor     esi, r12d
+  0000000140136A00  rol     r9d, 1Eh
+  0000000140136A04  add     ebx, 5A827999h
+  0000000140136A0A  mov     ecx, r9d
+  0000000140136A0D  rol     edi, 1
+  0000000140136A0F  xor     ecx, r8d
+  0000000140136A12  mov     [rsp+340h+var_2F4], edi
+  0000000140136A16  and     ecx, r10d
+  0000000140136A19  xor     esi, r14d
+  0000000140136A1C  xor     ecx, r8d
+  0000000140136A1F  rol     r10d, 1Eh
+  0000000140136A23  add     ecx, eax
+  0000000140136A25  rol     esi, 1
+  0000000140136A27  add     ebx, ecx
+  0000000140136A29  mov     [rsp+340h+var_2E4], esi
+  0000000140136A2D  mov     ecx, r10d
+  0000000140136A30  mov     eax, ebx
+  0000000140136A32  xor     ecx, r9d
+  0000000140136A35  rol     eax, 5
+  0000000140136A38  and     ecx, edx
+  0000000140136A3A  add     eax, r8d
+  0000000140136A3D  jmp     short loc_140136AB5
+  0000000140136A3F  db 0E8h
+  0000000140136A40  dq 52678B0FFFF7FFF4h, 0E8FFF627C9E8FFFFh, 0E10B880FFFFFF1D0h
+  0000000140136AB0  db 0E9h, 69h, 5Ch, 2 dup(0FFh)
+  0000000140136AB5  mov     r8d, [rbp+240h+var_29C]
+  0000000140136AB9  xor     ecx, r9d
+  0000000140136ABC  xor     r8d, [rbp+240h+var_2B0]
+  0000000140136AC0  add     ecx, eax
+  0000000140136AC2  add     r11d, ecx
+  0000000140136AC5  rol     edx, 1Eh
+  0000000140136AC8  xor     r8d, r14d
+  0000000140136ACB  mov     eax, r11d
+  0000000140136ACE  xor     r8d, [rsp+340h+var_2D0]
+  0000000140136AD3  mov     ecx, edx
+  0000000140136AD5  xor     ecx, r10d
+  0000000140136AD8  rol     eax, 5
+  0000000140136ADB  and     ecx, ebx
+  0000000140136ADD  rol     r8d, 1
+  0000000140136AE0  xor     ecx, r10d
+  0000000140136AE3  rol     ebx, 1Eh
+  0000000140136AE6  add     eax, r8d
+  0000000140136AE9  mov     [rsp+340h+var_320], r8d
+  0000000140136AEE  add     ecx, eax
+  0000000140136AF0  lea     r8d, [r9+5A827999h]
+  0000000140136AF7  add     r8d, ecx
+  0000000140136AFA  lea     r9d, [r10+5A827999h]
+  0000000140136B01  mov     eax, r8d
+  0000000140136B04  lea     r10d, [rdx+5A827999h]
+  0000000140136B0B  rol     eax, 5
+  0000000140136B0E  mov     ecx, ebx
+  0000000140136B10  xor     ecx, edx
+  0000000140136B12  add     eax, edi
+  0000000140136B14  and     ecx, r11d
+  0000000140136B17  rol     r11d, 1Eh
+  0000000140136B1B  xor     ecx, edx
+  0000000140136B1D  add     ecx, eax
+  0000000140136B1F  add     r9d, ecx
+  0000000140136B22  mov     ecx, r11d
+  0000000140136B25  xor     ecx, ebx
+  0000000140136B27  mov     eax, r9d
+  0000000140136B2A  and     ecx, r8d
+  0000000140136B2D  rol     eax, 5
+  0000000140136B30  xor     ecx, ebx
+  0000000140136B32  add     eax, esi
+  0000000140136B34  add     ecx, eax
+  0000000140136B36  add     r10d, ecx
+  0000000140136B39  rol     r8d, 1Eh
+  0000000140136B3D  mov     edx, [rsp+340h+var_320]
+  0000000140136B41  mov     ecx, r8d
+  0000000140136B44  mov     r14d, [rbp+240h+var_2A4]
+  0000000140136B48  xor     ecx, r11d
+  0000000140136B4B  and     ecx, r9d
+  0000000140136B4E  xor     edx, r14d
+  0000000140136B51  xor     ecx, r11d
+  0000000140136B54  jmp     loc_140136C0B
+  0000000140136B59  db 41h, 54h, 0Fh, 81h, 53h, 0ECh, 0FFh
+  0000000140136B60  inc     dword ptr [rcx+5Ch]
+  0000000140136B63  pop     rbp
+  0000000140136B64  pop     r13
+  0000000140136B66  jmp     loc_14014A634
+  0000000140136B6B  db 0E8h, 0E0h, 26h, 0F6h, 0FFh
+  0000000140136B70  dq 9860FFFFFE43AE8h, 820FE20349FFFF81h, 8850F53FFFF4CEEh
+  0000000140136C08  db 73h, 5Ch, 82h
+  0000000140136C0B  rol     r9d, 1Eh
+  0000000140136C0F  xor     edx, r13d
+  0000000140136C12  mov     eax, r10d
+  0000000140136C15  rol     eax, 5
+  0000000140136C18  xor     edx, r15d
+  0000000140136C1B  mov     r15d, [rbp+240h+var_2A0]
+  0000000140136C1F  add     eax, ebx
+  0000000140136C21  add     ecx, eax
+  0000000140136C23  rol     edx, 1
+  0000000140136C25  mov     [rsp+340h+var_314], edx
+  0000000140136C29  mov     ebx, edi
+  0000000140136C2B  xor     ebx, r15d
+  0000000140136C2E  add     edx, 5A827999h
+  0000000140136C34  xor     ebx, [rbp+240h+var_2B8]
+  0000000140136C37  add     edx, ecx
+  0000000140136C39  xor     ebx, r12d
+  0000000140136C3C  mov     ecx, r9d
+  0000000140136C3F  mov     r12d, [rbp+240h+var_29C]
+  0000000140136C43  xor     ecx, r8d
+  0000000140136C46  xor     ecx, r10d
+  0000000140136C49  rol     ebx, 1
+  0000000140136C4B  xor     esi, r12d
+  0000000140136C4E  rol     r10d, 1Eh
+  0000000140136C52  xor     esi, [rbp+240h+var_2B4]
+  0000000140136C55  mov     eax, edx
+  0000000140136C57  rol     eax, 5
+  0000000140136C5A  xor     esi, r13d
+  0000000140136C5D  mov     r13d, [rbp+240h+var_298]
+  0000000140136C61  add     eax, 6ED9EBA1h
+  0000000140136C66  add     eax, r11d
+  0000000140136C69  mov     [rsp+340h+var_2FC], ebx
+  0000000140136C6D  add     ecx, eax
+  0000000140136C6F  rol     esi, 1
+  0000000140136C71  add     ebx, ecx
+  0000000140136C73  mov     ecx, r10d
+  0000000140136C76  xor     ecx, r9d
+  0000000140136C79  mov     eax, ebx
+  0000000140136C7B  rol     eax, 5
+  0000000140136C7E  xor     ecx, edx
+  0000000140136C80  add     r8d, eax
+  0000000140136C83  rol     edx, 1Eh
+  0000000140136C86  add     ecx, 6ED9EBA1h
+  0000000140136C8C  mov     eax, r13d
+  0000000140136C8F  xor     eax, [rbp+240h+var_2B0]
+  0000000140136C92  add     r8d, ecx
+  0000000140136C95  xor     eax, [rbp+240h+var_2B8]
+  0000000140136C98  add     r8d, esi
+  0000000140136C9B  xor     eax, [rsp+340h+var_314]
+  0000000140136C9F  mov     ecx, edx
+  0000000140136CA1  rol     eax, 1
+  0000000140136CA3  jmp     loc_140136D38
+  0000000140136CA8  dq 1E8D4800F5241h, 0B0840FFFFFCB25E8h, 0FFF623D0E8FFFF78h
+  0000000140136D38  xor     ecx, r10d
+  0000000140136D3B  mov     [rsp+340h+var_31C], eax
+  0000000140136D3F  xor     ecx, ebx
+  0000000140136D41  rol     ebx, 1Eh
+  0000000140136D44  mov     eax, r8d
+  0000000140136D47  rol     eax, 5
+  0000000140136D4A  add     eax, r9d
+  0000000140136D4D  mov     r9d, [rsp+340h+var_31C]
+  0000000140136D52  add     ecx, eax
+  0000000140136D54  add     r9d, 6ED9EBA1h
+  0000000140136D5B  mov     eax, [rbp+240h+var_294]
+  0000000140136D5E  add     r9d, ecx
+  0000000140136D61  xor     eax, [rbp+240h+var_2AC]
+  0000000140136D64  mov     ecx, ebx
+  0000000140136D66  xor     eax, [rbp+240h+var_2B4]
+  0000000140136D69  xor     ecx, edx
+  0000000140136D6B  xor     eax, [rsp+340h+var_2FC]
+  0000000140136D6F  xor     ecx, r8d
+  0000000140136D72  rol     eax, 1
+  0000000140136D74  mov     [rsp+340h+var_310], eax
+  0000000140136D78  mov     eax, r9d
+  0000000140136D7B  rol     eax, 5
+  0000000140136D7E  add     eax, r10d
+  0000000140136D81  add     ecx, eax
+  0000000140136D83  mov     eax, [rsp+340h+var_320]
+  0000000140136D87  mov     r11d, r12d
+  0000000140136D8A  xor     eax, [rbp+240h+var_2A8]
+  0000000140136D8D  xor     r11d, r14d
+  0000000140136D90  xor     eax, [rbp+240h+var_2B0]
+  0000000140136D93  mov     r10d, [rsp+340h+var_310]
+  0000000140136D98  xor     eax, esi
+  0000000140136D9A  rol     eax, 1
+  0000000140136D9C  add     r10d, 6ED9EBA1h
+  0000000140136DA3  mov     [rsp+340h+var_300], eax
+  0000000140136DA7  add     r10d, ecx
+  0000000140136DAA  xor     r11d, [rsp+340h+var_300]
+  0000000140136DAF  mov     eax, r10d
+  0000000140136DB2  xor     r11d, [rsp+340h+var_314]
+  0000000140136DB7  rol     eax, 5
+  0000000140136DBA  add     eax, edx
+  0000000140136DBC  rol     r8d, 1Eh
+  0000000140136DC0  mov     edx, [rsp+340h+var_300]
+  0000000140136DC4  mov     ecx, r8d
+  0000000140136DC7  xor     ecx, ebx
+  0000000140136DC9  rol     r11d, 1
+  0000000140136DCC  xor     ecx, r9d
+  0000000140136DCF  mov     [rsp+340h+var_308], r11d
+  0000000140136DD4  add     ecx, eax
+  0000000140136DD6  rol     r9d, 1Eh
+  0000000140136DDA  mov     eax, edi
+  0000000140136DDC  jmp     loc_140136F56
+  0000000140136DE1  db 0FBh, 96h, 8Bh, 5Eh, 6, 98h, 4Dh
+  0000000140136DE8  dq 805DAB0D7B70E677h, 6A48775551F6920Fh, 0FFFF75461E8EE18h
+  0000000140136F50  db 0Fh, 8Ch, 0FDh, 40h, 2 dup(0FFh)
+  0000000140136F56  add     edx, 6ED9EBA1h
+  0000000140136F5C  xor     eax, r14d
+  0000000140136F5F  add     edx, ecx
+  0000000140136F61  xor     eax, [rbp+240h+var_2AC]
+  0000000140136F64  mov     ecx, r9d
+  0000000140136F67  xor     eax, [rsp+340h+var_31C]
+  0000000140136F6B  xor     ecx, r8d
+  0000000140136F6E  rol     eax, 1
+  0000000140136F70  xor     ecx, r10d
+  0000000140136F73  mov     [rsp+340h+var_318], eax
+  0000000140136F77  mov     eax, edx
+  0000000140136F79  mov     edi, [rsp+340h+var_318]
+  0000000140136F7D  rol     eax, 5
+  0000000140136F80  add     eax, ebx
+  0000000140136F82  rol     r10d, 1Eh
+  0000000140136F86  add     ecx, eax
+  0000000140136F88  mov     eax, [rsp+340h+var_2E4]
+  0000000140136F8C  xor     eax, r15d
+  0000000140136F8F  lea     ebx, [rdi+6ED9EBA1h]
+  0000000140136F95  xor     eax, [rbp+240h+var_2A8]
+  0000000140136F98  add     ebx, ecx
+  0000000140136F9A  xor     eax, [rsp+340h+var_310]
+  0000000140136F9E  mov     ecx, r10d
+  0000000140136FA1  xor     ecx, r9d
+  0000000140136FA4  rol     eax, 1
+  0000000140136FA6  mov     [rsp+340h+var_30C], eax
+  0000000140136FAA  xor     ecx, edx
+  0000000140136FAC  mov     eax, ebx
+  0000000140136FAE  rol     edx, 1Eh
+  0000000140136FB1  rol     eax, 5
+  0000000140136FB4  add     eax, r8d
+  0000000140136FB7  mov     r8d, [rsp+340h+var_30C]
+  0000000140136FBC  add     ecx, eax
+  0000000140136FBE  add     r8d, 6ED9EBA1h
+  0000000140136FC5  add     r8d, ecx
+  0000000140136FC8  mov     ecx, edx
+  0000000140136FCA  xor     ecx, r10d
+  0000000140136FCD  mov     eax, r8d
+  0000000140136FD0  xor     ecx, ebx
+  0000000140136FD2  rol     eax, 5
+  0000000140136FD5  add     eax, r9d
+  0000000140136FD8  rol     ebx, 1Eh
+  0000000140136FDB  lea     r9d, [r11+6ED9EBA1h]
+  0000000140136FE2  add     ecx, eax
+  0000000140136FE4  add     r9d, ecx
+  0000000140136FE7  mov     r11d, r13d
+  0000000140136FEA  xor     r11d, r15d
+  0000000140136FED  mov     eax, r9d
+  0000000140136FF0  xor     r11d, edi
+  0000000140136FF3  mov     ecx, ebx
+  0000000140136FF5  jmp     short loc_140137068
+  0000000140136FF7  db 0E8h
+  0000000140136FF8  dq 0D1A18A0FFFFFDC59h, 0E8FFF621E9E8FFFFh, 5FE0850FFFFF3816h
+  0000000140137068  mov     edi, [rsp+340h+var_2FC]
+  000000014013706C  xor     r11d, edi
+  000000014013706F  rol     r11d, 1
+  0000000140137072  mov     [rsp+340h+var_2FC], r11d
+  0000000140137077  rol     eax, 5
+  000000014013707A  mov     r14d, [rbp+240h+var_294]
+  000000014013707E  xor     ecx, edx
+  0000000140137080  mov     r15d, [rsp+340h+var_300]
+  0000000140137085  xor     ecx, r8d
+  0000000140137088  add     eax, r10d
+  000000014013708B  rol     r8d, 1Eh
+  000000014013708F  add     ecx, eax
+  0000000140137091  lea     r10d, [r11+6ED9EBA1h]
+  0000000140137098  add     r10d, ecx
+  000000014013709B  xor     r14d, r12d
+  000000014013709E  xor     r14d, [rsp+340h+var_30C]
+  00000001401370A3  mov     ecx, r8d
+  00000001401370A6  mov     r12d, [rsp+340h+var_320]
+  00000001401370AB  xor     ecx, ebx
+  00000001401370AD  xor     ecx, r9d
+  00000001401370B0  xor     r12d, r13d
+  00000001401370B3  xor     r12d, [rsp+340h+var_308]
+  00000001401370B8  xor     r14d, esi
+  00000001401370BB  mov     r13d, [rsp+340h+var_2F4]
+  00000001401370C0  mov     eax, r10d
+  00000001401370C3  xor     r13d, [rbp+240h+var_294]
+  00000001401370C7  rol     eax, 5
+  00000001401370CA  xor     r13d, r11d
+  00000001401370CD  mov     r11d, [rsp+340h+var_310]
+  00000001401370D2  add     eax, edx
+  00000001401370D4  add     ecx, eax
+  00000001401370D6  rol     r9d, 1Eh
+  00000001401370DA  xor     r13d, r11d
+  00000001401370DD  rol     r14d, 1
+  00000001401370E0  rol     r13d, 1
+  00000001401370E3  mov     [rsp+340h+var_2F0], r13d
+  00000001401370E8  mov     [rsp+340h+var_2F8], r14d
+  00000001401370ED  lea     edx, [r14+6ED9EBA1h]
+  00000001401370F4  mov     r14d, [rsp+340h+var_31C]
+  00000001401370F9  add     edx, ecx
+  00000001401370FB  xor     r12d, r14d
+  00000001401370FE  rol     r12d, 1
+  0000000140137101  mov     ecx, r9d
+  0000000140137104  xor     ecx, r8d
+  0000000140137107  mov     [rsp+340h+var_2E8], r12d
+  000000014013710C  xor     ecx, r10d
+  000000014013710F  mov     eax, edx
+  0000000140137111  rol     eax, 5
+  0000000140137114  add     eax, ebx
+  0000000140137116  rol     r10d, 1Eh
+  000000014013711A  jmp     short loc_14013719A
+  000000014013711C  dd 0F620A7E8h
+  0000000140137120  dq 800F0001613DE8FFh, 90909090FFFF63FCh, 5036810F9090C3FFh
+  0000000140137198  db 2 dup(0FFh)
+  000000014013719A  add     ecx, eax
+  000000014013719C  lea     ebx, [r12+6ED9EBA1h]
+  00000001401371A4  add     ebx, ecx
+  00000001401371A6  mov     ecx, r10d
+  00000001401371A9  xor     ecx, r9d
+  00000001401371AC  mov     eax, ebx
+  00000001401371AE  rol     eax, 5
+  00000001401371B1  xor     ecx, edx
+  00000001401371B3  add     eax, r8d
+  00000001401371B6  rol     edx, 1Eh
+  00000001401371B9  add     ecx, eax
+  00000001401371BB  lea     r8d, [r13+6ED9EBA1h]
+  00000001401371C2  mov     r13d, [rsp+340h+var_2E4]
+  00000001401371C7  add     r8d, ecx
+  00000001401371CA  xor     r13d, [rsp+340h+var_320]
+  00000001401371CF  mov     eax, r8d
+  00000001401371D2  xor     r13d, [rsp+340h+var_2F8]
+  00000001401371D7  mov     ecx, edx
+  00000001401371D9  rol     eax, 5
+  00000001401371DC  xor     r13d, r15d
+  00000001401371DF  add     eax, r9d
+  00000001401371E2  rol     r13d, 1
+  00000001401371E5  xor     ecx, r10d
+  00000001401371E8  mov     [rsp+340h+var_31C], r13d
+  00000001401371ED  xor     ecx, ebx
+  00000001401371EF  rol     ebx, 1Eh
+  00000001401371F2  add     ecx, eax
+  00000001401371F4  mov     eax, [rsp+340h+var_2F4]
+  00000001401371F8  xor     eax, r12d
+  00000001401371FB  lea     r9d, [r13+6ED9EBA1h]
+  0000000140137202  mov     r13d, [rsp+340h+var_318]
+  0000000140137207  add     r9d, ecx
+  000000014013720A  xor     eax, r13d
+  000000014013720D  xor     eax, [rsp+340h+var_314]
+  0000000140137211  rol     eax, 1
+  0000000140137213  mov     [rsp+340h+var_2F4], eax
+  0000000140137217  mov     r12d, [rsp+340h+var_2FC]
+  000000014013721C  mov     ecx, ebx
+  000000014013721E  xor     ecx, edx
+  0000000140137220  mov     eax, r9d
+  0000000140137223  rol     eax, 5
+  0000000140137226  xor     ecx, r8d
+  0000000140137229  add     eax, r10d
+  000000014013722C  rol     r8d, 1Eh
+  0000000140137230  add     ecx, eax
+  0000000140137232  mov     r10d, [rsp+340h+var_2F4]
+  0000000140137237  mov     eax, [rsp+340h+var_2E4]
+  000000014013723B  add     r10d, 6ED9EBA1h
+  0000000140137242  xor     eax, [rsp+340h+var_2F0]
+  0000000140137246  add     r10d, ecx
+  0000000140137249  jmp     loc_1401373F4
+  000000014013724E  call    loc_14012A6B9
+  0000000140137253  jbe     loc_14014D3E6
+  0000000140137259  pop     r12
+  000000014013725B  pop     r13
+  000000014013725D  jmp     loc_140161173
+  0000000140137262  dw 0F56h, 786h, 0FF4Fh
+  0000000140137268  dq 0FF23118C0F5641FFh, 44C90344CB8B41FFh, 41CA0B414C246C89h
+  00000001401373F0  db 71h, 1Fh, 2 dup(0FFh)
+  00000001401373F4  xor     eax, [rsp+340h+var_30C]
+  00000001401373F8  mov     ecx, r8d
+  00000001401373FB  xor     eax, edi
+  00000001401373FD  xor     ecx, ebx
+  00000001401373FF  rol     eax, 1
+  0000000140137401  xor     ecx, r9d
+  0000000140137404  mov     [rsp+340h+var_2E4], eax
+  0000000140137408  mov     eax, r10d
+  000000014013740B  rol     eax, 5
+  000000014013740E  add     eax, edx
+  0000000140137410  rol     r9d, 1Eh
+  0000000140137414  add     ecx, eax
+  0000000140137416  mov     edx, [rsp+340h+var_2E4]
+  000000014013741A  mov     eax, [rsp+340h+var_31C]
+  000000014013741E  add     edx, 6ED9EBA1h
+  0000000140137424  xor     eax, [rsp+340h+var_308]
+  0000000140137428  add     edx, ecx
+  000000014013742A  xor     eax, esi
+  000000014013742C  mov     ecx, r9d
+  000000014013742F  xor     eax, [rsp+340h+var_314]
+  0000000140137433  xor     ecx, r8d
+  0000000140137436  rol     eax, 1
+  0000000140137438  xor     ecx, r10d
+  000000014013743B  mov     [rsp+340h+var_320], eax
+  000000014013743F  mov     eax, edx
+  0000000140137441  rol     eax, 5
+  0000000140137444  add     eax, ebx
+  0000000140137446  rol     r10d, 1Eh
+  000000014013744A  mov     ebx, [rsp+340h+var_320]
+  000000014013744E  add     ecx, eax
+  0000000140137450  mov     eax, [rsp+340h+var_2F4]
+  0000000140137454  add     ebx, 6ED9EBA1h
+  000000014013745A  xor     eax, r12d
+  000000014013745D  add     ebx, ecx
+  000000014013745F  xor     eax, r14d
+  0000000140137462  mov     ecx, r10d
+  0000000140137465  xor     eax, edi
+  0000000140137467  xor     ecx, r9d
+  000000014013746A  rol     eax, 1
+  000000014013746C  xor     ecx, edx
+  000000014013746E  mov     [rsp+340h+var_310], eax
+  0000000140137472  mov     eax, ebx
+  0000000140137474  mov     edi, [rsp+340h+var_310]
+  0000000140137478  rol     eax, 5
+  000000014013747B  add     eax, r8d
+  000000014013747E  rol     edx, 1Eh
+  0000000140137481  add     ecx, eax
+  0000000140137483  mov     eax, [rsp+340h+var_2E4]
+  0000000140137487  xor     eax, [rsp+340h+var_2F8]
+  000000014013748B  lea     r8d, [rdi+6ED9EBA1h]
+  0000000140137492  jmp     loc_14013762A
+  0000000140137497  db 0E8h
+  0000000140137498  dq 0FFD7B4E8FFF61C8Ch, 0E8FFFF537C850FFFh, 0EA898E0FFFF74DA4h
+  0000000140137628  db 2 dup(0FFh)
+  000000014013762A  xor     eax, r11d
+  000000014013762D  add     r8d, ecx
+  0000000140137630  xor     eax, esi
+  0000000140137632  mov     ecx, edx
+  0000000140137634  rol     eax, 1
+  0000000140137636  xor     ecx, r10d
+  0000000140137639  mov     [rsp+340h+var_300], eax
+  000000014013763D  xor     ecx, ebx
+  000000014013763F  mov     esi, [rsp+340h+var_300]
+  0000000140137643  mov     eax, r8d
+  0000000140137646  rol     eax, 5
+  0000000140137649  add     eax, r9d
+  000000014013764C  add     ecx, eax
+  000000014013764E  mov     eax, [rsp+340h+var_320]
+  0000000140137652  lea     r9d, [rsi+6ED9EBA1h]
+  0000000140137659  add     r9d, ecx
+  000000014013765C  rol     ebx, 1Eh
+  000000014013765F  xor     eax, [rsp+340h+var_2E8]
+  0000000140137663  mov     ecx, ebx
+  0000000140137665  xor     esi, [rsp+340h+var_31C]
+  0000000140137669  xor     ecx, edx
+  000000014013766B  xor     ecx, r8d
+  000000014013766E  xor     eax, r15d
+  0000000140137671  xor     eax, r14d
+  0000000140137674  rol     r8d, 1Eh
+  0000000140137678  mov     r14d, [rsp+340h+var_2F0]
+  000000014013767D  xor     edi, r14d
+  0000000140137680  rol     eax, 1
+  0000000140137682  xor     edi, r13d
+  0000000140137685  mov     [rsp+340h+var_304], eax
+  0000000140137689  xor     edi, r11d
+  000000014013768C  rol     edi, 1
+  000000014013768E  mov     eax, r9d
+  0000000140137691  rol     eax, 5
+  0000000140137694  add     eax, r10d
+  0000000140137697  mov     [rsp+340h+var_2F0], edi
+  000000014013769B  mov     r10d, [rsp+340h+var_304]
+  00000001401376A0  add     ecx, eax
+  00000001401376A2  add     r10d, 6ED9EBA1h
+  00000001401376A9  lea     r11d, [rdi+6ED9EBA1h]
+  00000001401376B0  mov     edi, [rsp+340h+var_30C]
+  00000001401376B4  add     r10d, ecx
+  00000001401376B7  xor     esi, edi
+  00000001401376B9  mov     ecx, r8d
+  00000001401376BC  xor     ecx, ebx
+  00000001401376BE  xor     esi, r15d
+  00000001401376C1  mov     r15d, [rsp+340h+var_304]
+  00000001401376C6  xor     ecx, r9d
+  00000001401376C9  xor     r15d, [rsp+340h+var_2F4]
+  00000001401376CE  mov     eax, r10d
+  00000001401376D1  jmp     loc_140137786
+  00000001401376D6  dw 349h
+  00000001401376D8  dq 59FFFFB7AE8C0FE3h, 418B6E7E26FF47A3h, 5B5D57E350407AEEh
+  0000000140137780  db 0Fh, 8Eh, 48h, 0CFh, 2 dup(0FFh)
+  0000000140137786  xor     r15d, [rsp+340h+var_308]
+  000000014013778B  xor     r15d, r13d
+  000000014013778E  rol     eax, 5
+  0000000140137791  mov     r13d, [rsp+340h+var_2F0]
+  0000000140137796  add     eax, edx
+  0000000140137798  xor     r13d, [rsp+340h+var_2E4]
+  000000014013779D  add     ecx, eax
+  000000014013779F  add     r11d, ecx
+  00000001401377A2  rol     r9d, 1Eh
+  00000001401377A6  mov     edx, r11d
+  00000001401377A9  rol     esi, 1
+  00000001401377AB  rol     edx, 5
+  00000001401377AE  xor     r13d, r12d
+  00000001401377B1  rol     r15d, 1
+  00000001401377B4  xor     r13d, edi
+  00000001401377B7  rol     r13d, 1
+  00000001401377BA  mov     ecx, r9d
+  00000001401377BD  or      ecx, r8d
+  00000001401377C0  mov     [rsp+340h+var_30C], esi
+  00000001401377C4  and     ecx, r10d
+  00000001401377C7  mov     [rsp+340h+var_2EC], r15d
+  00000001401377CC  rol     r10d, 1Eh
+  00000001401377D0  mov     eax, r9d
+  00000001401377D3  and     eax, r8d
+  00000001401377D6  mov     [rsp+340h+var_314], r13d
+  00000001401377DB  or      ecx, eax
+  00000001401377DD  mov     eax, r10d
+  00000001401377E0  add     ecx, ebx
+  00000001401377E2  and     eax, r9d
+  00000001401377E5  add     ecx, 8F1BBCDCh
+  00000001401377EB  lea     ebx, [rsi+rdx]
+  00000001401377EE  add     ebx, ecx
+  00000001401377F0  mov     ecx, r10d
+  00000001401377F3  or      ecx, r9d
+  00000001401377F6  mov     edx, ebx
+  00000001401377F8  and     ecx, r11d
+  00000001401377FB  rol     edx, 5
+  00000001401377FE  or      ecx, eax
+  0000000140137800  rol     r11d, 1Eh
+  0000000140137804  add     ecx, r8d
+  0000000140137807  add     ecx, 8F1BBCDCh
+  000000014013780D  lea     r8d, [r15+rdx]
+  0000000140137811  add     r8d, ecx
+  0000000140137814  mov     ecx, r11d
+  0000000140137817  mov     edx, r8d
+  000000014013781A  or      ecx, r10d
+  000000014013781D  rol     edx, 5
+  0000000140137820  and     ecx, ebx
+  0000000140137822  mov     edi, [rsp+340h+var_2F8]
+  0000000140137826  mov     eax, r11d
+  0000000140137829  jmp     loc_140137A4B
+  000000014013782E  dw 8148h
+  0000000140137830  dq 6D8B0F000001A0C4h, 0FFFF6035E800021Dh, 35E8FFFF416F880Fh
+  0000000140137A48  db 5Eh, 2 dup(0FFh)
+  0000000140137A4B  mov     r15d, [rsp+340h+var_320]
+  0000000140137A50  and     eax, r10d
+  0000000140137A53  or      ecx, eax
+  0000000140137A55  rol     ebx, 1Eh
+  0000000140137A58  add     ecx, r9d
+  0000000140137A5B  mov     eax, esi
+  0000000140137A5D  mov     esi, [rsp+340h+var_2E8]
+  0000000140137A61  lea     r9d, [rdx+r13]
+  0000000140137A65  add     ecx, 8F1BBCDCh
+  0000000140137A6B  xor     eax, r15d
+  0000000140137A6E  add     r9d, ecx
+  0000000140137A71  xor     eax, edi
+  0000000140137A73  xor     eax, [rsp+340h+var_308]
+  0000000140137A77  mov     ecx, ebx
+  0000000140137A79  or      ecx, r11d
+  0000000140137A7C  rol     eax, 1
+  0000000140137A7E  and     ecx, r8d
+  0000000140137A81  mov     [rsp+340h+var_2F8], eax
+  0000000140137A85  rol     r8d, 1Eh
+  0000000140137A89  mov     eax, ebx
+  0000000140137A8B  and     eax, r11d
+  0000000140137A8E  mov     edx, r9d
+  0000000140137A91  or      ecx, eax
+  0000000140137A93  rol     edx, 5
+  0000000140137A96  add     edx, [rsp+340h+var_2F8]
+  0000000140137A9A  add     ecx, r10d
+  0000000140137A9D  mov     eax, [rsp+340h+var_2EC]
+  0000000140137AA1  xor     eax, [rsp+340h+var_310]
+  0000000140137AA5  xor     eax, esi
+  0000000140137AA7  xor     eax, r12d
+  0000000140137AAA  lea     r10d, [rdx-70E44324h]
+  0000000140137AB1  add     r10d, ecx
+  0000000140137AB4  rol     eax, 1
+  0000000140137AB6  mov     [rsp+340h+var_2E8], eax
+  0000000140137ABA  mov     edx, r10d
+  0000000140137ABD  rol     edx, 5
+  0000000140137AC0  mov     r12d, r13d
+  0000000140137AC3  xor     r12d, [rsp+340h+var_300]
+  0000000140137AC8  mov     ecx, r8d
+  0000000140137ACB  add     edx, [rsp+340h+var_2E8]
+  0000000140137ACF  or      ecx, ebx
+  0000000140137AD1  and     ecx, r9d
+  0000000140137AD4  xor     r12d, r14d
+  0000000140137AD7  xor     r12d, edi
+  0000000140137ADA  rol     r9d, 1Eh
+  0000000140137ADE  rol     r12d, 1
+  0000000140137AE1  mov     eax, r8d
+  0000000140137AE4  and     eax, ebx
+  0000000140137AE6  mov     [rsp+340h+var_2E0], r12d
+  0000000140137AEB  or      ecx, eax
+  0000000140137AED  jmp     loc_140137CBF
+  0000000140137AF2  dw 7C89h, 6424h, 0C80Bh
+  0000000140137AF8  dq 1EC0C141C6F6C041h, 1BBCDCC181C8FE41h, 0DCC38141D1D2418Fh
+  0000000140137CB8  db 41h, 5Ch, 0E9h, 0C1h, 84h, 2 dup(0FFh)
+  0000000140137CBF  mov     eax, r9d
+  0000000140137CC2  add     ecx, r11d
+  0000000140137CC5  and     eax, r8d
+  0000000140137CC8  lea     r11d, [rdx-70E44324h]
+  0000000140137CCF  add     r11d, ecx
+  0000000140137CD2  mov     ecx, r9d
+  0000000140137CD5  or      ecx, r8d
+  0000000140137CD8  mov     edx, r11d
+  0000000140137CDB  and     ecx, r10d
+  0000000140137CDE  rol     edx, 5
+  0000000140137CE1  or      ecx, eax
+  0000000140137CE3  rol     r10d, 1Eh
+  0000000140137CE7  add     ecx, ebx
+  0000000140137CE9  mov     eax, r10d
+  0000000140137CEC  add     ecx, 8F1BBCDCh
+  0000000140137CF2  lea     ebx, [r12+rdx]
+  0000000140137CF6  mov     r12d, [rsp+340h+var_2F8]
+  0000000140137CFB  xor     r12d, [rsp+340h+var_304]
+  0000000140137D00  add     ebx, ecx
+  0000000140137D02  xor     r12d, [rsp+340h+var_31C]
+  0000000140137D07  mov     ecx, r10d
+  0000000140137D0A  xor     r12d, esi
+  0000000140137D0D  or      ecx, r9d
+  0000000140137D10  rol     r12d, 1
+  0000000140137D13  mov     edx, ebx
+  0000000140137D15  rol     edx, 5
+  0000000140137D18  and     ecx, r11d
+  0000000140137D1B  mov     [rsp+340h+var_320], r12d
+  0000000140137D20  and     eax, r9d
+  0000000140137D23  or      ecx, eax
+  0000000140137D25  mov     esi, [rsp+340h+var_2E8]
+  0000000140137D29  xor     esi, [rsp+340h+var_2F0]
+  0000000140137D2D  add     ecx, r8d
+  0000000140137D30  xor     esi, [rsp+340h+var_2F4]
+  0000000140137D34  lea     r8d, [r12+rdx]
+  0000000140137D38  mov     r12d, [rsp+340h+var_2E0]
+  0000000140137D3D  add     ecx, 8F1BBCDCh
+  0000000140137D43  xor     r12d, [rsp+340h+var_30C]
+  0000000140137D48  add     r8d, ecx
+  0000000140137D4B  xor     r12d, [rsp+340h+var_2E4]
+  0000000140137D50  xor     esi, r14d
+  0000000140137D53  xor     r12d, [rsp+340h+var_31C]
+  0000000140137D58  mov     edx, r8d
+  0000000140137D5B  mov     r14d, [rsp+340h+var_320]
+  0000000140137D60  xor     r14d, [rsp+340h+var_2EC]
+  0000000140137D65  rol     edx, 5
+  0000000140137D68  xor     r14d, r15d
+  0000000140137D6B  xor     r14d, [rsp+340h+var_2F4]
+  0000000140137D70  rol     r11d, 1Eh
+  0000000140137D74  rol     esi, 1
+  0000000140137D76  jmp     short loc_140137DE2
+  0000000140137D78  dq 8321E95F41E38B49h, 68F0FE00348FFFFh, 0FFFFC5EFE8FFFF51h
+  0000000140137DE0  db 2 dup(0FFh)
+  0000000140137DE2  mov     ecx, r11d
+  0000000140137DE5  or      ecx, r10d
+  0000000140137DE8  rol     r12d, 1
+  0000000140137DEB  and     ecx, ebx
+  0000000140137DED  rol     r14d, 1
+  0000000140137DF0  rol     ebx, 1Eh
+  0000000140137DF3  mov     eax, r11d
+  0000000140137DF6  and     eax, r10d
+  0000000140137DF9  mov     [rsp+340h+var_2FC], esi
+  0000000140137DFD  or      ecx, eax
+  0000000140137DFF  mov     [rsp+340h+var_318], r12d
+  0000000140137E04  add     ecx, r9d
+  0000000140137E07  mov     [rsp+340h+var_31C], r14d
+  0000000140137E0C  add     ecx, 8F1BBCDCh
+  0000000140137E12  lea     r9d, [rsi+rdx]
+  0000000140137E16  add     r9d, ecx
+  0000000140137E19  mov     edi, esi
+  0000000140137E1B  mov     esi, [rsp+340h+var_310]
+  0000000140137E1F  mov     edx, r9d
+  0000000140137E22  rol     edx, 5
+  0000000140137E25  xor     edi, r13d
+  0000000140137E28  xor     edi, esi
+  0000000140137E2A  mov     ecx, ebx
+  0000000140137E2C  xor     edi, [rsp+340h+var_2E4]
+  0000000140137E30  or      ecx, r11d
+  0000000140137E33  and     ecx, r8d
+  0000000140137E36  rol     edi, 1
+  0000000140137E38  rol     r8d, 1Eh
+  0000000140137E3C  mov     eax, ebx
+  0000000140137E3E  and     eax, r11d
+  0000000140137E41  mov     [rsp+340h+var_310], edi
+  0000000140137E45  or      ecx, eax
+  0000000140137E47  mov     eax, r8d
+  0000000140137E4A  add     ecx, r10d
+  0000000140137E4D  and     eax, ebx
+  0000000140137E4F  add     ecx, 8F1BBCDCh
+  0000000140137E55  lea     r10d, [r12+rdx]
+  0000000140137E59  add     r10d, ecx
+  0000000140137E5C  mov     ecx, r8d
+  0000000140137E5F  or      ecx, ebx
+  0000000140137E61  mov     edx, r10d
+  0000000140137E64  and     ecx, r9d
+  0000000140137E67  rol     edx, 5
+  0000000140137E6A  or      ecx, eax
+  0000000140137E6C  rol     r9d, 1Eh
+  0000000140137E70  add     ecx, r11d
+  0000000140137E73  mov     eax, r9d
+  0000000140137E76  add     ecx, 8F1BBCDCh
+  0000000140137E7C  and     eax, r8d
+  0000000140137E7F  lea     r11d, [r14+rdx]
+  0000000140137E83  jmp     loc_140137F37
+  0000000140137E88  dq 0FE4BB60FFF43B60Fh, 0B4CF83C80B08E1C1h, 0C80B08E1C103B60Fh
+  0000000140137F30  push    rbp
+  0000000140137F31  jbe     loc_14012F9D0
+  0000000140137F37  add     r11d, ecx
+  0000000140137F3A  mov     ecx, r9d
+  0000000140137F3D  or      ecx, r8d
+  0000000140137F40  mov     edx, r11d
+  0000000140137F43  and     ecx, r10d
+  0000000140137F46  rol     edx, 5
+  0000000140137F49  or      ecx, eax
+  0000000140137F4B  add     ecx, ebx
+  0000000140137F4D  add     ecx, 8F1BBCDCh
+  0000000140137F53  lea     ebx, [rdi+rdx]
+  0000000140137F56  xor     r12d, [rsp+340h+var_2F8]
+  0000000140137F5B  add     ebx, ecx
+  0000000140137F5D  xor     r12d, [rsp+340h+var_300]
+  0000000140137F62  mov     r13d, r14d
+  0000000140137F65  xor     r13d, [rsp+340h+var_2E8]
+  0000000140137F6A  mov     r14d, edi
+  0000000140137F6D  xor     r13d, [rsp+340h+var_304]
+  0000000140137F72  mov     edx, ebx
+  0000000140137F74  xor     r14d, [rsp+340h+var_2E0]
+  0000000140137F79  xor     r13d, esi
+  0000000140137F7C  xor     r14d, [rsp+340h+var_2F0]
+  0000000140137F81  xor     r12d, r15d
+  0000000140137F84  xor     r14d, [rsp+340h+var_300]
+  0000000140137F89  rol     r10d, 1Eh
+  0000000140137F8D  mov     ecx, r10d
+  0000000140137F90  rol     edx, 5
+  0000000140137F93  or      ecx, r9d
+  0000000140137F96  rol     r12d, 1
+  0000000140137F99  and     ecx, r11d
+  0000000140137F9C  rol     r13d, 1
+  0000000140137F9F  mov     eax, r10d
+  0000000140137FA2  rol     r11d, 1Eh
+  0000000140137FA6  and     eax, r9d
+  0000000140137FA9  rol     r14d, 1
+  0000000140137FAC  or      ecx, eax
+  0000000140137FAE  mov     [rsp+340h+var_2DC], r12d
+  0000000140137FB3  add     ecx, r8d
+  0000000140137FB6  mov     [rsp+340h+var_2F4], r13d
+  0000000140137FBB  add     ecx, 8F1BBCDCh
+  0000000140137FC1  mov     [rsp+340h+var_300], r14d
+  0000000140137FC6  mov     eax, r10d
+  0000000140137FC9  lea     r8d, [r12+rdx]
+  0000000140137FCD  add     r8d, ecx
+  0000000140137FD0  and     eax, r11d
+  0000000140137FD3  mov     ecx, r10d
+  0000000140137FD6  mov     edx, r8d
+  0000000140137FD9  or      ecx, r11d
+  0000000140137FDC  rol     edx, 5
+  0000000140137FDF  and     ecx, ebx
+  0000000140137FE1  add     r10d, 8F1BBCDCh
+  0000000140137FE8  jmp     loc_140138191
+  0000000140137FED  db 48h, 81h, 0C4h
+  0000000140137FF0  dq 215A8A0F000005C0h, 0FFFF7F321E8FFFFh, 557D59FFFFEB8686h
+  0000000140138190  db 0FFh
+  0000000140138191  or      ecx, eax
+  0000000140138193  rol     ebx, 1Eh
+  0000000140138196  add     ecx, r9d
+  0000000140138199  mov     eax, ebx
+  000000014013819B  add     ecx, 8F1BBCDCh
+  00000001401381A1  lea     r9d, [rdx+r13]
+  00000001401381A5  add     r9d, ecx
+  00000001401381A8  and     eax, r11d
+  00000001401381AB  mov     edi, r9d
+  00000001401381AE  mov     ecx, ebx
+  00000001401381B0  or      ecx, r11d
+  00000001401381B3  rol     edi, 5
+  00000001401381B6  and     ecx, r8d
+  00000001401381B9  add     edi, r14d
+  00000001401381BC  or      ecx, eax
+  00000001401381BE  rol     r8d, 1Eh
+  00000001401381C2  add     ecx, r10d
+  00000001401381C5  mov     eax, r8d
+  00000001401381C8  add     edi, ecx
+  00000001401381CA  and     eax, ebx
+  00000001401381CC  mov     ecx, r8d
+  00000001401381CF  mov     r10d, r12d
+  00000001401381D2  xor     r10d, [rsp+340h+var_320]
+  00000001401381D7  or      ecx, ebx
+  00000001401381D9  xor     r10d, [rsp+340h+var_30C]
+  00000001401381DE  and     ecx, r9d
+  00000001401381E1  xor     r10d, [rsp+340h+var_304]
+  00000001401381E6  or      ecx, eax
+  00000001401381E8  rol     r10d, 1
+  00000001401381EB  add     ecx, 8F1BBCDCh
+  00000001401381F1  add     ecx, r10d
+  00000001401381F4  rol     r9d, 1Eh
+  00000001401381F8  mov     edx, edi
+  00000001401381FA  mov     [rsp+340h+var_308], r10d
+  00000001401381FF  rol     edx, 5
+  0000000140138202  mov     esi, r13d
+  0000000140138205  xor     esi, [rsp+340h+var_2FC]
+  0000000140138209  add     r11d, edx
+  000000014013820C  xor     esi, [rsp+340h+var_2EC]
+  0000000140138210  add     r11d, ecx
+  0000000140138213  xor     esi, [rsp+340h+var_2F0]
+  0000000140138217  rol     esi, 1
+  0000000140138219  mov     r15d, r14d
+  000000014013821C  xor     r15d, [rsp+340h+var_318]
+  0000000140138221  mov     ecx, r9d
+  0000000140138224  xor     r15d, [rsp+340h+var_314]
+  0000000140138229  or      ecx, r8d
+  000000014013822C  xor     r15d, [rsp+340h+var_30C]
+  0000000140138231  and     ecx, edi
+  0000000140138233  rol     r15d, 1
+  0000000140138236  jmp     loc_140138495
+  000000014013823B  db 41h, 33h, 0C8h, 89h, 54h
+  0000000140138240  dq 8BC803FED9832824h, 33D903C633542444h, 8B4100ED83402444h
+  0000000140138490  db 8Bh, 2Ah, 88h, 2 dup(0FFh)
+  0000000140138495  mov     eax, r9d
+  0000000140138498  and     eax, r8d
+  000000014013849B  rol     edi, 1Eh
+  000000014013849E  or      ecx, eax
+  00000001401384A0  mov     [rsp+340h+var_2F0], esi
+  00000001401384A4  add     ecx, 8F1BBCDCh
+  00000001401384AA  mov     [rsp+340h+var_30C], r15d
+  00000001401384AF  add     ecx, esi
+  00000001401384B1  mov     r14d, r10d
+  00000001401384B4  xor     r14d, [rsp+340h+var_31C]
+  00000001401384B9  mov     edx, r11d
+  00000001401384BC  xor     r14d, [rsp+340h+var_2F8]
+  00000001401384C1  mov     eax, edi
+  00000001401384C3  xor     esi, [rsp+340h+var_310]
+  00000001401384C7  and     eax, r9d
+  00000001401384CA  xor     esi, [rsp+340h+var_2E8]
+  00000001401384CE  xor     esi, [rsp+340h+var_314]
+  00000001401384D2  xor     r14d, [rsp+340h+var_2EC]
+  00000001401384D7  rol     edx, 5
+  00000001401384DA  add     ebx, edx
+  00000001401384DC  rol     r14d, 1
+  00000001401384DF  add     ebx, ecx
+  00000001401384E1  rol     esi, 1
+  00000001401384E3  mov     edx, ebx
+  00000001401384E5  mov     [rsp+340h+var_304], r14d
+  00000001401384EA  rol     edx, 5
+  00000001401384ED  mov     ecx, edi
+  00000001401384EF  or      ecx, r9d
+  00000001401384F2  mov     [rsp+340h+var_314], esi
+  00000001401384F6  and     ecx, r11d
+  00000001401384F9  add     r8d, edx
+  00000001401384FC  or      ecx, eax
+  00000001401384FE  rol     r11d, 1Eh
+  0000000140138502  add     ecx, 8F1BBCDCh
+  0000000140138508  mov     eax, r11d
+  000000014013850B  add     ecx, r15d
+  000000014013850E  and     eax, edi
+  0000000140138510  add     r8d, ecx
+  0000000140138513  xor     r15d, r12d
+  0000000140138516  xor     r15d, [rsp+340h+var_2E0]
+  000000014013851B  mov     r10d, r8d
+  000000014013851E  xor     r15d, [rsp+340h+var_2F8]
+  0000000140138523  mov     ecx, r11d
+  0000000140138526  or      ecx, edi
+  0000000140138528  rol     r10d, 5
+  000000014013852C  and     ecx, ebx
+  000000014013852E  rol     r15d, 1
+  0000000140138531  or      ecx, eax
+  0000000140138533  rol     ebx, 1Eh
+  0000000140138536  add     ecx, 8F1BBCDCh
+  000000014013853C  jmp     loc_140138691
+  0000000140138541  db 0E8h, 1Bh, 0E6h, 2 dup(0FFh), 0Fh, 82h
+  0000000140138548  dq 0F7E447E8FFFF8418h, 0E80000EE718A0FFFh, 0C70CE8FFF60BBCh
+  0000000140138690  db 0FFh
+  0000000140138691  mov     [rsp+340h+var_2F8], r15d
+  0000000140138696  add     ecx, r14d
+  0000000140138699  add     r10d, r9d
+  000000014013869C  add     r10d, ecx
+  000000014013869F  mov     eax, ebx
+  00000001401386A1  and     eax, r11d
+  00000001401386A4  mov     ecx, ebx
+  00000001401386A6  or      ecx, r11d
+  00000001401386A9  mov     r9d, r10d
+  00000001401386AC  and     ecx, r8d
+  00000001401386AF  rol     r9d, 5
+  00000001401386B3  or      ecx, eax
+  00000001401386B5  rol     r8d, 1Eh
+  00000001401386B9  add     ecx, 8F1BBCDCh
+  00000001401386BF  add     r9d, edi
+  00000001401386C2  add     ecx, esi
+  00000001401386C4  add     r9d, ecx
+  00000001401386C7  mov     ecx, r8d
+  00000001401386CA  mov     edx, r9d
+  00000001401386CD  or      ecx, ebx
+  00000001401386CF  rol     edx, 5
+  00000001401386D2  and     ecx, r10d
+  00000001401386D5  add     edx, r11d
+  00000001401386D8  rol     r10d, 1Eh
+  00000001401386DC  mov     eax, r8d
+  00000001401386DF  mov     r12d, r14d
+  00000001401386E2  mov     r14d, [rsp+340h+var_318]
+  00000001401386E7  and     eax, ebx
+  00000001401386E9  or      ecx, eax
+  00000001401386EB  xor     r12d, r13d
+  00000001401386EE  xor     r12d, [rsp+340h+var_320]
+  00000001401386F3  add     ecx, 8F1BBCDCh
+  00000001401386F9  xor     r12d, [rsp+340h+var_2E8]
+  00000001401386FE  add     ecx, r15d
+  0000000140138701  add     edx, ecx
+  0000000140138703  rol     r12d, 1
+  0000000140138706  mov     r13d, esi
+  0000000140138709  mov     [rsp+340h+var_2E8], r12d
+  000000014013870E  xor     r13d, [rsp+340h+var_300]
+  0000000140138713  mov     eax, r9d
+  0000000140138716  mov     esi, [rsp+340h+var_2FC]
+  000000014013871A  xor     eax, r10d
+  000000014013871D  xor     eax, r8d
+  0000000140138720  rol     r9d, 1Eh
+  0000000140138724  add     eax, 0CA62C1D6h
+  0000000140138729  xor     r13d, esi
+  000000014013872C  xor     r13d, [rsp+340h+var_2E0]
+  0000000140138731  add     eax, r12d
+  0000000140138734  rol     r13d, 1
+  0000000140138737  mov     ecx, edx
+  0000000140138739  jmp     short loc_1401387B4
+  000000014013873B  db 0E8h, 26h, 0F5h, 2 dup(0FFh)
+  0000000140138740  dq 5E41FFFF661E860Fh, 0E8FFFFA0CEE95D41h, 0F8AB870FFFFFD1ECh
+  00000001401387B0  jmp     fword ptr [rsi]
+  00000001401387B2  dw 0FFFFh
+  00000001401387B4  rol     ecx, 5
+  00000001401387B7  mov     r11d, r15d
+  00000001401387BA  xor     r11d, [rsp+340h+var_308]
+  00000001401387BF  add     ebx, ecx
+  00000001401387C1  add     ebx, eax
+  00000001401387C3  mov     [rsp+340h+var_2EC], r13d
+  00000001401387C8  xor     r11d, r14d
+  00000001401387CB  mov     eax, edx
+  00000001401387CD  xor     r11d, [rsp+340h+var_320]
+  00000001401387D2  xor     eax, r9d
+  00000001401387D5  xor     eax, r10d
+  00000001401387D8  rol     edx, 1Eh
+  00000001401387DB  add     eax, 0CA62C1D6h
+  00000001401387E0  rol     r11d, 1
+  00000001401387E3  add     eax, r13d
+  00000001401387E6  mov     [rsp+340h+var_2FC], r11d
+  00000001401387EB  mov     ecx, ebx
+  00000001401387ED  mov     edi, r12d
+  00000001401387F0  xor     edi, [rsp+340h+var_2F0]
+  00000001401387F4  xor     edi, [rsp+340h+var_31C]
+  00000001401387F8  rol     ecx, 5
+  00000001401387FB  xor     edi, esi
+  00000001401387FD  add     r8d, ecx
+  0000000140138800  rol     edi, 1
+  0000000140138802  add     r8d, eax
+  0000000140138805  mov     [rsp+340h+var_318], edi
+  0000000140138809  mov     eax, ebx
+  000000014013880B  mov     ecx, r8d
+  000000014013880E  xor     eax, edx
+  0000000140138810  rol     ecx, 5
+  0000000140138813  xor     eax, r9d
+  0000000140138816  rol     ebx, 1Eh
+  0000000140138819  add     eax, 0CA62C1D6h
+  000000014013881E  add     r10d, ecx
+  0000000140138821  add     eax, r11d
+  0000000140138824  mov     esi, r13d
+  0000000140138827  xor     esi, [rsp+340h+var_30C]
+  000000014013882B  add     r10d, eax
+  000000014013882E  xor     esi, [rsp+340h+var_310]
+  0000000140138832  mov     eax, r8d
+  0000000140138835  xor     eax, ebx
+  0000000140138837  rol     r8d, 1Eh
+  000000014013883B  xor     eax, edx
+  000000014013883D  mov     ecx, r10d
+  0000000140138840  add     eax, 0CA62C1D6h
+  0000000140138845  rol     ecx, 5
+  0000000140138848  add     eax, edi
+  000000014013884A  add     r9d, ecx
+  000000014013884D  add     r9d, eax
+  0000000140138850  xor     esi, r14d
+  0000000140138853  jmp     loc_140138978
+  0000000140138858  dq 1A3AE8FFF609EBE8h, 0FFFF7B258A0FFFFFh, 0FFFFF6B4E870F51h
+  0000000140138978  rol     esi, 1
+  000000014013897A  mov     [rsp+340h+var_2E4], esi
+  000000014013897E  mov     [rsp+340h+var_2D0], esi
+  0000000140138982  mov     r14d, r11d
+  0000000140138985  mov     eax, r10d
+  0000000140138988  xor     r14d, [rsp+340h+var_304]
+  000000014013898D  xor     eax, r8d
+  0000000140138990  xor     r14d, [rsp+340h+var_2DC]
+  0000000140138995  xor     eax, ebx
+  0000000140138997  xor     r14d, [rsp+340h+var_31C]
+  000000014013899C  add     eax, 0CA62C1D6h
+  00000001401389A1  add     eax, esi
+  00000001401389A3  rol     r10d, 1Eh
+  00000001401389A7  mov     r11d, edi
+  00000001401389AA  rol     r14d, 1
+  00000001401389AD  xor     r11d, [rsp+340h+var_314]
+  00000001401389B2  mov     ecx, r9d
+  00000001401389B5  xor     r11d, [rsp+340h+var_2F4]
+  00000001401389BA  mov     edi, esi
+  00000001401389BC  xor     r11d, [rsp+340h+var_310]
+  00000001401389C1  xor     edi, r15d
+  00000001401389C4  xor     edi, [rsp+340h+var_300]
+  00000001401389C8  mov     r15d, r14d
+  00000001401389CB  xor     edi, [rsp+340h+var_2DC]
+  00000001401389CF  xor     r15d, r12d
+  00000001401389D2  xor     r15d, [rsp+340h+var_308]
+  00000001401389D7  xor     r15d, [rsp+340h+var_2F4]
+  00000001401389DC  rol     ecx, 5
+  00000001401389DF  add     edx, ecx
+  00000001401389E1  rol     r11d, 1
+  00000001401389E4  add     edx, eax
+  00000001401389E6  rol     edi, 1
+  00000001401389E8  mov     eax, r9d
+  00000001401389EB  rol     r15d, 1
+  00000001401389EE  xor     eax, r10d
+  00000001401389F1  rol     r9d, 1Eh
+  00000001401389F5  xor     eax, r8d
+  00000001401389F8  mov     [rsp+340h+var_31C], r14d
+  00000001401389FD  add     eax, 0CA62C1D6h
+  0000000140138A02  mov     [rsp+340h+var_2CC], r14d
+  0000000140138A07  add     eax, r14d
+  0000000140138A0A  mov     [rsp+340h+var_320], r11d
+  0000000140138A0F  mov     ecx, edx
+  0000000140138A11  mov     [rsp+340h+var_2C8], r11d
+  0000000140138A16  rol     ecx, 5
+  0000000140138A19  mov     r12d, r11d
+  0000000140138A1C  add     ebx, ecx
+  0000000140138A1E  mov     [rsp+340h+var_2E0], edi
+  0000000140138A22  add     ebx, eax
+  0000000140138A24  mov     [rsp+340h+var_2C4], edi
+  0000000140138A28  jmp     loc_140138AAF
+  0000000140138A2D  db 0E8h, 0EEh, 0F9h
+  0000000140138A30  dq 0FFFF6FFF8C0FFFF7h, 0FFD522820FE30348h, 8F0F0001CA29E8FFh
+  0000000140138AA8  db 0FFh, 0Fh, 87h, 54h, 32h, 1, 0
+  0000000140138AAF  mov     eax, r9d
+  0000000140138AB2  mov     [rbp+240h+var_2C0], r15d
+  0000000140138AB6  xor     eax, r10d
+  0000000140138AB9  mov     ecx, ebx
+  0000000140138ABB  xor     eax, edx
+  0000000140138ABD  rol     ecx, 5
+  0000000140138AC0  add     eax, 0CA62C1D6h
+  0000000140138AC5  rol     edx, 1Eh
+  0000000140138AC8  add     eax, r11d
+  0000000140138ACB  add     r8d, ecx
+  0000000140138ACE  add     r8d, eax
+  0000000140138AD1  xor     r12d, r13d
+  0000000140138AD4  xor     r12d, [rsp+340h+var_2F0]
+  0000000140138AD9  mov     eax, ebx
+  0000000140138ADB  xor     eax, edx
+  0000000140138ADD  rol     ebx, 1Eh
+  0000000140138AE0  xor     eax, r9d
+  0000000140138AE3  mov     ecx, r8d
+  0000000140138AE6  add     eax, 0CA62C1D6h
+  0000000140138AEB  rol     ecx, 5
+  0000000140138AEE  add     eax, edi
+  0000000140138AF0  add     r10d, ecx
+  0000000140138AF3  add     r10d, eax
+  0000000140138AF6  mov     eax, r8d
+  0000000140138AF9  xor     eax, ebx
+  0000000140138AFB  rol     r8d, 1Eh
+  0000000140138AFF  xor     eax, edx
+  0000000140138B01  mov     ecx, r10d
+  0000000140138B04  add     eax, 0CA62C1D6h
+  0000000140138B09  rol     ecx, 5
+  0000000140138B0C  add     eax, r15d
+  0000000140138B0F  add     r9d, ecx
+  0000000140138B12  add     r9d, eax
+  0000000140138B15  xor     r12d, [rsp+340h+var_300]
+  0000000140138B1A  mov     r13d, [rsp+340h+var_2FC]
+  0000000140138B1F  mov     r11d, r9d
+  0000000140138B22  xor     r13d, [rsp+340h+var_30C]
+  0000000140138B27  mov     eax, r10d
+  0000000140138B2A  xor     r13d, [rsp+340h+var_308]
+  0000000140138B2F  xor     eax, r8d
+  0000000140138B32  xor     eax, ebx
+  0000000140138B34  rol     r12d, 1
+  0000000140138B37  add     eax, 0CA62C1D6h
+  0000000140138B3C  rol     r11d, 5
+  0000000140138B40  add     eax, r12d
+  0000000140138B43  rol     r10d, 1Eh
+  0000000140138B47  add     r11d, edx
+  0000000140138B4A  mov     [rbp+240h+var_2BC], r12d
+  0000000140138B4E  add     r11d, eax
+  0000000140138B51  xor     r13d, edi
+  0000000140138B54  jmp     loc_140138CD3
+  0000000140138B59  db 41h, 53h, 0Fh, 85h, 0A1h, 0F3h, 0FFh
+  0000000140138B60  dq 23E8FFF60642E8FFh, 0FF4DF48D0FFFFF8Ch, 890FFFF7E2D2E8FFh
+  0000000140138CD0  db 9Bh, 2 dup(0FFh)
+  0000000140138CD3  mov     eax, r9d
+  0000000140138CD6  rol     r13d, 1
+  0000000140138CD9  xor     eax, r10d
+  0000000140138CDC  rol     r9d, 1Eh
+  0000000140138CE0  xor     eax, r8d
+  0000000140138CE3  mov     [rbp+240h+var_2B8], r13d
+  0000000140138CE7  add     eax, 0CA62C1D6h
+  0000000140138CEC  mov     ecx, r11d
+  0000000140138CEF  add     eax, r13d
+  0000000140138CF2  rol     ecx, 5
+  0000000140138CF5  add     ebx, ecx
+  0000000140138CF7  mov     edx, r15d
+  0000000140138CFA  xor     edx, [rsp+340h+var_318]
+  0000000140138CFE  add     ebx, eax
+  0000000140138D00  xor     edx, [rsp+340h+var_304]
+  0000000140138D04  mov     eax, r11d
+  0000000140138D07  xor     edx, [rsp+340h+var_2F0]
+  0000000140138D0B  xor     eax, r9d
+  0000000140138D0E  xor     eax, r10d
+  0000000140138D11  rol     edx, 1
+  0000000140138D13  mov     [rsp+340h+var_310], edx
+  0000000140138D17  mov     ecx, ebx
+  0000000140138D19  mov     [rbp+240h+var_2B4], edx
+  0000000140138D1C  mov     r14d, r12d
+  0000000140138D1F  xor     r14d, esi
+  0000000140138D22  rol     r11d, 1Eh
+  0000000140138D26  xor     r14d, [rsp+340h+var_314]
+  0000000140138D2B  add     edx, 0CA62C1D6h
+  0000000140138D31  xor     r14d, [rsp+340h+var_30C]
+  0000000140138D36  add     eax, edx
+  0000000140138D38  mov     esi, [rsp+340h+var_31C]
+  0000000140138D3C  xor     esi, r13d
+  0000000140138D3F  rol     r14d, 1
+  0000000140138D42  xor     esi, [rsp+340h+var_2F8]
+  0000000140138D46  xor     esi, [rsp+340h+var_304]
+  0000000140138D4A  rol     esi, 1
+  0000000140138D4C  rol     ecx, 5
+  0000000140138D4F  add     r8d, ecx
+  0000000140138D52  mov     [rbp+240h+var_2B0], r14d
+  0000000140138D56  add     r8d, eax
+  0000000140138D59  mov     [rbp+240h+var_2AC], esi
+  0000000140138D5C  mov     eax, ebx
+  0000000140138D5E  mov     edi, r8d
+  0000000140138D61  xor     eax, r11d
+  0000000140138D64  rol     edi, 5
+  0000000140138D67  xor     eax, r9d
+  0000000140138D6A  rol     ebx, 1Eh
+  0000000140138D6D  add     eax, 0CA62C1D6h
+  0000000140138D72  add     edi, r10d
+  0000000140138D75  add     eax, r14d
+  0000000140138D78  jmp     loc_140138EDB
+  0000000140138D7D  db 0E8h, 0Eh, 0F3h
+  0000000140138D80  dq 0FFFFF2AA8B0FFFF7h, 302D485B117A5541h, 1170527D72977D74h
+  0000000140138ED8  db 4, 2 dup(0FFh)
+  0000000140138EDB  add     edi, eax
+  0000000140138EDD  mov     eax, r8d
+  0000000140138EE0  xor     eax, ebx
+  0000000140138EE2  rol     r8d, 1Eh
+  0000000140138EE6  xor     eax, r11d
+  0000000140138EE9  mov     edx, edi
+  0000000140138EEB  rol     edx, 5
+  0000000140138EEE  add     eax, 0CA62C1D6h
+  0000000140138EF3  add     edx, r9d
+  0000000140138EF6  add     eax, esi
+  0000000140138EF8  mov     r9d, [rsp+340h+var_320]
+  0000000140138EFD  add     edx, eax
+  0000000140138EFF  xor     r9d, [rsp+340h+var_310]
+  0000000140138F04  xor     r9d, [rsp+340h+var_2E8]
+  0000000140138F09  xor     r9d, [rsp+340h+var_314]
+  0000000140138F0E  xor     r14d, [rsp+340h+var_2EC]
+  0000000140138F13  xor     esi, r15d
+  0000000140138F16  xor     r14d, [rsp+340h+var_2F8]
+  0000000140138F1B  mov     r10d, edx
+  0000000140138F1E  xor     r14d, [rsp+340h+var_2E0]
+  0000000140138F23  mov     eax, edi
+  0000000140138F25  xor     esi, [rsp+340h+var_2FC]
+  0000000140138F29  xor     eax, r8d
+  0000000140138F2C  xor     esi, [rsp+340h+var_2E8]
+  0000000140138F30  xor     eax, ebx
+  0000000140138F32  rol     r9d, 1
+  0000000140138F35  rol     r14d, 1
+  0000000140138F38  mov     [rsp+340h+var_320], r9d
+  0000000140138F3D  mov     [rbp+240h+var_2A8], r9d
+  0000000140138F41  add     r9d, 0CA62C1D6h
+  0000000140138F48  add     eax, r9d
+  0000000140138F4B  rol     r10d, 5
+  0000000140138F4F  add     r10d, r11d
+  0000000140138F52  rol     edi, 1Eh
+  0000000140138F55  mov     r11d, [rsp+340h+var_31C]
+  0000000140138F5A  add     r10d, eax
+  0000000140138F5D  mov     eax, edx
+  0000000140138F5F  rol     esi, 1
+  0000000140138F61  xor     eax, edi
+  0000000140138F63  rol     edx, 1Eh
+  0000000140138F66  xor     eax, r8d
+  0000000140138F69  mov     [rbp+240h+var_2A4], r14d
+  0000000140138F6D  add     eax, 0CA62C1D6h
+  0000000140138F72  mov     [rbp+240h+var_2A0], esi
+  0000000140138F75  add     eax, r14d
+  0000000140138F78  mov     r9d, r10d
+  0000000140138F7B  xor     r14d, r13d
+  0000000140138F7E  rol     r9d, 5
+  0000000140138F82  xor     r14d, [rsp+340h+var_2E4]
+  0000000140138F87  add     r9d, ebx
+  0000000140138F8A  jmp     loc_1401390D3
+  0000000140138F8F  db 0D1h
+  0000000140138F90  dq 34244489D43345C0h, 8B44F1D3D53345F5h, 0C0C1C18B4158246Ch
+  00000001401390D0  db 0D5h, 1, 0
+  00000001401390D3  xor     r14d, [rsp+340h+var_2FC]
+  00000001401390D8  add     r9d, eax
+  00000001401390DB  mov     ebx, [rsp+340h+var_320]
+  00000001401390DF  mov     ecx, r9d
+  00000001401390E2  rol     ecx, 5
+  00000001401390E5  xor     ebx, r12d
+  00000001401390E8  xor     ebx, [rsp+340h+var_318]
+  00000001401390EC  add     r8d, ecx
+  00000001401390EF  xor     ebx, [rsp+340h+var_2EC]
+  00000001401390F3  xor     r11d, esi
+  00000001401390F6  xor     r11d, [rsp+340h+var_310]
+  00000001401390FB  mov     eax, r10d
+  00000001401390FE  xor     r11d, [rsp+340h+var_318]
+  0000000140139103  xor     eax, edx
+  0000000140139105  xor     eax, edi
+  0000000140139107  rol     ebx, 1
+  0000000140139109  add     eax, 0CA62C1D6h
+  000000014013910E  rol     r10d, 1Eh
+  0000000140139112  add     eax, esi
+  0000000140139114  rol     r14d, 1
+  0000000140139117  add     r8d, eax
+  000000014013911A  mov     [rbp+240h+var_29C], ebx
+  000000014013911D  mov     ecx, r8d
+  0000000140139120  mov     [rbp+240h+var_298], r14d
+  0000000140139124  rol     ecx, 5
+  0000000140139127  mov     eax, r9d
+  000000014013912A  xor     eax, r10d
+  000000014013912D  rol     r9d, 1Eh
+  0000000140139131  xor     eax, edx
+  0000000140139133  add     eax, ebx
+  0000000140139135  add     eax, 0CA62C1D6h
+  000000014013913A  lea     ebx, [rdi+rcx]
+  000000014013913D  add     ebx, eax
+  000000014013913F  mov     eax, r8d
+  0000000140139142  xor     eax, r9d
+  0000000140139145  rol     r8d, 1Eh
+  0000000140139149  xor     eax, r10d
+  000000014013914C  mov     ecx, ebx
+  000000014013914E  add     eax, edx
+  0000000140139150  rol     ecx, 5
+  0000000140139153  add     eax, 0CA62C1D6h
+  0000000140139158  lea     edx, [r14+rcx]
+  000000014013915C  add     edx, eax
+  000000014013915E  rol     r11d, 1
+  0000000140139161  mov     r15d, edx
+  0000000140139164  mov     [rbp+240h+var_294], r11d
+  0000000140139168  mov     esi, [rbp+240h+var_23C]
+  000000014013916B  add     r11d, 0CA62C1D6h
+  0000000140139172  mov     r14d, [rbp+240h+var_230]
+  0000000140139176  add     esi, edx
+  0000000140139178  jmp     loc_140139319
+  000000014013917D  db 0E8h, 0A6h, 30h
+  0000000140139180  dq 0FFFF9267860FFFF7h, 37860FFFF7CF4BE8h, 0FFFF6239E8FFFF1Bh
+  0000000140139318  db 0
+  0000000140139319  mov     rdx, [rbp+240h+var_280]
+  000000014013931D  mov     eax, r8d
+  0000000140139320  mov     rcx, [rbp+240h+var_260]
+  0000000140139324  xor     eax, r9d
+  0000000140139327  mov     rdi, [rbp-38h]
+  000000014013932B  xor     eax, ebx
+  000000014013932D  add     eax, r10d
+  0000000140139330  rol     r15d, 5
+  0000000140139334  mov     r10d, [rbp+240h+var_238]
+  0000000140139338  add     eax, r11d
+  000000014013933B  add     eax, [rbp+240h+var_240]
+  000000014013933E  add     r14d, r9d
+  0000000140139341  mov     r11d, [rbp+240h+var_234]
+  0000000140139345  add     r15d, eax
+  0000000140139348  mov     rax, [rbp+240h+var_290]
+  000000014013934C  add     r11d, r8d
+  000000014013934F  rol     ebx, 1Eh
+  0000000140139352  add     rax, 40h ; '@'
+  0000000140139356  add     r10d, ebx
+  0000000140139359  mov     [rbp+240h+var_240], r15d
+  000000014013935D  sub     rdx, 40h ; '@'
+  0000000140139361  mov     [rbp+240h+var_23C], esi
+  0000000140139364  add     rcx, 40h ; '@'
+  0000000140139368  mov     [rbp+240h+var_238], r10d
+  000000014013936C  mov     [rbp+240h+var_234], r11d
+  0000000140139370  mov     [rbp+240h+var_230], r14d
+  0000000140139374  mov     [rbp+240h+var_290], rax
+  0000000140139378  mov     [rbp+240h+var_280], rdx
+  000000014013937C  mov     [rbp+240h+var_260], rcx
+  0000000140139380  cmp     rcx, rdi
+  0000000140139383  jb      loc_1401362CE
+  0000000140139389  jmp     loc_14013950E
+  000000014013938E  dw 0E95Dh
+  0000000140139390  dq 3E8A0F55FFFF271Ch, 4194E8FFFFB3h, 5241FFFF661E8F0Fh
+  0000000140139508  db 0Fh, 89h, 1Eh, 31h, 2 dup(0FFh)
+  000000014013950E  xor     r12d, r12d
+  0000000140139511  mov     ecx, r12d
+  0000000140139514  jmp     loc_140139693
+  0000000140139519  db 49h, 8Bh, 0E3h, 0E9h, 0F1h, 64h, 0FFh
+  0000000140139520  dq 538A9D7DF98D8BFFh, 46587354427C707Fh, 0E87365345045CB7Eh
+  00000001401395A0  db 87h, 5Fh, 94h, 2 dup(0FFh)
+  00000001401395A5  mov     rax, r12
+  00000001401395A8  jmp     loc_140139693
+  00000001401395AD  db 48h, 81h, 0C4h
+  00000001401395B0  dq 14C78D0F000002A8h, 4490D2634590FFFFh, 0C58390909090D832h
+  0000000140139690  db 0F0h, 2 dup(0FFh)
+  0000000140139693  sub     rdi, rax
+  0000000140139696  lea     rdx, [rbp+240h+var_120]
+  000000014013969D  add     rdx, rax
+  00000001401396A0  mov     r8, rdi
+  00000001401396A3  lea     rax, [rbp+240h+var_224]
+  00000001401396A7  add     rcx, rax
+  00000001401396AA  jmp     short loc_140139717
+  00000001401396AC  dd 0FF45B7E8h
+  00000001401396B0  dq 48FFFFE880820FFFh, 0FFFF97B2880FE703h, 34880F0002807FE8h
+  0000000140139710  db 0FFh, 0Fh, 8Ah, 8Bh, 0A5h, 2 dup(0FFh)
+  0000000140139717  call    sub_140095E40
+  000000014013971C  jmp     loc_1401397D0
+  0000000140139721  db 48h, 81h, 0C4h, 0B0h, 4, 2 dup(0)
+  0000000140139728  dq 95E8FFFFB7958F0Fh, 127328C0FFFF7D9h, 93C2850FE2034800h
+  00000001401397D0  xor     edx, edx
+  00000001401397D2  mov     [rbp+240h+var_22C], 0
+  00000001401397DA  lea     rcx, [rbp+240h+var_224]
+  00000001401397DE  mov     [rbp+240h+var_240], 67452301h
+  00000001401397E5  mov     [rbp+240h+var_23C], 0EFCDAB89h
+  00000001401397EC  mov     [rbp+240h+var_238], 98BADCFEh
+  00000001401397F3  lea     r8d, [rdx+40h]
+  00000001401397F7  mov     [rbp+240h+var_234], 10325476h
+  00000001401397FE  mov     [rbp+240h+var_230], 0C3D2E1F0h
+  0000000140139805  jmp     loc_1401398A6
+  000000014013980A  dw 0F56h, 184h, 0FF10h
+  0000000140139810  dq 850FFFFF79BAE8FFh, 0FFB697E800002769h, 41FFFFEF75810FFFh
+  00000001401398A0  ja      loc_140158881
+  00000001401398A6  call    sub_140096100
+  00000001401398AB  jmp     loc_140139B0D
+  00000001401398B0  dq 3B2CE8FFF5F963E8h, 0FFFF67EE8E0F0001h, 0C10002669FE95F41h
+  0000000140139B0D  lea     rcx, [rbp+240h+var_240]
+  0000000140139B11  mov     rax, 1A4B6CBB6B9h
+  0000000140139B1B  cmp     rcx, rax
+  0000000140139B1E  jnb     loc_140139F5A
+  0000000140139B24  jmp     loc_140139D6E
+  0000000140139B29  add     rsp, 2A0h
+  0000000140139B30  jz      loc_140130988
+  0000000140139B36  pop     r14
+  0000000140139B38  pop     rbp
+  0000000140139B39  pop     r13
+  0000000140139B3B  jmp     loc_140130081
+  0000000140139B40  dq 19830FFFF5F8E3E8h, 0EA8A0F5041FFFF56h, 0DA75E8FFFF2Dh
+  0000000140139D68  db 0Fh, 89h, 67h, 5Bh, 2 dup(0FFh)
+  0000000140139D6E  nop
+  0000000140139D6F  jmp     short loc_140139DD2
+  0000000140139D71  db 49h, 8Bh, 0E3h, 0E9h, 13h, 3Ch, 0FFh
+  0000000140139D78  dq 63E95D5E415F41FFh, 29CD810F57FFFFB3h, 5A5E4F5DFF930000h
+  0000000140139DD0  db 2 dup(0)
+  0000000140139DD2  call    sub_14021BEAF
+  0000000140139DD7  jmp     rax
+  0000000140139DD9  db 0E8h, 72h, 0F3h, 0F5h, 0FFh, 0E8h, 0DAh
+  0000000140139DE0  dq 0FF0B608C0FFFFF9Ah, 880FFFFFC57AE8FFh, 0F5F497E8FFFF186Ch
+  0000000140139EA8  db 8Dh, 7Dh, 0BEh, 2 dup(0)
+  0000000140139EAD  nop
+  0000000140139EAE  nop
+  0000000140139EAF  nop
+  0000000140139EB0  nop
+  0000000140139EB1  nop
+  0000000140139EB2  nop
+  0000000140139EB3  jmp     loc_140139F5A
+  0000000140139EB8  dq 758E0FFFF7CF63E8h, 0FFFF9720E8FFFF00h, 65E8FFFF46CD880Fh
+  0000000140139F58  db 9Ah, 50h
+  0000000140139F5A  mov     rsi, [rbp+240h+var_258]
+  0000000140139F5E  jmp     short loc_140139FC0
+  0000000140139F60  dq 152CE8FFF5F333E8h, 0FFFFA75E8F0FFFFFh, 13800FFFF8247BE8h
+  0000000140139FC0  lea     rax, cs:1BFFDFA87h
+  0000000140139FC7  mov     rcx, 0D7BF0226DFD42BEAh
+  0000000140139FD1  mov     rbx, 0B701C2B24CBD760Dh
+  0000000140139FDB  mov     rdi, 44C4644F5156658Ah
+  0000000140139FE5  mov     r10, 1926C23ED27024A6h
+  0000000140139FEF  mov     r13, 67269676FA01984Fh
+  0000000140139FF9  mov     r9, 96BFBCDB51B01EECh
+  000000014013A003  mov     r15, 0C9B39B5C8C52F52Eh
+  000000014013A00D  mov     r14, 7197DC638731962Fh
+  000000014013A017  cmp     [rsi+38h], r12b
+  000000014013A01B  jz      loc_14013A6C1
+  000000014013A021  jmp     loc_14013A299
+  000000014013A026  dw 5041h
+  000000014013A028  dq 348FFFFC1518B0Fh, 90FFFF8AD68F0FE6h, 90DED24090F6D240h
+  000000014013A298  db 72h
+  000000014013A299  mov     r8, [rsi+40h]
+  000000014013A29D  lea     r11, cs:17897C667h
+  000000014013A2A4  mov     eax, eax
+  000000014013A2A6  mov     rdx, r8
+  000000014013A2A9  imul    rax, rcx
+  000000014013A2AD  not     rdx
+  000000014013A2B0  mov     r11d, r11d
+  000000014013A2B3  bswap   rdx
+  000000014013A2B6  xor     rdx, rax
+  000000014013A2B9  mov     rax, 8988C89EA2ACCB14h
+  000000014013A2C3  xor     rdx, rbx
+  000000014013A2C6  imul    r11, rdi
+  000000014013A2CA  lea     ecx, [rdx+10h]
+  000000014013A2CD  xor     rdx, r10
+  000000014013A2D0  xor     ecx, 0Ch
+  000000014013A2D3  lea     rdi, cs:17B69C5BAh
+  000000014013A2DA  sub     ecx, 1Ah
+  000000014013A2DD  mov     edi, edi
+  000000014013A2DF  imul    rdi, rax
+  000000014013A2E3  and     ecx, 3Fh
+  000000014013A2E6  mov     r10, r11
+  000000014013A2E9  rol     rdx, cl
+  000000014013A2EC  xor     r10, 651CDF58h
+  000000014013A2F3  mov     rbx, rdx
+  000000014013A2F6  mov     rax, rdx
+  000000014013A2F9  shl     rax, 20h
+  000000014013A2FD  mov     rcx, 87CAD096B8510E64h
+  000000014013A307  shr     rbx, 20h
+  000000014013A30B  imul    rbx, rax
+  000000014013A30F  imul    r10, r13
+  000000014013A313  mov     rax, 3054495B2A95F33Fh
+  000000014013A31D  sub     rbx, rax
+  000000014013A320  mov     rax, 44C4644F5156658h
+  000000014013A32A  or      rbx, rdx
+  000000014013A32D  mov     rdx, 0C66954D791E68FF8h
+  000000014013A337  imul    rbx, rax
+  000000014013A33B  mov     rax, r11
+  000000014013A33E  imul    rax, rdx
+  000000014013A342  sub     rbx, rax
+  000000014013A345  mov     rax, 0E8671DE0D6EF8D65h
+  000000014013A34F  add     rbx, rax
+  000000014013A352  mov     rax, rbx
+  000000014013A355  imul    rax, rcx
+  000000014013A359  mov     rcx, 388A2DBA6F3A2C92h
+  000000014013A363  xor     rax, rcx
+  000000014013A366  mov     rcx, 2F5EEA514178815Dh
+  000000014013A370  add     rax, rcx
+  000000014013A373  mov     rcx, 1E08536F59AED615h
+  000000014013A37D  ror     rax, 0Ah
+  000000014013A381  add     rcx, rax
+  000000014013A384  jmp     short loc_14013A3D5
+  000000014013A386  dw 8148h
+  000000014013A388  dq 4C8E0F00000568C4h, 820FE00348FFFFD3h, 57E95C41FFFF9008h
+  000000014013A3D0  db 8Ch, 91h, 2 dup(0FEh), 0FFh
+  000000014013A3D5  mov     rax, 0A546AB717CE3E67Ah
+  000000014013A3DF  ror     rcx, 34h
+  000000014013A3E3  xor     rcx, rax
+  000000014013A3E6  mov     rax, 33BEFFEEC2535336h
+  000000014013A3F0  rol     rcx, 1Dh
+  000000014013A3F4  imul    rcx, r9
+  000000014013A3F8  xor     rcx, rax
+  000000014013A3FB  mov     rax, 66B98C7D2B60C200h
+  000000014013A405  add     r9, rcx
+  000000014013A408  not     rcx
+  000000014013A40B  xor     r9, rax
+  000000014013A40E  mov     rax, 48D2A7972A8A8E2Dh
+  000000014013A418  imul    r9, rcx
+  000000014013A41C  sub     r9, rax
+  000000014013A41F  mov     rax, r10
+  000000014013A422  imul    r9, rbx
+  000000014013A426  shr     rax, 1
+  000000014013A429  xor     r9, rax
+  000000014013A42C  mov     rax, 22623227A8AB32Ch
+  000000014013A436  imul    r9, rax
+  000000014013A43A  mov     rax, 717DDA6837861C90h
+  000000014013A444  sub     r9, rax
+  000000014013A447  mov     rax, 47E5E761674F3174h
+  000000014013A451  imul    r9, r8
+  000000014013A455  sub     r9, rdi
+  000000014013A458  add     r9, rax
+  000000014013A45B  mov     eax, 1
+  000000014013A460  xor     ecx, ecx
+  000000014013A462  cpuid  ; <<< CPUID: VM/hypervisor detection
+  000000014013A464  mov     [rbp+240h+var_274], ebx
+  000000014013A467  mov     [rbp+240h+var_270], ecx
+  000000014013A46A  mov     r8d, eax
+  000000014013A46D  mov     rcx, rdi
+  000000014013A470  xor     rcx, r11
+  000000014013A473  mov     eax, eax
+  000000014013A475  add     rcx, r11
+  000000014013A478  mov     [rbp+240h+var_26C], edx
+  000000014013A47B  imul    rcx, r10
+  000000014013A47F  xor     rax, r9
+  000000014013A482  mov     rdx, 45BB214000000000h
+  000000014013A48C  add     rcx, r15
+  000000014013A48F  add     rcx, rdi
+  000000014013A492  imul    rcx, rax
+  000000014013A496  mov     rax, 0C9D9120BEAB56944h
+  000000014013A4A0  xor     rcx, r14
+  000000014013A4A3  add     rax, rcx
+  000000014013A4A6  lea     rcx, [rax+r14]
+  000000014013A4AA  shr     rcx, 20h
+  000000014013A4AE  xor     rcx, 494AA21Ch
+  000000014013A4B5  or      rcx, rdx
+  000000014013A4B8  jmp     loc_14013A571
+  000000014013A4BD  db 71h, 0BDh, 72h
+  000000014013A4C0  dq 55685D3A4F737492h, 7DDF5F8051515F61h, 5F7E58529C9D8775h
+  000000014013A570  db 0FFh
+  000000014013A571  lea     rdx, cs:1BFF7E541h
+  000000014013A578  xor     rcx, rax
+  000000014013A57B  mov     edx, edx
+  000000014013A57D  mov     rax, 0D17153D92D852A8Fh
+  000000014013A587  xor     rcx, rax
+  000000014013A58A  mov     rax, rcx
+  000000014013A58D  not     rax
+  000000014013A590  imul    rax, rcx
+  000000014013A594  mov     rcx, 7BFD5E67C3349A5Eh
+  000000014013A59E  xor     rax, rcx
+  000000014013A5A1  mov     rcx, 0A845C38482E40B7h
+  000000014013A5AB  add     rcx, rax
+  000000014013A5AE  mov     rbx, rcx
+  000000014013A5B1  mov     rax, rcx
+  000000014013A5B4  shl     rax, 20h
+  000000014013A5B8  shr     rbx, 20h
+  000000014013A5BC  imul    rbx, rax
+  000000014013A5C0  mov     rax, 7A81BC99475FE8C5h
+  000000014013A5CA  add     rbx, rax
+  000000014013A5CD  mov     rax, 4B22AE3A0DE8322Bh
+  000000014013A5D7  or      rbx, rcx
+  000000014013A5DA  imul    rdx, rax
+  000000014013A5DE  lea     ecx, [rbx+0Bh]
+  000000014013A5E1  mov     rax, 228690E926E7E541h
+  000000014013A5EB  xor     ecx, 0FFFFFFE4h
+  000000014013A5EE  add     rax, rbx
+  000000014013A5F1  inc     ecx
+  000000014013A5F3  xor     rdx, rax
+  000000014013A5F6  and     ecx, 3Fh
+  000000014013A5F9  ror     rdx, cl
+  000000014013A5FC  mov     rcx, 466E7DDB433B862Eh
+  000000014013A606  mov     rax, rdx
+  000000014013A609  ror     rax, 20h
+  000000014013A60D  xor     rcx, rax
+  000000014013A610  mov     rax, 179F227927463CB4h
+  000000014013A61A  add     rcx, rdx
+  000000014013A61D  mov     rdx, 55A3931D1D92B948h
+  000000014013A627  add     rax, rcx
+  000000014013A62A  not     rcx
+  000000014013A62D  xor     rax, rdx
+  000000014013A630  imul    rax, rcx
+  000000014013A634  mov     rcx, 0CA32C4D5E4B107EAh
+  000000014013A63E  add     rcx, rax
+  000000014013A641  mov     rax, 447784B07624AF19h
+  000000014013A64B  xor     rdi, rax
+  000000014013A64E  add     rcx, r9
+  000000014013A651  add     rdi, r8
+  000000014013A654  imul    rcx, rdi
+  000000014013A658  xor     rcx, [rsi+48h]
+  000000014013A65C  jmp     loc_14013A8FE
+  000000014013A661  db 0E8h, 0A8h, 0EEh, 2 dup(0FFh), 0Fh, 80h
+  000000014013A668  dq 0FE20348FFFF8BE4h, 0AA59E8FFFF925785h, 0FFFF36038E0FFFFFh
+  000000014013A680  pop     rbp
+  000000014013A681  pop     r14
+  000000014013A683  jmp     loc_140129F47
+  000000014013A688  dq 0E650E8FFF5EAD3E8h, 0FFFFF803880F0001h, 0F000001E8C48148h
+  000000014013A6C0  db 0
+  000000014013A6C1  mov     rcx, r12
+  000000014013A6C4  jmp     loc_14013A8FE
+  000000014013A6C9  db 48h, 81h, 0C4h, 10h, 7, 2 dup(0)
+  000000014013A6D0  dq 5041FFFFF34A8F0Fh, 0C80BFFFFBABC820Fh, 41EED34154247433h
+  000000014013A8F8  js      loc_14013F03C
+  000000014013A8FE  mov     [rbp+240h+var_268], rcx
+  000000014013A902  mov     rax, 3A19AE1FCh
+  000000014013A90C  lea     rcx, [rbp+240h+var_268]
+  000000014013A910  cmp     rcx, rax
+  000000014013A913  jnb     loc_14014BDCF
+  000000014013A919  jmp     loc_14013AC6A
+  000000014013A91E  dw 0F5E8h
+  000000014013A920  dq 0FFFF0548E8FFF5E8h, 5E41FFFEF206850Fh, 2662FFFF7ADBE95Dh
+  000000014013AB70  db 0FFh
+  000000014013AB71  add     eax, edx
+  000000014013AB73  add     ecx, eax
+  000000014013AB75  test    r13b, al
+  000000014013AB78  mov     eax, [rsp+340h+var_31C]
+  000000014013AB7C  xor     eax, [rsp+340h+var_308]
+  000000014013AB80  inc     bl
+  000000014013AB82  add     r11d, ecx
+  000000014013AB85  xor     eax, [rsp+340h+var_314]
+  000000014013AB89  cmp     r9d, r12d
+  000000014013AB8C  mov     edx, r11d
+  000000014013AB8F  test    r13b, 16h
+  000000014013AB93  xor     eax, esi
+  000000014013AB95  add     r12d, 38h ; '8'
+  000000014013AB99  rol     edx, 5
+  000000014013AB9C  rol     bl, 0Ch
+  000000014013AB9F  mov     esi, [rsp+340h+var_2EC]
+  000000014013ABA3  mov     ecx, r9d
+  000000014013ABA6  dec     cl
+  000000014013ABA8  rol     eax, 1
+  000000014013ABAA  or      ecx, r8d
+  000000014013ABAD  mov     [rsp+340h+var_30C], eax
+  000000014013ABB1  mov     r12b, al
+  000000014013ABB4  and     ecx, r10d
+  000000014013ABB7  add     edx, [rsp+340h+var_30C]
+  000000014013ABBB  or      bl, sil
+  000000014013ABBE  mov     eax, r9d
+  000000014013ABC1  add     r9b, al
+  000000014013ABC4  and     eax, r8d
+  000000014013ABC7  add     r11b, al
+  000000014013ABCA  rol     r10d, 1Eh
+  000000014013ABCE  xor     r13b, 0A1h
+  000000014013ABD2  or      ecx, eax
+  000000014013ABD4  mov     eax, [rsp+340h+var_310]
+  000000014013ABD8  xor     eax, [rsp+340h+var_2F0]
+  000000014013ABDC  shr     esi, cl
+  000000014013ABDE  add     ecx, ebx
+  000000014013ABE0  xor     eax, esi
+  000000014013ABE2  lea     ebx, [rdx-70E44324h]
+  000000014013ABE8  sub     r12b, al
+  000000014013ABEB  xor     eax, r14d
+  000000014013ABEE  add     ebx, ecx
+  000000014013ABF0  rol     eax, 1
+  000000014013ABF2  mov     edx, ebx
+  000000014013ABF4  mov     [rsp+340h+var_2EC], eax
+  000000014013ABF8  mov     ecx, r10d
+  000000014013ABFB  ror     bl, 65h
+  000000014013ABFE  mov     r14d, [rsp+340h+var_2EC]
+  000000014013AC03  or      r13b, r15b
+  000000014013AC06  or      ecx, r9d
+  000000014013AC09  or      r11d, 2Eh
+  000000014013AC0D  and     ecx, r11d
+  000000014013AC10  sal     r15b, 15h
+  000000014013AC14  rol     edx, 5
+  000000014013AC17  mov     eax, r10d
+  000000014013AC1A  rol     r11d, 1Eh
+  000000014013AC1E  and     eax, r9d
+  000000014013AC21  rcl     ebx, cl
+  000000014013AC23  or      ecx, eax
+  000000014013AC25  sal     cl, 1
+  000000014013AC27  mov     eax, [rsp+340h+var_300]
+  000000014013AC2B  xor     eax, [rsp+340h+var_320]
+  000000014013AC2F  or      r12d, r9d
+  000000014013AC32  add     ecx, r8d
+  000000014013AC35  inc     sil
+  000000014013AC38  xor     eax, r13d
+  000000014013AC3B  and     dl, al
+  000000014013AC3D  lea     r8d, [r14+rdx]
+  000000014013AC41  xor     eax, [rsp+340h+var_314]
+  000000014013AC45  shr     r9d, 1
+  000000014013AC48  add     ecx, 8F1BBCDCh
+  000000014013AC4E  sar     dl, cl
+  000000014013AC50  add     r8d, ecx
+  000000014013AC53  sal     r13b, 0D0h
+  000000014013AC57  rol     eax, 1
+  000000014013AC59  xor     r14d, [rsp+340h+var_2F8]
+  000000014013AC5E  mov     ecx, r11d
+  000000014013AC61  sar     r13b, cl
+  000000014013AC64  jg      loc_140144426
+  000000014013AC6A  xor     edx, edx
+  000000014013AC6C  lea     rcx, [rbp+240h+var_1E0]
+  000000014013AC70  lea     r8d, [rdx+5Ch]
+  000000014013AC74  jmp     loc_14013AEE6
+  000000014013AC79  db 0E8h, 32h, 0B9h, 0F7h, 0FFh, 0Fh, 82h
+  000000014013AC80  dq 0F7C197E8FFFFB65Dh, 58FFFF53FE8D0FFFh, 0D553AB5B5905777Fh
+  000000014013AEE0  db 0Fh, 84h, 13h, 0B4h, 2 dup(0FFh)
+  000000014013AEE6  call    sub_140096100
+  000000014013AEEB  jmp     loc_14013B04E
+  000000014013AEF0  dq 0FF82588E0FE10348h, 830FFFF7B572E8FFh, 880F5741FFFF317Ah
+  000000014013B048  jnb     loc_14012B5C7
+  000000014013B04E  lea     rcx, [rbp+240h+var_1E0]
+  000000014013B052  mov     [rbp+240h+var_1E0], 67452301h
+  000000014013B059  mov     rax, 1A4B6CBB6BBh
+  000000014013B063  mov     [rbp+240h+var_1DC], 0EFCDAB89h
+  000000014013B06A  mov     [rbp+240h+var_1D8], 98BADCFEh
+  000000014013B071  mov     [rbp+240h+var_1D4], 10325476h
+  000000014013B078  mov     [rbp+240h+var_1D0], 0C3D2E1F0h
+  000000014013B07F  cmp     rcx, rax
+  000000014013B082  jnb     loc_14013B4FB
+  000000014013B088  jmp     loc_14013B1C6
+  000000014013B08D  db 2 dup(0C1h), 5
+  000000014013B090  dq 0D141C13341C28B41h, 0D1D2C98041C233C4h, 0D1C00341D4D141C7h
+  000000014013B1C0  db 0Fh, 8Ch, 5Ch, 0BEh, 2 dup(0FFh)
+  000000014013B1C6  nop
+  000000014013B1C7  jmp     loc_14013B24F
+  000000014013B1CC  dd 0F7CF87E8h
+  000000014013B1D0  dq 0E8FFFF82C6830FFFh, 753B880FFFF5DE5Ch, 0FFFFF3B7DE80001h
+  000000014013B248  db 0FFh, 0Fh, 87h, 0B8h, 60h, 2 dup(0FFh)
+  000000014013B24F  call    sub_1402A3A6F
+  000000014013B254  jmp     rax
+  000000014013B256  dw 7433h
+  000000014013B258  dq 3341C7F383413C24h, 8541D103944533C6h, 3341C78545C0D1DDh
+  000000014013B4F8  db 0AEh, 2 dup(0FFh)
+  000000014013B4FB  mov     rax, [rbp+240h+var_1CC+4]
+  000000014013B4FF  mov     rcx, rax
+  000000014013B502  add     eax, 8
+  000000014013B505  and     ecx, 3Fh
+  000000014013B508  mov     dword ptr [rbp+240h+var_1CC+4], eax
+  000000014013B50B  cmp     eax, 8
+  000000014013B50E  jnb     loc_14013BA1C
+  000000014013B514  jmp     loc_14013B768
+  000000014013B519  db 49h, 3, 0E0h, 0Fh, 8Bh, 7Ah, 0B2h
+  000000014013B520  dq 0FFFF7B331E8FFFFh, 0CA94E8FFFF8F9C86h, 1AD11870F0001h
+  000000014013B768  inc     dword ptr [rbp+240h+var_1CC]
+  000000014013B76B  jmp     loc_14013BA1C
+  000000014013B770  dq 72FFFEFF10E95F41h, 5B8B5A18755D8B74h, 0E852E8F2C4C41650h
+  000000014013BA18  db 6Fh, 0, 2 dup(0FFh)
+  000000014013BA1C  mov     r8d, 40h ; '@'
+  000000014013BA22  sub     r8, rcx
+  000000014013BA25  mov     [rbp+240h+var_290], r8
+  000000014013BA29  cmp     r8, 8
+  000000014013BA2D  ja      loc_140142ACE
+  000000014013BA33  jmp     loc_14013BB85
+  000000014013BA38  dq 558A0FFFFF0615E8h, 173C1E8FFFF4Ch, 5441FFFFEDC3890Fh
+  000000014013BB80  db 87h, 0BAh, 4Eh, 2 dup(0FFh)
+  000000014013BB85  lea     rax, [rbp+240h+var_1C4]
+  000000014013BB89  add     rcx, rax
+  000000014013BB8C  lea     rdx, [rbp+240h+var_268]
+  000000014013BB90  jmp     short loc_14013BC09
+  000000014013BB92  dw 31E8h, 0F7ABh, 0FFFh
+  000000014013BB98  dq 0A266E8FFFFA4928Ah, 1C690830FFFF7h, 41FFFF61AD840F57h
+  000000014013BC08  db 0FFh
+  000000014013BC09  call    sub_140095E40
+  000000014013BC0E  jmp     loc_14013BC94
+  000000014013BC13  db 5Dh, 41h, 5Dh, 41h, 5Fh
+  000000014013BC18  dq 0FC8B49FFFF7236E9h, 415DFFFF6D0A820Fh, 0E95F415C415D415Eh
+  000000014013BC90  db 0BAh, 22h, 2 dup(0FFh)
+  000000014013BC94  mov     rdx, r12
+  000000014013BC97  jmp     short loc_14013BD12
+  000000014013BC99  db 41h, 56h, 0Fh, 83h, 7Ah, 5Dh, 0FFh
+  000000014013BCA0  dq 28F0FEAD05441FFh, 0FFF5D5B0E8FFFFD4h, 928A0FFFFFCEFAE8h
+  000000014013BD10  db 48h, 0E7h
+  000000014013BD12  movzx   eax, [rbp+rdx+240h+var_1C3]
+  000000014013BD17  movzx   ecx, [rbp+rdx+240h+var_1C4]
+  000000014013BD1C  shl     ecx, 8
+  000000014013BD1F  or      ecx, eax
+  000000014013BD21  movzx   eax, [rbp+rdx+240h+var_1C2]
+  000000014013BD26  shl     ecx, 8
+  000000014013BD29  or      ecx, eax
+  000000014013BD2B  movzx   eax, [rbp+rdx+240h+var_1C1]
+  000000014013BD30  shl     ecx, 8
+  000000014013BD33  or      ecx, eax
+  000000014013BD35  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014013BD39  add     rdx, 4
+  000000014013BD3D  cmp     rdx, 40h ; '@'
+  000000014013BD41  jl      short loc_14013BD12
+  000000014013BD43  jmp     loc_14013BF85
+  000000014013BD48  dq 0FFBB7E820FE70349h, 820FFFF7B822E8FFh, 0FE60349FFFED62Eh
+  000000014013BF80  db 7Ah, 0B9h, 0DEh, 0BEh, 23h
+  000000014013BF85  mov     r10d, [rbp+240h+var_1D8]
+  000000014013BF89  mov     r9d, [rbp+240h+var_1D4]
+  000000014013BF8D  mov     ecx, r9d
+  000000014013BF90  mov     ebx, [rbp+240h+var_1E0]
+  000000014013BF93  xor     ecx, r10d
+  000000014013BF96  mov     edx, [rbp+240h+var_1DC]
+  000000014013BF99  mov     eax, ebx
+  000000014013BF9B  and     ecx, edx
+  000000014013BF9D  mov     r8d, [rbp+240h+var_1D0]
+  000000014013BFA1  xor     ecx, r9d
+  000000014013BFA4  mov     r14d, [rsp+340h+var_2C8]
+  000000014013BFA9  mov     r15d, [rsp+340h+var_2C4]
+  000000014013BFAE  add     r8d, 5A827999h
+  000000014013BFB5  mov     r12d, [rbp+240h+var_2C0]
+  000000014013BFB9  add     r9d, 5A827999h
+  000000014013BFC0  mov     r13d, [rbp+240h+var_2BC]
+  000000014013BFC4  rol     eax, 5
+  000000014013BFC7  add     eax, [rsp+340h+var_2D0]
+  000000014013BFCB  add     ecx, eax
+  000000014013BFCD  rol     edx, 1Eh
+  000000014013BFD0  add     r8d, ecx
+  000000014013BFD3  mov     ecx, r10d
+  000000014013BFD6  xor     ecx, edx
+  000000014013BFD8  mov     eax, r8d
+  000000014013BFDB  and     ecx, ebx
+  000000014013BFDD  rol     eax, 5
+  000000014013BFE0  add     eax, [rsp+340h+var_2CC]
+  000000014013BFE4  lea     r11d, [rdx+5A827999h]
+  000000014013BFEB  xor     ecx, r10d
+  000000014013BFEE  rol     ebx, 1Eh
+  000000014013BFF1  add     ecx, eax
+  000000014013BFF3  add     r10d, 5A827999h
+  000000014013BFFA  add     r9d, ecx
+  000000014013BFFD  mov     ecx, ebx
+  000000014013BFFF  xor     ecx, edx
+  000000014013C001  mov     eax, r9d
+  000000014013C004  and     ecx, r8d
+  000000014013C007  rol     eax, 5
+  000000014013C00A  xor     ecx, edx
+  000000014013C00C  rol     r8d, 1Eh
+  000000014013C010  add     eax, r14d
+  000000014013C013  lea     edx, [rbx+5A827999h]
+  000000014013C019  add     ecx, eax
+  000000014013C01B  add     r10d, ecx
+  000000014013C01E  mov     ecx, r8d
+  000000014013C021  xor     ecx, ebx
+  000000014013C023  mov     eax, r10d
+  000000014013C026  and     ecx, r9d
+  000000014013C029  rol     eax, 5
+  000000014013C02C  xor     ecx, ebx
+  000000014013C02E  jmp     loc_14013C0C1
+  000000014013C033  db 0E8h, 40h, 0BFh, 0F7h, 0FFh
+  000000014013C038  dq 0F570002401D8E0Fh, 0CD2DD8FFFF4B8385h, 0FFF5D0C0E89F8DFFh
+  000000014013C0C0  db 0FFh
+  000000014013C0C1  rol     r9d, 1Eh
+  000000014013C0C5  add     eax, r15d
+  000000014013C0C8  lea     ebx, [r13+5A827999h]
+  000000014013C0CF  add     ecx, eax
+  000000014013C0D1  add     r11d, ecx
+  000000014013C0D4  mov     ecx, r9d
+  000000014013C0D7  xor     ecx, r8d
+  000000014013C0DA  mov     eax, r11d
+  000000014013C0DD  and     ecx, r10d
+  000000014013C0E0  rol     eax, 5
+  000000014013C0E3  xor     ecx, r8d
+  000000014013C0E6  rol     r10d, 1Eh
+  000000014013C0EA  add     eax, r12d
+  000000014013C0ED  add     ecx, eax
+  000000014013C0EF  add     edx, ecx
+  000000014013C0F1  mov     ecx, r10d
+  000000014013C0F4  xor     ecx, r9d
+  000000014013C0F7  mov     eax, edx
+  000000014013C0F9  and     ecx, r11d
+  000000014013C0FC  rol     eax, 5
+  000000014013C0FF  xor     ecx, r9d
+  000000014013C102  rol     r11d, 1Eh
+  000000014013C106  add     eax, r8d
+  000000014013C109  add     ecx, eax
+  000000014013C10B  add     ebx, ecx
+  000000014013C10D  mov     ecx, r11d
+  000000014013C110  xor     ecx, r10d
+  000000014013C113  mov     eax, ebx
+  000000014013C115  and     ecx, edx
+  000000014013C117  rol     eax, 5
+  000000014013C11A  xor     ecx, r10d
+  000000014013C11D  mov     r8d, [rbp+240h+var_2B8]
+  000000014013C121  add     eax, r9d
+  000000014013C124  add     ecx, eax
+  000000014013C126  mov     r9d, [rbp+240h+var_2B4]
+  000000014013C12A  rol     edx, 1Eh
+  000000014013C12D  add     r8d, 5A827999h
+  000000014013C134  add     r8d, ecx
+  000000014013C137  add     r9d, 5A827999h
+  000000014013C13E  mov     ecx, edx
+  000000014013C140  mov     eax, r8d
+  000000014013C143  xor     ecx, r11d
+  000000014013C146  rol     eax, 5
+  000000014013C149  and     ecx, ebx
+  000000014013C14B  add     eax, r10d
+  000000014013C14E  xor     ecx, r11d
+  000000014013C151  rol     ebx, 1Eh
+  000000014013C154  add     ecx, eax
+  000000014013C156  add     r9d, ecx
+  000000014013C159  mov     ecx, ebx
+  000000014013C15B  jmp     loc_14013C3E2
+  000000014013C160  dq 50246C8B44FD3345h, 0D14C246C3344C203h, 0C6D1D90344C803DEh
+  000000014013C3E0  db 2 dup(0FFh)
+  000000014013C3E2  xor     ecx, edx
+  000000014013C3E4  mov     eax, r9d
+  000000014013C3E7  and     ecx, r8d
+  000000014013C3EA  rol     eax, 5
+  000000014013C3ED  xor     ecx, edx
+  000000014013C3EF  rol     r8d, 1Eh
+  000000014013C3F3  add     eax, r11d
+  000000014013C3F6  mov     r11d, [rbp+240h+var_2B0]
+  000000014013C3FA  add     ecx, eax
+  000000014013C3FC  lea     r10d, [r11+5A827999h]
+  000000014013C403  add     r10d, ecx
+  000000014013C406  mov     ecx, r8d
+  000000014013C409  xor     ecx, ebx
+  000000014013C40B  mov     eax, r10d
+  000000014013C40E  and     ecx, r9d
+  000000014013C411  rol     eax, 5
+  000000014013C414  xor     ecx, ebx
+  000000014013C416  rol     r9d, 1Eh
+  000000014013C41A  add     eax, edx
+  000000014013C41C  mov     edx, [rbp+240h+var_2AC]
+  000000014013C41F  add     ecx, eax
+  000000014013C421  add     edx, 5A827999h
+  000000014013C427  add     edx, ecx
+  000000014013C429  mov     ecx, r9d
+  000000014013C42C  xor     ecx, r8d
+  000000014013C42F  mov     eax, edx
+  000000014013C431  and     ecx, r10d
+  000000014013C434  rol     eax, 5
+  000000014013C437  xor     ecx, r8d
+  000000014013C43A  rol     r10d, 1Eh
+  000000014013C43E  add     eax, ebx
+  000000014013C440  mov     ebx, [rbp+240h+var_2A8]
+  000000014013C443  add     ecx, eax
+  000000014013C445  add     ebx, 5A827999h
+  000000014013C44B  add     ebx, ecx
+  000000014013C44D  mov     ecx, r10d
+  000000014013C450  xor     ecx, r9d
+  000000014013C453  mov     eax, ebx
+  000000014013C455  and     ecx, edx
+  000000014013C457  rol     eax, 5
+  000000014013C45A  xor     ecx, r9d
+  000000014013C45D  rol     edx, 1Eh
+  000000014013C460  add     eax, r8d
+  000000014013C463  mov     r8d, [rbp+240h+var_2A4]
+  000000014013C467  add     ecx, eax
+  000000014013C469  add     r8d, 5A827999h
+  000000014013C470  add     r8d, ecx
+  000000014013C473  mov     ecx, edx
+  000000014013C475  xor     ecx, r10d
+  000000014013C478  mov     eax, r8d
+  000000014013C47B  jmp     loc_14013C552
+  000000014013C480  dq 0E5E8FFFF5E13E95Dh, 0FF305D8C0FFFF59Fh, 45FA5574520569FFh
+  000000014013C550  db 2 dup(0FFh)
+  000000014013C552  and     ecx, ebx
+  000000014013C554  rol     eax, 5
+  000000014013C557  add     eax, r9d
+  000000014013C55A  rol     ebx, 1Eh
+  000000014013C55D  mov     r9d, [rbp+240h+var_2A0]
+  000000014013C561  xor     ecx, r10d
+  000000014013C564  add     ecx, eax
+  000000014013C566  add     r9d, 5A827999h
+  000000014013C56D  add     r9d, ecx
+  000000014013C570  mov     ecx, ebx
+  000000014013C572  mov     eax, r9d
+  000000014013C575  rol     eax, 5
+  000000014013C578  xor     ecx, edx
+  000000014013C57A  mov     esi, [rbp+240h+var_294]
+  000000014013C57D  xor     esi, [rbp+240h+var_2A8]
+  000000014013C580  and     ecx, r8d
+  000000014013C583  xor     ecx, edx
+  000000014013C585  rol     r8d, 1Eh
+  000000014013C589  add     eax, r10d
+  000000014013C58C  xor     esi, r12d
+  000000014013C58F  add     ecx, eax
+  000000014013C591  mov     r10d, [rbp+240h+var_29C]
+  000000014013C595  add     r10d, 5A827999h
+  000000014013C59C  xor     esi, r14d
+  000000014013C59F  add     r10d, ecx
+  000000014013C5A2  rol     esi, 1
+  000000014013C5A4  mov     ecx, r8d
+  000000014013C5A7  mov     [rsp+340h+var_2F4], esi
+  000000014013C5AB  xor     ecx, ebx
+  000000014013C5AD  mov     eax, r10d
+  000000014013C5B0  and     ecx, r9d
+  000000014013C5B3  rol     eax, 5
+  000000014013C5B6  xor     ecx, ebx
+  000000014013C5B8  rol     r9d, 1Eh
+  000000014013C5BC  add     eax, edx
+  000000014013C5BE  mov     edx, [rbp+240h+var_298]
+  000000014013C5C1  add     ecx, eax
+  000000014013C5C3  add     edx, 5A827999h
+  000000014013C5C9  add     edx, ecx
+  000000014013C5CB  mov     ecx, r9d
+  000000014013C5CE  xor     ecx, r8d
+  000000014013C5D1  mov     eax, edx
+  000000014013C5D3  and     ecx, r10d
+  000000014013C5D6  rol     eax, 5
+  000000014013C5D9  add     eax, ebx
+  000000014013C5DB  rol     r10d, 1Eh
+  000000014013C5DF  mov     ebx, [rbp+240h+var_294]
+  000000014013C5E2  xor     ecx, r8d
+  000000014013C5E5  add     ecx, eax
+  000000014013C5E7  add     ebx, 5A827999h
+  000000014013C5ED  jmp     loc_14013C757
+  000000014013C5F2  dw 8D41h, 9992h, 8279h
+  000000014013C5F8  dq 0C1CB3343C183415Ah, 0C80359C580401EC7h, 0D040D48B45E81B45h
+  000000014013C750  db 0FFh, 0Fh, 8Bh, 2Eh, 0BDh, 2 dup(0FFh)
+  000000014013C757  mov     eax, [rbp+240h+var_29C]
+  000000014013C75A  add     ebx, ecx
+  000000014013C75C  xor     eax, r11d
+  000000014013C75F  mov     ecx, r10d
+  000000014013C762  mov     r11d, [rbp+240h+var_298]
+  000000014013C766  xor     ecx, r9d
+  000000014013C769  xor     r11d, [rbp+240h+var_2AC]
+  000000014013C76D  xor     eax, r14d
+  000000014013C770  xor     eax, [rsp+340h+var_2D0]
+  000000014013C774  and     ecx, edx
+  000000014013C776  rol     eax, 1
+  000000014013C778  xor     ecx, r9d
+  000000014013C77B  mov     [rsp+340h+var_320], eax
+  000000014013C77F  xor     r11d, r15d
+  000000014013C782  xor     r11d, [rsp+340h+var_2CC]
+  000000014013C787  mov     eax, ebx
+  000000014013C789  rol     eax, 5
+  000000014013C78C  add     eax, 5A827999h
+  000000014013C791  rol     edx, 1Eh
+  000000014013C794  add     eax, [rsp+340h+var_320]
+  000000014013C798  add     ecx, eax
+  000000014013C79A  rol     r11d, 1
+  000000014013C79D  add     r8d, ecx
+  000000014013C7A0  mov     [rsp+340h+var_2E4], r11d
+  000000014013C7A5  add     r11d, 5A827999h
+  000000014013C7AC  mov     ecx, edx
+  000000014013C7AE  xor     ecx, r10d
+  000000014013C7B1  mov     eax, r8d
+  000000014013C7B4  and     ecx, ebx
+  000000014013C7B6  rol     eax, 5
+  000000014013C7B9  xor     ecx, r10d
+  000000014013C7BC  rol     ebx, 1Eh
+  000000014013C7BF  add     eax, r11d
+  000000014013C7C2  add     ecx, eax
+  000000014013C7C4  add     r9d, ecx
+  000000014013C7C7  mov     ecx, ebx
+  000000014013C7C9  xor     ecx, edx
+  000000014013C7CB  mov     eax, r9d
+  000000014013C7CE  and     ecx, r8d
+  000000014013C7D1  rol     eax, 5
+  000000014013C7D4  xor     ecx, edx
+  000000014013C7D6  add     eax, esi
+  000000014013C7D8  add     ecx, eax
+  000000014013C7DA  mov     edi, [rsp+340h+var_2E4]
+  000000014013C7DE  lea     r11d, [r10+5A827999h]
+  000000014013C7E5  mov     r10d, [rsp+340h+var_320]
+  000000014013C7EA  add     r11d, ecx
+  000000014013C7ED  xor     r10d, [rbp+240h+var_2A4]
+  000000014013C7F1  mov     eax, r11d
+  000000014013C7F4  rol     eax, 5
+  000000014013C7F7  jmp     loc_14013C8A2
+  000000014013C7FC  dd 0F5C887E8h
+  000000014013C800  dq 8A0FFFFFBD3BE8FFh, 1DA87BBC000262DFh, 9814EEFF095BCD7Eh
+  000000014013C8A0  db 2 dup(0FFh)
+  000000014013C8A2  xor     r10d, r13d
+  000000014013C8A5  add     eax, edx
+  000000014013C8A7  rol     r8d, 1Eh
+  000000014013C8AB  xor     r10d, r15d
+  000000014013C8AE  mov     ecx, r8d
+  000000014013C8B1  mov     r15d, [rbp+240h+var_2A0]
+  000000014013C8B5  xor     ecx, ebx
+  000000014013C8B7  and     ecx, r9d
+  000000014013C8BA  rol     r10d, 1
+  000000014013C8BD  xor     ecx, ebx
+  000000014013C8BF  rol     r9d, 1Eh
+  000000014013C8C3  add     ecx, eax
+  000000014013C8C5  mov     [rsp+340h+var_310], r10d
+  000000014013C8CA  xor     edi, r15d
+  000000014013C8CD  xor     edi, [rbp+240h+var_2B8]
+  000000014013C8D0  lea     edx, [r10+5A827999h]
+  000000014013C8D7  add     edx, ecx
+  000000014013C8D9  xor     edi, r12d
+  000000014013C8DC  mov     r12d, [rbp+240h+var_29C]
+  000000014013C8E0  mov     ecx, r9d
+  000000014013C8E3  xor     ecx, r8d
+  000000014013C8E6  rol     edi, 1
+  000000014013C8E8  xor     ecx, r11d
+  000000014013C8EB  mov     [rsp+340h+var_2FC], edi
+  000000014013C8EF  rol     r11d, 1Eh
+  000000014013C8F3  xor     esi, r12d
+  000000014013C8F6  xor     esi, [rbp+240h+var_2B4]
+  000000014013C8F9  mov     eax, edx
+  000000014013C8FB  rol     eax, 5
+  000000014013C8FE  xor     esi, r13d
+  000000014013C901  mov     r13d, [rbp+240h+var_298]
+  000000014013C905  add     eax, ebx
+  000000014013C907  add     ecx, eax
+  000000014013C909  rol     esi, 1
+  000000014013C90B  lea     ebx, [rdi+6ED9EBA1h]
+  000000014013C911  mov     r14d, r13d
+  000000014013C914  xor     r14d, [rbp+240h+var_2B0]
+  000000014013C918  add     ebx, ecx
+  000000014013C91A  xor     r14d, [rbp+240h+var_2B8]
+  000000014013C91E  mov     eax, ebx
+  000000014013C920  rol     eax, 5
+  000000014013C923  xor     r14d, r10d
+  000000014013C926  mov     r10d, [rbp+240h+var_294]
+  000000014013C92A  add     r8d, eax
+  000000014013C92D  xor     r10d, [rbp+240h+var_2AC]
+  000000014013C931  mov     ecx, r11d
+  000000014013C934  xor     r10d, [rbp+240h+var_2B4]
+  000000014013C938  xor     ecx, r9d
+  000000014013C93B  xor     ecx, edx
+  000000014013C93D  rol     r14d, 1
+  000000014013C940  jmp     loc_14013C9C5
+  000000014013C945  pop     r15
+  000000014013C947  jmp     loc_140152602
+  000000014013C94C  dd 0FAE1E8h
+  000000014013C950  dq 90FFFF070F840F00h, 90C12B4490D40B90h, 90DBD34190C3FF41h
+  000000014013C9C0  db 0E9h, 40h, 0A4h, 2 dup(0FFh)
+  000000014013C9C5  add     ecx, 6ED9EBA1h
+  000000014013C9CB  rol     edx, 1Eh
+  000000014013C9CE  add     r8d, ecx
+  000000014013C9D1  xor     r10d, edi
+  000000014013C9D4  add     r8d, esi
+  000000014013C9D7  rol     r10d, 1
+  000000014013C9DA  mov     eax, r8d
+  000000014013C9DD  mov     [rsp+340h+var_318], r10d
+  000000014013C9E2  rol     eax, 5
+  000000014013C9E5  mov     ecx, edx
+  000000014013C9E7  add     eax, r9d
+  000000014013C9EA  xor     ecx, r11d
+  000000014013C9ED  xor     ecx, ebx
+  000000014013C9EF  lea     r9d, [r14+6ED9EBA1h]
+  000000014013C9F6  add     ecx, eax
+  000000014013C9F8  rol     ebx, 1Eh
+  000000014013C9FB  add     r9d, ecx
+  000000014013C9FE  mov     ecx, ebx
+  000000014013CA00  xor     ecx, edx
+  000000014013CA02  mov     eax, r9d
+  000000014013CA05  rol     eax, 5
+  000000014013CA08  xor     ecx, r8d
+  000000014013CA0B  add     eax, r11d
+  000000014013CA0E  add     ecx, eax
+  000000014013CA10  mov     edi, [rsp+340h+var_320]
+  000000014013CA14  add     r10d, 6ED9EBA1h
+  000000014013CA1B  xor     edi, [rbp+240h+var_2A8]
+  000000014013CA1E  add     r10d, ecx
+  000000014013CA21  xor     edi, [rbp+240h+var_2B0]
+  000000014013CA24  mov     eax, r10d
+  000000014013CA27  rol     eax, 5
+  000000014013CA2A  xor     edi, esi
+  000000014013CA2C  add     edx, eax
+  000000014013CA2E  rol     r8d, 1Eh
+  000000014013CA32  mov     eax, [rsp+340h+var_2E4]
+  000000014013CA36  mov     ecx, r8d
+  000000014013CA39  xor     eax, [rbp+240h+var_2A4]
+  000000014013CA3C  xor     ecx, ebx
+  000000014013CA3E  xor     eax, [rbp+240h+var_2AC]
+  000000014013CA41  xor     ecx, r9d
+  000000014013CA44  xor     eax, r14d
+  000000014013CA47  rol     r9d, 1Eh
+  000000014013CA4B  rol     eax, 1
+  000000014013CA4D  add     ecx, 6ED9EBA1h
+  000000014013CA53  mov     [rsp+340h+var_31C], eax
+  000000014013CA57  add     edx, ecx
+  000000014013CA59  rol     edi, 1
+  000000014013CA5B  mov     ecx, r9d
+  000000014013CA5E  xor     ecx, r8d
+  000000014013CA61  mov     [rsp+340h+var_308], edi
+  000000014013CA65  jmp     loc_14013CBB2
+  000000014013CA6A  dw 0C3C1h, 411Eh, 0CB33h
+  000000014013CA70  dq 44C3D1C90344C803h, 7C8BFBD230247C33h, 0EBA1938D45F54424h
+  000000014013CBB0  add     al, [rax]
+  000000014013CBB2  xor     ecx, r10d
+  000000014013CBB5  add     edx, edi
+  000000014013CBB7  rol     r10d, 1Eh
+  000000014013CBBB  mov     eax, edx
+  000000014013CBBD  rol     eax, 5
+  000000014013CBC0  mov     r11d, r12d
+  000000014013CBC3  xor     r11d, [rbp+240h+var_2A4]
+  000000014013CBC7  add     eax, ebx
+  000000014013CBC9  mov     ebx, [rsp+340h+var_31C]
+  000000014013CBCD  add     ecx, eax
+  000000014013CBCF  mov     eax, [rsp+340h+var_2F4]
+  000000014013CBD3  xor     r11d, edi
+  000000014013CBD6  xor     r11d, [rsp+340h+var_310]
+  000000014013CBDB  xor     eax, r15d
+  000000014013CBDE  xor     eax, [rbp+240h+var_2A8]
+  000000014013CBE1  add     ebx, 6ED9EBA1h
+  000000014013CBE7  xor     eax, [rsp+340h+var_318]
+  000000014013CBEB  add     ebx, ecx
+  000000014013CBED  mov     edi, [rsp+340h+var_2FC]
+  000000014013CBF1  mov     ecx, r10d
+  000000014013CBF4  xor     ecx, r9d
+  000000014013CBF7  rol     eax, 1
+  000000014013CBF9  mov     [rsp+340h+var_30C], eax
+  000000014013CBFD  xor     ecx, edx
+  000000014013CBFF  rol     r11d, 1
+  000000014013CC02  mov     eax, ebx
+  000000014013CC04  rol     eax, 5
+  000000014013CC07  add     eax, r8d
+  000000014013CC0A  mov     [rsp+340h+var_300], r11d
+  000000014013CC0F  mov     r8d, [rsp+340h+var_30C]
+  000000014013CC14  add     ecx, eax
+  000000014013CC16  rol     edx, 1Eh
+  000000014013CC19  add     r8d, 6ED9EBA1h
+  000000014013CC20  add     r8d, ecx
+  000000014013CC23  mov     ecx, edx
+  000000014013CC25  xor     ecx, r10d
+  000000014013CC28  mov     eax, r8d
+  000000014013CC2B  xor     ecx, ebx
+  000000014013CC2D  rol     eax, 5
+  000000014013CC30  add     eax, r9d
+  000000014013CC33  rol     ebx, 1Eh
+  000000014013CC36  lea     r9d, [r11+6ED9EBA1h]
+  000000014013CC3D  add     ecx, eax
+  000000014013CC3F  add     r9d, ecx
+  000000014013CC42  mov     r11d, r13d
+  000000014013CC45  xor     r11d, r15d
+  000000014013CC48  mov     eax, r9d
+  000000014013CC4B  xor     r11d, [rsp+340h+var_31C]
+  000000014013CC50  mov     ecx, ebx
+  000000014013CC52  xor     r11d, edi
+  000000014013CC55  jmp     short loc_14013CCB3
+  000000014013CC57  db 0E8h
+  000000014013CC58  dq 41F890FFFFF3CD3h, 0FFFFF55B1E8FFFFh, 870F57FFFF8CE982h
+  000000014013CCB0  db 27h, 2 dup(0FFh)
+  000000014013CCB3  rol     eax, 5
+  000000014013CCB6  rol     r11d, 1
+  000000014013CCB9  xor     ecx, edx
+  000000014013CCBB  mov     [rsp+340h+var_2FC], r11d
+  000000014013CCC0  xor     ecx, r8d
+  000000014013CCC3  mov     r15d, [rbp+240h+var_294]
+  000000014013CCC7  add     eax, r10d
+  000000014013CCCA  add     ecx, eax
+  000000014013CCCC  rol     r8d, 1Eh
+  000000014013CCD0  xor     r15d, r12d
+  000000014013CCD3  lea     r10d, [r11+6ED9EBA1h]
+  000000014013CCDA  xor     r15d, [rsp+340h+var_30C]
+  000000014013CCDF  add     r10d, ecx
+  000000014013CCE2  mov     r12d, [rsp+340h+var_320]
+  000000014013CCE7  mov     ecx, r8d
+  000000014013CCEA  xor     ecx, ebx
+  000000014013CCEC  xor     r12d, r13d
+  000000014013CCEF  xor     r12d, [rsp+340h+var_300]
+  000000014013CCF4  xor     ecx, r9d
+  000000014013CCF7  mov     r13d, [rsp+340h+var_2E4]
+  000000014013CCFC  add     ecx, 6ED9EBA1h
+  000000014013CD02  xor     r13d, [rbp+240h+var_294]
+  000000014013CD06  xor     r15d, esi
+  000000014013CD09  xor     r13d, r11d
+  000000014013CD0C  rol     r9d, 1Eh
+  000000014013CD10  mov     r11d, [rsp+340h+var_318]
+  000000014013CD15  mov     eax, r10d
+  000000014013CD18  rol     eax, 5
+  000000014013CD1B  xor     r13d, r11d
+  000000014013CD1E  add     edx, eax
+  000000014013CD20  rol     r13d, 1
+  000000014013CD23  add     edx, ecx
+  000000014013CD25  mov     [rsp+340h+var_318], r13d
+  000000014013CD2A  rol     r15d, 1
+  000000014013CD2D  mov     ecx, r9d
+  000000014013CD30  xor     ecx, r8d
+  000000014013CD33  mov     [rsp+340h+var_314], r15d
+  000000014013CD38  xor     ecx, r10d
+  000000014013CD3B  add     edx, r15d
+  000000014013CD3E  add     ecx, 6ED9EBA1h
+  000000014013CD44  rol     r10d, 1Eh
+  000000014013CD48  mov     eax, edx
+  000000014013CD4A  xor     r12d, r14d
+  000000014013CD4D  rol     eax, 5
+  000000014013CD50  add     ebx, eax
+  000000014013CD52  rol     r12d, 1
+  000000014013CD55  add     ebx, ecx
+  000000014013CD57  mov     [rsp+340h+var_2EC], r12d
+  000000014013CD5C  add     ebx, r12d
+  000000014013CD5F  mov     ecx, r10d
+  000000014013CD62  jmp     loc_14013CFB7
+  000000014013CD67  db 0E8h
+  000000014013CD68  dq 0F1E2810FFFFF40FAh, 8F1BBCDCC181FFFFh, 0C2C1CD0341D18B41h
+  000000014013CFB0  db 0E7h, 0Fh, 85h, 0D6h, 0D7h, 0FEh, 0FFh
+  000000014013CFB7  xor     ecx, r9d
+  000000014013CFBA  mov     eax, ebx
+  000000014013CFBC  rol     eax, 5
+  000000014013CFBF  xor     ecx, edx
+  000000014013CFC1  add     eax, r8d
+  000000014013CFC4  rol     edx, 1Eh
+  000000014013CFC7  add     ecx, eax
+  000000014013CFC9  lea     r8d, [r13+6ED9EBA1h]
+  000000014013CFD0  mov     r13d, [rsp+340h+var_2F4]
+  000000014013CFD5  add     r8d, ecx
+  000000014013CFD8  xor     r13d, [rsp+340h+var_320]
+  000000014013CFDD  mov     eax, r8d
+  000000014013CFE0  rol     eax, 5
+  000000014013CFE3  xor     r13d, r15d
+  000000014013CFE6  mov     r15d, [rsp+340h+var_308]
+  000000014013CFEB  add     eax, r9d
+  000000014013CFEE  xor     r13d, r15d
+  000000014013CFF1  mov     ecx, edx
+  000000014013CFF3  xor     ecx, r10d
+  000000014013CFF6  rol     r13d, 1
+  000000014013CFF9  xor     ecx, ebx
+  000000014013CFFB  mov     [rsp+340h+var_308], r13d
+  000000014013D000  add     ecx, eax
+  000000014013D002  rol     ebx, 1Eh
+  000000014013D005  mov     eax, [rsp+340h+var_2E4]
+  000000014013D009  xor     eax, r12d
+  000000014013D00C  lea     r9d, [r13+6ED9EBA1h]
+  000000014013D013  mov     r13d, [rsp+340h+var_31C]
+  000000014013D018  add     r9d, ecx
+  000000014013D01B  xor     eax, r13d
+  000000014013D01E  mov     ecx, ebx
+  000000014013D020  xor     eax, [rsp+340h+var_310]
+  000000014013D024  rol     eax, 1
+  000000014013D026  mov     [rsp+340h+var_2E4], eax
+  000000014013D02A  mov     eax, r9d
+  000000014013D02D  rol     eax, 5
+  000000014013D030  add     eax, r10d
+  000000014013D033  mov     r12d, [rsp+340h+var_2FC]
+  000000014013D038  mov     r10d, [rsp+340h+var_2E4]
+  000000014013D03D  xor     ecx, edx
+  000000014013D03F  xor     ecx, r8d
+  000000014013D042  add     r10d, 6ED9EBA1h
+  000000014013D049  add     ecx, eax
+  000000014013D04B  rol     r8d, 1Eh
+  000000014013D04F  mov     eax, [rsp+340h+var_2F4]
+  000000014013D053  add     r10d, ecx
+  000000014013D056  xor     eax, [rsp+340h+var_318]
+  000000014013D05A  mov     ecx, r8d
+  000000014013D05D  xor     eax, [rsp+340h+var_30C]
+  000000014013D061  xor     ecx, ebx
+  000000014013D063  jmp     short loc_14013D0C5
+  000000014013D065  db 41h, 5Dh, 41h
+  000000014013D068  dq 41FFFFB2CCE95D5Fh, 0BCE95C41E38B495Fh, 5C415E415DFFFF29h
+  000000014013D0C0  db 88h, 3, 0, 2 dup(0FFh)
+  000000014013D0C5  xor     eax, edi
+  000000014013D0C7  xor     ecx, r9d
+  000000014013D0CA  rol     eax, 1
+  000000014013D0CC  mov     [rsp+340h+var_2F4], eax
+  000000014013D0D0  mov     eax, r10d
+  000000014013D0D3  rol     eax, 5
+  000000014013D0D6  add     eax, edx
+  000000014013D0D8  rol     r9d, 1Eh
+  000000014013D0DC  add     ecx, eax
+  000000014013D0DE  mov     edx, [rsp+340h+var_2F4]
+  000000014013D0E2  mov     eax, [rsp+340h+var_308]
+  000000014013D0E6  add     edx, 6ED9EBA1h
+  000000014013D0EC  xor     eax, [rsp+340h+var_300]
+  000000014013D0F0  add     edx, ecx
+  000000014013D0F2  xor     eax, esi
+  000000014013D0F4  mov     ecx, r9d
+  000000014013D0F7  xor     eax, [rsp+340h+var_310]
+  000000014013D0FB  xor     ecx, r8d
+  000000014013D0FE  rol     eax, 1
+  000000014013D100  xor     ecx, r10d
+  000000014013D103  mov     [rsp+340h+var_320], eax
+  000000014013D107  mov     eax, edx
+  000000014013D109  rol     eax, 5
+  000000014013D10C  add     eax, ebx
+  000000014013D10E  rol     r10d, 1Eh
+  000000014013D112  mov     ebx, [rsp+340h+var_320]
+  000000014013D116  add     ecx, eax
+  000000014013D118  mov     eax, [rsp+340h+var_2E4]
+  000000014013D11C  add     ebx, 6ED9EBA1h
+  000000014013D122  xor     eax, r12d
+  000000014013D125  add     ebx, ecx
+  000000014013D127  xor     eax, r14d
+  000000014013D12A  mov     ecx, r10d
+  000000014013D12D  xor     eax, edi
+  000000014013D12F  xor     ecx, r9d
+  000000014013D132  rol     eax, 1
+  000000014013D134  xor     ecx, edx
+  000000014013D136  mov     [rsp+340h+var_31C], eax
+  000000014013D13A  mov     eax, ebx
+  000000014013D13C  mov     edi, [rsp+340h+var_31C]
+  000000014013D140  rol     eax, 5
+  000000014013D143  add     eax, r8d
+  000000014013D146  rol     edx, 1Eh
+  000000014013D149  add     ecx, eax
+  000000014013D14B  mov     eax, [rsp+340h+var_2F4]
+  000000014013D14F  xor     eax, [rsp+340h+var_314]
+  000000014013D153  lea     r8d, [rdi+6ED9EBA1h]
+  000000014013D15A  xor     eax, r11d
+  000000014013D15D  add     r8d, ecx
+  000000014013D160  xor     eax, esi
+  000000014013D162  jmp     loc_14013D20F
+  000000014013D167  db 49h
+  000000014013D168  dq 0FFFFCD53820FE503h, 487553F57A775E57h, 5F655E525C7D7156h
+  000000014013D208  db 0A5h, 0Fh, 80h, 3Eh, 33h, 2 dup(0FFh)
+  000000014013D20F  mov     ecx, edx
+  000000014013D211  rol     eax, 1
+  000000014013D213  xor     ecx, r10d
+  000000014013D216  mov     [rsp+340h+var_304], eax
+  000000014013D21A  xor     ecx, ebx
+  000000014013D21C  mov     esi, [rsp+340h+var_304]
+  000000014013D220  mov     eax, r8d
+  000000014013D223  rol     eax, 5
+  000000014013D226  add     eax, r9d
+  000000014013D229  rol     ebx, 1Eh
+  000000014013D22C  add     ecx, eax
+  000000014013D22E  mov     eax, [rsp+340h+var_320]
+  000000014013D232  xor     eax, [rsp+340h+var_2EC]
+  000000014013D236  lea     r9d, [rsi+6ED9EBA1h]
+  000000014013D23D  xor     eax, r15d
+  000000014013D240  add     r9d, ecx
+  000000014013D243  xor     eax, r14d
+  000000014013D246  xor     esi, [rsp+340h+var_308]
+  000000014013D24A  mov     ecx, ebx
+  000000014013D24C  mov     r14d, [rsp+340h+var_318]
+  000000014013D251  xor     ecx, edx
+  000000014013D253  xor     ecx, r8d
+  000000014013D256  rol     eax, 1
+  000000014013D258  mov     [rsp+340h+var_2F8], eax
+  000000014013D25C  xor     edi, r14d
+  000000014013D25F  xor     edi, r13d
+  000000014013D262  rol     r8d, 1Eh
+  000000014013D266  xor     edi, r11d
+  000000014013D269  mov     eax, r9d
+  000000014013D26C  rol     eax, 5
+  000000014013D26F  add     eax, r10d
+  000000014013D272  rol     edi, 1
+  000000014013D274  mov     r10d, [rsp+340h+var_2F8]
+  000000014013D279  add     ecx, eax
+  000000014013D27B  add     r10d, 6ED9EBA1h
+  000000014013D282  mov     [rsp+340h+var_2F0], edi
+  000000014013D286  add     r10d, ecx
+  000000014013D289  mov     ecx, r8d
+  000000014013D28C  xor     ecx, ebx
+  000000014013D28E  lea     r11d, [rdi+6ED9EBA1h]
+  000000014013D295  mov     edi, [rsp+340h+var_30C]
+  000000014013D299  xor     ecx, r9d
+  000000014013D29C  rol     r9d, 1Eh
+  000000014013D2A0  xor     esi, edi
+  000000014013D2A2  xor     esi, r15d
+  000000014013D2A5  mov     eax, r10d
+  000000014013D2A8  mov     r15d, [rsp+340h+var_2F8]
+  000000014013D2AD  xor     r15d, [rsp+340h+var_2E4]
+  000000014013D2B2  xor     r15d, [rsp+340h+var_300]
+  000000014013D2B7  rol     eax, 5
+  000000014013D2BA  jmp     short loc_14013D311
+  000000014013D2BC  dd 820F5241h
+  000000014013D2C0  dq 0FE0034900025543h, 0C4814800020C5883h, 0FE3C820F00000430h
+  000000014013D310  db 0FFh
+  000000014013D311  xor     r15d, r13d
+  000000014013D314  mov     r13d, [rsp+340h+var_2F0]
+  000000014013D319  add     eax, edx
+  000000014013D31B  xor     r13d, [rsp+340h+var_2F4]
+  000000014013D320  add     ecx, eax
+  000000014013D322  add     r11d, ecx
+  000000014013D325  rol     esi, 1
+  000000014013D327  mov     edx, r11d
+  000000014013D32A  rol     r15d, 1
+  000000014013D32D  rol     edx, 5
+  000000014013D330  xor     r13d, r12d
+  000000014013D333  xor     r13d, edi
+  000000014013D336  mov     [rsp+340h+var_30C], esi
+  000000014013D33A  rol     r13d, 1
+  000000014013D33D  mov     ecx, r9d
+  000000014013D340  or      ecx, r8d
+  000000014013D343  mov     [rsp+340h+var_2E0], r15d
+  000000014013D348  and     ecx, r10d
+  000000014013D34B  mov     [rsp+340h+var_310], r13d
+  000000014013D350  rol     r10d, 1Eh
+  000000014013D354  mov     eax, r9d
+  000000014013D357  and     eax, r8d
+  000000014013D35A  or      ecx, eax
+  000000014013D35C  mov     eax, r10d
+  000000014013D35F  add     ecx, ebx
+  000000014013D361  and     eax, r9d
+  000000014013D364  add     ecx, 8F1BBCDCh
+  000000014013D36A  lea     ebx, [rsi+rdx]
+  000000014013D36D  add     ebx, ecx
+  000000014013D36F  mov     ecx, r10d
+  000000014013D372  or      ecx, r9d
+  000000014013D375  mov     edx, ebx
+  000000014013D377  and     ecx, r11d
+  000000014013D37A  rol     edx, 5
+  000000014013D37D  or      ecx, eax
+  000000014013D37F  rol     r11d, 1Eh
+  000000014013D383  add     ecx, r8d
+  000000014013D386  mov     eax, r11d
+  000000014013D389  add     ecx, 8F1BBCDCh
+  000000014013D38F  and     eax, r10d
+  000000014013D392  lea     r8d, [r15+rdx]
+  000000014013D396  add     r8d, ecx
+  000000014013D399  mov     ecx, r11d
+  000000014013D39C  or      ecx, r10d
+  000000014013D39F  mov     edx, r8d
+  000000014013D3A2  and     ecx, ebx
+  000000014013D3A4  rol     edx, 5
+  000000014013D3A7  or      ecx, eax
+  000000014013D3A9  mov     r15d, [rsp+340h+var_320]
+  000000014013D3AE  add     ecx, r9d
+  000000014013D3B1  jmp     short loc_14013D40B
+  000000014013D3B3  db 0E8h, 0AFh, 0F7h, 2 dup(0FFh)
+  000000014013D3B8  dq 5C41FFFF77B9810Fh, 0E9E38B495E415D41h, 415F415DFFFF2DADh
+  000000014013D408  db 0E7h, 0FEh, 0FFh
+  000000014013D40B  mov     edi, [rsp+340h+var_308]
+  000000014013D40F  lea     r9d, [rdx+r13]
+  000000014013D413  add     ecx, 8F1BBCDCh
+  000000014013D419  rol     ebx, 1Eh
+  000000014013D41C  add     r9d, ecx
+  000000014013D41F  mov     eax, esi
+  000000014013D421  mov     esi, [rsp+340h+var_2EC]
+  000000014013D425  xor     eax, r15d
+  000000014013D428  xor     eax, [rsp+340h+var_314]
+  000000014013D42C  mov     edx, r9d
+  000000014013D42F  xor     eax, [rsp+340h+var_300]
+  000000014013D433  mov     ecx, ebx
+  000000014013D435  or      ecx, r11d
+  000000014013D438  rol     eax, 1
+  000000014013D43A  and     ecx, r8d
+  000000014013D43D  mov     [rsp+340h+var_2E8], eax
+  000000014013D441  rol     edx, 5
+  000000014013D444  mov     eax, ebx
+  000000014013D446  add     edx, [rsp+340h+var_2E8]
+  000000014013D44A  and     eax, r11d
+  000000014013D44D  or      ecx, eax
+  000000014013D44F  rol     r8d, 1Eh
+  000000014013D453  mov     eax, [rsp+340h+var_2E0]
+  000000014013D457  add     ecx, r10d
+  000000014013D45A  xor     eax, [rsp+340h+var_31C]
+  000000014013D45E  xor     eax, esi
+  000000014013D460  lea     r10d, [rdx-70E44324h]
+  000000014013D467  xor     eax, r12d
+  000000014013D46A  add     r10d, ecx
+  000000014013D46D  rol     eax, 1
+  000000014013D46F  mov     edx, r10d
+  000000014013D472  rol     edx, 5
+  000000014013D475  mov     r12d, r13d
+  000000014013D478  xor     r12d, [rsp+340h+var_304]
+  000000014013D47D  mov     ecx, r8d
+  000000014013D480  or      ecx, ebx
+  000000014013D482  mov     [rsp+340h+var_2EC], eax
+  000000014013D486  add     edx, [rsp+340h+var_2EC]
+  000000014013D48A  and     ecx, r9d
+  000000014013D48D  xor     r12d, r14d
+  000000014013D490  rol     r9d, 1Eh
+  000000014013D494  xor     r12d, [rsp+340h+var_314]
+  000000014013D499  mov     eax, r8d
+  000000014013D49C  rol     r12d, 1
+  000000014013D49F  and     eax, ebx
+  000000014013D4A1  or      ecx, eax
+  000000014013D4A3  mov     [rsp+340h+var_2DC], r12d
+  000000014013D4A8  add     ecx, r11d
+  000000014013D4AB  mov     eax, r9d
+  000000014013D4AE  lea     r11d, [rdx-70E44324h]
+  000000014013D4B5  jmp     short loc_14013D534
+  000000014013D4B7  db 0E8h
+  000000014013D4B8  dq 0FED7C0E8FFF5BBE4h, 41FFFF0D818D0FFFh, 48FFFF92A2830F56h
+  000000014013D530  db 0C7h, 57h, 2, 0
+  000000014013D534  and     eax, r8d
+  000000014013D537  add     r11d, ecx
+  000000014013D53A  mov     ecx, r9d
+  000000014013D53D  or      ecx, r8d
+  000000014013D540  mov     edx, r11d
+  000000014013D543  and     ecx, r10d
+  000000014013D546  rol     edx, 5
+  000000014013D549  or      ecx, eax
+  000000014013D54B  rol     r10d, 1Eh
+  000000014013D54F  add     ecx, ebx
+  000000014013D551  mov     eax, r10d
+  000000014013D554  add     ecx, 8F1BBCDCh
+  000000014013D55A  and     eax, r9d
+  000000014013D55D  lea     ebx, [r12+rdx]
+  000000014013D561  mov     r12d, [rsp+340h+var_2E8]
+  000000014013D566  xor     r12d, [rsp+340h+var_2F8]
+  000000014013D56B  add     ebx, ecx
+  000000014013D56D  xor     r12d, edi
+  000000014013D570  mov     edx, ebx
+  000000014013D572  xor     r12d, esi
+  000000014013D575  rol     edx, 5
+  000000014013D578  rol     r12d, 1
+  000000014013D57B  mov     ecx, r10d
+  000000014013D57E  or      ecx, r9d
+  000000014013D581  mov     [rsp+340h+var_308], r12d
+  000000014013D586  and     ecx, r11d
+  000000014013D589  or      ecx, eax
+  000000014013D58B  add     ecx, r8d
+  000000014013D58E  lea     r8d, [r12+rdx]
+  000000014013D592  mov     r13d, [rsp+340h+var_2EC]
+  000000014013D597  add     ecx, 8F1BBCDCh
+  000000014013D59D  xor     r13d, [rsp+340h+var_2F0]
+  000000014013D5A2  add     r8d, ecx
+  000000014013D5A5  xor     r13d, [rsp+340h+var_2E4]
+  000000014013D5AA  mov     edx, r8d
+  000000014013D5AD  mov     r12d, [rsp+340h+var_2DC]
+  000000014013D5B2  xor     r13d, r14d
+  000000014013D5B5  xor     r12d, [rsp+340h+var_30C]
+  000000014013D5BA  xor     r12d, [rsp+340h+var_2F4]
+  000000014013D5BF  mov     esi, [rsp+340h+var_308]
+  000000014013D5C3  xor     r12d, edi
+  000000014013D5C6  xor     esi, [rsp+340h+var_2E0]
+  000000014013D5CA  mov     r14d, [rsp+340h+var_31C]
+  000000014013D5CF  xor     esi, r15d
+  000000014013D5D2  xor     esi, [rsp+340h+var_2E4]
+  000000014013D5D6  rol     edx, 5
+  000000014013D5D9  rol     r11d, 1Eh
+  000000014013D5DD  rol     r13d, 1
+  000000014013D5E0  mov     ecx, r11d
+  000000014013D5E3  or      ecx, r10d
+  000000014013D5E6  jmp     short loc_14013D64E
+  000000014013D5E8  dq 0B88E0FFFF78A73E8h, 0FFFF42FEE9FFFF78h, 6432C8280E5B5674h
+  000000014013D648  db 0Fh, 81h, 0BEh, 0F1h, 2 dup(0FFh)
+  000000014013D64E  rol     r12d, 1
+  000000014013D651  and     ecx, ebx
+  000000014013D653  mov     [rsp+340h+var_2FC], r13d
+  000000014013D658  rol     ebx, 1Eh
+  000000014013D65B  mov     eax, r11d
+  000000014013D65E  and     eax, r10d
+  000000014013D661  rol     esi, 1
+  000000014013D663  or      ecx, eax
+  000000014013D665  mov     [rsp+340h+var_320], r12d
+  000000014013D66A  add     ecx, r9d
+  000000014013D66D  mov     [rsp+340h+var_300], esi
+  000000014013D671  add     ecx, 8F1BBCDCh
+  000000014013D677  lea     r9d, [rdx+r13]
+  000000014013D67B  xor     r13d, [rsp+340h+var_310]
+  000000014013D680  add     r9d, ecx
+  000000014013D683  mov     edx, r9d
+  000000014013D686  xor     r13d, r14d
+  000000014013D689  xor     r13d, [rsp+340h+var_2F4]
+  000000014013D68E  mov     ecx, ebx
+  000000014013D690  or      ecx, r11d
+  000000014013D693  rol     edx, 5
+  000000014013D696  and     ecx, r8d
+  000000014013D699  rol     r13d, 1
+  000000014013D69C  rol     r8d, 1Eh
+  000000014013D6A0  mov     eax, ebx
+  000000014013D6A2  and     eax, r11d
+  000000014013D6A5  mov     [rsp+340h+var_318], r13d
+  000000014013D6AA  or      ecx, eax
+  000000014013D6AC  mov     edi, r12d
+  000000014013D6AF  add     ecx, r10d
+  000000014013D6B2  mov     eax, r8d
+  000000014013D6B5  add     ecx, 8F1BBCDCh
+  000000014013D6BB  lea     r10d, [r12+rdx]
+  000000014013D6BF  add     r10d, ecx
+  000000014013D6C2  and     eax, ebx
+  000000014013D6C4  mov     edx, r10d
+  000000014013D6C7  mov     ecx, r8d
+  000000014013D6CA  or      ecx, ebx
+  000000014013D6CC  rol     edx, 5
+  000000014013D6CF  and     ecx, r9d
+  000000014013D6D2  rol     r9d, 1Eh
+  000000014013D6D6  or      ecx, eax
+  000000014013D6D8  mov     eax, r9d
+  000000014013D6DB  add     ecx, r11d
+  000000014013D6DE  and     eax, r8d
+  000000014013D6E1  add     ecx, 8F1BBCDCh
+  000000014013D6E7  lea     r11d, [rsi+rdx]
+  000000014013D6EB  add     r11d, ecx
+  000000014013D6EE  mov     ecx, r9d
+  000000014013D6F1  or      ecx, r8d
+  000000014013D6F4  jmp     loc_14013D82F
+  000000014013D6F9  db 49h, 3, 0E6h, 0Fh, 8Eh, 0EAh, 7Bh
+  000000014013D700  dq 0E8FFF5BA39E8FFFFh, 9257880FFFFEC801h, 0FFFFECCF0E8FFFFh
+  000000014013D828  db 2 dup(0FFh), 0E9h, 0A5h, 0CEh, 0FEh, 0FFh
+  000000014013D82F  mov     edx, r11d
+  000000014013D832  and     ecx, r10d
+  000000014013D835  rol     edx, 5
+  000000014013D838  or      ecx, eax
+  000000014013D83A  rol     r10d, 1Eh
+  000000014013D83E  add     ecx, ebx
+  000000014013D840  add     ecx, 8F1BBCDCh
+  000000014013D846  lea     ebx, [rdx+r13]
+  000000014013D84A  add     ebx, ecx
+  000000014013D84C  xor     edi, [rsp+340h+var_2E8]
+  000000014013D850  xor     edi, [rsp+340h+var_304]
+  000000014013D854  mov     ecx, r9d
+  000000014013D857  xor     esi, [rsp+340h+var_2EC]
+  000000014013D85B  or      ecx, r10d
+  000000014013D85E  xor     esi, [rsp+340h+var_2F8]
+  000000014013D862  and     ecx, r11d
+  000000014013D865  xor     edi, r15d
+  000000014013D868  rol     r11d, 1Eh
+  000000014013D86C  rol     edi, 1
+  000000014013D86E  xor     esi, r14d
+  000000014013D871  mov     eax, r9d
+  000000014013D874  rol     esi, 1
+  000000014013D876  and     eax, r10d
+  000000014013D879  mov     [rsp+340h+var_31C], edi
+  000000014013D87D  or      ecx, eax
+  000000014013D87F  mov     [rsp+340h+var_314], esi
+  000000014013D883  add     ecx, r8d
+  000000014013D886  mov     edx, ebx
+  000000014013D888  add     ecx, 8F1BBCDCh
+  000000014013D88E  rol     edx, 5
+  000000014013D891  mov     r15d, edi
+  000000014013D894  mov     eax, r11d
+  000000014013D897  xor     r15d, [rsp+340h+var_308]
+  000000014013D89C  and     eax, r10d
+  000000014013D89F  xor     r15d, [rsp+340h+var_30C]
+  000000014013D8A4  mov     r12d, r13d
+  000000014013D8A7  xor     r12d, [rsp+340h+var_2DC]
+  000000014013D8AC  lea     r8d, [rdi+rdx]
+  000000014013D8B0  xor     r12d, [rsp+340h+var_2F0]
+  000000014013D8B5  add     r8d, ecx
+  000000014013D8B8  xor     r12d, [rsp+340h+var_304]
+  000000014013D8BD  mov     ecx, r11d
+  000000014013D8C0  xor     r15d, [rsp+340h+var_2F8]
+  000000014013D8C5  or      ecx, r10d
+  000000014013D8C8  and     ecx, ebx
+  000000014013D8CA  rol     r12d, 1
+  000000014013D8CD  or      ecx, eax
+  000000014013D8CF  rol     ebx, 1Eh
+  000000014013D8D2  add     ecx, r9d
+  000000014013D8D5  rol     r15d, 1
+  000000014013D8D8  jmp     short loc_14013D949
+  000000014013D8DA  dw 79E8h, 0F5B9h, 0E8FFh
+  000000014013D8E0  dq 1FC8860FFFFF5B7Ch, 0FFFF6EB91E8FFFFh, 0F5541FFFED3D58Ah
+  000000014013D948  db 0
+  000000014013D949  add     ecx, 8F1BBCDCh
+  000000014013D94F  mov     [rsp+340h+var_2F4], r12d
+  000000014013D954  mov     edx, r8d
+  000000014013D957  mov     [rsp+340h+var_2F8], r15d
+  000000014013D95C  rol     edx, 5
+  000000014013D95F  mov     eax, ebx
+  000000014013D961  and     eax, r11d
+  000000014013D964  mov     r14d, esi
+  000000014013D967  xor     r14d, [rsp+340h+var_2FC]
+  000000014013D96C  xor     r14d, [rsp+340h+var_2E0]
+  000000014013D971  xor     r14d, [rsp+340h+var_2F0]
+  000000014013D976  lea     r9d, [rsi+rdx]
+  000000014013D97A  add     r9d, ecx
+  000000014013D97D  rol     r14d, 1
+  000000014013D980  mov     edx, r9d
+  000000014013D983  mov     [rsp+340h+var_304], r14d
+  000000014013D988  rol     edx, 5
+  000000014013D98B  mov     ecx, ebx
+  000000014013D98D  or      ecx, r11d
+  000000014013D990  add     r10d, edx
+  000000014013D993  and     ecx, r8d
+  000000014013D996  rol     r8d, 1Eh
+  000000014013D99A  or      ecx, eax
+  000000014013D99C  mov     eax, r8d
+  000000014013D99F  add     ecx, 8F1BBCDCh
+  000000014013D9A5  and     eax, ebx
+  000000014013D9A7  add     ecx, r12d
+  000000014013D9AA  add     r10d, ecx
+  000000014013D9AD  mov     ecx, r8d
+  000000014013D9B0  or      ecx, ebx
+  000000014013D9B2  mov     edi, r10d
+  000000014013D9B5  and     ecx, r9d
+  000000014013D9B8  rol     edi, 5
+  000000014013D9BB  or      ecx, eax
+  000000014013D9BD  rol     r9d, 1Eh
+  000000014013D9C1  add     edi, r11d
+  000000014013D9C4  add     ecx, 8F1BBCDCh
+  000000014013D9CA  add     ecx, r15d
+  000000014013D9CD  add     edi, ecx
+  000000014013D9CF  mov     r11d, edi
+  000000014013D9D2  rol     r11d, 5
+  000000014013D9D6  xor     r15d, [rsp+340h+var_300]
+  000000014013D9DB  add     r11d, ebx
+  000000014013D9DE  xor     r15d, [rsp+340h+var_2E8]
+  000000014013D9E3  mov     ecx, r9d
+  000000014013D9E6  xor     r15d, [rsp+340h+var_2E0]
+  000000014013D9EB  or      ecx, r8d
+  000000014013D9EE  and     ecx, r10d
+  000000014013D9F1  rol     r15d, 1
+  000000014013D9F4  rol     r10d, 1Eh
+  000000014013D9F8  jmp     short loc_14013DA49
+  000000014013D9FA  dw 348h, 0FE5h, 3983h
+  000000014013DA00  dq 0FFF78630E8FFFF15h, 5041FFFF5F92800Fh, 0F57FFFECF4B840Fh
+  000000014013DA48  db 0
+  000000014013DA49  mov     eax, r9d
+  000000014013DA4C  and     eax, r8d
+  000000014013DA4F  mov     [rsp+340h+var_2F0], r15d
+  000000014013DA54  or      ecx, eax
+  000000014013DA56  mov     esi, r12d
+  000000014013DA59  xor     esi, [rsp+340h+var_320]
+  000000014013DA5D  add     ecx, 8F1BBCDCh
+  000000014013DA63  xor     esi, [rsp+340h+var_310]
+  000000014013DA67  add     ecx, r14d
+  000000014013DA6A  xor     esi, [rsp+340h+var_30C]
+  000000014013DA6E  add     r11d, ecx
+  000000014013DA71  xor     r14d, r13d
+  000000014013DA74  rol     esi, 1
+  000000014013DA76  xor     r14d, [rsp+340h+var_2EC]
+  000000014013DA7B  mov     ecx, r10d
+  000000014013DA7E  xor     r14d, [rsp+340h+var_310]
+  000000014013DA83  or      ecx, r9d
+  000000014013DA86  and     ecx, edi
+  000000014013DA88  rol     r14d, 1
+  000000014013DA8B  rol     edi, 1Eh
+  000000014013DA8E  mov     eax, r10d
+  000000014013DA91  and     eax, r9d
+  000000014013DA94  mov     [rsp+340h+var_30C], esi
+  000000014013DA98  or      ecx, eax
+  000000014013DA9A  mov     [rsp+340h+var_310], r14d
+  000000014013DA9F  add     ecx, 8F1BBCDCh
+  000000014013DAA5  mov     ebx, r11d
+  000000014013DAA8  add     ecx, esi
+  000000014013DAAA  rol     ebx, 5
+  000000014013DAAD  add     ebx, r8d
+  000000014013DAB0  mov     eax, edi
+  000000014013DAB2  add     ebx, ecx
+  000000014013DAB4  and     eax, r10d
+  000000014013DAB7  mov     r8d, ebx
+  000000014013DABA  mov     ecx, edi
+  000000014013DABC  or      ecx, r10d
+  000000014013DABF  rol     r8d, 5
+  000000014013DAC3  and     ecx, r11d
+  000000014013DAC6  add     r8d, r9d
+  000000014013DAC9  or      ecx, eax
+  000000014013DACB  rol     r11d, 1Eh
+  000000014013DACF  add     ecx, 8F1BBCDCh
+  000000014013DAD5  mov     eax, r11d
+  000000014013DAD8  add     ecx, r15d
+  000000014013DADB  and     eax, edi
+  000000014013DADD  add     r8d, ecx
+  000000014013DAE0  mov     r13d, esi
+  000000014013DAE3  xor     r13d, [rsp+340h+var_31C]
+  000000014013DAE8  mov     ecx, r11d
+  000000014013DAEB  xor     r13d, [rsp+340h+var_2DC]
+  000000014013DAF0  jmp     loc_14013DB8B
+  000000014013DAF5  db 49h, 8Bh, 0E3h
+  000000014013DAF8  dq 0E8FFFF0898E95D41h, 4F78800FFFFFA4E9h, 65CAE68DE659FFFFh
+  000000014013DB88  mov     ebx, [rbp+240h+var_1E7]
+  000000014013DB8B  or      ecx, edi
+  000000014013DB8D  xor     r13d, [rsp+340h+var_2E8]
+  000000014013DB92  and     ecx, ebx
+  000000014013DB94  or      ecx, eax
+  000000014013DB96  rol     ebx, 1Eh
+  000000014013DB99  add     ecx, 8F1BBCDCh
+  000000014013DB9F  rol     r13d, 1
+  000000014013DBA2  add     ecx, r14d
+  000000014013DBA5  mov     [rsp+340h+var_2E0], r13d
+  000000014013DBAA  mov     r9d, r8d
+  000000014013DBAD  mov     eax, ebx
+  000000014013DBAF  rol     r9d, 5
+  000000014013DBB3  and     eax, r11d
+  000000014013DBB6  add     r9d, r10d
+  000000014013DBB9  add     r9d, ecx
+  000000014013DBBC  mov     ecx, ebx
+  000000014013DBBE  or      ecx, r11d
+  000000014013DBC1  mov     r10d, r9d
+  000000014013DBC4  and     ecx, r8d
+  000000014013DBC7  rol     r10d, 5
+  000000014013DBCB  or      ecx, eax
+  000000014013DBCD  add     ecx, 8F1BBCDCh
+  000000014013DBD3  add     ecx, r13d
+  000000014013DBD6  rol     r8d, 1Eh
+  000000014013DBDA  add     r10d, edi
+  000000014013DBDD  xor     r14d, r12d
+  000000014013DBE0  mov     edi, [rsp+340h+var_2FC]
+  000000014013DBE4  add     r10d, ecx
+  000000014013DBE7  xor     r14d, edi
+  000000014013DBEA  mov     eax, r9d
+  000000014013DBED  xor     r14d, [rsp+340h+var_2DC]
+  000000014013DBF2  xor     eax, r8d
+  000000014013DBF5  xor     eax, ebx
+  000000014013DBF7  rol     r9d, 1Eh
+  000000014013DBFB  add     eax, 0CA62C1D6h
+  000000014013DC00  rol     r14d, 1
+  000000014013DC03  mov     edx, r10d
+  000000014013DC06  mov     [rsp+340h+var_2FC], r14d
+  000000014013DC0B  rol     edx, 5
+  000000014013DC0E  mov     esi, r15d
+  000000014013DC11  xor     esi, [rsp+340h+var_314]
+  000000014013DC15  add     edx, r11d
+  000000014013DC18  xor     esi, [rsp+340h+var_308]
+  000000014013DC1C  mov     r12d, r13d
+  000000014013DC1F  xor     r12d, [rsp+340h+var_2F8]
+  000000014013DC24  xor     r12d, [rsp+340h+var_320]
+  000000014013DC29  xor     esi, [rsp+340h+var_2EC]
+  000000014013DC2D  xor     r12d, [rsp+340h+var_308]
+  000000014013DC32  rol     esi, 1
+  000000014013DC34  add     eax, esi
+  000000014013DC36  jmp     short loc_14013DC83
+  000000014013DC38  dq 0C48148FFFFAB33E9h, 7CCD850F00000450h, 5DFFFEDD57E9FFFFh
+  000000014013DC80  db 1Dh, 2 dup(0FFh)
+  000000014013DC83  rol     r12d, 1
+  000000014013DC86  add     edx, eax
+  000000014013DC88  mov     [rsp+340h+var_2E8], esi
+  000000014013DC8C  mov     eax, r10d
+  000000014013DC8F  mov     [rsp+340h+var_2EC], r12d
+  000000014013DC94  xor     eax, r9d
+  000000014013DC97  rol     r10d, 1Eh
+  000000014013DC9B  xor     eax, r8d
+  000000014013DC9E  mov     ecx, edx
+  000000014013DCA0  add     eax, 0CA62C1D6h
+  000000014013DCA5  rol     ecx, 5
+  000000014013DCA8  add     eax, r14d
+  000000014013DCAB  add     ebx, ecx
+  000000014013DCAD  add     ebx, eax
+  000000014013DCAF  mov     r11d, esi
+  000000014013DCB2  xor     r11d, [rsp+340h+var_304]
+  000000014013DCB7  mov     eax, edx
+  000000014013DCB9  xor     r11d, [rsp+340h+var_300]
+  000000014013DCBE  xor     eax, r10d
+  000000014013DCC1  xor     eax, r9d
+  000000014013DCC4  rol     edx, 1Eh
+  000000014013DCC7  add     eax, 0CA62C1D6h
+  000000014013DCCC  xor     r11d, edi
+  000000014013DCCF  add     eax, r12d
+  000000014013DCD2  rol     r11d, 1
+  000000014013DCD5  mov     ecx, ebx
+  000000014013DCD7  mov     [rsp+340h+var_308], r11d
+  000000014013DCDC  rol     ecx, 5
+  000000014013DCDF  add     r11d, 0CA62C1D6h
+  000000014013DCE6  add     r8d, ecx
+  000000014013DCE9  mov     edi, r14d
+  000000014013DCEC  xor     edi, [rsp+340h+var_30C]
+  000000014013DCF0  add     r8d, eax
+  000000014013DCF3  xor     edi, [rsp+340h+var_318]
+  000000014013DCF7  mov     eax, ebx
+  000000014013DCF9  xor     edi, [rsp+340h+var_320]
+  000000014013DCFD  xor     eax, edx
+  000000014013DCFF  xor     eax, r10d
+  000000014013DD02  rol     ebx, 1Eh
+  000000014013DD05  add     eax, r11d
+  000000014013DD08  rol     edi, 1
+  000000014013DD0A  mov     ecx, r8d
+  000000014013DD0D  mov     [rsp+340h+var_320], edi
+  000000014013DD11  rol     ecx, 5
+  000000014013DD14  add     r9d, ecx
+  000000014013DD17  add     r9d, eax
+  000000014013DD1A  mov     eax, r8d
+  000000014013DD1D  xor     eax, ebx
+  000000014013DD1F  mov     ecx, r9d
+  000000014013DD22  xor     eax, edx
+  000000014013DD24  jmp     loc_14013DEAD
+  000000014013DD29  db 0E8h, 4Bh, 0C0h, 2 dup(0FFh), 0Fh, 85h
+  000000014013DD30  dq 0FFAF68E8FFFFC327h, 0E8FFFFF790890FFFh, 0CD77880FFFFF2F5Dh
+  000000014013DEA8  db 85h, 58h, 4Fh, 2 dup(0FFh)
+  000000014013DEAD  rol     ecx, 5
+  000000014013DEB0  add     eax, 0CA62C1D6h
+  000000014013DEB5  add     r10d, ecx
+  000000014013DEB8  xor     esi, [rsp+340h+var_2F8]
+  000000014013DEBC  add     eax, edi
+  000000014013DEBE  xor     esi, [rsp+340h+var_314]
+  000000014013DEC2  add     r10d, eax
+  000000014013DEC5  xor     r14d, [rsp+340h+var_304]
+  000000014013DECA  mov     ecx, r10d
+  000000014013DECD  xor     r14d, [rsp+340h+var_2F4]
+  000000014013DED2  xor     edi, r13d
+  000000014013DED5  xor     edi, [rsp+340h+var_2F4]
+  000000014013DED9  mov     eax, r9d
+  000000014013DEDC  xor     edi, [rsp+340h+var_31C]
+  000000014013DEE0  mov     r11d, r12d
+  000000014013DEE3  xor     r11d, r15d
+  000000014013DEE6  rol     ecx, 5
+  000000014013DEE9  xor     r11d, [rsp+340h+var_31C]
+  000000014013DEEE  xor     r11d, [rsp+340h+var_300]
+  000000014013DEF3  mov     r15d, [rsp+340h+var_308]
+  000000014013DEF8  xor     r15d, [rsp+340h+var_310]
+  000000014013DEFD  xor     r15d, [rsp+340h+var_314]
+  000000014013DF02  xor     r15d, [rsp+340h+var_318]
+  000000014013DF07  rol     r11d, 1
+  000000014013DF0A  rol     r8d, 1Eh
+  000000014013DF0E  xor     esi, r11d
+  000000014013DF11  xor     eax, r8d
+  000000014013DF14  rol     r9d, 1Eh
+  000000014013DF18  xor     eax, ebx
+  000000014013DF1A  mov     [rsp+340h+var_300], r11d
+  000000014013DF1F  add     eax, edx
+  000000014013DF21  rol     r15d, 1
+  000000014013DF24  add     eax, 0CA62C1D6h
+  000000014013DF29  rol     edi, 1
+  000000014013DF2B  lea     edx, [r11+rcx]
+  000000014013DF2F  rol     esi, 1
+  000000014013DF31  add     edx, eax
+  000000014013DF33  mov     [rsp+340h+var_318], edi
+  000000014013DF37  mov     ecx, edx
+  000000014013DF39  mov     [rsp+340h+var_31C], esi
+  000000014013DF3D  rol     ecx, 5
+  000000014013DF40  mov     eax, r9d
+  000000014013DF43  xor     eax, r8d
+  000000014013DF46  xor     r14d, r15d
+  000000014013DF49  xor     eax, r10d
+  000000014013DF4C  rol     r14d, 1
+  000000014013DF4F  add     eax, ebx
+  000000014013DF51  rol     r10d, 1Eh
+  000000014013DF55  add     eax, 0CA62C1D6h
+  000000014013DF5A  mov     [rsp+340h+var_314], r14d
+  000000014013DF5F  jmp     loc_14013E0CB
+  000000014013DF64  dd 0B8C48148h
+  000000014013DF68  dq 0FF49C7880F000003h, 230E800FE20349FFh, 6BFFFFFF10E9FFFFh
+  000000014013E0C8  db 6Eh, 2 dup(0FFh)
+  000000014013E0CB  lea     ebx, [r15+rcx]
+  000000014013E0CF  add     ebx, eax
+  000000014013E0D1  mov     eax, r10d
+  000000014013E0D4  xor     eax, r9d
+  000000014013E0D7  mov     ecx, ebx
+  000000014013E0D9  xor     eax, edx
+  000000014013E0DB  rol     ecx, 5
+  000000014013E0DE  add     eax, r8d
+  000000014013E0E1  rol     edx, 1Eh
+  000000014013E0E4  add     eax, 0CA62C1D6h
+  000000014013E0E9  lea     r8d, [rdi+rcx]
+  000000014013E0ED  add     r8d, eax
+  000000014013E0F0  mov     eax, edx
+  000000014013E0F2  xor     eax, r10d
+  000000014013E0F5  mov     ecx, r8d
+  000000014013E0F8  xor     eax, ebx
+  000000014013E0FA  rol     ecx, 5
+  000000014013E0FD  add     eax, r9d
+  000000014013E100  rol     ebx, 1Eh
+  000000014013E103  add     eax, 0CA62C1D6h
+  000000014013E108  add     r10d, 0CA62C1D6h
+  000000014013E10F  lea     r9d, [rsi+rcx]
+  000000014013E113  add     r9d, eax
+  000000014013E116  mov     eax, ebx
+  000000014013E118  xor     eax, edx
+  000000014013E11A  mov     r11d, r9d
+  000000014013E11D  xor     eax, r8d
+  000000014013E120  rol     r11d, 5
+  000000014013E124  add     eax, r10d
+  000000014013E127  rol     r8d, 1Eh
+  000000014013E12B  add     r11d, r14d
+  000000014013E12E  mov     r10d, r12d
+  000000014013E131  add     r11d, eax
+  000000014013E134  xor     r10d, [rsp+340h+var_30C]
+  000000014013E139  xor     r10d, [rsp+340h+var_2F8]
+  000000014013E13E  add     edx, 0CA62C1D6h
+  000000014013E144  mov     r13d, [rsp+340h+var_308]
+  000000014013E149  xor     r10d, edi
+  000000014013E14C  xor     r13d, [rsp+340h+var_2F0]
+  000000014013E151  mov     edi, r11d
+  000000014013E154  xor     r13d, [rsp+340h+var_304]
+  000000014013E159  mov     eax, r8d
+  000000014013E15C  xor     eax, ebx
+  000000014013E15E  rol     r10d, 1
+  000000014013E161  xor     eax, r9d
+  000000014013E164  mov     [rsp+340h+var_2F8], r10d
+  000000014013E169  add     eax, edx
+  000000014013E16B  rol     r9d, 1Eh
+  000000014013E16F  mov     edx, [rsp+340h+var_320]
+  000000014013E173  add     ebx, 0CA62C1D6h
+  000000014013E179  jmp     loc_14013E21E
+  000000014013E17E  dw 46E8h
+  000000014013E180  dq 15CF7890FFFFFC5h, 480C4814800h, 8B49FFFF74148C0Fh, 8E80E95F415E41E3h
+  000000014013E218  db 5Dh, 0E9h, 0F2h, 0F8h, 2 dup(0FFh)
+  000000014013E21E  xor     edx, [rsp+340h+var_310]
+  000000014013E222  xor     r13d, esi
+  000000014013E225  xor     edx, [rsp+340h+var_30C]
+  000000014013E229  xor     edx, r14d
+  000000014013E22C  rol     edi, 5
+  000000014013E22F  add     edi, r10d
+  000000014013E232  rol     r13d, 1
+  000000014013E235  add     edi, eax
+  000000014013E237  rol     edx, 1
+  000000014013E239  mov     eax, r9d
+  000000014013E23C  mov     r12d, edi
+  000000014013E23F  xor     eax, r8d
+  000000014013E242  rol     r12d, 5
+  000000014013E246  xor     eax, r11d
+  000000014013E249  add     r12d, r13d
+  000000014013E24C  add     eax, ebx
+  000000014013E24E  rol     r11d, 1Eh
+  000000014013E252  mov     ebx, [rsp+340h+var_2E0]
+  000000014013E256  add     r12d, eax
+  000000014013E259  xor     ebx, [rsp+340h+var_2F0]
+  000000014013E25D  mov     eax, r11d
+  000000014013E260  xor     eax, r9d
+  000000014013E263  xor     ebx, r10d
+  000000014013E266  xor     ebx, [rsp+340h+var_300]
+  000000014013E26A  xor     eax, edi
+  000000014013E26C  mov     r10d, [rsp+340h+var_2E8]
+  000000014013E271  add     eax, 0CA62C1D6h
+  000000014013E276  xor     r10d, [rsp+340h+var_310]
+  000000014013E27B  add     eax, r8d
+  000000014013E27E  add     r9d, 0CA62C1D6h
+  000000014013E285  rol     edi, 1Eh
+  000000014013E288  xor     r10d, r13d
+  000000014013E28B  rol     ebx, 1
+  000000014013E28D  xor     r10d, r15d
+  000000014013E290  mov     r14d, r12d
+  000000014013E293  rol     r14d, 5
+  000000014013E297  add     r14d, edx
+  000000014013E29A  rol     r10d, 1
+  000000014013E29D  add     r14d, eax
+  000000014013E2A0  mov     eax, edi
+  000000014013E2A2  xor     eax, r11d
+  000000014013E2A5  mov     esi, r14d
+  000000014013E2A8  xor     eax, r12d
+  000000014013E2AB  rol     esi, 5
+  000000014013E2AE  add     eax, r9d
+  000000014013E2B1  rol     r12d, 1Eh
+  000000014013E2B5  mov     r9d, [rsp+340h+var_2FC]
+  000000014013E2BA  add     esi, ebx
+  000000014013E2BC  xor     r9d, [rsp+340h+var_2E0]
+  000000014013E2C1  add     esi, eax
+  000000014013E2C3  jmp     loc_14013E407
+  000000014013E2C8  dq 0BA870FFFF6DE73E8h, 0FFF5AF90E8FFFF51h, 118A0FFFFFD1B9E8h
+  000000014013E400  db 5Eh, 5Dh, 0E9h, 31h, 0D1h, 2 dup(0FFh)
+  000000014013E407  xor     r9d, edx
+  000000014013E40A  add     r11d, 0CA62C1D6h
+  000000014013E411  xor     r9d, [rsp+340h+var_318]
+  000000014013E416  mov     eax, r12d
+  000000014013E419  xor     eax, edi
+  000000014013E41B  rol     r9d, 1
+  000000014013E41E  xor     eax, r14d
+  000000014013E421  mov     r15d, esi
+  000000014013E424  rol     r15d, 5
+  000000014013E428  add     eax, r11d
+  000000014013E42B  add     r15d, r10d
+  000000014013E42E  rol     r14d, 1Eh
+  000000014013E432  add     r15d, eax
+  000000014013E435  mov     ecx, r15d
+  000000014013E438  rol     ecx, 5
+  000000014013E43B  mov     r8d, [rsp+340h+var_2EC]
+  000000014013E440  mov     eax, r14d
+  000000014013E443  xor     r8d, [rsp+340h+var_2E8]
+  000000014013E448  xor     eax, r12d
+  000000014013E44B  xor     eax, esi
+  000000014013E44D  add     r12d, 0CA62C1D6h
+  000000014013E454  add     eax, edi
+  000000014013E456  rol     esi, 1Eh
+  000000014013E459  add     eax, 0CA62C1D6h
+  000000014013E45E  lea     edi, [r9+rcx]
+  000000014013E462  add     edi, eax
+  000000014013E464  xor     r8d, ebx
+  000000014013E467  xor     r8d, [rsp+340h+var_31C]
+  000000014013E46C  mov     eax, esi
+  000000014013E46E  xor     eax, r14d
+  000000014013E471  rol     r8d, 1
+  000000014013E474  xor     eax, r15d
+  000000014013E477  mov     r11d, edi
+  000000014013E47A  add     eax, r12d
+  000000014013E47D  rol     r15d, 1Eh
+  000000014013E481  mov     r12d, [rsp+340h+var_308]
+  000000014013E486  mov     ecx, r15d
+  000000014013E489  xor     ecx, esi
+  000000014013E48B  rol     r11d, 5
+  000000014013E48F  xor     ecx, edi
+  000000014013E491  add     r11d, r8d
+  000000014013E494  add     r11d, eax
+  000000014013E497  rol     edi, 1Eh
+  000000014013E49A  mov     eax, r12d
+  000000014013E49D  add     ecx, 0CA62C1D6h
+  000000014013E4A3  xor     eax, [rsp+340h+var_2FC]
+  000000014013E4A7  xor     r12d, r8d
+  000000014013E4AA  xor     eax, r10d
+  000000014013E4AD  xor     r12d, r13d
+  000000014013E4B0  xor     eax, [rsp+340h+var_314]
+  000000014013E4B4  jmp     loc_14013E617
+  000000014013E4B9  db 0E8h, 2, 80h, 0F7h, 0FFh, 0Fh, 8Fh
+  000000014013E4C0  dq 8A0F5641000056ACh, 0FE70349000101D8h, 2709E8FFFEC2788Ah
+  000000014013E610  db 0FFh, 0Fh, 8Fh, 0D8h, 0D3h, 2 dup(0FFh)
+  000000014013E617  mov     ebx, r11d
+  000000014013E61A  xor     r12d, [rsp+340h+var_300]
+  000000014013E61F  mov     r10d, [rbp+240h+var_1D8]
+  000000014013E623  rol     eax, 1
+  000000014013E625  add     eax, r14d
+  000000014013E628  rol     ebx, 5
+  000000014013E62B  add     ebx, eax
+  000000014013E62D  rol     r12d, 1
+  000000014013E630  mov     eax, [rsp+340h+var_320]
+  000000014013E634  add     ebx, ecx
+  000000014013E636  xor     eax, [rsp+340h+var_2EC]
+  000000014013E63A  mov     edx, ebx
+  000000014013E63C  xor     eax, r9d
+  000000014013E63F  rol     edx, 5
+  000000014013E642  xor     eax, [rsp+340h+var_2F8]
+  000000014013E646  mov     ecx, edi
+  000000014013E648  rol     eax, 1
+  000000014013E64A  xor     ecx, r15d
+  000000014013E64D  add     eax, esi
+  000000014013E64F  xor     ecx, r11d
+  000000014013E652  mov     esi, [rbp+240h+var_1D4]
+  000000014013E655  add     edx, eax
+  000000014013E657  rol     r11d, 1Eh
+  000000014013E65B  add     r15d, 0CA62C1D6h
+  000000014013E662  add     esi, r11d
+  000000014013E665  add     ecx, 0CA62C1D6h
+  000000014013E66B  add     ecx, edx
+  000000014013E66D  mov     [rbp+240h+var_1D4], esi
+  000000014013E670  mov     eax, ecx
+  000000014013E672  rol     eax, 5
+  000000014013E675  add     r12d, eax
+  000000014013E678  mov     eax, r11d
+  000000014013E67B  mov     r11d, [rbp+240h+var_1D0]
+  000000014013E67F  xor     eax, edi
+  000000014013E681  xor     eax, ebx
+  000000014013E683  rol     ebx, 1Eh
+  000000014013E686  add     eax, r15d
+  000000014013E689  add     r10d, ebx
+  000000014013E68C  add     eax, [rbp+240h+var_1E0]
+  000000014013E68F  mov     r15d, [rbp+240h+var_1DC]
+  000000014013E693  add     r12d, eax
+  000000014013E696  add     r15d, ecx
+  000000014013E699  mov     [rbp+240h+var_1E0], r12d
+  000000014013E69D  add     r11d, edi
+  000000014013E6A0  mov     [rbp+240h+var_1DC], r15d
+  000000014013E6A4  mov     [rbp+240h+var_1D8], r10d
+  000000014013E6A8  mov     rax, [rbp+240h+var_290]
+  000000014013E6AC  mov     [rbp+240h+var_1D0], r11d
+  000000014013E6B0  lea     rcx, [rax+3Fh]
+  000000014013E6B4  mov     [rbp+240h+var_280], rcx
+  000000014013E6B8  jmp     loc_14013E916
+  000000014013E6BD  db 0E8h, 4Eh, 9Eh
+  000000014013E6C0  dq 0FFFED98A8C0FFFF7h, 5C0C1C38B41C7D1h, 446ED9EBA105C384h
+  000000014013E910  jo      loc_14013A680
+  000000014013E916  cmp     rcx, 8
+  000000014013E91A  jnb     loc_140142970
+  000000014013E920  jmp     loc_14013E9CF
+  000000014013E925  db 74h, 0E0h, 57h
+  000000014013E928  dq 947C58EB8D839050h, 37FA5271417B7471h, 507659DA79492E7Dh
+  000000014013E9CF  lea     rdx, [rsp+340h+var_2D0]
+  000000014013E9D4  sub     rdx, rax
+  000000014013E9D7  lea     rax, [rbp+240h+var_268]
+  000000014013E9DB  sub     rdx, rax
+  000000014013E9DE  sub     rdx, 2
+  000000014013E9E2  mov     [rbp-38h], rdx
+  000000014013E9E6  jmp     loc_14013EB4C
+  000000014013E9EB  db 0E8h, 28h, 0DAh, 0F6h, 0FFh
+  000000014013E9F0  dq 35E8FFFED2CB800Fh, 0BA6E8FFF5A7h, 7976FFFF8853810Fh
+  000000014013EB48  db 63h, 64h, 2 dup(0FFh)
+  000000014013EB4C  lea     rbx, [rbp+rcx+240h+var_2A8+3]
+  000000014013EB51  mov     r8d, 10h
+  000000014013EB57  jmp     loc_14013ECAD
+  000000014013EB5C  dd 168F0F57h
+  000000014013EB60  dq 3E870F5141FFFEE4h, 0FFFF2E2EE8FFFF2Eh, 3344FFFFD0BE840Fh
+  000000014013ECA8  db 83h, 18h, 0Ch, 2 dup(0FFh)
+  000000014013ECAD  movzx   eax, byte ptr [rbx-1]
+  000000014013ECB1  movzx   ecx, byte ptr [rbx-2]
+  000000014013ECB5  shl     ecx, 8
+  000000014013ECB8  or      ecx, eax
+  000000014013ECBA  movzx   eax, byte ptr [rbx]
+  000000014013ECBD  shl     ecx, 8
+  000000014013ECC0  or      ecx, eax
+  000000014013ECC2  movzx   eax, byte ptr [rbx+1]
+  000000014013ECC6  shl     ecx, 8
+  000000014013ECC9  or      ecx, eax
+  000000014013ECCB  mov     [rbx+rdx], ecx
+  000000014013ECCE  lea     rbx, [rbx+4]
+  000000014013ECD2  sub     r8, 1
+  000000014013ECD6  jnz     short loc_14013ECAD
+  000000014013ECD8  jmp     loc_14013EF0C
+  000000014013ECDD  db 41h, 23h, 0CBh
+  000000014013ECE0  dq 0F5C80BFED241D38Bh, 81EBEF804105C2C1h, 0C141F88F1BBCDCC1h
+  000000014013EF08  retn    177h
+  000000014013EF0B  align 4
+  000000014013EF0C  mov     r13d, [rsp+340h+var_2C4]
+  000000014013EF11  add     r11d, 5A827999h
+  000000014013EF18  mov     r8d, esi
+  000000014013EF1B  mov     r9d, r10d
+  000000014013EF1E  xor     r8d, r10d
+  000000014013EF21  mov     eax, r12d
+  000000014013EF24  rol     eax, 5
+  000000014013EF27  and     r8d, r15d
+  000000014013EF2A  add     eax, [rsp+340h+var_2D0]
+  000000014013EF2E  xor     r8d, esi
+  000000014013EF31  add     r8d, eax
+  000000014013EF34  mov     ebx, r12d
+  000000014013EF37  add     r8d, r11d
+  000000014013EF3A  rol     ebx, 1Eh
+  000000014013EF3D  mov     eax, r8d
+  000000014013EF40  mov     edx, r15d
+  000000014013EF43  rol     eax, 5
+  000000014013EF46  mov     ecx, ebx
+  000000014013EF48  add     eax, 5A827999h
+  000000014013EF4D  rol     edx, 1Eh
+  000000014013EF50  add     eax, [rsp+340h+var_2CC]
+  000000014013EF54  xor     ecx, edx
+  000000014013EF56  xor     r9d, edx
+  000000014013EF59  and     ecx, r8d
+  000000014013EF5C  xor     ecx, edx
+  000000014013EF5E  rol     r8d, 1Eh
+  000000014013EF62  and     r9d, r12d
+  000000014013EF65  mov     r11d, r8d
+  000000014013EF68  mov     r12d, [rsp+340h+var_2C8]
+  000000014013EF6D  xor     r9d, r10d
+  000000014013EF70  add     r9d, eax
+  000000014013EF73  xor     r11d, ebx
+  000000014013EF76  add     r9d, esi
+  000000014013EF79  add     r10d, 5A827999h
+  000000014013EF80  and     r11d, r9d
+  000000014013EF83  mov     eax, r9d
+  000000014013EF86  rol     eax, 5
+  000000014013EF89  xor     r11d, ebx
+  000000014013EF8C  add     eax, r12d
+  000000014013EF8F  rol     r9d, 1Eh
+  000000014013EF93  add     ecx, eax
+  000000014013EF95  mov     edi, r9d
+  000000014013EF98  add     r10d, ecx
+  000000014013EF9B  xor     edi, r8d
+  000000014013EF9E  and     edi, r10d
+  000000014013EFA1  mov     eax, r10d
+  000000014013EFA4  rol     eax, 5
+  000000014013EFA7  xor     edi, r8d
+  000000014013EFAA  add     eax, 5A827999h
+  000000014013EFAF  rol     r10d, 1Eh
+  000000014013EFB3  jmp     loc_14013F03C
+  000000014013EFB8  dq 0EF800FFFF7748BE8h, 0AF728E0F56FFFF1Bh, 9B7705F7795FFFFFh
+  000000014013F038  db 0B2h, 0B7h, 2 dup(0FFh)
+  000000014013F03C  add     eax, r13d
+  000000014013F03F  mov     esi, r10d
+  000000014013F042  add     r11d, eax
+  000000014013F045  xor     esi, r9d
+  000000014013F048  add     r11d, edx
+  000000014013F04B  mov     edx, [rbp+240h+var_2C0]
+  000000014013F04E  add     edx, 5A827999h
+  000000014013F054  and     esi, r11d
+  000000014013F057  xor     esi, r9d
+  000000014013F05A  mov     eax, r11d
+  000000014013F05D  rol     eax, 5
+  000000014013F060  add     eax, edx
+  000000014013F062  rol     r11d, 1Eh
+  000000014013F066  mov     edx, [rbp+240h+var_2BC]
+  000000014013F069  add     edi, eax
+  000000014013F06B  add     edx, 5A827999h
+  000000014013F071  add     edi, ebx
+  000000014013F073  mov     eax, edi
+  000000014013F075  mov     ecx, r11d
+  000000014013F078  rol     eax, 5
+  000000014013F07B  xor     ecx, r10d
+  000000014013F07E  add     eax, edx
+  000000014013F080  and     ecx, edi
+  000000014013F082  mov     edx, [rbp+240h+var_2B8]
+  000000014013F085  add     esi, eax
+  000000014013F087  add     esi, r8d
+  000000014013F08A  xor     ecx, r10d
+  000000014013F08D  mov     eax, esi
+  000000014013F08F  rol     eax, 5
+  000000014013F092  add     edx, eax
+  000000014013F094  add     ecx, 5A827999h
+  000000014013F09A  add     edx, ecx
+  000000014013F09C  mov     ebx, [rbp+240h+var_2B4]
+  000000014013F09F  mov     r8d, [rbp+240h+var_2B0]
+  000000014013F0A3  add     edx, r9d
+  000000014013F0A6  mov     r9d, [rbp+240h+var_2AC]
+  000000014013F0AA  mov     eax, edx
+  000000014013F0AC  rol     eax, 5
+  000000014013F0AF  add     ebx, eax
+  000000014013F0B1  rol     edi, 1Eh
+  000000014013F0B4  mov     ecx, edi
+  000000014013F0B6  xor     ecx, r11d
+  000000014013F0B9  and     ecx, esi
+  000000014013F0BB  rol     esi, 1Eh
+  000000014013F0BE  xor     ecx, r11d
+  000000014013F0C1  add     ecx, 5A827999h
+  000000014013F0C7  add     ebx, ecx
+  000000014013F0C9  mov     ecx, esi
+  000000014013F0CB  xor     ecx, edi
+  000000014013F0CD  add     ebx, r10d
+  000000014013F0D0  jmp     loc_14013F155
+  000000014013F0D5  db 0E8h, 1Eh, 0A1h
+  000000014013F0D8  dq 0FFFFF55EAE8FFF5h, 58BF4800012BF589h, 5EF789EF5B755662h
+  000000014013F150  db 8Ch, 41h, 0C3h, 0FEh, 0FFh
+  000000014013F155  mov     r10d, [rbp+240h+var_2A8]
+  000000014013F159  and     ecx, edx
+  000000014013F15B  xor     ecx, edi
+  000000014013F15D  rol     edx, 1Eh
+  000000014013F160  add     ecx, 5A827999h
+  000000014013F166  mov     eax, ebx
+  000000014013F168  rol     eax, 5
+  000000014013F16B  add     r8d, eax
+  000000014013F16E  add     r8d, ecx
+  000000014013F171  mov     ecx, edx
+  000000014013F173  xor     ecx, esi
+  000000014013F175  add     r8d, r11d
+  000000014013F178  and     ecx, ebx
+  000000014013F17A  mov     eax, r8d
+  000000014013F17D  xor     ecx, esi
+  000000014013F17F  rol     eax, 5
+  000000014013F182  add     ecx, 5A827999h
+  000000014013F188  rol     ebx, 1Eh
+  000000014013F18B  add     r9d, eax
+  000000014013F18E  add     r9d, ecx
+  000000014013F191  mov     ecx, ebx
+  000000014013F193  xor     ecx, edx
+  000000014013F195  add     r9d, edi
+  000000014013F198  and     ecx, r8d
+  000000014013F19B  mov     eax, r9d
+  000000014013F19E  xor     ecx, edx
+  000000014013F1A0  rol     eax, 5
+  000000014013F1A3  add     ecx, 5A827999h
+  000000014013F1A9  rol     r8d, 1Eh
+  000000014013F1AD  add     r10d, eax
+  000000014013F1B0  add     r10d, ecx
+  000000014013F1B3  mov     ecx, r8d
+  000000014013F1B6  xor     ecx, ebx
+  000000014013F1B8  add     r10d, esi
+  000000014013F1BB  and     ecx, r9d
+  000000014013F1BE  mov     eax, r10d
+  000000014013F1C1  xor     ecx, ebx
+  000000014013F1C3  rol     eax, 5
+  000000014013F1C6  add     eax, edx
+  000000014013F1C8  rol     r9d, 1Eh
+  000000014013F1CC  mov     edx, [rbp+240h+var_2A4]
+  000000014013F1CF  add     ecx, eax
+  000000014013F1D1  add     edx, 5A827999h
+  000000014013F1D7  add     edx, ecx
+  000000014013F1D9  mov     ecx, r9d
+  000000014013F1DC  xor     ecx, r8d
+  000000014013F1DF  mov     eax, edx
+  000000014013F1E1  and     ecx, r10d
+  000000014013F1E4  rol     eax, 5
+  000000014013F1E7  add     eax, ebx
+  000000014013F1E9  jmp     loc_14013F271
+  000000014013F1EE  dw 9DE8h
+  000000014013F1F0  dq 0FFFF06CDE8FFF59Fh, 25E8FFFF46BF800Fh, 0FFFF9CBCE8FFF5A0h
+  000000014013F270  db 0FFh
+  000000014013F271  rol     r10d, 1Eh
+  000000014013F275  mov     ebx, [rbp+240h+var_2A0]
+  000000014013F278  xor     ecx, r8d
+  000000014013F27B  add     ecx, eax
+  000000014013F27D  add     ebx, 5A827999h
+  000000014013F283  add     ebx, ecx
+  000000014013F285  mov     ecx, r10d
+  000000014013F288  xor     ecx, r9d
+  000000014013F28B  mov     eax, ebx
+  000000014013F28D  and     ecx, edx
+  000000014013F28F  rol     eax, 5
+  000000014013F292  xor     ecx, r9d
+  000000014013F295  mov     r11d, [rbp+240h+var_29C]
+  000000014013F299  add     eax, r8d
+  000000014013F29C  add     ecx, eax
+  000000014013F29E  mov     r14d, [rbp+240h+var_2AC]
+  000000014013F2A2  mov     r15d, [rbp+240h+var_2A8]
+  000000014013F2A6  rol     edx, 1Eh
+  000000014013F2A9  lea     r8d, [r11+5A827999h]
+  000000014013F2B0  xor     r11d, [rbp+240h+var_2B0]
+  000000014013F2B4  add     r8d, ecx
+  000000014013F2B7  xor     r11d, r12d
+  000000014013F2BA  xor     r11d, [rsp+340h+var_2D0]
+  000000014013F2BF  mov     ecx, edx
+  000000014013F2C1  xor     ecx, r10d
+  000000014013F2C4  rol     r11d, 1
+  000000014013F2C7  and     ecx, ebx
+  000000014013F2C9  mov     [rsp+340h+var_308], r11d
+  000000014013F2CE  xor     ecx, r10d
+  000000014013F2D1  rol     ebx, 1Eh
+  000000014013F2D4  lea     edi, [rdx+5A827999h]
+  000000014013F2DA  mov     eax, r8d
+  000000014013F2DD  rol     eax, 5
+  000000014013F2E0  add     eax, r9d
+  000000014013F2E3  mov     r9d, [rbp+240h+var_298]
+  000000014013F2E7  add     ecx, eax
+  000000014013F2E9  add     r9d, 5A827999h
+  000000014013F2F0  add     r9d, ecx
+  000000014013F2F3  mov     ecx, ebx
+  000000014013F2F5  xor     ecx, edx
+  000000014013F2F7  mov     eax, r9d
+  000000014013F2FA  rol     eax, 5
+  000000014013F2FD  and     ecx, r8d
+  000000014013F300  xor     ecx, edx
+  000000014013F302  rol     r8d, 1Eh
+  000000014013F306  mov     edx, [rbp+240h+var_298]
+  000000014013F309  add     eax, r10d
+  000000014013F30C  mov     r10d, [rbp+240h+var_294]
+  000000014013F310  add     ecx, eax
+  000000014013F312  xor     edx, r14d
+  000000014013F315  jmp     loc_14013F48B
+  000000014013F31A  dw 731Ch, 0FDFFh, 0E871h
+  000000014013F320  dq 9A40A2EBF4547854h, 235C53717CDAFF48h, 7471DFD96C885F4Dh
+  000000014013F488  db 0D9h, 1, 0
+  000000014013F48B  xor     edx, r13d
+  000000014013F48E  xor     edx, [rsp+340h+var_2CC]
+  000000014013F492  rol     edx, 1
+  000000014013F494  lea     esi, [r10+5A827999h]
+  000000014013F49B  add     esi, ecx
+  000000014013F49D  mov     [rsp+340h+var_310], edx
+  000000014013F4A1  add     edx, 5A827999h
+  000000014013F4A7  mov     eax, esi
+  000000014013F4A9  rol     eax, 5
+  000000014013F4AC  mov     ecx, r8d
+  000000014013F4AF  add     eax, r11d
+  000000014013F4B2  xor     ecx, ebx
+  000000014013F4B4  and     ecx, r9d
+  000000014013F4B7  rol     r9d, 1Eh
+  000000014013F4BB  xor     ecx, ebx
+  000000014013F4BD  mov     r11d, r9d
+  000000014013F4C0  add     ecx, eax
+  000000014013F4C2  xor     r11d, r8d
+  000000014013F4C5  and     r11d, esi
+  000000014013F4C8  add     edi, ecx
+  000000014013F4CA  xor     r11d, r8d
+  000000014013F4CD  rol     esi, 1Eh
+  000000014013F4D0  mov     eax, edi
+  000000014013F4D2  rol     eax, 5
+  000000014013F4D5  add     eax, edx
+  000000014013F4D7  mov     edx, r10d
+  000000014013F4DA  xor     edx, r15d
+  000000014013F4DD  add     r11d, eax
+  000000014013F4E0  xor     edx, [rbp+240h+var_2C0]
+  000000014013F4E3  add     r11d, ebx
+  000000014013F4E6  xor     edx, r12d
+  000000014013F4E9  mov     r10d, esi
+  000000014013F4EC  xor     r10d, r9d
+  000000014013F4EF  rol     edx, 1
+  000000014013F4F1  and     r10d, edi
+  000000014013F4F4  mov     [rsp+340h+var_2FC], edx
+  000000014013F4F8  add     edx, 5A827999h
+  000000014013F4FE  xor     r10d, r9d
+  000000014013F501  mov     eax, r11d
+  000000014013F504  rol     eax, 5
+  000000014013F507  add     eax, edx
+  000000014013F509  add     r10d, eax
+  000000014013F50C  add     r10d, r8d
+  000000014013F50F  mov     edx, [rsp+340h+var_308]
+  000000014013F513  mov     eax, r10d
+  000000014013F516  mov     r12d, [rbp+240h+var_2A4]
+  000000014013F51A  xor     edx, r12d
+  000000014013F51D  xor     edx, [rbp+240h+var_2BC]
+  000000014013F520  rol     eax, 5
+  000000014013F523  xor     edx, r13d
+  000000014013F526  jmp     short loc_14013F5A6
+  000000014013F528  dq 0FFFF1C63830F5241h, 2108D8B48C033h, 41CC33488EC1C000h
+  000000014013F5A0  db 0Fh, 8Eh, 0B7h, 0BEh, 2 dup(0FFh)
+  000000014013F5A6  add     eax, r9d
+  000000014013F5A9  mov     r13d, [rbp+240h+var_2A0]
+  000000014013F5AD  rol     edx, 1
+  000000014013F5AF  rol     edi, 1Eh
+  000000014013F5B2  mov     [rsp+340h+var_300], edx
+  000000014013F5B6  mov     ecx, edi
+  000000014013F5B8  xor     ecx, esi
+  000000014013F5BA  add     edx, 5A827999h
+  000000014013F5C0  and     ecx, r11d
+  000000014013F5C3  rol     r11d, 1Eh
+  000000014013F5C7  xor     ecx, esi
+  000000014013F5C9  add     ecx, eax
+  000000014013F5CB  mov     eax, [rsp+340h+var_310]
+  000000014013F5CF  xor     eax, r13d
+  000000014013F5D2  add     edx, ecx
+  000000014013F5D4  xor     eax, [rbp+240h+var_2B8]
+  000000014013F5D7  mov     ecx, r11d
+  000000014013F5DA  xor     eax, [rbp+240h+var_2C0]
+  000000014013F5DD  xor     ecx, edi
+  000000014013F5DF  rol     eax, 1
+  000000014013F5E1  xor     ecx, r10d
+  000000014013F5E4  mov     [rsp+340h+var_320], eax
+  000000014013F5E8  mov     eax, edx
+  000000014013F5EA  mov     ebx, [rsp+340h+var_320]
+  000000014013F5EE  rol     eax, 5
+  000000014013F5F1  add     ebx, 6ED9EBA1h
+  000000014013F5F7  add     eax, esi
+  000000014013F5F9  rol     r10d, 1Eh
+  000000014013F5FD  add     ecx, eax
+  000000014013F5FF  mov     eax, [rsp+340h+var_2FC]
+  000000014013F603  xor     eax, [rbp+240h+var_29C]
+  000000014013F606  add     ebx, ecx
+  000000014013F608  xor     eax, [rbp+240h+var_2B4]
+  000000014013F60B  mov     ecx, r10d
+  000000014013F60E  xor     eax, [rbp+240h+var_2BC]
+  000000014013F611  xor     ecx, r11d
+  000000014013F614  rol     eax, 1
+  000000014013F616  xor     ecx, edx
+  000000014013F618  mov     [rsp+340h+var_31C], eax
+  000000014013F61C  mov     eax, ebx
+  000000014013F61E  mov     r8d, [rsp+340h+var_31C]
+  000000014013F623  rol     eax, 5
+  000000014013F626  add     r8d, 6ED9EBA1h
+  000000014013F62D  add     eax, edi
+  000000014013F62F  rol     edx, 1Eh
+  000000014013F632  add     ecx, eax
+  000000014013F634  mov     eax, [rbp+240h+var_298]
+  000000014013F637  xor     eax, [rbp+240h+var_2B0]
+  000000014013F63A  add     r8d, ecx
+  000000014013F63D  xor     eax, [rbp+240h+var_2B8]
+  000000014013F640  jmp     loc_14013F7AA
+  000000014013F645  db 0E8h, 0BEh, 9Ah
+  000000014013F648  dq 0FFFFF3992E8FFF5h, 3644E8FFFFEB6089h, 0C8A6850FFFFFh
+  000000014013F7A8  db 1, 8Bh
+  000000014013F7AA  mov     ecx, edx
+  000000014013F7AC  xor     eax, [rsp+340h+var_300]
+  000000014013F7B0  xor     ecx, r10d
+  000000014013F7B3  rol     eax, 1
+  000000014013F7B5  xor     ecx, ebx
+  000000014013F7B7  mov     [rsp+340h+var_318], eax
+  000000014013F7BB  mov     eax, r8d
+  000000014013F7BE  rol     eax, 5
+  000000014013F7C1  add     eax, r11d
+  000000014013F7C4  rol     ebx, 1Eh
+  000000014013F7C7  mov     r11d, [rsp+340h+var_318]
+  000000014013F7CC  add     ecx, eax
+  000000014013F7CE  mov     eax, [rbp+240h+var_294]
+  000000014013F7D1  xor     eax, r14d
+  000000014013F7D4  xor     eax, [rbp+240h+var_2B4]
+  000000014013F7D7  xor     eax, [rsp+340h+var_320]
+  000000014013F7DB  lea     r9d, [r11+6ED9EBA1h]
+  000000014013F7E2  rol     eax, 1
+  000000014013F7E4  add     r9d, ecx
+  000000014013F7E7  mov     [rsp+340h+var_304], eax
+  000000014013F7EB  mov     ecx, ebx
+  000000014013F7ED  mov     eax, r9d
+  000000014013F7F0  rol     eax, 5
+  000000014013F7F3  xor     ecx, edx
+  000000014013F7F5  mov     esi, [rsp+340h+var_304]
+  000000014013F7F9  add     eax, r10d
+  000000014013F7FC  xor     ecx, r8d
+  000000014013F7FF  rol     r8d, 1Eh
+  000000014013F803  add     ecx, eax
+  000000014013F805  mov     eax, [rsp+340h+var_308]
+  000000014013F809  xor     eax, [rsp+340h+var_31C]
+  000000014013F80D  xor     eax, r15d
+  000000014013F810  lea     r10d, [rsi+6ED9EBA1h]
+  000000014013F817  xor     eax, [rbp+240h+var_2B0]
+  000000014013F81A  add     r10d, ecx
+  000000014013F81D  rol     eax, 1
+  000000014013F81F  mov     ecx, r8d
+  000000014013F822  mov     [rsp+340h+var_2F0], eax
+  000000014013F826  xor     ecx, ebx
+  000000014013F828  mov     edi, [rsp+340h+var_2F0]
+  000000014013F82C  xor     ecx, r9d
+  000000014013F82F  rol     r9d, 1Eh
+  000000014013F833  mov     eax, r10d
+  000000014013F836  rol     eax, 5
+  000000014013F839  add     eax, edx
+  000000014013F83B  add     ecx, eax
+  000000014013F83D  lea     edx, [rdi+6ED9EBA1h]
+  000000014013F843  xor     edi, [rbp+240h+var_29C]
+  000000014013F846  add     edx, ecx
+  000000014013F848  mov     eax, [rsp+340h+var_310]
+  000000014013F84C  jmp     short loc_14013F8A5
+  000000014013F84E  pop     r12
+  000000014013F850  mov     rsp, r11
+  000000014013F853  jmp     loc_140147C37
+  000000014013F858  dq 0A8A0FFFFFA58CE8h, 0FFFFF445E8FFFFC2h, 0D5E80001CA47820Fh
+  000000014013F8A0  db 83h, 7, 5Bh, 2 dup(0FFh)
+  000000014013F8A5  mov     ecx, r9d
+  000000014013F8A8  xor     eax, r11d
+  000000014013F8AB  xor     ecx, r8d
+  000000014013F8AE  xor     eax, r12d
+  000000014013F8B1  xor     ecx, r10d
+  000000014013F8B4  xor     eax, r14d
+  000000014013F8B7  rol     r10d, 1Eh
+  000000014013F8BB  mov     r14d, [rsp+340h+var_2FC]
+  000000014013F8C0  xor     edi, r12d
+  000000014013F8C3  xor     edi, [rsp+340h+var_300]
+  000000014013F8C7  mov     r11d, r14d
+  000000014013F8CA  rol     eax, 1
+  000000014013F8CC  xor     r11d, esi
+  000000014013F8CF  mov     [rsp+340h+var_30C], eax
+  000000014013F8D3  xor     r11d, r13d
+  000000014013F8D6  mov     esi, [rsp+340h+var_30C]
+  000000014013F8DA  xor     r11d, r15d
+  000000014013F8DD  xor     esi, [rbp+240h+var_298]
+  000000014013F8E0  mov     eax, edx
+  000000014013F8E2  mov     r15d, [rsp+340h+var_320]
+  000000014013F8E7  xor     esi, r13d
+  000000014013F8EA  rol     eax, 5
+  000000014013F8ED  xor     esi, r15d
+  000000014013F8F0  add     eax, ebx
+  000000014013F8F2  rol     r11d, 1
+  000000014013F8F5  mov     ebx, [rsp+340h+var_30C]
+  000000014013F8F9  add     ecx, eax
+  000000014013F8FB  add     ebx, 6ED9EBA1h
+  000000014013F901  rol     edi, 1
+  000000014013F903  add     ebx, ecx
+  000000014013F905  mov     [rsp+340h+var_314], r11d
+  000000014013F90A  mov     eax, ebx
+  000000014013F90C  mov     [rsp+340h+var_2EC], edi
+  000000014013F910  rol     eax, 5
+  000000014013F913  mov     ecx, r10d
+  000000014013F916  xor     ecx, r9d
+  000000014013F919  add     eax, r8d
+  000000014013F91C  xor     ecx, edx
+  000000014013F91E  lea     r8d, [r11+6ED9EBA1h]
+  000000014013F925  add     ecx, eax
+  000000014013F927  rol     edx, 1Eh
+  000000014013F92A  add     r8d, ecx
+  000000014013F92D  mov     ecx, edx
+  000000014013F92F  xor     ecx, r10d
+  000000014013F932  mov     eax, r8d
+  000000014013F935  rol     eax, 5
+  000000014013F938  xor     ecx, ebx
+  000000014013F93A  add     eax, r9d
+  000000014013F93D  rol     ebx, 1Eh
+  000000014013F940  add     ecx, eax
+  000000014013F942  jmp     loc_14013FA9C
+  000000014013F947  db 9Bh
+  000000014013F948  dq 0E95C4124D9595279h, 8A0F5341FFFE989Ah, 0FF4C80E8FFFF50D0h
+  000000014013FA98  db 11h, 65h, 2 dup(0FFh)
+  000000014013FA9C  lea     r9d, [rdi+6ED9EBA1h]
+  000000014013FAA3  add     r9d, ecx
+  000000014013FAA6  rol     esi, 1
+  000000014013FAA8  mov     eax, r9d
+  000000014013FAAB  mov     [rsp+340h+var_2FC], esi
+  000000014013FAAF  mov     r12d, [rsp+340h+var_31C]
+  000000014013FAB4  mov     ecx, ebx
+  000000014013FAB6  rol     eax, 5
+  000000014013FAB9  xor     ecx, edx
+  000000014013FABB  add     eax, r10d
+  000000014013FABE  xor     ecx, r8d
+  000000014013FAC1  add     ecx, eax
+  000000014013FAC3  rol     r8d, 1Eh
+  000000014013FAC7  mov     r13d, r11d
+  000000014013FACA  lea     r10d, [rsi+6ED9EBA1h]
+  000000014013FAD1  xor     r13d, [rbp+240h+var_294]
+  000000014013FAD5  add     r10d, ecx
+  000000014013FAD8  mov     r11d, [rsp+340h+var_318]
+  000000014013FADD  xor     r13d, r12d
+  000000014013FAE0  xor     r13d, [rbp+240h+var_29C]
+  000000014013FAE4  mov     ecx, r8d
+  000000014013FAE7  xor     ecx, ebx
+  000000014013FAE9  rol     r13d, 1
+  000000014013FAEC  xor     ecx, r9d
+  000000014013FAEF  mov     [rsp+340h+var_31C], r13d
+  000000014013FAF4  rol     r9d, 1Eh
+  000000014013FAF8  mov     eax, r10d
+  000000014013FAFB  rol     eax, 5
+  000000014013FAFE  add     eax, edx
+  000000014013FB00  lea     edx, [r13+6ED9EBA1h]
+  000000014013FB07  add     ecx, eax
+  000000014013FB09  mov     r13d, edi
+  000000014013FB0C  xor     r13d, [rsp+340h+var_308]
+  000000014013FB11  add     edx, ecx
+  000000014013FB13  mov     edi, [rsp+340h+var_304]
+  000000014013FB17  mov     ecx, r9d
+  000000014013FB1A  xor     ecx, r8d
+  000000014013FB1D  xor     r13d, r11d
+  000000014013FB20  xor     r13d, [rbp+240h+var_298]
+  000000014013FB24  xor     ecx, r10d
+  000000014013FB27  add     ecx, 6ED9EBA1h
+  000000014013FB2D  rol     r13d, 1
+  000000014013FB30  rol     r10d, 1Eh
+  000000014013FB34  mov     eax, edx
+  000000014013FB36  rol     eax, 5
+  000000014013FB39  add     ebx, eax
+  000000014013FB3B  mov     [rsp+340h+var_318], r13d
+  000000014013FB40  add     ebx, ecx
+  000000014013FB42  mov     eax, esi
+  000000014013FB44  xor     eax, [rsp+340h+var_310]
+  000000014013FB48  jmp     loc_14013FDAF
+  000000014013FB4D  db 41h, 5Ch, 41h
+  000000014013FB50  dq 0FFFF954AE95D415Eh, 0FF37AA8F0FE60349h, 730C48148FFh
+  000000014013FDA8  db 0DEh, 0Fh, 8Ah, 0ACh, 72h, 2 dup(0FFh)
+  000000014013FDAF  add     ebx, r13d
+  000000014013FDB2  mov     esi, [rsp+340h+var_2F0]
+  000000014013FDB6  xor     eax, edi
+  000000014013FDB8  xor     eax, [rbp+240h+var_294]
+  000000014013FDBB  mov     ecx, r10d
+  000000014013FDBE  rol     eax, 1
+  000000014013FDC0  xor     ecx, r9d
+  000000014013FDC3  mov     [rsp+340h+var_304], eax
+  000000014013FDC7  xor     ecx, edx
+  000000014013FDC9  mov     eax, ebx
+  000000014013FDCB  rol     edx, 1Eh
+  000000014013FDCE  rol     eax, 5
+  000000014013FDD1  add     eax, r8d
+  000000014013FDD4  mov     r8d, [rsp+340h+var_304]
+  000000014013FDD9  add     ecx, eax
+  000000014013FDDB  add     r8d, 6ED9EBA1h
+  000000014013FDE2  mov     eax, [rsp+340h+var_31C]
+  000000014013FDE6  add     r8d, ecx
+  000000014013FDE9  xor     eax, r14d
+  000000014013FDEC  mov     ecx, edx
+  000000014013FDEE  xor     eax, [rsp+340h+var_308]
+  000000014013FDF2  xor     ecx, r10d
+  000000014013FDF5  xor     eax, esi
+  000000014013FDF7  xor     ecx, ebx
+  000000014013FDF9  rol     eax, 1
+  000000014013FDFB  mov     [rsp+340h+var_308], eax
+  000000014013FDFF  mov     eax, r8d
+  000000014013FE02  rol     eax, 5
+  000000014013FE05  add     eax, r9d
+  000000014013FE08  rol     ebx, 1Eh
+  000000014013FE0B  mov     r9d, [rsp+340h+var_308]
+  000000014013FE10  add     ecx, eax
+  000000014013FE12  add     r9d, 6ED9EBA1h
+  000000014013FE19  mov     eax, r13d
+  000000014013FE1C  add     r9d, ecx
+  000000014013FE1F  xor     eax, [rsp+340h+var_310]
+  000000014013FE23  xor     eax, [rsp+340h+var_30C]
+  000000014013FE27  mov     ecx, ebx
+  000000014013FE29  xor     eax, [rsp+340h+var_300]
+  000000014013FE2D  xor     ecx, edx
+  000000014013FE2F  rol     eax, 1
+  000000014013FE31  xor     ecx, r8d
+  000000014013FE34  mov     r13d, [rsp+340h+var_2FC]
+  000000014013FE39  mov     [rsp+340h+var_2F0], eax
+  000000014013FE3D  mov     eax, r9d
+  000000014013FE40  rol     eax, 5
+  000000014013FE43  add     eax, r10d
+  000000014013FE46  rol     r8d, 1Eh
+  000000014013FE4A  add     ecx, eax
+  000000014013FE4C  mov     r10d, [rsp+340h+var_2F0]
+  000000014013FE51  jmp     loc_1401401DE
+  000000014013FE56  dw 70E8h
+  000000014013FE58  dq 0EEB6870FFFFF61h, 717CE3E67AB84800h, 483BC7C041A546ABh
+  00000001401401D8  db 0Fh, 8Eh, 0D2h, 96h, 2 dup(0FFh)
+  00000001401401DE  mov     eax, [rsp+340h+var_304]
+  00000001401401E2  add     r10d, 6ED9EBA1h
+  00000001401401E9  xor     eax, r14d
+  00000001401401EC  add     r10d, ecx
+  00000001401401EF  xor     eax, [rsp+340h+var_314]
+  00000001401401F3  mov     ecx, r8d
+  00000001401401F6  xor     eax, r15d
+  00000001401401F9  xor     ecx, ebx
+  00000001401401FB  rol     eax, 1
+  00000001401401FD  xor     ecx, r9d
+  0000000140140200  mov     [rsp+340h+var_320], eax
+  0000000140140204  mov     eax, r10d
+  0000000140140207  mov     r14d, [rsp+340h+var_320]
+  000000014014020C  rol     eax, 5
+  000000014014020F  add     eax, edx
+  0000000140140211  rol     r9d, 1Eh
+  0000000140140215  add     ecx, eax
+  0000000140140217  mov     eax, [rsp+340h+var_308]
+  000000014014021B  xor     eax, [rsp+340h+var_2EC]
+  000000014014021F  lea     edx, [r14+6ED9EBA1h]
+  0000000140140226  xor     eax, r12d
+  0000000140140229  add     edx, ecx
+  000000014014022B  xor     eax, [rsp+340h+var_300]
+  000000014014022F  mov     ecx, r9d
+  0000000140140232  rol     eax, 1
+  0000000140140234  xor     ecx, r8d
+  0000000140140237  mov     [rsp+340h+var_2E8], eax
+  000000014014023B  xor     ecx, r10d
+  000000014014023E  rol     r10d, 1Eh
+  0000000140140242  mov     eax, edx
+  0000000140140244  rol     eax, 5
+  0000000140140247  add     eax, ebx
+  0000000140140249  mov     ebx, [rsp+340h+var_2E8]
+  000000014014024D  add     ecx, eax
+  000000014014024F  add     ebx, 6ED9EBA1h
+  0000000140140255  mov     eax, [rsp+340h+var_2F0]
+  0000000140140259  add     ebx, ecx
+  000000014014025B  xor     eax, r13d
+  000000014014025E  mov     ecx, r10d
+  0000000140140261  xor     eax, r11d
+  0000000140140264  xor     ecx, r9d
+  0000000140140267  xor     eax, r15d
+  000000014014026A  xor     ecx, edx
+  000000014014026C  mov     r15d, [rsp+340h+var_31C]
+  0000000140140271  xor     r14d, r15d
+  0000000140140274  rol     eax, 1
+  0000000140140276  xor     r14d, edi
+  0000000140140279  mov     [rsp+340h+var_2F8], eax
+  000000014014027D  xor     r14d, r12d
+  0000000140140280  rol     r14d, 1
+  0000000140140283  jmp     loc_14014069B
+  0000000140140288  dq 8A70CFEC4875532Ch, 4E8AE0E499A07A77h, 0E7C27C6F8B78BA62h
+  0000000140140698  db 0CEh, 2 dup(0FFh)
+  000000014014069B  mov     eax, ebx
+  000000014014069D  rol     eax, 5
+  00000001401406A0  add     eax, r8d
+  00000001401406A3  rol     edx, 1Eh
+  00000001401406A6  mov     r8d, [rsp+340h+var_2F8]
+  00000001401406AB  add     ecx, eax
+  00000001401406AD  add     r8d, 6ED9EBA1h
+  00000001401406B4  mov     [rsp+340h+var_31C], r14d
+  00000001401406B9  add     r8d, ecx
+  00000001401406BC  mov     ecx, edx
+  00000001401406BE  xor     ecx, r10d
+  00000001401406C1  mov     eax, r8d
+  00000001401406C4  rol     eax, 5
+  00000001401406C7  xor     ecx, ebx
+  00000001401406C9  add     eax, r9d
+  00000001401406CC  lea     r9d, [r14+6ED9EBA1h]
+  00000001401406D3  add     ecx, eax
+  00000001401406D5  mov     r14d, [rsp+340h+var_2E8]
+  00000001401406DA  add     r9d, ecx
+  00000001401406DD  mov     r12d, [rsp+340h+var_318]
+  00000001401406E2  mov     eax, r9d
+  00000001401406E5  rol     eax, 5
+  00000001401406E8  xor     r14d, r12d
+  00000001401406EB  add     eax, r10d
+  00000001401406EE  rol     ebx, 1Eh
+  00000001401406F1  xor     r14d, esi
+  00000001401406F4  mov     ecx, ebx
+  00000001401406F6  xor     ecx, edx
+  00000001401406F8  xor     r14d, r11d
+  00000001401406FB  mov     r11d, [rsp+340h+var_2F8]
+  0000000140140700  xor     ecx, r8d
+  0000000140140703  xor     r11d, [rsp+340h+var_304]
+  0000000140140708  add     ecx, eax
+  000000014014070A  rol     r8d, 1Eh
+  000000014014070E  rol     r14d, 1
+  0000000140140711  mov     [rsp+340h+var_310], r14d
+  0000000140140716  lea     r10d, [r14+6ED9EBA1h]
+  000000014014071D  mov     r14d, [rsp+340h+var_30C]
+  0000000140140722  add     r10d, ecx
+  0000000140140725  xor     r11d, r14d
+  0000000140140728  xor     r11d, edi
+  000000014014072B  mov     ecx, r8d
+  000000014014072E  xor     ecx, ebx
+  0000000140140730  rol     r11d, 1
+  0000000140140733  xor     ecx, r9d
+  0000000140140736  mov     [rsp+340h+var_300], r11d
+  000000014014073B  rol     r9d, 1Eh
+  000000014014073F  add     r11d, 6ED9EBA1h
+  0000000140140746  mov     eax, r10d
+  0000000140140749  rol     eax, 5
+  000000014014074C  jmp     loc_1401408C7
+  0000000140140751  db 76h, 83h, 0Ch, 0C5h, 93h, 55h, 5Eh
+  0000000140140758  dq 0FF70715F787BAAABh, 7E5D7C3A275577E1h, 719156459722E3D5h
+  00000001401408C0  db 0E3h, 0Fh, 8Eh, 0BAh, 0AEh, 2 dup(0)
+  00000001401408C7  add     eax, edx
+  00000001401408C9  add     ecx, eax
+  00000001401408CB  mov     eax, [rsp+340h+var_31C]
+  00000001401408CF  xor     eax, [rsp+340h+var_308]
+  00000001401408D3  add     r11d, ecx
+  00000001401408D6  xor     eax, [rsp+340h+var_314]
+  00000001401408DA  mov     edx, r11d
+  00000001401408DD  xor     eax, esi
+  00000001401408DF  rol     edx, 5
+  00000001401408E2  mov     esi, [rsp+340h+var_2EC]
+  00000001401408E6  mov     ecx, r9d
+  00000001401408E9  rol     eax, 1
+  00000001401408EB  or      ecx, r8d
+  00000001401408EE  mov     [rsp+340h+var_30C], eax
+  00000001401408F2  and     ecx, r10d
+  00000001401408F5  add     edx, [rsp+340h+var_30C]
+  00000001401408F9  mov     eax, r9d
+  00000001401408FC  and     eax, r8d
+  00000001401408FF  rol     r10d, 1Eh
+  0000000140140903  or      ecx, eax
+  0000000140140905  mov     eax, [rsp+340h+var_310]
+  0000000140140909  xor     eax, [rsp+340h+var_2F0]
+  000000014014090D  add     ecx, ebx
+  000000014014090F  xor     eax, esi
+  0000000140140911  lea     ebx, [rdx-70E44324h]
+  0000000140140917  xor     eax, r14d
+  000000014014091A  add     ebx, ecx
+  000000014014091C  rol     eax, 1
+  000000014014091E  mov     edx, ebx
+  0000000140140920  mov     [rsp+340h+var_2EC], eax
+  0000000140140924  mov     ecx, r10d
+  0000000140140927  mov     r14d, [rsp+340h+var_2EC]
+  000000014014092C  or      ecx, r9d
+  000000014014092F  and     ecx, r11d
+  0000000140140932  rol     edx, 5
+  0000000140140935  mov     eax, r10d
+  0000000140140938  rol     r11d, 1Eh
+  000000014014093C  and     eax, r9d
+  000000014014093F  or      ecx, eax
+  0000000140140941  mov     eax, [rsp+340h+var_300]
+  0000000140140945  xor     eax, [rsp+340h+var_320]
+  0000000140140949  add     ecx, r8d
+  000000014014094C  xor     eax, r13d
+  000000014014094F  lea     r8d, [r14+rdx]
+  0000000140140953  xor     eax, [rsp+340h+var_314]
+  0000000140140957  add     ecx, 8F1BBCDCh
+  000000014014095D  add     r8d, ecx
+  0000000140140960  rol     eax, 1
+  0000000140140962  xor     r14d, [rsp+340h+var_2F8]
+  0000000140140967  mov     ecx, r11d
+  000000014014096A  jmp     loc_140140AB9
+  000000014014096F  db 48h
+  0000000140140970  dq 0FFFF2B15840FE103h, 798F0FFFF678D3E8h, 4F8C48148FFFFCBh
+  0000000140140AB8  db 0FFh
+  0000000140140AB9  or      ecx, r10d
+  0000000140140ABC  mov     [rsp+340h+var_2F4], eax
+  0000000140140AC0  mov     edi, [rsp+340h+var_2F4]
+  0000000140140AC4  and     ecx, ebx
+  0000000140140AC6  rol     ebx, 1Eh
+  0000000140140AC9  mov     eax, r11d
+  0000000140140ACC  and     eax, r10d
+  0000000140140ACF  mov     edx, r8d
+  0000000140140AD2  or      ecx, eax
+  0000000140140AD4  rol     edx, 5
+  0000000140140AD7  mov     eax, [rsp+340h+var_30C]
+  0000000140140ADB  add     ecx, r9d
+  0000000140140ADE  xor     eax, [rsp+340h+var_2E8]
+  0000000140140AE2  add     ecx, 8F1BBCDCh
+  0000000140140AE8  xor     eax, r15d
+  0000000140140AEB  xor     r14d, r12d
+  0000000140140AEE  xor     eax, esi
+  0000000140140AF0  lea     r9d, [rdi+rdx]
+  0000000140140AF4  add     r9d, ecx
+  0000000140140AF7  rol     eax, 1
+  0000000140140AF9  mov     [rsp+340h+var_2E4], eax
+  0000000140140AFD  xor     r14d, r13d
+  0000000140140B00  mov     esi, [rsp+340h+var_2E4]
+  0000000140140B04  mov     r13d, edi
+  0000000140140B07  xor     r13d, [rsp+340h+var_31C]
+  0000000140140B0C  mov     ecx, ebx
+  0000000140140B0E  xor     r13d, [rsp+340h+var_304]
+  0000000140140B13  or      ecx, r11d
+  0000000140140B16  and     ecx, r8d
+  0000000140140B19  rol     r14d, 1
+  0000000140140B1C  rol     r8d, 1Eh
+  0000000140140B20  mov     eax, ebx
+  0000000140140B22  and     eax, r11d
+  0000000140140B25  mov     [rsp+340h+var_314], r14d
+  0000000140140B2A  or      ecx, eax
+  0000000140140B2C  mov     edx, r9d
+  0000000140140B2F  add     ecx, 8F1BBCDCh
+  0000000140140B35  rol     edx, 5
+  0000000140140B38  add     ecx, esi
+  0000000140140B3A  add     r10d, edx
+  0000000140140B3D  xor     esi, [rsp+340h+var_310]
+  0000000140140B41  add     r10d, ecx
+  0000000140140B44  mov     edx, r10d
+  0000000140140B47  xor     r13d, r15d
+  0000000140140B4A  rol     edx, 5
+  0000000140140B4D  mov     ecx, r8d
+  0000000140140B50  or      ecx, ebx
+  0000000140140B52  rol     r13d, 1
+  0000000140140B55  and     ecx, r9d
+  0000000140140B58  mov     [rsp+340h+var_318], r13d
+  0000000140140B5D  jmp     loc_140140C09
+  0000000140140B62  dw 8148h, 0A8C4h, 0
+  0000000140140B68  dq 0E8FFFF0150870F00h, 4F92810FFFF753D4h, 0E8FFF58569E8FFFFh
+  0000000140140C08  db 7Eh
+  0000000140140C09  add     r11d, edx
+  0000000140140C0C  rol     r9d, 1Eh
+  0000000140140C10  mov     eax, r8d
+  0000000140140C13  and     eax, ebx
+  0000000140140C15  or      ecx, eax
+  0000000140140C17  mov     eax, r9d
+  0000000140140C1A  add     ecx, 8F1BBCDCh
+  0000000140140C20  and     eax, r8d
+  0000000140140C23  add     ecx, r14d
+  0000000140140C26  add     r11d, ecx
+  0000000140140C29  mov     ecx, r9d
+  0000000140140C2C  or      ecx, r8d
+  0000000140140C2F  mov     edi, r11d
+  0000000140140C32  and     ecx, r10d
+  0000000140140C35  rol     edi, 5
+  0000000140140C38  or      ecx, eax
+  0000000140140C3A  rol     r10d, 1Eh
+  0000000140140C3E  add     ecx, 8F1BBCDCh
+  0000000140140C44  add     edi, ebx
+  0000000140140C46  mov     ebx, [rsp+340h+var_308]
+  0000000140140C4A  add     ecx, r13d
+  0000000140140C4D  xor     esi, ebx
+  0000000140140C4F  add     edi, ecx
+  0000000140140C51  xor     esi, r12d
+  0000000140140C54  mov     edx, edi
+  0000000140140C56  rol     esi, 1
+  0000000140140C58  mov     ecx, r10d
+  0000000140140C5B  rol     edx, 5
+  0000000140140C5E  mov     [rsp+340h+var_308], esi
+  0000000140140C62  xor     r13d, [rsp+340h+var_30C]
+  0000000140140C67  or      ecx, r9d
+  0000000140140C6A  mov     r12d, [rsp+340h+var_308]
+  0000000140140C6F  and     ecx, r11d
+  0000000140140C72  xor     r12d, [rsp+340h+var_2EC]
+  0000000140140C77  mov     r15d, r14d
+  0000000140140C7A  xor     r15d, [rsp+340h+var_300]
+  0000000140140C7F  mov     eax, r10d
+  0000000140140C82  xor     r15d, [rsp+340h+var_2F0]
+  0000000140140C87  and     eax, r9d
+  0000000140140C8A  xor     r15d, [rsp+340h+var_304]
+  0000000140140C8F  or      ecx, eax
+  0000000140140C91  xor     r12d, [rsp+340h+var_2E8]
+  0000000140140C96  add     ecx, esi
+  0000000140140C98  xor     r12d, [rsp+340h+var_2F0]
+  0000000140140C9D  lea     esi, [r8+rdx]
+  0000000140140CA1  add     ecx, 8F1BBCDCh
+  0000000140140CA7  rol     r11d, 1Eh
+  0000000140140CAB  add     esi, ecx
+  0000000140140CAD  rol     r15d, 1
+  0000000140140CB0  mov     ecx, r11d
+  0000000140140CB3  jmp     loc_140140E38
+  0000000140140CB8  dq 4C5A35E859088FA2h, 0AAF6777E17B65059h, 0EDE880C579F271B4h
+  0000000140140E38  mov     [rsp+340h+var_304], r15d
+  0000000140140E3D  or      ecx, r10d
+  0000000140140E40  rol     r12d, 1
+  0000000140140E43  and     ecx, edi
+  0000000140140E45  mov     eax, r11d
+  0000000140140E48  and     eax, r10d
+  0000000140140E4B  rol     edi, 1Eh
+  0000000140140E4E  or      ecx, eax
+  0000000140140E50  add     r15d, 8F1BBCDCh
+  0000000140140E57  add     ecx, r15d
+  0000000140140E5A  mov     r14d, esi
+  0000000140140E5D  rol     r14d, 5
+  0000000140140E61  mov     eax, edi
+  0000000140140E63  and     eax, r11d
+  0000000140140E66  add     r14d, r9d
+  0000000140140E69  mov     r9d, [rsp+340h+var_320]
+  0000000140140E6E  add     r14d, ecx
+  0000000140140E71  xor     r13d, r9d
+  0000000140140E74  mov     [rsp+340h+var_320], r12d
+  0000000140140E79  xor     r13d, ebx
+  0000000140140E7C  mov     r15d, r14d
+  0000000140140E7F  rol     r13d, 1
+  0000000140140E82  mov     ecx, edi
+  0000000140140E84  or      ecx, r11d
+  0000000140140E87  rol     r15d, 5
+  0000000140140E8B  and     ecx, esi
+  0000000140140E8D  mov     [rsp+340h+var_2FC], r13d
+  0000000140140E92  or      ecx, eax
+  0000000140140E94  rol     esi, 1Eh
+  0000000140140E97  add     ecx, 8F1BBCDCh
+  0000000140140E9D  add     r15d, r10d
+  0000000140140EA0  add     ecx, r13d
+  0000000140140EA3  mov     eax, esi
+  0000000140140EA5  add     r15d, ecx
+  0000000140140EA8  and     eax, edi
+  0000000140140EAA  mov     ecx, esi
+  0000000140140EAC  mov     ebx, r15d
+  0000000140140EAF  or      ecx, edi
+  0000000140140EB1  rol     ebx, 5
+  0000000140140EB4  and     ecx, r14d
+  0000000140140EB7  add     ebx, r11d
+  0000000140140EBA  mov     r11d, [rsp+340h+var_304]
+  0000000140140EBF  or      ecx, eax
+  0000000140140EC1  xor     r11d, [rsp+340h+var_2F4]
+  0000000140140EC6  add     ecx, 8F1BBCDCh
+  0000000140140ECC  xor     r11d, [rsp+340h+var_2F8]
+  0000000140140ED1  add     ecx, r12d
+  0000000140140ED4  add     ebx, ecx
+  0000000140140ED6  rol     r14d, 1Eh
+  0000000140140EDA  xor     r11d, r9d
+  0000000140140EDD  jmp     loc_140141029
+  0000000140140EE2  dw 1E8h, 0F760h, 0FFFh
+  0000000140140EE8  dq 20D4E9FFFEA87881h, 0F00001BD7E8FFFFh, 8D0F53FFFF890D8Ah
+  0000000140141028  db 0FFh
+  0000000140141029  mov     ecx, r14d
+  000000014014102C  or      ecx, esi
+  000000014014102E  rol     r11d, 1
+  0000000140141031  mov     r8d, ebx
+  0000000140141034  mov     [rsp+340h+var_2F0], r11d
+  0000000140141039  mov     eax, r14d
+  000000014014103C  rol     r8d, 5
+  0000000140141040  and     ecx, r15d
+  0000000140141043  and     eax, esi
+  0000000140141045  or      ecx, eax
+  0000000140141047  xor     r13d, [rsp+340h+var_2E4]
+  000000014014104C  add     ecx, 8F1BBCDCh
+  0000000140141052  xor     r13d, [rsp+340h+var_31C]
+  0000000140141057  add     ecx, r11d
+  000000014014105A  xor     r13d, [rsp+340h+var_2E8]
+  000000014014105F  add     r8d, edi
+  0000000140141062  add     r8d, ecx
+  0000000140141065  rol     r15d, 1Eh
+  0000000140141069  rol     r13d, 1
+  000000014014106C  mov     r9d, r8d
+  000000014014106F  rol     r9d, 5
+  0000000140141073  mov     r10d, r12d
+  0000000140141076  xor     r10d, [rsp+340h+var_314]
+  000000014014107B  add     r9d, esi
+  000000014014107E  xor     r10d, [rsp+340h+var_310]
+  0000000140141083  mov     esi, r11d
+  0000000140141086  xor     esi, [rsp+340h+var_318]
+  000000014014108A  mov     ecx, r15d
+  000000014014108D  xor     esi, [rsp+340h+var_300]
+  0000000140141091  or      ecx, r14d
+  0000000140141094  xor     esi, [rsp+340h+var_31C]
+  0000000140141098  and     ecx, ebx
+  000000014014109A  xor     r10d, [rsp+340h+var_2F8]
+  000000014014109F  mov     eax, r15d
+  00000001401410A2  rol     esi, 1
+  00000001401410A4  and     eax, r14d
+  00000001401410A7  or      ecx, eax
+  00000001401410A9  rol     ebx, 1Eh
+  00000001401410AC  add     ecx, 8F1BBCDCh
+  00000001401410B2  mov     [rsp+340h+var_2DC], esi
+  00000001401410B6  add     ecx, r13d
+  00000001401410B9  rol     r10d, 1
+  00000001401410BC  add     r9d, ecx
+  00000001401410BF  mov     [rsp+340h+var_2E0], r10d
+  00000001401410C4  mov     r12d, [rsp+340h+var_2E0]
+  00000001401410C9  add     esi, 8F1BBCDCh
+  00000001401410CF  mov     edx, r9d
+  00000001401410D2  mov     [rsp+340h+var_2E8], r13d
+  00000001401410D7  rol     edx, 5
+  00000001401410DA  mov     ecx, ebx
+  00000001401410DC  jmp     short loc_140141157
+  00000001401410DE  dw 0F56h
+  00000001401410E0  dq 0EB70C2FFFF96DF86h, 5FA9F77954D8CA8Eh, 1818E8FFF5818BE8h
+  0000000140141150  db 47h, 0EEh, 7Dh, 6Fh, 0FFh, 32h, 0C0h
+  0000000140141157  or      ecx, r15d
+  000000014014115A  mov     eax, ebx
+  000000014014115C  and     ecx, r8d
+  000000014014115F  and     eax, r15d
+  0000000140141162  or      ecx, eax
+  0000000140141164  rol     r8d, 1Eh
+  0000000140141168  add     ecx, r10d
+  000000014014116B  mov     eax, r8d
+  000000014014116E  add     ecx, 8F1BBCDCh
+  0000000140141174  lea     r10d, [r14+rdx]
+  0000000140141178  add     r10d, ecx
+  000000014014117B  and     eax, ebx
+  000000014014117D  mov     edi, r10d
+  0000000140141180  mov     ecx, r8d
+  0000000140141183  or      ecx, ebx
+  0000000140141185  rol     edi, 5
+  0000000140141188  and     ecx, r9d
+  000000014014118B  add     edi, r15d
+  000000014014118E  or      ecx, eax
+  0000000140141190  rol     r9d, 1Eh
+  0000000140141194  add     ecx, esi
+  0000000140141196  mov     eax, r9d
+  0000000140141199  add     edi, ecx
+  000000014014119B  mov     esi, r13d
+  000000014014119E  xor     esi, [rsp+340h+var_308]
+  00000001401411A2  mov     edx, edi
+  00000001401411A4  xor     esi, [rsp+340h+var_30C]
+  00000001401411A8  and     eax, r8d
+  00000001401411AB  xor     esi, [rsp+340h+var_310]
+  00000001401411AF  mov     ecx, r9d
+  00000001401411B2  or      ecx, r8d
+  00000001401411B5  rol     esi, 1
+  00000001401411B7  and     ecx, r10d
+  00000001401411BA  rol     edx, 5
+  00000001401411BD  or      ecx, eax
+  00000001401411BF  mov     [rsp+340h+var_31C], esi
+  00000001401411C3  add     ecx, ebx
+  00000001401411C5  add     ecx, 8F1BBCDCh
+  00000001401411CB  lea     ebx, [rsi+rdx]
+  00000001401411CE  add     ebx, ecx
+  00000001401411D0  rol     r10d, 1Eh
+  00000001401411D4  xor     r12d, [rsp+340h+var_304]
+  00000001401411D9  add     r8d, 8F1BBCDCh
+  00000001401411E0  xor     r12d, [rsp+340h+var_2EC]
+  00000001401411E5  mov     ecx, r10d
+  00000001401411E8  xor     r12d, [rsp+340h+var_300]
+  00000001401411ED  or      ecx, r9d
+  00000001401411F0  mov     r14d, [rsp+340h+var_320]
+  00000001401411F5  and     ecx, edi
+  00000001401411F7  xor     r14d, [rsp+340h+var_2E4]
+  00000001401411FC  jmp     loc_14014135D
+  0000000140141201  db 7Bh, 59h, 1Ch, 5Dh, 0FAh, 55h, 0FDh
+  0000000140141208  dq 71785E57853F713Ch, 5476F7E1EBC92E55h, 0E8D79C5579577C58h
+  0000000140141358  db 88h, 8Bh, 50h, 2 dup(0FFh)
+  000000014014135D  mov     eax, r10d
+  0000000140141360  xor     r14d, [rsp+340h+var_2EC]
+  0000000140141365  and     eax, r9d
+  0000000140141368  mov     r15d, [rsp+340h+var_2DC]
+  000000014014136D  or      ecx, eax
+  000000014014136F  xor     r15d, [rsp+340h+var_2FC]
+  0000000140141374  add     ecx, r8d
+  0000000140141377  xor     r15d, [rsp+340h+var_2F4]
+  000000014014137C  xor     r14d, esi
+  000000014014137F  xor     r15d, [rsp+340h+var_30C]
+  0000000140141384  add     r9d, 8F1BBCDCh
+  000000014014138B  mov     esi, [rsp+340h+var_2F0]
+  000000014014138F  mov     r11d, ebx
+  0000000140141392  xor     esi, [rsp+340h+var_314]
+  0000000140141396  xor     esi, [rsp+340h+var_2F4]
+  000000014014139A  rol     r12d, 1
+  000000014014139D  rol     edi, 1Eh
+  00000001401413A0  xor     esi, r12d
+  00000001401413A3  rol     r11d, 5
+  00000001401413A7  mov     eax, edi
+  00000001401413A9  and     eax, r10d
+  00000001401413AC  mov     [rsp+340h+var_300], r12d
+  00000001401413B1  add     r11d, r12d
+  00000001401413B4  rol     r15d, 1
+  00000001401413B7  add     r11d, ecx
+  00000001401413BA  rol     r14d, 1
+  00000001401413BD  rol     esi, 1
+  00000001401413BF  mov     r8d, r11d
+  00000001401413C2  rol     r8d, 5
+  00000001401413C6  mov     ecx, edi
+  00000001401413C8  or      ecx, r10d
+  00000001401413CB  mov     [rsp+340h+var_30C], r15d
+  00000001401413D0  and     ecx, ebx
+  00000001401413D2  mov     [rsp+340h+var_2F8], r14d
+  00000001401413D7  or      ecx, eax
+  00000001401413D9  rol     ebx, 1Eh
+  00000001401413DC  add     ecx, r9d
+  00000001401413DF  mov     [rsp+340h+var_310], esi
+  00000001401413E3  add     r8d, r15d
+  00000001401413E6  mov     eax, ebx
+  00000001401413E8  add     r8d, ecx
+  00000001401413EB  and     eax, edi
+  00000001401413ED  mov     edx, r8d
+  00000001401413F0  mov     ecx, ebx
+  00000001401413F2  or      ecx, edi
+  00000001401413F4  rol     edx, 5
+  00000001401413F7  and     ecx, r11d
+  00000001401413FA  mov     r12d, r13d
+  00000001401413FD  xor     r12d, [rsp+340h+var_318]
+  0000000140141402  or      ecx, eax
+  0000000140141404  jmp     loc_140141856
+  0000000140141409  db 48h, 81h, 0C4h, 0D0h, 2, 2 dup(0)
+  0000000140141410  dq 8DE8FFFE98B48A0Fh, 0FFC6208C0FFFF6BCh, 1AE8FFF57E02E8FFh
+  0000000140141850  db 0Fh, 8Ch, 0A7h, 0E5h, 0FEh, 0FFh
+  0000000140141856  xor     r12d, [rsp+340h+var_2E4]
+  000000014014185B  add     ecx, r10d
+  000000014014185E  add     ecx, 8F1BBCDCh
+  0000000140141864  rol     r11d, 1Eh
+  0000000140141868  lea     r10d, [r14+rdx]
+  000000014014186C  mov     eax, r11d
+  000000014014186F  add     r10d, ecx
+  0000000140141872  and     eax, ebx
+  0000000140141874  mov     ecx, r11d
+  0000000140141877  mov     r9d, r10d
+  000000014014187A  or      ecx, ebx
+  000000014014187C  rol     r9d, 5
+  0000000140141880  and     ecx, r8d
+  0000000140141883  add     r9d, esi
+  0000000140141886  or      ecx, eax
+  0000000140141888  rol     r8d, 1Eh
+  000000014014188C  add     ecx, 8F1BBCDCh
+  0000000140141892  xor     r12d, r15d
+  0000000140141895  add     ecx, edi
+  0000000140141897  add     r9d, ecx
+  000000014014189A  rol     r12d, 1
+  000000014014189D  mov     [rsp+340h+var_2EC], r12d
+  00000001401418A2  mov     edi, [rsp+340h+var_304]
+  00000001401418A6  mov     ecx, r11d
+  00000001401418A9  mov     r15d, [rsp+340h+var_2E0]
+  00000001401418AE  or      ecx, r8d
+  00000001401418B1  xor     r15d, [rsp+340h+var_308]
+  00000001401418B6  and     ecx, r10d
+  00000001401418B9  xor     r15d, [rsp+340h+var_314]
+  00000001401418BE  mov     eax, r11d
+  00000001401418C1  mov     r13d, [rsp+340h+var_2DC]
+  00000001401418C6  and     eax, r8d
+  00000001401418C9  or      ecx, eax
+  00000001401418CB  rol     r10d, 1Eh
+  00000001401418CF  add     ecx, ebx
+  00000001401418D1  mov     edx, r9d
+  00000001401418D4  add     ecx, 8F1BBCDCh
+  00000001401418DA  rol     edx, 5
+  00000001401418DD  xor     r13d, edi
+  00000001401418E0  mov     eax, r9d
+  00000001401418E3  xor     r13d, [rsp+340h+var_318]
+  00000001401418E8  xor     eax, r10d
+  00000001401418EB  xor     eax, r8d
+  00000001401418EE  rol     r9d, 1Eh
+  00000001401418F2  add     eax, 0CA62C1D6h
+  00000001401418F7  lea     ebx, [r12+rdx]
+  00000001401418FB  add     eax, r11d
+  00000001401418FE  add     ebx, ecx
+  0000000140141900  mov     r11d, [rsp+340h+var_320]
+  0000000140141905  xor     r13d, esi
+  0000000140141908  jmp     short loc_140141985
+  000000014014190A  dw 5441h, 8F0Fh, 0B88Eh
+  0000000140141910  dq 0F595850F5341FFFFh, 0FCBE914A757CFFFEh, 97D7F1AB25B5571h
+  0000000140141980  db 85h, 1Dh, 81h, 0FEh, 0FFh
+  0000000140141985  xor     r11d, edi
+  0000000140141988  rol     r13d, 1
+  000000014014198B  mov     edi, [rsp+340h+var_2F0]
+  000000014014198F  xor     r15d, r14d
+  0000000140141992  mov     r14d, [rsp+340h+var_2FC]
+  0000000140141997  mov     edx, ebx
+  0000000140141999  rol     edx, 5
+  000000014014199C  mov     esi, r14d
+  000000014014199F  xor     esi, [rsp+340h+var_308]
+  00000001401419A3  rol     r15d, 1
+  00000001401419A6  xor     esi, r12d
+  00000001401419A9  xor     esi, [rsp+340h+var_31C]
+  00000001401419AD  add     edx, r15d
+  00000001401419B0  add     edx, eax
+  00000001401419B2  rol     esi, 1
+  00000001401419B4  xor     r11d, r15d
+  00000001401419B7  mov     [rsp+340h+var_314], r15d
+  00000001401419BC  xor     r11d, [rsp+340h+var_300]
+  00000001401419C1  mov     eax, ebx
+  00000001401419C3  xor     eax, r9d
+  00000001401419C6  rol     ebx, 1Eh
+  00000001401419C9  xor     eax, r10d
+  00000001401419CC  rol     r11d, 1
+  00000001401419CF  add     eax, 0CA62C1D6h
+  00000001401419D4  mov     [rsp+340h+var_304], r13d
+  00000001401419D9  add     eax, r13d
+  00000001401419DC  mov     [rsp+340h+var_318], esi
+  00000001401419E0  mov     ecx, edx
+  00000001401419E2  mov     [rsp+340h+var_2FC], r11d
+  00000001401419E7  rol     ecx, 5
+  00000001401419EA  add     r8d, ecx
+  00000001401419ED  add     r8d, eax
+  00000001401419F0  mov     eax, edx
+  00000001401419F2  xor     eax, ebx
+  00000001401419F4  rol     edx, 1Eh
+  00000001401419F7  xor     eax, r9d
+  00000001401419FA  mov     ecx, r8d
+  00000001401419FD  add     eax, 0CA62C1D6h
+  0000000140141A02  rol     ecx, 5
+  0000000140141A05  add     eax, esi
+  0000000140141A07  add     r10d, ecx
+  0000000140141A0A  add     r10d, eax
+  0000000140141A0D  mov     eax, r8d
+  0000000140141A10  xor     eax, edx
+  0000000140141A12  rol     r8d, 1Eh
+  0000000140141A16  xor     eax, ebx
+  0000000140141A18  mov     ecx, r10d
+  0000000140141A1B  add     eax, 0CA62C1D6h
+  0000000140141A20  rol     ecx, 5
+  0000000140141A23  add     eax, r11d
+  0000000140141A26  jmp     loc_140141BAC
+  0000000140141A2B  db 7Bh, 3Dh, 54h, 0B7h, 5Ch
+  0000000140141A30  dq 0E8588E467C8B98BBh, 0B024D4E855C6D270h, 0D8797CDD1C57557Fh
+  0000000140141BA8  db 0FFh, 1, 2 dup(0FFh)
+  0000000140141BAC  add     r9d, ecx
+  0000000140141BAF  add     r9d, eax
+  0000000140141BB2  xor     edi, r14d
+  0000000140141BB5  mov     r14d, [rsp+340h+var_2E8]
+  0000000140141BBA  mov     ecx, r9d
+  0000000140141BBD  xor     r14d, [rsp+340h+var_320]
+  0000000140141BC2  mov     eax, r10d
+  0000000140141BC5  xor     eax, r8d
+  0000000140141BC8  rol     ecx, 5
+  0000000140141BCB  xor     eax, edx
+  0000000140141BCD  rol     r10d, 1Eh
+  0000000140141BD1  add     eax, 0CA62C1D6h
+  0000000140141BD6  add     ebx, ecx
+  0000000140141BD8  xor     r14d, esi
+  0000000140141BDB  xor     edi, r13d
+  0000000140141BDE  xor     r14d, [rsp+340h+var_2F8]
+  0000000140141BE3  mov     esi, [rsp+340h+var_2E0]
+  0000000140141BE7  xor     esi, [rsp+340h+var_2F0]
+  0000000140141BEB  xor     edi, [rsp+340h+var_30C]
+  0000000140141BEF  xor     esi, r11d
+  0000000140141BF2  xor     esi, [rsp+340h+var_310]
+  0000000140141BF6  mov     r11d, [rsp+340h+var_2DC]
+  0000000140141BFB  xor     r11d, [rsp+340h+var_2E8]
+  0000000140141C00  rol     edi, 1
+  0000000140141C02  add     eax, edi
+  0000000140141C04  rol     r14d, 1
+  0000000140141C07  add     ebx, eax
+  0000000140141C09  rol     esi, 1
+  0000000140141C0B  mov     eax, r9d
+  0000000140141C0E  mov     [rsp+340h+var_2F4], edi
+  0000000140141C12  xor     eax, r10d
+  0000000140141C15  rol     r9d, 1Eh
+  0000000140141C19  xor     eax, r8d
+  0000000140141C1C  mov     [rsp+340h+var_2D0], edi
+  0000000140141C20  add     eax, edx
+  0000000140141C22  mov     [rsp+340h+var_320], r14d
+  0000000140141C27  add     eax, 0CA62C1D6h
+  0000000140141C2C  mov     [rsp+340h+var_2CC], r14d
+  0000000140141C31  mov     ecx, ebx
+  0000000140141C33  mov     [rsp+340h+var_2C8], esi
+  0000000140141C37  rol     ecx, 5
+  0000000140141C3A  xor     r11d, edi
+  0000000140141C3D  xor     r11d, r12d
+  0000000140141C40  mov     r12d, [rsp+340h+var_2E0]
+  0000000140141C45  xor     r12d, r15d
+  0000000140141C48  rol     r11d, 1
+  0000000140141C4B  xor     r12d, r14d
+  0000000140141C4E  mov     [rsp+340h+var_308], r11d
+  0000000140141C53  xor     r12d, [rsp+340h+var_31C]
+  0000000140141C58  lea     edx, [r14+rcx]
+  0000000140141C5C  jmp     loc_140141DA3
+  0000000140141C61  db 49h, 3, 0E1h, 0Fh, 84h, 0CDh, 5Fh
+  0000000140141C68  dq 54830FE703480000h, 8B0FE50348FFFFCDh, 0CF880F52FFFEF4FCh
+  0000000140141DA0  db 30h, 2 dup(0)
+  0000000140141DA3  add     edx, eax
+  0000000140141DA5  rol     r12d, 1
+  0000000140141DA8  mov     eax, r9d
+  0000000140141DAB  mov     [rsp+340h+var_2E0], r12d
+  0000000140141DB0  xor     eax, r10d
+  0000000140141DB3  mov     [rbp+240h+var_2C0], r12d
+  0000000140141DB7  xor     eax, ebx
+  0000000140141DB9  mov     [rsp+340h+var_2C4], r11d
+  0000000140141DBE  add     eax, r8d
+  0000000140141DC1  rol     ebx, 1Eh
+  0000000140141DC4  add     eax, 0CA62C1D6h
+  0000000140141DC9  mov     ecx, edx
+  0000000140141DCB  rol     ecx, 5
+  0000000140141DCE  add     r12d, 0CA62C1D6h
+  0000000140141DD5  lea     r8d, [rsi+rcx]
+  0000000140141DD9  add     r8d, eax
+  0000000140141DDC  mov     eax, edx
+  0000000140141DDE  xor     eax, ebx
+  0000000140141DE0  rol     edx, 1Eh
+  0000000140141DE3  xor     eax, r9d
+  0000000140141DE6  mov     ecx, r8d
+  0000000140141DE9  add     eax, 0CA62C1D6h
+  0000000140141DEE  rol     ecx, 5
+  0000000140141DF1  add     eax, r11d
+  0000000140141DF4  add     r10d, ecx
+  0000000140141DF7  add     r10d, eax
+  0000000140141DFA  mov     eax, r8d
+  0000000140141DFD  xor     eax, edx
+  0000000140141DFF  mov     ecx, r10d
+  0000000140141E02  xor     eax, ebx
+  0000000140141E04  rol     ecx, 5
+  0000000140141E07  add     eax, r12d
+  0000000140141E0A  add     r9d, ecx
+  0000000140141E0D  add     r9d, eax
+  0000000140141E10  mov     r15d, [rsp+340h+var_2DC]
+  0000000140141E15  mov     eax, r10d
+  0000000140141E18  mov     r12d, [rsp+340h+var_318]
+  0000000140141E1D  xor     r15d, r13d
+  0000000140141E20  xor     r15d, [rsp+340h+var_300]
+  0000000140141E25  xor     r12d, r11d
+  0000000140141E28  xor     r12d, [rsp+340h+var_30C]
+  0000000140141E2D  xor     r15d, esi
+  0000000140141E30  xor     r12d, [rsp+340h+var_31C]
+  0000000140141E35  mov     ecx, r9d
+  0000000140141E38  mov     r13d, [rsp+340h+var_2E0]
+  0000000140141E3D  xor     r13d, [rsp+340h+var_2FC]
+  0000000140141E42  xor     r13d, [rsp+340h+var_2F8]
+  0000000140141E47  xor     r13d, [rsp+340h+var_300]
+  0000000140141E4C  rol     r15d, 1
+  0000000140141E4F  rol     ecx, 5
+  0000000140141E52  jmp     loc_140141FCB
+  0000000140141E57  db 0E8h
+  0000000140141E58  dq 0C888890FFFF6A0F4h, 0FFFF7751DE8FFFEh, 4CB6E8FFFEF26489h
+  0000000140141FC8  xchg    cl, [rdx]
+  0000000140141FCA  pop     rdx
+  0000000140141FCB  mov     r14d, r15d
+  0000000140141FCE  add     ebx, ecx
+  0000000140141FD0  rol     r8d, 1Eh
+  0000000140141FD4  xor     eax, r8d
+  0000000140141FD7  rol     r10d, 1Eh
+  0000000140141FDB  xor     eax, edx
+  0000000140141FDD  mov     [rsp+340h+var_2DC], r15d
+  0000000140141FE2  add     eax, 0CA62C1D6h
+  0000000140141FE7  mov     [rbp+240h+var_2BC], r15d
+  0000000140141FEB  add     eax, r15d
+  0000000140141FEE  rol     r12d, 1
+  0000000140141FF1  add     ebx, eax
+  0000000140141FF3  rol     r13d, 1
+  0000000140141FF6  xor     r14d, edi
+  0000000140141FF9  mov     [rbp+240h+var_2B8], r12d
+  0000000140141FFD  xor     r14d, [rsp+340h+var_310]
+  0000000140142002  mov     eax, r9d
+  0000000140142005  xor     r14d, [rsp+340h+var_30C]
+  000000014014200A  xor     eax, r10d
+  000000014014200D  xor     eax, r8d
+  0000000140142010  rol     r9d, 1Eh
+  0000000140142014  add     eax, 0CA62C1D6h
+  0000000140142019  rol     r14d, 1
+  000000014014201C  add     eax, r12d
+  000000014014201F  mov     [rbp+240h+var_2B4], r13d
+  0000000140142023  mov     r11d, ebx
+  0000000140142026  mov     [rbp+240h+var_2B0], r14d
+  000000014014202A  rol     r11d, 5
+  000000014014202E  mov     r15d, r12d
+  0000000140142031  xor     r15d, [rsp+340h+var_2EC]
+  0000000140142036  add     r11d, edx
+  0000000140142039  xor     r15d, [rsp+340h+var_2F8]
+  000000014014203E  add     r11d, eax
+  0000000140142041  xor     r15d, [rsp+340h+var_320]
+  0000000140142046  mov     eax, ebx
+  0000000140142048  xor     eax, r9d
+  000000014014204B  rol     ebx, 1Eh
+  000000014014204E  xor     eax, r10d
+  0000000140142051  rol     r15d, 1
+  0000000140142054  add     eax, 0CA62C1D6h
+  0000000140142059  mov     [rbp+240h+var_2AC], r15d
+  000000014014205D  add     eax, r13d
+  0000000140142060  mov     ecx, r11d
+  0000000140142063  rol     ecx, 5
+  0000000140142066  add     r8d, ecx
+  0000000140142069  add     r8d, eax
+  000000014014206C  mov     eax, r11d
+  000000014014206F  xor     eax, ebx
+  0000000140142071  rol     r11d, 1Eh
+  0000000140142075  xor     eax, r9d
+  0000000140142078  jmp     loc_1401421F7
+  000000014014207D  db 41h, 52h, 0Fh
+  0000000140142080  dq 0E38B49FFFE70F582h, 0C2C141FFFF2F17E9h, 8B41EFD1DD33411Eh
+  00000001401421F0  mov     esp, ebx
+  00000001401421F2  jmp     loc_140135C39
+  00000001401421F7  mov     ecx, r8d
+  00000001401421FA  add     eax, 0CA62C1D6h
+  00000001401421FF  rol     ecx, 5
+  0000000140142202  add     eax, r14d
+  0000000140142205  add     r10d, ecx
+  0000000140142208  add     r10d, eax
+  000000014014220B  mov     eax, r8d
+  000000014014220E  xor     eax, r11d
+  0000000140142211  mov     edi, r10d
+  0000000140142214  xor     eax, ebx
+  0000000140142216  rol     edi, 5
+  0000000140142219  add     eax, 0CA62C1D6h
+  000000014014221E  add     edi, r9d
+  0000000140142221  add     eax, r15d
+  0000000140142224  add     edi, eax
+  0000000140142226  xor     r14d, [rsp+340h+var_304]
+  000000014014222B  mov     eax, r10d
+  000000014014222E  xor     r14d, [rsp+340h+var_2EC]
+  0000000140142233  mov     edx, r13d
+  0000000140142236  xor     edx, [rsp+340h+var_314]
+  000000014014223A  xor     edx, [rsp+340h+var_310]
+  000000014014223E  xor     r15d, [rsp+340h+var_2E0]
+  0000000140142243  xor     edx, esi
+  0000000140142245  xor     r14d, [rsp+340h+var_308]
+  000000014014224A  mov     esi, edi
+  000000014014224C  xor     r15d, [rsp+340h+var_318]
+  0000000140142251  xor     r15d, [rsp+340h+var_314]
+  0000000140142256  rol     edx, 1
+  0000000140142258  mov     [rbp+240h+var_2A8], edx
+  000000014014225B  rol     r14d, 1
+  000000014014225E  rol     r8d, 1Eh
+  0000000140142262  xor     eax, r8d
+  0000000140142265  rol     r15d, 1
+  0000000140142268  xor     eax, r11d
+  000000014014226B  rol     esi, 5
+  000000014014226E  add     eax, 0CA62C1D6h
+  0000000140142273  rol     r10d, 1Eh
+  0000000140142277  add     eax, edx
+  0000000140142279  mov     [rbp+240h+var_2A4], r14d
+  000000014014227D  xor     edx, [rsp+340h+var_2DC]
+  0000000140142281  add     esi, ebx
+  0000000140142283  xor     edx, [rsp+340h+var_2FC]
+  0000000140142287  add     esi, eax
+  0000000140142289  xor     edx, [rsp+340h+var_304]
+  000000014014228D  mov     eax, edi
+  000000014014228F  xor     eax, r10d
+  0000000140142292  rol     edx, 1
+  0000000140142294  xor     eax, r8d
+  0000000140142297  mov     [rbp+240h+var_29C], edx
+  000000014014229A  add     eax, 0CA62C1D6h
+  000000014014229F  jmp     short loc_140142313
+  00000001401422A1  db 8Dh, 0C4h, 54h, 77h, 75h, 4Bh, 5Fh
+  00000001401422A8  dq 0E85DE1E4FA60584Dh, 0FEDCD0E8FFF56FD4h, 42FFFF7432830FFFh
+  0000000140142310  db 5Fh, 76h, 59h
+  0000000140142313  rol     edi, 1Eh
+  0000000140142316  add     eax, r14d
+  0000000140142319  mov     [rbp+240h+var_2A0], r15d
+  000000014014231D  add     edx, 0CA62C1D6h
+  0000000140142323  xor     r14d, r12d
+  0000000140142326  xor     r14d, [rsp+340h+var_2F4]
+  000000014014232B  mov     r9d, esi
+  000000014014232E  xor     r14d, [rsp+340h+var_318]
+  0000000140142333  rol     r9d, 5
+  0000000140142337  add     r9d, r11d
+  000000014014233A  rol     r14d, 1
+  000000014014233D  add     r9d, eax
+  0000000140142340  mov     [rbp+240h+var_298], r14d
+  0000000140142344  mov     eax, esi
+  0000000140142346  mov     ecx, r9d
+  0000000140142349  xor     eax, edi
+  000000014014234B  rol     esi, 1Eh
+  000000014014234E  xor     eax, r10d
+  0000000140142351  rol     ecx, 5
+  0000000140142354  add     eax, 0CA62C1D6h
+  0000000140142359  add     r8d, ecx
+  000000014014235C  add     eax, r15d
+  000000014014235F  xor     r15d, r13d
+  0000000140142362  xor     r15d, [rsp+340h+var_2FC]
+  0000000140142367  add     r8d, eax
+  000000014014236A  xor     r15d, [rsp+340h+var_320]
+  000000014014236F  mov     eax, r9d
+  0000000140142372  xor     eax, esi
+  0000000140142374  rol     r9d, 1Eh
+  0000000140142378  xor     eax, edi
+  000000014014237A  mov     ebx, r8d
+  000000014014237D  add     eax, edx
+  000000014014237F  rol     ebx, 5
+  0000000140142382  add     ebx, r10d
+  0000000140142385  add     ebx, eax
+  0000000140142387  mov     eax, r8d
+  000000014014238A  xor     eax, r9d
+  000000014014238D  rol     r8d, 1Eh
+  0000000140142391  xor     eax, esi
+  0000000140142393  mov     edx, ebx
+  0000000140142395  rol     edx, 5
+  0000000140142398  add     eax, 0CA62C1D6h
+  000000014014239D  add     eax, r14d
+  00000001401423A0  add     edx, edi
+  00000001401423A2  add     edx, eax
+  00000001401423A4  rol     r15d, 1
+  00000001401423A7  mov     r10d, [rbp+240h+var_1D8]
+  00000001401423AB  add     esi, 0CA62C1D6h
+  00000001401423B1  mov     r11d, [rbp+240h+var_1D0]
+  00000001401423B5  mov     eax, ebx
+  00000001401423B7  jmp     loc_140142632
+  00000001401423BC  dd 4685FF17h
+  00000001401423C0  dq 0DA371F9D7D510E53h, 587F5B3E9D755F7Ch, 8341CB3305C0C186h
+  0000000140142630  db 54h, 39h
+  0000000140142632  mov     rcx, [rbp+240h+var_280]
+  0000000140142636  xor     eax, r8d
+  0000000140142639  xor     eax, r9d
+  000000014014263C  mov     [rbp+240h+var_294], r15d
+  0000000140142640  add     eax, r15d
+  0000000140142643  rol     ebx, 1Eh
+  0000000140142646  mov     r15d, [rbp+240h+var_1DC]
+  000000014014264A  add     eax, esi
+  000000014014264C  add     eax, [rbp+240h+var_1E0]
+  000000014014264F  add     r15d, edx
+  0000000140142652  mov     esi, [rbp+240h+var_1D4]
+  0000000140142655  mov     r12d, edx
+  0000000140142658  mov     rdx, [rbp-38h]
+  000000014014265C  add     r10d, ebx
+  000000014014265F  rol     r12d, 5
+  0000000140142663  add     esi, r8d
+  0000000140142666  add     r12d, eax
+  0000000140142669  mov     [rbp+240h+var_1DC], r15d
+  000000014014266D  mov     rax, [rbp+240h+var_290]
+  0000000140142671  add     r11d, r9d
+  0000000140142674  add     rax, 40h ; '@'
+  0000000140142678  mov     [rbp+240h+var_1E0], r12d
+  000000014014267C  sub     rdx, 40h ; '@'
+  0000000140142680  mov     [rbp+240h+var_1D8], r10d
+  0000000140142684  add     rcx, 40h ; '@'
+  0000000140142688  mov     [rbp+240h+var_1D4], esi
+  000000014014268B  mov     [rbp+240h+var_1D0], r11d
+  000000014014268F  mov     [rbp+240h+var_290], rax
+  0000000140142693  mov     [rbp-38h], rdx
+  0000000140142697  mov     [rbp+240h+var_280], rcx
+  000000014014269B  cmp     rcx, 8
+  000000014014269F  jb      loc_14013EB4C
+  00000001401426A5  jmp     loc_140142970
+  00000001401426AA  dw 0E9E8h, 0F56Bh, 0E8FFh
+  00000001401426B0  dq 0D1B48E0FFFFF965Eh, 0CFC0400E148DFFFFh, 0C141ECD341D003FFh
+  0000000140142970  xor     r12d, r12d
+  0000000140142973  mov     ecx, r12d
+  0000000140142976  jmp     loc_140142D42
+  000000014014297B  db 48h, 3, 0E7h, 0Fh, 84h
+  0000000140142980  dq 757A4E5B00000474h, 567A8C7F0CE85654h, 53418D7C7C556C80h
+  0000000140142AC8  db 74h, 0D3h, 59h, 38h, 57h, 2Ah
+  0000000140142ACE  mov     rax, r12
+  0000000140142AD1  jmp     loc_140142D42
+  0000000140142AD6  dw 8DE8h
+  0000000140142AD8  dq 0FFFF5525E8FFF567h, 0D38BFFFEB762850Fh, 41CA8B4150244433h
+  0000000140142D40  add     [rax], eax
+  0000000140142D42  mov     r8d, 8
+  0000000140142D48  lea     rdx, [rbp+240h+var_268]
+  0000000140142D4C  sub     r8, rax
+  0000000140142D4F  add     rdx, rax
+  0000000140142D52  lea     rax, [rbp+240h+var_1C4]
+  0000000140142D56  add     rcx, rax
+  0000000140142D59  jmp     loc_140142DF8
+  0000000140142D5E  dw 16E8h
+  0000000140142D60  dq 0FF51C6890FFFFE66h, 0CAE95C415D415DFFh, 0FFFEF2F4E8FFFEEEh
+  0000000140142DF8  call    sub_140095E40
+  0000000140142DFD  jmp     loc_140142FEC
+  0000000140142E02  dw 0C9E8h, 0F562h, 0FFFh
+  0000000140142E08  dq 4716E8FFFF9E7289h, 0FFFF5E828A0FFFF7h, 0FFE8088A0FE20349h
+  0000000140142FE8  db 17h, 0B5h, 53h, 0E8h
+  0000000140142FEC  lea     rcx, [rbp+240h+var_1E0]
+  0000000140142FF0  mov     rax, 1A4B6CBB6BCh
+  0000000140142FFA  cmp     rcx, rax
+  0000000140142FFD  jnb     loc_14014384C
+  0000000140143003  jmp     loc_14014326D
+  0000000140143008  dq 0E9810FFFF57023E8h, 0FFF561B0E8FFFF66h, 0B5820FFFFFC643E8h
+  0000000140143268  db 8Eh, 35h, 96h, 2 dup(0FFh)
+  000000014014326D  nop
+  000000014014326E  jmp     loc_1401433B7
+  0000000140143273  db 41h, 81h, 0C2h, 0A1h, 0EBh
+  0000000140143278  dq 3443C2444336ED9h, 0C88B4134244433D1h, 3A44C73386D98341h
+  00000001401433B0  db 0FFh, 0Fh, 84h, 96h, 73h, 0FEh, 0FFh
+  00000001401433B7  call    sub_1401A7255
+  00000001401433BC  jmp     rax
+  00000001401433BE  jmp     loc_14013CBB2
+  00000001401433C3  db 41h, 5Ch, 0E9h, 0F7h, 0CEh
+  00000001401433C8  dq 54247433C80BFFFFh, 44A7EE8041CB0341h, 0EFD18F1BBCDC9A8Dh
+  00000001401435E0  db 0FEh, 0FFh
+  00000001401435E2  nop
+  00000001401435E3  nop
+  00000001401435E4  nop
+  00000001401435E5  nop
+  00000001401435E6  nop
+  00000001401435E7  nop
+  00000001401435E8  jmp     loc_14014384C
+  00000001401435ED  db 41h, 5Fh, 0E9h
+  00000001401435F0  dq 0F55B1FE8FFFF6810h, 8B0FFFFE9235E8FFh, 0F55AEFE8FFFF8F3Ch
+  0000000140143848  movsd
+  0000000140143849  sar     dh, 0FFh
+  000000014014384C  mov     ebx, dword ptr [rbp+240h+var_1CC+4]
+  000000014014384F  mov     eax, 40h ; '@'
+  0000000140143854  mov     ecx, ebx
+  0000000140143856  and     ecx, 3Fh
+  0000000140143859  sub     eax, ecx
+  000000014014385B  mov     ecx, eax
+  000000014014385D  cmp     eax, 8
+  0000000140143860  lea     rdi, [rax+40h]
+  0000000140143864  cmova   rdi, rcx
+  0000000140143868  xor     edx, edx
+  000000014014386A  lea     rcx, [rbp+240h+var_D0]
+  0000000140143871  mov     [rbp+240h+var_260], rdi
+  0000000140143875  lea     r8, [rdi-8]
+  0000000140143879  jmp     loc_140143AC8
+  000000014014387E  dw 8148h
+  0000000140143880  dq 24800F00000528C4h, 0FFF55890E8FFFF88h, 0AE860FFFFF15D5E8h
+  0000000140143AC8  call    sub_140096100
+  0000000140143ACD  jmp     loc_140143B70
+  0000000140143AD2  dw 4873h, 7735h, 5B77h
+  0000000140143AD8  dq 20775C15555AF8DDh, 66B23C80E80B5D5Eh, 0AC5357585D4E3350h
+  0000000140143B70  mov     r8d, dword ptr [rbp+240h+var_1CC]
+  0000000140143B74  lea     edx, ds:0[rbx*8]
+  0000000140143B7B  mov     [rbp+240h+var_D0], 80h
+  0000000140143B82  mov     ecx, ebx
+  0000000140143B84  shr     ecx, 1Dh
+  0000000140143B87  add     ebx, edi
+  0000000140143B89  lea     eax, ds:0[r8*8]
+  0000000140143B91  or      ecx, eax
+  0000000140143B93  mov     eax, ecx
+  0000000140143B95  shr     eax, 18h
+  0000000140143B98  mov     [rbp+rdi+240h+var_D8], al
+  0000000140143B9F  mov     eax, ecx
+  0000000140143BA1  shr     eax, 10h
+  0000000140143BA4  mov     [rbp+rdi+240h+var_D7], al
+  0000000140143BAB  mov     eax, ecx
+  0000000140143BAD  shr     eax, 8
+  0000000140143BB0  mov     [rbp+rdi+240h+var_D6], al
+  0000000140143BB7  mov     eax, edx
+  0000000140143BB9  shr     eax, 18h
+  0000000140143BBC  mov     [rbp+rdi+240h+var_D5], cl
+  0000000140143BC3  mov     rcx, [rbp+240h+var_1CC+4]
+  0000000140143BC7  mov     [rbp+rdi+240h+var_D4], al
+  0000000140143BCE  and     ecx, 3Fh
+  0000000140143BD1  mov     eax, edx
+  0000000140143BD3  mov     dword ptr [rbp+240h+var_1CC+4], ebx
+  0000000140143BD6  shr     eax, 10h
+  0000000140143BD9  mov     [rbp+rdi+240h+var_D3], al
+  0000000140143BE0  mov     eax, edx
+  0000000140143BE2  shr     eax, 8
+  0000000140143BE5  mov     [rbp+rdi+240h+var_D2], al
+  0000000140143BEC  mov     eax, ebx
+  0000000140143BEE  mov     [rbp+rdi+240h+var_D1], dl
+  0000000140143BF5  cmp     rax, rdi
+  0000000140143BF8  jnb     loc_140143CE2
+  0000000140143BFE  jmp     short loc_140143C72
+  0000000140143C00  dq 8B800FFFF687E5E8h, 0FFF55670E8000011h, 538A0FFFFFE59EE8h
+  0000000140143C70  db 2 dup(0FFh)
+  0000000140143C72  inc     r8d
+  0000000140143C75  mov     dword ptr [rbp+240h+var_1CC], r8d
+  0000000140143C79  jmp     short loc_140143CE2
+  0000000140143C7B  db 5Dh, 41h, 5Ch, 0E9h, 19h
+  0000000140143C80  dq 0FFF55570E8FFFE66h, 1A810FFFFF5701E8h, 0FFF55420E8FFFE78h
+  0000000140143CE0  db 0FEh, 0FFh
+  0000000140143CE2  mov     r8d, 40h ; '@'
+  0000000140143CE8  sub     r8, rcx
+  0000000140143CEB  mov     [rbp+240h+var_290], r8
+  0000000140143CEF  cmp     rdi, r8
+  0000000140143CF2  jb      loc_14014B0FF
+  0000000140143CF8  jmp     loc_140143F62
+  0000000140143CFD  db 48h, 3, 0E5h
+  0000000140143D00  dq 0EAE8FFFEE95F890Fh, 0FEAC20820FFFFF9Dh, 0E95C415D415E41FFh
+  0000000140143F60  db 0FEh, 0FFh
+  0000000140143F62  lea     rax, [rbp+240h+var_1C4]
+  0000000140143F66  add     rcx, rax
+  0000000140143F69  lea     rdx, [rbp+240h+var_D0]
+  0000000140143F70  jmp     short loc_140143FD2
+  0000000140143F72  dw 8148h, 28C4h, 7
+  0000000140143F78  dq 0E8FFFE919F8C0F00h, 0FF407CE8FFF550E4h, 51000196308E0FFFh
+  0000000140143FD0  db 2 dup(0FFh)
+  0000000140143FD2  call    sub_140095E40
+  0000000140143FD7  jmp     short loc_140144052
+  0000000140143FD9  db 48h, 81h, 0C4h, 38h, 5, 2 dup(0)
+  0000000140143FE0  dq 55E8FFFEE67F810Fh, 0FFFEEA92E8FFF552h, 77E8FFFE6FE78C0Fh
+  0000000140144050  db 2 dup(0FFh)
+  0000000140144052  mov     rdx, r12
+  0000000140144055  jmp     loc_140144223
+  000000014014405A  dw 8B48h, 0E875h, 0FF5h
+  0000000140144060  dq 7B2F7AFFFF4C6E8Eh, 8D57E8E81855845Fh, 8B8D7A5EE3EA0DE8h
+  0000000140144220  db 82h, 0FEh, 0FFh
+  0000000140144223  movzx   eax, [rbp+rdx+240h+var_1C3]
+  0000000140144228  movzx   ecx, [rbp+rdx+240h+var_1C4]
+  000000014014422D  shl     ecx, 8
+  0000000140144230  or      ecx, eax
+  0000000140144232  movzx   eax, [rbp+rdx+240h+var_1C2]
+  0000000140144237  shl     ecx, 8
+  000000014014423A  or      ecx, eax
+  000000014014423C  movzx   eax, [rbp+rdx+240h+var_1C1]
+  0000000140144241  shl     ecx, 8
+  0000000140144244  or      ecx, eax
+  0000000140144246  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014014424A  add     rdx, 4
+  000000014014424E  cmp     rdx, 40h ; '@'
+  0000000140144252  jl      short loc_140144223
+  0000000140144254  jmp     short loc_1401442D3
+  0000000140144256  dw 5141h
+  0000000140144258  dq 8B49000132E4840Fh, 0FF8003E95D5C41E3h, 800FFFF56312E8FFh
+  00000001401442D0  db 30h, 2 dup(0FFh)
+  00000001401442D3  mov     r10d, [rbp+240h+var_1D8]
+  00000001401442D7  mov     r9d, [rbp+240h+var_1D4]
+  00000001401442DB  mov     ecx, r9d
+  00000001401442DE  xor     ecx, r10d
+  00000001401442E1  mov     ebx, [rbp+240h+var_1E0]
+  00000001401442E4  mov     edx, [rbp+240h+var_1DC]
+  00000001401442E7  mov     eax, ebx
+  00000001401442E9  and     ecx, edx
+  00000001401442EB  mov     r8d, [rbp+240h+var_1D0]
+  00000001401442EF  xor     ecx, r9d
+  00000001401442F2  mov     r12d, [rsp+340h+var_2C8]
+  00000001401442F7  mov     r13d, [rsp+340h+var_2C4]
+  00000001401442FC  add     r8d, 5A827999h
+  0000000140144303  rol     eax, 5
+  0000000140144306  add     r9d, 5A827999h
+  000000014014430D  add     eax, [rsp+340h+var_2D0]
+  0000000140144311  add     ecx, eax
+  0000000140144313  rol     edx, 1Eh
+  0000000140144316  add     r8d, ecx
+  0000000140144319  mov     ecx, r10d
+  000000014014431C  xor     ecx, edx
+  000000014014431E  mov     eax, r8d
+  0000000140144321  and     ecx, ebx
+  0000000140144323  rol     eax, 5
+  0000000140144326  add     eax, [rsp+340h+var_2CC]
+  000000014014432A  lea     r11d, [rdx+5A827999h]
+  0000000140144331  xor     ecx, r10d
+  0000000140144334  rol     ebx, 1Eh
+  0000000140144337  add     ecx, eax
+  0000000140144339  add     r10d, 5A827999h
+  0000000140144340  add     r9d, ecx
+  0000000140144343  mov     ecx, ebx
+  0000000140144345  xor     ecx, edx
+  0000000140144347  mov     eax, r9d
+  000000014014434A  and     ecx, r8d
+  000000014014434D  rol     eax, 5
+  0000000140144350  xor     ecx, edx
+  0000000140144352  rol     r8d, 1Eh
+  0000000140144356  add     eax, r12d
+  0000000140144359  lea     edx, [rbx+5A827999h]
+  000000014014435F  add     ecx, eax
+  0000000140144361  add     r10d, ecx
+  0000000140144364  mov     ecx, r8d
+  0000000140144367  xor     ecx, ebx
+  0000000140144369  mov     eax, r10d
+  000000014014436C  and     ecx, r9d
+  000000014014436F  rol     eax, 5
+  0000000140144372  xor     ecx, ebx
+  0000000140144374  rol     r9d, 1Eh
+  0000000140144378  add     eax, r13d
+  000000014014437B  jmp     loc_140144426
+  0000000140144380  dq 88860FFFF73DFBE8h, 76FF26791EFFFF78h, 517A523B745B767Bh
+  0000000140144420  db 0Fh, 86h, 3Ah, 24h, 2 dup(0FFh)
+  0000000140144426  lea     ebx, [r8+5A827999h]
+  000000014014442D  add     ecx, eax
+  000000014014442F  add     r11d, ecx
+  0000000140144432  mov     ecx, r9d
+  0000000140144435  xor     ecx, r8d
+  0000000140144438  mov     eax, r11d
+  000000014014443B  and     ecx, r10d
+  000000014014443E  rol     eax, 5
+  0000000140144441  add     eax, [rbp+240h+var_2C0]
+  0000000140144444  xor     ecx, r8d
+  0000000140144447  add     ecx, eax
+  0000000140144449  rol     r10d, 1Eh
+  000000014014444D  add     edx, ecx
+  000000014014444F  mov     ecx, r10d
+  0000000140144452  xor     ecx, r9d
+  0000000140144455  mov     eax, edx
+  0000000140144457  and     ecx, r11d
+  000000014014445A  rol     eax, 5
+  000000014014445D  add     eax, [rbp+240h+var_2BC]
+  0000000140144460  xor     ecx, r9d
+  0000000140144463  add     ecx, eax
+  0000000140144465  rol     r11d, 1Eh
+  0000000140144469  add     ebx, ecx
+  000000014014446B  mov     ecx, r11d
+  000000014014446E  xor     ecx, r10d
+  0000000140144471  mov     eax, ebx
+  0000000140144473  and     ecx, edx
+  0000000140144475  rol     eax, 5
+  0000000140144478  add     eax, [rbp+240h+var_2B8]
+  000000014014447B  xor     ecx, r10d
+  000000014014447E  add     ecx, eax
+  0000000140144480  rol     edx, 1Eh
+  0000000140144483  lea     r8d, [r9+5A827999h]
+  000000014014448A  add     r8d, ecx
+  000000014014448D  lea     r9d, [r10+5A827999h]
+  0000000140144494  mov     ecx, edx
+  0000000140144496  lea     r10d, [r11+5A827999h]
+  000000014014449D  xor     ecx, r11d
+  00000001401444A0  mov     eax, r8d
+  00000001401444A3  and     ecx, ebx
+  00000001401444A5  rol     eax, 5
+  00000001401444A8  add     eax, [rbp+240h+var_2B4]
+  00000001401444AB  xor     ecx, r11d
+  00000001401444AE  add     ecx, eax
+  00000001401444B0  rol     ebx, 1Eh
+  00000001401444B3  add     r9d, ecx
+  00000001401444B6  lea     r11d, [rdx+5A827999h]
+  00000001401444BD  mov     ecx, ebx
+  00000001401444BF  mov     eax, r9d
+  00000001401444C2  xor     ecx, edx
+  00000001401444C4  jmp     loc_140144753
+  00000001401444C9  db 48h, 81h, 0C4h, 0C8h, 7, 2 dup(0)
+  00000001401444D0  dq 7442FFFE68758D0Fh, 4C5324E95989541Eh, 0B351ED13EE8D795Fh
+  0000000140144750  db 57h, 0FEh, 0FFh
+  0000000140144753  rol     eax, 5
+  0000000140144756  add     eax, [rbp+240h+var_2B0]
+  0000000140144759  and     ecx, r8d
+  000000014014475C  xor     ecx, edx
+  000000014014475E  rol     r8d, 1Eh
+  0000000140144762  add     ecx, eax
+  0000000140144764  lea     edx, [rbx+5A827999h]
+  000000014014476A  add     r10d, ecx
+  000000014014476D  mov     ecx, r8d
+  0000000140144770  xor     ecx, ebx
+  0000000140144772  mov     eax, r10d
+  0000000140144775  and     ecx, r9d
+  0000000140144778  rol     eax, 5
+  000000014014477B  add     eax, [rbp+240h+var_2AC]
+  000000014014477E  xor     ecx, ebx
+  0000000140144780  add     ecx, eax
+  0000000140144782  rol     r9d, 1Eh
+  0000000140144786  add     r11d, ecx
+  0000000140144789  lea     ebx, [r8+5A827999h]
+  0000000140144790  mov     ecx, r9d
+  0000000140144793  mov     eax, r11d
+  0000000140144796  xor     ecx, r8d
+  0000000140144799  rol     eax, 5
+  000000014014479C  add     eax, [rbp+240h+var_2A8]
+  000000014014479F  and     ecx, r10d
+  00000001401447A2  xor     ecx, r8d
+  00000001401447A5  rol     r10d, 1Eh
+  00000001401447A9  add     ecx, eax
+  00000001401447AB  lea     r8d, [r9+5A827999h]
+  00000001401447B2  add     edx, ecx
+  00000001401447B4  mov     ecx, r10d
+  00000001401447B7  xor     ecx, r9d
+  00000001401447BA  mov     eax, edx
+  00000001401447BC  and     ecx, r11d
+  00000001401447BF  rol     eax, 5
+  00000001401447C2  add     eax, [rbp+240h+var_2A4]
+  00000001401447C5  xor     ecx, r9d
+  00000001401447C8  add     ecx, eax
+  00000001401447CA  rol     r11d, 1Eh
+  00000001401447CE  add     ebx, ecx
+  00000001401447D0  lea     r9d, [r10+5A827999h]
+  00000001401447D7  mov     eax, ebx
+  00000001401447D9  mov     ecx, r11d
+  00000001401447DC  xor     ecx, r10d
+  00000001401447DF  rol     eax, 5
+  00000001401447E2  add     eax, [rbp+240h+var_2A0]
+  00000001401447E5  and     ecx, edx
+  00000001401447E7  xor     ecx, r10d
+  00000001401447EA  rol     edx, 1Eh
+  00000001401447ED  add     ecx, eax
+  00000001401447EF  jmp     loc_140144956
+  00000001401447F4  dd 0F54A97E8h
+  00000001401447F8  dq 8C0FFFFF5B9EE8FFh, 0F5717FE8FFFE7135h, 0C100008A548C0FFFh
+  0000000140144950  db 0Fh, 8Ch, 2Fh, 0F3h, 0FEh, 0FFh
+  0000000140144956  add     r8d, ecx
+  0000000140144959  mov     ecx, edx
+  000000014014495B  xor     ecx, r11d
+  000000014014495E  mov     eax, r8d
+  0000000140144961  and     ecx, ebx
+  0000000140144963  rol     eax, 5
+  0000000140144966  add     eax, [rbp+240h+var_29C]
+  0000000140144969  xor     ecx, r11d
+  000000014014496C  add     ecx, eax
+  000000014014496E  add     r9d, ecx
+  0000000140144971  rol     ebx, 1Eh
+  0000000140144974  mov     eax, r9d
+  0000000140144977  mov     r10d, [rbp+240h+var_298]
+  000000014014497B  lea     r14d, [rdx+5A827999h]
+  0000000140144982  mov     r15d, [rbp+240h+var_2A8]
+  0000000140144986  lea     esi, [rbx+5A827999h]
+  000000014014498C  rol     eax, 5
+  000000014014498F  mov     ecx, ebx
+  0000000140144991  xor     ecx, edx
+  0000000140144993  add     r10d, eax
+  0000000140144996  and     ecx, r8d
+  0000000140144999  rol     r8d, 1Eh
+  000000014014499D  xor     ecx, edx
+  000000014014499F  mov     edx, [rbp+240h+var_29C]
+  00000001401449A2  xor     edx, [rbp+240h+var_2B0]
+  00000001401449A5  add     ecx, 5A827999h
+  00000001401449AB  xor     edx, r12d
+  00000001401449AE  add     r10d, ecx
+  00000001401449B1  xor     edx, [rsp+340h+var_2D0]
+  00000001401449B5  add     r10d, r11d
+  00000001401449B8  rol     edx, 1
+  00000001401449BA  mov     eax, r10d
+  00000001401449BD  mov     [rsp+340h+var_31C], edx
+  00000001401449C1  mov     ecx, r8d
+  00000001401449C4  rol     eax, 5
+  00000001401449C7  xor     ecx, ebx
+  00000001401449C9  add     eax, [rbp+240h+var_294]
+  00000001401449CC  and     ecx, r9d
+  00000001401449CF  xor     ecx, ebx
+  00000001401449D1  rol     r9d, 1Eh
+  00000001401449D5  add     ecx, eax
+  00000001401449D7  add     r14d, ecx
+  00000001401449DA  mov     ecx, r9d
+  00000001401449DD  xor     ecx, r8d
+  00000001401449E0  mov     eax, r14d
+  00000001401449E3  rol     eax, 5
+  00000001401449E6  and     ecx, r10d
+  00000001401449E9  add     eax, edx
+  00000001401449EB  rol     r10d, 1Eh
+  00000001401449EF  mov     edx, [rbp+240h+var_298]
+  00000001401449F2  jmp     loc_140144A96
+  00000001401449F7  db 75h
+  00000001401449F8  dq 1B5EE84875EF13D3h, 9A4D8B0FFFF7h, 6A880F0000FEA6E8h
+  0000000140144A90  db 0Fh, 86h, 4Bh, 18h, 2 dup(0FFh)
+  0000000140144A96  xor     ecx, r8d
+  0000000140144A99  xor     edx, [rbp+240h+var_2AC]
+  0000000140144A9C  add     ecx, eax
+  0000000140144A9E  xor     edx, r13d
+  0000000140144AA1  add     esi, ecx
+  0000000140144AA3  xor     edx, [rsp+340h+var_2CC]
+  0000000140144AA7  mov     eax, esi
+  0000000140144AA9  rol     edx, 1
+  0000000140144AAB  mov     edi, r10d
+  0000000140144AAE  mov     [rsp+340h+var_314], edx
+  0000000140144AB2  xor     edi, r9d
+  0000000140144AB5  add     edx, 5A827999h
+  0000000140144ABB  rol     eax, 5
+  0000000140144ABE  add     eax, edx
+  0000000140144AC0  and     edi, r14d
+  0000000140144AC3  mov     edx, [rbp+240h+var_294]
+  0000000140144AC6  xor     edi, r9d
+  0000000140144AC9  xor     edx, r15d
+  0000000140144ACC  rol     r14d, 1Eh
+  0000000140144AD0  xor     edx, [rbp+240h+var_2C0]
+  0000000140144AD3  add     edi, eax
+  0000000140144AD5  xor     edx, r12d
+  0000000140144AD8  add     edi, r8d
+  0000000140144ADB  mov     r12d, [rbp+240h+var_2A4]
+  0000000140144ADF  mov     eax, edi
+  0000000140144AE1  rol     edx, 1
+  0000000140144AE3  mov     r11d, r14d
+  0000000140144AE6  mov     [rsp+340h+var_308], edx
+  0000000140144AEA  xor     r11d, r10d
+  0000000140144AED  add     edx, 5A827999h
+  0000000140144AF3  rol     eax, 5
+  0000000140144AF6  add     eax, edx
+  0000000140144AF8  and     r11d, esi
+  0000000140144AFB  xor     r11d, r10d
+  0000000140144AFE  rol     esi, 1Eh
+  0000000140144B01  add     r11d, eax
+  0000000140144B04  mov     edx, r12d
+  0000000140144B07  xor     edx, [rsp+340h+var_31C]
+  0000000140144B0B  add     r11d, r9d
+  0000000140144B0E  xor     edx, [rbp+240h+var_2BC]
+  0000000140144B11  xor     edx, r13d
+  0000000140144B14  rol     edx, 1
+  0000000140144B16  mov     [rsp+340h+var_300], edx
+  0000000140144B1A  mov     r13d, [rbp+240h+var_2A0]
+  0000000140144B1E  lea     ebx, [r14+6ED9EBA1h]
+  0000000140144B25  mov     eax, r11d
+  0000000140144B28  mov     ecx, esi
+  0000000140144B2A  rol     eax, 5
+  0000000140144B2D  xor     ecx, r14d
+  0000000140144B30  add     eax, edx
+  0000000140144B32  jmp     loc_140144C6D
+  0000000140144B37  db 0E8h
+  0000000140144B38  dq 0EA7E810FFFF546ECh, 0E8FFF544F1E80000h, 4D80820FFFFFD651h
+  0000000140144C68  db 8Ch, 9Ch, 32h, 2 dup(0FFh)
+  0000000140144C6D  and     ecx, edi
+  0000000140144C6F  xor     ecx, r14d
+  0000000140144C72  rol     edi, 1Eh
+  0000000140144C75  add     ecx, eax
+  0000000140144C77  mov     r14d, [rbp+240h+var_29C]
+  0000000140144C7B  lea     edx, [r10+5A827999h]
+  0000000140144C82  mov     r10d, [rsp+340h+var_314]
+  0000000140144C87  add     edx, ecx
+  0000000140144C89  xor     r10d, r13d
+  0000000140144C8C  xor     r10d, [rbp+240h+var_2B8]
+  0000000140144C90  mov     ecx, r11d
+  0000000140144C93  xor     r10d, [rbp+240h+var_2C0]
+  0000000140144C97  xor     ecx, edi
+  0000000140144C99  xor     ecx, esi
+  0000000140144C9B  rol     r10d, 1
+  0000000140144C9E  rol     r11d, 1Eh
+  0000000140144CA2  mov     eax, edx
+  0000000140144CA4  rol     eax, 5
+  0000000140144CA7  add     eax, r10d
+  0000000140144CAA  mov     [rsp+340h+var_2FC], r10d
+  0000000140144CAF  add     ecx, eax
+  0000000140144CB1  mov     eax, [rsp+340h+var_308]
+  0000000140144CB5  xor     eax, r14d
+  0000000140144CB8  add     ebx, ecx
+  0000000140144CBA  xor     eax, [rbp+240h+var_2B4]
+  0000000140144CBD  mov     ecx, edx
+  0000000140144CBF  xor     eax, [rbp+240h+var_2BC]
+  0000000140144CC2  xor     ecx, r11d
+  0000000140144CC5  rol     eax, 1
+  0000000140144CC7  xor     ecx, edi
+  0000000140144CC9  mov     [rsp+340h+var_318], eax
+  0000000140144CCD  add     ecx, 6ED9EBA1h
+  0000000140144CD3  mov     r8d, [rsp+340h+var_318]
+  0000000140144CD8  mov     eax, ebx
+  0000000140144CDA  rol     eax, 5
+  0000000140144CDD  add     r8d, eax
+  0000000140144CE0  rol     edx, 1Eh
+  0000000140144CE3  mov     eax, [rsp+340h+var_300]
+  0000000140144CE7  add     r8d, ecx
+  0000000140144CEA  xor     eax, [rbp+240h+var_298]
+  0000000140144CED  add     r8d, esi
+  0000000140144CF0  xor     eax, [rbp+240h+var_2B0]
+  0000000140144CF3  mov     ecx, ebx
+  0000000140144CF5  xor     eax, [rbp+240h+var_2B8]
+  0000000140144CF8  xor     ecx, edx
+  0000000140144CFA  rol     eax, 1
+  0000000140144CFC  xor     ecx, r11d
+  0000000140144CFF  mov     [rsp+340h+var_320], eax
+  0000000140144D03  add     ecx, 6ED9EBA1h
+  0000000140144D09  mov     r9d, [rsp+340h+var_320]
+  0000000140144D0E  jmp     loc_140144D96
+  0000000140144D13  db 48h, 81h, 0C4h, 0A8h, 5
+  0000000140144D18  dq 0FFFE5221800F0000h, 0F00000260C48148h, 0C48148FFFEF4858Ah
+  0000000140144D90  db 0Fh, 8Ah, 1Eh, 62h, 0FEh, 0FFh
+  0000000140144D96  mov     eax, r8d
+  0000000140144D99  rol     eax, 5
+  0000000140144D9C  add     r9d, eax
+  0000000140144D9F  rol     ebx, 1Eh
+  0000000140144DA2  add     r9d, ecx
+  0000000140144DA5  mov     eax, r10d
+  0000000140144DA8  xor     eax, [rbp+240h+var_294]
+  0000000140144DAB  lea     r10d, [r11+6ED9EBA1h]
+  0000000140144DB2  xor     eax, [rbp+240h+var_2AC]
+  0000000140144DB5  add     r9d, edi
+  0000000140144DB8  xor     eax, [rbp+240h+var_2B4]
+  0000000140144DBB  mov     ecx, r8d
+  0000000140144DBE  mov     r11d, [rsp+340h+var_318]
+  0000000140144DC3  xor     ecx, ebx
+  0000000140144DC5  rol     eax, 1
+  0000000140144DC7  xor     ecx, edx
+  0000000140144DC9  mov     [rsp+340h+var_310], eax
+  0000000140144DCD  mov     eax, r9d
+  0000000140144DD0  rol     eax, 5
+  0000000140144DD3  add     eax, [rsp+340h+var_310]
+  0000000140144DD7  add     ecx, eax
+  0000000140144DD9  rol     r8d, 1Eh
+  0000000140144DDD  add     r10d, ecx
+  0000000140144DE0  xor     r11d, r15d
+  0000000140144DE3  xor     r11d, [rbp+240h+var_2B0]
+  0000000140144DE7  mov     ecx, r9d
+  0000000140144DEA  xor     r11d, [rsp+340h+var_31C]
+  0000000140144DEF  xor     ecx, r8d
+  0000000140144DF2  mov     esi, [rsp+340h+var_320]
+  0000000140144DF6  xor     ecx, ebx
+  0000000140144DF8  xor     esi, [rsp+340h+var_314]
+  0000000140144DFC  mov     eax, r10d
+  0000000140144DFF  rol     eax, 5
+  0000000140144E02  xor     esi, r12d
+  0000000140144E05  xor     esi, [rbp+240h+var_2AC]
+  0000000140144E08  rol     r9d, 1Eh
+  0000000140144E0C  rol     r11d, 1
+  0000000140144E0F  add     eax, r11d
+  0000000140144E12  mov     [rsp+340h+var_2F0], r11d
+  0000000140144E17  add     ecx, eax
+  0000000140144E19  rol     esi, 1
+  0000000140144E1B  lea     r11d, [rdx+6ED9EBA1h]
+  0000000140144E22  mov     [rsp+340h+var_2EC], esi
+  0000000140144E26  add     r11d, ecx
+  0000000140144E29  lea     edx, [rbx+6ED9EBA1h]
+  0000000140144E2F  mov     ebx, [rsp+340h+var_310]
+  0000000140144E33  mov     ecx, r10d
+  0000000140144E36  xor     ebx, [rsp+340h+var_308]
+  0000000140144E3A  xor     ecx, r9d
+  0000000140144E3D  xor     ecx, r8d
+  0000000140144E40  jmp     short loc_140144EA0
+  0000000140144E42  dw 18E8h, 0FF0Bh, 0FFFh
+  0000000140144E48  dq 0C48148FFFF2F358Ah, 11A1840F00000588h, 0FFFF70B19E8FFFFh
+  0000000140144EA0  rol     r10d, 1Eh
+  0000000140144EA4  xor     ebx, r13d
+  0000000140144EA7  mov     eax, r11d
+  0000000140144EAA  rol     eax, 5
+  0000000140144EAD  xor     ebx, r15d
+  0000000140144EB0  mov     r15d, [rsp+340h+var_2FC]
+  0000000140144EB5  add     eax, esi
+  0000000140144EB7  add     ecx, eax
+  0000000140144EB9  rol     ebx, 1
+  0000000140144EBB  add     edx, ecx
+  0000000140144EBD  mov     [rsp+340h+var_30C], ebx
+  0000000140144EC1  mov     eax, edx
+  0000000140144EC3  mov     ecx, r11d
+  0000000140144EC6  xor     ecx, r10d
+  0000000140144EC9  rol     eax, 5
+  0000000140144ECC  xor     ecx, r9d
+  0000000140144ECF  rol     r11d, 1Eh
+  0000000140144ED3  add     eax, ebx
+  0000000140144ED5  lea     ebx, [r8+6ED9EBA1h]
+  0000000140144EDC  mov     r8d, [rsp+340h+var_2F0]
+  0000000140144EE1  add     ecx, eax
+  0000000140144EE3  xor     r8d, [rsp+340h+var_300]
+  0000000140144EE8  add     ebx, ecx
+  0000000140144EEA  xor     r8d, r14d
+  0000000140144EED  mov     eax, ebx
+  0000000140144EEF  xor     r8d, r12d
+  0000000140144EF2  rol     eax, 5
+  0000000140144EF5  mov     r12d, [rsp+340h+var_318]
+  0000000140144EFA  mov     ecx, edx
+  0000000140144EFC  xor     ecx, r11d
+  0000000140144EFF  rol     r8d, 1
+  0000000140144F02  add     eax, r8d
+  0000000140144F05  mov     [rsp+340h+var_304], r8d
+  0000000140144F0A  lea     r8d, [r9+6ED9EBA1h]
+  0000000140144F11  rol     edx, 1Eh
+  0000000140144F14  xor     ecx, r10d
+  0000000140144F17  mov     r9d, esi
+  0000000140144F1A  add     ecx, eax
+  0000000140144F1C  xor     r9d, r15d
+  0000000140144F1F  xor     r9d, [rbp+240h+var_298]
+  0000000140144F23  add     r8d, ecx
+  0000000140144F26  xor     r9d, r13d
+  0000000140144F29  mov     ecx, ebx
+  0000000140144F2B  rol     r9d, 1
+  0000000140144F2E  xor     ecx, edx
+  0000000140144F30  xor     ecx, r11d
+  0000000140144F33  mov     [rsp+340h+var_2FC], r9d
+  0000000140144F38  mov     eax, r8d
+  0000000140144F3B  rol     eax, 5
+  0000000140144F3E  add     eax, r9d
+  0000000140144F41  jmp     loc_1401450BA
+  0000000140144F46  db 90h
+  0000000140144F47  db 0Fh
+  0000000140144F48  dq 5D5D41FFFE598F8Ch, 7F2EE95C41E38B49h, 0E8FFF542A1E8FFFFh
+  00000001401450B8  db 0FEh, 0FFh
+  00000001401450BA  lea     r9d, [r10+6ED9EBA1h]
+  00000001401450C1  mov     r10d, [rsp+340h+var_30C]
+  00000001401450C6  add     ecx, eax
+  00000001401450C8  add     r9d, ecx
+  00000001401450CB  rol     ebx, 1Eh
+  00000001401450CE  mov     edi, [rsp+340h+var_310]
+  00000001401450D2  mov     ecx, r8d
+  00000001401450D5  mov     esi, [rsp+340h+var_2F0]
+  00000001401450D9  xor     ecx, ebx
+  00000001401450DB  mov     r13d, [rsp+340h+var_300]
+  00000001401450E0  xor     ecx, edx
+  00000001401450E2  rol     r8d, 1Eh
+  00000001401450E6  xor     r10d, r12d
+  00000001401450E9  xor     r10d, [rbp+240h+var_294]
+  00000001401450ED  mov     eax, r9d
+  00000001401450F0  rol     eax, 5
+  00000001401450F3  xor     r10d, r14d
+  00000001401450F6  mov     r14d, [rsp+340h+var_320]
+  00000001401450FB  rol     r10d, 1
+  00000001401450FE  add     eax, r10d
+  0000000140145101  mov     [rsp+340h+var_318], r10d
+  0000000140145106  add     ecx, eax
+  0000000140145108  lea     r10d, [r11+6ED9EBA1h]
+  000000014014510F  mov     r11d, [rsp+340h+var_304]
+  0000000140145114  add     r10d, ecx
+  0000000140145117  xor     r11d, r14d
+  000000014014511A  mov     eax, r10d
+  000000014014511D  xor     r11d, [rbp+240h+var_298]
+  0000000140145121  mov     ecx, r9d
+  0000000140145124  xor     r11d, [rsp+340h+var_31C]
+  0000000140145129  xor     ecx, r8d
+  000000014014512C  xor     ecx, ebx
+  000000014014512E  rol     eax, 5
+  0000000140145131  rol     r11d, 1
+  0000000140145134  add     eax, r11d
+  0000000140145137  mov     [rsp+340h+var_2F8], r11d
+  000000014014513C  add     ecx, eax
+  000000014014513E  rol     r9d, 1Eh
+  0000000140145142  lea     r11d, [rdx+6ED9EBA1h]
+  0000000140145149  mov     edx, [rsp+340h+var_2FC]
+  000000014014514D  add     r11d, ecx
+  0000000140145150  xor     edx, edi
+  0000000140145152  xor     edx, [rsp+340h+var_314]
+  0000000140145156  mov     eax, r11d
+  0000000140145159  xor     edx, [rbp+240h+var_294]
+  000000014014515C  mov     ecx, r10d
+  000000014014515F  xor     ecx, r9d
+  0000000140145162  rol     eax, 5
+  0000000140145165  xor     ecx, r8d
+  0000000140145168  rol     edx, 1
+  000000014014516A  jmp     loc_14014520D
+  000000014014516F  pop     rbp
+  0000000140145170  jmp     loc_140129560
+  0000000140145175  db 55h, 0Fh, 89h
+  0000000140145178  dq 0F5403FE8FFFFEE7Ah, 27FFFF062D810FFFh, 23DB117E77829448h
+  0000000140145208  jmp     loc_140130061
+  000000014014520D  add     eax, edx
+  000000014014520F  rol     r10d, 1Eh
+  0000000140145213  add     ecx, eax
+  0000000140145215  mov     [rsp+340h+var_320], edx
+  0000000140145219  lea     edx, [rbx+6ED9EBA1h]
+  000000014014521F  mov     ebx, [rsp+340h+var_318]
+  0000000140145223  add     edx, ecx
+  0000000140145225  xor     ebx, esi
+  0000000140145227  xor     ebx, [rsp+340h+var_308]
+  000000014014522B  mov     ecx, r11d
+  000000014014522E  xor     ebx, [rsp+340h+var_31C]
+  0000000140145232  xor     ecx, r10d
+  0000000140145235  rol     ebx, 1
+  0000000140145237  xor     ecx, r9d
+  000000014014523A  mov     [rsp+340h+var_31C], ebx
+  000000014014523E  mov     eax, edx
+  0000000140145240  rol     eax, 5
+  0000000140145243  add     eax, ebx
+  0000000140145245  rol     r11d, 1Eh
+  0000000140145249  add     ecx, eax
+  000000014014524B  lea     ebx, [r8+6ED9EBA1h]
+  0000000140145252  mov     r8d, [rsp+340h+var_2F8]
+  0000000140145257  add     ebx, ecx
+  0000000140145259  xor     r8d, [rsp+340h+var_2EC]
+  000000014014525E  mov     eax, ebx
+  0000000140145260  xor     r8d, r13d
+  0000000140145263  rol     eax, 5
+  0000000140145266  xor     r8d, [rsp+340h+var_314]
+  000000014014526B  mov     ecx, edx
+  000000014014526D  rol     r8d, 1
+  0000000140145270  xor     ecx, r11d
+  0000000140145273  add     eax, r8d
+  0000000140145276  mov     [rsp+340h+var_310], r8d
+  000000014014527B  xor     ecx, r10d
+  000000014014527E  lea     r8d, [r9+6ED9EBA1h]
+  0000000140145285  add     ecx, eax
+  0000000140145287  mov     r9d, [rsp+340h+var_320]
+  000000014014528C  add     r8d, ecx
+  000000014014528F  xor     r9d, [rsp+340h+var_30C]
+  0000000140145294  mov     ecx, ebx
+  0000000140145296  xor     r9d, r15d
+  0000000140145299  rol     edx, 1Eh
+  000000014014529C  xor     r9d, [rsp+340h+var_308]
+  00000001401452A1  xor     ecx, edx
+  00000001401452A3  xor     ecx, r11d
+  00000001401452A6  rol     r9d, 1
+  00000001401452A9  mov     [rsp+340h+var_300], r9d
+  00000001401452AE  mov     eax, r8d
+  00000001401452B1  rol     eax, 5
+  00000001401452B4  add     eax, r9d
+  00000001401452B7  jmp     short loc_140145335
+  00000001401452B9  db 48h, 3, 0E5h, 0Fh, 8Eh, 0F0h, 0FFh
+  00000001401452C0  dq 0FFB5CDE95C41FFFEh, 0FFFED9978D0F55FFh, 0E60348FFFE9A8FE9h
+  0000000140145330  db 0E9h, 8, 0D8h, 0FEh, 0FFh
+  0000000140145335  rol     ebx, 1Eh
+  0000000140145338  add     ecx, eax
+  000000014014533A  lea     r9d, [r10+6ED9EBA1h]
+  0000000140145341  mov     r10d, [rsp+340h+var_31C]
+  0000000140145346  add     r9d, ecx
+  0000000140145349  xor     r10d, [rsp+340h+var_304]
+  000000014014534E  mov     eax, r9d
+  0000000140145351  rol     eax, 5
+  0000000140145354  xor     r10d, r12d
+  0000000140145357  xor     r10d, r13d
+  000000014014535A  mov     ecx, r8d
+  000000014014535D  mov     r13d, [rsp+340h+var_2FC]
+  0000000140145362  xor     ecx, ebx
+  0000000140145364  xor     ecx, edx
+  0000000140145366  rol     r10d, 1
+  0000000140145369  add     eax, r10d
+  000000014014536C  mov     [rsp+340h+var_2E0], r10d
+  0000000140145371  add     ecx, eax
+  0000000140145373  rol     r8d, 1Eh
+  0000000140145377  lea     r10d, [r11+6ED9EBA1h]
+  000000014014537E  mov     r11d, [rsp+340h+var_310]
+  0000000140145383  add     r10d, ecx
+  0000000140145386  xor     r11d, r13d
+  0000000140145389  xor     r11d, r14d
+  000000014014538C  mov     eax, r10d
+  000000014014538F  xor     r11d, r15d
+  0000000140145392  rol     eax, 5
+  0000000140145395  mov     r15d, [rsp+340h+var_2E0]
+  000000014014539A  mov     ecx, r9d
+  000000014014539D  xor     ecx, r8d
+  00000001401453A0  rol     r11d, 1
+  00000001401453A3  add     eax, r11d
+  00000001401453A6  rol     r9d, 1Eh
+  00000001401453AA  xor     ecx, ebx
+  00000001401453AC  mov     [rsp+340h+var_2F0], r11d
+  00000001401453B1  add     ecx, eax
+  00000001401453B3  lea     r11d, [rdx+6ED9EBA1h]
+  00000001401453BA  mov     edx, [rsp+340h+var_300]
+  00000001401453BE  add     r11d, ecx
+  00000001401453C1  xor     edx, [rsp+340h+var_318]
+  00000001401453C5  mov     ecx, r10d
+  00000001401453C8  xor     ecx, r9d
+  00000001401453CB  rol     r10d, 1Eh
+  00000001401453CF  xor     ecx, r8d
+  00000001401453D2  xor     edx, edi
+  00000001401453D4  xor     edx, r12d
+  00000001401453D7  mov     eax, r11d
+  00000001401453DA  mov     r12d, [rsp+340h+var_2F8]
+  00000001401453DF  xor     r15d, r12d
+  00000001401453E2  rol     eax, 5
+  00000001401453E5  jmp     loc_140145495
+  00000001401453EA  dw 5558h, 1169h, 5DB2h
+  00000001401453F0  dq 0C27F78777C768D1Fh, 0A1785D9103997148h, 185CC5B5D4ECB03h
+  0000000140145490  sub     r14d, [r13+73h]
+  0000000140145494  push    rsp
+  0000000140145495  xor     r15d, esi
+  0000000140145498  add     eax, 6ED9EBA1h
+  000000014014549D  rol     edx, 1
+  000000014014549F  add     eax, edx
+  00000001401454A1  mov     [rsp+340h+var_2E8], edx
+  00000001401454A5  add     ecx, eax
+  00000001401454A7  xor     r15d, r14d
+  00000001401454AA  add     ebx, ecx
+  00000001401454AC  rol     r15d, 1
+  00000001401454AF  mov     ecx, r11d
+  00000001401454B2  mov     [rsp+340h+var_314], r15d
+  00000001401454B7  xor     ecx, r10d
+  00000001401454BA  mov     eax, ebx
+  00000001401454BC  xor     ecx, r9d
+  00000001401454BF  rol     eax, 5
+  00000001401454C2  add     r15d, 6ED9EBA1h
+  00000001401454C9  add     eax, r15d
+  00000001401454CC  mov     r14d, [rsp+340h+var_2EC]
+  00000001401454D1  add     ecx, eax
+  00000001401454D3  mov     r15d, [rsp+340h+var_2F0]
+  00000001401454D8  add     r8d, ecx
+  00000001401454DB  xor     r15d, [rsp+340h+var_320]
+  00000001401454E0  mov     ecx, ebx
+  00000001401454E2  rol     r11d, 1Eh
+  00000001401454E6  xor     r15d, r14d
+  00000001401454E9  xor     ecx, r11d
+  00000001401454EC  rol     ebx, 1Eh
+  00000001401454EF  xor     ecx, r10d
+  00000001401454F2  xor     r15d, edi
+  00000001401454F5  lea     edi, [r9+6ED9EBA1h]
+  00000001401454FC  rol     r15d, 1
+  00000001401454FF  mov     r9d, edx
+  0000000140145502  mov     [rsp+340h+var_2F8], r15d
+  0000000140145507  xor     r9d, [rsp+340h+var_31C]
+  000000014014550C  mov     eax, r8d
+  000000014014550F  xor     r9d, [rsp+340h+var_30C]
+  0000000140145514  rol     eax, 5
+  0000000140145517  xor     r9d, esi
+  000000014014551A  add     eax, r15d
+  000000014014551D  rol     r9d, 1
+  0000000140145520  add     ecx, eax
+  0000000140145522  mov     [rsp+340h+var_2EC], r9d
+  0000000140145527  add     edi, ecx
+  0000000140145529  mov     eax, ebx
+  000000014014552B  and     eax, r11d
+  000000014014552E  mov     edx, edi
+  0000000140145530  rol     edx, 5
+  0000000140145533  mov     ecx, ebx
+  0000000140145535  or      ecx, r11d
+  0000000140145538  and     ecx, r8d
+  000000014014553B  jmp     loc_140145691
+  0000000140145540  dq 82E0E8FFF53C9BE8h, 10CF9880FFFFFh, 4000000180A63844h
+  0000000140145690  db 0FFh
+  0000000140145691  rol     r8d, 1Eh
+  0000000140145695  or      ecx, eax
+  0000000140145697  mov     eax, r8d
+  000000014014569A  add     ecx, r9d
+  000000014014569D  and     eax, ebx
+  000000014014569F  add     ecx, 8F1BBCDCh
+  00000001401456A5  lea     r9d, [r10+rdx]
+  00000001401456A9  mov     r10d, [rsp+340h+var_314]
+  00000001401456AE  add     r9d, ecx
+  00000001401456B1  xor     r10d, [rsp+340h+var_310]
+  00000001401456B6  mov     edx, r9d
+  00000001401456B9  xor     r10d, [rsp+340h+var_304]
+  00000001401456BE  mov     ecx, r8d
+  00000001401456C1  or      ecx, ebx
+  00000001401456C3  rol     edx, 5
+  00000001401456C6  and     ecx, edi
+  00000001401456C8  xor     r10d, r14d
+  00000001401456CB  or      ecx, eax
+  00000001401456CD  rol     r10d, 1
+  00000001401456D0  add     ecx, r10d
+  00000001401456D3  rol     edi, 1Eh
+  00000001401456D6  add     ecx, 8F1BBCDCh
+  00000001401456DC  mov     [rsp+340h+var_308], r10d
+  00000001401456E1  lea     r10d, [r11+rdx]
+  00000001401456E5  mov     eax, edi
+  00000001401456E7  add     r10d, ecx
+  00000001401456EA  mov     r11d, r15d
+  00000001401456ED  xor     r11d, [rsp+340h+var_300]
+  00000001401456F2  and     eax, r8d
+  00000001401456F5  mov     r15d, [rsp+340h+var_2E0]
+  00000001401456FA  xor     r11d, r13d
+  00000001401456FD  xor     r11d, [rsp+340h+var_30C]
+  0000000140145702  mov     ecx, edi
+  0000000140145704  rol     r11d, 1
+  0000000140145707  or      ecx, r8d
+  000000014014570A  and     ecx, r9d
+  000000014014570D  mov     [rsp+340h+var_30C], r11d
+  0000000140145712  add     r11d, 8F1BBCDCh
+  0000000140145719  rol     r9d, 1Eh
+  000000014014571D  or      ecx, eax
+  000000014014571F  mov     edx, r10d
+  0000000140145722  add     ecx, r11d
+  0000000140145725  rol     edx, 5
+  0000000140145728  mov     r11d, [rsp+340h+var_2EC]
+  000000014014572D  add     ebx, edx
+  000000014014572F  xor     r11d, r15d
+  0000000140145732  add     ebx, ecx
+  0000000140145734  xor     r11d, [rsp+340h+var_318]
+  0000000140145739  xor     r11d, [rsp+340h+var_304]
+  000000014014573E  mov     edx, ebx
+  0000000140145740  jmp     short loc_140145798
+  0000000140145742  dw 0C8E9h, 0FF46h, 3CFFh
+  0000000140145748  dq 1196A07C4195B37Ch, 8B0FFFFE92E2E873h, 0F71A57E8FFFF0BCFh
+  0000000140145798  mov     esi, [rsp+340h+var_30C]
+  000000014014579C  mov     ecx, r9d
+  000000014014579F  xor     esi, [rsp+340h+var_2E8]
+  00000001401457A3  or      ecx, edi
+  00000001401457A5  and     ecx, r10d
+  00000001401457A8  rol     edx, 5
+  00000001401457AB  rol     r11d, 1
+  00000001401457AE  add     r8d, edx
+  00000001401457B1  mov     [rsp+340h+var_2DC], r11d
+  00000001401457B6  mov     eax, r9d
+  00000001401457B9  mov     r14d, [rsp+340h+var_2DC]
+  00000001401457BE  add     r11d, 8F1BBCDCh
+  00000001401457C5  xor     r14d, [rsp+340h+var_314]
+  00000001401457CA  and     eax, edi
+  00000001401457CC  xor     r14d, [rsp+340h+var_31C]
+  00000001401457D1  or      ecx, eax
+  00000001401457D3  add     ecx, r11d
+  00000001401457D6  rol     r10d, 1Eh
+  00000001401457DA  mov     r11d, [rsp+340h+var_308]
+  00000001401457DF  add     r8d, ecx
+  00000001401457E2  xor     r11d, [rsp+340h+var_2F0]
+  00000001401457E7  mov     edx, r8d
+  00000001401457EA  rol     edx, 5
+  00000001401457ED  xor     r11d, r12d
+  00000001401457F0  xor     r11d, r13d
+  00000001401457F3  mov     ecx, r10d
+  00000001401457F6  or      ecx, r9d
+  00000001401457F9  rol     r11d, 1
+  00000001401457FC  and     ecx, ebx
+  00000001401457FE  mov     [rsp+340h+var_2F4], r11d
+  0000000140145803  mov     r13d, [rsp+340h+var_2F4]
+  0000000140145808  mov     eax, r10d
+  000000014014580B  xor     r13d, [rsp+340h+var_2F8]
+  0000000140145810  and     eax, r9d
+  0000000140145813  xor     r13d, [rsp+340h+var_310]
+  0000000140145818  or      ecx, eax
+  000000014014581A  add     ecx, r11d
+  000000014014581D  rol     ebx, 1Eh
+  0000000140145820  add     ecx, 8F1BBCDCh
+  0000000140145826  lea     r11d, [rdi+rdx]
+  000000014014582A  mov     edi, [rsp+340h+var_320]
+  000000014014582E  add     r11d, ecx
+  0000000140145831  xor     esi, edi
+  0000000140145833  mov     edx, r11d
+  0000000140145836  xor     esi, [rsp+340h+var_318]
+  000000014014583A  xor     r14d, r12d
+  000000014014583D  rol     edx, 5
+  0000000140145840  mov     ecx, ebx
+  0000000140145842  or      ecx, r10d
+  0000000140145845  rol     esi, 1
+  0000000140145847  jmp     loc_140145993
+  000000014014584C  dd 0F72277E8h
+  0000000140145850  dq 0E800000397830FFFh, 6610880FFFF53814h, 7828E9E38B490001h
+  0000000140145990  db 76h, 2 dup(0FFh)
+  0000000140145993  and     ecx, r8d
+  0000000140145996  rol     r14d, 1
+  0000000140145999  rol     r8d, 1Eh
+  000000014014599D  mov     eax, ebx
+  000000014014599F  and     eax, r10d
+  00000001401459A2  mov     [rsp+340h+var_318], esi
+  00000001401459A6  or      ecx, eax
+  00000001401459A8  mov     [rsp+340h+var_320], r14d
+  00000001401459AD  add     ecx, r9d
+  00000001401459B0  mov     eax, r8d
+  00000001401459B3  add     ecx, 8F1BBCDCh
+  00000001401459B9  lea     r9d, [rsi+rdx]
+  00000001401459BD  add     r9d, ecx
+  00000001401459C0  and     eax, ebx
+  00000001401459C2  mov     edx, r9d
+  00000001401459C5  mov     ecx, r8d
+  00000001401459C8  or      ecx, ebx
+  00000001401459CA  rol     edx, 5
+  00000001401459CD  and     ecx, r11d
+  00000001401459D0  xor     r13d, edi
+  00000001401459D3  or      ecx, eax
+  00000001401459D5  rol     r11d, 1Eh
+  00000001401459D9  add     ecx, r10d
+  00000001401459DC  add     ecx, 8F1BBCDCh
+  00000001401459E2  lea     r10d, [r14+rdx]
+  00000001401459E6  add     r10d, ecx
+  00000001401459E9  rol     r13d, 1
+  00000001401459EC  mov     edx, r10d
+  00000001401459EF  mov     [rsp+340h+var_2FC], r13d
+  00000001401459F4  mov     r12d, [rsp+340h+var_2EC]
+  00000001401459F9  mov     ecx, r11d
+  00000001401459FC  xor     r12d, [rsp+340h+var_300]
+  0000000140145A01  or      ecx, r8d
+  0000000140145A04  xor     r12d, [rsp+340h+var_31C]
+  0000000140145A09  and     ecx, r9d
+  0000000140145A0C  rol     edx, 5
+  0000000140145A0F  xor     r12d, esi
+  0000000140145A12  mov     esi, [rsp+340h+var_308]
+  0000000140145A16  mov     eax, r11d
+  0000000140145A19  and     eax, r8d
+  0000000140145A1C  rol     r9d, 1Eh
+  0000000140145A20  or      ecx, eax
+  0000000140145A22  rol     r12d, 1
+  0000000140145A25  add     ecx, ebx
+  0000000140145A27  mov     [rsp+340h+var_2E0], r12d
+  0000000140145A2C  add     ecx, 8F1BBCDCh
+  0000000140145A32  lea     ebx, [rdx+r13]
+  0000000140145A36  add     ebx, ecx
+  0000000140145A38  xor     esi, r15d
+  0000000140145A3B  xor     esi, [rsp+340h+var_310]
+  0000000140145A3F  jmp     loc_140145BEE
+  0000000140145A44  dd 31E95F41h
+  0000000140145A48  dq 0FFFFF3FDE8FFFFA0h, 0D5E8FFFE897A850Fh, 21D7E8FFF536h
+  0000000140145BE8  db 2 dup(0FFh), 0D9h, 0B6h, 0FFh, 0A0h
+  0000000140145BEE  mov     edx, ebx
+  0000000140145BF0  rol     edx, 5
+  0000000140145BF3  xor     esi, r14d
+  0000000140145BF6  rol     esi, 1
+  0000000140145BF8  mov     ecx, r9d
+  0000000140145BFB  or      ecx, r11d
+  0000000140145BFE  mov     [rsp+340h+var_304], esi
+  0000000140145C02  and     ecx, r10d
+  0000000140145C05  mov     eax, r9d
+  0000000140145C08  and     eax, r11d
+  0000000140145C0B  rol     r10d, 1Eh
+  0000000140145C0F  or      ecx, eax
+  0000000140145C11  mov     eax, r10d
+  0000000140145C14  add     ecx, r8d
+  0000000140145C17  and     eax, r9d
+  0000000140145C1A  add     ecx, 8F1BBCDCh
+  0000000140145C20  lea     r8d, [r12+rdx]
+  0000000140145C24  add     r8d, ecx
+  0000000140145C27  mov     ecx, r10d
+  0000000140145C2A  or      ecx, r9d
+  0000000140145C2D  mov     edx, r8d
+  0000000140145C30  and     ecx, ebx
+  0000000140145C32  rol     edx, 5
+  0000000140145C35  or      ecx, eax
+  0000000140145C37  rol     ebx, 1Eh
+  0000000140145C3A  add     ecx, r11d
+  0000000140145C3D  mov     eax, ebx
+  0000000140145C3F  add     ecx, 8F1BBCDCh
+  0000000140145C45  and     eax, r10d
+  0000000140145C48  lea     r11d, [rsi+rdx]
+  0000000140145C4C  mov     esi, [rsp+340h+var_30C]
+  0000000140145C50  xor     esi, [rsp+340h+var_2F0]
+  0000000140145C54  add     r11d, ecx
+  0000000140145C57  xor     esi, [rsp+340h+var_300]
+  0000000140145C5B  mov     edx, r11d
+  0000000140145C5E  xor     esi, r13d
+  0000000140145C61  rol     edx, 5
+  0000000140145C64  mov     r13d, [rsp+340h+var_2DC]
+  0000000140145C69  mov     ecx, ebx
+  0000000140145C6B  xor     r13d, [rsp+340h+var_2E8]
+  0000000140145C70  or      ecx, r10d
+  0000000140145C73  and     ecx, r8d
+  0000000140145C76  rol     esi, 1
+  0000000140145C78  or      ecx, eax
+  0000000140145C7A  rol     r8d, 1Eh
+  0000000140145C7E  add     ecx, r9d
+  0000000140145C81  mov     [rsp+340h+var_31C], esi
+  0000000140145C85  add     ecx, 8F1BBCDCh
+  0000000140145C8B  xor     r13d, r15d
+  0000000140145C8E  lea     r9d, [rsi+rdx]
+  0000000140145C92  jmp     loc_140145D2A
+  0000000140145C97  retn
+  0000000140145C98  dq 634878F6B5528E02h, 0EBFB786415577542h, 7435FF9970790983h
+  0000000140145D28  db 2 dup(0FFh)
+  0000000140145D2A  xor     r13d, r12d
+  0000000140145D2D  add     r9d, ecx
+  0000000140145D30  rol     r13d, 1
+  0000000140145D33  mov     edx, r9d
+  0000000140145D36  mov     [rsp+340h+var_310], r13d
+  0000000140145D3B  mov     ecx, r8d
+  0000000140145D3E  rol     edx, 5
+  0000000140145D41  or      ecx, ebx
+  0000000140145D43  mov     eax, r8d
+  0000000140145D46  and     ecx, r11d
+  0000000140145D49  mov     r14d, [rsp+340h+var_2EC]
+  0000000140145D4E  and     eax, ebx
+  0000000140145D50  xor     r14d, [rsp+340h+var_314]
+  0000000140145D55  or      ecx, eax
+  0000000140145D57  mov     r12d, [rsp+340h+var_2F4]
+  0000000140145D5C  add     ecx, r10d
+  0000000140145D5F  xor     r12d, [rsp+340h+var_314]
+  0000000140145D64  lea     r10d, [rdx+r13]
+  0000000140145D68  xor     r12d, [rsp+340h+var_2F0]
+  0000000140145D6D  add     ecx, 8F1BBCDCh
+  0000000140145D73  xor     r12d, [rsp+340h+var_304]
+  0000000140145D78  add     r10d, ecx
+  0000000140145D7B  xor     r14d, r13d
+  0000000140145D7E  rol     r11d, 1Eh
+  0000000140145D82  xor     r14d, [rsp+340h+var_320]
+  0000000140145D87  add     ebx, 8F1BBCDCh
+  0000000140145D8D  mov     r13d, [rsp+340h+var_308]
+  0000000140145D92  mov     ecx, r11d
+  0000000140145D95  or      ecx, r8d
+  0000000140145D98  rol     r12d, 1
+  0000000140145D9B  and     ecx, r9d
+  0000000140145D9E  rol     r14d, 1
+  0000000140145DA1  rol     r9d, 1Eh
+  0000000140145DA5  mov     eax, r11d
+  0000000140145DA8  and     eax, r8d
+  0000000140145DAB  mov     [rsp+340h+var_2F0], r12d
+  0000000140145DB0  or      ecx, eax
+  0000000140145DB2  mov     edi, r10d
+  0000000140145DB5  add     ecx, ebx
+  0000000140145DB7  rol     edi, 5
+  0000000140145DBA  mov     ebx, [rsp+340h+var_2F8]
+  0000000140145DBE  add     edi, r12d
+  0000000140145DC1  add     edi, ecx
+  0000000140145DC3  mov     [rsp+340h+var_2F8], r14d
+  0000000140145DC8  xor     r13d, ebx
+  0000000140145DCB  mov     r15d, ebx
+  0000000140145DCE  xor     r15d, [rsp+340h+var_2E8]
+  0000000140145DD3  xor     r13d, r12d
+  0000000140145DD6  xor     r13d, [rsp+340h+var_2FC]
+  0000000140145DDB  xor     r15d, esi
+  0000000140145DDE  jmp     loc_140145F62
+  0000000140145DE3  db 50h, 0Fh, 82h, 8Ah, 0E5h
+  0000000140145DE8  dq 0E8FFF53369E8FFFEh, 0D1C18B0FFFFFA3EAh, 2E8C48148FFFEh
+  0000000140145F60  db 2 dup(0FFh)
+  0000000140145F62  xor     r15d, [rsp+340h+var_318]
+  0000000140145F67  mov     ecx, r9d
+  0000000140145F6A  or      ecx, r11d
+  0000000140145F6D  rol     r15d, 1
+  0000000140145F70  and     ecx, r10d
+  0000000140145F73  rol     r13d, 1
+  0000000140145F76  rol     r10d, 1Eh
+  0000000140145F7A  mov     eax, r9d
+  0000000140145F7D  and     eax, r11d
+  0000000140145F80  mov     [rsp+340h+var_300], r15d
+  0000000140145F85  or      ecx, eax
+  0000000140145F87  mov     [rsp+340h+var_314], r13d
+  0000000140145F8C  add     ecx, 8F1BBCDCh
+  0000000140145F92  mov     esi, edi
+  0000000140145F94  add     ecx, r8d
+  0000000140145F97  rol     esi, 5
+  0000000140145F9A  add     esi, r15d
+  0000000140145F9D  mov     eax, r10d
+  0000000140145FA0  add     esi, ecx
+  0000000140145FA2  and     eax, r9d
+  0000000140145FA5  mov     edx, esi
+  0000000140145FA7  mov     ecx, r10d
+  0000000140145FAA  or      ecx, r9d
+  0000000140145FAD  rol     edx, 5
+  0000000140145FB0  and     ecx, edi
+  0000000140145FB2  add     r9d, 8F1BBCDCh
+  0000000140145FB9  or      ecx, eax
+  0000000140145FBB  rol     edi, 1Eh
+  0000000140145FBE  add     ecx, r11d
+  0000000140145FC1  mov     eax, edi
+  0000000140145FC3  add     ecx, 8F1BBCDCh
+  0000000140145FC9  lea     r11d, [r14+rdx]
+  0000000140145FCD  add     r11d, ecx
+  0000000140145FD0  and     eax, r10d
+  0000000140145FD3  mov     ecx, edi
+  0000000140145FD5  mov     ebx, r11d
+  0000000140145FD8  or      ecx, r10d
+  0000000140145FDB  rol     ebx, 5
+  0000000140145FDE  and     ecx, esi
+  0000000140145FE0  or      ecx, eax
+  0000000140145FE2  add     ebx, r13d
+  0000000140145FE5  mov     r12d, [rsp+340h+var_30C]
+  0000000140145FEA  add     ecx, r9d
+  0000000140145FED  xor     r12d, [rsp+340h+var_2EC]
+  0000000140145FF2  add     ebx, ecx
+  0000000140145FF4  xor     r12d, r15d
+  0000000140145FF7  rol     esi, 1Eh
+  0000000140145FFA  xor     r12d, [rsp+340h+var_2E0]
+  0000000140145FFF  add     r10d, 8F1BBCDCh
+  0000000140146006  mov     r15d, [rsp+340h+var_2DC]
+  000000014014600B  jmp     loc_140146170
+  0000000140146010  dq 4E850FFFF5456BE8h, 4B8C48148FFFE3Bh, 0FFFFE92E8E0F0000h
+  0000000140146170  mov     r8d, ebx
+  0000000140146173  xor     r15d, [rsp+340h+var_308]
+  0000000140146178  mov     ecx, esi
+  000000014014617A  or      ecx, edi
+  000000014014617C  rol     r12d, 1
+  000000014014617F  and     ecx, r11d
+  0000000140146182  rol     r8d, 5
+  0000000140146186  xor     r15d, r14d
+  0000000140146189  rol     r11d, 1Eh
+  000000014014618D  xor     r15d, [rsp+340h+var_304]
+  0000000140146192  add     r8d, r12d
+  0000000140146195  mov     r14d, [rsp+340h+var_2F4]
+  000000014014619A  mov     eax, esi
+  000000014014619C  xor     r14d, [rsp+340h+var_30C]
+  00000001401461A1  and     eax, edi
+  00000001401461A3  or      ecx, eax
+  00000001401461A5  rol     r15d, 1
+  00000001401461A8  add     ecx, r10d
+  00000001401461AB  mov     [rsp+340h+var_2E8], r12d
+  00000001401461B0  add     r8d, ecx
+  00000001401461B3  mov     [rsp+340h+var_2EC], r15d
+  00000001401461B8  add     edi, 8F1BBCDCh
+  00000001401461BE  mov     ecx, r11d
+  00000001401461C1  or      ecx, esi
+  00000001401461C3  mov     eax, r11d
+  00000001401461C6  and     ecx, ebx
+  00000001401461C8  and     eax, esi
+  00000001401461CA  or      ecx, eax
+  00000001401461CC  rol     ebx, 1Eh
+  00000001401461CF  add     ecx, edi
+  00000001401461D1  xor     r14d, r13d
+  00000001401461D4  xor     r14d, [rsp+340h+var_31C]
+  00000001401461D9  mov     r9d, r8d
+  00000001401461DC  mov     edi, [rsp+340h+var_2DC]
+  00000001401461E0  mov     eax, ebx
+  00000001401461E2  and     eax, r11d
+  00000001401461E5  rol     r9d, 5
+  00000001401461E9  xor     edi, r12d
+  00000001401461EC  rol     r14d, 1
+  00000001401461EF  xor     edi, [rsp+340h+var_310]
+  00000001401461F3  add     r9d, r15d
+  00000001401461F6  xor     edi, [rsp+340h+var_318]
+  00000001401461FA  add     r9d, ecx
+  00000001401461FD  rol     edi, 1
+  00000001401461FF  mov     r10d, r9d
+  0000000140146202  rol     r10d, 5
+  0000000140146206  mov     ecx, ebx
+  0000000140146208  or      ecx, r11d
+  000000014014620B  mov     [rsp+340h+var_308], r14d
+  0000000140146210  and     ecx, r8d
+  0000000140146213  jmp     short loc_14014627F
+  0000000140146215  db 0E8h, 0BEh, 44h
+  0000000140146218  dq 0FFFE6290890FFFF5h, 2E70E8FFF52F3BE8h, 0FFFE462F8F0FFFFFh
+  0000000140146278  db 41h, 5Fh, 0E9h, 8Bh, 35h, 2 dup(0FFh)
+  000000014014627F  mov     [rsp+340h+var_2DC], edi
+  0000000140146283  or      ecx, eax
+  0000000140146285  rol     r8d, 1Eh
+  0000000140146289  add     ecx, 8F1BBCDCh
+  000000014014628F  add     r11d, 8F1BBCDCh
+  0000000140146296  add     ecx, esi
+  0000000140146298  add     r10d, r14d
+  000000014014629B  add     r10d, ecx
+  000000014014629E  mov     eax, r8d
+  00000001401462A1  and     eax, ebx
+  00000001401462A3  mov     ecx, r8d
+  00000001401462A6  or      ecx, ebx
+  00000001401462A8  mov     edx, r10d
+  00000001401462AB  and     ecx, r9d
+  00000001401462AE  rol     edx, 5
+  00000001401462B1  or      ecx, eax
+  00000001401462B3  rol     r9d, 1Eh
+  00000001401462B7  add     ecx, r11d
+  00000001401462BA  add     edx, edi
+  00000001401462BC  mov     r11d, [rsp+340h+var_2F4]
+  00000001401462C1  add     edx, ecx
+  00000001401462C3  xor     r11d, r15d
+  00000001401462C6  xor     r11d, [rsp+340h+var_2F0]
+  00000001401462CB  mov     ecx, edx
+  00000001401462CD  xor     r11d, [rsp+340h+var_320]
+  00000001401462D2  mov     r12d, edi
+  00000001401462D5  xor     r12d, [rsp+340h+var_2F8]
+  00000001401462DA  mov     eax, r9d
+  00000001401462DD  xor     r12d, [rsp+340h+var_2E0]
+  00000001401462E2  xor     eax, r8d
+  00000001401462E5  xor     r12d, [rsp+340h+var_320]
+  00000001401462EA  xor     eax, r10d
+  00000001401462ED  add     eax, ebx
+  00000001401462EF  rol     ecx, 5
+  00000001401462F2  add     eax, 0CA62C1D6h
+  00000001401462F7  rol     r11d, 1
+  00000001401462FA  mov     edi, r11d
+  00000001401462FD  rol     r10d, 1Eh
+  0000000140146301  xor     edi, [rsp+340h+var_314]
+  0000000140146305  mov     r13d, r14d
+  0000000140146308  xor     r13d, [rsp+340h+var_300]
+  000000014014630D  xor     r13d, [rsp+340h+var_2FC]
+  0000000140146312  lea     ebx, [r11+rcx]
+  0000000140146316  xor     r13d, [rsp+340h+var_318]
+  000000014014631B  add     ebx, eax
+  000000014014631D  xor     edi, [rsp+340h+var_304]
+  0000000140146321  mov     ecx, ebx
+  0000000140146323  xor     edi, [rsp+340h+var_2FC]
+  0000000140146327  mov     eax, r10d
+  000000014014632A  xor     eax, r9d
+  000000014014632D  jmp     loc_140146488
+  0000000140146332  pop     r15
+  0000000140146334  pop     rbp
+  0000000140146335  pop     r14
+  0000000140146337  jmp     loc_14012BD7E
+  000000014014633C  dd 0F8C48148h
+  0000000140146340  dq 0FF0E46880F000001h, 6D8C48148FFh, 8DE8FFFF140B840Fh
+  0000000140146488  rol     ecx, 5
+  000000014014648B  xor     eax, edx
+  000000014014648D  mov     [rsp+340h+var_2F4], r11d
+  0000000140146492  add     eax, r8d
+  0000000140146495  rol     edx, 1Eh
+  0000000140146498  add     eax, 0CA62C1D6h
+  000000014014649D  rol     r13d, 1
+  00000001401464A0  rol     r12d, 1
+  00000001401464A3  mov     r11d, r13d
+  00000001401464A6  xor     r11d, [rsp+340h+var_2E8]
+  00000001401464AB  mov     esi, r12d
+  00000001401464AE  xor     r11d, [rsp+340h+var_31C]
+  00000001401464B3  xor     esi, r15d
+  00000001401464B6  xor     r11d, [rsp+340h+var_2E0]
+  00000001401464BB  lea     r8d, [rcx+r13]
+  00000001401464BF  add     r8d, eax
+  00000001401464C2  rol     edi, 1
+  00000001401464C4  mov     ecx, r8d
+  00000001401464C7  rol     r11d, 1
+  00000001401464CA  rol     ecx, 5
+  00000001401464CD  mov     eax, r10d
+  00000001401464D0  xor     eax, ebx
+  00000001401464D2  mov     [rsp+340h+var_2E4], r13d
+  00000001401464D7  xor     eax, edx
+  00000001401464D9  rol     ebx, 1Eh
+  00000001401464DC  add     eax, r9d
+  00000001401464DF  mov     [rsp+340h+var_320], r12d
+  00000001401464E4  add     eax, 0CA62C1D6h
+  00000001401464E9  mov     [rsp+340h+var_2FC], edi
+  00000001401464ED  lea     r9d, [r12+rcx]
+  00000001401464F1  mov     [rsp+340h+var_318], r11d
+  00000001401464F6  add     r9d, eax
+  00000001401464F9  mov     eax, r8d
+  00000001401464FC  xor     eax, ebx
+  00000001401464FE  rol     r8d, 1Eh
+  0000000140146502  xor     eax, edx
+  0000000140146504  mov     ecx, r9d
+  0000000140146507  add     eax, r10d
+  000000014014650A  rol     ecx, 5
+  000000014014650D  add     eax, 0CA62C1D6h
+  0000000140146512  lea     r10d, [rdi+rcx]
+  0000000140146516  add     r10d, eax
+  0000000140146519  mov     eax, r9d
+  000000014014651C  xor     eax, r8d
+  000000014014651F  rol     r9d, 1Eh
+  0000000140146523  xor     eax, ebx
+  0000000140146525  mov     ecx, r10d
+  0000000140146528  add     eax, 0CA62C1D6h
+  000000014014652D  rol     ecx, 5
+  0000000140146530  add     eax, r11d
+  0000000140146533  jmp     loc_1401467C1
+  0000000140146538  dq 0F4890FFFF52F0BE8h, 4470247C89FFFFEEh, 443C24743344D803h
+  00000001401467C0  db 0
+  00000001401467C1  add     edx, ecx
+  00000001401467C3  add     edx, eax
+  00000001401467C5  xor     esi, [rsp+340h+var_310]
+  00000001401467C9  xor     r11d, [rsp+340h+var_2DC]
+  00000001401467CE  xor     edi, r14d
+  00000001401467D1  xor     r11d, [rsp+340h+var_300]
+  00000001401467D6  mov     eax, r10d
+  00000001401467D9  xor     esi, [rsp+340h+var_304]
+  00000001401467DD  xor     eax, r9d
+  00000001401467E0  xor     edi, [rsp+340h+var_2F0]
+  00000001401467E4  xor     eax, r8d
+  00000001401467E7  xor     edi, [rsp+340h+var_31C]
+  00000001401467EB  add     eax, 0CA62C1D6h
+  00000001401467F0  xor     r11d, [rsp+340h+var_310]
+  00000001401467F5  mov     ecx, edx
+  00000001401467F7  rol     ecx, 5
+  00000001401467FA  add     ebx, ecx
+  00000001401467FC  rol     esi, 1
+  00000001401467FE  add     eax, esi
+  0000000140146800  rol     r10d, 1Eh
+  0000000140146804  add     ebx, eax
+  0000000140146806  rol     r11d, 1
+  0000000140146809  mov     eax, edx
+  000000014014680B  rol     edi, 1
+  000000014014680D  xor     eax, r10d
+  0000000140146810  rol     edx, 1Eh
+  0000000140146813  xor     eax, r9d
+  0000000140146816  mov     [rsp+340h+var_30C], esi
+  000000014014681A  add     eax, 0CA62C1D6h
+  000000014014681F  mov     [rsp+340h+var_31C], r11d
+  0000000140146824  add     eax, edi
+  0000000140146826  mov     r14d, esi
+  0000000140146829  xor     r14d, [rsp+340h+var_2F4]
+  000000014014682E  mov     ecx, ebx
+  0000000140146830  xor     r14d, [rsp+340h+var_2F8]
+  0000000140146835  mov     r15d, edi
+  0000000140146838  xor     r14d, [rsp+340h+var_2F0]
+  000000014014683D  xor     r15d, r13d
+  0000000140146840  xor     r15d, [rsp+340h+var_314]
+  0000000140146845  mov     r13d, r11d
+  0000000140146848  xor     r15d, [rsp+340h+var_300]
+  000000014014684D  xor     r13d, r12d
+  0000000140146850  xor     r13d, [rsp+340h+var_2E8]
+  0000000140146855  xor     r13d, [rsp+340h+var_2F8]
+  000000014014685A  rol     ecx, 5
+  000000014014685D  add     r8d, ecx
+  0000000140146860  rol     r14d, 1
+  0000000140146863  add     r8d, eax
+  0000000140146866  rol     r15d, 1
+  0000000140146869  mov     eax, ebx
+  000000014014686B  jmp     loc_1401469BD
+  0000000140146870  dq 4900E8FFF52983E8h, 0FFFE61C6870FFFFFh, 0F00000158C48148h
+  00000001401469B8  db 83h, 8Eh, 0DFh, 2 dup(0FFh)
+  00000001401469BD  rol     r13d, 1
+  00000001401469C0  xor     eax, edx
+  00000001401469C2  rol     ebx, 1Eh
+  00000001401469C5  xor     eax, r10d
+  00000001401469C8  mov     [rsp+340h+var_310], r14d
+  00000001401469CD  add     eax, 0CA62C1D6h
+  00000001401469D2  mov     [rsp+340h+var_300], r15d
+  00000001401469D7  add     eax, r11d
+  00000001401469DA  mov     ecx, r8d
+  00000001401469DD  rol     ecx, 5
+  00000001401469E0  add     r9d, ecx
+  00000001401469E3  add     r9d, eax
+  00000001401469E6  mov     eax, r8d
+  00000001401469E9  xor     eax, ebx
+  00000001401469EB  rol     r8d, 1Eh
+  00000001401469EF  xor     eax, edx
+  00000001401469F1  mov     ecx, r9d
+  00000001401469F4  add     eax, 0CA62C1D6h
+  00000001401469F9  rol     ecx, 5
+  00000001401469FC  add     eax, r14d
+  00000001401469FF  add     r10d, ecx
+  0000000140146A02  add     r10d, eax
+  0000000140146A05  mov     eax, r9d
+  0000000140146A08  xor     eax, r8d
+  0000000140146A0B  rol     r9d, 1Eh
+  0000000140146A0F  xor     eax, ebx
+  0000000140146A11  mov     ecx, r10d
+  0000000140146A14  add     eax, 0CA62C1D6h
+  0000000140146A19  rol     ecx, 5
+  0000000140146A1C  add     eax, r15d
+  0000000140146A1F  add     edx, ecx
+  0000000140146A21  add     edx, eax
+  0000000140146A23  mov     esi, edx
+  0000000140146A25  rol     esi, 5
+  0000000140146A28  mov     r12d, r14d
+  0000000140146A2B  add     esi, ebx
+  0000000140146A2D  xor     r12d, [rsp+340h+var_2FC]
+  0000000140146A32  mov     r14d, r15d
+  0000000140146A35  xor     r14d, [rsp+340h+var_318]
+  0000000140146A3A  mov     eax, r10d
+  0000000140146A3D  xor     r14d, [rsp+340h+var_308]
+  0000000140146A42  xor     eax, r9d
+  0000000140146A45  xor     r14d, [rsp+340h+var_2E8]
+  0000000140146A4A  xor     eax, r8d
+  0000000140146A4D  xor     r12d, [rsp+340h+var_2EC]
+  0000000140146A52  add     eax, 0CA62C1D6h
+  0000000140146A57  xor     r12d, [rsp+340h+var_314]
+  0000000140146A5C  add     eax, r13d
+  0000000140146A5F  add     esi, eax
+  0000000140146A61  rol     r14d, 1
+  0000000140146A64  jmp     loc_140146BEA
+  0000000140146A69  db 0E8h, 92h, 25h, 0F5h, 0FFh, 0E8h, 0C4h
+  0000000140146A70  dq 0FEC4428C0FFFFF14h, 850FFFF6F8DAE8FFh, 5854C857FFFE5175h
+  0000000140146BE8  db 0FEh, 0FFh
+  0000000140146BEA  rol     r10d, 1Eh
+  0000000140146BEE  mov     eax, edx
+  0000000140146BF0  xor     eax, r10d
+  0000000140146BF3  rol     edx, 1Eh
+  0000000140146BF6  xor     eax, r9d
+  0000000140146BF9  rol     r12d, 1
+  0000000140146BFC  add     eax, 0CA62C1D6h
+  0000000140146C01  mov     ecx, esi
+  0000000140146C03  add     eax, r12d
+  0000000140146C06  rol     ecx, 5
+  0000000140146C09  add     r8d, ecx
+  0000000140146C0C  mov     r15d, r13d
+  0000000140146C0F  xor     r15d, [rsp+340h+var_30C]
+  0000000140146C14  add     r8d, eax
+  0000000140146C17  xor     r15d, [rsp+340h+var_2DC]
+  0000000140146C1C  mov     eax, esi
+  0000000140146C1E  xor     r15d, [rsp+340h+var_2EC]
+  0000000140146C23  xor     eax, edx
+  0000000140146C25  xor     eax, r10d
+  0000000140146C28  rol     esi, 1Eh
+  0000000140146C2B  add     eax, 0CA62C1D6h
+  0000000140146C30  rol     r15d, 1
+  0000000140146C33  add     eax, r14d
+  0000000140146C36  mov     r11d, r8d
+  0000000140146C39  xor     r14d, [rsp+340h+var_31C]
+  0000000140146C3E  mov     ebx, r12d
+  0000000140146C41  xor     r14d, [rsp+340h+var_2E4]
+  0000000140146C46  xor     ebx, edi
+  0000000140146C48  xor     ebx, [rsp+340h+var_2F4]
+  0000000140146C4C  xor     ebx, [rsp+340h+var_308]
+  0000000140146C50  xor     r14d, [rsp+340h+var_2DC]
+  0000000140146C55  rol     r11d, 5
+  0000000140146C59  add     r11d, r9d
+  0000000140146C5C  rol     ebx, 1
+  0000000140146C5E  add     r11d, eax
+  0000000140146C61  rol     r14d, 1
+  0000000140146C64  mov     eax, r8d
+  0000000140146C67  mov     ecx, r11d
+  0000000140146C6A  xor     eax, esi
+  0000000140146C6C  rol     r8d, 1Eh
+  0000000140146C70  xor     eax, edx
+  0000000140146C72  rol     ecx, 5
+  0000000140146C75  add     eax, 0CA62C1D6h
+  0000000140146C7A  add     r10d, ecx
+  0000000140146C7D  add     eax, r15d
+  0000000140146C80  add     r10d, eax
+  0000000140146C83  mov     eax, r11d
+  0000000140146C86  xor     eax, r8d
+  0000000140146C89  rol     r11d, 1Eh
+  0000000140146C8D  xor     eax, esi
+  0000000140146C8F  jmp     loc_140146E3F
+  0000000140146C94  dd 0FF74E5E8h
+  0000000140146C98  dq 50FFFF78578E0FFFh, 8B4900013757840Fh, 0B99BE95E415F41E3h
+  0000000140146E38  db 1, 0Fh, 81h, 23h, 4, 2 dup(0FFh)
+  0000000140146E3F  mov     edi, r10d
+  0000000140146E42  add     eax, 0CA62C1D6h
+  0000000140146E47  rol     edi, 5
+  0000000140146E4A  add     eax, ebx
+  0000000140146E4C  add     edi, edx
+  0000000140146E4E  add     edi, eax
+  0000000140146E50  mov     eax, r10d
+  0000000140146E53  xor     eax, r11d
+  0000000140146E56  mov     r9d, edi
+  0000000140146E59  xor     eax, r8d
+  0000000140146E5C  rol     r9d, 5
+  0000000140146E60  add     eax, 0CA62C1D6h
+  0000000140146E65  add     r9d, esi
+  0000000140146E68  add     eax, r14d
+  0000000140146E6B  add     r9d, eax
+  0000000140146E6E  xor     ebx, [rsp+340h+var_300]
+  0000000140146E72  xor     r14d, r13d
+  0000000140146E75  xor     ebx, [rsp+340h+var_2FC]
+  0000000140146E79  mov     eax, edi
+  0000000140146E7B  xor     ebx, [rsp+340h+var_2E4]
+  0000000140146E7F  mov     ecx, r9d
+  0000000140146E82  xor     r14d, [rsp+340h+var_318]
+  0000000140146E87  xor     r15d, [rsp+340h+var_310]
+  0000000140146E8C  xor     r14d, [rsp+340h+var_320]
+  0000000140146E91  xor     r15d, [rsp+340h+var_320]
+  0000000140146E96  xor     r15d, [rsp+340h+var_2F4]
+  0000000140146E9B  mov     esi, [rbp+240h+var_1DC]
+  0000000140146E9E  rol     ecx, 5
+  0000000140146EA1  add     r8d, ecx
+  0000000140146EA4  rol     r10d, 1Eh
+  0000000140146EA8  xor     eax, r10d
+  0000000140146EAB  rol     edi, 1Eh
+  0000000140146EAE  xor     eax, r11d
+  0000000140146EB1  rol     ebx, 1
+  0000000140146EB3  add     eax, 0CA62C1D6h
+  0000000140146EB8  rol     r14d, 1
+  0000000140146EBB  add     ebx, r11d
+  0000000140146EBE  rol     r15d, 1
+  0000000140146EC1  mov     r11d, [rbp+240h+var_1D4]
+  0000000140146EC5  add     eax, r15d
+  0000000140146EC8  add     r8d, eax
+  0000000140146ECB  xor     r12d, r15d
+  0000000140146ECE  xor     r12d, [rsp+340h+var_30C]
+  0000000140146ED3  lea     eax, [r10+r14]
+  0000000140146ED7  xor     r12d, [rsp+340h+var_2FC]
+  0000000140146EDC  mov     ecx, r9d
+  0000000140146EDF  mov     r14d, [rbp+240h+var_1D0]
+  0000000140146EE3  xor     ecx, edi
+  0000000140146EE5  xor     ecx, r10d
+  0000000140146EE8  rol     r9d, 1Eh
+  0000000140146EEC  jmp     loc_1401470B4
+  0000000140146EF1  db 11h, 5Bh, 7Ch, 4Bh, 0FFh, 56h, 80h
+  0000000140146EF8  dq 78572E028D635121h, 1D5B3B05E87FC452h, 0CAFF545E575D5A19h
+  00000001401470B0  db 5Eh, 0FFh, 0FEh, 0FFh
+  00000001401470B4  mov     r10d, [rbp+240h+var_1D8]
+  00000001401470B8  add     ecx, 0CA62C1D6h
+  00000001401470BE  rol     r12d, 1
+  00000001401470C1  mov     edx, r8d
+  00000001401470C4  rol     edx, 5
+  00000001401470C7  add     r14d, r9d
+  00000001401470CA  add     ebx, edx
+  00000001401470CC  mov     [rbp+240h+var_1D0], r14d
+  00000001401470D0  add     ebx, ecx
+  00000001401470D2  mov     ecx, r8d
+  00000001401470D5  xor     ecx, r9d
+  00000001401470D8  rol     r8d, 1Eh
+  00000001401470DC  xor     ecx, edi
+  00000001401470DE  mov     edx, ebx
+  00000001401470E0  add     ecx, 0CA62C1D6h
+  00000001401470E6  rol     edx, 5
+  00000001401470E9  add     edx, eax
+  00000001401470EB  add     edi, 0CA62C1D6h
+  00000001401470F1  add     ecx, edx
+  00000001401470F3  add     r11d, r8d
+  00000001401470F6  mov     eax, ecx
+  00000001401470F8  mov     [rbp+240h+var_1D4], r11d
+  00000001401470FC  rol     eax, 5
+  00000001401470FF  add     esi, ecx
+  0000000140147101  add     r12d, eax
+  0000000140147104  mov     [rbp+240h+var_1DC], esi
+  0000000140147107  mov     eax, ebx
+  0000000140147109  rol     ebx, 1Eh
+  000000014014710C  xor     eax, r8d
+  000000014014710F  add     r10d, ebx
+  0000000140147112  xor     eax, r9d
+  0000000140147115  mov     [rbp+240h+var_1D8], r10d
+  0000000140147119  add     eax, edi
+  000000014014711B  mov     rdi, [rbp+240h+var_260]
+  000000014014711F  add     eax, [rbp+240h+var_1E0]
+  0000000140147122  add     r12d, eax
+  0000000140147125  mov     rax, [rbp+240h+var_290]
+  0000000140147129  mov     [rbp+240h+var_1E0], r12d
+  000000014014712D  lea     rcx, [rax+3Fh]
+  0000000140147131  mov     [rbp+240h+var_280], rcx
+  0000000140147135  cmp     rcx, rdi
+  0000000140147138  jnb     loc_14014AF5E
+  000000014014713E  jmp     loc_140147293
+  0000000140147143  db 33h, 0C2h, 83h, 0C3h, 0C4h
+  0000000140147148  dq 0CA62C1D605CB8B41h, 854405C1C1DFD141h, 44D10344C70341D9h
+  0000000140147293  lea     rdx, [rsp+340h+var_2D0]
+  0000000140147298  lea     rbx, [rbp+240h+var_D0]
+  000000014014729F  sub     rdx, rbx
+  00000001401472A2  sub     rdx, rax
+  00000001401472A5  sub     rdx, 2
+  00000001401472A9  mov     [rbp-38h], rdx
+  00000001401472AD  jmp     loc_140147335
+  00000001401472B2  dw 348h, 0FE5h, 7183h
+  00000001401472B8  dq 0FFF51E20E8000045h, 0EE890FFFFF22E0E8h, 575DBED29BFFFE20h
+  0000000140147330  db 8Bh, 0F5h, 2, 2 dup(0FFh)
+  0000000140147335  lea     rbx, [rbp+rcx+240h+var_10D]
+  000000014014733D  mov     r8d, 10h
+  0000000140147343  jmp     loc_1401473C8
+  0000000140147348  dq 5A880FFFF6EB03E8h, 0FFFEA174E8FFFFC6h, 504100016FC5850Fh
+  00000001401473C8  movzx   eax, byte ptr [rbx-1]
+  00000001401473CC  movzx   ecx, byte ptr [rbx-2]
+  00000001401473D0  shl     ecx, 8
+  00000001401473D3  or      ecx, eax
+  00000001401473D5  movzx   eax, byte ptr [rbx]
+  00000001401473D8  shl     ecx, 8
+  00000001401473DB  or      ecx, eax
+  00000001401473DD  movzx   eax, byte ptr [rbx+1]
+  00000001401473E1  shl     ecx, 8
+  00000001401473E4  or      ecx, eax
+  00000001401473E6  mov     [rdx+rbx], ecx
+  00000001401473E9  lea     rbx, [rbx+4]
+  00000001401473ED  sub     r8, 1
+  00000001401473F1  jnz     short loc_1401473C8
+  00000001401473F3  jmp     loc_1401475CD
+  00000001401473F8  dq 4366E8FFF51C33E8h, 0FFFE7A7C860FFFFFh, 5C6FE8FFF51DF3E8h
+  00000001401475C8  db 8Ah, 7Dh, 0ECh, 2 dup(0FFh)
+  00000001401475CD  mov     r13d, [rsp+340h+var_2C4]
+  00000001401475D2  mov     r8d, r11d
+  00000001401475D5  xor     r8d, r10d
+  00000001401475D8  mov     r9d, r10d
+  00000001401475DB  and     r8d, esi
+  00000001401475DE  mov     eax, r12d
+  00000001401475E1  rol     eax, 5
+  00000001401475E4  xor     r8d, r11d
+  00000001401475E7  add     eax, 5A827999h
+  00000001401475EC  add     r11d, 5A827999h
+  00000001401475F3  add     eax, [rsp+340h+var_2D0]
+  00000001401475F7  mov     ebx, r12d
+  00000001401475FA  add     r8d, eax
+  00000001401475FD  rol     ebx, 1Eh
+  0000000140147600  add     r8d, r14d
+  0000000140147603  mov     ecx, ebx
+  0000000140147605  mov     eax, r8d
+  0000000140147608  mov     edx, esi
+  000000014014760A  rol     eax, 5
+  000000014014760D  add     eax, [rsp+340h+var_2CC]
+  0000000140147611  rol     edx, 1Eh
+  0000000140147614  xor     ecx, edx
+  0000000140147616  xor     r9d, edx
+  0000000140147619  and     ecx, r8d
+  000000014014761C  and     r9d, r12d
+  000000014014761F  mov     r12d, [rsp+340h+var_2C8]
+  0000000140147624  xor     ecx, edx
+  0000000140147626  rol     r8d, 1Eh
+  000000014014762A  xor     r9d, r10d
+  000000014014762D  add     r9d, eax
+  0000000140147630  add     r9d, r11d
+  0000000140147633  mov     r11d, r8d
+  0000000140147636  xor     r11d, ebx
+  0000000140147639  mov     eax, r9d
+  000000014014763C  rol     eax, 5
+  000000014014763F  and     r11d, r9d
+  0000000140147642  add     eax, 5A827999h
+  0000000140147647  rol     r9d, 1Eh
+  000000014014764B  add     eax, r12d
+  000000014014764E  xor     r11d, ebx
+  0000000140147651  add     ecx, eax
+  0000000140147653  add     r10d, ecx
+  0000000140147656  mov     ecx, r9d
+  0000000140147659  xor     ecx, r8d
+  000000014014765C  mov     eax, r10d
+  000000014014765F  and     ecx, r10d
+  0000000140147662  rol     eax, 5
+  0000000140147665  xor     ecx, r8d
+  0000000140147668  rol     r10d, 1Eh
+  000000014014766C  add     ecx, 5A827999h
+  0000000140147672  jmp     loc_140147703
+  0000000140147677  db 52h
+  0000000140147678  dq 8148FFFFB9198F0Fh, 51820F00000108C4h, 0E38B495C41FFFF5Eh
+  0000000140147700  db 84h, 0FEh, 0FFh
+  0000000140147703  add     eax, 5A827999h
+  0000000140147708  add     eax, r13d
+  000000014014770B  add     r11d, eax
+  000000014014770E  add     r11d, edx
+  0000000140147711  mov     edx, [rbp+240h+var_2C0]
+  0000000140147714  mov     eax, r11d
+  0000000140147717  rol     eax, 5
+  000000014014771A  add     edx, eax
+  000000014014771C  add     edx, ecx
+  000000014014771E  mov     ecx, r10d
+  0000000140147721  xor     ecx, r9d
+  0000000140147724  add     edx, ebx
+  0000000140147726  mov     ebx, [rbp+240h+var_2BC]
+  0000000140147729  and     ecx, r11d
+  000000014014772C  xor     ecx, r9d
+  000000014014772F  rol     r11d, 1Eh
+  0000000140147733  add     ecx, 5A827999h
+  0000000140147739  mov     eax, edx
+  000000014014773B  rol     eax, 5
+  000000014014773E  add     ebx, eax
+  0000000140147740  add     ebx, ecx
+  0000000140147742  mov     ecx, r11d
+  0000000140147745  add     ebx, r8d
+  0000000140147748  xor     ecx, r10d
+  000000014014774B  mov     r8d, [rbp+240h+var_2B8]
+  000000014014774F  and     ecx, edx
+  0000000140147751  mov     eax, ebx
+  0000000140147753  xor     ecx, r10d
+  0000000140147756  rol     eax, 5
+  0000000140147759  add     r8d, eax
+  000000014014775C  add     ecx, 5A827999h
+  0000000140147762  add     r8d, ecx
+  0000000140147765  rol     edx, 1Eh
+  0000000140147768  add     r8d, r9d
+  000000014014776B  mov     r9d, edx
+  000000014014776E  xor     r9d, r11d
+  0000000140147771  mov     eax, r8d
+  0000000140147774  rol     eax, 5
+  0000000140147777  and     r9d, ebx
+  000000014014777A  add     eax, 5A827999h
+  000000014014777F  rol     ebx, 1Eh
+  0000000140147782  add     eax, [rbp+240h+var_2B4]
+  0000000140147785  xor     r9d, r11d
+  0000000140147788  add     r9d, eax
+  000000014014778B  mov     ecx, ebx
+  000000014014778D  xor     ecx, edx
+  000000014014778F  add     r9d, r10d
+  0000000140147792  and     ecx, r8d
+  0000000140147795  lea     r10d, [r11+5A827999h]
+  000000014014779C  xor     ecx, edx
+  000000014014779E  jmp     loc_140147A27
+  00000001401477A3  leave
+  00000001401477A4  retf
+  00000001401477A5  db 0D5h, 5Ah, 2Dh
+  00000001401477A8  dq 7DAE9D5647717E7Bh, 0DAC4719A74E68458h, 0E85E4A017050467Dh
+  0000000140147A20  db 0C2h, 0Fh, 8Ah, 9Eh, 51h, 2 dup(0)
+  0000000140147A27  rol     r8d, 1Eh
+  0000000140147A2B  mov     eax, r9d
+  0000000140147A2E  lea     r11d, [rdx+5A827999h]
+  0000000140147A35  rol     eax, 5
+  0000000140147A38  lea     edx, [rbx+5A827999h]
+  0000000140147A3E  add     eax, [rbp+240h+var_2B0]
+  0000000140147A41  add     ecx, eax
+  0000000140147A43  add     r10d, ecx
+  0000000140147A46  mov     ecx, r8d
+  0000000140147A49  xor     ecx, ebx
+  0000000140147A4B  mov     eax, r10d
+  0000000140147A4E  and     ecx, r9d
+  0000000140147A51  rol     eax, 5
+  0000000140147A54  add     eax, [rbp+240h+var_2AC]
+  0000000140147A57  xor     ecx, ebx
+  0000000140147A59  add     ecx, eax
+  0000000140147A5B  rol     r9d, 1Eh
+  0000000140147A5F  add     r11d, ecx
+  0000000140147A62  lea     ebx, [r8+5A827999h]
+  0000000140147A69  mov     ecx, r9d
+  0000000140147A6C  mov     eax, r11d
+  0000000140147A6F  xor     ecx, r8d
+  0000000140147A72  rol     eax, 5
+  0000000140147A75  add     eax, [rbp+240h+var_2A8]
+  0000000140147A78  and     ecx, r10d
+  0000000140147A7B  xor     ecx, r8d
+  0000000140147A7E  rol     r10d, 1Eh
+  0000000140147A82  add     ecx, eax
+  0000000140147A84  add     edx, ecx
+  0000000140147A86  mov     ecx, r10d
+  0000000140147A89  xor     ecx, r9d
+  0000000140147A8C  mov     eax, edx
+  0000000140147A8E  rol     eax, 5
+  0000000140147A91  and     ecx, r11d
+  0000000140147A94  add     eax, [rbp+240h+var_2A4]
+  0000000140147A97  xor     ecx, r9d
+  0000000140147A9A  add     ecx, eax
+  0000000140147A9C  rol     r11d, 1Eh
+  0000000140147AA0  add     ebx, ecx
+  0000000140147AA2  mov     r8d, r11d
+  0000000140147AA5  xor     r8d, r10d
+  0000000140147AA8  mov     eax, ebx
+  0000000140147AAA  rol     eax, 5
+  0000000140147AAD  and     r8d, edx
+  0000000140147AB0  add     eax, 5A827999h
+  0000000140147AB5  rol     edx, 1Eh
+  0000000140147AB8  add     eax, [rbp+240h+var_2A0]
+  0000000140147ABB  xor     r8d, r10d
+  0000000140147ABE  add     r8d, eax
+  0000000140147AC1  mov     ecx, edx
+  0000000140147AC3  jmp     loc_140147C37
+  0000000140147AC8  dq 0C2820FFFFE1B81E8h, 0FFF51778E8FFFF09h, 0F98B0FFFFF89CBE8h
+  0000000140147C30  db 0F5h, 0Fh, 82h, 41h, 0B7h, 0FEh, 0FFh
+  0000000140147C37  add     r8d, r9d
+  0000000140147C3A  xor     ecx, r11d
+  0000000140147C3D  and     ecx, ebx
+  0000000140147C3F  lea     r9d, [r10+5A827999h]
+  0000000140147C46  xor     ecx, r11d
+  0000000140147C49  mov     eax, r8d
+  0000000140147C4C  rol     eax, 5
+  0000000140147C4F  add     eax, [rbp+240h+var_29C]
+  0000000140147C52  add     ecx, eax
+  0000000140147C54  add     r9d, ecx
+  0000000140147C57  rol     ebx, 1Eh
+  0000000140147C5A  mov     eax, r9d
+  0000000140147C5D  mov     r10d, [rbp+240h+var_298]
+  0000000140147C61  lea     r14d, [rdx+5A827999h]
+  0000000140147C68  mov     r15d, [rbp+240h+var_2A8]
+  0000000140147C6C  lea     esi, [rbx+5A827999h]
+  0000000140147C72  rol     eax, 5
+  0000000140147C75  mov     ecx, ebx
+  0000000140147C77  xor     ecx, edx
+  0000000140147C79  add     r10d, eax
+  0000000140147C7C  and     ecx, r8d
+  0000000140147C7F  rol     r8d, 1Eh
+  0000000140147C83  xor     ecx, edx
+  0000000140147C85  mov     edx, [rbp+240h+var_29C]
+  0000000140147C88  xor     edx, [rbp+240h+var_2B0]
+  0000000140147C8B  add     ecx, 5A827999h
+  0000000140147C91  xor     edx, r12d
+  0000000140147C94  add     r10d, ecx
+  0000000140147C97  xor     edx, [rsp+340h+var_2D0]
+  0000000140147C9B  add     r10d, r11d
+  0000000140147C9E  rol     edx, 1
+  0000000140147CA0  mov     eax, r10d
+  0000000140147CA3  mov     [rsp+340h+var_31C], edx
+  0000000140147CA7  mov     ecx, r8d
+  0000000140147CAA  rol     eax, 5
+  0000000140147CAD  xor     ecx, ebx
+  0000000140147CAF  add     eax, [rbp+240h+var_294]
+  0000000140147CB2  and     ecx, r9d
+  0000000140147CB5  xor     ecx, ebx
+  0000000140147CB7  rol     r9d, 1Eh
+  0000000140147CBB  add     ecx, eax
+  0000000140147CBD  add     r14d, ecx
+  0000000140147CC0  mov     ecx, r9d
+  0000000140147CC3  xor     ecx, r8d
+  0000000140147CC6  mov     eax, r14d
+  0000000140147CC9  rol     eax, 5
+  0000000140147CCC  and     ecx, r10d
+  0000000140147CCF  add     eax, edx
+  0000000140147CD1  rol     r10d, 1Eh
+  0000000140147CD5  mov     edx, [rbp+240h+var_298]
+  0000000140147CD8  jmp     loc_140147D75
+  0000000140147CDD  db 50h, 0Fh, 80h
+  0000000140147CE0  dq 0F513FFE8FFFE305Dh, 0E8FFFF7839890FFFh, 0AC4E810FFFF7034Ch
+  0000000140147D70  db 51h, 70h, 72h, 0E2h, 7Ah
+  0000000140147D75  xor     ecx, r8d
+  0000000140147D78  xor     edx, [rbp+240h+var_2AC]
+  0000000140147D7B  add     ecx, eax
+  0000000140147D7D  xor     edx, r13d
+  0000000140147D80  add     esi, ecx
+  0000000140147D82  xor     edx, [rsp+340h+var_2CC]
+  0000000140147D86  mov     eax, esi
+  0000000140147D88  rol     edx, 1
+  0000000140147D8A  mov     edi, r10d
+  0000000140147D8D  mov     [rsp+340h+var_314], edx
+  0000000140147D91  xor     edi, r9d
+  0000000140147D94  add     edx, 5A827999h
+  0000000140147D9A  rol     eax, 5
+  0000000140147D9D  add     eax, edx
+  0000000140147D9F  and     edi, r14d
+  0000000140147DA2  mov     edx, [rbp+240h+var_294]
+  0000000140147DA5  xor     edi, r9d
+  0000000140147DA8  xor     edx, r15d
+  0000000140147DAB  rol     r14d, 1Eh
+  0000000140147DAF  xor     edx, [rbp+240h+var_2C0]
+  0000000140147DB2  add     edi, eax
+  0000000140147DB4  xor     edx, r12d
+  0000000140147DB7  add     edi, r8d
+  0000000140147DBA  mov     r12d, [rbp+240h+var_2A4]
+  0000000140147DBE  mov     eax, edi
+  0000000140147DC0  rol     edx, 1
+  0000000140147DC2  mov     r11d, r14d
+  0000000140147DC5  mov     [rsp+340h+var_300], edx
+  0000000140147DC9  xor     r11d, r10d
+  0000000140147DCC  add     edx, 5A827999h
+  0000000140147DD2  rol     eax, 5
+  0000000140147DD5  add     eax, edx
+  0000000140147DD7  and     r11d, esi
+  0000000140147DDA  xor     r11d, r10d
+  0000000140147DDD  rol     esi, 1Eh
+  0000000140147DE0  add     r11d, eax
+  0000000140147DE3  mov     edx, r12d
+  0000000140147DE6  xor     edx, [rbp+240h+var_2BC]
+  0000000140147DE9  add     r11d, r9d
+  0000000140147DEC  xor     edx, r13d
+  0000000140147DEF  xor     edx, [rsp+340h+var_31C]
+  0000000140147DF3  rol     edx, 1
+  0000000140147DF5  mov     [rsp+340h+var_30C], edx
+  0000000140147DF9  mov     r13d, [rbp+240h+var_2A0]
+  0000000140147DFD  lea     ebx, [r14+6ED9EBA1h]
+  0000000140147E04  mov     eax, r11d
+  0000000140147E07  mov     ecx, esi
+  0000000140147E09  rol     eax, 5
+  0000000140147E0C  xor     ecx, r14d
+  0000000140147E0F  add     eax, edx
+  0000000140147E11  jmp     loc_140147FA2
+  0000000140147E16  dw 0CB33h
+  0000000140147E18  dq 8B41D98C41C93341h, 0BF9804105C0C1C2h, 31EC1C141F8C203h
+  0000000140147FA0  db 2 dup(0FFh)
+  0000000140147FA2  and     ecx, edi
+  0000000140147FA4  xor     ecx, r14d
+  0000000140147FA7  rol     edi, 1Eh
+  0000000140147FAA  add     ecx, eax
+  0000000140147FAC  mov     r14d, [rbp+240h+var_29C]
+  0000000140147FB0  lea     edx, [r10+5A827999h]
+  0000000140147FB7  mov     r10d, r13d
+  0000000140147FBA  xor     r10d, [rbp+240h+var_2B8]
+  0000000140147FBE  add     edx, ecx
+  0000000140147FC0  xor     r10d, [rbp+240h+var_2C0]
+  0000000140147FC4  mov     ecx, r11d
+  0000000140147FC7  xor     r10d, [rsp+340h+var_314]
+  0000000140147FCC  xor     ecx, edi
+  0000000140147FCE  xor     ecx, esi
+  0000000140147FD0  rol     r10d, 1
+  0000000140147FD3  rol     r11d, 1Eh
+  0000000140147FD7  mov     eax, edx
+  0000000140147FD9  rol     eax, 5
+  0000000140147FDC  add     eax, r10d
+  0000000140147FDF  mov     [rsp+340h+var_304], r10d
+  0000000140147FE4  add     ecx, eax
+  0000000140147FE6  mov     eax, r14d
+  0000000140147FE9  xor     eax, [rbp+240h+var_2B4]
+  0000000140147FEC  add     ebx, ecx
+  0000000140147FEE  xor     eax, [rbp+240h+var_2BC]
+  0000000140147FF1  mov     ecx, edx
+  0000000140147FF3  xor     eax, [rsp+340h+var_300]
+  0000000140147FF7  xor     ecx, r11d
+  0000000140147FFA  rol     eax, 1
+  0000000140147FFC  xor     ecx, edi
+  0000000140147FFE  mov     [rsp+340h+var_318], eax
+  0000000140148002  add     ecx, 6ED9EBA1h
+  0000000140148008  mov     r8d, [rsp+340h+var_318]
+  000000014014800D  mov     eax, ebx
+  000000014014800F  rol     eax, 5
+  0000000140148012  add     r8d, eax
+  0000000140148015  rol     edx, 1Eh
+  0000000140148018  mov     eax, [rsp+340h+var_30C]
+  000000014014801C  add     r8d, ecx
+  000000014014801F  xor     eax, [rbp+240h+var_298]
+  0000000140148022  add     r8d, esi
+  0000000140148025  xor     eax, [rbp+240h+var_2B0]
+  0000000140148028  mov     ecx, ebx
+  000000014014802A  xor     eax, [rbp+240h+var_2B8]
+  000000014014802D  xor     ecx, edx
+  000000014014802F  rol     eax, 1
+  0000000140148031  xor     ecx, r11d
+  0000000140148034  mov     [rsp+340h+var_320], eax
+  0000000140148038  add     ecx, 6ED9EBA1h
+  000000014014803E  mov     r9d, [rsp+340h+var_320]
+  0000000140148043  jmp     loc_1401481D1
+  0000000140148048  dq 54BAE8FFF51003E8h, 0FFFEF6AF810FFFFFh, 581ED96D7639AD88h
+  00000001401481D0  db 0FFh
+  00000001401481D1  mov     eax, r8d
+  00000001401481D4  rol     eax, 5
+  00000001401481D7  add     r9d, eax
+  00000001401481DA  rol     ebx, 1Eh
+  00000001401481DD  add     r9d, ecx
+  00000001401481E0  mov     eax, r10d
+  00000001401481E3  xor     eax, [rbp+240h+var_294]
+  00000001401481E6  lea     r10d, [r11+6ED9EBA1h]
+  00000001401481ED  xor     eax, [rbp+240h+var_2AC]
+  00000001401481F0  add     r9d, edi
+  00000001401481F3  xor     eax, [rbp+240h+var_2B4]
+  00000001401481F6  mov     ecx, r8d
+  00000001401481F9  mov     r11d, [rsp+340h+var_318]
+  00000001401481FE  xor     ecx, ebx
+  0000000140148200  rol     eax, 1
+  0000000140148202  xor     ecx, edx
+  0000000140148204  mov     [rsp+340h+var_310], eax
+  0000000140148208  mov     eax, r9d
+  000000014014820B  rol     eax, 5
+  000000014014820E  add     eax, [rsp+340h+var_310]
+  0000000140148212  add     ecx, eax
+  0000000140148214  rol     r8d, 1Eh
+  0000000140148218  add     r10d, ecx
+  000000014014821B  xor     r11d, r15d
+  000000014014821E  xor     r11d, [rbp+240h+var_2B0]
+  0000000140148222  mov     ecx, r9d
+  0000000140148225  xor     r11d, [rsp+340h+var_31C]
+  000000014014822A  xor     ecx, r8d
+  000000014014822D  mov     esi, [rsp+340h+var_320]
+  0000000140148231  xor     ecx, ebx
+  0000000140148233  rol     r9d, 1Eh
+  0000000140148237  xor     esi, r12d
+  000000014014823A  xor     esi, [rbp+240h+var_2AC]
+  000000014014823D  mov     eax, r10d
+  0000000140148240  xor     esi, [rsp+340h+var_314]
+  0000000140148244  rol     eax, 5
+  0000000140148247  rol     r11d, 1
+  000000014014824A  add     eax, r11d
+  000000014014824D  mov     [rsp+340h+var_2FC], r11d
+  0000000140148252  add     ecx, eax
+  0000000140148254  rol     esi, 1
+  0000000140148256  lea     r11d, [rdx+6ED9EBA1h]
+  000000014014825D  mov     [rsp+340h+var_2F4], esi
+  0000000140148261  add     r11d, ecx
+  0000000140148264  lea     edx, [rbx+6ED9EBA1h]
+  000000014014826A  mov     ebx, [rsp+340h+var_310]
+  000000014014826E  mov     ecx, r10d
+  0000000140148271  xor     ecx, r9d
+  0000000140148274  rol     r10d, 1Eh
+  0000000140148278  xor     ecx, r8d
+  000000014014827B  jmp     loc_140148430
+  0000000140148280  pop     r15
+  0000000140148282  jmp     loc_14012A7B2
+  0000000140148287  db 0Fh
+  0000000140148288  dq 0FC802447D1544B6h, 8308E1C17C154CB6h, 1544B60FC80B00EAh
+  0000000140148430  xor     ebx, r13d
+  0000000140148433  xor     ebx, r15d
+  0000000140148436  mov     eax, r11d
+  0000000140148439  xor     ebx, [rsp+340h+var_300]
+  000000014014843D  rol     eax, 5
+  0000000140148440  add     eax, esi
+  0000000140148442  rol     ebx, 1
+  0000000140148444  add     ecx, eax
+  0000000140148446  mov     [rsp+340h+var_2F0], ebx
+  000000014014844A  add     edx, ecx
+  000000014014844C  mov     ecx, r11d
+  000000014014844F  xor     ecx, r10d
+  0000000140148452  rol     r11d, 1Eh
+  0000000140148456  xor     ecx, r9d
+  0000000140148459  mov     eax, edx
+  000000014014845B  rol     eax, 5
+  000000014014845E  add     eax, ebx
+  0000000140148460  lea     ebx, [r8+6ED9EBA1h]
+  0000000140148467  mov     r8d, [rsp+340h+var_2FC]
+  000000014014846C  add     ecx, eax
+  000000014014846E  xor     r8d, [rsp+340h+var_30C]
+  0000000140148473  add     ebx, ecx
+  0000000140148475  xor     r8d, r14d
+  0000000140148478  mov     eax, ebx
+  000000014014847A  xor     r8d, r12d
+  000000014014847D  rol     eax, 5
+  0000000140148480  mov     r12d, [rsp+340h+var_318]
+  0000000140148485  mov     ecx, edx
+  0000000140148487  xor     ecx, r11d
+  000000014014848A  rol     r8d, 1
+  000000014014848D  add     eax, r8d
+  0000000140148490  mov     [rsp+340h+var_2F8], r8d
+  0000000140148495  lea     r8d, [r9+6ED9EBA1h]
+  000000014014849C  rol     edx, 1Eh
+  000000014014849F  xor     ecx, r10d
+  00000001401484A2  mov     r9d, esi
+  00000001401484A5  xor     r9d, [rsp+340h+var_304]
+  00000001401484AA  add     ecx, eax
+  00000001401484AC  xor     r9d, [rbp+240h+var_298]
+  00000001401484B0  add     r8d, ecx
+  00000001401484B3  xor     r9d, r13d
+  00000001401484B6  mov     ecx, ebx
+  00000001401484B8  rol     r9d, 1
+  00000001401484BB  xor     ecx, edx
+  00000001401484BD  xor     ecx, r11d
+  00000001401484C0  mov     [rsp+340h+var_2E8], r9d
+  00000001401484C5  mov     eax, r8d
+  00000001401484C8  rol     ebx, 1Eh
+  00000001401484CB  rol     eax, 5
+  00000001401484CE  add     eax, r9d
+  00000001401484D1  jmp     loc_140148755
+  00000001401484D6  dw 8B4Ch
+  00000001401484D8  dq 841D8D4CD03A4046h, 0D08B49C08B388341h, 0D3D2F748C1AF0F48h
+  0000000140148750  db 79h, 0B8h, 4Eh, 21h, 9Fh
+  0000000140148755  lea     r9d, [r10+6ED9EBA1h]
+  000000014014875C  mov     r10d, [rsp+340h+var_2F0]
+  0000000140148761  add     ecx, eax
+  0000000140148763  add     r9d, ecx
+  0000000140148766  xor     r10d, r12d
+  0000000140148769  xor     r10d, [rbp+240h+var_294]
+  000000014014876D  mov     ecx, r8d
+  0000000140148770  mov     edi, [rsp+340h+var_310]
+  0000000140148774  xor     ecx, ebx
+  0000000140148776  mov     esi, [rsp+340h+var_2FC]
+  000000014014877A  xor     ecx, edx
+  000000014014877C  xor     r10d, r14d
+  000000014014877F  rol     r8d, 1Eh
+  0000000140148783  mov     r14d, [rsp+340h+var_320]
+  0000000140148788  mov     eax, r9d
+  000000014014878B  rol     eax, 5
+  000000014014878E  rol     r10d, 1
+  0000000140148791  add     eax, r10d
+  0000000140148794  mov     [rsp+340h+var_2EC], r10d
+  0000000140148799  add     ecx, eax
+  000000014014879B  lea     r10d, [r11+6ED9EBA1h]
+  00000001401487A2  mov     r11d, [rsp+340h+var_2F8]
+  00000001401487A7  add     r10d, ecx
+  00000001401487AA  xor     r11d, r14d
+  00000001401487AD  mov     eax, r10d
+  00000001401487B0  xor     r11d, [rbp+240h+var_298]
+  00000001401487B4  mov     ecx, r9d
+  00000001401487B7  xor     r11d, [rsp+340h+var_31C]
+  00000001401487BC  xor     ecx, r8d
+  00000001401487BF  rol     eax, 5
+  00000001401487C2  xor     ecx, ebx
+  00000001401487C4  rol     r11d, 1
+  00000001401487C7  add     eax, r11d
+  00000001401487CA  mov     [rsp+340h+var_2DC], r11d
+  00000001401487CF  add     ecx, eax
+  00000001401487D1  rol     r9d, 1Eh
+  00000001401487D5  lea     r11d, [rdx+6ED9EBA1h]
+  00000001401487DC  mov     edx, [rsp+340h+var_2E8]
+  00000001401487E0  add     r11d, ecx
+  00000001401487E3  xor     edx, edi
+  00000001401487E5  xor     edx, [rbp+240h+var_294]
+  00000001401487E8  mov     eax, r11d
+  00000001401487EB  xor     edx, [rsp+340h+var_314]
+  00000001401487EF  mov     ecx, r10d
+  00000001401487F2  rol     eax, 5
+  00000001401487F5  xor     ecx, r9d
+  00000001401487F8  add     eax, 6ED9EBA1h
+  00000001401487FD  rol     edx, 1
+  00000001401487FF  add     eax, edx
+  0000000140148801  rol     r10d, 1Eh
+  0000000140148805  jmp     loc_14014889C
+  000000014014880A  pop     r13
+  000000014014880C  pop     r15
+  000000014014880E  jmp     loc_1401408C7
+  0000000140148813  db 50h, 0Fh, 82h, 2, 4Eh
+  0000000140148818  dq 0FE4D26880F57FFFFh, 0FFFFEACA8B0F52FFh, 0FFFE27ADE9E38B49h
+  0000000140148898  db 0Ah, 6Dh, 2 dup(0FFh)
+  000000014014889C  xor     ecx, r8d
+  000000014014889F  mov     [rsp+340h+var_318], edx
+  00000001401488A3  add     ecx, eax
+  00000001401488A5  mov     eax, [rsp+340h+var_2EC]
+  00000001401488A9  xor     eax, esi
+  00000001401488AB  add     ebx, ecx
+  00000001401488AD  xor     eax, [rsp+340h+var_300]
+  00000001401488B1  mov     ecx, r11d
+  00000001401488B4  xor     eax, [rsp+340h+var_31C]
+  00000001401488B8  xor     ecx, r10d
+  00000001401488BB  rol     eax, 1
+  00000001401488BD  xor     ecx, r9d
+  00000001401488C0  mov     [rsp+340h+var_308], eax
+  00000001401488C4  mov     eax, ebx
+  00000001401488C6  mov     r13d, [rsp+340h+var_308]
+  00000001401488CB  rol     eax, 5
+  00000001401488CE  add     r13d, 6ED9EBA1h
+  00000001401488D5  add     eax, r13d
+  00000001401488D8  rol     r11d, 1Eh
+  00000001401488DC  mov     r13d, [rsp+340h+var_30C]
+  00000001401488E1  add     ecx, eax
+  00000001401488E3  mov     eax, [rsp+340h+var_2DC]
+  00000001401488E7  add     r8d, ecx
+  00000001401488EA  xor     eax, [rsp+340h+var_2F4]
+  00000001401488EE  mov     ecx, ebx
+  00000001401488F0  xor     eax, r13d
+  00000001401488F3  xor     ecx, r11d
+  00000001401488F6  xor     eax, [rsp+340h+var_314]
+  00000001401488FA  xor     ecx, r10d
+  00000001401488FD  rol     eax, 1
+  00000001401488FF  mov     [rsp+340h+var_314], eax
+  0000000140148903  mov     eax, r8d
+  0000000140148906  mov     r15d, [rsp+340h+var_314]
+  000000014014890B  add     r15d, 6ED9EBA1h
+  0000000140148912  rol     eax, 5
+  0000000140148915  add     eax, r15d
+  0000000140148918  add     ecx, eax
+  000000014014891A  mov     r15d, [rsp+340h+var_2EC]
+  000000014014891F  add     r9d, ecx
+  0000000140148922  rol     ebx, 1Eh
+  0000000140148925  mov     ecx, r8d
+  0000000140148928  mov     eax, edx
+  000000014014892A  xor     eax, [rsp+340h+var_2F0]
+  000000014014892E  lea     edx, [r10+6ED9EBA1h]
+  0000000140148935  xor     eax, [rsp+340h+var_304]
+  0000000140148939  xor     ecx, ebx
+  000000014014893B  xor     eax, [rsp+340h+var_300]
+  000000014014893F  xor     ecx, r11d
+  0000000140148942  mov     r10d, [rsp+340h+var_308]
+  0000000140148947  xor     r10d, [rsp+340h+var_2F8]
+  000000014014894C  jmp     loc_140148A17
+  0000000140148951  db 74h, 8Bh, 71h, 52h, 1Eh, 8Dh, 5Eh
+  0000000140148958  dq 51E87158063B577Ah, 0E15F285C665ED5E8h, 8F0FE4034944585Ah
+  0000000140148A17  rol     eax, 1
+  0000000140148A19  xor     r10d, r12d
+  0000000140148A1C  mov     [rsp+340h+var_30C], eax
+  0000000140148A20  xor     r10d, r13d
+  0000000140148A23  mov     r13d, [rsp+340h+var_2E8]
+  0000000140148A28  mov     eax, r9d
+  0000000140148A2B  rol     eax, 5
+  0000000140148A2E  add     eax, [rsp+340h+var_30C]
+  0000000140148A32  add     ecx, eax
+  0000000140148A34  rol     r8d, 1Eh
+  0000000140148A38  add     edx, ecx
+  0000000140148A3A  rol     r10d, 1
+  0000000140148A3D  mov     [rsp+340h+var_320], r10d
+  0000000140148A42  mov     eax, edx
+  0000000140148A44  rol     eax, 5
+  0000000140148A47  mov     ecx, r9d
+  0000000140148A4A  xor     ecx, r8d
+  0000000140148A4D  rol     r9d, 1Eh
+  0000000140148A51  add     eax, r10d
+  0000000140148A54  xor     ecx, ebx
+  0000000140148A56  add     ecx, eax
+  0000000140148A58  lea     r10d, [r11+6ED9EBA1h]
+  0000000140148A5F  mov     r11d, [rsp+340h+var_314]
+  0000000140148A64  add     r10d, ecx
+  0000000140148A67  xor     r11d, r13d
+  0000000140148A6A  mov     eax, r10d
+  0000000140148A6D  xor     r11d, r14d
+  0000000140148A70  rol     eax, 5
+  0000000140148A73  xor     r11d, [rsp+340h+var_304]
+  0000000140148A78  mov     ecx, edx
+  0000000140148A7A  rol     r11d, 1
+  0000000140148A7D  xor     ecx, r9d
+  0000000140148A80  xor     ecx, r8d
+  0000000140148A83  mov     [rsp+340h+var_31C], r11d
+  0000000140148A88  add     r11d, 6ED9EBA1h
+  0000000140148A8F  rol     edx, 1Eh
+  0000000140148A92  add     eax, r11d
+  0000000140148A95  mov     r11d, [rsp+340h+var_30C]
+  0000000140148A9A  add     ecx, eax
+  0000000140148A9C  xor     r11d, r15d
+  0000000140148A9F  add     ebx, ecx
+  0000000140148AA1  xor     r11d, edi
+  0000000140148AA4  xor     r11d, r12d
+  0000000140148AA7  mov     ecx, r10d
+  0000000140148AAA  mov     r12d, [rsp+340h+var_2DC]
+  0000000140148AAF  xor     ecx, edx
+  0000000140148AB1  rol     r11d, 1
+  0000000140148AB4  xor     ecx, r9d
+  0000000140148AB7  mov     [rsp+340h+var_2E0], r11d
+  0000000140148ABC  mov     eax, ebx
+  0000000140148ABE  jmp     loc_140148CB2
+  0000000140148AC3  db 48h, 3, 0E2h, 0Fh, 8Ch
+  0000000140148AC8  dq 41E38B49FFFF5A32h, 0FFFFC839E95C415Fh, 527E5DE6EE547A51h
+  0000000140148CB0  db 2 dup(0FFh)
+  0000000140148CB2  rol     eax, 5
+  0000000140148CB5  add     eax, r11d
+  0000000140148CB8  rol     r10d, 1Eh
+  0000000140148CBC  lea     r11d, [r8+6ED9EBA1h]
+  0000000140148CC3  add     ecx, eax
+  0000000140148CC5  mov     r8d, [rsp+340h+var_320]
+  0000000140148CCA  add     r11d, ecx
+  0000000140148CCD  xor     r8d, r12d
+  0000000140148CD0  mov     eax, r11d
+  0000000140148CD3  xor     r8d, esi
+  0000000140148CD6  rol     eax, 5
+  0000000140148CD9  xor     r8d, r14d
+  0000000140148CDC  mov     ecx, ebx
+  0000000140148CDE  rol     r8d, 1
+  0000000140148CE1  xor     ecx, r10d
+  0000000140148CE4  mov     [rsp+340h+var_2E4], r8d
+  0000000140148CE9  xor     ecx, edx
+  0000000140148CEB  add     eax, r8d
+  0000000140148CEE  rol     ebx, 1Eh
+  0000000140148CF1  add     ecx, eax
+  0000000140148CF3  lea     r8d, [r9+6ED9EBA1h]
+  0000000140148CFA  mov     r9d, [rsp+340h+var_31C]
+  0000000140148CFF  add     r8d, ecx
+  0000000140148D02  xor     r9d, [rsp+340h+var_318]
+  0000000140148D07  mov     ecx, r11d
+  0000000140148D0A  xor     r9d, [rsp+340h+var_2F4]
+  0000000140148D0F  xor     ecx, ebx
+  0000000140148D11  xor     ecx, r10d
+  0000000140148D14  rol     r11d, 1Eh
+  0000000140148D18  xor     r9d, edi
+  0000000140148D1B  mov     eax, r8d
+  0000000140148D1E  mov     edi, [rsp+340h+var_2F0]
+  0000000140148D22  rol     eax, 5
+  0000000140148D25  add     eax, edx
+  0000000140148D27  rol     r9d, 1
+  0000000140148D2A  add     ecx, eax
+  0000000140148D2C  mov     [rsp+340h+var_310], r9d
+  0000000140148D31  mov     eax, [rsp+340h+var_2E0]
+  0000000140148D35  add     r9d, 6ED9EBA1h
+  0000000140148D3C  xor     eax, [rsp+340h+var_308]
+  0000000140148D40  add     r9d, ecx
+  0000000140148D43  xor     eax, edi
+  0000000140148D45  mov     ecx, r11d
+  0000000140148D48  xor     eax, esi
+  0000000140148D4A  or      ecx, ebx
+  0000000140148D4C  mov     esi, [rsp+340h+var_2F8]
+  0000000140148D50  and     ecx, r8d
+  0000000140148D53  rol     eax, 1
+  0000000140148D55  mov     edx, r9d
+  0000000140148D58  mov     [rsp+340h+var_304], eax
+  0000000140148D5C  jmp     loc_140148EC5
+  0000000140148D61  db 48h, 3, 0E2h, 0Fh, 82h, 0EBh, 0F9h
+  0000000140148D68  dq 0DD0341D48B49FFFFh, 0C141FFFE1526890Fh, 7489B4CA80411EC3h
+  0000000140148EC0  db 82h, 73h, 46h, 0FEh, 0FFh
+  0000000140148EC5  mov     eax, r11d
+  0000000140148EC8  and     eax, ebx
+  0000000140148ECA  rol     edx, 5
+  0000000140148ECD  add     edx, [rsp+340h+var_304]
+  0000000140148ED1  or      ecx, eax
+  0000000140148ED3  mov     eax, [rsp+340h+var_2E4]
+  0000000140148ED7  add     ecx, r10d
+  0000000140148EDA  xor     eax, [rsp+340h+var_314]
+  0000000140148EDE  xor     eax, esi
+  0000000140148EE0  rol     r8d, 1Eh
+  0000000140148EE4  xor     eax, [rsp+340h+var_2F4]
+  0000000140148EE8  lea     r10d, [rdx-70E44324h]
+  0000000140148EEF  add     r10d, ecx
+  0000000140148EF2  rol     eax, 1
+  0000000140148EF4  mov     [rsp+340h+var_2F0], eax
+  0000000140148EF8  mov     edx, r10d
+  0000000140148EFB  mov     r14d, [rsp+340h+var_2F0]
+  0000000140148F00  mov     ecx, r8d
+  0000000140148F03  or      ecx, r11d
+  0000000140148F06  rol     edx, 5
+  0000000140148F09  and     ecx, r9d
+  0000000140148F0C  mov     eax, r8d
+  0000000140148F0F  and     eax, r11d
+  0000000140148F12  rol     r9d, 1Eh
+  0000000140148F16  or      ecx, eax
+  0000000140148F18  mov     eax, [rsp+340h+var_30C]
+  0000000140148F1C  add     ecx, ebx
+  0000000140148F1E  xor     eax, r13d
+  0000000140148F21  add     ecx, 8F1BBCDCh
+  0000000140148F27  lea     ebx, [r14+rdx]
+  0000000140148F2B  add     ebx, ecx
+  0000000140148F2D  xor     eax, edi
+  0000000140148F2F  xor     eax, [rsp+340h+var_310]
+  0000000140148F33  mov     edx, ebx
+  0000000140148F35  rol     eax, 1
+  0000000140148F37  mov     ecx, r9d
+  0000000140148F3A  or      ecx, r8d
+  0000000140148F3D  mov     [rsp+340h+var_2F8], eax
+  0000000140148F41  and     ecx, r10d
+  0000000140148F44  rol     edx, 5
+  0000000140148F47  add     edx, [rsp+340h+var_2F8]
+  0000000140148F4B  mov     eax, r9d
+  0000000140148F4E  and     eax, r8d
+  0000000140148F51  or      ecx, eax
+  0000000140148F53  add     ecx, r11d
+  0000000140148F56  lea     r11d, [rdx-70E44324h]
+  0000000140148F5D  add     r11d, ecx
+  0000000140148F60  rol     r10d, 1Eh
+  0000000140148F64  mov     edi, [rsp+340h+var_320]
+  0000000140148F68  mov     edx, r11d
+  0000000140148F6B  jmp     loc_14014911D
+  0000000140148F70  dq 8F0FD7D241D48B49h, 0F5010FE8FFFEC869h, 8C0FFFFE2ADCE8FFh
+  0000000140149118  db 87h, 0A5h, 0Ch, 2 dup(0FFh)
+  000000014014911D  xor     edi, r15d
+  0000000140149120  rol     edx, 5
+  0000000140149123  xor     edi, esi
+  0000000140149125  mov     ecx, r10d
+  0000000140149128  xor     edi, [rsp+340h+var_304]
+  000000014014912C  or      ecx, r9d
+  000000014014912F  mov     esi, [rsp+340h+var_2E0]
+  0000000140149133  and     ecx, ebx
+  0000000140149135  xor     esi, [rsp+340h+var_318]
+  0000000140149139  mov     eax, r10d
+  000000014014913C  and     eax, r9d
+  000000014014913F  rol     edi, 1
+  0000000140149141  or      ecx, eax
+  0000000140149143  rol     ebx, 1Eh
+  0000000140149146  add     ecx, r8d
+  0000000140149149  mov     [rsp+340h+var_2E8], edi
+  000000014014914D  add     ecx, 8F1BBCDCh
+  0000000140149153  xor     esi, r15d
+  0000000140149156  xor     esi, [rsp+340h+var_2F8]
+  000000014014915A  lea     r8d, [rdi+rdx]
+  000000014014915E  mov     edi, [rsp+340h+var_31C]
+  0000000140149162  add     r8d, ecx
+  0000000140149165  mov     r15d, [rsp+340h+var_314]
+  000000014014916A  xor     edi, r12d
+  000000014014916D  xor     r15d, [rsp+340h+var_318]
+  0000000140149172  xor     edi, r13d
+  0000000140149175  mov     r13d, [rsp+340h+var_2E4]
+  000000014014917A  mov     edx, r8d
+  000000014014917D  xor     r13d, [rsp+340h+var_308]
+  0000000140149182  mov     ecx, ebx
+  0000000140149184  or      ecx, r10d
+  0000000140149187  rol     edx, 5
+  000000014014918A  and     ecx, r11d
+  000000014014918D  rol     esi, 1
+  000000014014918F  rol     r11d, 1Eh
+  0000000140149193  xor     r13d, r12d
+  0000000140149196  xor     r13d, [rsp+340h+var_2E8]
+  000000014014919B  mov     eax, ebx
+  000000014014919D  and     eax, r10d
+  00000001401491A0  rol     r13d, 1
+  00000001401491A3  or      ecx, eax
+  00000001401491A5  mov     [rsp+340h+var_2DC], esi
+  00000001401491A9  add     ecx, r9d
+  00000001401491AC  mov     [rsp+340h+var_300], r13d
+  00000001401491B1  add     ecx, 8F1BBCDCh
+  00000001401491B7  xor     edi, r14d
+  00000001401491BA  rol     edi, 1
+  00000001401491BC  mov     eax, r11d
+  00000001401491BF  and     eax, ebx
+  00000001401491C1  mov     [rsp+340h+var_2EC], edi
+  00000001401491C5  jmp     short loc_140149246
+  00000001401491C7  db 49h
+  00000001401491C8  dq 0FFFF4AA3810FE103h, 0FFFFE152860F5641h, 3D73E8FFF4FEABE8h
+  0000000140149240  js      loc_14013D949
+  0000000140149246  xor     r15d, edi
+  0000000140149249  xor     r15d, [rsp+340h+var_310]
+  000000014014924E  lea     r9d, [rdi+rdx]
+  0000000140149252  add     r9d, ecx
+  0000000140149255  mov     ecx, r11d
+  0000000140149258  or      ecx, ebx
+  000000014014925A  mov     edx, r9d
+  000000014014925D  and     ecx, r8d
+  0000000140149260  rol     edx, 5
+  0000000140149263  or      ecx, eax
+  0000000140149265  rol     r8d, 1Eh
+  0000000140149269  add     ecx, r10d
+  000000014014926C  mov     eax, r8d
+  000000014014926F  add     ecx, 8F1BBCDCh
+  0000000140149275  and     eax, r11d
+  0000000140149278  lea     r10d, [rsi+rdx]
+  000000014014927C  add     r10d, ecx
+  000000014014927F  mov     ecx, r8d
+  0000000140149282  or      ecx, r11d
+  0000000140149285  mov     edx, r10d
+  0000000140149288  and     ecx, r9d
+  000000014014928B  rol     edx, 5
+  000000014014928E  or      ecx, eax
+  0000000140149290  rol     r9d, 1Eh
+  0000000140149294  add     ecx, ebx
+  0000000140149296  add     ecx, 8F1BBCDCh
+  000000014014929C  lea     ebx, [rdx+r13]
+  00000001401492A0  add     ebx, ecx
+  00000001401492A2  rol     r15d, 1
+  00000001401492A5  mov     r12d, [rsp+340h+var_30C]
+  00000001401492AA  mov     edx, ebx
+  00000001401492AC  xor     r12d, [rsp+340h+var_308]
+  00000001401492B1  mov     ecx, r9d
+  00000001401492B4  or      ecx, r8d
+  00000001401492B7  rol     edx, 5
+  00000001401492BA  and     ecx, r10d
+  00000001401492BD  mov     [rsp+340h+var_318], r15d
+  00000001401492C2  rol     r10d, 1Eh
+  00000001401492C6  xor     r12d, esi
+  00000001401492C9  xor     r12d, [rsp+340h+var_304]
+  00000001401492CE  mov     eax, r9d
+  00000001401492D1  and     eax, r8d
+  00000001401492D4  rol     r12d, 1
+  00000001401492D7  or      ecx, eax
+  00000001401492D9  mov     [rsp+340h+var_2FC], r12d
+  00000001401492DE  add     ecx, r11d
+  00000001401492E1  mov     eax, r10d
+  00000001401492E4  add     ecx, 8F1BBCDCh
+  00000001401492EA  lea     r11d, [r15+rdx]
+  00000001401492EE  mov     r15d, [rsp+340h+var_320]
+  00000001401492F3  jmp     loc_1401493DE
+  00000001401492F8  dq 0BB880FFFFF6C99E8h, 7024548D48FFFFACh, 0F9B8458D48D02B48h
+  00000001401493D8  db 0Fh, 81h, 0E0h, 3Dh, 2 dup(0FFh)
+  00000001401493DE  add     r11d, ecx
+  00000001401493E1  xor     r15d, [rsp+340h+var_314]
+  00000001401493E6  and     eax, r9d
+  00000001401493E9  xor     r15d, r13d
+  00000001401493EC  mov     edx, r11d
+  00000001401493EF  mov     r13d, [rsp+340h+var_31C]
+  00000001401493F4  xor     r15d, r14d
+  00000001401493F7  xor     r13d, [rsp+340h+var_30C]
+  00000001401493FC  mov     ecx, r10d
+  00000001401493FF  xor     r13d, [rsp+340h+var_318]
+  0000000140149404  or      ecx, r9d
+  0000000140149407  xor     r13d, [rsp+340h+var_2F8]
+  000000014014940C  and     ecx, ebx
+  000000014014940E  mov     r14d, [rsp+340h+var_2E0]
+  0000000140149413  or      ecx, eax
+  0000000140149415  xor     r14d, [rsp+340h+var_320]
+  000000014014941A  add     ecx, r8d
+  000000014014941D  add     ecx, 8F1BBCDCh
+  0000000140149423  rol     edx, 5
+  0000000140149426  rol     ebx, 1Eh
+  0000000140149429  xor     r14d, r12d
+  000000014014942C  xor     r14d, [rsp+340h+var_2E8]
+  0000000140149431  mov     eax, ebx
+  0000000140149433  and     eax, r10d
+  0000000140149436  rol     r15d, 1
+  0000000140149439  lea     r8d, [r12+rdx]
+  000000014014943D  rol     r13d, 1
+  0000000140149440  add     r8d, ecx
+  0000000140149443  rol     r14d, 1
+  0000000140149446  mov     edx, r8d
+  0000000140149449  mov     [rsp+340h+var_314], r15d
+  000000014014944E  rol     edx, 5
+  0000000140149451  mov     ecx, ebx
+  0000000140149453  or      ecx, r10d
+  0000000140149456  mov     [rsp+340h+var_30C], r13d
+  000000014014945B  and     ecx, r11d
+  000000014014945E  mov     [rsp+340h+var_320], r14d
+  0000000140149463  or      ecx, eax
+  0000000140149465  rol     r11d, 1Eh
+  0000000140149469  add     ecx, r9d
+  000000014014946C  mov     eax, r11d
+  000000014014946F  add     ecx, 8F1BBCDCh
+  0000000140149475  lea     r9d, [r15+rdx]
+  0000000140149479  add     r9d, ecx
+  000000014014947C  and     eax, ebx
+  000000014014947E  mov     edx, r9d
+  0000000140149481  mov     ecx, r11d
+  0000000140149484  or      ecx, ebx
+  0000000140149486  rol     edx, 5
+  0000000140149489  and     ecx, r8d
+  000000014014948C  jmp     loc_1401495C5
+  0000000140149491  db 0E8h, 1Ah, 0FDh, 0F4h, 0FFh, 0E8h, 54h
+  0000000140149498  dq 0FEC3038F0FFFFF99h, 3AD58F0FE60348FFh, 0FFFF6DF61E8FFFFh
+  00000001401495C0  db 8Ah, 19h, 0AFh, 2 dup(0)
+  00000001401495C5  rol     r8d, 1Eh
+  00000001401495C9  or      ecx, eax
+  00000001401495CB  add     ecx, r10d
+  00000001401495CE  add     ecx, 8F1BBCDCh
+  00000001401495D4  lea     r10d, [rdx+r13]
+  00000001401495D8  add     r10d, ecx
+  00000001401495DB  mov     ecx, r8d
+  00000001401495DE  mov     edi, r10d
+  00000001401495E1  rol     edi, 5
+  00000001401495E4  or      ecx, r11d
+  00000001401495E7  mov     r12d, [rsp+340h+var_2E4]
+  00000001401495EC  and     ecx, r9d
+  00000001401495EF  xor     r12d, [rsp+340h+var_31C]
+  00000001401495F4  add     edi, r14d
+  00000001401495F7  rol     r9d, 1Eh
+  00000001401495FB  xor     r12d, r15d
+  00000001401495FE  xor     r12d, [rsp+340h+var_2EC]
+  0000000140149603  mov     eax, r8d
+  0000000140149606  mov     r15d, [rsp+340h+var_2E0]
+  000000014014960B  and     eax, r11d
+  000000014014960E  or      ecx, eax
+  0000000140149610  rol     r12d, 1
+  0000000140149613  add     ecx, 8F1BBCDCh
+  0000000140149619  mov     [rsp+340h+var_2F4], r12d
+  000000014014961E  add     ecx, ebx
+  0000000140149620  mov     eax, r9d
+  0000000140149623  add     edi, ecx
+  0000000140149625  and     eax, r8d
+  0000000140149628  mov     ecx, r9d
+  000000014014962B  xor     r15d, r13d
+  000000014014962E  or      ecx, r8d
+  0000000140149631  xor     r15d, esi
+  0000000140149634  xor     r15d, [rsp+340h+var_310]
+  0000000140149639  and     ecx, r10d
+  000000014014963C  or      ecx, eax
+  000000014014963E  rol     r10d, 1Eh
+  0000000140149642  add     ecx, r11d
+  0000000140149645  rol     r15d, 1
+  0000000140149648  add     ecx, 8F1BBCDCh
+  000000014014964E  mov     [rsp+340h+var_2E0], r15d
+  0000000140149653  mov     edx, edi
+  0000000140149655  mov     eax, r10d
+  0000000140149658  and     eax, r9d
+  000000014014965B  rol     edx, 5
+  000000014014965E  lea     r11d, [r12+rdx]
+  0000000140149662  add     r11d, ecx
+  0000000140149665  mov     ecx, r10d
+  0000000140149668  or      ecx, r9d
+  000000014014966B  mov     esi, r11d
+  000000014014966E  and     ecx, edi
+  0000000140149670  jmp     loc_14014989B
+  0000000140149675  db 49h, 3, 0E5h
+  0000000140149678  dq 37740000AE60890Fh, 8944C3D141D00344h, 8B41FE334138245Ch
+  0000000140149898  db 0A4h, 2 dup(0FFh)
+  000000014014989B  rol     esi, 5
+  000000014014989E  or      ecx, eax
+  00000001401498A0  rol     edi, 1Eh
+  00000001401498A3  mov     eax, [rsp+340h+var_2E4]
+  00000001401498A7  add     ecx, 8F1BBCDCh
+  00000001401498AD  xor     eax, r14d
+  00000001401498B0  add     ecx, r8d
+  00000001401498B3  xor     eax, [rsp+340h+var_300]
+  00000001401498B7  add     r9d, 8F1BBCDCh
+  00000001401498BE  xor     eax, [rsp+340h+var_304]
+  00000001401498C2  add     esi, r15d
+  00000001401498C5  add     esi, ecx
+  00000001401498C7  rol     eax, 1
+  00000001401498C9  mov     [rsp+340h+var_2E4], eax
+  00000001401498CD  mov     ecx, edi
+  00000001401498CF  or      ecx, r10d
+  00000001401498D2  mov     eax, edi
+  00000001401498D4  and     ecx, r11d
+  00000001401498D7  and     eax, r10d
+  00000001401498DA  or      ecx, eax
+  00000001401498DC  rol     r11d, 1Eh
+  00000001401498E0  add     ecx, r9d
+  00000001401498E3  mov     r14d, esi
+  00000001401498E6  rol     r14d, 5
+  00000001401498EA  mov     r9d, r12d
+  00000001401498ED  xor     r9d, [rsp+340h+var_318]
+  00000001401498F2  mov     eax, r11d
+  00000001401498F5  xor     r9d, [rsp+340h+var_2F0]
+  00000001401498FA  and     eax, edi
+  00000001401498FC  add     r14d, [rsp+340h+var_2E4]
+  0000000140149901  xor     r9d, [rsp+340h+var_310]
+  0000000140149906  add     r14d, ecx
+  0000000140149909  rol     r9d, 1
+  000000014014990C  mov     ecx, r11d
+  000000014014990F  or      ecx, edi
+  0000000140149911  mov     [rsp+340h+var_31C], r9d
+  0000000140149916  and     ecx, esi
+  0000000140149918  mov     ebx, r14d
+  000000014014991B  or      ecx, eax
+  000000014014991D  rol     ebx, 5
+  0000000140149920  add     r10d, 8F1BBCDCh
+  0000000140149927  xor     r15d, [rsp+340h+var_2FC]
+  000000014014992C  add     ecx, r10d
+  000000014014992F  xor     r15d, [rsp+340h+var_2F8]
+  0000000140149934  add     ebx, r9d
+  0000000140149937  xor     r15d, [rsp+340h+var_304]
+  000000014014993C  add     ebx, ecx
+  000000014014993E  add     edi, 8F1BBCDCh
+  0000000140149944  rol     esi, 1Eh
+  0000000140149947  rol     r15d, 1
+  000000014014994A  jmp     loc_140149B7E
+  000000014014994F  db 4Ch
+  0000000140149950  dq 4430C68349B8758Bh, 6638443E8B4DDF0Bh, 0E800009187870F38h
+  0000000140149B78  db 0Fh, 8Fh, 0E7h, 3Dh, 0FEh, 0FFh
+  0000000140149B7E  mov     r8d, ebx
+  0000000140149B81  rol     r8d, 5
+  0000000140149B85  mov     ecx, esi
+  0000000140149B87  or      ecx, r11d
+  0000000140149B8A  mov     [rsp+340h+var_304], r15d
+  0000000140149B8F  and     ecx, r14d
+  0000000140149B92  add     r8d, r15d
+  0000000140149B95  rol     r14d, 1Eh
+  0000000140149B99  mov     eax, esi
+  0000000140149B9B  and     eax, r11d
+  0000000140149B9E  add     r11d, 8F1BBCDCh
+  0000000140149BA5  or      ecx, eax
+  0000000140149BA7  mov     eax, r14d
+  0000000140149BAA  add     ecx, edi
+  0000000140149BAC  and     eax, esi
+  0000000140149BAE  mov     edi, [rsp+340h+var_2E4]
+  0000000140149BB2  add     r8d, ecx
+  0000000140149BB5  xor     edi, [rsp+340h+var_314]
+  0000000140149BB9  mov     r10d, r8d
+  0000000140149BBC  xor     edi, [rsp+340h+var_2E8]
+  0000000140149BC0  mov     ecx, r14d
+  0000000140149BC3  xor     edi, [rsp+340h+var_2F0]
+  0000000140149BC7  or      ecx, esi
+  0000000140149BC9  and     ecx, ebx
+  0000000140149BCB  rol     edi, 1
+  0000000140149BCD  or      ecx, eax
+  0000000140149BCF  rol     ebx, 1Eh
+  0000000140149BD2  add     ecx, r11d
+  0000000140149BD5  rol     r10d, 5
+  0000000140149BD9  mov     r11d, r9d
+  0000000140149BDC  mov     [rsp+340h+var_310], edi
+  0000000140149BE0  xor     r11d, r13d
+  0000000140149BE3  add     r10d, edi
+  0000000140149BE6  xor     r11d, [rsp+340h+var_2EC]
+  0000000140149BEB  add     r10d, ecx
+  0000000140149BEE  xor     r11d, [rsp+340h+var_2F8]
+  0000000140149BF3  mov     r13d, r15d
+  0000000140149BF6  xor     r13d, [rsp+340h+var_320]
+  0000000140149BFB  mov     r9d, r10d
+  0000000140149BFE  xor     r13d, [rsp+340h+var_2DC]
+  0000000140149C03  mov     ecx, ebx
+  0000000140149C05  xor     r13d, [rsp+340h+var_2E8]
+  0000000140149C0A  or      ecx, r14d
+  0000000140149C0D  and     ecx, r8d
+  0000000140149C10  rol     r11d, 1
+  0000000140149C13  rol     r9d, 5
+  0000000140149C17  mov     eax, ebx
+  0000000140149C19  and     eax, r14d
+  0000000140149C1C  rol     r8d, 1Eh
+  0000000140149C20  or      ecx, eax
+  0000000140149C22  jmp     loc_140149E9F
+  0000000140149C27  db 0C1h
+  0000000140149C28  retn
+  0000000140149C29  db 1Eh, 0Bh, 0C8h, 41h, 33h, 0FFh, 2Bh
+  0000000140149C30  dq 0DCC18154247C33C8h, 0F6C7D1C28C8F1BBCh, 0CF03CED141C38BD3h
+  0000000140149E98  db 0FFh, 0Fh, 82h, 0E4h, 3Dh, 2 dup(0FFh)
+  0000000140149E9F  rol     r13d, 1
+  0000000140149EA2  add     ecx, 8F1BBCDCh
+  0000000140149EA8  mov     [rsp+340h+var_308], r11d
+  0000000140149EAD  add     ecx, esi
+  0000000140149EAF  mov     [rsp+340h+var_2F0], r13d
+  0000000140149EB4  add     r9d, r11d
+  0000000140149EB7  mov     eax, r8d
+  0000000140149EBA  add     r9d, ecx
+  0000000140149EBD  and     eax, ebx
+  0000000140149EBF  mov     ecx, r8d
+  0000000140149EC2  mov     edx, r9d
+  0000000140149EC5  or      ecx, ebx
+  0000000140149EC7  rol     edx, 5
+  0000000140149ECA  and     ecx, r10d
+  0000000140149ECD  add     edx, r13d
+  0000000140149ED0  or      ecx, eax
+  0000000140149ED2  rol     r10d, 1Eh
+  0000000140149ED6  add     ecx, 8F1BBCDCh
+  0000000140149EDC  mov     r15d, edi
+  0000000140149EDF  add     ecx, r14d
+  0000000140149EE2  add     edx, ecx
+  0000000140149EE4  xor     r15d, r12d
+  0000000140149EE7  xor     r15d, [rsp+340h+var_300]
+  0000000140149EEC  mov     ecx, edx
+  0000000140149EEE  xor     r15d, [rsp+340h+var_2EC]
+  0000000140149EF3  mov     r12d, r11d
+  0000000140149EF6  xor     r12d, [rsp+340h+var_2E0]
+  0000000140149EFB  mov     eax, r10d
+  0000000140149EFE  xor     r12d, [rsp+340h+var_318]
+  0000000140149F03  xor     eax, r8d
+  0000000140149F06  mov     r14d, [rsp+340h+var_2FC]
+  0000000140149F0B  xor     eax, r9d
+  0000000140149F0E  xor     r12d, [rsp+340h+var_2DC]
+  0000000140149F13  add     eax, ebx
+  0000000140149F15  add     eax, 0CA62C1D6h
+  0000000140149F1A  rol     ecx, 5
+  0000000140149F1D  rol     r9d, 1Eh
+  0000000140149F21  mov     edi, r13d
+  0000000140149F24  xor     edi, [rsp+340h+var_2E4]
+  0000000140149F28  xor     edi, r14d
+  0000000140149F2B  rol     r15d, 1
+  0000000140149F2E  xor     edi, [rsp+340h+var_300]
+  0000000140149F32  mov     r11d, r15d
+  0000000140149F35  xor     r11d, [rsp+340h+var_31C]
+  0000000140149F3A  xor     r11d, [rsp+340h+var_314]
+  0000000140149F3F  xor     r11d, [rsp+340h+var_318]
+  0000000140149F44  lea     ebx, [r15+rcx]
+  0000000140149F48  add     ebx, eax
+  0000000140149F4A  rol     r12d, 1
+  0000000140149F4D  mov     ecx, ebx
+  0000000140149F4F  jmp     short loc_140149FBD
+  0000000140149F51  db 49h, 3, 0E6h, 0Fh, 80h, 47h, 97h
+  0000000140149F58  dq 0FFFF4C671E8FFFEh, 5D5E41FFFEBEFA8Ah, 41FFFEE222E95D41h
+  0000000140149FBD  rol     edi, 1
+  0000000140149FBF  rol     ecx, 5
+  0000000140149FC2  mov     eax, r9d
+  0000000140149FC5  xor     eax, r10d
+  0000000140149FC8  rol     r11d, 1
+  0000000140149FCB  xor     eax, edx
+  0000000140149FCD  mov     [rsp+340h+var_2F8], r15d
+  0000000140149FD2  add     eax, r8d
+  0000000140149FD5  rol     edx, 1Eh
+  0000000140149FD8  add     eax, 0CA62C1D6h
+  0000000140149FDD  mov     [rsp+340h+var_2E8], r12d
+  0000000140149FE2  lea     r8d, [r12+rcx]
+  0000000140149FE6  mov     [rsp+340h+var_2FC], edi
+  0000000140149FEA  add     r8d, eax
+  0000000140149FED  mov     [rsp+340h+var_300], r11d
+  0000000140149FF2  mov     ecx, r8d
+  0000000140149FF5  mov     eax, edx
+  0000000140149FF7  xor     eax, r9d
+  0000000140149FFA  rol     ecx, 5
+  0000000140149FFD  xor     eax, ebx
+  0000000140149FFF  mov     esi, r12d
+  000000014014A002  xor     esi, [rsp+340h+var_304]
+  000000014014A006  add     eax, r10d
+  000000014014A009  xor     esi, [rsp+340h+var_30C]
+  000000014014A00D  add     eax, 0CA62C1D6h
+  000000014014A012  lea     r10d, [rdi+rcx]
+  000000014014A016  rol     ebx, 1Eh
+  000000014014A019  add     r10d, eax
+  000000014014A01C  xor     esi, r14d
+  000000014014A01F  mov     ecx, r10d
+  000000014014A022  rol     esi, 1
+  000000014014A024  rol     ecx, 5
+  000000014014A027  mov     eax, ebx
+  000000014014A029  xor     eax, edx
+  000000014014A02B  mov     [rsp+340h+var_2EC], esi
+  000000014014A02F  xor     eax, r8d
+  000000014014A032  mov     [rsp+340h+var_2D0], esi
+  000000014014A036  add     eax, r9d
+  000000014014A039  rol     r8d, 1Eh
+  000000014014A03D  add     eax, 0CA62C1D6h
+  000000014014A042  lea     r9d, [r11+rcx]
+  000000014014A046  add     r9d, eax
+  000000014014A049  mov     r14d, edi
+  000000014014A04C  mov     ecx, r9d
+  000000014014A04F  mov     eax, r8d
+  000000014014A052  xor     eax, ebx
+  000000014014A054  rol     ecx, 5
+  000000014014A057  xor     eax, r10d
+  000000014014A05A  add     eax, edx
+  000000014014A05C  add     eax, 0CA62C1D6h
+  000000014014A061  jmp     loc_14014A1D7
+  000000014014A066  dw 0EDE8h
+  000000014014A068  dq 0FFFEC5A9E8FFF4F1h, 0C0C1FFFFF28D8D0Fh, 2341904503D7D305h
+  000000014014A1D0  db 56h, 0Fh, 83h, 7Dh, 0BFh, 2 dup(0FFh)
+  000000014014A1D7  lea     edx, [rsi+rcx]
+  000000014014A1DA  add     edx, eax
+  000000014014A1DC  rol     r10d, 1Eh
+  000000014014A1E0  xor     r11d, [rsp+340h+var_308]
+  000000014014A1E5  mov     ecx, edx
+  000000014014A1E7  xor     r11d, [rsp+340h+var_2F4]
+  000000014014A1EC  mov     eax, r10d
+  000000014014A1EF  xor     r11d, [rsp+340h+var_30C]
+  000000014014A1F4  xor     eax, r8d
+  000000014014A1F7  xor     r14d, [rsp+340h+var_310]
+  000000014014A1FC  xor     eax, r9d
+  000000014014A1FF  xor     r15d, [rsp+340h+var_2E4]
+  000000014014A204  add     eax, ebx
+  000000014014A206  xor     r14d, [rsp+340h+var_320]
+  000000014014A20B  add     eax, 0CA62C1D6h
+  000000014014A210  xor     r14d, [rsp+340h+var_314]
+  000000014014A215  mov     edi, esi
+  000000014014A217  xor     r15d, [rsp+340h+var_2F4]
+  000000014014A21C  xor     edi, r13d
+  000000014014A21F  xor     r12d, [rsp+340h+var_31C]
+  000000014014A224  xor     edi, [rsp+340h+var_2E0]
+  000000014014A228  xor     r12d, [rsp+340h+var_2E0]
+  000000014014A22D  xor     edi, [rsp+340h+var_320]
+  000000014014A231  rol     ecx, 5
+  000000014014A234  rol     r11d, 1
+  000000014014A237  rol     r9d, 1Eh
+  000000014014A23B  xor     r12d, r11d
+  000000014014A23E  rol     r14d, 1
+  000000014014A241  rol     edi, 1
+  000000014014A243  xor     r15d, r14d
+  000000014014A246  mov     [rsp+340h+var_30C], r11d
+  000000014014A24B  mov     r13d, edi
+  000000014014A24E  mov     [rsp+340h+var_2C8], r11d
+  000000014014A253  lea     ebx, [r14+rcx]
+  000000014014A257  rol     r15d, 1
+  000000014014A25A  add     ebx, eax
+  000000014014A25C  rol     r12d, 1
+  000000014014A25F  mov     ecx, ebx
+  000000014014A261  mov     [rsp+340h+var_314], r14d
+  000000014014A266  rol     ecx, 5
+  000000014014A269  mov     eax, r9d
+  000000014014A26C  xor     eax, r10d
+  000000014014A26F  mov     [rsp+340h+var_2CC], r14d
+  000000014014A274  xor     eax, edx
+  000000014014A276  mov     [rsp+340h+var_318], edi
+  000000014014A27A  add     eax, r8d
+  000000014014A27D  rol     edx, 1Eh
+  000000014014A280  add     eax, 0CA62C1D6h
+  000000014014A285  mov     [rsp+340h+var_2C4], edi
+  000000014014A289  lea     r8d, [r11+rcx]
+  000000014014A28D  jmp     loc_14014A4F9
+  000000014014A292  dw 82C5h, 0A760h, 0E94Bh
+  000000014014A298  dq 8DF266585D777072h, 7FDDC770054F765Ah, 73847EB351757CF1h
+  000000014014A4F8  db 0FFh
+  000000014014A4F9  mov     [rbp+240h+var_2C0], r15d
+  000000014014A4FD  add     r8d, eax
+  000000014014A500  mov     [rbp+240h+var_2BC], r12d
+  000000014014A504  mov     ecx, r8d
+  000000014014A507  mov     eax, edx
+  000000014014A509  xor     eax, r9d
+  000000014014A50C  rol     ecx, 5
+  000000014014A50F  xor     eax, ebx
+  000000014014A511  add     r10d, ecx
+  000000014014A514  add     eax, 0CA62C1D6h
+  000000014014A519  rol     ebx, 1Eh
+  000000014014A51C  add     eax, edi
+  000000014014A51E  add     r10d, eax
+  000000014014A521  mov     eax, ebx
+  000000014014A523  xor     eax, edx
+  000000014014A525  mov     ecx, r10d
+  000000014014A528  xor     eax, r8d
+  000000014014A52B  rol     ecx, 5
+  000000014014A52E  add     eax, r9d
+  000000014014A531  rol     r8d, 1Eh
+  000000014014A535  add     eax, 0CA62C1D6h
+  000000014014A53A  lea     r9d, [r15+rcx]
+  000000014014A53E  add     r9d, eax
+  000000014014A541  mov     eax, r8d
+  000000014014A544  xor     eax, ebx
+  000000014014A546  mov     r11d, r9d
+  000000014014A549  xor     eax, r10d
+  000000014014A54C  rol     r11d, 5
+  000000014014A550  add     eax, 0CA62C1D6h
+  000000014014A555  rol     r10d, 1Eh
+  000000014014A559  add     eax, edx
+  000000014014A55B  add     r11d, r12d
+  000000014014A55E  add     r11d, eax
+  000000014014A561  xor     r13d, [rsp+340h+var_2FC]
+  000000014014A566  xor     r13d, [rsp+340h+var_304]
+  000000014014A56B  add     ebx, 0CA62C1D6h
+  000000014014A571  xor     r13d, [rsp+340h+var_2E4]
+  000000014014A576  mov     eax, r10d
+  000000014014A579  xor     eax, r8d
+  000000014014A57C  rol     r13d, 1
+  000000014014A57F  xor     eax, r9d
+  000000014014A582  mov     [rbp+240h+var_2B8], r13d
+  000000014014A586  add     eax, ebx
+  000000014014A588  rol     r9d, 1Eh
+  000000014014A58C  mov     edi, r11d
+  000000014014A58F  mov     ebx, r15d
+  000000014014A592  xor     ebx, [rsp+340h+var_300]
+  000000014014A596  mov     edx, r12d
+  000000014014A599  xor     ebx, [rsp+340h+var_310]
+  000000014014A59D  xor     edx, esi
+  000000014014A59F  jmp     loc_14014A634
+  000000014014A5A4  dd 8C48148h
+  000000014014A5A8  dq 0FDEDA9810F000001h, 0FFFEDFBD8B0F55FFh, 5E57241796A9A8A1h
+  000000014014A630  db 5Ch, 52h, 54h, 75h
+  000000014014A634  xor     ebx, [rsp+340h+var_31C]
+  000000014014A638  mov     r14d, r13d
+  000000014014A63B  xor     edx, [rsp+340h+var_308]
+  000000014014A63F  xor     edx, [rsp+340h+var_304]
+  000000014014A643  xor     r14d, [rsp+340h+var_2F0]
+  000000014014A648  xor     r14d, [rsp+340h+var_310]
+  000000014014A64D  xor     r14d, [rsp+340h+var_314]
+  000000014014A652  rol     ebx, 1
+  000000014014A654  rol     edx, 1
+  000000014014A656  xor     [rsp+340h+var_318], edx
+  000000014014A65A  rol     edi, 5
+  000000014014A65D  add     edi, r13d
+  000000014014A660  mov     [rsp+340h+var_320], ebx
+  000000014014A664  add     edi, eax
+  000000014014A666  mov     [rbp+240h+var_2B4], ebx
+  000000014014A669  mov     ecx, edi
+  000000014014A66B  rol     r14d, 1
+  000000014014A66E  rol     ecx, 5
+  000000014014A671  mov     eax, r9d
+  000000014014A674  xor     eax, r10d
+  000000014014A677  mov     [rbp+240h+var_2B0], edx
+  000000014014A67A  xor     eax, r11d
+  000000014014A67D  mov     [rbp+240h+var_2AC], r14d
+  000000014014A681  add     eax, r8d
+  000000014014A684  rol     r11d, 1Eh
+  000000014014A688  add     eax, 0CA62C1D6h
+  000000014014A68D  lea     r8d, [rbx+rcx]
+  000000014014A691  xor     ebx, [rsp+340h+var_2F8]
+  000000014014A695  add     r8d, eax
+  000000014014A698  xor     ebx, [rsp+340h+var_308]
+  000000014014A69C  mov     ecx, r8d
+  000000014014A69F  xor     ebx, [rsp+340h+var_30C]
+  000000014014A6A3  mov     eax, r9d
+  000000014014A6A6  xor     eax, edi
+  000000014014A6A8  rol     ecx, 5
+  000000014014A6AB  xor     eax, r11d
+  000000014014A6AE  rol     edi, 1Eh
+  000000014014A6B1  add     eax, r10d
+  000000014014A6B4  rol     ebx, 1
+  000000014014A6B6  add     eax, 0CA62C1D6h
+  000000014014A6BB  mov     [rbp+240h+var_2A8], ebx
+  000000014014A6BE  lea     r10d, [rdx+rcx]
+  000000014014A6C2  add     r9d, 0CA62C1D6h
+  000000014014A6C9  mov     edx, [rsp+340h+var_318]
+  000000014014A6CD  add     r10d, eax
+  000000014014A6D0  mov     eax, r8d
+  000000014014A6D3  mov     esi, r10d
+  000000014014A6D6  xor     eax, edi
+  000000014014A6D8  rol     esi, 5
+  000000014014A6DB  xor     eax, r11d
+  000000014014A6DE  jmp     loc_14014A94B
+  000000014014A6E3  db 0E8h, 98h, 0BCh, 0F6h, 0FFh
+  000000014014A6E8  dq 4DE8FFFE355F8C0Fh, 0FE8EE6810FFFF6CFh, 44B270A6BC5CE8FFh
+  000000014014A948  db 0E6h, 2 dup(0FFh)
+  000000014014A94B  rol     r8d, 1Eh
+  000000014014A94F  add     eax, r9d
+  000000014014A952  add     esi, r14d
+  000000014014A955  add     esi, eax
+  000000014014A957  mov     eax, r10d
+  000000014014A95A  xor     eax, r8d
+  000000014014A95D  rol     r10d, 1Eh
+  000000014014A961  xor     eax, edi
+  000000014014A963  mov     ecx, esi
+  000000014014A965  add     eax, 0CA62C1D6h
+  000000014014A96A  rol     ecx, 5
+  000000014014A96D  add     eax, ebx
+  000000014014A96F  add     r11d, ecx
+  000000014014A972  add     r11d, eax
+  000000014014A975  xor     edx, [rsp+340h+var_2E8]
+  000000014014A979  xor     edx, [rsp+340h+var_2F0]
+  000000014014A97D  xor     ebx, r12d
+  000000014014A980  xor     ebx, [rsp+340h+var_300]
+  000000014014A984  xor     r14d, r15d
+  000000014014A987  xor     r14d, [rsp+340h+var_2FC]
+  000000014014A98C  mov     eax, esi
+  000000014014A98E  xor     r14d, [rsp+340h+var_2F8]
+  000000014014A993  xor     eax, r10d
+  000000014014A996  xor     ebx, [rsp+340h+var_2E8]
+  000000014014A99A  xor     eax, r8d
+  000000014014A99D  add     eax, 0CA62C1D6h
+  000000014014A9A2  rol     edx, 1
+  000000014014A9A4  add     eax, edx
+  000000014014A9A6  rol     r14d, 1
+  000000014014A9A9  rol     esi, 1Eh
+  000000014014A9AC  mov     r9d, r11d
+  000000014014A9AF  rol     ebx, 1
+  000000014014A9B1  mov     [rbp+240h+var_2A4], edx
+  000000014014A9B4  xor     edx, r13d
+  000000014014A9B7  xor     edx, [rsp+340h+var_2EC]
+  000000014014A9BB  xor     edx, [rsp+340h+var_2FC]
+  000000014014A9BF  rol     edx, 1
+  000000014014A9C1  rol     r9d, 5
+  000000014014A9C5  add     r9d, edi
+  000000014014A9C8  mov     [rbp+240h+var_2A0], r14d
+  000000014014A9CC  add     r9d, eax
+  000000014014A9CF  mov     [rbp+240h+var_29C], ebx
+  000000014014A9D2  mov     ecx, r9d
+  000000014014A9D5  mov     [rbp+240h+var_298], edx
+  000000014014A9D8  rol     ecx, 5
+  000000014014A9DB  mov     eax, r11d
+  000000014014A9DE  xor     eax, esi
+  000000014014A9E0  rol     r11d, 1Eh
+  000000014014A9E4  xor     eax, r10d
+  000000014014A9E7  add     r8d, ecx
+  000000014014A9EA  jmp     loc_14014AB90
+  000000014014A9EF  db 41h
+  000000014014A9F0  dq 48FFFE59A5870F57h, 0FFFFA92E870FE703h, 0C9890FFFFE5D03E8h
+  000000014014AB90  add     eax, 0CA62C1D6h
+  000000014014AB95  add     eax, r14d
+  000000014014AB98  xor     r14d, [rsp+340h+var_320]
+  000000014014AB9D  xor     r14d, [rsp+340h+var_300]
+  000000014014ABA2  add     r8d, eax
+  000000014014ABA5  xor     r14d, [rsp+340h+var_314]
+  000000014014ABAA  mov     ecx, r8d
+  000000014014ABAD  rol     ecx, 5
+  000000014014ABB0  mov     eax, r9d
+  000000014014ABB3  xor     eax, r11d
+  000000014014ABB6  rol     r9d, 1Eh
+  000000014014ABBA  xor     eax, esi
+  000000014014ABBC  rol     r14d, 1
+  000000014014ABBF  add     eax, ebx
+  000000014014ABC1  mov     [rbp+240h+var_294], r14d
+  000000014014ABC5  add     eax, 0CA62C1D6h
+  000000014014ABCA  lea     ebx, [r10+rcx]
+  000000014014ABCE  mov     r10d, [rbp+240h+var_1D8]
+  000000014014ABD2  add     ebx, eax
+  000000014014ABD4  mov     ecx, ebx
+  000000014014ABD6  mov     eax, r8d
+  000000014014ABD9  xor     eax, r9d
+  000000014014ABDC  rol     ecx, 5
+  000000014014ABDF  xor     eax, r11d
+  000000014014ABE2  rol     r8d, 1Eh
+  000000014014ABE6  add     eax, edx
+  000000014014ABE8  add     r11d, 0CA62C1D6h
+  000000014014ABEF  add     eax, 0CA62C1D6h
+  000000014014ABF4  lea     edx, [rsi+rcx]
+  000000014014ABF7  mov     esi, [rbp+240h+var_1DC]
+  000000014014ABFA  add     edx, eax
+  000000014014ABFC  mov     eax, ebx
+  000000014014ABFE  xor     eax, r8d
+  000000014014AC01  rol     ebx, 1Eh
+  000000014014AC04  xor     eax, r9d
+  000000014014AC07  add     esi, edx
+  000000014014AC09  add     eax, r14d
+  000000014014AC0C  mov     [rbp+240h+var_1DC], esi
+  000000014014AC0F  add     eax, r11d
+  000000014014AC12  mov     r12d, edx
+  000000014014AC15  add     eax, [rbp+240h+var_1E0]
+  000000014014AC18  rol     r12d, 5
+  000000014014AC1C  add     r12d, eax
+  000000014014AC1F  add     r10d, ebx
+  000000014014AC22  mov     [rbp+240h+var_1E0], r12d
+  000000014014AC26  mov     [rbp+240h+var_1D8], r10d
+  000000014014AC2A  mov     r11d, [rbp+240h+var_1D4]
+  000000014014AC2E  mov     r14d, [rbp+240h+var_1D0]
+  000000014014AC32  add     r11d, r8d
+  000000014014AC35  mov     rax, [rbp+240h+var_290]
+  000000014014AC39  jmp     loc_14014AE81
+  000000014014AC3E  dw 0F55h
+  000000014014AC40  dq 5856A0FFFE927481h, 7077F7737CC58D5Ah, 0FF54D1FEE351FF5Bh
+  000000014014AE80  db 0FFh
+  000000014014AE81  add     r14d, r9d
+  000000014014AE84  mov     rdx, [rbp-38h]
+  000000014014AE88  add     rax, 40h ; '@'
+  000000014014AE8C  mov     rcx, [rbp+240h+var_280]
+  000000014014AE90  sub     rdx, 40h ; '@'
+  000000014014AE94  mov     rdi, [rbp+240h+var_260]
+  000000014014AE98  add     rcx, 40h ; '@'
+  000000014014AE9C  mov     [rbp+240h+var_1D4], r11d
+  000000014014AEA0  mov     [rbp+240h+var_1D0], r14d
+  000000014014AEA4  mov     [rbp+240h+var_290], rax
+  000000014014AEA8  mov     [rbp-38h], rdx
+  000000014014AEAC  mov     [rbp+240h+var_280], rcx
+  000000014014AEB0  cmp     rcx, rdi
+  000000014014AEB3  jb      loc_140147335
+  000000014014AEB9  jmp     loc_14014AF5E
+  000000014014AEBE  dw 349h
+  000000014014AEC0  dq 41FFFF067A850FE4h, 4DE8FFFE7147E95Eh, 0FED01E810FFFF6BAh
+  000000014014AF58  db 0Fh, 8Eh, 99h, 0FAh, 2 dup(0FFh)
+  000000014014AF5E  xor     r12d, r12d
+  000000014014AF61  mov     ecx, r12d
+  000000014014AF64  jmp     loc_14014B280
+  000000014014AF69  db 0E8h, 52h, 87h, 0FEh, 0FFh, 0Fh, 84h
+  000000014014AF70  dq 0FE20349FFFF5E61h, 0E146E8FFFE9BA682h, 0FFFFF3E54E8FFF4h
+  000000014014B0F8  db 52h, 0Fh, 8Ah, 97h, 30h, 2 dup(0FFh)
+  000000014014B0FF  mov     rax, r12
+  000000014014B102  jmp     loc_14014B280
+  000000014014B107  db 48h
+  000000014014B108  dq 880F00000468C481h, 0F6C31FE8FFFF71BAh, 48FFFE93B5830FFFh
+  000000014014B280  sub     rdi, rax
+  000000014014B283  lea     rdx, [rbp+240h+var_D0]
+  000000014014B28A  add     rdx, rax
+  000000014014B28D  mov     r8, rdi
+  000000014014B290  lea     rax, [rbp+240h+var_1C4]
+  000000014014B294  add     rcx, rax
+  000000014014B297  jmp     loc_14014B373
+  000000014014B29C  dd 18C48148h
+  000000014014B2A0  dq 0FF1139850F000006h, 0FFFDF490850F52FFh, 0C68B0F00015C5FE8h
+  000000014014B370  db 70h, 0FEh, 0FFh
+  000000014014B373  call    sub_140095E40
+  000000014014B378  jmp     loc_14014B781
+  000000014014B37D  db 0D1h, 0C7h, 41h
+  000000014014B380  dq 0C0C13AF08041C38Bh, 0D3416ED9EBA10505h, 3F6D160247C89D1h
+  000000014014B780  db 0FFh
+  000000014014B781  xor     edx, edx
+  000000014014B783  mov     [rbp+240h+var_1CC], 0
+  000000014014B78B  lea     rcx, [rbp+240h+var_1C4]
+  000000014014B78F  mov     [rbp+240h+var_1E0], 67452301h
+  000000014014B796  mov     [rbp+240h+var_1DC], 0EFCDAB89h
+  000000014014B79D  mov     [rbp+240h+var_1D8], 98BADCFEh
+  000000014014B7A4  lea     r8d, [rdx+40h]
+  000000014014B7A8  mov     [rbp+240h+var_1D4], 10325476h
+  000000014014B7AF  mov     [rbp+240h+var_1D0], 0C3D2E1F0h
+  000000014014B7B6  jmp     short loc_14014B82C
+  000000014014B7B8  dq 0BCE95F415C415D41h, 0FFF4D8C8E8FFFE8Bh, 0B4880FFFFEA56DE8h
+  000000014014B828  xor     byte ptr [rsi+rdi*8], 0FFh
+  000000014014B82C  call    sub_140096100
+  000000014014B831  jmp     short loc_14014B8B1
+  000000014014B833  db 49h, 3, 0E4h, 0Fh, 8Dh
+  000000014014B838  dq 0F6F4DFE8FFFE45C1h, 0E80001471F830FFFh, 7D848F0FFFF6AA94h
+  000000014014B8B0  db 0FFh
+  000000014014B8B1  lea     rcx, [rbp+240h+var_1E0]
+  000000014014B8B5  mov     rax, 1A4B6CBB6BDh
+  000000014014B8BF  cmp     rcx, rax
+  000000014014B8C2  jnb     loc_14014BD03
+  000000014014B8C8  jmp     loc_14014BA2E
+  000000014014B8CD  db 50h, 0Fh, 8Fh
+  000000014014B8D0  dq 1ADF3344FFFEE6D8h, 50247C8BC5D141D8h, 8B44FE3345C1D241h
+  000000014014BA28  db 0Fh, 8Bh, 33h, 0D1h, 0FEh, 0FFh
+  000000014014BA2E  nop
+  000000014014BA2F  jmp     loc_14014BB0A
+  000000014014BA34  dd 0B8FF5578h
+  000000014014BA38  dq 0C9808D950F2E737Bh, 2901A40E5A652B72h, 57A172597F13FC5Ch
+  000000014014BB08  db 2 dup(0FFh)
+  000000014014BB0A  call    sub_14026DB04
+  000000014014BB0F  jmp     rax
+  000000014014BB11  db 48h, 3, 0E5h, 0Fh, 88h, 0C7h, 0F6h
+  000000014014BB18  dq 3C5BE95E415DFFFDh, 0FE4921E95E41FFFFh, 0B8000000D89D8BFFh
+  000000014014BCE0  db 0FFh
+  000000014014BCE1  mov     rsp, r11
+  000000014014BCE4  pop     r13
+  000000014014BCE6  pop     r15
+  000000014014BCE8  jmp     loc_1401318C7
+  000000014014BCED  db 0E8h, 87h, 0D6h
+  000000014014BCF0  dq 13E6D8A0FFFFDh, 64830FFFFDE0C5E8h
+  000000014014BD00  db 0AAh, 2 dup(0FFh)
+  000000014014BD03  mov     rsi, [rbp+240h+var_258]
+  000000014014BD07  jmp     loc_14014BDCF
+  000000014014BD0C  dd 0FE20349h
+  000000014014BD10  dq 0D39EE8FFFE304F8Dh, 0FFFFEEC3FE8FFF4h, 5C7E57FFFF792D82h
+  000000014014BDC8  db 7Bh, 65h, 76h, 3Ch, 6Fh, 0F2h, 37h
+  000000014014BDCF  mov     rax, cr3
+  000000014014BDD2  jmp     loc_14014BE6B
+  000000014014BDD7  db 0BAh
+  000000014014BDD8  dq 75507C8D0373AF7Eh, 0C434607779985380h, 0E87E885BF97B547Ch
+  000000014014BE68  db 71h, 0FEh, 0FFh
+  000000014014BE6B  cmp     rax, [rbp+240h+var_268]
+  000000014014BE6F  jnz     loc_14014DA23
+  000000014014BE75  jmp     loc_14014BF06
+  000000014014BE7A  dw 99E8h, 0F4D3h, 0E8FFh
+  000000014014BE80  dq 0E133820FFFFF92F1h, 0E8FFF4D359E8FFFFh, 0F6A78F0FFFFF1623h
+  000000014014BF00  db 0Fh, 88h, 2, 13h, 0FEh, 0FFh
+  000000014014BF06  mov     rax, [rbp+240h+var_288]
+  000000014014BF0A  lea     rcx, [rbp+240h+var_250]
+  000000014014BF0E  mov     rdi, [rax+38h]
+  000000014014BF12  mov     rax, 1A4B6CBB6BEh
+  000000014014BF1C  cmp     rcx, rax
+  000000014014BF1F  jnb     loc_14014C300
+  000000014014BF25  jmp     loc_14014BFCD
+  000000014014BF2A  dw 0F57h, 0ED8Fh, 0FE3Bh
+  000000014014BF30  dq 0FE3323830F5141FFh, 92E8FFF4D2FAE8FFh, 0FED18A8C0FFFFFC3h
+  000000014014BFC8  db 8Bh, 37h, 92h, 2 dup(0FFh)
+  000000014014BFCD  nop
+  000000014014BFCE  jmp     short loc_14014C04E
+  000000014014BFD0  dq 0F00000600C48148h, 880F5700006BD284h, 749FFF0DFFFEA341h
+  000000014014C048  db 0Fh, 87h, 22h, 0F0h, 0FDh, 0FFh
+  000000014014C04E  call    sub_1402A99A5
+  000000014014C053  jmp     rax
+  000000014014C055  db 0E8h, 9Ch, 12h
+  000000014014C058  dq 0FFFFDF44880FFFFEh, 951BE8FFF4D0BBE8h, 0FFFEFC6E810FFFFEh
+  000000014014C300  mov     rdx, [rsi+8]
+  000000014014C304  mov     r8d, 1000h
+  000000014014C30A  mov     rcx, rdi
+  000000014014C30D  jmp     loc_14014C3C8
+  000000014014C312  dw 8427h, 5F5Dh, 5259h
+  000000014014C318  dq 0E677E4775096755Bh, 2D585C52B8717774h, 830FFFF6B42AE8A3h
+  000000014014C3C8  call    sub_140095E40
+  000000014014C3CD  jmp     short loc_14014C432
+  000000014014C3CF  db 41h
+  000000014014C3D0  dq 0FFFF3FCCE95D415Ch, 2AB8E8FFF4CD1BE8h, 0FFFDE5218C0FFFFEh
+  000000014014C430  db 2 dup(0FFh)
+  000000014014C432  lea     rcx, [rbp+240h+var_250]
+  000000014014C436  mov     rax, 1A4B6CBB6BFh
+  000000014014C440  cmp     rcx, rax
+  000000014014C443  jnb     loc_14014C9EE
+  000000014014C449  jmp     short loc_14014C4BE
+  000000014014C44B  align 4
+  000000014014C44C  dd 0F0C48341h
+  000000014014C450  dq 41E8FFFF12DA8E0Fh, 0FDDE94850FFFFE71h, 8D0FFFF6A352E8FFh
+  000000014014C4B8  db 54h, 76h, 3Dh, 88h, 0ACh, 5Ch
+  000000014014C4BE  nop
+  000000014014C4BF  jmp     short loc_14014C530
+  000000014014C4C1  db 41h, 5Fh, 49h, 8Bh, 0E3h, 0E9h, 62h
+  000000014014C4C8  dq 93A38D0F55FFFF49h, 0E95E415D5F41FFFFh, 90C48148FFFF0896h
+  000000014014C530  call    sub_14028D63F
+  000000014014C535  jmp     rax
+  000000014014C537  db 0E8h
+  000000014014C538  dq 3A72830FFFF6AD6Ch, 45CB2341CA33FFFEh, 0FF855A8279998A8Dh
+  000000014014C8A8  db 0Fh, 88h, 45h, 0AEh, 2 dup(0FFh)
+  000000014014C8AE  jmp     loc_140147A27
+  000000014014C8B3  db 49h, 8Bh, 0E3h, 41h, 5Dh
+  000000014014C8B8  dq 0B3BEE8FFFFA7DCE9h, 0FFFE2FCB8B0FFFF6h, 0FFFE598A820F5341h
+  000000014014C9E8  db 0Fh, 81h, 38h, 1Dh, 0FEh, 0FFh
+  000000014014C9EE  mov     rax, [rbp+240h+var_288]
+  000000014014C9F2  lea     rbx, [rsi+1D8h]
+  000000014014C9F9  mov     edx, [rbx]
+  000000014014C9FB  mov     rcx, [rax+58h]
+  000000014014C9FF  mov     rax, 1A4B6CBB6C0h
+  000000014014CA09  mov     [rdi+rdx*8], rcx
+  000000014014CA0D  cmp     rbx, rax
+  000000014014CA10  jnb     loc_14014D048
+  000000014014CA16  jmp     loc_14014CBC5
+  000000014014CA1B  db 53h, 59h, 54h, 2 dup(5Dh)
+  000000014014CA20  dq 168D7BD571807E77h, 167D195459245C21h, 0F000005D8C48148h
+  000000014014CBC0  db 78h, 5Bh, 40h, 0Dh, 0F9h
+  000000014014CBC5  nop
+  000000014014CBC6  jmp     loc_14014CE3A
+  000000014014CBCB  db 0E8h, 80h, 0C6h, 0F4h, 0FFh
+  000000014014CBD0  dq 998B0FFFFF6A18E8h, 928B0F5141FFFDE0h, 4468558B44FFFE82h
+  000000014014CE38  db 2 dup(0FFh)
+  000000014014CE3A  call    sub_14028600B
+  000000014014CE3F  jmp     rax
+  000000014014CE41  db 0E8h, 0CAh, 8Fh, 0F6h, 0FFh, 0Fh, 88h
+  000000014014CE48  dq 5C735F5FFFFF05A9h, 6D0C4814875E07Dh, 0FFFFA85A830F0000h
+  000000014014CEC0  db 0FFh
+  000000014014CEC1  nop
+  000000014014CEC2  nop
+  000000014014CEC3  nop
+  000000014014CEC4  nop
+  000000014014CEC5  nop
+  000000014014CEC6  nop
+  000000014014CEC7  jmp     loc_14014D048
+  000000014014CECC  dd 0A8C48148h
+  000000014014CED0  dq 0FFD620810F000004h, 41C6D241DD3341FFh, 0C02A44C38B41DF33h
+  000000014014D048  mov     rax, [rbp+240h+var_288]
+  000000014014D04C  mov     rcx, [rax+30h]
+  000000014014D050  jmp     loc_14014D1E8
+  000000014014D055  db 41h, 56h, 0Fh
+  000000014014D058  dq 5D2E8FFFE89AE82h, 0FFFE5DCD8C0FFFFFh, 0F228E8FFF4C0BBE8h
+  000000014014D1E8  mov     cr3, rcx
+  000000014014D1EB  jmp     short loc_14014D263
+  000000014014D1ED  db 5Dh, 41h, 5Fh
+  000000014014D1F0  dq 41FFFF7716E95C41h, 0E8FFFF80D68F0F53h, 0FDC580E8FFF4BE34h
+  000000014014D260  db 12h, 2 dup(0FFh)
+  000000014014D263  mov     rax, [rbp+240h+var_288]
+  000000014014D267  mov     rcx, 1A4B6CBB6C1h
+  000000014014D271  add     rax, 30h ; '0'
+  000000014014D275  cmp     rax, rcx
+  000000014014D278  jnb     loc_14014D539
+  000000014014D27E  jmp     short loc_14014D2F3
+  000000014014D280  dq 0D35F7C7B5B0A7D27h, 23C62E3A7CE8E877h, 27CD49CB7710BE7Ah
+  000000014014D2F0  db 3 dup(0FFh)
+  000000014014D2F3  nop
+  000000014014D2F4  jmp     loc_14014D37F
+  000000014014D2F9  db 0E8h, 0DCh, 7Bh, 0FEh, 0FFh, 0Fh, 82h
+  000000014014D300  dq 5D415C41FFFEAE35h, 9F7AE9E38B495F41h, 0FFFFE602FE8FFFFh
+  000000014014D378  db 5Eh, 72h, 52h, 18h, 5Ah, 67h, 0B9h
+  000000014014D37F  call    sub_14022FA65
+  000000014014D384  jmp     rax
+  000000014014D386  dw 800Fh
+  000000014014D388  dq 5F415D41FFFF3018h, 3D66E8FFFEC794E9h, 0FFFFBD7D820FFFFFh
+  000000014014D3E0  db 21h, 55h, 0BBh, 55h, 79h, 0D3h
+  000000014014D3E6  nop
+  000000014014D3E7  nop
+  000000014014D3E8  nop
+  000000014014D3E9  nop
+  000000014014D3EA  nop
+  000000014014D3EB  nop
+  000000014014D3EC  jmp     loc_14014D539
+  000000014014D3F1  db 0E8h, 7Ah, 0BDh, 0F4h, 0FFh, 0E8h, 0AFh
+  000000014014D3F8  dq 0FEBAB8820FFFFE62h, 0C96D8E0FE60348FFh, 0DFD88D0FFFFFh
+  000000014014D538  db 0FFh
+  000000014014D539  cmp     [rsi+240h], r12b
+  000000014014D540  jz      loc_14014DA23
+  000000014014D546  jmp     loc_14014D7B3
+  000000014014D54B  db 0E8h, 0D7h, 0F4h, 0FDh, 0FFh
+  000000014014D550  dq 0B58FFFE61728F0Fh, 796171105659E87Ah, 8757077D7A1355F1h
+  000000014014D7B0  db 4Eh, 0FEh, 0FFh
+  000000014014D7B3  mov     rcx, cr4
+  000000014014D7B6  mov     rax, rcx
+  000000014014D7B9  btc     rax, 7
+  000000014014D7BE  mov     cr4, rax
+  000000014014D7C1  mov     cr4, rcx
+  000000014014D7C4  jmp     loc_14014DA23
+  000000014014D7C9  db 55h, 0Fh, 81h, 93h, 0C5h, 0FEh, 0FFh
+  000000014014D7D0  dq 41E38B495F415C41h, 580CFFFECEDCE95Dh, 0C1534D78735E6354h
+  000000014014DA20  db 9Eh, 0FEh, 0FFh
+  000000014014DA23  mov     rax, [rbp+240h+var_288]
+  000000014014DA27  mov     rcx, 1A4B6CBB6C2h
+  000000014014DA31  add     rax, 30h ; '0'
+  000000014014DA35  cmp     rax, rcx
+  000000014014DA38  jnb     loc_14014E126
+  000000014014DA3E  jmp     loc_14014DB9E
+  000000014014DA43  db 3, 0C8h, 41h, 8Dh, 94h
+  000000014014DA48  dq 0D1C0415A82799924h, 3341C98B41D1032Eh, 8040C28BDFF640C8h
+  000000014014DB98  db 77h, 8Dh, 7, 0FFh, 24h, 0BEh
+  000000014014DB9E  nop
+  000000014014DB9F  jmp     loc_14014DDDC
+  000000014014DBA4  dd 0F4B5A7E8h
+  000000014014DBA8  dq 8A0FFFFEE0F3E8FFh, 86810F50FFFE7294h, 4F33B3FFE8FFFDE2h
+  000000014014DDD8  db 0CAh, 50h, 0FEh, 0FFh
+  000000014014DDDC  call    sub_1401EAFA7
+  000000014014DDE1  jmp     rax
+  000000014014DDE3  db 56h, 0Fh, 89h, 86h, 0DFh
+  000000014014DDE8  dq 0FE259CE95E41FFFFh, 0FFFDEB30E95D41FFh, 144AE8FFF4B3BBE8h
+  000000014014E120  db 0Fh, 89h, 27h, 5Bh, 2 dup(0FFh)
+  000000014014E126  mov     rcx, [rbp+240h+var_288]
+  000000014014E12A  or      eax, 0FFFFFFFFh
+  000000014014E12D  lock xadd [rcx+28h], eax
+  000000014014E132  cmp     eax, 1
+  000000014014E135  jnz     loc_140162A5B
+  000000014014E13B  jmp     short loc_14014E1B8
+  000000014014E13D  db 0E8h, 0CEh, 0AFh
+  000000014014E140  dq 0FFFFF7BA3E8FFF4h, 0E00349FFFE2A7B8Eh, 348FFFFE37C8E0Fh
+  000000014014E1B8  lea     rcx, [rbp+240h+var_268]
+  000000014014E1BC  mov     rax, 3A19AE205h
+  000000014014E1C6  cmp     rcx, rax
+  000000014014E1C9  jnb     loc_14015FABD
+  000000014014E1CF  jmp     loc_14014E262
+  000000014014E1D4  dd 617B1876h
+  000000014014E1D8  dq 71AF84702A787477h, 0FF3424800F574178h, 2BE8FFF4B042E8FFh
+  000000014014E260  db 0FDh, 0FFh
+  000000014014E262  xor     edx, edx
+  000000014014E264  lea     rcx, [rbp+240h+var_180]
+  000000014014E26B  lea     r8d, [rdx+5Ch]
+  000000014014E26F  jmp     short loc_14014E2D3
+  000000014014E271  db 48h, 3, 0E7h, 0Fh, 87h, 6, 86h
+  000000014014E278  dq 0E8FFF4AEE9E8FFFFh, 0FA3D8D0FFFFF5A3Eh, 0F9F9890F53410000h
+  000000014014E2D0  db 55h, 0FEh, 0FFh
+  000000014014E2D3  call    sub_140096100
+  000000014014E2D8  jmp     short loc_14014E345
+  000000014014E2DA  dw 2079h, 5D7Ch, 0D7E1h
+  000000014014E2E0  dq 70717AB27EFF5101h, 782178DF727274D0h, 496F7040585B59C3h
+  000000014014E340  db 0E9h, 95h, 0F5h, 0FEh, 0FFh
+  000000014014E345  lea     rcx, [rbp+240h+var_180]
+  000000014014E34C  mov     [rbp+240h+var_180], 67452301h
+  000000014014E356  mov     rax, 1A4B6CBB6C4h
+  000000014014E360  mov     [rbp+240h+var_17C], 0EFCDAB89h
+  000000014014E36A  mov     [rbp+240h+var_178], 98BADCFEh
+  000000014014E374  mov     [rbp+240h+var_174], 10325476h
+  000000014014E37E  mov     [rbp+240h+var_170], 0C3D2E1F0h
+  000000014014E388  cmp     rcx, rax
+  000000014014E38B  jnb     loc_14014E934
+  000000014014E391  jmp     loc_14014E455
+  000000014014E396  dw 5641h
+  000000014014E398  dq 3B50FFFFCB20880Fh, 4406CA1651119A3Dh, 7F5A8BC28B9C7648h
+  000000014014E450  db 8Eh, 0Eh, 0DAh, 2 dup(0FFh)
+  000000014014E455  nop
+  000000014014E456  jmp     loc_14014E5FB
+  000000014014E45B  db 48h, 8Dh, 4Dh, 60h, 41h
+  000000014014E460  dq 0B6CBB6BCB848E8D3h, 3B48D002000001A4h, 0E8FFFEC2438B0FC8h
+  000000014014E5F8  db 0ABh, 0FDh, 0FFh
+  000000014014E5FB  call    sub_140287A52
+  000000014014E600  jmp     rax
+  000000014014E602  dw 8D48h, 4Dh, 8341h
+  000000014014E608  dq 0B6CBB6B8B84814C0h, 48F8D241000001A4h, 0FFFF6CDB800FC83Bh
+  000000014014E6A0  db 8Ch, 0ACh, 2 dup(0FFh)
+  000000014014E6A4  nop
+  000000014014E6A5  nop
+  000000014014E6A6  nop
+  000000014014E6A7  nop
+  000000014014E6A8  nop
+  000000014014E6A9  nop
+  000000014014E6AA  jmp     loc_14014E934
+  000000014014E6AF  db 3
+  000000014014E6B0  dq 4140247489C2D0F8h, 41C233F78B44C38Bh, 0C23341C9D305C6C1h
+  000000014014E930  db 0FEh, 0FFh, 5Eh, 71h
+  000000014014E934  mov     rax, [rbp+240h+var_16C+4]
+  000000014014E93B  mov     rcx, rax
+  000000014014E93E  add     eax, 8
+  000000014014E941  and     ecx, 3Fh
+  000000014014E944  mov     dword ptr [rbp+240h+var_16C+4], eax
+  000000014014E94A  cmp     eax, 8
+  000000014014E94D  jnb     loc_14014EB37
+  000000014014E953  jmp     loc_14014EA9D
+  000000014014E958  dq 8B8BC68040CB2341h, 0C2C1F1D341C80BD3h, 1BBCDCC181DDD105h
+  000000014014EA98  db 81h, 0FDh, 88h, 0FEh, 0FFh
+  000000014014EA9D  inc     dword ptr [rbp+240h+var_16C]
+  000000014014EAA3  jmp     loc_14014EB37
+  000000014014EAA8  dq 6D63E8FFF4A65BE8h, 0FFFEC1FD840FFFFEh, 0FF4181E95F415C41h
+  000000014014EB30  db 0FFh, 0Fh, 89h, 0D0h, 0DEh, 0FDh, 0FFh
+  000000014014EB37  mov     r8d, 40h ; '@'
+  000000014014EB3D  sub     r8, rcx
+  000000014014EB40  mov     [rbp+240h+var_290], r8
+  000000014014EB44  cmp     r8, 8
+  000000014014EB48  ja      loc_140156ABF
+  000000014014EB4E  jmp     loc_14014EBD4
+  000000014014EB53  db 48h, 81h, 0C4h, 98h, 5
+  000000014014EB58  dq 0FFFF9ADD870F0000h, 0E8FFFFC749890F50h, 5041B97AFFF689E4h
+  000000014014EBD0  db 0C9h, 0CFh, 0FEh, 0FFh
+  000000014014EBD4  lea     rax, [rbp+240h+var_164]
+  000000014014EBDB  add     rcx, rax
+  000000014014EBDE  lea     rdx, [rbp+240h+var_268]
+  000000014014EBE2  jmp     loc_14014EC71
+  000000014014EBE7  db 0E8h
+  000000014014EBE8  dq 7EA5830FFFF4BC9Ch, 0E78E0FE10348FFFFh, 0FFF4B620E8FFFED0h
+  000000014014EC70  db 0FFh
+  000000014014EC71  call    sub_140095E40
+  000000014014EC76  jmp     loc_14014ED17
+  000000014014EC7B  db 0AAh, 8Dh, 5Ah, 6Bh, 50h
+  000000014014EC80  dq 5D7673D95558C172h, 84038B73617F2F7Fh, 7B8F647F7C455351h
+  000000014014ED10  db 0FFh, 0Fh, 84h, 0CFh, 3Ah, 2 dup(0FFh)
+  000000014014ED17  mov     rdx, r12
+  000000014014ED1A  jmp     loc_14014EF91
+  000000014014ED1F  db 0C1h
+  000000014014ED20  dq 1EC1C141CB3305C0h, 3F990558BC203F9h, 7999C281CFD341C8h
+  000000014014EF90  db 0FFh
+  000000014014EF91  movzx   eax, [rbp+rdx+240h+var_163]
+  000000014014EF99  movzx   ecx, [rbp+rdx+240h+var_164]
+  000000014014EFA1  shl     ecx, 8
+  000000014014EFA4  or      ecx, eax
+  000000014014EFA6  movzx   eax, [rbp+rdx+240h+var_162]
+  000000014014EFAE  shl     ecx, 8
+  000000014014EFB1  or      ecx, eax
+  000000014014EFB3  movzx   eax, [rbp+rdx+240h+var_161]
+  000000014014EFBB  shl     ecx, 8
+  000000014014EFBE  or      ecx, eax
+  000000014014EFC0  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014014EFC4  add     rdx, 4
+  000000014014EFC8  cmp     rdx, 40h ; '@'
+  000000014014EFCC  jl      short loc_14014EF91
+  000000014014EFCE  jmp     loc_14014F147
+  000000014014EFD3  db 51h, 0Fh, 81h, 0A3h, 0ADh
+  000000014014EFD8  dq 0FFFFF9D8BE8FFFDh, 0F5641FFFFE2E681h, 0A14EE8FFFFE33084h
+  000000014014F140  xchg    edi, [rsp+rbx*2+338h+var_2DC+3]
+  000000014014F144  push    rdx
+  000000014014F145  int     3; Trap to Debugger
+  000000014014F146  lodsb
+  000000014014F147  mov     r10d, [rbp+240h+var_178]
+  000000014014F14E  mov     r9d, [rbp+240h+var_174]
+  000000014014F155  mov     ecx, r9d
+  000000014014F158  xor     ecx, r10d
+  000000014014F15B  mov     ebx, [rbp+240h+var_180]
+  000000014014F161  mov     edx, [rbp+240h+var_17C]
+  000000014014F167  mov     eax, ebx
+  000000014014F169  and     ecx, edx
+  000000014014F16B  mov     r8d, [rbp+240h+var_170]
+  000000014014F172  xor     ecx, r9d
+  000000014014F175  mov     r15d, [rsp+340h+var_2C8]
+  000000014014F17A  mov     r12d, [rsp+340h+var_2C4]
+  000000014014F17F  add     r8d, 5A827999h
+  000000014014F186  mov     r13d, [rbp+240h+var_2C0]
+  000000014014F18A  add     r9d, 5A827999h
+  000000014014F191  rol     eax, 5
+  000000014014F194  add     eax, [rsp+340h+var_2D0]
+  000000014014F198  add     ecx, eax
+  000000014014F19A  rol     edx, 1Eh
+  000000014014F19D  add     r8d, ecx
+  000000014014F1A0  mov     ecx, edx
+  000000014014F1A2  xor     ecx, r10d
+  000000014014F1A5  mov     eax, r8d
+  000000014014F1A8  and     ecx, ebx
+  000000014014F1AA  rol     eax, 5
+  000000014014F1AD  add     eax, [rsp+340h+var_2CC]
+  000000014014F1B1  xor     ecx, r10d
+  000000014014F1B4  add     ecx, eax
+  000000014014F1B6  rol     ebx, 1Eh
+  000000014014F1B9  add     r9d, ecx
+  000000014014F1BC  add     r10d, 5A827999h
+  000000014014F1C3  mov     ecx, ebx
+  000000014014F1C5  mov     eax, r9d
+  000000014014F1C8  xor     ecx, edx
+  000000014014F1CA  rol     eax, 5
+  000000014014F1CD  and     ecx, r8d
+  000000014014F1D0  add     eax, r15d
+  000000014014F1D3  xor     ecx, edx
+  000000014014F1D5  rol     r8d, 1Eh
+  000000014014F1D9  add     ecx, eax
+  000000014014F1DB  add     r10d, ecx
+  000000014014F1DE  mov     ecx, ebx
+  000000014014F1E0  xor     ecx, r8d
+  000000014014F1E3  mov     eax, r10d
+  000000014014F1E6  and     ecx, r9d
+  000000014014F1E9  rol     eax, 5
+  000000014014F1EC  xor     ecx, ebx
+  000000014014F1EE  rol     r9d, 1Eh
+  000000014014F1F2  add     eax, edx
+  000000014014F1F4  lea     r11d, [r8+5A827999h]
+  000000014014F1FB  jmp     loc_14014F292
+  000000014014F200  dq 72FFFDB8C3850F52h, 0C48148E87F8D61F7h, 7BE08F0F00000560h
+  000000014014F290  db 0FEh, 0FFh
+  000000014014F292  add     ecx, eax
+  000000014014F294  lea     edx, [r12+5A827999h]
+  000000014014F29C  add     edx, ecx
+  000000014014F29E  mov     ecx, r9d
+  000000014014F2A1  xor     ecx, r8d
+  000000014014F2A4  mov     eax, edx
+  000000014014F2A6  and     ecx, r10d
+  000000014014F2A9  rol     eax, 5
+  000000014014F2AC  xor     ecx, r8d
+  000000014014F2AF  rol     r10d, 1Eh
+  000000014014F2B3  add     eax, ebx
+  000000014014F2B5  lea     ebx, [r13+5A827999h]
+  000000014014F2BC  add     ecx, eax
+  000000014014F2BE  add     ebx, ecx
+  000000014014F2C0  mov     ecx, r10d
+  000000014014F2C3  xor     ecx, r9d
+  000000014014F2C6  mov     eax, ebx
+  000000014014F2C8  and     ecx, edx
+  000000014014F2CA  rol     eax, 5
+  000000014014F2CD  add     eax, [rbp+240h+var_2BC]
+  000000014014F2D0  xor     ecx, r9d
+  000000014014F2D3  add     ecx, eax
+  000000014014F2D5  rol     edx, 1Eh
+  000000014014F2D8  add     r11d, ecx
+  000000014014F2DB  mov     ecx, edx
+  000000014014F2DD  xor     ecx, r10d
+  000000014014F2E0  mov     eax, r11d
+  000000014014F2E3  and     ecx, ebx
+  000000014014F2E5  rol     eax, 5
+  000000014014F2E8  xor     ecx, r10d
+  000000014014F2EB  add     eax, [rbp+240h+var_2B8]
+  000000014014F2EE  add     ecx, eax
+  000000014014F2F0  rol     ebx, 1Eh
+  000000014014F2F3  lea     r8d, [r9+5A827999h]
+  000000014014F2FA  add     r8d, ecx
+  000000014014F2FD  lea     r9d, [r10+5A827999h]
+  000000014014F304  mov     ecx, ebx
+  000000014014F306  lea     r10d, [rdx+5A827999h]
+  000000014014F30D  xor     ecx, edx
+  000000014014F30F  mov     eax, r8d
+  000000014014F312  and     ecx, r11d
+  000000014014F315  rol     eax, 5
+  000000014014F318  add     eax, [rbp+240h+var_2B4]
+  000000014014F31B  xor     ecx, edx
+  000000014014F31D  add     ecx, eax
+  000000014014F31F  rol     r11d, 1Eh
+  000000014014F323  add     r9d, ecx
+  000000014014F326  lea     edx, [rbx+5A827999h]
+  000000014014F32C  mov     ecx, r11d
+  000000014014F32F  mov     eax, r9d
+  000000014014F332  jmp     loc_14014F3CF
+  000000014014F337  db 0E8h
+  000000014014F338  dq 0FE0D62E8FFF49F3Ch, 41FFFF62198D0FFFh, 56FFFE79BB840F57h
+  000000014014F3C8  db 27h, 77h, 6Bh, 50h, 79h, 57h, 93h
+  000000014014F3CF  xor     ecx, ebx
+  000000014014F3D1  rol     eax, 5
+  000000014014F3D4  add     eax, [rbp+240h+var_2B0]
+  000000014014F3D7  and     ecx, r8d
+  000000014014F3DA  xor     ecx, ebx
+  000000014014F3DC  rol     r8d, 1Eh
+  000000014014F3E0  add     ecx, eax
+  000000014014F3E2  lea     ebx, [r11+5A827999h]
+  000000014014F3E9  add     r10d, ecx
+  000000014014F3EC  mov     ecx, r8d
+  000000014014F3EF  xor     ecx, r11d
+  000000014014F3F2  mov     eax, r10d
+  000000014014F3F5  and     ecx, r9d
+  000000014014F3F8  rol     eax, 5
+  000000014014F3FB  add     eax, [rbp+240h+var_2AC]
+  000000014014F3FE  xor     ecx, r11d
+  000000014014F401  add     ecx, eax
+  000000014014F403  rol     r9d, 1Eh
+  000000014014F407  add     edx, ecx
+  000000014014F409  lea     r11d, [r8+5A827999h]
+  000000014014F410  mov     ecx, r9d
+  000000014014F413  mov     eax, edx
+  000000014014F415  xor     ecx, r8d
+  000000014014F418  rol     eax, 5
+  000000014014F41B  add     eax, [rbp+240h+var_2A8]
+  000000014014F41E  and     ecx, r10d
+  000000014014F421  xor     ecx, r8d
+  000000014014F424  rol     r10d, 1Eh
+  000000014014F428  add     ecx, eax
+  000000014014F42A  lea     r8d, [r9+5A827999h]
+  000000014014F431  add     ebx, ecx
+  000000014014F433  mov     ecx, r10d
+  000000014014F436  xor     ecx, r9d
+  000000014014F439  mov     eax, ebx
+  000000014014F43B  and     ecx, edx
+  000000014014F43D  rol     eax, 5
+  000000014014F440  add     eax, [rbp+240h+var_2A4]
+  000000014014F443  xor     ecx, r9d
+  000000014014F446  add     ecx, eax
+  000000014014F448  rol     edx, 1Eh
+  000000014014F44B  add     r11d, ecx
+  000000014014F44E  lea     r9d, [r10+5A827999h]
+  000000014014F455  mov     eax, r11d
+  000000014014F458  mov     ecx, edx
+  000000014014F45A  xor     ecx, r10d
+  000000014014F45D  rol     eax, 5
+  000000014014F460  add     eax, [rbp+240h+var_2A0]
+  000000014014F463  and     ecx, ebx
+  000000014014F465  xor     ecx, r10d
+  000000014014F468  rol     ebx, 1Eh
+  000000014014F46B  jmp     loc_14014F6CA
+  000000014014F470  dq 759D571A71CB8B8Bh, 0B9555DD08D5A73CEh, 0E819741C677017E8h
+  000000014014F6C8  db 2 dup(0FFh)
+  000000014014F6CA  add     ecx, eax
+  000000014014F6CC  add     r8d, ecx
+  000000014014F6CF  mov     ecx, ebx
+  000000014014F6D1  xor     ecx, edx
+  000000014014F6D3  mov     eax, r8d
+  000000014014F6D6  and     ecx, r11d
+  000000014014F6D9  rol     eax, 5
+  000000014014F6DC  add     eax, [rbp+240h+var_29C]
+  000000014014F6DF  xor     ecx, edx
+  000000014014F6E1  add     ecx, eax
+  000000014014F6E3  add     r9d, ecx
+  000000014014F6E6  rol     r11d, 1Eh
+  000000014014F6EA  mov     r14d, [rbp+240h+var_2A8]
+  000000014014F6EE  lea     esi, [r11+5A827999h]
+  000000014014F6F5  mov     ecx, r11d
+  000000014014F6F8  lea     r10d, [rdx+5A827999h]
+  000000014014F6FF  mov     edx, [rbp+240h+var_294]
+  000000014014F702  xor     ecx, ebx
+  000000014014F704  and     ecx, r8d
+  000000014014F707  mov     eax, r9d
+  000000014014F70A  rol     eax, 5
+  000000014014F70D  xor     ecx, ebx
+  000000014014F70F  add     eax, [rbp+240h+var_298]
+  000000014014F712  add     ecx, eax
+  000000014014F714  rol     r8d, 1Eh
+  000000014014F718  add     r10d, ecx
+  000000014014F71B  mov     ecx, r8d
+  000000014014F71E  xor     ecx, r11d
+  000000014014F721  mov     eax, r10d
+  000000014014F724  rol     eax, 5
+  000000014014F727  and     ecx, r9d
+  000000014014F72A  xor     ecx, r11d
+  000000014014F72D  rol     r9d, 1Eh
+  000000014014F731  mov     r11d, [rbp+240h+var_298]
+  000000014014F735  add     eax, 5A827999h
+  000000014014F73A  xor     r11d, [rbp+240h+var_2AC]
+  000000014014F73E  add     eax, edx
+  000000014014F740  add     ecx, eax
+  000000014014F742  xor     r11d, r12d
+  000000014014F745  xor     r11d, [rsp+340h+var_2CC]
+  000000014014F74A  add     ebx, ecx
+  000000014014F74C  mov     eax, [rbp+240h+var_29C]
+  000000014014F74F  xor     edx, r14d
+  000000014014F752  xor     eax, [rbp+240h+var_2B0]
+  000000014014F755  xor     edx, r13d
+  000000014014F758  xor     eax, r15d
+  000000014014F75B  rol     r11d, 1
+  000000014014F75E  xor     eax, [rsp+340h+var_2D0]
+  000000014014F762  xor     edx, r15d
+  000000014014F765  mov     r15d, [rbp+240h+var_2A4]
+  000000014014F769  jmp     loc_14014F9CD
+  000000014014F76E  dw 75E8h
+  000000014014F770  dq 0FFFE291BE8FFF49Ah, 2DE8FFFD9DF28F0Fh, 0FFFF8AFFE8FFF499h
+  000000014014F9C8  db 8Fh, 86h, 91h, 2 dup(0FFh)
+  000000014014F9CD  mov     ecx, r9d
+  000000014014F9D0  rol     eax, 1
+  000000014014F9D2  xor     ecx, r8d
+  000000014014F9D5  mov     [rsp+340h+var_314], eax
+  000000014014F9D9  and     ecx, r10d
+  000000014014F9DC  mov     [rsp+340h+var_308], r11d
+  000000014014F9E1  mov     eax, ebx
+  000000014014F9E3  rol     eax, 5
+  000000014014F9E6  add     r11d, 5A827999h
+  000000014014F9ED  add     eax, [rsp+340h+var_314]
+  000000014014F9F1  xor     ecx, r8d
+  000000014014F9F4  add     ecx, eax
+  000000014014F9F6  rol     edx, 1
+  000000014014F9F8  mov     [rsp+340h+var_30C], edx
+  000000014014F9FC  add     esi, ecx
+  000000014014F9FE  add     edx, 5A827999h
+  000000014014FA04  rol     r10d, 1Eh
+  000000014014FA08  mov     eax, esi
+  000000014014FA0A  mov     edi, r10d
+  000000014014FA0D  xor     edi, r9d
+  000000014014FA10  rol     eax, 5
+  000000014014FA13  add     eax, r11d
+  000000014014FA16  and     edi, ebx
+  000000014014FA18  xor     edi, r9d
+  000000014014FA1B  rol     ebx, 1Eh
+  000000014014FA1E  add     edi, eax
+  000000014014FA20  mov     r11d, ebx
+  000000014014FA23  xor     r11d, r10d
+  000000014014FA26  add     edi, r8d
+  000000014014FA29  and     r11d, esi
+  000000014014FA2C  mov     eax, edi
+  000000014014FA2E  xor     r11d, r10d
+  000000014014FA31  rol     eax, 5
+  000000014014FA34  add     eax, edx
+  000000014014FA36  rol     esi, 1Eh
+  000000014014FA39  add     r11d, eax
+  000000014014FA3C  mov     edx, r15d
+  000000014014FA3F  xor     edx, [rbp+240h+var_2BC]
+  000000014014FA42  add     r11d, r9d
+  000000014014FA45  xor     edx, r12d
+  000000014014FA48  xor     edx, [rsp+340h+var_314]
+  000000014014FA4C  rol     edx, 1
+  000000014014FA4E  mov     [rsp+340h+var_310], edx
+  000000014014FA52  mov     r12d, [rbp+240h+var_2A0]
+  000000014014FA56  mov     eax, r11d
+  000000014014FA59  rol     eax, 5
+  000000014014FA5C  mov     ecx, esi
+  000000014014FA5E  add     eax, edx
+  000000014014FA60  xor     ecx, ebx
+  000000014014FA62  and     ecx, edi
+  000000014014FA64  jmp     loc_14014FBB4
+  000000014014FA69  db 0E8h, 42h, 97h, 0F4h, 0FFh, 0Fh, 8Bh
+  000000014014FA70  dq 0FFCA70E8FFFEC11Eh, 5AFFFE490B8D0FFFh, 8D555F875359E740h
+  000000014014FBB0  push    rdi
+  000000014014FBB1  jb      short loc_14014FBFC
+  000000014014FBB3  pop     rbp
+  000000014014FBB4  lea     edx, [r10+5A827999h]
+  000000014014FBBB  xor     ecx, ebx
+  000000014014FBBD  rol     edi, 1Eh
+  000000014014FBC0  add     ecx, eax
+  000000014014FBC2  mov     r10d, r12d
+  000000014014FBC5  xor     r10d, [rbp+240h+var_2B8]
+  000000014014FBC9  add     edx, ecx
+  000000014014FBCB  xor     r10d, r13d
+  000000014014FBCE  mov     ecx, r11d
+  000000014014FBD1  xor     r10d, [rsp+340h+var_308]
+  000000014014FBD6  xor     ecx, edi
+  000000014014FBD8  mov     r13d, [rbp+240h+var_29C]
+  000000014014FBDC  xor     ecx, esi
+  000000014014FBDE  rol     r10d, 1
+  000000014014FBE1  mov     eax, edx
+  000000014014FBE3  rol     eax, 5
+  000000014014FBE6  add     eax, 6ED9EBA1h
+  000000014014FBEB  rol     r11d, 1Eh
+  000000014014FBEF  add     eax, r10d
+  000000014014FBF2  mov     [rsp+340h+var_2FC], r10d
+  000000014014FBF7  add     ecx, eax
+  000000014014FBF9  mov     eax, r13d
+  000000014014FBFC  xor     eax, [rbp+240h+var_2B4]
+  000000014014FBFF  add     ebx, ecx
+  000000014014FC01  xor     eax, [rbp+240h+var_2BC]
+  000000014014FC04  mov     ecx, edx
+  000000014014FC06  xor     eax, [rsp+340h+var_30C]
+  000000014014FC0A  xor     ecx, r11d
+  000000014014FC0D  rol     eax, 1
+  000000014014FC0F  xor     ecx, edi
+  000000014014FC11  mov     [rsp+340h+var_318], eax
+  000000014014FC15  add     ecx, 6ED9EBA1h
+  000000014014FC1B  mov     r8d, [rsp+340h+var_318]
+  000000014014FC20  mov     eax, ebx
+  000000014014FC22  rol     eax, 5
+  000000014014FC25  add     r8d, eax
+  000000014014FC28  rol     edx, 1Eh
+  000000014014FC2B  mov     eax, [rsp+340h+var_310]
+  000000014014FC2F  add     r8d, ecx
+  000000014014FC32  xor     eax, [rbp+240h+var_298]
+  000000014014FC35  add     r8d, esi
+  000000014014FC38  xor     eax, [rbp+240h+var_2B0]
+  000000014014FC3B  mov     ecx, ebx
+  000000014014FC3D  xor     eax, [rbp+240h+var_2B8]
+  000000014014FC40  xor     ecx, edx
+  000000014014FC42  rol     eax, 1
+  000000014014FC44  xor     ecx, r11d
+  000000014014FC47  mov     [rsp+340h+var_320], eax
+  000000014014FC4B  add     ecx, 6ED9EBA1h
+  000000014014FC51  mov     r9d, [rsp+340h+var_320]
+  000000014014FC56  jmp     loc_14014FCE7
+  000000014014FC5B  db 0E8h, 0B8h, 95h, 0F4h, 0FFh
+  000000014014FC60  dq 0B6860FFFFE532FE8h, 4490909090FFFEF5h, 60C08D0F9090D133h
+  000000014014FCE0  db 0FFh, 5Dh, 0E9h, 0E7h, 0B3h, 2 dup(0FFh)
+  000000014014FCE7  mov     eax, r8d
+  000000014014FCEA  rol     eax, 5
+  000000014014FCED  add     r9d, eax
+  000000014014FCF0  rol     ebx, 1Eh
+  000000014014FCF3  add     r9d, ecx
+  000000014014FCF6  mov     eax, r10d
+  000000014014FCF9  xor     eax, [rbp+240h+var_294]
+  000000014014FCFC  lea     r10d, [r11+6ED9EBA1h]
+  000000014014FD03  xor     eax, [rbp+240h+var_2AC]
+  000000014014FD06  add     r9d, edi
+  000000014014FD09  xor     eax, [rbp+240h+var_2B4]
+  000000014014FD0C  mov     ecx, r8d
+  000000014014FD0F  mov     r11d, [rsp+340h+var_318]
+  000000014014FD14  xor     ecx, ebx
+  000000014014FD16  rol     eax, 1
+  000000014014FD18  xor     ecx, edx
+  000000014014FD1A  mov     [rsp+340h+var_31C], eax
+  000000014014FD1E  mov     eax, r9d
+  000000014014FD21  rol     eax, 5
+  000000014014FD24  add     eax, [rsp+340h+var_31C]
+  000000014014FD28  add     ecx, eax
+  000000014014FD2A  rol     r8d, 1Eh
+  000000014014FD2E  add     r10d, ecx
+  000000014014FD31  xor     r11d, r14d
+  000000014014FD34  xor     r11d, [rbp+240h+var_2B0]
+  000000014014FD38  mov     eax, r10d
+  000000014014FD3B  xor     r11d, [rsp+340h+var_314]
+  000000014014FD40  mov     ecx, r9d
+  000000014014FD43  rol     eax, 5
+  000000014014FD46  xor     ecx, r8d
+  000000014014FD49  xor     ecx, ebx
+  000000014014FD4B  rol     r11d, 1
+  000000014014FD4E  add     eax, r11d
+  000000014014FD51  mov     [rsp+340h+var_304], r11d
+  000000014014FD56  lea     r11d, [rdx+6ED9EBA1h]
+  000000014014FD5D  rol     r9d, 1Eh
+  000000014014FD61  mov     edx, [rsp+340h+var_320]
+  000000014014FD65  add     ecx, eax
+  000000014014FD67  xor     edx, r15d
+  000000014014FD6A  add     r11d, ecx
+  000000014014FD6D  xor     edx, [rbp+240h+var_2AC]
+  000000014014FD70  mov     eax, r11d
+  000000014014FD73  xor     edx, [rsp+340h+var_308]
+  000000014014FD77  mov     edi, r10d
+  000000014014FD7A  rol     edx, 1
+  000000014014FD7C  xor     edi, r9d
+  000000014014FD7F  mov     [rsp+340h+var_2F8], edx
+  000000014014FD83  xor     edi, r8d
+  000000014014FD86  add     edx, 6ED9EBA1h
+  000000014014FD8C  rol     eax, 5
+  000000014014FD8F  jmp     loc_14014FE37
+  000000014014FD94  dd 0F49357E8h
+  000000014014FD98  dq 8E0FFFFF1154E8FFh, 90E95F41FFFFC1C0h, 0FFF493D0E8FFFE61h
+  000000014014FE30  db 50h, 0Fh, 89h, 39h, 0D0h, 2 dup(0FFh)
+  000000014014FE37  add     eax, edx
+  000000014014FE39  rol     r10d, 1Eh
+  000000014014FE3D  mov     edx, [rsp+340h+var_31C]
+  000000014014FE41  add     edi, eax
+  000000014014FE43  xor     edx, r12d
+  000000014014FE46  add     edi, ebx
+  000000014014FE48  mov     ebx, [rsp+340h+var_2F8]
+  000000014014FE4C  xor     edx, r14d
+  000000014014FE4F  xor     edx, [rsp+340h+var_30C]
+  000000014014FE53  mov     eax, edi
+  000000014014FE55  mov     r14d, [rsp+340h+var_304]
+  000000014014FE5A  mov     esi, r11d
+  000000014014FE5D  rol     edx, 1
+  000000014014FE5F  xor     esi, r10d
+  000000014014FE62  mov     [rsp+340h+var_300], edx
+  000000014014FE66  xor     esi, r9d
+  000000014014FE69  add     edx, 6ED9EBA1h
+  000000014014FE6F  rol     eax, 5
+  000000014014FE72  add     eax, edx
+  000000014014FE74  rol     r11d, 1Eh
+  000000014014FE78  add     esi, eax
+  000000014014FE7A  mov     ecx, edi
+  000000014014FE7C  xor     ecx, r11d
+  000000014014FE7F  rol     edi, 1Eh
+  000000014014FE82  xor     ecx, r10d
+  000000014014FE85  add     esi, r8d
+  000000014014FE88  mov     r8d, [rsp+340h+var_300]
+  000000014014FE8D  add     ecx, 6ED9EBA1h
+  000000014014FE93  mov     eax, esi
+  000000014014FE95  mov     edx, r14d
+  000000014014FE98  xor     edx, [rsp+340h+var_310]
+  000000014014FE9C  xor     edx, r13d
+  000000014014FE9F  rol     eax, 5
+  000000014014FEA2  xor     edx, r15d
+  000000014014FEA5  mov     r15d, [rsp+340h+var_2FC]
+  000000014014FEAA  xor     ebx, r15d
+  000000014014FEAD  rol     edx, 1
+  000000014014FEAF  xor     ebx, [rbp+240h+var_298]
+  000000014014FEB2  xor     ebx, r12d
+  000000014014FEB5  mov     [rsp+340h+var_304], edx
+  000000014014FEB9  add     edx, eax
+  000000014014FEBB  rol     ebx, 1
+  000000014014FEBD  add     edx, ecx
+  000000014014FEBF  mov     [rsp+340h+var_2F0], ebx
+  000000014014FEC3  add     edx, r9d
+  000000014014FEC6  mov     ecx, esi
+  000000014014FEC8  xor     ecx, edi
+  000000014014FECA  mov     eax, edx
+  000000014014FECC  rol     eax, 5
+  000000014014FECF  xor     ecx, r11d
+  000000014014FED2  jmp     loc_14015017D
+  000000014014FED7  db 49h
+  000000014014FED8  dq 0FFFFE5B5800FE003h, 90450305C0C1CB33h, 0CFFE40CB33C82341h
+  0000000140150178  db 0E9h, 3Fh, 90h, 0FDh, 0FFh
+  000000014015017D  add     ebx, eax
+  000000014015017F  add     ecx, 6ED9EBA1h
+  0000000140150185  add     ebx, ecx
+  0000000140150187  add     ebx, r10d
+  000000014015018A  rol     esi, 1Eh
+  000000014015018D  mov     r12d, [rsp+340h+var_318]
+  0000000140150192  lea     r10d, [rsi+6ED9EBA1h]
+  0000000140150199  xor     r8d, r12d
+  000000014015019C  lea     r9d, [rdi+6ED9EBA1h]
+  00000001401501A3  xor     r8d, [rbp+240h+var_294]
+  00000001401501A7  mov     ecx, edx
+  00000001401501A9  xor     ecx, esi
+  00000001401501AB  rol     edx, 1Eh
+  00000001401501AE  xor     ecx, edi
+  00000001401501B0  xor     r8d, r13d
+  00000001401501B3  mov     r13d, [rsp+340h+var_320]
+  00000001401501B8  add     ecx, 6ED9EBA1h
+  00000001401501BE  mov     edi, [rsp+340h+var_31C]
+  00000001401501C2  mov     eax, ebx
+  00000001401501C4  rol     eax, 5
+  00000001401501C7  rol     r8d, 1
+  00000001401501CA  mov     [rsp+340h+var_2FC], r8d
+  00000001401501CF  add     r8d, eax
+  00000001401501D2  mov     eax, [rsp+340h+var_304]
+  00000001401501D6  add     r8d, ecx
+  00000001401501D9  xor     eax, r13d
+  00000001401501DC  add     r8d, r11d
+  00000001401501DF  xor     eax, [rbp+240h+var_298]
+  00000001401501E2  mov     ecx, ebx
+  00000001401501E4  xor     eax, [rsp+340h+var_314]
+  00000001401501E8  xor     ecx, edx
+  00000001401501EA  rol     eax, 1
+  00000001401501EC  xor     ecx, esi
+  00000001401501EE  mov     esi, [rsp+340h+var_2FC]
+  00000001401501F2  mov     [rsp+340h+var_2E4], eax
+  00000001401501F6  xor     esi, r14d
+  00000001401501F9  xor     esi, [rsp+340h+var_30C]
+  00000001401501FD  mov     eax, r8d
+  0000000140150200  xor     esi, [rsp+340h+var_314]
+  0000000140150204  rol     eax, 5
+  0000000140150207  add     eax, [rsp+340h+var_2E4]
+  000000014015020B  add     ecx, eax
+  000000014015020D  rol     ebx, 1Eh
+  0000000140150210  mov     eax, [rsp+340h+var_2F0]
+  0000000140150214  add     r9d, ecx
+  0000000140150217  xor     eax, edi
+  0000000140150219  rol     esi, 1
+  000000014015021B  xor     eax, [rbp+240h+var_294]
+  000000014015021E  mov     ecx, r8d
+  0000000140150221  xor     eax, [rsp+340h+var_308]
+  0000000140150225  jmp     loc_140150397
+  000000014015022A  dw 0F56h, 628Eh, 0FF1Dh
+  0000000140150230  dq 0FE698C0FE50349FFh, 0CEFE40CA3341FFFDh, 0CAFECB3324244489h
+  0000000140150390  db 0FFh, 0Fh, 8Fh, 66h, 20h, 0FEh, 0FFh
+  0000000140150397  xor     ecx, ebx
+  0000000140150399  rol     eax, 1
+  000000014015039B  xor     ecx, edx
+  000000014015039D  mov     [rsp+340h+var_2F4], eax
+  00000001401503A1  mov     eax, r9d
+  00000001401503A4  rol     eax, 5
+  00000001401503A7  add     eax, [rsp+340h+var_2F4]
+  00000001401503AB  add     ecx, eax
+  00000001401503AD  rol     r8d, 1Eh
+  00000001401503B1  add     r10d, ecx
+  00000001401503B4  mov     [rsp+340h+var_2E8], esi
+  00000001401503B8  mov     ecx, r9d
+  00000001401503BB  mov     eax, r10d
+  00000001401503BE  rol     eax, 5
+  00000001401503C1  xor     ecx, r8d
+  00000001401503C4  add     eax, edx
+  00000001401503C6  rol     r9d, 1Eh
+  00000001401503CA  xor     ecx, ebx
+  00000001401503CC  lea     edx, [rsi+6ED9EBA1h]
+  00000001401503D2  mov     esi, [rsp+340h+var_2F8]
+  00000001401503D6  add     ecx, eax
+  00000001401503D8  mov     eax, [rsp+340h+var_2E4]
+  00000001401503DC  add     edx, ecx
+  00000001401503DE  xor     eax, esi
+  00000001401503E0  mov     ecx, r10d
+  00000001401503E3  xor     eax, [rsp+340h+var_310]
+  00000001401503E7  xor     ecx, r9d
+  00000001401503EA  xor     eax, [rsp+340h+var_308]
+  00000001401503EE  xor     ecx, r8d
+  00000001401503F1  rol     eax, 1
+  00000001401503F3  mov     [rsp+340h+var_318], eax
+  00000001401503F7  mov     eax, edx
+  00000001401503F9  rol     eax, 5
+  00000001401503FC  add     eax, ebx
+  00000001401503FE  mov     ebx, [rsp+340h+var_318]
+  0000000140150402  add     ecx, eax
+  0000000140150404  mov     eax, [rsp+340h+var_2F4]
+  0000000140150408  add     ebx, 6ED9EBA1h
+  000000014015040E  xor     eax, [rsp+340h+var_300]
+  0000000140150412  add     ebx, ecx
+  0000000140150414  mov     r11d, [rsp+340h+var_2F0]
+  0000000140150419  xor     eax, r15d
+  000000014015041C  xor     eax, [rsp+340h+var_30C]
+  0000000140150420  xor     r11d, r13d
+  0000000140150423  rol     eax, 1
+  0000000140150425  xor     r11d, r15d
+  0000000140150428  xor     r11d, [rsp+340h+var_318]
+  000000014015042D  mov     r15d, [rsp+340h+var_2FC]
+  0000000140150432  mov     [rsp+340h+var_320], eax
+  0000000140150436  mov     eax, ebx
+  0000000140150438  jmp     loc_140150693
+  000000014015043D  db 0C1h, 0C0h, 5
+  0000000140150440  dq 0CA33CDFE40C3D141h, 44245C8944D2D041h, 4405F1C041C83341h
+  0000000140150690  db 6Eh, 0FEh, 0FFh
+  0000000140150693  rol     eax, 5
+  0000000140150696  add     eax, r8d
+  0000000140150699  rol     r11d, 1
+  000000014015069C  mov     r8d, [rsp+340h+var_320]
+  00000001401506A1  rol     r10d, 1Eh
+  00000001401506A5  add     r8d, 6ED9EBA1h
+  00000001401506AC  mov     [rsp+340h+var_2DC], r11d
+  00000001401506B1  mov     ecx, r10d
+  00000001401506B4  xor     ecx, r9d
+  00000001401506B7  xor     ecx, edx
+  00000001401506B9  rol     edx, 1Eh
+  00000001401506BC  add     ecx, eax
+  00000001401506BE  mov     eax, [rsp+340h+var_304]
+  00000001401506C2  add     r8d, ecx
+  00000001401506C5  xor     eax, r12d
+  00000001401506C8  xor     eax, [rsp+340h+var_310]
+  00000001401506CC  mov     ecx, edx
+  00000001401506CE  xor     eax, [rsp+340h+var_2E8]
+  00000001401506D2  xor     ecx, r10d
+  00000001401506D5  rol     eax, 1
+  00000001401506D7  xor     ecx, ebx
+  00000001401506D9  mov     [rsp+340h+var_31C], eax
+  00000001401506DD  mov     eax, r8d
+  00000001401506E0  rol     eax, 5
+  00000001401506E3  add     eax, r9d
+  00000001401506E6  rol     ebx, 1Eh
+  00000001401506E9  mov     r9d, [rsp+340h+var_31C]
+  00000001401506EE  add     ecx, eax
+  00000001401506F0  add     r9d, 6ED9EBA1h
+  00000001401506F7  add     r9d, ecx
+  00000001401506FA  mov     ecx, ebx
+  00000001401506FC  xor     ecx, edx
+  00000001401506FE  mov     eax, r9d
+  0000000140150701  xor     ecx, r8d
+  0000000140150704  rol     eax, 5
+  0000000140150707  add     eax, r10d
+  000000014015070A  rol     r8d, 1Eh
+  000000014015070E  add     ecx, eax
+  0000000140150710  lea     r10d, [r11+6ED9EBA1h]
+  0000000140150717  add     r10d, ecx
+  000000014015071A  mov     r11d, r15d
+  000000014015071D  xor     r11d, edi
+  0000000140150720  mov     eax, r10d
+  0000000140150723  xor     r11d, r12d
+  0000000140150726  rol     eax, 5
+  0000000140150729  xor     r11d, [rsp+340h+var_320]
+  000000014015072E  add     eax, edx
+  0000000140150730  mov     edx, [rsp+340h+var_2E4]
+  0000000140150734  mov     ecx, r8d
+  0000000140150737  xor     ecx, ebx
+  0000000140150739  jmp     loc_140150853
+  000000014015073E  dw 0B5E8h
+  0000000140150740  dq 0FF21DE8D0FFFFE0Ch, 4DE8FFF48AC2E8FFh, 0FFA99E8F0FFFFFECh
+  0000000140150850  db 0B2h, 2 dup(0FFh)
+  0000000140150853  rol     r11d, 1
+  0000000140150856  xor     ecx, r9d
+  0000000140150859  mov     [rsp+340h+var_310], r11d
+  000000014015085E  add     ecx, eax
+  0000000140150860  rol     r9d, 1Eh
+  0000000140150864  xor     edx, r14d
+  0000000140150867  add     r11d, 6ED9EBA1h
+  000000014015086E  add     r11d, ecx
+  0000000140150871  xor     edx, r13d
+  0000000140150874  xor     edx, [rsp+340h+var_31C]
+  0000000140150878  mov     eax, r11d
+  000000014015087B  rol     edx, 1
+  000000014015087D  mov     ecx, r9d
+  0000000140150880  rol     eax, 5
+  0000000140150883  xor     ecx, r8d
+  0000000140150886  mov     [rsp+340h+var_2E0], edx
+  000000014015088A  xor     ecx, r10d
+  000000014015088D  mov     r13d, [rsp+340h+var_300]
+  0000000140150892  add     eax, ebx
+  0000000140150894  add     ecx, eax
+  0000000140150896  mov     r12d, [rsp+340h+var_2E8]
+  000000014015089B  lea     ebx, [rdx+6ED9EBA1h]
+  00000001401508A1  rol     r10d, 1Eh
+  00000001401508A5  mov     edx, [rsp+340h+var_2F4]
+  00000001401508A9  add     ebx, ecx
+  00000001401508AB  xor     edx, esi
+  00000001401508AD  xor     r13d, r14d
+  00000001401508B0  xor     r13d, [rsp+340h+var_310]
+  00000001401508B5  xor     edx, edi
+  00000001401508B7  xor     edx, [rsp+340h+var_2DC]
+  00000001401508BB  xor     r13d, r12d
+  00000001401508BE  mov     edi, [rsp+340h+var_320]
+  00000001401508C2  mov     ecx, r10d
+  00000001401508C5  xor     ecx, r9d
+  00000001401508C8  rol     edx, 1
+  00000001401508CA  xor     ecx, r11d
+  00000001401508CD  mov     [rsp+340h+var_314], edx
+  00000001401508D1  rol     r11d, 1Eh
+  00000001401508D5  mov     eax, ebx
+  00000001401508D7  rol     eax, 5
+  00000001401508DA  add     eax, r8d
+  00000001401508DD  rol     r13d, 1
+  00000001401508E0  add     ecx, eax
+  00000001401508E2  mov     [rsp+340h+var_308], r13d
+  00000001401508E7  lea     r8d, [rdx+6ED9EBA1h]
+  00000001401508EE  mov     eax, r11d
+  00000001401508F1  add     r8d, ecx
+  00000001401508F4  and     eax, r10d
+  00000001401508F7  mov     ecx, r11d
+  00000001401508FA  mov     edx, r8d
+  00000001401508FD  jmp     loc_140150A96
+  0000000140150902  dw 5F41h, 5D41h, 5E41h
+  0000000140150908  dq 57EEE8FFFE771DE9h, 0FFFDB04A8A0FFFF6h, 0F000000E8C48148h
+  0000000140150A90  db 5Dh, 0E9h, 0D1h, 5Ch, 2 dup(0FFh)
+  0000000140150A96  or      ecx, r10d
+  0000000140150A99  rol     edx, 5
+  0000000140150A9C  and     ecx, ebx
+  0000000140150A9E  rol     ebx, 1Eh
+  0000000140150AA1  or      ecx, eax
+  0000000140150AA3  mov     eax, [rsp+340h+var_304]
+  0000000140150AA7  add     ecx, r9d
+  0000000140150AAA  xor     eax, esi
+  0000000140150AAC  xor     eax, [rsp+340h+var_2E0]
+  0000000140150AB0  lea     r9d, [rdx+r13]
+  0000000140150AB4  mov     r13d, [rsp+340h+var_318]
+  0000000140150AB9  add     ecx, 8F1BBCDCh
+  0000000140150ABF  add     r9d, ecx
+  0000000140150AC2  xor     eax, r13d
+  0000000140150AC5  rol     eax, 1
+  0000000140150AC7  mov     edx, r9d
+  0000000140150ACA  mov     [rsp+340h+var_2F8], eax
+  0000000140150ACE  mov     ecx, ebx
+  0000000140150AD0  or      ecx, r11d
+  0000000140150AD3  rol     edx, 5
+  0000000140150AD6  add     edx, [rsp+340h+var_2F8]
+  0000000140150ADA  and     ecx, r8d
+  0000000140150ADD  rol     r8d, 1Eh
+  0000000140150AE1  mov     eax, ebx
+  0000000140150AE3  and     eax, r11d
+  0000000140150AE6  or      ecx, eax
+  0000000140150AE8  mov     eax, [rsp+340h+var_2F0]
+  0000000140150AEC  xor     eax, [rsp+340h+var_300]
+  0000000140150AF0  add     ecx, r10d
+  0000000140150AF3  xor     eax, [rsp+340h+var_314]
+  0000000140150AF7  lea     r10d, [rdx-70E44324h]
+  0000000140150AFE  add     r10d, ecx
+  0000000140150B01  xor     eax, edi
+  0000000140150B03  rol     eax, 1
+  0000000140150B05  mov     edx, r10d
+  0000000140150B08  mov     [rsp+340h+var_2E8], eax
+  0000000140150B0C  mov     ecx, r8d
+  0000000140150B0F  or      ecx, ebx
+  0000000140150B11  rol     edx, 5
+  0000000140150B14  add     edx, [rsp+340h+var_2E8]
+  0000000140150B18  and     ecx, r9d
+  0000000140150B1B  mov     eax, r8d
+  0000000140150B1E  and     eax, ebx
+  0000000140150B20  or      ecx, eax
+  0000000140150B22  add     ecx, r11d
+  0000000140150B25  lea     r11d, [rdx-70E44324h]
+  0000000140150B2C  add     r11d, ecx
+  0000000140150B2F  rol     r9d, 1Eh
+  0000000140150B33  mov     r14d, [rsp+340h+var_31C]
+  0000000140150B38  mov     ecx, r9d
+  0000000140150B3B  jmp     loc_140150CA7
+  0000000140150B40  dq 70B0E8FFFDF419E9h, 0D8F7830FFFFEh, 8C0FF6D040C48B49h
+  0000000140150CA0  db 0FFh, 0Fh, 8Ch, 0EAh, 8Ah, 0FDh, 0FFh
+  0000000140150CA7  or      ecx, r8d
+  0000000140150CAA  mov     edx, r11d
+  0000000140150CAD  and     ecx, r10d
+  0000000140150CB0  rol     edx, 5
+  0000000140150CB3  rol     r10d, 1Eh
+  0000000140150CB7  mov     eax, r15d
+  0000000140150CBA  xor     eax, [rsp+340h+var_304]
+  0000000140150CBE  xor     eax, [rsp+340h+var_308]
+  0000000140150CC2  xor     eax, r14d
+  0000000140150CC5  rol     eax, 1
+  0000000140150CC7  mov     [rsp+340h+var_2EC], eax
+  0000000140150CCB  mov     eax, r9d
+  0000000140150CCE  add     edx, [rsp+340h+var_2EC]
+  0000000140150CD2  and     eax, r8d
+  0000000140150CD5  or      ecx, eax
+  0000000140150CD7  mov     eax, [rsp+340h+var_2E4]
+  0000000140150CDB  xor     eax, [rsp+340h+var_2F0]
+  0000000140150CDF  add     ecx, ebx
+  0000000140150CE1  xor     eax, [rsp+340h+var_2F8]
+  0000000140150CE5  xor     eax, [rsp+340h+var_2DC]
+  0000000140150CE9  lea     ebx, [rdx-70E44324h]
+  0000000140150CEF  rol     eax, 1
+  0000000140150CF1  add     ebx, ecx
+  0000000140150CF3  mov     [rsp+340h+var_30C], eax
+  0000000140150CF7  mov     ecx, r10d
+  0000000140150CFA  or      ecx, r9d
+  0000000140150CFD  mov     eax, r10d
+  0000000140150D00  and     eax, r9d
+  0000000140150D03  and     ecx, r11d
+  0000000140150D06  or      ecx, eax
+  0000000140150D08  rol     r11d, 1Eh
+  0000000140150D0C  mov     eax, [rsp+340h+var_2F4]
+  0000000140150D10  add     ecx, r8d
+  0000000140150D13  xor     eax, r15d
+  0000000140150D16  mov     edx, ebx
+  0000000140150D18  xor     eax, [rsp+340h+var_2E8]
+  0000000140150D1C  xor     eax, [rsp+340h+var_310]
+  0000000140150D20  rol     eax, 1
+  0000000140150D22  mov     [rsp+340h+var_318], eax
+  0000000140150D26  mov     eax, r11d
+  0000000140150D29  mov     r15d, [rsp+340h+var_318]
+  0000000140150D2E  and     eax, r10d
+  0000000140150D31  rol     edx, 5
+  0000000140150D34  add     edx, [rsp+340h+var_30C]
+  0000000140150D38  lea     r8d, [rdx-70E44324h]
+  0000000140150D3F  add     r8d, ecx
+  0000000140150D42  mov     ecx, r11d
+  0000000140150D45  or      ecx, r10d
+  0000000140150D48  mov     edx, r8d
+  0000000140150D4B  and     ecx, ebx
+  0000000140150D4D  jmp     loc_140150E9D
+  0000000140150D52  dw 0E95Dh, 6F97h, 0FFFFh
+  0000000140150D58  dq 98FFFFB641E95C41h, 4E5D705D74730923h, 0C451F5724345AB53h
+  0000000140150E98  db 89h, 1Ch, 0ACh, 0FDh, 0FFh
+  0000000140150E9D  rol     edx, 5
+  0000000140150EA0  or      ecx, eax
+  0000000140150EA2  rol     ebx, 1Eh
+  0000000140150EA5  mov     eax, [rsp+340h+var_2E4]
+  0000000140150EA9  add     ecx, r9d
+  0000000140150EAC  xor     eax, [rsp+340h+var_2EC]
+  0000000140150EB0  add     ecx, 8F1BBCDCh
+  0000000140150EB6  xor     eax, [rsp+340h+var_2E0]
+  0000000140150EBA  lea     r9d, [r15+rdx]
+  0000000140150EBE  add     r9d, ecx
+  0000000140150EC1  xor     eax, r12d
+  0000000140150EC4  rol     eax, 1
+  0000000140150EC6  mov     edx, r9d
+  0000000140150EC9  mov     [rsp+340h+var_2E4], eax
+  0000000140150ECD  mov     ecx, ebx
+  0000000140150ECF  or      ecx, r11d
+  0000000140150ED2  rol     edx, 5
+  0000000140150ED5  add     edx, [rsp+340h+var_2E4]
+  0000000140150ED9  and     ecx, r8d
+  0000000140150EDC  mov     eax, ebx
+  0000000140150EDE  rol     r8d, 1Eh
+  0000000140150EE2  and     eax, r11d
+  0000000140150EE5  or      ecx, eax
+  0000000140150EE7  mov     eax, [rsp+340h+var_2F4]
+  0000000140150EEB  xor     eax, [rsp+340h+var_30C]
+  0000000140150EEF  add     ecx, r10d
+  0000000140150EF2  lea     r10d, [rdx-70E44324h]
+  0000000140150EF9  add     r10d, ecx
+  0000000140150EFC  xor     eax, [rsp+340h+var_314]
+  0000000140150F00  xor     r15d, [rsp+340h+var_308]
+  0000000140150F05  xor     eax, r13d
+  0000000140150F08  xor     r15d, edi
+  0000000140150F0B  rol     eax, 1
+  0000000140150F0D  xor     r15d, r12d
+  0000000140150F10  mov     [rsp+340h+var_2F4], eax
+  0000000140150F14  mov     r12d, [rsp+340h+var_2E4]
+  0000000140150F19  mov     edx, r10d
+  0000000140150F1C  xor     r12d, [rsp+340h+var_2F8]
+  0000000140150F21  mov     ecx, r8d
+  0000000140150F24  or      ecx, ebx
+  0000000140150F26  rol     edx, 5
+  0000000140150F29  add     edx, [rsp+340h+var_2F4]
+  0000000140150F2D  and     ecx, r9d
+  0000000140150F30  rol     r15d, 1
+  0000000140150F33  xor     r12d, r14d
+  0000000140150F36  rol     r9d, 1Eh
+  0000000140150F3A  mov     eax, r8d
+  0000000140150F3D  and     eax, ebx
+  0000000140150F3F  mov     [rsp+340h+var_320], r15d
+  0000000140150F44  mov     esi, [rsp+340h+var_320]
+  0000000140150F48  jmp     short loc_140150FC2
+  0000000140150F4A  dw 0E6E8h, 0FDC3h, 0FFFh
+  0000000140150F50  dq 80D6E8FFFFB50183h, 0FFFFF8477E8FFF4h, 0DD5BFAFFFF6D8A81h
+  0000000140150FC0  db 0FEh, 0FFh
+  0000000140150FC2  or      ecx, eax
+  0000000140150FC4  xor     esi, [rsp+340h+var_2EC]
+  0000000140150FC8  add     ecx, r11d
+  0000000140150FCB  lea     r11d, [rdx-70E44324h]
+  0000000140150FD2  mov     eax, r9d
+  0000000140150FD5  add     r11d, ecx
+  0000000140150FD8  and     eax, r8d
+  0000000140150FDB  mov     edx, r11d
+  0000000140150FDE  mov     ecx, r9d
+  0000000140150FE1  or      ecx, r8d
+  0000000140150FE4  rol     edx, 5
+  0000000140150FE7  and     ecx, r10d
+  0000000140150FEA  xor     r12d, r13d
+  0000000140150FED  or      ecx, eax
+  0000000140150FEF  rol     r10d, 1Eh
+  0000000140150FF3  add     ecx, ebx
+  0000000140150FF5  rol     r12d, 1
+  0000000140150FF8  add     ecx, 8F1BBCDCh
+  0000000140150FFE  mov     [rsp+340h+var_31C], r12d
+  0000000140151003  lea     ebx, [r15+rdx]
+  0000000140151007  mov     eax, r10d
+  000000014015100A  mov     r15d, [rsp+340h+var_2F4]
+  000000014015100F  add     ebx, ecx
+  0000000140151011  xor     r15d, [rsp+340h+var_2E8]
+  0000000140151016  and     eax, r9d
+  0000000140151019  xor     r15d, [rsp+340h+var_2DC]
+  000000014015101E  mov     edx, ebx
+  0000000140151020  rol     edx, 5
+  0000000140151023  xor     r15d, edi
+  0000000140151026  mov     edi, [rsp+340h+var_310]
+  000000014015102A  mov     ecx, r10d
+  000000014015102D  or      ecx, r9d
+  0000000140151030  rol     r15d, 1
+  0000000140151033  and     ecx, r11d
+  0000000140151036  mov     [rsp+340h+var_300], r15d
+  000000014015103B  or      ecx, eax
+  000000014015103D  rol     r11d, 1Eh
+  0000000140151041  add     ecx, r8d
+  0000000140151044  xor     esi, edi
+  0000000140151046  add     ecx, 8F1BBCDCh
+  000000014015104C  lea     r8d, [r12+rdx]
+  0000000140151050  add     r8d, ecx
+  0000000140151053  xor     esi, r14d
+  0000000140151056  mov     edx, r8d
+  0000000140151059  rol     esi, 1
+  000000014015105B  rol     edx, 5
+  000000014015105E  mov     ecx, r11d
+  0000000140151061  or      ecx, r10d
+  0000000140151064  mov     [rsp+340h+var_310], esi
+  0000000140151068  and     ecx, ebx
+  000000014015106A  jmp     loc_140151282
+  000000014015106F  db 48h
+  0000000140151070  dq 810F000000B8C481h, 49D00348FFFFD2C9h, 0C33348CB8544C08Bh
+  0000000140151280  db 0FEh, 0FFh
+  0000000140151282  mov     eax, r11d
+  0000000140151285  and     eax, r10d
+  0000000140151288  rol     ebx, 1Eh
+  000000014015128B  or      ecx, eax
+  000000014015128D  add     ecx, r9d
+  0000000140151290  lea     r9d, [r15+rdx]
+  0000000140151294  add     ecx, 8F1BBCDCh
+  000000014015129A  add     r9d, ecx
+  000000014015129D  mov     edx, r9d
+  00000001401512A0  rol     edx, 5
+  00000001401512A3  mov     r13d, r12d
+  00000001401512A6  mov     r14d, r15d
+  00000001401512A9  xor     r13d, [rsp+340h+var_30C]
+  00000001401512AE  mov     ecx, ebx
+  00000001401512B0  xor     r13d, [rsp+340h+var_2E0]
+  00000001401512B5  or      ecx, r11d
+  00000001401512B8  xor     r14d, [rsp+340h+var_318]
+  00000001401512BD  and     ecx, r8d
+  00000001401512C0  xor     r14d, [rsp+340h+var_314]
+  00000001401512C5  mov     eax, ebx
+  00000001401512C7  xor     r13d, [rsp+340h+var_2DC]
+  00000001401512CC  and     eax, r11d
+  00000001401512CF  or      ecx, eax
+  00000001401512D1  rol     r8d, 1Eh
+  00000001401512D5  add     ecx, r10d
+  00000001401512D8  rol     r13d, 1
+  00000001401512DB  add     ecx, 8F1BBCDCh
+  00000001401512E1  mov     [rsp+340h+var_2F0], r13d
+  00000001401512E6  lea     r10d, [rsi+rdx]
+  00000001401512EA  xor     r14d, edi
+  00000001401512ED  add     r10d, ecx
+  00000001401512F0  rol     r14d, 1
+  00000001401512F3  mov     r15d, esi
+  00000001401512F6  mov     [rsp+340h+var_304], r14d
+  00000001401512FB  xor     r15d, [rsp+340h+var_2E4]
+  0000000140151300  mov     edx, r10d
+  0000000140151303  xor     r15d, [rsp+340h+var_308]
+  0000000140151308  mov     ecx, r8d
+  000000014015130B  xor     r15d, [rsp+340h+var_2E0]
+  0000000140151310  or      ecx, ebx
+  0000000140151312  and     ecx, r9d
+  0000000140151315  rol     r15d, 1
+  0000000140151318  rol     r9d, 1Eh
+  000000014015131C  mov     eax, r8d
+  000000014015131F  and     eax, ebx
+  0000000140151321  rol     edx, 5
+  0000000140151324  or      ecx, eax
+  0000000140151326  mov     [rsp+340h+var_2FC], r15d
+  000000014015132B  add     ecx, r11d
+  000000014015132E  add     ebx, 8F1BBCDCh
+  0000000140151334  jmp     short loc_1401513A5
+  0000000140151336  dw 3345h
+  0000000140151338  dq 82178A0FCC8B41E4h, 0E8FFF47E21E8FFFDh, 0BEE48A0FFFFE545Bh
+  00000001401513A0  db 81h, 0A6h, 6Fh, 0FEh, 0FFh
+  00000001401513A5  add     ecx, 8F1BBCDCh
+  00000001401513AB  mov     eax, r9d
+  00000001401513AE  and     eax, r8d
+  00000001401513B1  lea     r11d, [rdx+r13]
+  00000001401513B5  add     r11d, ecx
+  00000001401513B8  mov     r12d, r13d
+  00000001401513BB  xor     r12d, [rsp+340h+var_2F4]
+  00000001401513C0  mov     edi, r11d
+  00000001401513C3  xor     r12d, [rsp+340h+var_2F8]
+  00000001401513C8  mov     ecx, r9d
+  00000001401513CB  xor     r12d, [rsp+340h+var_314]
+  00000001401513D0  or      ecx, r8d
+  00000001401513D3  and     ecx, r10d
+  00000001401513D6  rol     edi, 5
+  00000001401513D9  or      ecx, eax
+  00000001401513DB  rol     r10d, 1Eh
+  00000001401513DF  add     ecx, ebx
+  00000001401513E1  rol     r12d, 1
+  00000001401513E4  add     edi, r14d
+  00000001401513E7  mov     [rsp+340h+var_314], r12d
+  00000001401513EC  add     edi, ecx
+  00000001401513EE  add     r8d, 8F1BBCDCh
+  00000001401513F5  mov     ecx, r10d
+  00000001401513F8  mov     eax, r10d
+  00000001401513FB  or      ecx, r9d
+  00000001401513FE  and     eax, r9d
+  0000000140151401  and     ecx, r11d
+  0000000140151404  mov     esi, edi
+  0000000140151406  or      ecx, eax
+  0000000140151408  rol     esi, 5
+  000000014015140B  add     ecx, r8d
+  000000014015140E  rol     r11d, 1Eh
+  0000000140151412  add     esi, r15d
+  0000000140151415  mov     eax, r11d
+  0000000140151418  add     esi, ecx
+  000000014015141A  mov     ecx, r11d
+  000000014015141D  or      ecx, r10d
+  0000000140151420  mov     ebx, esi
+  0000000140151422  and     ecx, edi
+  0000000140151424  rol     ebx, 5
+  0000000140151427  and     eax, r10d
+  000000014015142A  xor     r14d, [rsp+340h+var_320]
+  000000014015142F  or      ecx, eax
+  0000000140151431  xor     r14d, [rsp+340h+var_2E8]
+  0000000140151436  add     r9d, 8F1BBCDCh
+  000000014015143D  xor     r14d, [rsp+340h+var_308]
+  0000000140151442  add     ecx, r9d
+  0000000140151445  xor     r15d, [rsp+340h+var_31C]
+  000000014015144A  add     r10d, 8F1BBCDCh
+  0000000140151451  xor     r15d, [rsp+340h+var_2EC]
+  0000000140151456  jmp     loc_140151605
+  000000014015145B  db 56h, 0Fh, 8Ah, 9Eh, 1Eh
+  0000000140151460  dq 41F02240C803FFFEh, 0D90344CFFE40C18Bh, 0F1D3D38B41C02341h
+  0000000140151600  db 0E9h, 0F8h, 0D2h, 0FEh, 0FFh
+  0000000140151605  add     ebx, r12d
+  0000000140151608  xor     r15d, [rsp+340h+var_2F8]
+  000000014015160D  add     ebx, ecx
+  000000014015160F  rol     edi, 1Eh
+  0000000140151612  mov     r8d, ebx
+  0000000140151615  rol     r14d, 1
+  0000000140151618  mov     ecx, edi
+  000000014015161A  or      ecx, r11d
+  000000014015161D  rol     r8d, 5
+  0000000140151621  and     ecx, esi
+  0000000140151623  mov     [rsp+340h+var_2E0], r14d
+  0000000140151628  add     r8d, r14d
+  000000014015162B  rol     esi, 1Eh
+  000000014015162E  xor     r14d, [rsp+340h+var_310]
+  0000000140151633  mov     eax, edi
+  0000000140151635  and     eax, r11d
+  0000000140151638  rol     r15d, 1
+  000000014015163B  or      ecx, eax
+  000000014015163D  mov     [rsp+340h+var_2F8], r15d
+  0000000140151642  add     ecx, r10d
+  0000000140151645  add     r11d, 8F1BBCDCh
+  000000014015164C  add     r8d, ecx
+  000000014015164F  mov     eax, esi
+  0000000140151651  and     eax, edi
+  0000000140151653  mov     r9d, r8d
+  0000000140151656  rol     r9d, 5
+  000000014015165A  mov     ecx, esi
+  000000014015165C  or      ecx, edi
+  000000014015165E  add     r9d, r15d
+  0000000140151661  and     ecx, ebx
+  0000000140151663  add     edi, 8F1BBCDCh
+  0000000140151669  or      ecx, eax
+  000000014015166B  rol     ebx, 1Eh
+  000000014015166E  add     ecx, r11d
+  0000000140151671  mov     eax, ebx
+  0000000140151673  add     r9d, ecx
+  0000000140151676  and     eax, esi
+  0000000140151678  mov     r10d, r9d
+  000000014015167B  mov     r11d, r12d
+  000000014015167E  xor     r11d, [rsp+340h+var_300]
+  0000000140151683  mov     ecx, ebx
+  0000000140151685  xor     r11d, [rsp+340h+var_30C]
+  000000014015168A  or      ecx, esi
+  000000014015168C  xor     r11d, [rsp+340h+var_2E8]
+  0000000140151691  and     ecx, r8d
+  0000000140151694  or      ecx, eax
+  0000000140151696  rol     r11d, 1
+  0000000140151699  add     ecx, edi
+  000000014015169B  rol     r10d, 5
+  000000014015169F  mov     edi, [rsp+340h+var_318]
+  00000001401516A3  jmp     loc_140151814
+  00000001401516A8  dq 358A0FFFF48D43E8h, 7E8C48148FFFE40h, 0FFFD8408810F0000h
+  0000000140151810  db 87h, 0F5h, 2 dup(0FFh)
+  0000000140151814  add     r10d, r11d
+  0000000140151817  add     r10d, ecx
+  000000014015181A  rol     r8d, 1Eh
+  000000014015181E  xor     r14d, edi
+  0000000140151821  mov     [rsp+340h+var_308], r11d
+  0000000140151826  xor     r14d, [rsp+340h+var_2EC]
+  000000014015182B  mov     ecx, r8d
+  000000014015182E  or      ecx, ebx
+  0000000140151830  rol     r14d, 1
+  0000000140151833  and     ecx, r9d
+  0000000140151836  mov     [rsp+340h+var_2EC], r14d
+  000000014015183B  mov     eax, r8d
+  000000014015183E  rol     r9d, 1Eh
+  0000000140151842  and     eax, ebx
+  0000000140151844  mov     edx, r10d
+  0000000140151847  or      ecx, eax
+  0000000140151849  rol     edx, 5
+  000000014015184C  add     ecx, 8F1BBCDCh
+  0000000140151852  add     edx, r14d
+  0000000140151855  add     ecx, esi
+  0000000140151857  add     edx, ecx
+  0000000140151859  xor     r15d, r13d
+  000000014015185C  xor     r15d, [rsp+340h+var_2E4]
+  0000000140151861  mov     ecx, edx
+  0000000140151863  xor     r15d, [rsp+340h+var_30C]
+  0000000140151868  mov     r13d, r11d
+  000000014015186B  xor     r13d, [rsp+340h+var_304]
+  0000000140151870  mov     eax, r9d
+  0000000140151873  xor     r13d, [rsp+340h+var_2F4]
+  0000000140151878  xor     eax, r8d
+  000000014015187B  mov     esi, [rsp+340h+var_320]
+  000000014015187F  xor     eax, r10d
+  0000000140151882  add     eax, ebx
+  0000000140151884  rol     ecx, 5
+  0000000140151887  add     eax, 0CA62C1D6h
+  000000014015188C  rol     r10d, 1Eh
+  0000000140151890  xor     r13d, edi
+  0000000140151893  rol     r15d, 1
+  0000000140151896  rol     r13d, 1
+  0000000140151899  mov     r12d, r14d
+  000000014015189C  xor     r12d, [rsp+340h+var_2FC]
+  00000001401518A1  mov     edi, r15d
+  00000001401518A4  xor     edi, [rsp+340h+var_314]
+  00000001401518A8  xor     r12d, esi
+  00000001401518AB  xor     edi, [rsp+340h+var_31C]
+  00000001401518AF  lea     ebx, [r15+rcx]
+  00000001401518B3  xor     r12d, [rsp+340h+var_2E4]
+  00000001401518B8  add     ebx, eax
+  00000001401518BA  xor     edi, [rsp+340h+var_2F4]
+  00000001401518BE  mov     ecx, ebx
+  00000001401518C0  jmp     loc_140151A26
+  00000001401518C5  db 0E8h, 0BEh, 4Bh
+  00000001401518C8  dq 0FFFDAE57870FFFFFh, 42860FFFFDE35FE8h, 1A9BE8FFFE10h
+  0000000140151A20  db 0Fh, 89h, 2Fh, 0Ch, 0FEh, 0FFh
+  0000000140151A26  rol     ecx, 5
+  0000000140151A29  mov     eax, r10d
+  0000000140151A2C  xor     eax, r9d
+  0000000140151A2F  rol     r12d, 1
+  0000000140151A32  xor     eax, edx
+  0000000140151A34  rol     edi, 1
+  0000000140151A36  add     eax, r8d
+  0000000140151A39  rol     edx, 1Eh
+  0000000140151A3C  add     eax, 0CA62C1D6h
+  0000000140151A41  mov     [rsp+340h+var_318], r15d
+  0000000140151A46  lea     r8d, [rcx+r13]
+  0000000140151A4A  mov     [rsp+340h+var_2DC], r13d
+  0000000140151A4F  add     r8d, eax
+  0000000140151A52  mov     [rsp+340h+var_2E8], r12d
+  0000000140151A57  mov     ecx, r8d
+  0000000140151A5A  mov     [rsp+340h+var_320], edi
+  0000000140151A5E  rol     ecx, 5
+  0000000140151A61  mov     eax, edx
+  0000000140151A63  xor     eax, r10d
+  0000000140151A66  mov     r11d, r13d
+  0000000140151A69  xor     r11d, [rsp+340h+var_2E0]
+  0000000140151A6E  xor     eax, ebx
+  0000000140151A70  xor     r11d, [rsp+340h+var_300]
+  0000000140151A75  add     eax, r9d
+  0000000140151A78  add     eax, 0CA62C1D6h
+  0000000140151A7D  rol     ebx, 1Eh
+  0000000140151A80  lea     r9d, [r12+rcx]
+  0000000140151A84  xor     r11d, esi
+  0000000140151A87  add     r9d, eax
+  0000000140151A8A  rol     r11d, 1
+  0000000140151A8D  mov     ecx, r9d
+  0000000140151A90  mov     [rsp+340h+var_30C], r11d
+  0000000140151A95  rol     ecx, 5
+  0000000140151A98  mov     eax, ebx
+  0000000140151A9A  xor     eax, edx
+  0000000140151A9C  mov     esi, r12d
+  0000000140151A9F  xor     eax, r8d
+  0000000140151AA2  rol     r8d, 1Eh
+  0000000140151AA6  add     eax, r10d
+  0000000140151AA9  add     eax, 0CA62C1D6h
+  0000000140151AAE  lea     r10d, [rdi+rcx]
+  0000000140151AB2  add     r10d, eax
+  0000000140151AB5  mov     eax, r8d
+  0000000140151AB8  xor     eax, ebx
+  0000000140151ABA  mov     ecx, r10d
+  0000000140151ABD  xor     eax, r9d
+  0000000140151AC0  rol     ecx, 5
+  0000000140151AC3  add     eax, edx
+  0000000140151AC5  rol     r9d, 1Eh
+  0000000140151AC9  add     eax, 0CA62C1D6h
+  0000000140151ACE  jmp     loc_140151CDA
+  0000000140151AD3  db 55h, 0Fh, 81h, 0D3h, 14h
+  0000000140151AD8  dq 0ED72767B11F2FFFFh, 55045E53CD1B595Ah, 1B0C4814858h
+  0000000140151CD8  db 2 dup(0FFh)
+  0000000140151CDA  lea     edx, [r11+rcx]
+  0000000140151CDE  add     edx, eax
+  0000000140151CE0  xor     esi, [rsp+340h+var_2F8]
+  0000000140151CE4  xor     esi, [rsp+340h+var_310]
+  0000000140151CE8  xor     r11d, r14d
+  0000000140151CEB  xor     esi, [rsp+340h+var_31C]
+  0000000140151CEF  mov     ecx, edx
+  0000000140151CF1  xor     edi, [rsp+340h+var_308]
+  0000000140151CF5  mov     eax, r9d
+  0000000140151CF8  xor     edi, [rsp+340h+var_2F0]
+  0000000140151CFC  xor     eax, r8d
+  0000000140151CFF  xor     edi, [rsp+340h+var_300]
+  0000000140151D03  xor     eax, r10d
+  0000000140151D06  xor     r11d, [rsp+340h+var_304]
+  0000000140151D0B  add     eax, ebx
+  0000000140151D0D  xor     r11d, [rsp+340h+var_310]
+  0000000140151D12  add     eax, 0CA62C1D6h
+  0000000140151D17  rol     ecx, 5
+  0000000140151D1A  rol     r10d, 1Eh
+  0000000140151D1E  rol     esi, 1
+  0000000140151D20  rol     r11d, 1
+  0000000140151D23  mov     r14d, esi
+  0000000140151D26  xor     r14d, r15d
+  0000000140151D29  rol     edi, 1
+  0000000140151D2B  mov     r15d, edi
+  0000000140151D2E  mov     [rsp+340h+var_31C], esi
+  0000000140151D32  lea     ebx, [rsi+rcx]
+  0000000140151D35  mov     [rsp+340h+var_310], r11d
+  0000000140151D3A  mov     esi, [rsp+340h+var_2FC]
+  0000000140151D3E  add     ebx, eax
+  0000000140151D40  xor     r15d, r13d
+  0000000140151D43  mov     ecx, ebx
+  0000000140151D45  xor     r15d, [rsp+340h+var_314]
+  0000000140151D4A  xor     r14d, esi
+  0000000140151D4D  xor     r14d, [rsp+340h+var_2F0]
+  0000000140151D52  mov     eax, r10d
+  0000000140151D55  xor     r15d, [rsp+340h+var_304]
+  0000000140151D5A  xor     eax, r9d
+  0000000140151D5D  xor     eax, edx
+  0000000140151D5F  rol     ecx, 5
+  0000000140151D62  add     eax, r8d
+  0000000140151D65  rol     edx, 1Eh
+  0000000140151D68  add     eax, 0CA62C1D6h
+  0000000140151D6D  rol     r14d, 1
+  0000000140151D70  rol     r15d, 1
+  0000000140151D73  mov     r13d, r11d
+  0000000140151D76  lea     r8d, [rdi+rcx]
+  0000000140151D7A  mov     [rsp+340h+var_2FC], r14d
+  0000000140151D7F  add     r8d, eax
+  0000000140151D82  mov     [rsp+340h+var_300], r15d
+  0000000140151D87  jmp     loc_140151EEF
+  0000000140151D8C  dd 60C48148h
+  0000000140151D90  dq 0FFA78C8D0F000004h, 890FFFF44812E8FFh, 0D041CA23FFFDCEE0h
+  0000000140151EE8  db 52h, 0Fh, 80h, 86h, 2Dh, 0FEh, 0FFh
+  0000000140151EEF  mov     ecx, r8d
+  0000000140151EF2  mov     eax, edx
+  0000000140151EF4  xor     eax, r10d
+  0000000140151EF7  rol     ecx, 5
+  0000000140151EFA  xor     eax, ebx
+  0000000140151EFC  xor     r13d, r12d
+  0000000140151EFF  xor     r13d, [rsp+340h+var_2E0]
+  0000000140151F04  add     eax, r9d
+  0000000140151F07  add     eax, 0CA62C1D6h
+  0000000140151F0C  rol     ebx, 1Eh
+  0000000140151F0F  lea     r9d, [r11+rcx]
+  0000000140151F13  xor     r13d, esi
+  0000000140151F16  add     r9d, eax
+  0000000140151F19  mov     eax, ebx
+  0000000140151F1B  xor     eax, edx
+  0000000140151F1D  mov     ecx, r9d
+  0000000140151F20  xor     eax, r8d
+  0000000140151F23  rol     ecx, 5
+  0000000140151F26  add     eax, r10d
+  0000000140151F29  rol     r8d, 1Eh
+  0000000140151F2D  add     eax, 0CA62C1D6h
+  0000000140151F32  lea     r10d, [r14+rcx]
+  0000000140151F36  add     r10d, eax
+  0000000140151F39  mov     eax, r8d
+  0000000140151F3C  xor     eax, ebx
+  0000000140151F3E  mov     ecx, r10d
+  0000000140151F41  xor     eax, r9d
+  0000000140151F44  rol     ecx, 5
+  0000000140151F47  add     eax, edx
+  0000000140151F49  rol     r9d, 1Eh
+  0000000140151F4D  add     eax, 0CA62C1D6h
+  0000000140151F52  lea     edx, [r15+rcx]
+  0000000140151F56  add     edx, eax
+  0000000140151F58  rol     r13d, 1
+  0000000140151F5B  mov     r12d, r14d
+  0000000140151F5E  mov     eax, r9d
+  0000000140151F61  xor     r12d, [rsp+340h+var_320]
+  0000000140151F66  xor     eax, r8d
+  0000000140151F69  xor     r12d, [rsp+340h+var_2F8]
+  0000000140151F6E  xor     eax, r10d
+  0000000140151F71  xor     r12d, [rsp+340h+var_314]
+  0000000140151F76  add     eax, 0CA62C1D6h
+  0000000140151F7B  add     eax, ebx
+  0000000140151F7D  rol     r10d, 1Eh
+  0000000140151F81  mov     r14d, r15d
+  0000000140151F84  rol     r12d, 1
+  0000000140151F87  xor     r14d, [rsp+340h+var_30C]
+  0000000140151F8C  mov     esi, edx
+  0000000140151F8E  xor     r14d, [rsp+340h+var_308]
+  0000000140151F93  mov     r15d, r13d
+  0000000140151F96  jmp     loc_14015220A
+  0000000140151F9B  db 2 dup(0E8h), 72h, 0F4h, 0FFh
+  0000000140151FA0  dq 7800FFFFF09C0E8h, 0FFCCEB8B0FFFFDECh, 0E848E95E415C41FFh
+  0000000140152208  add     [rax], eax
+  000000014015220A  xor     r14d, [rsp+340h+var_2E0]
+  000000014015220F  mov     ebx, r12d
+  0000000140152212  xor     r15d, [rsp+340h+var_31C]
+  0000000140152217  xor     ebx, edi
+  0000000140152219  xor     r15d, [rsp+340h+var_2EC]
+  000000014015221E  xor     r15d, [rsp+340h+var_2F8]
+  0000000140152223  xor     ebx, [rsp+340h+var_318]
+  0000000140152227  xor     ebx, [rsp+340h+var_308]
+  000000014015222B  rol     r14d, 1
+  000000014015222E  rol     esi, 5
+  0000000140152231  add     esi, r13d
+  0000000140152234  rol     r15d, 1
+  0000000140152237  add     esi, eax
+  0000000140152239  rol     ebx, 1
+  000000014015223B  mov     ecx, esi
+  000000014015223D  mov     eax, r10d
+  0000000140152240  xor     eax, r9d
+  0000000140152243  rol     ecx, 5
+  0000000140152246  xor     eax, edx
+  0000000140152248  rol     edx, 1Eh
+  000000014015224B  add     eax, r8d
+  000000014015224E  add     eax, 0CA62C1D6h
+  0000000140152253  lea     r8d, [r12+rcx]
+  0000000140152257  add     r8d, eax
+  000000014015225A  mov     eax, edx
+  000000014015225C  xor     eax, r10d
+  000000014015225F  mov     r11d, r8d
+  0000000140152262  xor     eax, esi
+  0000000140152264  rol     r11d, 5
+  0000000140152268  add     eax, 0CA62C1D6h
+  000000014015226D  rol     esi, 1Eh
+  0000000140152270  add     eax, r9d
+  0000000140152273  add     r11d, r14d
+  0000000140152276  xor     r14d, [rsp+340h+var_310]
+  000000014015227B  add     r11d, eax
+  000000014015227E  xor     r14d, [rsp+340h+var_2DC]
+  0000000140152283  mov     ecx, r11d
+  0000000140152286  xor     r14d, [rsp+340h+var_2EC]
+  000000014015228B  mov     eax, esi
+  000000014015228D  xor     eax, edx
+  000000014015228F  rol     ecx, 5
+  0000000140152292  xor     eax, r8d
+  0000000140152295  rol     r14d, 1
+  0000000140152298  add     eax, r10d
+  000000014015229B  rol     r8d, 1Eh
+  000000014015229F  add     eax, 0CA62C1D6h
+  00000001401522A4  lea     r10d, [r15+rcx]
+  00000001401522A8  add     r10d, eax
+  00000001401522AB  mov     eax, r8d
+  00000001401522AE  xor     eax, esi
+  00000001401522B0  jmp     loc_1401523FD
+  00000001401522B5  db 48h, 8Bh, 75h
+  00000001401522B8  dq 45FFFEC33D8A0FE8h, 41F9C203ED8BD533h, 0D040D733451EC0C1h
+  00000001401523F0  db 0D0h, 0AEh, 0FEh, 0FFh
+  00000001401523F4  mov     rsp, r11
+  00000001401523F7  pop     rbp
+  00000001401523F8  jmp     loc_1401597CE
+  00000001401523FD  mov     edi, r10d
+  0000000140152400  xor     eax, r11d
+  0000000140152403  rol     edi, 5
+  0000000140152406  add     eax, 0CA62C1D6h
+  000000014015240B  rol     r11d, 1Eh
+  000000014015240F  add     eax, edx
+  0000000140152411  add     edi, ebx
+  0000000140152413  add     edi, eax
+  0000000140152415  mov     eax, r11d
+  0000000140152418  xor     eax, r8d
+  000000014015241B  mov     r9d, edi
+  000000014015241E  xor     eax, r10d
+  0000000140152421  rol     r9d, 5
+  0000000140152425  add     eax, 0CA62C1D6h
+  000000014015242A  add     r9d, r14d
+  000000014015242D  xor     r15d, [rsp+340h+var_2FC]
+  0000000140152432  add     eax, esi
+  0000000140152434  xor     r15d, [rsp+340h+var_2E8]
+  0000000140152439  add     r9d, eax
+  000000014015243C  xor     r15d, [rsp+340h+var_318]
+  0000000140152441  xor     r14d, r13d
+  0000000140152444  xor     ebx, [rsp+340h+var_300]
+  0000000140152448  mov     eax, r11d
+  000000014015244B  xor     ebx, [rsp+340h+var_320]
+  000000014015244F  xor     eax, edi
+  0000000140152451  xor     ebx, [rsp+340h+var_2DC]
+  0000000140152455  mov     ecx, r9d
+  0000000140152458  xor     r14d, [rsp+340h+var_30C]
+  000000014015245D  xor     r14d, [rsp+340h+var_2E8]
+  0000000140152462  mov     esi, [rbp+240h+var_17C]
+  0000000140152468  rol     ecx, 5
+  000000014015246B  rol     r15d, 1
+  000000014015246E  rol     r10d, 1Eh
+  0000000140152472  xor     eax, r10d
+  0000000140152475  rol     ebx, 1
+  0000000140152477  add     eax, r8d
+  000000014015247A  rol     edi, 1Eh
+  000000014015247D  lea     r8d, [r15+rcx]
+  0000000140152481  rol     r14d, 1
+  0000000140152484  add     eax, 0CA62C1D6h
+  0000000140152489  add     ebx, r11d
+  000000014015248C  mov     r11d, [rbp+240h+var_174]
+  0000000140152493  add     r8d, eax
+  0000000140152496  xor     r15d, r12d
+  0000000140152499  mov     ecx, r9d
+  000000014015249C  xor     r15d, [rsp+340h+var_31C]
+  00000001401524A1  lea     eax, [r10+r14]
+  00000001401524A5  xor     r15d, [rsp+340h+var_320]
+  00000001401524AA  xor     ecx, edi
+  00000001401524AC  mov     r14d, [rbp+240h+var_170]
+  00000001401524B3  jmp     loc_140152602
+  00000001401524B8  dq 0E8FFFEB6878E0F55h, 38588E0FFFFFDD66h, 0DFE876B34841FFFFh
+  0000000140152600  db 2 dup(0FFh)
+  0000000140152602  xor     ecx, r10d
+  0000000140152605  mov     r10d, [rbp+240h+var_178]
+  000000014015260C  add     ecx, 0CA62C1D6h
+  0000000140152612  rol     r9d, 1Eh
+  0000000140152616  mov     edx, r8d
+  0000000140152619  rol     edx, 5
+  000000014015261C  add     r14d, r9d
+  000000014015261F  add     ebx, edx
+  0000000140152621  rol     r15d, 1
+  0000000140152624  add     ebx, ecx
+  0000000140152626  mov     [rbp+240h+var_170], r14d
+  000000014015262D  mov     ecx, r8d
+  0000000140152630  mov     edx, ebx
+  0000000140152632  xor     ecx, r9d
+  0000000140152635  rol     r8d, 1Eh
+  0000000140152639  xor     ecx, edi
+  000000014015263B  rol     edx, 5
+  000000014015263E  add     edx, eax
+  0000000140152640  add     ecx, 0CA62C1D6h
+  0000000140152646  add     ecx, edx
+  0000000140152648  add     r11d, r8d
+  000000014015264B  mov     eax, ecx
+  000000014015264D  mov     [rbp+240h+var_174], r11d
+  0000000140152654  rol     eax, 5
+  0000000140152657  add     esi, ecx
+  0000000140152659  add     r15d, eax
+  000000014015265C  mov     [rbp+240h+var_17C], esi
+  0000000140152662  mov     eax, ebx
+  0000000140152664  rol     ebx, 1Eh
+  0000000140152667  xor     eax, r8d
+  000000014015266A  add     r10d, ebx
+  000000014015266D  xor     eax, r9d
+  0000000140152670  mov     [rbp+240h+var_178], r10d
+  0000000140152677  add     eax, 0CA62C1D6h
+  000000014015267C  add     eax, edi
+  000000014015267E  add     eax, [rbp+240h+var_180]
+  0000000140152684  add     r15d, eax
+  0000000140152687  mov     rax, [rbp+240h+var_290]
+  000000014015268B  mov     [rbp+240h+var_180], r15d
+  0000000140152692  lea     rcx, [rax+3Fh]
+  0000000140152696  mov     [rbp+240h+var_280], rcx
+  000000014015269A  cmp     rcx, 8
+  000000014015269E  jnb     loc_1401568A3
+  00000001401526A4  jmp     short loc_14015271D
+  00000001401526A6  dw 98E8h
+  00000001401526A8  dq 0FEAB0D810FFFFEEAh, 0FFFE61A0830F53FFh, 0F8FFFF84D18B0F51h
+  0000000140152718  db 8Ah, 2, 0B2h, 0FEh, 0FFh
+  000000014015271D  lea     rdx, [rsp+340h+var_2D0]
+  0000000140152722  sub     rdx, rax
+  0000000140152725  lea     rax, [rbp+240h+var_268]
+  0000000140152729  sub     rdx, rax
+  000000014015272C  sub     rdx, 2
+  0000000140152730  mov     [rbp-38h], rdx
+  0000000140152734  jmp     short loc_1401527B1
+  0000000140152736  dw 5C41h
+  0000000140152738  dq 70FFFDEA88E95E41h, 72568D5905209E96h, 7C538DE75F525320h
+  00000001401527B0  db 0FFh
+  00000001401527B1  lea     rbx, [rbp+rcx+240h+var_2A8+3]
+  00000001401527B6  mov     r8d, 10h
+  00000001401527BC  jmp     loc_140152AEE
+  00000001401527C1  db 2 dup(0C1h), 5, 45h, 8Bh, 0DFh, 44h
+  00000001401527C8  dq 3DBD2C038245C33h, 0C383D803F82240D9h, 334554246C894435h
+  0000000140152AE8  db 0Fh, 8Eh, 0B9h, 0ECh, 0FDh, 0FFh
+  0000000140152AEE  movzx   eax, byte ptr [rbx-1]
+  0000000140152AF2  movzx   ecx, byte ptr [rbx-2]
+  0000000140152AF6  shl     ecx, 8
+  0000000140152AF9  or      ecx, eax
+  0000000140152AFB  movzx   eax, byte ptr [rbx]
+  0000000140152AFE  shl     ecx, 8
+  0000000140152B01  or      ecx, eax
+  0000000140152B03  movzx   eax, byte ptr [rbx+1]
+  0000000140152B07  shl     ecx, 8
+  0000000140152B0A  or      ecx, eax
+  0000000140152B0C  mov     [rbx+rdx], ecx
+  0000000140152B0F  lea     rbx, [rbx+4]
+  0000000140152B13  sub     r8, 1
+  0000000140152B17  jnz     short loc_140152AEE
+  0000000140152B19  jmp     loc_140152BAF
+  0000000140152B1E  dw 0F55h
+  0000000140152B20  dq 1A310FFFFE8C338Bh, 0C20B4820E2C148D0h, 48310FC88B48E9D1h
+  0000000140152BA8  db 0FFh, 0Fh, 8Eh, 0FAh, 44h, 2 dup(0FFh)
+  0000000140152BAF  mov     r12d, [rsp+340h+var_2C4]
+  0000000140152BB4  mov     r8d, r11d
+  0000000140152BB7  mov     r13d, [rbp+240h+var_2C0]
+  0000000140152BBB  xor     r8d, r10d
+  0000000140152BBE  and     r8d, esi
+  0000000140152BC1  mov     eax, r15d
+  0000000140152BC4  rol     eax, 5
+  0000000140152BC7  xor     r8d, r11d
+  0000000140152BCA  add     eax, 5A827999h
+  0000000140152BCF  mov     ebx, r15d
+  0000000140152BD2  add     eax, [rsp+340h+var_2D0]
+  0000000140152BD6  mov     edx, esi
+  0000000140152BD8  add     r8d, eax
+  0000000140152BDB  rol     edx, 1Eh
+  0000000140152BDE  rol     ebx, 1Eh
+  0000000140152BE1  add     r8d, r14d
+  0000000140152BE4  mov     r9d, edx
+  0000000140152BE7  mov     eax, r8d
+  0000000140152BEA  rol     eax, 5
+  0000000140152BED  xor     r9d, r10d
+  0000000140152BF0  add     eax, 5A827999h
+  0000000140152BF5  and     r9d, r15d
+  0000000140152BF8  add     eax, [rsp+340h+var_2CC]
+  0000000140152BFC  xor     r9d, r10d
+  0000000140152BFF  mov     r15d, [rsp+340h+var_2C8]
+  0000000140152C04  add     r9d, eax
+  0000000140152C07  add     r9d, r11d
+  0000000140152C0A  mov     ecx, ebx
+  0000000140152C0C  mov     r11d, [rbp+240h+var_2BC]
+  0000000140152C10  xor     ecx, edx
+  0000000140152C12  and     ecx, r8d
+  0000000140152C15  mov     eax, r9d
+  0000000140152C18  xor     ecx, edx
+  0000000140152C1A  rol     eax, 5
+  0000000140152C1D  add     eax, 5A827999h
+  0000000140152C22  rol     r8d, 1Eh
+  0000000140152C26  add     eax, r15d
+  0000000140152C29  add     ecx, eax
+  0000000140152C2B  add     r10d, ecx
+  0000000140152C2E  mov     ecx, ebx
+  0000000140152C30  xor     ecx, r8d
+  0000000140152C33  mov     eax, r10d
+  0000000140152C36  and     ecx, r9d
+  0000000140152C39  rol     eax, 5
+  0000000140152C3C  xor     ecx, ebx
+  0000000140152C3E  rol     r9d, 1Eh
+  0000000140152C42  add     eax, edx
+  0000000140152C44  lea     edx, [r12+5A827999h]
+  0000000140152C4C  add     ecx, eax
+  0000000140152C4E  add     edx, ecx
+  0000000140152C50  jmp     loc_140152CF6
+  0000000140152C55  db 50h, 0Fh, 8Eh
+  0000000140152C58  dq 8F0F5241FFFE2219h, 90C48148FFFE90E4h, 0FDB5D7810F000005h
+  0000000140152CF0  db 0Fh, 8Ch, 0B9h, 0FFh, 0FDh, 0FFh
+  0000000140152CF6  mov     ecx, r9d
+  0000000140152CF9  xor     ecx, r8d
+  0000000140152CFC  mov     eax, edx
+  0000000140152CFE  and     ecx, r10d
+  0000000140152D01  rol     eax, 5
+  0000000140152D04  xor     ecx, r8d
+  0000000140152D07  rol     r10d, 1Eh
+  0000000140152D0B  add     eax, ebx
+  0000000140152D0D  lea     ebx, [r13+5A827999h]
+  0000000140152D14  add     ecx, eax
+  0000000140152D16  add     ebx, ecx
+  0000000140152D18  mov     ecx, r10d
+  0000000140152D1B  xor     ecx, r9d
+  0000000140152D1E  mov     eax, ebx
+  0000000140152D20  and     ecx, edx
+  0000000140152D22  rol     eax, 5
+  0000000140152D25  xor     ecx, r9d
+  0000000140152D28  rol     edx, 1Eh
+  0000000140152D2B  add     ecx, 5A827999h
+  0000000140152D31  add     r11d, eax
+  0000000140152D34  add     r11d, ecx
+  0000000140152D37  mov     ecx, edx
+  0000000140152D39  add     r11d, r8d
+  0000000140152D3C  xor     ecx, r10d
+  0000000140152D3F  and     ecx, ebx
+  0000000140152D41  lea     r8d, [r9+5A827999h]
+  0000000140152D48  mov     eax, r11d
+  0000000140152D4B  xor     ecx, r10d
+  0000000140152D4E  rol     eax, 5
+  0000000140152D51  add     eax, [rbp+240h+var_2B8]
+  0000000140152D54  add     ecx, eax
+  0000000140152D56  add     r8d, ecx
+  0000000140152D59  rol     ebx, 1Eh
+  0000000140152D5C  mov     eax, r8d
+  0000000140152D5F  mov     r9d, ebx
+  0000000140152D62  rol     eax, 5
+  0000000140152D65  xor     r9d, edx
+  0000000140152D68  add     eax, 5A827999h
+  0000000140152D6D  and     r9d, r11d
+  0000000140152D70  add     eax, [rbp+240h+var_2B4]
+  0000000140152D73  xor     r9d, edx
+  0000000140152D76  add     r9d, eax
+  0000000140152D79  rol     r11d, 1Eh
+  0000000140152D7D  add     r9d, r10d
+  0000000140152D80  mov     ecx, r11d
+  0000000140152D83  xor     ecx, ebx
+  0000000140152D85  lea     r10d, [rdx+5A827999h]
+  0000000140152D8C  and     ecx, r8d
+  0000000140152D8F  lea     edx, [rbx+5A827999h]
+  0000000140152D95  xor     ecx, ebx
+  0000000140152D97  jmp     short loc_140152E09
+  0000000140152D99  db 55h, 0Fh, 8Eh, 0BEh, 7, 0FEh, 0FFh
+  0000000140152DA0  dq 0FFFFEA1AE95D5E41h, 8F8C0FFFFD7B84E8h, 418C48148FFFF85h
+  0000000140152E08  db 0FFh
+  0000000140152E09  rol     r8d, 1Eh
+  0000000140152E0D  mov     eax, r9d
+  0000000140152E10  lea     ebx, [r11+5A827999h]
+  0000000140152E17  rol     eax, 5
+  0000000140152E1A  add     eax, [rbp+240h+var_2B0]
+  0000000140152E1D  add     ecx, eax
+  0000000140152E1F  add     r10d, ecx
+  0000000140152E22  mov     ecx, r8d
+  0000000140152E25  xor     ecx, r11d
+  0000000140152E28  mov     eax, r10d
+  0000000140152E2B  and     ecx, r9d
+  0000000140152E2E  rol     eax, 5
+  0000000140152E31  add     eax, [rbp+240h+var_2AC]
+  0000000140152E34  xor     ecx, r11d
+  0000000140152E37  add     ecx, eax
+  0000000140152E39  rol     r9d, 1Eh
+  0000000140152E3D  add     edx, ecx
+  0000000140152E3F  lea     r11d, [r8+5A827999h]
+  0000000140152E46  mov     ecx, r9d
+  0000000140152E49  mov     eax, edx
+  0000000140152E4B  xor     ecx, r8d
+  0000000140152E4E  rol     eax, 5
+  0000000140152E51  add     eax, [rbp+240h+var_2A8]
+  0000000140152E54  and     ecx, r10d
+  0000000140152E57  xor     ecx, r8d
+  0000000140152E5A  rol     r10d, 1Eh
+  0000000140152E5E  add     ecx, eax
+  0000000140152E60  add     ebx, ecx
+  0000000140152E62  mov     ecx, r10d
+  0000000140152E65  xor     ecx, r9d
+  0000000140152E68  mov     eax, ebx
+  0000000140152E6A  rol     eax, 5
+  0000000140152E6D  and     ecx, edx
+  0000000140152E6F  add     eax, [rbp+240h+var_2A4]
+  0000000140152E72  xor     ecx, r9d
+  0000000140152E75  add     ecx, eax
+  0000000140152E77  rol     edx, 1Eh
+  0000000140152E7A  add     r11d, ecx
+  0000000140152E7D  mov     r8d, edx
+  0000000140152E80  xor     r8d, r10d
+  0000000140152E83  mov     eax, r11d
+  0000000140152E86  rol     eax, 5
+  0000000140152E89  and     r8d, ebx
+  0000000140152E8C  add     eax, 5A827999h
+  0000000140152E91  rol     ebx, 1Eh
+  0000000140152E94  add     eax, [rbp+240h+var_2A0]
+  0000000140152E97  xor     r8d, r10d
+  0000000140152E9A  add     r8d, eax
+  0000000140152E9D  mov     ecx, ebx
+  0000000140152E9F  add     r8d, r9d
+  0000000140152EA2  jmp     loc_140153066
+  0000000140152EA7  db 45h
+  0000000140152EA8  dq 8B412CC58341E433h, 0FFA4F28B0FD832CCh, 890FFFFDFFE0E8FFh
+  0000000140153060  db 0E3h, 0E9h, 4Bh, 0D9h, 0FEh, 0FFh
+  0000000140153066  xor     ecx, edx
+  0000000140153068  and     ecx, r11d
+  000000014015306B  lea     r9d, [r10+5A827999h]
+  0000000140153072  xor     ecx, edx
+  0000000140153074  rol     r11d, 1Eh
+  0000000140153078  mov     eax, r8d
+  000000014015307B  rol     eax, 5
+  000000014015307E  add     eax, [rbp+240h+var_29C]
+  0000000140153081  add     ecx, eax
+  0000000140153083  add     r9d, ecx
+  0000000140153086  mov     eax, r9d
+  0000000140153089  rol     eax, 5
+  000000014015308C  add     eax, [rbp+240h+var_298]
+  000000014015308F  lea     r10d, [rdx+5A827999h]
+  0000000140153096  mov     edx, [rbp+240h+var_294]
+  0000000140153099  lea     esi, [r11+5A827999h]
+  00000001401530A0  mov     r14d, [rbp+240h+var_2A8]
+  00000001401530A4  add     edx, 5A827999h
+  00000001401530AA  mov     ecx, r11d
+  00000001401530AD  xor     ecx, ebx
+  00000001401530AF  and     ecx, r8d
+  00000001401530B2  rol     r8d, 1Eh
+  00000001401530B6  xor     ecx, ebx
+  00000001401530B8  add     ecx, eax
+  00000001401530BA  add     r10d, ecx
+  00000001401530BD  mov     ecx, r8d
+  00000001401530C0  xor     ecx, r11d
+  00000001401530C3  mov     eax, r10d
+  00000001401530C6  rol     eax, 5
+  00000001401530C9  and     ecx, r9d
+  00000001401530CC  add     eax, edx
+  00000001401530CE  rol     r9d, 1Eh
+  00000001401530D2  mov     edx, [rbp+240h+var_29C]
+  00000001401530D5  xor     ecx, r11d
+  00000001401530D8  xor     edx, [rbp+240h+var_2B0]
+  00000001401530DB  add     ecx, eax
+  00000001401530DD  xor     edx, r15d
+  00000001401530E0  add     ebx, ecx
+  00000001401530E2  xor     edx, [rsp+340h+var_2D0]
+  00000001401530E6  mov     eax, ebx
+  00000001401530E8  rol     edx, 1
+  00000001401530EA  mov     ecx, r9d
+  00000001401530ED  mov     [rsp+340h+var_318], edx
+  00000001401530F1  xor     ecx, r8d
+  00000001401530F4  rol     eax, 5
+  00000001401530F7  and     ecx, r10d
+  00000001401530FA  add     eax, edx
+  00000001401530FC  rol     r10d, 1Eh
+  0000000140153100  mov     edx, [rbp+240h+var_298]
+  0000000140153103  xor     ecx, r8d
+  0000000140153106  jmp     short loc_140153179
+  0000000140153108  dq 1860FFFFEB1D6E8h, 0FFF64690E8FFFF80h, 76D4FFFF92B1860Fh
+  0000000140153178  db 0FFh
+  0000000140153179  xor     edx, [rbp+240h+var_2AC]
+  000000014015317C  add     ecx, eax
+  000000014015317E  xor     edx, r12d
+  0000000140153181  add     esi, ecx
+  0000000140153183  xor     edx, [rsp+340h+var_2CC]
+  0000000140153187  mov     eax, esi
+  0000000140153189  rol     edx, 1
+  000000014015318B  mov     edi, r10d
+  000000014015318E  mov     [rsp+340h+var_2F4], edx
+  0000000140153192  xor     edi, r9d
+  0000000140153195  add     edx, 5A827999h
+  000000014015319B  rol     eax, 5
+  000000014015319E  add     eax, edx
+  00000001401531A0  and     edi, ebx
+  00000001401531A2  mov     edx, [rbp+240h+var_294]
+  00000001401531A5  xor     edi, r9d
+  00000001401531A8  xor     edx, r14d
+  00000001401531AB  rol     ebx, 1Eh
+  00000001401531AE  xor     edx, r13d
+  00000001401531B1  add     edi, eax
+  00000001401531B3  xor     edx, r15d
+  00000001401531B6  add     edi, r8d
+  00000001401531B9  mov     r15d, [rbp+240h+var_2A4]
+  00000001401531BD  mov     eax, edi
+  00000001401531BF  rol     edx, 1
+  00000001401531C1  mov     r11d, ebx
+  00000001401531C4  mov     [rsp+340h+var_2E4], edx
+  00000001401531C8  xor     r11d, r10d
+  00000001401531CB  add     edx, 5A827999h
+  00000001401531D1  rol     eax, 5
+  00000001401531D4  add     eax, edx
+  00000001401531D6  and     r11d, esi
+  00000001401531D9  xor     r11d, r10d
+  00000001401531DC  rol     esi, 1Eh
+  00000001401531DF  add     r11d, eax
+  00000001401531E2  mov     edx, r15d
+  00000001401531E5  xor     edx, [rbp+240h+var_2BC]
+  00000001401531E8  add     r11d, r9d
+  00000001401531EB  xor     edx, r12d
+  00000001401531EE  mov     eax, r11d
+  00000001401531F1  xor     edx, [rsp+340h+var_318]
+  00000001401531F5  rol     edx, 1
+  00000001401531F7  mov     [rsp+340h+var_31C], edx
+  00000001401531FB  mov     r12d, [rbp+240h+var_2A0]
+  00000001401531FF  add     edx, 5A827999h
+  0000000140153205  rol     eax, 5
+  0000000140153208  mov     ecx, esi
+  000000014015320A  add     eax, r10d
+  000000014015320D  xor     ecx, ebx
+  000000014015320F  and     ecx, edi
+  0000000140153211  jmp     loc_14015337B
+  0000000140153216  dw 5541h
+  0000000140153218  dq 0ADE8FFFFB89A880Fh, 0FFFE7F8EE8FFF45Eh, 8148FFFF1924840Fh
+  0000000140153378  db 0C7h, 0FEh, 0FFh
+  000000014015337B  mov     r10d, r12d
+  000000014015337E  xor     r10d, [rbp+240h+var_2B8]
+  0000000140153382  xor     ecx, ebx
+  0000000140153384  add     ecx, eax
+  0000000140153386  rol     edi, 1Eh
+  0000000140153389  add     edx, ecx
+  000000014015338B  xor     r10d, r13d
+  000000014015338E  xor     r10d, [rsp+340h+var_2F4]
+  0000000140153393  mov     eax, edx
+  0000000140153395  mov     r13d, [rbp+240h+var_29C]
+  0000000140153399  mov     ecx, edi
+  000000014015339B  rol     eax, 5
+  000000014015339E  xor     ecx, esi
+  00000001401533A0  add     eax, ebx
+  00000001401533A2  rol     r10d, 1
+  00000001401533A5  xor     ecx, r11d
+  00000001401533A8  mov     [rsp+340h+var_300], r10d
+  00000001401533AD  add     ecx, eax
+  00000001401533AF  rol     r11d, 1Eh
+  00000001401533B3  mov     eax, r13d
+  00000001401533B6  xor     eax, [rbp+240h+var_2B4]
+  00000001401533B9  lea     ebx, [r10+6ED9EBA1h]
+  00000001401533C0  xor     eax, [rbp+240h+var_2BC]
+  00000001401533C3  add     ebx, ecx
+  00000001401533C5  xor     eax, [rsp+340h+var_2E4]
+  00000001401533C9  mov     ecx, r11d
+  00000001401533CC  rol     eax, 1
+  00000001401533CE  xor     ecx, edi
+  00000001401533D0  mov     [rsp+340h+var_2FC], eax
+  00000001401533D4  xor     ecx, edx
+  00000001401533D6  mov     r8d, [rsp+340h+var_2FC]
+  00000001401533DB  mov     eax, ebx
+  00000001401533DD  rol     eax, 5
+  00000001401533E0  add     r8d, 6ED9EBA1h
+  00000001401533E7  add     eax, esi
+  00000001401533E9  rol     edx, 1Eh
+  00000001401533EC  add     ecx, eax
+  00000001401533EE  mov     eax, [rbp+240h+var_298]
+  00000001401533F1  xor     eax, [rbp+240h+var_2B0]
+  00000001401533F4  add     r8d, ecx
+  00000001401533F7  xor     eax, [rbp+240h+var_2B8]
+  00000001401533FA  mov     ecx, edx
+  00000001401533FC  xor     eax, [rsp+340h+var_31C]
+  0000000140153400  xor     ecx, r11d
+  0000000140153403  rol     eax, 1
+  0000000140153405  xor     ecx, ebx
+  0000000140153407  mov     [rsp+340h+var_320], eax
+  000000014015340B  mov     eax, r8d
+  000000014015340E  mov     r9d, [rsp+340h+var_320]
+  0000000140153413  rol     eax, 5
+  0000000140153416  jmp     loc_1401534A9
+  000000014015341B  db 86h, 5Fh, 0B6h, 4Eh, 7
+  0000000140153420  dq 558B0A71584BF570h, 5B7E288B7355768Bh, 58F32B8B2271E85Ch
+  00000001401534A8  db 0FFh
+  00000001401534A9  add     r9d, 6ED9EBA1h
+  00000001401534B0  add     eax, edi
+  00000001401534B2  rol     ebx, 1Eh
+  00000001401534B5  add     ecx, eax
+  00000001401534B7  mov     eax, [rbp+240h+var_294]
+  00000001401534BA  xor     eax, [rbp+240h+var_2AC]
+  00000001401534BD  add     r9d, ecx
+  00000001401534C0  xor     eax, [rbp+240h+var_2B4]
+  00000001401534C3  mov     ecx, ebx
+  00000001401534C5  xor     eax, r10d
+  00000001401534C8  xor     ecx, edx
+  00000001401534CA  rol     eax, 1
+  00000001401534CC  xor     ecx, r8d
+  00000001401534CF  mov     [rsp+340h+var_310], eax
+  00000001401534D3  mov     eax, r9d
+  00000001401534D6  mov     r10d, [rsp+340h+var_310]
+  00000001401534DB  rol     eax, 5
+  00000001401534DE  add     r10d, 6ED9EBA1h
+  00000001401534E5  add     eax, r11d
+  00000001401534E8  rol     r8d, 1Eh
+  00000001401534EC  add     ecx, eax
+  00000001401534EE  mov     r11d, r14d
+  00000001401534F1  add     r10d, ecx
+  00000001401534F4  xor     r11d, [rbp+240h+var_2B0]
+  00000001401534F8  xor     r11d, [rsp+340h+var_318]
+  00000001401534FD  mov     ecx, r8d
+  0000000140153500  mov     esi, [rsp+340h+var_2FC]
+  0000000140153504  xor     ecx, ebx
+  0000000140153506  mov     edi, [rsp+340h+var_320]
+  000000014015350A  xor     ecx, r9d
+  000000014015350D  rol     r9d, 1Eh
+  0000000140153511  xor     r11d, esi
+  0000000140153514  rol     r11d, 1
+  0000000140153517  mov     eax, r10d
+  000000014015351A  rol     eax, 5
+  000000014015351D  add     eax, edx
+  000000014015351F  mov     [rsp+340h+var_2F0], r11d
+  0000000140153524  add     ecx, eax
+  0000000140153526  mov     eax, r15d
+  0000000140153529  xor     eax, [rbp+240h+var_2AC]
+  000000014015352C  lea     edx, [r11+6ED9EBA1h]
+  0000000140153533  xor     eax, [rsp+340h+var_2F4]
+  0000000140153537  add     edx, ecx
+  0000000140153539  xor     eax, edi
+  000000014015353B  mov     ecx, r9d
+  000000014015353E  rol     eax, 1
+  0000000140153540  xor     ecx, r8d
+  0000000140153543  mov     [rsp+340h+var_320], eax
+  0000000140153547  xor     ecx, r10d
+  000000014015354A  rol     r10d, 1Eh
+  000000014015354E  jmp     short loc_1401535C0
+  0000000140153550  dq 0B66AE8FFF45B3BE8h, 0FFFF6F5E800FFFFFh, 80E9E38B495D5C41h
+  00000001401535C0  mov     eax, edx
+  00000001401535C2  rol     eax, 5
+  00000001401535C5  add     eax, ebx
+  00000001401535C7  mov     ebx, [rsp+340h+var_320]
+  00000001401535CB  add     ecx, eax
+  00000001401535CD  add     ebx, 6ED9EBA1h
+  00000001401535D3  add     ebx, ecx
+  00000001401535D5  mov     eax, r12d
+  00000001401535D8  xor     eax, r14d
+  00000001401535DB  mov     ecx, r10d
+  00000001401535DE  xor     eax, [rsp+340h+var_2E4]
+  00000001401535E2  xor     ecx, r9d
+  00000001401535E5  mov     r14d, [rsp+340h+var_310]
+  00000001401535EA  xor     ecx, edx
+  00000001401535EC  xor     eax, r14d
+  00000001401535EF  rol     edx, 1Eh
+  00000001401535F2  rol     eax, 1
+  00000001401535F4  mov     [rsp+340h+var_314], eax
+  00000001401535F8  mov     eax, ebx
+  00000001401535FA  rol     eax, 5
+  00000001401535FD  add     eax, r8d
+  0000000140153600  mov     r8d, [rsp+340h+var_314]
+  0000000140153605  add     ecx, eax
+  0000000140153607  add     r8d, 6ED9EBA1h
+  000000014015360E  add     r8d, ecx
+  0000000140153611  mov     eax, r13d
+  0000000140153614  xor     eax, r15d
+  0000000140153617  mov     ecx, edx
+  0000000140153619  mov     r15d, [rbp+240h+var_298]
+  000000014015361D  xor     eax, r11d
+  0000000140153620  xor     eax, [rsp+340h+var_31C]
+  0000000140153624  xor     ecx, r10d
+  0000000140153627  mov     r11d, [rsp+340h+var_300]
+  000000014015362C  xor     ecx, ebx
+  000000014015362E  rol     eax, 1
+  0000000140153630  xor     r15d, r12d
+  0000000140153633  xor     r15d, [rsp+340h+var_320]
+  0000000140153638  mov     [rsp+340h+var_308], eax
+  000000014015363C  xor     r15d, r11d
+  000000014015363F  rol     ebx, 1Eh
+  0000000140153642  mov     eax, r8d
+  0000000140153645  rol     eax, 5
+  0000000140153648  add     eax, r9d
+  000000014015364B  rol     r15d, 1
+  000000014015364E  mov     r9d, [rsp+340h+var_308]
+  0000000140153653  add     ecx, eax
+  0000000140153655  add     r9d, 6ED9EBA1h
+  000000014015365C  mov     [rsp+340h+var_2FC], r15d
+  0000000140153661  add     r9d, ecx
+  0000000140153664  mov     ecx, ebx
+  0000000140153666  jmp     loc_140153854
+  000000014015366B  db 0B4h, 5Ch, 2 dup(57h), 0A7h
+  0000000140153670  dq 7DFC5A5BE32B7EB3h, 8150553C857EE755h, 2A87A700CAF5C74h
+  0000000140153850  ficom   word ptr [rax+54h]
+  0000000140153853  cmpsb
+  0000000140153854  xor     ecx, edx
+  0000000140153856  mov     eax, r9d
+  0000000140153859  xor     ecx, r8d
+  000000014015385C  rol     eax, 5
+  000000014015385F  add     eax, r10d
+  0000000140153862  add     ecx, eax
+  0000000140153864  mov     r12d, [rbp+240h+var_294]
+  0000000140153868  xor     r12d, r13d
+  000000014015386B  rol     r8d, 1Eh
+  000000014015386F  xor     r12d, [rsp+340h+var_314]
+  0000000140153874  lea     r10d, [r15+6ED9EBA1h]
+  000000014015387B  mov     r13d, [rbp+240h+var_298]
+  000000014015387F  add     r10d, ecx
+  0000000140153882  xor     r13d, [rsp+340h+var_318]
+  0000000140153887  mov     ecx, r8d
+  000000014015388A  xor     r13d, [rsp+340h+var_308]
+  000000014015388F  xor     ecx, ebx
+  0000000140153891  xor     ecx, r9d
+  0000000140153894  xor     r13d, edi
+  0000000140153897  rol     r13d, 1
+  000000014015389A  xor     r12d, esi
+  000000014015389D  mov     [rsp+340h+var_30C], r13d
+  00000001401538A2  mov     eax, r10d
+  00000001401538A5  rol     eax, 5
+  00000001401538A8  add     eax, edx
+  00000001401538AA  rol     r9d, 1Eh
+  00000001401538AE  add     ecx, eax
+  00000001401538B0  rol     r12d, 1
+  00000001401538B3  mov     [rsp+340h+var_300], r12d
+  00000001401538B8  lea     edx, [r12+6ED9EBA1h]
+  00000001401538C0  add     edx, ecx
+  00000001401538C2  mov     ecx, r9d
+  00000001401538C5  xor     ecx, r8d
+  00000001401538C8  mov     eax, edx
+  00000001401538CA  rol     eax, 5
+  00000001401538CD  xor     ecx, r10d
+  00000001401538D0  add     eax, ebx
+  00000001401538D2  rol     r10d, 1Eh
+  00000001401538D6  add     ecx, eax
+  00000001401538D8  lea     ebx, [r13+6ED9EBA1h]
+  00000001401538DF  mov     r13d, [rbp+240h+var_294]
+  00000001401538E3  add     ebx, ecx
+  00000001401538E5  xor     r13d, [rsp+340h+var_2F4]
+  00000001401538EA  mov     eax, ebx
+  00000001401538EC  rol     eax, 5
+  00000001401538EF  xor     r13d, r15d
+  00000001401538F2  mov     r15d, [rsp+340h+var_2F0]
+  00000001401538F7  add     eax, r8d
+  00000001401538FA  xor     r13d, r14d
+  00000001401538FD  mov     ecx, r10d
+  0000000140153900  jmp     loc_140153C35
+  0000000140153905  db 0E8h, 56h, 58h
+  0000000140153908  dq 0FFFFE862AE8FFF4h, 0C0C141FFFE1CB286h, 33DAD3A0558B441Eh
+  0000000140153C30  db 8Ah, 59h, 27h, 0FEh, 0FFh
+  0000000140153C35  xor     ecx, r9d
+  0000000140153C38  rol     r13d, 1
+  0000000140153C3B  xor     ecx, edx
+  0000000140153C3D  mov     [rsp+340h+var_304], r13d
+  0000000140153C42  add     ecx, eax
+  0000000140153C44  rol     edx, 1Eh
+  0000000140153C47  lea     r8d, [r13+6ED9EBA1h]
+  0000000140153C4E  mov     r13d, [rsp+340h+var_2E4]
+  0000000140153C53  xor     r13d, [rsp+340h+var_318]
+  0000000140153C58  add     r8d, ecx
+  0000000140153C5B  xor     r13d, r12d
+  0000000140153C5E  mov     eax, r8d
+  0000000140153C61  rol     eax, 5
+  0000000140153C64  xor     r13d, r15d
+  0000000140153C67  add     eax, r9d
+  0000000140153C6A  rol     r13d, 1
+  0000000140153C6D  mov     ecx, edx
+  0000000140153C6F  mov     [rsp+340h+var_310], r13d
+  0000000140153C74  xor     ecx, r10d
+  0000000140153C77  xor     ecx, ebx
+  0000000140153C79  rol     ebx, 1Eh
+  0000000140153C7C  add     ecx, eax
+  0000000140153C7E  lea     r9d, [r13+6ED9EBA1h]
+  0000000140153C85  mov     eax, [rsp+340h+var_2F4]
+  0000000140153C89  add     r9d, ecx
+  0000000140153C8C  xor     eax, [rsp+340h+var_30C]
+  0000000140153C90  mov     ecx, ebx
+  0000000140153C92  mov     r13d, [rsp+340h+var_320]
+  0000000140153C97  xor     ecx, edx
+  0000000140153C99  xor     eax, r13d
+  0000000140153C9C  xor     eax, [rsp+340h+var_31C]
+  0000000140153CA0  rol     eax, 1
+  0000000140153CA2  mov     [rsp+340h+var_2F4], eax
+  0000000140153CA6  mov     eax, r9d
+  0000000140153CA9  rol     eax, 5
+  0000000140153CAC  xor     ecx, r8d
+  0000000140153CAF  add     eax, r10d
+  0000000140153CB2  mov     r12d, [rsp+340h+var_2FC]
+  0000000140153CB7  add     ecx, eax
+  0000000140153CB9  mov     r10d, [rsp+340h+var_2F4]
+  0000000140153CBE  mov     eax, [rsp+340h+var_2E4]
+  0000000140153CC2  add     r10d, 6ED9EBA1h
+  0000000140153CC9  xor     eax, [rsp+340h+var_304]
+  0000000140153CCD  add     r10d, ecx
+  0000000140153CD0  xor     eax, [rsp+340h+var_314]
+  0000000140153CD4  xor     eax, r11d
+  0000000140153CD7  rol     r8d, 1Eh
+  0000000140153CDB  rol     eax, 1
+  0000000140153CDD  mov     ecx, r8d
+  0000000140153CE0  mov     [rsp+340h+var_2E4], eax
+  0000000140153CE4  jmp     loc_140153E80
+  0000000140153CE9  db 33h, 0D2h, 48h, 8Dh, 4Dh, 0, 40h
+  0000000140153CF0  dq 890F5C428D44CDD0h, 9E537256FFFE71F4h, 7F713FF8775D8BDDh
+  0000000140153E80  xor     ecx, ebx
+  0000000140153E82  xor     ecx, r9d
+  0000000140153E85  mov     eax, r10d
+  0000000140153E88  rol     eax, 5
+  0000000140153E8B  add     eax, edx
+  0000000140153E8D  rol     r9d, 1Eh
+  0000000140153E91  add     ecx, eax
+  0000000140153E93  mov     edx, [rsp+340h+var_2E4]
+  0000000140153E97  mov     eax, [rsp+340h+var_310]
+  0000000140153E9B  add     edx, 6ED9EBA1h
+  0000000140153EA1  xor     eax, [rsp+340h+var_308]
+  0000000140153EA5  add     edx, ecx
+  0000000140153EA7  xor     eax, esi
+  0000000140153EA9  mov     ecx, r9d
+  0000000140153EAC  xor     eax, [rsp+340h+var_31C]
+  0000000140153EB0  xor     ecx, r8d
+  0000000140153EB3  rol     eax, 1
+  0000000140153EB5  xor     ecx, r10d
+  0000000140153EB8  mov     [rsp+340h+var_318], eax
+  0000000140153EBC  mov     eax, edx
+  0000000140153EBE  rol     eax, 5
+  0000000140153EC1  add     eax, ebx
+  0000000140153EC3  rol     r10d, 1Eh
+  0000000140153EC7  mov     ebx, [rsp+340h+var_318]
+  0000000140153ECB  add     ecx, eax
+  0000000140153ECD  mov     eax, [rsp+340h+var_2F4]
+  0000000140153ED1  add     ebx, 6ED9EBA1h
+  0000000140153ED7  xor     eax, r12d
+  0000000140153EDA  add     ebx, ecx
+  0000000140153EDC  xor     eax, edi
+  0000000140153EDE  mov     ecx, r10d
+  0000000140153EE1  xor     eax, r11d
+  0000000140153EE4  xor     ecx, r9d
+  0000000140153EE7  rol     eax, 1
+  0000000140153EE9  xor     ecx, edx
+  0000000140153EEB  mov     [rsp+340h+var_2FC], eax
+  0000000140153EEF  mov     eax, ebx
+  0000000140153EF1  mov     r11d, [rsp+340h+var_2FC]
+  0000000140153EF6  rol     eax, 5
+  0000000140153EF9  add     eax, r8d
+  0000000140153EFC  rol     edx, 1Eh
+  0000000140153EFF  add     ecx, eax
+  0000000140153F01  mov     eax, [rsp+340h+var_2E4]
+  0000000140153F05  xor     eax, [rsp+340h+var_300]
+  0000000140153F09  lea     r8d, [r11+6ED9EBA1h]
+  0000000140153F10  xor     eax, r14d
+  0000000140153F13  add     r8d, ecx
+  0000000140153F16  xor     eax, esi
+  0000000140153F18  mov     ecx, edx
+  0000000140153F1A  rol     eax, 1
+  0000000140153F1C  jmp     loc_140153FC1
+  0000000140153F21  db 0DCh, 0Ah, 0FCh, 9Dh, 73h, 5Ch, 5Dh
+  0000000140153F28  jmp     qword ptr fs:[rbx]
+  0000000140153F2B  db 57h, 8Bh, 41h, 1Bh, 77h
+  0000000140153F30  dq 42800F514181DCA2h, 0A727880F56FFFF6Dh, 0FE11B1890F52FFFFh
+  0000000140153FC0  db 0FFh
+  0000000140153FC1  xor     ecx, r10d
+  0000000140153FC4  mov     [rsp+340h+var_2EC], eax
+  0000000140153FC8  xor     ecx, ebx
+  0000000140153FCA  mov     esi, [rsp+340h+var_2EC]
+  0000000140153FCE  mov     eax, r8d
+  0000000140153FD1  rol     eax, 5
+  0000000140153FD4  add     eax, r9d
+  0000000140153FD7  rol     ebx, 1Eh
+  0000000140153FDA  add     ecx, eax
+  0000000140153FDC  mov     eax, [rsp+340h+var_318]
+  0000000140153FE0  xor     eax, [rsp+340h+var_30C]
+  0000000140153FE4  lea     r9d, [rsi+6ED9EBA1h]
+  0000000140153FEB  xor     eax, r15d
+  0000000140153FEE  add     r9d, ecx
+  0000000140153FF1  xor     eax, edi
+  0000000140153FF3  rol     eax, 1
+  0000000140153FF5  mov     [rsp+340h+var_2F0], eax
+  0000000140153FF9  xor     r11d, [rsp+340h+var_304]
+  0000000140153FFE  mov     ecx, ebx
+  0000000140154000  mov     edi, [rsp+340h+var_314]
+  0000000140154004  xor     ecx, edx
+  0000000140154006  xor     ecx, r8d
+  0000000140154009  xor     r11d, r13d
+  000000014015400C  rol     r8d, 1Eh
+  0000000140154010  xor     r11d, r14d
+  0000000140154013  mov     r14d, [rsp+340h+var_310]
+  0000000140154018  mov     eax, r9d
+  000000014015401B  rol     eax, 5
+  000000014015401E  xor     esi, r14d
+  0000000140154021  add     eax, r10d
+  0000000140154024  rol     r11d, 1
+  0000000140154027  mov     r10d, [rsp+340h+var_2F0]
+  000000014015402C  add     ecx, eax
+  000000014015402E  xor     esi, edi
+  0000000140154030  mov     [rsp+340h+var_320], r11d
+  0000000140154035  xor     esi, r15d
+  0000000140154038  add     r10d, 6ED9EBA1h
+  000000014015403F  mov     r15d, [rsp+340h+var_2F0]
+  0000000140154044  add     r10d, ecx
+  0000000140154047  xor     r15d, [rsp+340h+var_2F4]
+  000000014015404C  mov     ecx, r8d
+  000000014015404F  xor     ecx, ebx
+  0000000140154051  rol     esi, 1
+  0000000140154053  xor     ecx, r9d
+  0000000140154056  mov     [rsp+340h+var_314], esi
+  000000014015405A  rol     r9d, 1Eh
+  000000014015405E  add     r11d, 6ED9EBA1h
+  0000000140154065  mov     eax, r10d
+  0000000140154068  rol     eax, 5
+  000000014015406B  add     eax, edx
+  000000014015406D  jmp     loc_1401540F7
+  0000000140154072  dw 0EAE8h, 0FE7Bh, 0FFFh
+  0000000140154078  dq 495C41FFFF10F289h, 0E9FFFE7150E9E38Bh, 0F45117E8FFFDD966h
+  00000001401540F0  db 5Ah, 70h, 75h, 1Fh, 0DCh, 70h, 46h
+  00000001401540F7  add     ecx, eax
+  00000001401540F9  mov     eax, r9d
+  00000001401540FC  add     r11d, ecx
+  00000001401540FF  and     eax, r8d
+  0000000140154102  mov     edx, r11d
+  0000000140154105  mov     ecx, r9d
+  0000000140154108  or      ecx, r8d
+  000000014015410B  rol     edx, 5
+  000000014015410E  and     ecx, r10d
+  0000000140154111  rol     r10d, 1Eh
+  0000000140154115  or      ecx, eax
+  0000000140154117  mov     eax, r10d
+  000000014015411A  add     ecx, ebx
+  000000014015411C  and     eax, r9d
+  000000014015411F  add     ecx, 8F1BBCDCh
+  0000000140154125  lea     ebx, [rsi+rdx]
+  0000000140154128  mov     esi, [rsp+340h+var_308]
+  000000014015412C  add     ebx, ecx
+  000000014015412E  xor     r15d, esi
+  0000000140154131  mov     edx, ebx
+  0000000140154133  xor     r15d, r13d
+  0000000140154136  rol     edx, 5
+  0000000140154139  rol     r15d, 1
+  000000014015413C  mov     ecx, r10d
+  000000014015413F  or      ecx, r9d
+  0000000140154142  mov     [rsp+340h+var_308], r15d
+  0000000140154147  and     ecx, r11d
+  000000014015414A  rol     r11d, 1Eh
+  000000014015414E  or      ecx, eax
+  0000000140154150  mov     eax, r11d
+  0000000140154153  add     ecx, r8d
+  0000000140154156  and     eax, r10d
+  0000000140154159  lea     r8d, [r15+rdx]
+  000000014015415D  add     ecx, 8F1BBCDCh
+  0000000140154163  mov     r15d, [rsp+340h+var_320]
+  0000000140154168  add     r8d, ecx
+  000000014015416B  xor     r15d, [rsp+340h+var_2E4]
+  0000000140154170  mov     ecx, r11d
+  0000000140154173  or      ecx, r10d
+  0000000140154176  xor     r15d, r12d
+  0000000140154179  and     ecx, ebx
+  000000014015417B  xor     r15d, edi
+  000000014015417E  rol     r15d, 1
+  0000000140154181  mov     edx, r8d
+  0000000140154184  or      ecx, eax
+  0000000140154186  rol     edx, 5
+  0000000140154189  add     ecx, r9d
+  000000014015418C  mov     [rsp+340h+var_2E0], r15d
+  0000000140154191  mov     eax, [rsp+340h+var_314]
+  0000000140154195  lea     r9d, [r15+rdx]
+  0000000140154199  jmp     loc_1401544DE
+  000000014015419E  dw 448Bh
+  00000001401541A0  dq 0D241582444335C24h, 6ED9EBA1878D44F5h, 44C33341EEE78041h
+  00000001401544D8  jg      loc_14014BCE1
+  00000001401544DE  mov     r15d, [rsp+340h+var_318]
+  00000001401544E3  add     ecx, 8F1BBCDCh
+  00000001401544E9  add     r9d, ecx
+  00000001401544EC  rol     ebx, 1Eh
+  00000001401544EF  xor     eax, r15d
+  00000001401544F2  mov     edx, r9d
+  00000001401544F5  xor     eax, [rsp+340h+var_300]
+  00000001401544F9  mov     ecx, ebx
+  00000001401544FB  or      ecx, r11d
+  00000001401544FE  rol     edx, 5
+  0000000140154501  and     ecx, r8d
+  0000000140154504  xor     eax, esi
+  0000000140154506  mov     esi, [rsp+340h+var_2FC]
+  000000014015450A  rol     eax, 1
+  000000014015450C  mov     [rsp+340h+var_2F8], eax
+  0000000140154510  mov     eax, ebx
+  0000000140154512  add     edx, [rsp+340h+var_2F8]
+  0000000140154516  and     eax, r11d
+  0000000140154519  mov     edi, [rsp+340h+var_2F8]
+  000000014015451D  or      ecx, eax
+  000000014015451F  xor     edi, [rsp+340h+var_2F0]
+  0000000140154523  add     ecx, r10d
+  0000000140154526  mov     eax, [rsp+340h+var_308]
+  000000014015452A  xor     edi, r14d
+  000000014015452D  xor     edi, [rsp+340h+var_30C]
+  0000000140154531  lea     r10d, [rdx-70E44324h]
+  0000000140154538  add     r10d, ecx
+  000000014015453B  rol     r8d, 1Eh
+  000000014015453F  xor     eax, esi
+  0000000140154541  rol     edi, 1
+  0000000140154543  xor     eax, [rsp+340h+var_30C]
+  0000000140154547  mov     edx, r10d
+  000000014015454A  xor     eax, r12d
+  000000014015454D  rol     edx, 5
+  0000000140154550  mov     r12d, [rsp+340h+var_2E0]
+  0000000140154555  mov     ecx, r8d
+  0000000140154558  xor     r12d, [rsp+340h+var_2EC]
+  000000014015455D  or      ecx, ebx
+  000000014015455F  xor     r12d, [rsp+340h+var_304]
+  0000000140154564  and     ecx, r9d
+  0000000140154567  xor     r12d, [rsp+340h+var_300]
+  000000014015456C  rol     eax, 1
+  000000014015456E  mov     [rsp+340h+var_2E8], eax
+  0000000140154572  mov     eax, r8d
+  0000000140154575  add     edx, [rsp+340h+var_2E8]
+  0000000140154579  and     eax, ebx
+  000000014015457B  or      ecx, eax
+  000000014015457D  rol     r9d, 1Eh
+  0000000140154581  add     ecx, r11d
+  0000000140154584  rol     r12d, 1
+  0000000140154587  jmp     loc_1401548B3
+  000000014015458C  dd 1EC2C141h
+  0000000140154590  dq 3C83341F8A05D8Bh, 99C381BFC68341C8h, 304D6C0405A8279h
+  00000001401548B0  db 8Ah, 0FFh
+  00000001401548B2  db 0FFh
+  00000001401548B3  mov     eax, r9d
+  00000001401548B6  mov     [rsp+340h+var_318], r12d
+  00000001401548BB  lea     r11d, [rdx-70E44324h]
+  00000001401548C2  mov     [rsp+340h+var_2FC], edi
+  00000001401548C6  add     r11d, ecx
+  00000001401548C9  and     eax, r8d
+  00000001401548CC  mov     edx, r11d
+  00000001401548CF  mov     ecx, r9d
+  00000001401548D2  or      ecx, r8d
+  00000001401548D5  rol     edx, 5
+  00000001401548D8  and     ecx, r10d
+  00000001401548DB  rol     r10d, 1Eh
+  00000001401548DF  or      ecx, eax
+  00000001401548E1  mov     eax, r10d
+  00000001401548E4  add     ecx, ebx
+  00000001401548E6  and     eax, r9d
+  00000001401548E9  add     ecx, 8F1BBCDCh
+  00000001401548EF  lea     ebx, [r12+rdx]
+  00000001401548F3  add     ebx, ecx
+  00000001401548F5  mov     ecx, r10d
+  00000001401548F8  or      ecx, r9d
+  00000001401548FB  mov     edx, ebx
+  00000001401548FD  and     ecx, r11d
+  0000000140154900  rol     edx, 5
+  0000000140154903  or      ecx, eax
+  0000000140154905  add     ecx, r8d
+  0000000140154908  add     ecx, 8F1BBCDCh
+  000000014015490E  lea     r8d, [rdi+rdx]
+  0000000140154912  add     r8d, ecx
+  0000000140154915  xor     edi, [rsp+340h+var_308]
+  0000000140154919  mov     edx, r8d
+  000000014015491C  mov     r12d, [rsp+340h+var_2E8]
+  0000000140154921  xor     edi, r15d
+  0000000140154924  xor     r12d, [rsp+340h+var_320]
+  0000000140154929  xor     r12d, [rsp+340h+var_2F4]
+  000000014015492E  xor     r12d, [rsp+340h+var_304]
+  0000000140154933  xor     edi, [rsp+340h+var_2F4]
+  0000000140154937  mov     r13d, [rsp+340h+var_318]
+  000000014015493C  xor     r13d, [rsp+340h+var_314]
+  0000000140154941  xor     r13d, [rsp+340h+var_2E4]
+  0000000140154946  rol     edx, 5
+  0000000140154949  xor     r13d, r14d
+  000000014015494C  rol     r11d, 1Eh
+  0000000140154950  rol     r12d, 1
+  0000000140154953  mov     ecx, r11d
+  0000000140154956  or      ecx, r10d
+  0000000140154959  rol     r13d, 1
+  000000014015495C  and     ecx, ebx
+  000000014015495E  mov     [rsp+340h+var_2DC], r12d
+  0000000140154963  rol     ebx, 1Eh
+  0000000140154966  jmp     loc_140154ABD
+  000000014015496B  db 49h, 3, 0E3h, 0Fh, 80h
+  0000000140154970  dq 41C18B41FFFFA6D3h, 2341CB03417BFD80h, 0DC9A8D44F83344C0h
+  0000000140154AB8  db 8Eh, 73h, 67h, 2 dup(0FFh)
+  0000000140154ABD  mov     eax, r11d
+  0000000140154AC0  and     eax, r10d
+  0000000140154AC3  rol     edi, 1
+  0000000140154AC5  or      ecx, eax
+  0000000140154AC7  mov     [rsp+340h+var_31C], r13d
+  0000000140154ACC  add     ecx, r9d
+  0000000140154ACF  mov     [rsp+340h+var_310], edi
+  0000000140154AD3  add     ecx, 8F1BBCDCh
+  0000000140154AD9  lea     r9d, [r12+rdx]
+  0000000140154ADD  xor     r12d, [rsp+340h+var_2E0]
+  0000000140154AE2  add     r9d, ecx
+  0000000140154AE5  mov     edx, r9d
+  0000000140154AE8  xor     r12d, esi
+  0000000140154AEB  xor     r12d, [rsp+340h+var_2E4]
+  0000000140154AF0  mov     ecx, ebx
+  0000000140154AF2  or      ecx, r11d
+  0000000140154AF5  rol     edx, 5
+  0000000140154AF8  and     ecx, r8d
+  0000000140154AFB  rol     r12d, 1
+  0000000140154AFE  rol     r8d, 1Eh
+  0000000140154B02  mov     eax, ebx
+  0000000140154B04  and     eax, r11d
+  0000000140154B07  mov     [rsp+340h+var_2F4], r12d
+  0000000140154B0C  or      ecx, eax
+  0000000140154B0E  mov     r14d, r13d
+  0000000140154B11  xor     r14d, [rsp+340h+var_2F8]
+  0000000140154B16  add     ecx, r10d
+  0000000140154B19  xor     r14d, [rsp+340h+var_2EC]
+  0000000140154B1E  lea     r10d, [rdx+r13]
+  0000000140154B22  add     ecx, 8F1BBCDCh
+  0000000140154B28  mov     eax, r8d
+  0000000140154B2B  add     r10d, ecx
+  0000000140154B2E  and     eax, ebx
+  0000000140154B30  mov     edx, r10d
+  0000000140154B33  mov     ecx, r8d
+  0000000140154B36  or      ecx, ebx
+  0000000140154B38  rol     edx, 5
+  0000000140154B3B  and     ecx, r9d
+  0000000140154B3E  xor     r14d, r15d
+  0000000140154B41  or      ecx, eax
+  0000000140154B43  rol     r9d, 1Eh
+  0000000140154B47  add     ecx, r11d
+  0000000140154B4A  mov     eax, r9d
+  0000000140154B4D  add     ecx, 8F1BBCDCh
+  0000000140154B53  lea     r11d, [rdi+rdx]
+  0000000140154B57  add     r11d, ecx
+  0000000140154B5A  and     eax, r8d
+  0000000140154B5D  mov     edx, r11d
+  0000000140154B60  mov     ecx, r9d
+  0000000140154B63  or      ecx, r8d
+  0000000140154B66  jmp     loc_140154D19
+  0000000140154B6B  db 0Fh, 84h, 0E6h, 0BCh, 0FEh
+  0000000140154B70  dq 428C48148FFh, 348FFFDCC108C0Fh, 8BFFFF73728B0FE5h, 8040D10344382444h
+  0000000140154D18  db 0FFh
+  0000000140154D19  rol     edx, 5
+  0000000140154D1C  and     ecx, r10d
+  0000000140154D1F  rol     r10d, 1Eh
+  0000000140154D23  or      ecx, eax
+  0000000140154D25  add     ecx, ebx
+  0000000140154D27  add     ecx, 8F1BBCDCh
+  0000000140154D2D  lea     ebx, [r12+rdx]
+  0000000140154D31  add     ebx, ecx
+  0000000140154D33  rol     r14d, 1
+  0000000140154D36  mov     [rsp+340h+var_300], r14d
+  0000000140154D3B  mov     r15d, [rsp+340h+var_2F0]
+  0000000140154D40  mov     ecx, r10d
+  0000000140154D43  or      ecx, r9d
+  0000000140154D46  mov     eax, r10d
+  0000000140154D49  and     ecx, r11d
+  0000000140154D4C  and     eax, r9d
+  0000000140154D4F  or      ecx, eax
+  0000000140154D51  rol     r11d, 1Eh
+  0000000140154D55  add     ecx, r8d
+  0000000140154D58  mov     r13d, edi
+  0000000140154D5B  xor     r13d, [rsp+340h+var_2E8]
+  0000000140154D60  add     ecx, 8F1BBCDCh
+  0000000140154D66  xor     r13d, r15d
+  0000000140154D69  mov     edx, ebx
+  0000000140154D6B  rol     edx, 5
+  0000000140154D6E  xor     r13d, esi
+  0000000140154D71  rol     r13d, 1
+  0000000140154D74  mov     eax, r11d
+  0000000140154D77  and     eax, r10d
+  0000000140154D7A  mov     [rsp+340h+var_2F0], r13d
+  0000000140154D7F  mov     esi, r12d
+  0000000140154D82  xor     esi, [rsp+340h+var_318]
+  0000000140154D86  lea     r8d, [r14+rdx]
+  0000000140154D8A  xor     esi, [rsp+340h+var_320]
+  0000000140154D8E  add     r8d, ecx
+  0000000140154D91  xor     esi, [rsp+340h+var_2EC]
+  0000000140154D95  mov     edx, r8d
+  0000000140154D98  rol     edx, 5
+  0000000140154D9B  mov     ecx, r11d
+  0000000140154D9E  or      ecx, r10d
+  0000000140154DA1  rol     esi, 1
+  0000000140154DA3  and     ecx, ebx
+  0000000140154DA5  mov     [rsp+340h+var_30C], esi
+  0000000140154DA9  or      ecx, eax
+  0000000140154DAB  rol     ebx, 1Eh
+  0000000140154DAE  add     ecx, r9d
+  0000000140154DB1  add     r10d, 8F1BBCDCh
+  0000000140154DB8  add     ecx, 8F1BBCDCh
+  0000000140154DBE  lea     r9d, [rdx+r13]
+  0000000140154DC2  add     r9d, ecx
+  0000000140154DC5  jmp     loc_140154E8F
+  0000000140154DCA  dw 5741h, 800Fh, 5A63h
+  0000000140154DD0  dq 0FFFFDDE85E8FFFDh, 4496E8FFFE228B89h, 0FFFFF2890E8FFF4h
+  0000000140154E88  db 0FFh, 0Fh, 83h, 0C2h, 8, 2 dup(0FFh)
+  0000000140154E8F  mov     eax, ebx
+  0000000140154E91  and     eax, r11d
+  0000000140154E94  mov     edi, r9d
+  0000000140154E97  rol     edi, 5
+  0000000140154E9A  mov     ecx, ebx
+  0000000140154E9C  or      ecx, r11d
+  0000000140154E9F  add     edi, esi
+  0000000140154EA1  and     ecx, r8d
+  0000000140154EA4  rol     r8d, 1Eh
+  0000000140154EA8  or      ecx, eax
+  0000000140154EAA  mov     eax, r8d
+  0000000140154EAD  add     ecx, r10d
+  0000000140154EB0  and     eax, ebx
+  0000000140154EB2  add     edi, ecx
+  0000000140154EB4  mov     r10d, r14d
+  0000000140154EB7  xor     r10d, [rsp+340h+var_2FC]
+  0000000140154EBC  mov     edx, edi
+  0000000140154EBE  xor     r10d, [rsp+340h+var_314]
+  0000000140154EC3  mov     ecx, r8d
+  0000000140154EC6  xor     r10d, r15d
+  0000000140154EC9  rol     edx, 5
+  0000000140154ECC  or      ecx, ebx
+  0000000140154ECE  rol     r10d, 1
+  0000000140154ED1  and     ecx, r9d
+  0000000140154ED4  mov     [rsp+340h+var_304], r10d
+  0000000140154ED9  or      ecx, eax
+  0000000140154EDB  rol     r9d, 1Eh
+  0000000140154EDF  add     ecx, r11d
+  0000000140154EE2  mov     r15d, r13d
+  0000000140154EE5  xor     r15d, [rsp+340h+var_2DC]
+  0000000140154EEA  lea     r11d, [r10+rdx]
+  0000000140154EEE  xor     r15d, [rsp+340h+var_308]
+  0000000140154EF3  add     ecx, 8F1BBCDCh
+  0000000140154EF9  xor     r15d, [rsp+340h+var_320]
+  0000000140154EFE  add     r11d, ecx
+  0000000140154F01  rol     r15d, 1
+  0000000140154F04  mov     edx, r11d
+  0000000140154F07  rol     edx, 5
+  0000000140154F0A  mov     ecx, r9d
+  0000000140154F0D  or      ecx, r8d
+  0000000140154F10  mov     [rsp+340h+var_2EC], r15d
+  0000000140154F15  and     ecx, edi
+  0000000140154F17  mov     r14d, esi
+  0000000140154F1A  xor     r14d, [rsp+340h+var_31C]
+  0000000140154F1F  mov     eax, r9d
+  0000000140154F22  xor     r14d, [rsp+340h+var_2E0]
+  0000000140154F27  and     eax, r8d
+  0000000140154F2A  xor     r14d, [rsp+340h+var_314]
+  0000000140154F2F  or      ecx, eax
+  0000000140154F31  add     ecx, ebx
+  0000000140154F33  jmp     loc_140155261
+  0000000140154F38  dq 0FE86344D8453B48h, 42DEE8FFFF745B84h, 0FFFFF9EFEE8FFF4h
+  0000000140155260  db 0FFh
+  0000000140155261  rol     edi, 1Eh
+  0000000140155264  add     ecx, 8F1BBCDCh
+  000000014015526A  rol     r14d, 1
+  000000014015526D  lea     ebx, [r15+rdx]
+  0000000140155271  mov     [rsp+340h+var_320], r14d
+  0000000140155276  add     ebx, ecx
+  0000000140155278  xor     r15d, r12d
+  000000014015527B  xor     r15d, [rsp+340h+var_2E8]
+  0000000140155280  mov     esi, r10d
+  0000000140155283  xor     esi, [rsp+340h+var_310]
+  0000000140155287  mov     edx, ebx
+  0000000140155289  xor     esi, [rsp+340h+var_2F8]
+  000000014015528D  mov     ecx, edi
+  000000014015528F  xor     esi, [rsp+340h+var_308]
+  0000000140155293  or      ecx, r9d
+  0000000140155296  xor     r15d, [rsp+340h+var_2E0]
+  000000014015529B  and     ecx, r11d
+  000000014015529E  rol     r11d, 1Eh
+  00000001401552A2  mov     eax, edi
+  00000001401552A4  and     eax, r9d
+  00000001401552A7  rol     edx, 5
+  00000001401552AA  or      ecx, eax
+  00000001401552AC  rol     esi, 1
+  00000001401552AE  add     ecx, r8d
+  00000001401552B1  rol     r15d, 1
+  00000001401552B4  add     ecx, 8F1BBCDCh
+  00000001401552BA  mov     [rsp+340h+var_314], esi
+  00000001401552BE  add     r9d, 8F1BBCDCh
+  00000001401552C5  mov     [rsp+340h+var_308], r15d
+  00000001401552CA  lea     r8d, [r14+rdx]
+  00000001401552CE  mov     eax, r11d
+  00000001401552D1  add     r8d, ecx
+  00000001401552D4  and     eax, edi
+  00000001401552D6  mov     ecx, r11d
+  00000001401552D9  mov     r10d, r8d
+  00000001401552DC  or      ecx, edi
+  00000001401552DE  rol     r10d, 5
+  00000001401552E2  and     ecx, ebx
+  00000001401552E4  add     r10d, esi
+  00000001401552E7  or      ecx, eax
+  00000001401552E9  rol     ebx, 1Eh
+  00000001401552EC  add     ecx, r9d
+  00000001401552EF  mov     eax, ebx
+  00000001401552F1  add     r10d, ecx
+  00000001401552F4  and     eax, r11d
+  00000001401552F7  mov     ecx, ebx
+  00000001401552F9  mov     r9d, r10d
+  00000001401552FC  or      ecx, r11d
+  00000001401552FF  rol     r9d, 5
+  0000000140155303  and     ecx, r8d
+  0000000140155306  jmp     loc_14015546F
+  000000014015530B  db 55h, 0Fh, 86h, 59h, 0E3h
+  0000000140155310  dq 0FFFF43E01E8FFFFh, 0CA3341FFFDE96885h, 0C8958B4400EA8341h
+  0000000140155468  db 0FFh, 0Fh, 8Ch, 88h, 5Ch, 2 dup(0FFh)
+  000000014015546F  add     r9d, r15d
+  0000000140155472  or      ecx, eax
+  0000000140155474  rol     r8d, 1Eh
+  0000000140155478  add     ecx, 8F1BBCDCh
+  000000014015547E  mov     r12d, r14d
+  0000000140155481  xor     r12d, [rsp+340h+var_300]
+  0000000140155486  add     ecx, edi
+  0000000140155488  xor     r12d, [rsp+340h+var_318]
+  000000014015548D  add     r9d, ecx
+  0000000140155490  xor     r12d, [rsp+340h+var_2F8]
+  0000000140155495  mov     ecx, r8d
+  0000000140155498  or      ecx, ebx
+  000000014015549A  rol     r12d, 1
+  000000014015549D  and     ecx, r10d
+  00000001401554A0  mov     [rsp+340h+var_2F8], r12d
+  00000001401554A5  mov     eax, r8d
+  00000001401554A8  mov     edx, r9d
+  00000001401554AB  and     eax, ebx
+  00000001401554AD  rol     edx, 5
+  00000001401554B0  or      ecx, eax
+  00000001401554B2  add     r11d, 8F1BBCDCh
+  00000001401554B9  add     edx, r12d
+  00000001401554BC  mov     r14d, [rsp+340h+var_2DC]
+  00000001401554C1  add     ecx, r11d
+  00000001401554C4  mov     r11d, [rsp+340h+var_2FC]
+  00000001401554C9  add     edx, ecx
+  00000001401554CB  xor     esi, r13d
+  00000001401554CE  rol     r10d, 1Eh
+  00000001401554D2  xor     esi, r11d
+  00000001401554D5  mov     ecx, edx
+  00000001401554D7  xor     esi, [rsp+340h+var_2E8]
+  00000001401554DB  mov     eax, r10d
+  00000001401554DE  xor     eax, r8d
+  00000001401554E1  rol     ecx, 5
+  00000001401554E4  xor     eax, r9d
+  00000001401554E7  rol     esi, 1
+  00000001401554E9  add     eax, ebx
+  00000001401554EB  rol     r9d, 1Eh
+  00000001401554EF  add     eax, 0CA62C1D6h
+  00000001401554F4  mov     [rsp+340h+var_2FC], esi
+  00000001401554F8  mov     r13d, r15d
+  00000001401554FB  mov     edi, r12d
+  00000001401554FE  xor     r13d, [rsp+340h+var_30C]
+  0000000140155503  lea     ebx, [rsi+rcx]
+  0000000140155506  xor     edi, [rsp+340h+var_304]
+  000000014015550A  add     ebx, eax
+  000000014015550C  xor     edi, [rsp+340h+var_31C]
+  0000000140155510  xor     r13d, r14d
+  0000000140155513  xor     r13d, [rsp+340h+var_318]
+  0000000140155518  xor     edi, r11d
+  000000014015551B  jmp     short loc_140155584
+  000000014015551D  db 0E8h, 7Eh, 11h
+  0000000140155520  dq 0FFFDB1EC850FFFF6h, 0FFFFE020E9E38B49h, 0FE4E4D820FE30348h
+  0000000140155580  db 1Ah, 0A2h, 2 dup(0FFh)
+  0000000140155584  mov     ecx, ebx
+  0000000140155586  rol     r13d, 1
+  0000000140155589  rol     ecx, 5
+  000000014015558C  mov     eax, r9d
+  000000014015558F  xor     eax, r10d
+  0000000140155592  rol     edi, 1
+  0000000140155594  xor     eax, edx
+  0000000140155596  mov     [rsp+340h+var_2DC], r13d
+  000000014015559B  add     eax, r8d
+  000000014015559E  rol     edx, 1Eh
+  00000001401555A1  add     eax, 0CA62C1D6h
+  00000001401555A6  mov     [rsp+340h+var_318], edi
+  00000001401555AA  lea     r8d, [rcx+r13]
+  00000001401555AE  mov     r11d, esi
+  00000001401555B1  xor     r11d, [rsp+340h+var_2EC]
+  00000001401555B6  add     r8d, eax
+  00000001401555B9  xor     r11d, [rsp+340h+var_310]
+  00000001401555BE  mov     ecx, r8d
+  00000001401555C1  xor     r11d, r14d
+  00000001401555C4  rol     ecx, 5
+  00000001401555C7  rol     r11d, 1
+  00000001401555CA  mov     eax, edx
+  00000001401555CC  xor     eax, r9d
+  00000001401555CF  mov     [rsp+340h+var_2E8], r11d
+  00000001401555D4  xor     eax, ebx
+  00000001401555D6  mov     r14d, r13d
+  00000001401555D9  xor     r14d, [rsp+340h+var_320]
+  00000001401555DE  add     eax, r10d
+  00000001401555E1  xor     r14d, [rsp+340h+var_2F4]
+  00000001401555E6  lea     r10d, [rdi+rcx]
+  00000001401555EA  xor     r14d, [rsp+340h+var_31C]
+  00000001401555EF  add     eax, 0CA62C1D6h
+  00000001401555F4  add     r10d, eax
+  00000001401555F7  rol     ebx, 1Eh
+  00000001401555FA  rol     r14d, 1
+  00000001401555FD  mov     ecx, r10d
+  0000000140155600  rol     ecx, 5
+  0000000140155603  mov     eax, ebx
+  0000000140155605  xor     eax, edx
+  0000000140155607  mov     [rsp+340h+var_2E4], r14d
+  000000014015560C  xor     eax, r8d
+  000000014015560F  mov     [rsp+340h+var_2D0], r14d
+  0000000140155614  add     eax, r9d
+  0000000140155617  rol     r8d, 1Eh
+  000000014015561B  add     eax, 0CA62C1D6h
+  0000000140155620  lea     r9d, [r11+rcx]
+  0000000140155624  add     r9d, eax
+  0000000140155627  mov     eax, r8d
+  000000014015562A  xor     eax, ebx
+  000000014015562C  mov     ecx, r9d
+  000000014015562F  jmp     loc_14015599D
+  0000000140155634  dd 2A44C6D1h
+  0000000140155638  dq 2474895C247489E8h, 40C28B41F38B4570h, 413C24743344F82Ah
+  0000000140155998  db 8Dh, 7, 0C8h, 0FEh, 0FFh
+  000000014015599D  xor     eax, r10d
+  00000001401559A0  rol     ecx, 5
+  00000001401559A3  add     eax, edx
+  00000001401559A5  xor     edi, [rsp+340h+var_314]
+  00000001401559A9  lea     edx, [r14+rcx]
+  00000001401559AD  xor     edi, [rsp+340h+var_300]
+  00000001401559B1  add     eax, 0CA62C1D6h
+  00000001401559B6  xor     edi, [rsp+340h+var_310]
+  00000001401559BA  add     edx, eax
+  00000001401559BC  xor     r13d, [rsp+340h+var_2EC]
+  00000001401559C1  xor     r11d, r15d
+  00000001401559C4  xor     r11d, [rsp+340h+var_2F0]
+  00000001401559C9  mov     ecx, edx
+  00000001401559CB  xor     r11d, [rsp+340h+var_2F4]
+  00000001401559D0  mov     r15d, r14d
+  00000001401559D3  xor     r13d, [rsp+340h+var_30C]
+  00000001401559D8  xor     r15d, r12d
+  00000001401559DB  xor     r15d, [rsp+340h+var_30C]
+  00000001401559E0  mov     r12d, esi
+  00000001401559E3  xor     r12d, [rsp+340h+var_304]
+  00000001401559E8  xor     r12d, [rsp+340h+var_2F0]
+  00000001401559ED  xor     r15d, [rsp+340h+var_300]
+  00000001401559F2  rol     ecx, 5
+  00000001401559F5  rol     r11d, 1
+  00000001401559F8  rol     r10d, 1Eh
+  00000001401559FC  xor     r13d, r11d
+  00000001401559FF  rol     edi, 1
+  0000000140155A01  mov     eax, r10d
+  0000000140155A04  xor     eax, r8d
+  0000000140155A07  rol     r15d, 1
+  0000000140155A0A  xor     eax, r9d
+  0000000140155A0D  mov     [rsp+340h+var_2E0], r11d
+  0000000140155A12  add     eax, ebx
+  0000000140155A14  rol     r9d, 1Eh
+  0000000140155A18  add     eax, 0CA62C1D6h
+  0000000140155A1D  mov     [rsp+340h+var_2C8], r11d
+  0000000140155A22  lea     ebx, [rdi+rcx]
+  0000000140155A25  rol     r13d, 1
+  0000000140155A28  add     ebx, eax
+  0000000140155A2A  mov     [rsp+340h+var_310], edi
+  0000000140155A2E  mov     ecx, ebx
+  0000000140155A30  mov     [rsp+340h+var_2CC], edi
+  0000000140155A34  rol     ecx, 5
+  0000000140155A37  mov     eax, r9d
+  0000000140155A3A  xor     eax, r10d
+  0000000140155A3D  mov     [rsp+340h+var_2C4], r15d
+  0000000140155A42  xor     eax, edx
+  0000000140155A44  mov     [rbp+240h+var_2BC], r13d
+  0000000140155A48  add     eax, r8d
+  0000000140155A4B  rol     edx, 1Eh
+  0000000140155A4E  jmp     loc_140155C48
+  0000000140155A53  db 48h, 81h, 0C4h, 88h, 6
+  0000000140155A58  dq 0FFFDC3148A0F0000h, 0B76AE8FFF436B3E8h, 0FFFEB1568D0FFFFFh
+  0000000140155C48  add     eax, 0CA62C1D6h
+  0000000140155C4D  lea     r8d, [r11+rcx]
+  0000000140155C51  add     r8d, eax
+  0000000140155C54  xor     r12d, edi
+  0000000140155C57  mov     ecx, r8d
+  0000000140155C5A  rol     r12d, 1
+  0000000140155C5D  rol     ecx, 5
+  0000000140155C60  mov     eax, edx
+  0000000140155C62  xor     eax, r9d
+  0000000140155C65  mov     [rbp+240h+var_2C0], r12d
+  0000000140155C69  xor     eax, ebx
+  0000000140155C6B  add     r10d, ecx
+  0000000140155C6E  add     eax, 0CA62C1D6h
+  0000000140155C73  rol     ebx, 1Eh
+  0000000140155C76  add     eax, r15d
+  0000000140155C79  add     r10d, eax
+  0000000140155C7C  mov     eax, ebx
+  0000000140155C7E  xor     eax, edx
+  0000000140155C80  mov     ecx, r10d
+  0000000140155C83  xor     eax, r8d
+  0000000140155C86  rol     ecx, 5
+  0000000140155C89  add     eax, r9d
+  0000000140155C8C  rol     r8d, 1Eh
+  0000000140155C90  add     eax, 0CA62C1D6h
+  0000000140155C95  add     edx, 0CA62C1D6h
+  0000000140155C9B  lea     r9d, [r12+rcx]
+  0000000140155C9F  add     r9d, eax
+  0000000140155CA2  mov     eax, r8d
+  0000000140155CA5  xor     eax, ebx
+  0000000140155CA7  mov     r11d, r9d
+  0000000140155CAA  rol     r11d, 5
+  0000000140155CAE  xor     eax, r10d
+  0000000140155CB1  add     r11d, r13d
+  0000000140155CB4  add     eax, edx
+  0000000140155CB6  add     r11d, eax
+  0000000140155CB9  rol     r10d, 1Eh
+  0000000140155CBD  mov     ecx, r11d
+  0000000140155CC0  mov     eax, r10d
+  0000000140155CC3  xor     eax, r8d
+  0000000140155CC6  rol     ecx, 5
+  0000000140155CC9  xor     eax, r9d
+  0000000140155CCC  mov     edx, r15d
+  0000000140155CCF  xor     edx, [rsp+340h+var_318]
+  0000000140155CD3  add     eax, ebx
+  0000000140155CD5  xor     edx, [rsp+340h+var_320]
+  0000000140155CD9  add     eax, 0CA62C1D6h
+  0000000140155CDE  xor     edx, [rsp+340h+var_304]
+  0000000140155CE2  mov     edi, r12d
+  0000000140155CE5  xor     edi, [rsp+340h+var_2E8]
+  0000000140155CE9  mov     esi, r13d
+  0000000140155CEC  jmp     loc_140155F39
+  0000000140155CF1  db 50h, 0Fh, 83h, 0FBh, 0C5h, 0FEh, 0FFh
+  0000000140155CF8  dq 0F24BE8FFF433EBE8h, 0FFFE63978B0FFFFEh, 59FFFFBDF2E95C41h
+  0000000140155F38  db 0FFh
+  0000000140155F39  xor     edi, [rsp+340h+var_314]
+  0000000140155F3D  xor     esi, r14d
+  0000000140155F40  xor     edi, [rsp+340h+var_2EC]
+  0000000140155F44  xor     esi, [rsp+340h+var_308]
+  0000000140155F48  xor     esi, [rsp+340h+var_320]
+  0000000140155F4C  rol     edx, 1
+  0000000140155F4E  rol     edi, 1
+  0000000140155F50  mov     r14d, edx
+  0000000140155F53  xor     r14d, [rsp+340h+var_2F8]
+  0000000140155F58  xor     r14d, [rsp+340h+var_314]
+  0000000140155F5D  xor     r14d, [rsp+340h+var_310]
+  0000000140155F62  lea     ebx, [rdx+rcx]
+  0000000140155F65  add     ebx, eax
+  0000000140155F67  mov     [rsp+340h+var_31C], edi
+  0000000140155F6B  mov     [rsp+340h+var_300], edx
+  0000000140155F6F  mov     ecx, ebx
+  0000000140155F71  rol     ecx, 5
+  0000000140155F74  mov     [rbp+240h+var_2B8], edx
+  0000000140155F77  mov     edx, [rsp+340h+var_31C]
+  0000000140155F7B  xor     edx, [rsp+340h+var_2FC]
+  0000000140155F7F  xor     edx, [rsp+340h+var_308]
+  0000000140155F83  xor     edx, [rsp+340h+var_2E0]
+  0000000140155F87  rol     r9d, 1Eh
+  0000000140155F8B  mov     [rbp+240h+var_2B4], edi
+  0000000140155F8E  mov     eax, r9d
+  0000000140155F91  xor     eax, r10d
+  0000000140155F94  rol     esi, 1
+  0000000140155F96  xor     eax, r11d
+  0000000140155F99  rol     r14d, 1
+  0000000140155F9C  add     eax, r8d
+  0000000140155F9F  rol     r11d, 1Eh
+  0000000140155FA3  add     eax, 0CA62C1D6h
+  0000000140155FA8  rol     edx, 1
+  0000000140155FAA  lea     r8d, [rdi+rcx]
+  0000000140155FAE  mov     [rbp+240h+var_2B0], esi
+  0000000140155FB1  add     r8d, eax
+  0000000140155FB4  mov     [rbp+240h+var_2AC], r14d
+  0000000140155FB8  mov     ecx, r8d
+  0000000140155FBB  mov     [rbp+240h+var_2A8], edx
+  0000000140155FBE  rol     ecx, 5
+  0000000140155FC1  mov     eax, r11d
+  0000000140155FC4  xor     eax, r9d
+  0000000140155FC7  add     r9d, 0CA62C1D6h
+  0000000140155FCE  xor     eax, ebx
+  0000000140155FD0  rol     ebx, 1Eh
+  0000000140155FD3  add     eax, r10d
+  0000000140155FD6  add     eax, 0CA62C1D6h
+  0000000140155FDB  lea     r10d, [rsi+rcx]
+  0000000140155FDF  add     r10d, eax
+  0000000140155FE2  mov     eax, ebx
+  0000000140155FE4  jmp     loc_140156249
+  0000000140155FE9  db 0E8h, 1Ah, 31h, 0F4h, 0FFh, 0E8h, 0D0h
+  0000000140155FF0  dq 0FD5D5A800FFFFFD6h, 300C48148FFh, 0FF41FFFDBA158C0Fh
+  0000000140156248  db 0FFh
+  0000000140156249  xor     eax, r11d
+  000000014015624C  mov     edi, r10d
+  000000014015624F  xor     eax, r8d
+  0000000140156252  rol     edi, 5
+  0000000140156255  add     eax, r9d
+  0000000140156258  rol     r8d, 1Eh
+  000000014015625C  add     edi, r14d
+  000000014015625F  add     edi, eax
+  0000000140156261  mov     eax, r8d
+  0000000140156264  xor     eax, ebx
+  0000000140156266  mov     ecx, edi
+  0000000140156268  xor     eax, r10d
+  000000014015626B  rol     ecx, 5
+  000000014015626E  add     eax, 0CA62C1D6h
+  0000000140156273  add     r11d, ecx
+  0000000140156276  add     eax, edx
+  0000000140156278  rol     r10d, 1Eh
+  000000014015627C  add     r11d, eax
+  000000014015627F  xor     esi, r15d
+  0000000140156282  xor     esi, [rsp+340h+var_2DC]
+  0000000140156286  xor     edx, r13d
+  0000000140156289  xor     esi, [rsp+340h+var_2F8]
+  000000014015628D  xor     r14d, r12d
+  0000000140156290  xor     edx, [rsp+340h+var_2E8]
+  0000000140156294  mov     r9d, r11d
+  0000000140156297  xor     r14d, [rsp+340h+var_318]
+  000000014015629C  mov     eax, r10d
+  000000014015629F  xor     edx, [rsp+340h+var_2DC]
+  00000001401562A3  xor     eax, r8d
+  00000001401562A6  xor     r14d, [rsp+340h+var_2FC]
+  00000001401562AB  xor     eax, edi
+  00000001401562AD  add     eax, 0CA62C1D6h
+  00000001401562B2  rol     esi, 1
+  00000001401562B4  add     eax, esi
+  00000001401562B6  rol     r14d, 1
+  00000001401562B9  rol     edx, 1
+  00000001401562BB  mov     [rbp+240h+var_2A4], esi
+  00000001401562BE  xor     esi, [rsp+340h+var_300]
+  00000001401562C2  xor     esi, [rsp+340h+var_2E4]
+  00000001401562C6  xor     esi, [rsp+340h+var_318]
+  00000001401562CA  mov     [rbp+240h+var_29C], edx
+  00000001401562CD  add     edx, 0CA62C1D6h
+  00000001401562D3  rol     r9d, 5
+  00000001401562D7  add     r9d, ebx
+  00000001401562DA  rol     edi, 1Eh
+  00000001401562DD  add     r9d, eax
+  00000001401562E0  rol     esi, 1
+  00000001401562E2  mov     [rbp+240h+var_2A0], r14d
+  00000001401562E6  mov     ecx, r9d
+  00000001401562E9  mov     [rbp+240h+var_298], esi
+  00000001401562EC  jmp     loc_14015649F
+  00000001401562F1  db 0E8h, 0A8h, 0B5h, 0FDh, 0FFh, 0Fh, 83h
+  00000001401562F8  dq 0FE10349FFFDD39Ah, 643344FFFD6F0383h, 0C38B45F2D3415824h
+  0000000140156498  db 0, 0Fh, 8Bh, 19h, 7Eh, 2 dup(0FFh)
+  000000014015649F  mov     eax, edi
+  00000001401564A1  xor     eax, r10d
+  00000001401564A4  rol     ecx, 5
+  00000001401564A7  xor     eax, r11d
+  00000001401564AA  add     r8d, ecx
+  00000001401564AD  add     eax, 0CA62C1D6h
+  00000001401564B2  rol     r11d, 1Eh
+  00000001401564B6  add     eax, r14d
+  00000001401564B9  add     esi, 0CA62C1D6h
+  00000001401564BF  xor     r14d, [rsp+340h+var_31C]
+  00000001401564C4  add     r8d, eax
+  00000001401564C7  xor     r14d, [rsp+340h+var_2E8]
+  00000001401564CC  mov     eax, r11d
+  00000001401564CF  xor     r14d, [rsp+340h+var_310]
+  00000001401564D4  xor     eax, edi
+  00000001401564D6  xor     eax, r9d
+  00000001401564D9  rol     r14d, 1
+  00000001401564DC  add     eax, edx
+  00000001401564DE  rol     r9d, 1Eh
+  00000001401564E2  mov     ebx, r8d
+  00000001401564E5  mov     [rbp+240h+var_294], r14d
+  00000001401564E9  rol     ebx, 5
+  00000001401564EC  add     ebx, r10d
+  00000001401564EF  add     ebx, eax
+  00000001401564F1  mov     eax, r9d
+  00000001401564F4  xor     eax, r11d
+  00000001401564F7  mov     edx, ebx
+  00000001401564F9  xor     eax, r8d
+  00000001401564FC  rol     edx, 5
+  00000001401564FF  add     eax, esi
+  0000000140156501  rol     r8d, 1Eh
+  0000000140156505  mov     esi, [rbp+240h+var_17C]
+  000000014015650B  add     edx, edi
+  000000014015650D  add     edx, eax
+  000000014015650F  add     r11d, 0CA62C1D6h
+  0000000140156516  mov     eax, r8d
+  0000000140156519  mov     r15d, edx
+  000000014015651C  xor     eax, r9d
+  000000014015651F  rol     r15d, 5
+  0000000140156523  xor     eax, ebx
+  0000000140156525  add     eax, r14d
+  0000000140156528  add     eax, r11d
+  000000014015652B  add     eax, [rbp+240h+var_180]
+  0000000140156531  add     r15d, eax
+  0000000140156534  mov     [rbp+240h+var_180], r15d
+  000000014015653B  add     esi, edx
+  000000014015653D  mov     r10d, [rbp+240h+var_178]
+  0000000140156544  mov     r11d, [rbp+240h+var_174]
+  000000014015654B  mov     r14d, [rbp+240h+var_170]
+  0000000140156552  add     r11d, r8d
+  0000000140156555  jmp     loc_1401566CE
+  000000014015655A  dw 349h, 0FE1h, 8387h
+  0000000140156560  dq 1D73A2B3CCFFFDE3h, 7E8DD7058B11599Ch, 536C5E5E0A5A346Eh
+  00000001401566C8  db 5Ch, 0E9h, 2Ah, 0ADh, 0FDh, 0FFh
+  00000001401566CE  mov     rax, [rbp+240h+var_290]
+  00000001401566D2  add     r14d, r9d
+  00000001401566D5  mov     rdx, [rbp-38h]
+  00000001401566D9  add     rax, 40h ; '@'
+  00000001401566DD  mov     rcx, [rbp+240h+var_280]
+  00000001401566E1  sub     rdx, 40h ; '@'
+  00000001401566E5  rol     ebx, 1Eh
+  00000001401566E8  add     rcx, 40h ; '@'
+  00000001401566EC  add     r10d, ebx
+  00000001401566EF  mov     [rbp+240h+var_17C], esi
+  00000001401566F5  mov     [rbp+240h+var_178], r10d
+  00000001401566FC  mov     [rbp+240h+var_174], r11d
+  0000000140156703  mov     [rbp+240h+var_170], r14d
+  000000014015670A  mov     [rbp+240h+var_290], rax
+  000000014015670E  mov     [rbp-38h], rdx
+  0000000140156712  mov     [rbp+240h+var_280], rcx
+  0000000140156716  cmp     rcx, 8
+  000000014015671A  jb      loc_1401527B1
+  0000000140156720  jmp     loc_1401568A3
+  0000000140156725  db 0E8h, 0D6h, 0F9h
+  0000000140156728  dq 0FFFF7C0F830FFFF5h, 0F850FFFFDC771E8h, 0E38B0F5241FFFE0Ah
+  00000001401568A0  db 0D9h, 0FEh, 0FFh
+  00000001401568A3  xor     r12d, r12d
+  00000001401568A6  mov     ecx, r12d
+  00000001401568A9  jmp     loc_140156B58
+  00000001401568AE  dw 0ADE8h
+  00000001401568B0  dq 0FE2E128C0FFFF428h, 0B10E75AD350A79FFh, 52585954548DFB5Ch
+  0000000140156AB8  db 0FFh, 0Fh, 8Ah, 8Dh, 1Fh, 0FEh, 0FFh
+  0000000140156ABF  mov     rax, r12
+  0000000140156AC2  jmp     loc_140156B58
+  0000000140156AC7  db 3 dup(90h)
+  0000000140156ACA  dw 0C041h, 0CFC3h, 9090h
+  0000000140156AD0  db 90h
+  0000000140156AD1  db 0Fh, 84h, 88h, 0AFh, 0FEh, 0FFh, 41h
+  0000000140156AD8  dq 0E8FFFD9BA9810F52h, 0CBA3830FFFF5573Ch, 761323130F7EFFFFh
+  0000000140156B58  mov     r8d, 8
+  0000000140156B5E  lea     rdx, [rbp+240h+var_268]
+  0000000140156B62  sub     r8, rax
+  0000000140156B65  add     rdx, rax
+  0000000140156B68  lea     rax, [rbp+240h+var_164]
+  0000000140156B6F  add     rcx, rax
+  0000000140156B72  jmp     loc_140156D93
+  0000000140156B77  db 41h
+  0000000140156B78  dq 0C02341DB8C41C18Bh, 0F433411EC7C1DBD3h, 0C18150247489C80Bh
+  0000000140156D90  db 0F7h, 2 dup(0FFh)
+  0000000140156D93  call    sub_140095E40
+  0000000140156D98  jmp     loc_140156E39
+  0000000140156D9D  db 0E8h, 0CFh, 3Dh
+  0000000140156DA0  dq 0FFFD636E840FFFFEh, 0F257E8FFF423DBE8h, 0FFFDA1228B0FFFFDh
+  0000000140156E38  db 0FFh
+  0000000140156E39  lea     rcx, [rbp+240h+var_180]
+  0000000140156E40  mov     rax, 1A4B6CBB6C5h
+  0000000140156E4A  cmp     rcx, rax
+  0000000140156E4D  jnb     loc_14015743D
+  0000000140156E53  jmp     loc_140156FE2
+  0000000140156E58  dq 0E555E95C415D415Dh, 0BB528A0FFFFDh, 0B6880FFFF552D7E8h
+  0000000140156FE0  db 0ECh, 0E8h
+  0000000140156FE2  nop
+  0000000140156FE3  jmp     loc_140157130
+  0000000140156FE8  dq 0F73341F53341F733h, 224428247489C6D1h, 41C2D341F38B45E0h
+  0000000140157130  call    sub_1401E0891
+  0000000140157135  jmp     rax
+  0000000140157137  db 5Dh
+  0000000140157138  dq 0FF7CEAE95F415E41h, 637DE95C415F41FFh, 8553E95D5F41FFFEh
+  0000000140157438  db 80h, 0B1h, 43h, 2 dup(0FFh)
+  000000014015743D  mov     ebx, dword ptr [rbp+240h+var_16C+4]
+  0000000140157443  mov     eax, 40h ; '@'
+  0000000140157448  mov     ecx, ebx
+  000000014015744A  and     ecx, 3Fh
+  000000014015744D  sub     eax, ecx
+  000000014015744F  mov     ecx, eax
+  0000000140157451  cmp     eax, 8
+  0000000140157454  lea     rdi, [rax+40h]
+  0000000140157458  cmova   rdi, rcx
+  000000014015745C  xor     edx, edx
+  000000014015745E  lea     rcx, [rbp+240h+var_80]
+  0000000140157465  mov     [rbp+240h+var_260], rdi
+  0000000140157469  lea     r8, [rdi-8]
+  000000014015746D  jmp     short loc_1401574E6
+  000000014015746F  db 49h
+  0000000140157470  dq 0FFFFF6FF8A0FE703h, 0E617E8FFF41BDBE8h, 0FFFDB5FA850FFFFEh
+  00000001401574E0  db 0Fh, 87h, 17h, 0B9h, 0FDh, 0FFh
+  00000001401574E6  call    sub_140096100
+  00000001401574EB  jmp     short loc_140157542
+  00000001401574ED  mov     rsp, r11
+  00000001401574F0  pop     r15
+  00000001401574F2  jmp     loc_14014C8AE
+  00000001401574F7  db 41h
+  00000001401574F8  dq 49FFFFE322880F53h, 0FFFE6837850FE603h, 778F0FFFF3F0D3E8h
+  0000000140157540  db 2 dup(0FFh)
+  0000000140157542  mov     r8d, dword ptr [rbp+240h+var_16C]
+  0000000140157549  lea     edx, ds:0[rbx*8]
+  0000000140157550  mov     [rbp+240h+var_80], 80h
+  0000000140157557  mov     ecx, ebx
+  0000000140157559  shr     ecx, 1Dh
+  000000014015755C  add     ebx, edi
+  000000014015755E  lea     eax, ds:0[r8*8]
+  0000000140157566  or      ecx, eax
+  0000000140157568  mov     eax, ecx
+  000000014015756A  shr     eax, 18h
+  000000014015756D  mov     [rbp+rdi+240h+var_88], al
+  0000000140157574  mov     eax, ecx
+  0000000140157576  shr     eax, 10h
+  0000000140157579  mov     [rbp+rdi+240h+var_87], al
+  0000000140157580  mov     eax, ecx
+  0000000140157582  shr     eax, 8
+  0000000140157585  mov     [rbp+rdi+240h+var_86], al
+  000000014015758C  mov     eax, edx
+  000000014015758E  shr     eax, 18h
+  0000000140157591  mov     [rbp+rdi+240h+var_85], cl
+  0000000140157598  mov     rcx, [rbp+240h+var_16C+4]
+  000000014015759F  mov     [rbp+rdi+240h+var_84], al
+  00000001401575A6  and     ecx, 3Fh
+  00000001401575A9  mov     eax, edx
+  00000001401575AB  mov     dword ptr [rbp+240h+var_16C+4], ebx
+  00000001401575B1  shr     eax, 10h
+  00000001401575B4  mov     [rbp+rdi+240h+var_83], al
+  00000001401575BB  mov     eax, edx
+  00000001401575BD  shr     eax, 8
+  00000001401575C0  mov     [rbp+rdi+240h+var_82], al
+  00000001401575C7  mov     eax, ebx
+  00000001401575C9  mov     [rbp+rdi+240h+var_81], dl
+  00000001401575D0  cmp     rax, rdi
+  00000001401575D3  jnb     loc_140157968
+  00000001401575D9  jmp     loc_14015775E
+  00000001401575DE  dw 8B44h
+  00000001401575E0  dq 7999C381417C246Ch, 0C2D341C68B445A82h, 33452ADA83CA8B45h
+  0000000140157758  jnz     loc_140129B61
+  000000014015775E  inc     r8d
+  0000000140157761  mov     dword ptr [rbp+240h+var_16C], r8d
+  0000000140157768  jmp     loc_140157968
+  000000014015776D  db 41h, 8Bh, 0C3h
+  0000000140157770  dq 0F63341C22341D3D2h, 0FCD341C80B1EC3C1h, 4504C78341C90341h
+  0000000140157968  mov     r8d, 40h ; '@'
+  000000014015796E  sub     r8, rcx
+  0000000140157971  mov     [rbp+240h+var_290], r8
+  0000000140157975  cmp     rdi, r8
+  0000000140157978  jb      loc_14015F168
+  000000014015797E  jmp     loc_140157C2D
+  0000000140157983  db 0E8h, 58h, 18h, 0F4h, 0FFh
+  0000000140157988  dq 0BA8F0FFFFDFD73E8h, 0FFF43B60FFFFD50h, 0E1C1EA3B41FE4BB6h
+  0000000140157C28  db 8Eh, 37h, 0D8h, 2 dup(0FFh)
+  0000000140157C2D  lea     rax, [rbp+240h+var_164]
+  0000000140157C34  add     rcx, rax
+  0000000140157C37  lea     rdx, [rbp+240h+var_80]
+  0000000140157C3E  jmp     loc_140157FC6
+  0000000140157C43  db 48h, 0Fh, 0AFh, 0C8h, 48h
+  0000000140157C48  dq 0D9120BEAB56944B8h, 44CA3348C82A44C9h, 0C8D48C10348DD03h
+  0000000140157FC0  db 0Fh, 8Eh, 0BCh, 15h, 0FEh, 0FFh
+  0000000140157FC6  call    sub_140095E40
+  0000000140157FCB  jmp     loc_140158055
+  0000000140157FD0  dq 6365E8FFF41143E8h, 0FFFE23A6860FFFFFh, 0A87D504ECB8F5A77h
+  0000000140158050  db 0E9h, 0E5h, 15h, 0FDh, 0FFh
+  0000000140158055  mov     rdx, r12
+  0000000140158058  jmp     loc_140158238
+  000000014015805D  db 0E8h, 96h, 10h
+  0000000140158060  dq 0FFFFDE2CCE8FFF4h, 106EE8FFFFAE6284h, 0FFFFEB47FE8FFF4h
+  0000000140158238  movzx   eax, [rbp+rdx+240h+var_163]
+  0000000140158240  movzx   ecx, [rbp+rdx+240h+var_164]
+  0000000140158248  shl     ecx, 8
+  000000014015824B  or      ecx, eax
+  000000014015824D  movzx   eax, [rbp+rdx+240h+var_162]
+  0000000140158255  shl     ecx, 8
+  0000000140158258  or      ecx, eax
+  000000014015825A  movzx   eax, [rbp+rdx+240h+var_161]
+  0000000140158262  shl     ecx, 8
+  0000000140158265  or      ecx, eax
+  0000000140158267  mov     [rsp+rdx+340h+var_2D0], ecx
+  000000014015826B  add     rdx, 4
+  000000014015826F  cmp     rdx, 40h ; '@'
+  0000000140158273  jl      short loc_140158238
+  0000000140158275  jmp     loc_1401583E3
+  000000014015827A  dw 0E1E8h, 0F40Eh, 0E8FFh
+  0000000140158280  dq 0BA19840FFFFDEDBAh, 415C41E38B49FFFEh, 4090FFFECF6EE95Eh
+  00000001401583E0  db 8Ah, 0FEh, 0FFh
+  00000001401583E3  mov     r10d, [rbp+240h+var_178]
+  00000001401583EA  mov     r9d, [rbp+240h+var_174]
+  00000001401583F1  mov     ecx, r9d
+  00000001401583F4  xor     ecx, r10d
+  00000001401583F7  mov     ebx, [rbp+240h+var_180]
+  00000001401583FD  mov     edx, [rbp+240h+var_17C]
+  0000000140158403  mov     eax, ebx
+  0000000140158405  and     ecx, edx
+  0000000140158407  mov     r8d, [rbp+240h+var_170]
+  000000014015840E  xor     ecx, r9d
+  0000000140158411  mov     r15d, [rsp+340h+var_2C8]
+  0000000140158416  mov     r12d, [rsp+340h+var_2C4]
+  000000014015841B  add     r8d, 5A827999h
+  0000000140158422  mov     r13d, [rbp+240h+var_2C0]
+  0000000140158426  add     r9d, 5A827999h
+  000000014015842D  rol     eax, 5
+  0000000140158430  add     eax, [rsp+340h+var_2D0]
+  0000000140158434  add     ecx, eax
+  0000000140158436  rol     edx, 1Eh
+  0000000140158439  add     r8d, ecx
+  000000014015843C  mov     ecx, edx
+  000000014015843E  xor     ecx, r10d
+  0000000140158441  mov     eax, r8d
+  0000000140158444  and     ecx, ebx
+  0000000140158446  rol     eax, 5
+  0000000140158449  add     eax, [rsp+340h+var_2CC]
+  000000014015844D  xor     ecx, r10d
+  0000000140158450  add     ecx, eax
+  0000000140158452  rol     ebx, 1Eh
+  0000000140158455  add     r9d, ecx
+  0000000140158458  add     r10d, 5A827999h
+  000000014015845F  mov     ecx, ebx
+  0000000140158461  mov     eax, r9d
+  0000000140158464  xor     ecx, edx
+  0000000140158466  rol     eax, 5
+  0000000140158469  and     ecx, r8d
+  000000014015846C  add     eax, r15d
+  000000014015846F  xor     ecx, edx
+  0000000140158471  rol     r8d, 1Eh
+  0000000140158475  add     ecx, eax
+  0000000140158477  add     r10d, ecx
+  000000014015847A  mov     ecx, ebx
+  000000014015847C  xor     ecx, r8d
+  000000014015847F  mov     eax, r10d
+  0000000140158482  and     ecx, r9d
+  0000000140158485  rol     eax, 5
+  0000000140158488  xor     ecx, ebx
+  000000014015848A  rol     r9d, 1Eh
+  000000014015848E  add     eax, edx
+  0000000140158490  lea     r11d, [r8+5A827999h]
+  0000000140158497  jmp     loc_14015851C
+  000000014015849C  dd 782FB327h
+  00000001401584A0  dq 7EE858A78B535C59h, 3488D8D53D55E5Ch, 0E8FFFE18EA840FE6h
+  0000000140158518  db 32h, 2Bh, 0FEh, 0FFh
+  000000014015851C  add     ecx, eax
+  000000014015851E  lea     edx, [r12+5A827999h]
+  0000000140158526  add     edx, ecx
+  0000000140158528  mov     ecx, r9d
+  000000014015852B  xor     ecx, r8d
+  000000014015852E  mov     eax, edx
+  0000000140158530  and     ecx, r10d
+  0000000140158533  rol     eax, 5
+  0000000140158536  xor     ecx, r8d
+  0000000140158539  rol     r10d, 1Eh
+  000000014015853D  add     eax, ebx
+  000000014015853F  lea     ebx, [r13+5A827999h]
+  0000000140158546  add     ecx, eax
+  0000000140158548  add     ebx, ecx
+  000000014015854A  mov     ecx, r10d
+  000000014015854D  xor     ecx, r9d
+  0000000140158550  mov     eax, ebx
+  0000000140158552  and     ecx, edx
+  0000000140158554  rol     eax, 5
+  0000000140158557  add     eax, [rbp+240h+var_2BC]
+  000000014015855A  xor     ecx, r9d
+  000000014015855D  add     ecx, eax
+  000000014015855F  rol     edx, 1Eh
+  0000000140158562  add     r11d, ecx
+  0000000140158565  mov     ecx, edx
+  0000000140158567  xor     ecx, r10d
+  000000014015856A  mov     eax, r11d
+  000000014015856D  and     ecx, ebx
+  000000014015856F  rol     eax, 5
+  0000000140158572  xor     ecx, r10d
+  0000000140158575  add     eax, [rbp+240h+var_2B8]
+  0000000140158578  add     ecx, eax
+  000000014015857A  rol     ebx, 1Eh
+  000000014015857D  lea     r8d, [r9+5A827999h]
+  0000000140158584  add     r8d, ecx
+  0000000140158587  lea     r9d, [r10+5A827999h]
+  000000014015858E  mov     ecx, ebx
+  0000000140158590  lea     r10d, [rdx+5A827999h]
+  0000000140158597  xor     ecx, edx
+  0000000140158599  mov     eax, r8d
+  000000014015859C  and     ecx, r11d
+  000000014015859F  rol     eax, 5
+  00000001401585A2  add     eax, [rbp+240h+var_2B4]
+  00000001401585A5  xor     ecx, edx
+  00000001401585A7  add     ecx, eax
+  00000001401585A9  rol     r11d, 1Eh
+  00000001401585AD  add     r9d, ecx
+  00000001401585B0  lea     edx, [rbx+5A827999h]
+  00000001401585B6  mov     ecx, r11d
+  00000001401585B9  mov     eax, r9d
+  00000001401585BC  jmp     loc_140158653
+  00000001401585C1  db 0E8h, 0AAh, 0Bh, 0F4h, 0FFh, 0E8h, 0BEh
+  00000001401585C8  dq 0FDA0848F0FFFFF39h, 0FD9C81820F5241FFh, 8A0FFFF42052E8FFh
+  0000000140158650  db 87h, 0FEh, 0FFh
+  0000000140158653  xor     ecx, ebx
+  0000000140158655  rol     eax, 5
+  0000000140158658  add     eax, [rbp+240h+var_2B0]
+  000000014015865B  and     ecx, r8d
+  000000014015865E  xor     ecx, ebx
+  0000000140158660  rol     r8d, 1Eh
+  0000000140158664  add     ecx, eax
+  0000000140158666  lea     ebx, [r11+5A827999h]
+  000000014015866D  add     r10d, ecx
+  0000000140158670  mov     ecx, r8d
+  0000000140158673  xor     ecx, r11d
+  0000000140158676  mov     eax, r10d
+  0000000140158679  and     ecx, r9d
+  000000014015867C  rol     eax, 5
+  000000014015867F  add     eax, [rbp+240h+var_2AC]
+  0000000140158682  xor     ecx, r11d
+  0000000140158685  add     ecx, eax
+  0000000140158687  rol     r9d, 1Eh
+  000000014015868B  add     edx, ecx
+  000000014015868D  lea     r11d, [r8+5A827999h]
+  0000000140158694  mov     ecx, r9d
+  0000000140158697  mov     eax, edx
+  0000000140158699  xor     ecx, r8d
+  000000014015869C  rol     eax, 5
+  000000014015869F  add     eax, [rbp+240h+var_2A8]
+  00000001401586A2  and     ecx, r10d
+  00000001401586A5  xor     ecx, r8d
+  00000001401586A8  rol     r10d, 1Eh
+  00000001401586AC  add     ecx, eax
+  00000001401586AE  lea     r8d, [r9+5A827999h]
+  00000001401586B5  add     ebx, ecx
+  00000001401586B7  mov     ecx, r10d
+  00000001401586BA  xor     ecx, r9d
+  00000001401586BD  mov     eax, ebx
+  00000001401586BF  and     ecx, edx
+  00000001401586C1  rol     eax, 5
+  00000001401586C4  add     eax, [rbp+240h+var_2A4]
+  00000001401586C7  xor     ecx, r9d
+  00000001401586CA  add     ecx, eax
+  00000001401586CC  rol     edx, 1Eh
+  00000001401586CF  add     r11d, ecx
+  00000001401586D2  lea     r9d, [r10+5A827999h]
+  00000001401586D9  mov     eax, r11d
+  00000001401586DC  mov     ecx, edx
+  00000001401586DE  xor     ecx, r10d
+  00000001401586E1  rol     eax, 5
+  00000001401586E4  add     eax, [rbp+240h+var_2A0]
+  00000001401586E7  and     ecx, ebx
+  00000001401586E9  xor     ecx, r10d
+  00000001401586EC  rol     ebx, 1Eh
+  00000001401586EF  jmp     loc_140158779
+  00000001401586F4  dd 4C12E95Dh
+  00000001401586F8  dq 0C38B0FE30348FFFDh, 0FFF40A58E8FFFD6Fh, 0E18D0FFFFFA08DE8h
+  0000000140158778  db 0FFh
+  0000000140158779  add     ecx, eax
+  000000014015877B  add     r8d, ecx
+  000000014015877E  mov     ecx, ebx
+  0000000140158780  xor     ecx, edx
+  0000000140158782  mov     eax, r8d
+  0000000140158785  and     ecx, r11d
+  0000000140158788  rol     eax, 5
+  000000014015878B  add     eax, [rbp+240h+var_29C]
+  000000014015878E  xor     ecx, edx
+  0000000140158790  add     ecx, eax
+  0000000140158792  add     r9d, ecx
+  0000000140158795  rol     r11d, 1Eh
+  0000000140158799  mov     r14d, [rbp+240h+var_2A8]
+  000000014015879D  lea     r10d, [rdx+5A827999h]
+  00000001401587A4  mov     edx, [rbp+240h+var_294]
+  00000001401587A7  lea     esi, [r11+5A827999h]
+  00000001401587AE  add     edx, 5A827999h
+  00000001401587B4  mov     ecx, r11d
+  00000001401587B7  xor     ecx, ebx
+  00000001401587B9  mov     eax, r9d
+  00000001401587BC  and     ecx, r8d
+  00000001401587BF  rol     eax, 5
+  00000001401587C2  add     eax, [rbp+240h+var_298]
+  00000001401587C5  xor     ecx, ebx
+  00000001401587C7  add     ecx, eax
+  00000001401587C9  rol     r8d, 1Eh
+  00000001401587CD  add     r10d, ecx
+  00000001401587D0  mov     ecx, r8d
+  00000001401587D3  xor     ecx, r11d
+  00000001401587D6  mov     eax, r10d
+  00000001401587D9  rol     eax, 5
+  00000001401587DC  and     ecx, r9d
+  00000001401587DF  add     eax, edx
+  00000001401587E1  rol     r9d, 1Eh
+  00000001401587E5  mov     edx, [rbp+240h+var_29C]
+  00000001401587E8  xor     ecx, r11d
+  00000001401587EB  xor     edx, [rbp+240h+var_2B0]
+  00000001401587EE  add     ecx, eax
+  00000001401587F0  xor     edx, r15d
+  00000001401587F3  add     ebx, ecx
+  00000001401587F5  xor     edx, [rsp+340h+var_2D0]
+  00000001401587F9  mov     eax, ebx
+  00000001401587FB  rol     edx, 1
+  00000001401587FD  mov     ecx, r9d
+  0000000140158800  mov     [rsp+340h+var_314], edx
+  0000000140158804  xor     ecx, r8d
+  0000000140158807  rol     eax, 5
+  000000014015880A  and     ecx, r10d
+  000000014015880D  add     eax, edx
+  000000014015880F  rol     r10d, 1Eh
+  0000000140158813  jmp     short loc_140158881
+  0000000140158815  db 0E8h, 11h, 0DBh
+  0000000140158818  dq 0FFFD3968870FFFFDh, 288C0FFFF5F113E8h, 5D5F415D41FFFF80h
+  0000000140158880  db 0FFh
+  0000000140158881  mov     edx, [rbp+240h+var_298]
+  0000000140158884  xor     ecx, r8d
+  0000000140158887  xor     edx, [rbp+240h+var_2AC]
+  000000014015888A  add     ecx, eax
+  000000014015888C  xor     edx, r12d
+  000000014015888F  add     esi, ecx
+  0000000140158891  xor     edx, [rsp+340h+var_2CC]
+  0000000140158895  mov     eax, esi
+  0000000140158897  rol     edx, 1
+  0000000140158899  mov     edi, r10d
+  000000014015889C  mov     [rsp+340h+var_318], edx
+  00000001401588A0  xor     edi, r9d
+  00000001401588A3  add     edx, 5A827999h
+  00000001401588A9  rol     eax, 5
+  00000001401588AC  add     eax, edx
+  00000001401588AE  and     edi, ebx
+  00000001401588B0  mov     edx, [rbp+240h+var_294]
+  00000001401588B3  xor     edi, r9d
+  00000001401588B6  xor     edx, r14d
+  00000001401588B9  rol     ebx, 1Eh
+  00000001401588BC  xor     edx, r13d
+  00000001401588BF  add     edi, eax
+  00000001401588C1  xor     edx, r15d
+  00000001401588C4  add     edi, r8d
+  00000001401588C7  mov     r15d, [rbp+240h+var_2A4]
+  00000001401588CB  mov     eax, edi
+  00000001401588CD  rol     edx, 1
+  00000001401588CF  mov     r11d, ebx
+  00000001401588D2  mov     [rsp+340h+var_320], edx
+  00000001401588D6  xor     r11d, r10d
+  00000001401588D9  add     edx, 5A827999h
+  00000001401588DF  rol     eax, 5
+  00000001401588E2  add     eax, edx
+  00000001401588E4  and     r11d, esi
+  00000001401588E7  xor     r11d, r10d
+  00000001401588EA  rol     esi, 1Eh
+  00000001401588ED  add     r11d, eax
+  00000001401588F0  mov     edx, r15d
+  00000001401588F3  xor     edx, [rbp+240h+var_2BC]
+  00000001401588F6  add     r11d, r9d
+  00000001401588F9  xor     edx, r12d
+  00000001401588FC  xor     edx, [rsp+340h+var_314]
+  0000000140158900  rol     edx, 1
+  0000000140158902  mov     r12d, [rbp+240h+var_2A0]
+  0000000140158906  mov     eax, r11d
+  0000000140158909  rol     eax, 5
+  000000014015890C  mov     ecx, esi
+  000000014015890E  add     eax, r10d
+  0000000140158911  mov     [rsp+340h+var_31C], edx
+  0000000140158915  xor     ecx, ebx
+  0000000140158917  jmp     loc_1401589B6
+  000000014015891C  dd 0FE20348h
+  0000000140158920  dq 0BB5F03FFFE7A7F89h, 2A737B2B7D7850FFh, 0C157FF0CFF668C77h
+  00000001401589B0  db 0Fh, 88h, 0D2h, 37h, 0FDh, 0FFh
+  00000001401589B6  add     edx, 5A827999h
+  00000001401589BC  and     ecx, edi
+  00000001401589BE  mov     r10d, r12d
+  00000001401589C1  xor     r10d, [rbp+240h+var_2B8]
+  00000001401589C5  xor     ecx, ebx
+  00000001401589C7  add     ecx, eax
+  00000001401589C9  rol     edi, 1Eh
+  00000001401589CC  add     edx, ecx
+  00000001401589CE  xor     r10d, r13d
+  00000001401589D1  xor     r10d, [rsp+340h+var_318]
+  00000001401589D6  mov     eax, edx
+  00000001401589D8  mov     r13d, [rbp+240h+var_29C]
+  00000001401589DC  mov     ecx, edi
+  00000001401589DE  rol     eax, 5
+  00000001401589E1  xor     ecx, esi
+  00000001401589E3  add     eax, ebx
+  00000001401589E5  rol     r10d, 1
+  00000001401589E8  xor     ecx, r11d
+  00000001401589EB  mov     [rsp+340h+var_304], r10d
+  00000001401589F0  add     ecx, eax
+  00000001401589F2  rol     r11d, 1Eh
+  00000001401589F6  mov     eax, r13d
+  00000001401589F9  xor     eax, [rbp+240h+var_2B4]
+  00000001401589FC  lea     ebx, [r10+6ED9EBA1h]
+  0000000140158A03  xor     eax, [rbp+240h+var_2BC]
+  0000000140158A06  add     ebx, ecx
+  0000000140158A08  xor     eax, [rsp+340h+var_320]
+  0000000140158A0C  mov     ecx, r11d
+  0000000140158A0F  rol     eax, 1
+  0000000140158A11  xor     ecx, edi
+  0000000140158A13  mov     [rsp+340h+var_2FC], eax
+  0000000140158A17  xor     ecx, edx
+  0000000140158A19  mov     r8d, [rsp+340h+var_2FC]
+  0000000140158A1E  mov     eax, ebx
+  0000000140158A20  rol     eax, 5
+  0000000140158A23  add     r8d, 6ED9EBA1h
+  0000000140158A2A  add     eax, esi
+  0000000140158A2C  rol     edx, 1Eh
+  0000000140158A2F  add     ecx, eax
+  0000000140158A31  mov     eax, [rbp+240h+var_298]
+  0000000140158A34  xor     eax, [rbp+240h+var_2B0]
+  0000000140158A37  add     r8d, ecx
+  0000000140158A3A  xor     eax, [rbp+240h+var_2B8]
+  0000000140158A3D  mov     ecx, edx
+  0000000140158A3F  xor     eax, [rsp+340h+var_31C]
+  0000000140158A43  xor     ecx, r11d
+  0000000140158A46  rol     eax, 1
+  0000000140158A48  xor     ecx, ebx
+  0000000140158A4A  mov     [rsp+340h+var_310], eax
+  0000000140158A4E  mov     eax, r8d
+  0000000140158A51  jmp     loc_140158B97
+  0000000140158A56  dw 0F56h
+  0000000140158A58  dq 0F5641FFFE57458Ch, 7BEE8FFFFE9388Ah, 0FFFFDECC9E8FFF4h
+  0000000140158B90  push    rsp
+  0000000140158B91  jno     loc_14012D88B
+  0000000140158B97  mov     r9d, [rsp+340h+var_310]
+  0000000140158B9C  rol     eax, 5
+  0000000140158B9F  add     r9d, 6ED9EBA1h
+  0000000140158BA6  add     eax, edi
+  0000000140158BA8  rol     ebx, 1Eh
+  0000000140158BAB  add     ecx, eax
+  0000000140158BAD  mov     eax, [rbp+240h+var_294]
+  0000000140158BB0  xor     eax, [rbp+240h+var_2AC]
+  0000000140158BB3  add     r9d, ecx
+  0000000140158BB6  xor     eax, [rbp+240h+var_2B4]
+  0000000140158BB9  mov     ecx, ebx
+  0000000140158BBB  xor     eax, r10d
+  0000000140158BBE  xor     ecx, edx
+  0000000140158BC0  rol     eax, 1
+  0000000140158BC2  xor     ecx, r8d
+  0000000140158BC5  mov     [rsp+340h+var_300], eax
+  0000000140158BC9  mov     eax, r9d
+  0000000140158BCC  mov     r10d, [rsp+340h+var_300]
+  0000000140158BD1  rol     eax, 5
+  0000000140158BD4  add     r10d, 6ED9EBA1h
+  0000000140158BDB  add     eax, r11d
+  0000000140158BDE  add     ecx, eax
+  0000000140158BE0  add     r10d, ecx
+  0000000140158BE3  rol     r8d, 1Eh
+  0000000140158BE7  mov     esi, [rsp+340h+var_2FC]
+  0000000140158BEB  mov     ecx, r8d
+  0000000140158BEE  mov     edi, [rsp+340h+var_310]
+  0000000140158BF2  xor     ecx, ebx
+  0000000140158BF4  xor     ecx, r9d
+  0000000140158BF7  mov     eax, r10d
+  0000000140158BFA  rol     eax, 5
+  0000000140158BFD  mov     r11d, r14d
+  0000000140158C00  xor     r11d, [rbp+240h+var_2B0]
+  0000000140158C04  add     eax, edx
+  0000000140158C06  add     ecx, eax
+  0000000140158C08  rol     r9d, 1Eh
+  0000000140158C0C  xor     r11d, esi
+  0000000140158C0F  mov     eax, r15d
+  0000000140158C12  xor     eax, [rbp+240h+var_2AC]
+  0000000140158C15  xor     r11d, [rsp+340h+var_314]
+  0000000140158C1A  xor     eax, edi
+  0000000140158C1C  xor     eax, [rsp+340h+var_318]
+  0000000140158C20  rol     eax, 1
+  0000000140158C22  mov     [rsp+340h+var_308], eax
+  0000000140158C26  rol     r11d, 1
+  0000000140158C29  mov     [rsp+340h+var_2F8], r11d
+  0000000140158C2E  lea     edx, [r11+6ED9EBA1h]
+  0000000140158C35  add     edx, ecx
+  0000000140158C37  mov     ecx, r9d
+  0000000140158C3A  xor     ecx, r8d
+  0000000140158C3D  jmp     loc_140158CE2
+  0000000140158C42  dw 5C41h, 7DE9h, 0FDBBh
+  0000000140158C48  dq 2162820FE70349FFh, 0FEB434870F56FFFEh, 8F0FFFFDD7A6E8FFh
+  0000000140158CE0  db 0FDh, 0FFh
+  0000000140158CE2  mov     eax, edx
+  0000000140158CE4  rol     eax, 5
+  0000000140158CE7  xor     ecx, r10d
+  0000000140158CEA  add     eax, ebx
+  0000000140158CEC  rol     r10d, 1Eh
+  0000000140158CF0  add     ecx, eax
+  0000000140158CF2  mov     ebx, [rsp+340h+var_308]
+  0000000140158CF6  add     ebx, 6ED9EBA1h
+  0000000140158CFC  mov     eax, r12d
+  0000000140158CFF  xor     eax, r14d
+  0000000140158D02  add     ebx, ecx
+  0000000140158D04  xor     eax, [rsp+340h+var_320]
+  0000000140158D08  mov     ecx, r10d
+  0000000140158D0B  mov     r14d, [rsp+340h+var_300]
+  0000000140158D10  xor     ecx, r9d
+  0000000140158D13  xor     eax, r14d
+  0000000140158D16  xor     ecx, edx
+  0000000140158D18  rol     eax, 1
+  0000000140158D1A  mov     [rsp+340h+var_30C], eax
+  0000000140158D1E  mov     eax, ebx
+  0000000140158D20  rol     eax, 5
+  0000000140158D23  add     eax, r8d
+  0000000140158D26  rol     edx, 1Eh
+  0000000140158D29  mov     r8d, [rsp+340h+var_30C]
+  0000000140158D2E  add     ecx, eax
+  0000000140158D30  add     r8d, 6ED9EBA1h
+  0000000140158D37  mov     eax, r13d
+  0000000140158D3A  xor     eax, r15d
+  0000000140158D3D  add     r8d, ecx
+  0000000140158D40  xor     eax, r11d
+  0000000140158D43  mov     ecx, edx
+  0000000140158D45  xor     eax, [rsp+340h+var_31C]
+  0000000140158D49  xor     ecx, r10d
+  0000000140158D4C  mov     r11d, [rsp+340h+var_304]
+  0000000140158D51  xor     ecx, ebx
+  0000000140158D53  rol     eax, 1
+  0000000140158D55  mov     [rsp+340h+var_2FC], eax
+  0000000140158D59  mov     eax, r8d
+  0000000140158D5C  mov     r15d, [rsp+340h+var_2FC]
+  0000000140158D61  rol     eax, 5
+  0000000140158D64  add     eax, r9d
+  0000000140158D67  rol     ebx, 1Eh
+  0000000140158D6A  add     ecx, eax
+  0000000140158D6C  mov     eax, [rbp+240h+var_298]
+  0000000140158D6F  xor     eax, r12d
+  0000000140158D72  lea     r9d, [r15+6ED9EBA1h]
+  0000000140158D79  xor     eax, [rsp+340h+var_308]
+  0000000140158D7D  add     r9d, ecx
+  0000000140158D80  xor     eax, r11d
+  0000000140158D83  mov     ecx, ebx
+  0000000140158D85  jmp     loc_140158EE1
+  0000000140158D8A  dw 8148h, 0B0C4h, 6
+  0000000140158D90  dq 48FFFEA3E5830F00h, 8E0F000000D8C481h, 0A1928D44FFFD1CDDh
+  0000000140158EE0  db 0FFh
+  0000000140158EE1  rol     eax, 1
+  0000000140158EE3  mov     [rsp+340h+var_310], eax
+  0000000140158EE7  mov     eax, r9d
+  0000000140158EEA  rol     eax, 5
+  0000000140158EED  xor     ecx, edx
+  0000000140158EEF  mov     r12d, [rsp+340h+var_310]
+  0000000140158EF4  add     eax, r10d
+  0000000140158EF7  xor     ecx, r8d
+  0000000140158EFA  rol     r8d, 1Eh
+  0000000140158EFE  add     ecx, eax
+  0000000140158F00  mov     eax, [rbp+240h+var_294]
+  0000000140158F03  xor     eax, r13d
+  0000000140158F06  mov     r13d, [rbp+240h+var_298]
+  0000000140158F0A  xor     eax, [rsp+340h+var_30C]
+  0000000140158F0E  lea     r10d, [r12+6ED9EBA1h]
+  0000000140158F16  xor     eax, esi
+  0000000140158F18  add     r10d, ecx
+  0000000140158F1B  rol     eax, 1
+  0000000140158F1D  xor     r13d, r15d
+  0000000140158F20  mov     r15d, [rbp+240h+var_294]
+  0000000140158F24  xor     r13d, edi
+  0000000140158F27  xor     r13d, [rsp+340h+var_314]
+  0000000140158F2C  xor     r15d, r12d
+  0000000140158F2F  mov     r12d, [rsp+340h+var_320]
+  0000000140158F34  xor     r15d, r14d
+  0000000140158F37  mov     [rsp+340h+var_304], eax
+  0000000140158F3B  mov     ecx, r8d
+  0000000140158F3E  xor     ecx, ebx
+  0000000140158F40  rol     r13d, 1
+  0000000140158F43  xor     ecx, r9d
+  0000000140158F46  mov     [rsp+340h+var_2F0], r13d
+  0000000140158F4B  rol     r9d, 1Eh
+  0000000140158F4F  mov     eax, r10d
+  0000000140158F52  rol     eax, 5
+  0000000140158F55  add     eax, edx
+  0000000140158F57  mov     edx, [rsp+340h+var_304]
+  0000000140158F5B  add     ecx, eax
+  0000000140158F5D  add     edx, 6ED9EBA1h
+  0000000140158F63  add     edx, ecx
+  0000000140158F65  mov     ecx, r9d
+  0000000140158F68  xor     ecx, r8d
+  0000000140158F6B  mov     eax, edx
+  0000000140158F6D  rol     eax, 5
+  0000000140158F70  xor     ecx, r10d
+  0000000140158F73  add     eax, ebx
+  0000000140158F75  rol     r10d, 1Eh
+  0000000140158F79  add     ecx, eax
+  0000000140158F7B  lea     ebx, [r13+6ED9EBA1h]
+  0000000140158F82  mov     r13d, [rsp+340h+var_318]
+  0000000140158F87  add     ebx, ecx
+  0000000140158F89  jmp     loc_14015904E
+  0000000140158F8E  dw 8148h
+  0000000140158F90  dq 3F810F00000508C4h, 0FFFFE3D2E8FFFF99h, 3DE8FFFF45E3800Fh
+  0000000140159048  lahf
+  0000000140159049  or      eax, 5445D6C7h
+  000000014015904E  xor     r15d, r13d
+  0000000140159051  mov     eax, ebx
+  0000000140159053  rol     eax, 5
+  0000000140159056  mov     ecx, r10d
+  0000000140159059  add     eax, r8d
+  000000014015905C  rol     r15d, 1
+  000000014015905F  xor     ecx, r9d
+  0000000140159062  mov     [rsp+340h+var_2EC], r15d
+  0000000140159067  xor     ecx, edx
+  0000000140159069  rol     edx, 1Eh
+  000000014015906C  add     ecx, eax
+  000000014015906E  mov     eax, [rsp+340h+var_304]
+  0000000140159072  lea     r8d, [r15+6ED9EBA1h]
+  0000000140159079  mov     r15d, [rsp+340h+var_2F8]
+  000000014015907E  xor     eax, r15d
+  0000000140159081  add     r8d, ecx
+  0000000140159084  xor     eax, r12d
+  0000000140159087  mov     ecx, edx
+  0000000140159089  xor     eax, [rsp+340h+var_314]
+  000000014015908D  xor     ecx, r10d
+  0000000140159090  rol     eax, 1
+  0000000140159092  xor     ecx, ebx
+  0000000140159094  mov     [rsp+340h+var_318], eax
+  0000000140159098  mov     eax, r8d
+  000000014015909B  rol     eax, 5
+  000000014015909E  add     eax, r9d
+  00000001401590A1  rol     ebx, 1Eh
+  00000001401590A4  mov     r9d, [rsp+340h+var_318]
+  00000001401590A9  add     ecx, eax
+  00000001401590AB  mov     eax, [rsp+340h+var_2F0]
+  00000001401590AF  add     r9d, 6ED9EBA1h
+  00000001401590B6  xor     eax, [rsp+340h+var_308]
+  00000001401590BA  add     r9d, ecx
+  00000001401590BD  xor     eax, r13d
+  00000001401590C0  xor     eax, [rsp+340h+var_31C]
+  00000001401590C4  rol     eax, 1
+  00000001401590C6  mov     r13d, [rsp+340h+var_310]
+  00000001401590CB  mov     ecx, ebx
+  00000001401590CD  mov     [rsp+340h+var_320], eax
+  00000001401590D1  xor     ecx, edx
+  00000001401590D3  xor     ecx, r8d
+  00000001401590D6  mov     eax, r9d
+  00000001401590D9  rol     eax, 5
+  00000001401590DC  add     eax, r10d
+  00000001401590DF  rol     r8d, 1Eh
+  00000001401590E3  add     ecx, eax
+  00000001401590E5  mov     r10d, [rsp+340h+var_320]
+  00000001401590EA  mov     eax, [rsp+340h+var_2EC]
+  00000001401590EE  add     r10d, 6ED9EBA1h
+  00000001401590F5  xor     eax, [rsp+340h+var_30C]
+  00000001401590F9  jmp     loc_140159252
+  00000001401590FE  dw 8148h
+  0000000140159100  dq 65890F000002F0C4h, 5F41E38B49FFFD1Dh, 0F802E8FFFF5230E9h
+  0000000140159250  db 20h, 76h
+  0000000140159252  add     r10d, ecx
+  0000000140159255  xor     eax, r12d
+  0000000140159258  mov     ecx, r8d
+  000000014015925B  mov     r12d, [rsp+340h+var_2FC]
+  0000000140159260  xor     eax, r11d
+  0000000140159263  rol     eax, 1
+  0000000140159265  xor     ecx, ebx
+  0000000140159267  mov     [rsp+340h+var_314], eax
+  000000014015926B  xor     ecx, r9d
+  000000014015926E  rol     r9d, 1Eh
+  0000000140159272  mov     eax, r10d
+  0000000140159275  rol     eax, 5
+  0000000140159278  add     eax, edx
+  000000014015927A  mov     edx, [rsp+340h+var_314]
+  000000014015927E  add     ecx, eax
+  0000000140159280  add     edx, 6ED9EBA1h
+  0000000140159286  mov     eax, [rsp+340h+var_318]
+  000000014015928A  add     edx, ecx
+  000000014015928C  xor     eax, r12d
+  000000014015928F  mov     ecx, r9d
+  0000000140159292  xor     eax, esi
+  0000000140159294  xor     ecx, r8d
+  0000000140159297  xor     eax, [rsp+340h+var_31C]
+  000000014015929B  xor     ecx, r10d
+  000000014015929E  rol     eax, 1
+  00000001401592A0  mov     [rsp+340h+var_2DC], eax
+  00000001401592A4  mov     eax, edx
+  00000001401592A6  rol     eax, 5
+  00000001401592A9  add     eax, ebx
+  00000001401592AB  rol     r10d, 1Eh
+  00000001401592AF  mov     ebx, [rsp+340h+var_2DC]
+  00000001401592B3  add     ecx, eax
+  00000001401592B5  mov     eax, [rsp+340h+var_320]
+  00000001401592B9  add     ebx, 6ED9EBA1h
+  00000001401592BF  xor     eax, r13d
+  00000001401592C2  add     ebx, ecx
+  00000001401592C4  xor     eax, edi
+  00000001401592C6  mov     ecx, r10d
+  00000001401592C9  xor     eax, r11d
+  00000001401592CC  xor     ecx, r9d
+  00000001401592CF  mov     r11d, [rsp+340h+var_314]
+  00000001401592D4  xor     ecx, edx
+  00000001401592D6  xor     r11d, [rsp+340h+var_304]
+  00000001401592DB  rol     eax, 1
+  00000001401592DD  xor     r11d, r14d
+  00000001401592E0  mov     [rsp+340h+var_2E0], eax
+  00000001401592E4  xor     r11d, esi
+  00000001401592E7  rol     r11d, 1
+  00000001401592EA  mov     eax, ebx
+  00000001401592EC  rol     eax, 5
+  00000001401592EF  jmp     loc_14015945C
+  00000001401592F4  dd 28C48148h
+  00000001401592F8  dq 0FD23A1840F000003h, 850FFFF5E902E8FFh, 8B495D41FFFD0F5Ah
+  000000014015945C  add     eax, r8d
+  000000014015945F  rol     edx, 1Eh
+  0000000140159462  mov     r8d, [rsp+340h+var_2E0]
+  0000000140159467  add     ecx, eax
+  0000000140159469  add     r8d, 6ED9EBA1h
+  0000000140159470  mov     [rsp+340h+var_31C], r11d
+  0000000140159475  add     r8d, ecx
+  0000000140159478  mov     ecx, edx
+  000000014015947A  xor     ecx, r10d
+  000000014015947D  mov     eax, r8d
+  0000000140159480  rol     eax, 5
+  0000000140159483  xor     ecx, ebx
+  0000000140159485  add     eax, r11d
+  0000000140159488  lea     r11d, [r9+6ED9EBA1h]
+  000000014015948F  add     ecx, eax
+  0000000140159491  add     r11d, ecx
+  0000000140159494  rol     ebx, 1Eh
+  0000000140159497  mov     r9d, [rsp+340h+var_2DC]
+  000000014015949C  mov     ecx, ebx
+  000000014015949E  xor     r9d, [rsp+340h+var_2F0]
+  00000001401594A3  xor     ecx, edx
+  00000001401594A5  xor     ecx, r8d
+  00000001401594A8  xor     r9d, r15d
+  00000001401594AB  xor     r9d, edi
+  00000001401594AE  rol     r8d, 1Eh
+  00000001401594B2  mov     edi, [rsp+340h+var_308]
+  00000001401594B6  mov     eax, r11d
+  00000001401594B9  rol     eax, 5
+  00000001401594BC  rol     r9d, 1
+  00000001401594BF  add     eax, r9d
+  00000001401594C2  mov     [rsp+340h+var_2F4], r9d
+  00000001401594C7  add     ecx, eax
+  00000001401594C9  lea     r9d, [r10+6ED9EBA1h]
+  00000001401594D0  mov     r10d, [rsp+340h+var_2E0]
+  00000001401594D5  add     r9d, ecx
+  00000001401594D8  xor     r10d, [rsp+340h+var_2EC]
+  00000001401594DD  mov     ecx, r8d
+  00000001401594E0  xor     ecx, ebx
+  00000001401594E2  xor     r10d, edi
+  00000001401594E5  xor     ecx, r11d
+  00000001401594E8  xor     r10d, r14d
+  00000001401594EB  mov     r14d, [rsp+340h+var_318]
+  00000001401594F0  mov     eax, r9d
+  00000001401594F3  rol     eax, 5
+  00000001401594F6  rol     r10d, 1
+  00000001401594F9  add     eax, r10d
+  00000001401594FC  rol     r11d, 1Eh
+  0000000140159500  add     ecx, eax
+  0000000140159502  mov     [rsp+340h+var_2E4], r10d
+  0000000140159507  mov     eax, [rsp+340h+var_31C]
+  000000014015950B  jmp     loc_1401595A8
+  0000000140159510  dq 88850FFFFF4196E8h, 991B8D0F56FFFFD3h, 0FE3EA3E95D41FFFDh
+  00000001401595A8  lea     r10d, [rdx+6ED9EBA1h]
+  00000001401595AF  add     r10d, ecx
+  00000001401595B2  xor     eax, r14d
+  00000001401595B5  xor     eax, [rsp+340h+var_30C]
+  00000001401595B9  mov     edx, r10d
+  00000001401595BC  xor     eax, r15d
+  00000001401595BF  rol     edx, 5
+  00000001401595C2  mov     r15d, [rsp+340h+var_320]
+  00000001401595C7  add     ebx, edx
+  00000001401595C9  rol     eax, 1
+  00000001401595CB  mov     ecx, r11d
+  00000001401595CE  or      ecx, r8d
+  00000001401595D1  mov     [rsp+340h+var_308], eax
+  00000001401595D5  and     ecx, r9d
+  00000001401595D8  mov     eax, r11d
+  00000001401595DB  and     eax, r8d
+  00000001401595DE  rol     r9d, 1Eh
+  00000001401595E2  or      ecx, eax
+  00000001401595E4  mov     eax, [rsp+340h+var_2F4]
+  00000001401595E8  add     ecx, 8F1BBCDCh
+  00000001401595EE  xor     eax, r15d
+  00000001401595F1  add     ecx, [rsp+340h+var_308]
+  00000001401595F5  xor     eax, r12d
+  00000001401595F8  xor     eax, edi
+  00000001401595FA  add     ebx, ecx
+  00000001401595FC  mov     edi, [rsp+340h+var_2E4]
+  0000000140159600  mov     ecx, r9d
+  0000000140159603  xor     edi, [rsp+340h+var_314]
+  0000000140159607  or      ecx, r11d
+  000000014015960A  and     ecx, r10d
+  000000014015960D  rol     eax, 1
+  000000014015960F  mov     [rsp+340h+var_2F8], eax
+  0000000140159613  xor     edi, r13d
+  0000000140159616  xor     edi, [rsp+340h+var_30C]
+  000000014015961A  mov     eax, r9d
+  000000014015961D  and     eax, r11d
+  0000000140159620  rol     edi, 1
+  0000000140159622  or      ecx, eax
+  0000000140159624  rol     r10d, 1Eh
+  0000000140159628  add     ecx, 8F1BBCDCh
+  000000014015962E  mov     [rsp+340h+var_30C], edi
+  0000000140159632  add     ecx, [rsp+340h+var_2F8]
+  0000000140159636  mov     edx, ebx
+  0000000140159638  rol     edx, 5
+  000000014015963B  add     r8d, edx
+  000000014015963E  add     r8d, ecx
+  0000000140159641  mov     edx, r8d
+  0000000140159644  rol     edx, 5
+  0000000140159647  add     r11d, edx
+  000000014015964A  mov     ecx, r10d
+  000000014015964D  jmp     loc_1401597CE
+  0000000140159652  dw 31E8h, 0F5CAh, 0FFFh
+  0000000140159658  dq 0DD0341FFFE4B2180h, 4533C7335024748Bh, 0D1CA8B41C58441ACh
+  00000001401597C8  jb      loc_14014AE81
+  00000001401597CE  or      ecx, r9d
+  00000001401597D1  mov     eax, r10d
+  00000001401597D4  and     ecx, ebx
+  00000001401597D6  and     eax, r9d
+  00000001401597D9  or      ecx, eax
+  00000001401597DB  rol     ebx, 1Eh
+  00000001401597DE  mov     eax, [rsp+340h+var_308]
+  00000001401597E2  add     edi, 8F1BBCDCh
+  00000001401597E8  xor     eax, [rsp+340h+var_2DC]
+  00000001401597EC  add     ecx, edi
+  00000001401597EE  mov     edi, [rsp+340h+var_304]
+  00000001401597F2  add     r11d, ecx
+  00000001401597F5  xor     eax, edi
+  00000001401597F7  mov     ecx, ebx
+  00000001401597F9  xor     eax, r12d
+  00000001401597FC  or      ecx, r10d
+  00000001401597FF  mov     r12d, [rsp+340h+var_2F8]
+  0000000140159804  and     ecx, r8d
+  0000000140159807  xor     r12d, [rsp+340h+var_2E0]
+  000000014015980C  mov     edx, r11d
+  000000014015980F  xor     r12d, [rsp+340h+var_2F0]
+  0000000140159814  xor     r12d, r13d
+  0000000140159817  rol     eax, 1
+  0000000140159819  mov     [rsp+340h+var_2E8], eax
+  000000014015981D  mov     eax, ebx
+  000000014015981F  mov     r13d, [rsp+340h+var_2E8]
+  0000000140159824  and     eax, r10d
+  0000000140159827  xor     r13d, [rsp+340h+var_2F4]
+  000000014015982C  or      ecx, eax
+  000000014015982E  add     ecx, 8F1BBCDCh
+  0000000140159834  rol     edx, 5
+  0000000140159837  add     ecx, [rsp+340h+var_2E8]
+  000000014015983B  add     r9d, edx
+  000000014015983E  add     r9d, ecx
+  0000000140159841  rol     r12d, 1
+  0000000140159844  mov     [rsp+340h+var_304], r12d
+  0000000140159849  xor     r13d, r14d
+  000000014015984C  xor     r13d, [rsp+340h+var_2F0]
+  0000000140159851  add     r12d, 8F1BBCDCh
+  0000000140159858  rol     r8d, 1Eh
+  000000014015985C  mov     edx, r9d
+  000000014015985F  rol     edx, 5
+  0000000140159862  mov     ecx, r8d
+  0000000140159865  or      ecx, ebx
+  0000000140159867  rol     r13d, 1
+  000000014015986A  and     ecx, r11d
+  000000014015986D  mov     [rsp+340h+var_310], r13d
+  0000000140159872  add     r10d, edx
+  0000000140159875  rol     r11d, 1Eh
+  0000000140159879  mov     eax, r8d
+  000000014015987C  jmp     loc_140159925
+  0000000140159881  db 0E8h, 0DAh, 0F8h, 0F3h, 0FFh, 0E8h, 4Ch
+  0000000140159888  dq 0FDCFFF8C0FFFFE19h, 8D0FFFFD01AEE8FFh, 5E415F41FFFD46B2h
+  0000000140159920  db 86h, 8, 51h, 0FDh, 0FFh
+  0000000140159925  and     eax, ebx
+  0000000140159927  or      ecx, eax
+  0000000140159929  mov     eax, r11d
+  000000014015992C  add     ecx, r12d
+  000000014015992F  and     eax, r8d
+  0000000140159932  mov     r12d, [rsp+340h+var_30C]
+  0000000140159937  add     r10d, ecx
+  000000014015993A  xor     r12d, [rsp+340h+var_31C]
+  000000014015993F  mov     ecx, r11d
+  0000000140159942  xor     r12d, [rsp+340h+var_2EC]
+  0000000140159947  or      ecx, r8d
+  000000014015994A  and     ecx, r9d
+  000000014015994D  xor     r12d, edi
+  0000000140159950  or      ecx, eax
+  0000000140159952  rol     r12d, 1
+  0000000140159955  add     ecx, 8F1BBCDCh
+  000000014015995B  rol     r9d, 1Eh
+  000000014015995F  add     ecx, r12d
+  0000000140159962  mov     [rsp+340h+var_320], r12d
+  0000000140159967  mov     edx, r10d
+  000000014015996A  mov     eax, r9d
+  000000014015996D  rol     edx, 5
+  0000000140159970  add     ebx, edx
+  0000000140159972  add     ebx, ecx
+  0000000140159974  mov     ecx, r9d
+  0000000140159977  mov     edx, ebx
+  0000000140159979  or      ecx, r11d
+  000000014015997C  rol     edx, 5
+  000000014015997F  and     ecx, r10d
+  0000000140159982  xor     r12d, [rsp+340h+var_308]
+  0000000140159987  and     eax, r11d
+  000000014015998A  or      ecx, eax
+  000000014015998C  xor     r12d, [rsp+340h+var_314]
+  0000000140159991  mov     edi, [rsp+340h+var_304]
+  0000000140159995  add     ecx, 8F1BBCDCh
+  000000014015999B  xor     edi, [rsp+340h+var_2E4]
+  000000014015999F  add     ecx, r13d
+  00000001401599A2  xor     r13d, [rsp+340h+var_2F8]
+  00000001401599A7  add     r8d, edx
+  00000001401599AA  xor     r13d, [rsp+340h+var_2DC]
+  00000001401599AF  add     r8d, ecx
+  00000001401599B2  rol     r10d, 1Eh
+  00000001401599B6  xor     r12d, r14d
+  00000001401599B9  mov     ecx, r10d
+  00000001401599BC  rol     r12d, 1
+  00000001401599BF  or      ecx, r9d
+  00000001401599C2  mov     [rsp+340h+var_300], r12d
+  00000001401599C7  and     ecx, ebx
+  00000001401599C9  mov     eax, r10d
+  00000001401599CC  and     eax, r9d
+  00000001401599CF  jmp     loc_140159B5F
+  00000001401599D4  dd 0FD1FCBE8h
+  00000001401599D8  dq 0E8FFFE4F0C8C0FFFh, 0FF92C7E8FFF3F7BCh, 4CFFFE4C188A0FFFh
+  0000000140159B58  db 0FFh, 0Fh, 80h, 0FDh, 95h, 0FDh, 0FFh
+  0000000140159B5F  rol     ebx, 1Eh
+  0000000140159B62  or      ecx, eax
+  0000000140159B64  xor     edi, r15d
+  0000000140159B67  xor     edi, [rsp+340h+var_2EC]
+  0000000140159B6B  add     ecx, 8F1BBCDCh
+  0000000140159B71  rol     edi, 1
+  0000000140159B73  mov     eax, ebx
+  0000000140159B75  add     ecx, edi
+  0000000140159B77  mov     [rsp+340h+var_318], edi
+  0000000140159B7B  and     eax, r10d
+  0000000140159B7E  mov     edx, r8d
+  0000000140159B81  rol     edx, 5
+  0000000140159B84  xor     r13d, r15d
+  0000000140159B87  add     r11d, edx
+  0000000140159B8A  rol     r13d, 1
+  0000000140159B8D  add     r11d, ecx
+  0000000140159B90  mov     [rsp+340h+var_2F0], r13d
+  0000000140159B95  mov     ecx, ebx
+  0000000140159B97  mov     edx, r11d
+  0000000140159B9A  or      ecx, r10d
+  0000000140159B9D  rol     edx, 5
+  0000000140159BA0  and     ecx, r8d
+  0000000140159BA3  add     r9d, edx
+  0000000140159BA6  or      ecx, eax
+  0000000140159BA8  rol     r8d, 1Eh
+  0000000140159BAC  add     ecx, 8F1BBCDCh
+  0000000140159BB2  mov     eax, r8d
+  0000000140159BB5  add     ecx, r12d
+  0000000140159BB8  and     eax, ebx
+  0000000140159BBA  add     r9d, ecx
+  0000000140159BBD  mov     r14d, edi
+  0000000140159BC0  xor     r14d, [rsp+340h+var_30C]
+  0000000140159BC5  mov     edx, r9d
+  0000000140159BC8  xor     r14d, [rsp+340h+var_2E0]
+  0000000140159BCD  mov     ecx, r8d
+  0000000140159BD0  xor     r14d, [rsp+340h+var_314]
+  0000000140159BD5  or      ecx, ebx
+  0000000140159BD7  and     ecx, r11d
+  0000000140159BDA  rol     edx, 5
+  0000000140159BDD  or      ecx, eax
+  0000000140159BDF  rol     r11d, 1Eh
+  0000000140159BE3  add     ecx, 8F1BBCDCh
+  0000000140159BE9  rol     r14d, 1
+  0000000140159BEC  add     ecx, r13d
+  0000000140159BEF  mov     [rsp+340h+var_2FC], r14d
+  0000000140159BF4  add     r10d, edx
+  0000000140159BF7  mov     eax, r11d
+  0000000140159BFA  add     r10d, ecx
+  0000000140159BFD  and     eax, r8d
+  0000000140159C00  mov     ecx, r11d
+  0000000140159C03  jmp     loc_140159F55
+  0000000140159C08  dq 6B820FFFF5D23BE8h, 0F383DB8B41FFFE20h, 8B44402464334433h
+  0000000140159F50  db 86h, 0E0h, 8Eh, 0FDh, 0FFh
+  0000000140159F55  mov     edx, r10d
+  0000000140159F58  or      ecx, r8d
+  0000000140159F5B  rol     edx, 5
+  0000000140159F5E  and     ecx, r9d
+  0000000140159F61  add     ebx, edx
+  0000000140159F63  or      ecx, eax
+  0000000140159F65  add     ecx, 8F1BBCDCh
+  0000000140159F6B  add     ecx, r14d
+  0000000140159F6E  add     ebx, ecx
+  0000000140159F70  rol     r9d, 1Eh
+  0000000140159F74  mov     edi, [rsp+340h+var_31C]
+  0000000140159F78  mov     esi, r12d
+  0000000140159F7B  xor     esi, [rsp+340h+var_2E8]
+  0000000140159F7F  mov     edx, ebx
+  0000000140159F81  xor     r14d, [rsp+340h+var_320]
+  0000000140159F86  xor     esi, edi
+  0000000140159F88  xor     esi, [rsp+340h+var_2DC]
+  0000000140159F8C  mov     ecx, r9d
+  0000000140159F8F  xor     r14d, [rsp+340h+var_2E4]
+  0000000140159F94  or      ecx, r11d
+  0000000140159F97  and     ecx, r10d
+  0000000140159F9A  rol     esi, 1
+  0000000140159F9C  rol     r10d, 1Eh
+  0000000140159FA0  xor     r14d, edi
+  0000000140159FA3  mov     r15d, esi
+  0000000140159FA6  rol     edx, 5
+  0000000140159FA9  xor     r15d, [rsp+340h+var_310]
+  0000000140159FAE  add     r8d, edx
+  0000000140159FB1  xor     r15d, [rsp+340h+var_308]
+  0000000140159FB6  mov     eax, r9d
+  0000000140159FB9  xor     r15d, [rsp+340h+var_2F4]
+  0000000140159FBE  and     eax, r11d
+  0000000140159FC1  or      ecx, eax
+  0000000140159FC3  mov     [rsp+340h+var_31C], esi
+  0000000140159FC7  add     ecx, 8F1BBCDCh
+  0000000140159FCD  rol     r14d, 1
+  0000000140159FD0  add     ecx, esi
+  0000000140159FD2  rol     r15d, 1
+  0000000140159FD5  add     r8d, ecx
+  0000000140159FD8  mov     [rsp+340h+var_2DC], r15d
+  0000000140159FDD  mov     ecx, r10d
+  0000000140159FE0  mov     eax, r10d
+  0000000140159FE3  or      ecx, r9d
+  0000000140159FE6  and     eax, r9d
+  0000000140159FE9  and     ecx, ebx
+  0000000140159FEB  mov     edx, r8d
+  0000000140159FEE  or      ecx, eax
+  0000000140159FF0  rol     ebx, 1Eh
+  0000000140159FF3  add     ecx, 8F1BBCDCh
+  0000000140159FF9  rol     edx, 5
+  0000000140159FFC  jmp     loc_14015A28B
+  000000014015A001  db 48h, 8Bh, 9Eh, 8, 1, 2 dup(0)
+  000000014015A008  dq 41487FD6A7158D4Ch, 9B566384B848D2D2h, 4CD28B4505CD1319h
+  000000014015A288  db 0F0h, 2 dup(0FFh)
+  000000014015A28B  add     r11d, edx
+  000000014015A28E  mov     r12d, r13d
+  000000014015A291  xor     r12d, [rsp+340h+var_304]
+  000000014015A296  mov     eax, ebx
+  000000014015A298  xor     r12d, [rsp+340h+var_2F4]
+  000000014015A29D  and     eax, r10d
+  000000014015A2A0  xor     r12d, [rsp+340h+var_2E0]
+  000000014015A2A5  rol     r12d, 1
+  000000014015A2A8  add     ecx, r12d
+  000000014015A2AB  mov     [rsp+340h+var_2EC], r12d
+  000000014015A2B0  add     r11d, ecx
+  000000014015A2B3  mov     [rsp+340h+var_2E0], r14d
+  000000014015A2B8  mov     edi, r11d
+  000000014015A2BB  mov     ecx, ebx
+  000000014015A2BD  or      ecx, r10d
+  000000014015A2C0  rol     edi, 5
+  000000014015A2C3  and     ecx, r8d
+  000000014015A2C6  add     edi, r9d
+  000000014015A2C9  or      ecx, eax
+  000000014015A2CB  rol     r8d, 1Eh
+  000000014015A2CF  add     ecx, 8F1BBCDCh
+  000000014015A2D5  mov     eax, r8d
+  000000014015A2D8  add     ecx, r14d
+  000000014015A2DB  and     eax, ebx
+  000000014015A2DD  add     edi, ecx
+  000000014015A2DF  mov     ecx, r8d
+  000000014015A2E2  or      ecx, ebx
+  000000014015A2E4  mov     esi, edi
+  000000014015A2E6  and     ecx, r11d
+  000000014015A2E9  rol     esi, 5
+  000000014015A2EC  add     esi, r10d
+  000000014015A2EF  rol     r11d, 1Eh
+  000000014015A2F3  or      ecx, eax
+  000000014015A2F5  mov     r10d, r12d
+  000000014015A2F8  xor     r10d, [rsp+340h+var_318]
+  000000014015A2FD  add     ecx, 8F1BBCDCh
+  000000014015A303  xor     r10d, [rsp+340h+var_2F8]
+  000000014015A308  add     ecx, r15d
+  000000014015A30B  xor     r10d, [rsp+340h+var_2E4]
+  000000014015A310  add     esi, ecx
+  000000014015A312  rol     r10d, 1
+  000000014015A315  xor     r14d, [rsp+340h+var_300]
+  000000014015A31A  mov     ecx, r11d
+  000000014015A31D  xor     r14d, [rsp+340h+var_30C]
+  000000014015A322  or      ecx, r8d
+  000000014015A325  xor     r14d, [rsp+340h+var_308]
+  000000014015A32A  and     ecx, edi
+  000000014015A32C  mov     eax, r11d
+  000000014015A32F  rol     edi, 1Eh
+  000000014015A332  and     eax, r8d
+  000000014015A335  jmp     loc_14015A3FD
+  000000014015A33A  dw 8B48h, 0B045h, 345h
+  000000014015A340  dq 48D83AC8558B48F1h, 48C04D8B4840C083h, 411EC3C1F540EA83h
+  000000014015A3F8  db 80h, 90h, 86h, 0FDh, 0FFh
+  000000014015A3FD  rol     r14d, 1
+  000000014015A400  or      ecx, eax
+  000000014015A402  mov     [rsp+340h+var_314], r10d
+  000000014015A407  add     ecx, 8F1BBCDCh
+  000000014015A40D  mov     [rsp+340h+var_308], r14d
+  000000014015A412  add     ecx, r10d
+  000000014015A415  mov     edx, esi
+  000000014015A417  rol     edx, 5
+  000000014015A41A  mov     eax, edi
+  000000014015A41C  and     eax, r11d
+  000000014015A41F  add     ebx, edx
+  000000014015A421  add     ebx, ecx
+  000000014015A423  mov     r12d, r15d
+  000000014015A426  xor     r12d, r13d
+  000000014015A429  mov     edx, ebx
+  000000014015A42B  xor     r12d, [rsp+340h+var_2E8]
+  000000014015A430  mov     r13d, r10d
+  000000014015A433  xor     r13d, [rsp+340h+var_2FC]
+  000000014015A438  mov     ecx, edi
+  000000014015A43A  xor     r12d, [rsp+340h+var_2F8]
+  000000014015A43F  or      ecx, r11d
+  000000014015A442  xor     r13d, [rsp+340h+var_304]
+  000000014015A447  and     ecx, esi
+  000000014015A449  xor     r13d, [rsp+340h+var_30C]
+  000000014015A44E  or      ecx, eax
+  000000014015A450  add     ecx, 8F1BBCDCh
+  000000014015A456  rol     esi, 1Eh
+  000000014015A459  add     ecx, r14d
+  000000014015A45C  rol     edx, 5
+  000000014015A45F  add     r8d, edx
+  000000014015A462  rol     r12d, 1
+  000000014015A465  add     r8d, ecx
+  000000014015A468  rol     r13d, 1
+  000000014015A46B  mov     r9d, r8d
+  000000014015A46E  mov     [rsp+340h+var_2F8], r12d
+  000000014015A473  rol     r9d, 5
+  000000014015A477  mov     ecx, esi
+  000000014015A479  or      ecx, edi
+  000000014015A47B  mov     [rsp+340h+var_2F4], r13d
+  000000014015A480  and     ecx, ebx
+  000000014015A482  add     r9d, r11d
+  000000014015A485  rol     ebx, 1Eh
+  000000014015A488  mov     eax, esi
+  000000014015A48A  and     eax, edi
+  000000014015A48C  mov     r11d, r14d
+  000000014015A48F  xor     r11d, [rsp+340h+var_31C]
+  000000014015A494  or      ecx, eax
+  000000014015A496  xor     r11d, [rsp+340h+var_320]
+  000000014015A49B  add     ecx, 8F1BBCDCh
+  000000014015A4A1  xor     r11d, [rsp+340h+var_2E8]
+  000000014015A4A6  jmp     loc_14015A70B
+  000000014015A4AB  db 48h, 3, 0E3h, 0Fh, 8Ch
+  000000014015A4B0  dq 0F3EB9FE8FFFE7392h, 890FFFFD6DEBE8FFh, 0D041C233FFFF1383h
+  000000014015A708  db 45h, 2 dup(0FFh)
+  000000014015A70B  add     ecx, r12d
+  000000014015A70E  add     r9d, ecx
+  000000014015A711  rol     r11d, 1
+  000000014015A714  mov     ecx, ebx
+  000000014015A716  mov     [rsp+340h+var_30C], r11d
+  000000014015A71B  or      ecx, esi
+  000000014015A71D  mov     eax, ebx
+  000000014015A71F  and     ecx, r8d
+  000000014015A722  and     eax, esi
+  000000014015A724  or      ecx, eax
+  000000014015A726  rol     r8d, 1Eh
+  000000014015A72A  add     ecx, 8F1BBCDCh
+  000000014015A730  mov     r10d, r9d
+  000000014015A733  add     ecx, r13d
+  000000014015A736  rol     r10d, 5
+  000000014015A73A  add     r10d, edi
+  000000014015A73D  add     r10d, ecx
+  000000014015A740  mov     ecx, r8d
+  000000014015A743  mov     edx, r10d
+  000000014015A746  or      ecx, ebx
+  000000014015A748  rol     edx, 5
+  000000014015A74B  and     ecx, r9d
+  000000014015A74E  mov     r14d, [rsp+340h+var_318]
+  000000014015A753  add     edx, esi
+  000000014015A755  rol     r9d, 1Eh
+  000000014015A759  mov     eax, r8d
+  000000014015A75C  and     eax, ebx
+  000000014015A75E  mov     edi, r12d
+  000000014015A761  xor     edi, [rsp+340h+var_2EC]
+  000000014015A765  or      ecx, eax
+  000000014015A767  xor     edi, [rsp+340h+var_310]
+  000000014015A76B  add     ecx, 8F1BBCDCh
+  000000014015A771  xor     edi, [rsp+340h+var_304]
+  000000014015A775  add     ecx, r11d
+  000000014015A778  add     edx, ecx
+  000000014015A77A  rol     edi, 1
+  000000014015A77C  xor     r11d, r15d
+  000000014015A77F  mov     [rsp+340h+var_304], edi
+  000000014015A783  xor     r11d, [rsp+340h+var_300]
+  000000014015A788  mov     eax, r10d
+  000000014015A78B  xor     r11d, [rsp+340h+var_310]
+  000000014015A790  xor     eax, r9d
+  000000014015A793  xor     eax, r8d
+  000000014015A796  rol     r10d, 1Eh
+  000000014015A79A  add     eax, 0CA62C1D6h
+  000000014015A79F  rol     r11d, 1
+  000000014015A7A2  add     eax, edi
+  000000014015A7A4  mov     ecx, edx
+  000000014015A7A6  rol     ecx, 5
+  000000014015A7A9  mov     r15d, edi
+  000000014015A7AC  jmp     loc_14015AA6B
+  000000014015A7B1  db 23h, 0CAh, 41h, 0F6h, 0C3h, 1Fh, 0C1h
+  000000014015A7B8  dq 0C93341F2D04105C0h, 4188C7C0401EC2C1h, 458B44F4D141C003h
+  000000014015AA68  db 1Ah, 0FDh, 0FFh
+  000000014015AA6B  xor     r15d, [rsp+340h+var_314]
+  000000014015AA70  add     ebx, ecx
+  000000014015AA72  xor     r15d, [rsp+340h+var_2F0]
+  000000014015AA77  add     ebx, eax
+  000000014015AA79  mov     edi, [rsp+340h+var_2FC]
+  000000014015AA7D  xor     r15d, r14d
+  000000014015AA80  rol     r15d, 1
+  000000014015AA83  mov     eax, edx
+  000000014015AA85  xor     eax, r10d
+  000000014015AA88  rol     edx, 1Eh
+  000000014015AA8B  xor     eax, r9d
+  000000014015AA8E  mov     [rsp+340h+var_2E8], r15d
+  000000014015AA93  add     eax, 0CA62C1D6h
+  000000014015AA98  mov     ecx, ebx
+  000000014015AA9A  rol     ecx, 5
+  000000014015AA9D  mov     esi, r13d
+  000000014015AAA0  xor     esi, [rsp+340h+var_2E0]
+  000000014015AAA4  add     r8d, ecx
+  000000014015AAA7  xor     esi, r14d
+  000000014015AAAA  xor     esi, [rsp+340h+var_320]
+  000000014015AAAE  rol     esi, 1
+  000000014015AAB0  add     eax, esi
+  000000014015AAB2  mov     [rsp+340h+var_318], esi
+  000000014015AAB6  add     r8d, eax
+  000000014015AAB9  mov     [rsp+340h+var_320], r11d
+  000000014015AABE  mov     eax, ebx
+  000000014015AAC0  mov     ecx, r8d
+  000000014015AAC3  xor     eax, edx
+  000000014015AAC5  rol     ecx, 5
+  000000014015AAC8  xor     eax, r10d
+  000000014015AACB  rol     ebx, 1Eh
+  000000014015AACE  add     eax, 0CA62C1D6h
+  000000014015AAD3  add     r9d, ecx
+  000000014015AAD6  add     eax, r11d
+  000000014015AAD9  mov     r14d, esi
+  000000014015AADC  xor     r14d, [rsp+340h+var_308]
+  000000014015AAE1  add     r9d, eax
+  000000014015AAE4  xor     r14d, edi
+  000000014015AAE7  mov     eax, r8d
+  000000014015AAEA  xor     r14d, [rsp+340h+var_300]
+  000000014015AAEF  xor     eax, ebx
+  000000014015AAF1  xor     eax, edx
+  000000014015AAF3  rol     r14d, 1
+  000000014015AAF6  add     eax, 0CA62C1D6h
+  000000014015AAFB  rol     r8d, 1Eh
+  000000014015AAFF  add     eax, r15d
+  000000014015AB02  mov     [rsp+340h+var_2FC], r14d
+  000000014015AB07  mov     ecx, r9d
+  000000014015AB0A  rol     ecx, 5
+  000000014015AB0D  add     r10d, ecx
+  000000014015AB10  jmp     loc_14015ACBA
+  000000014015AB15  db 55h, 58h, 51h
+  000000014015AB18  dq 30DA4B2D708B5A75h, 8E5E767E1F710A7Eh, 7C8D9A98735D5D75h
+  000000014015ACB8  db 0FDh, 0FFh
+  000000014015ACBA  add     r10d, eax
+  000000014015ACBD  mov     ecx, r10d
+  000000014015ACC0  rol     ecx, 5
+  000000014015ACC3  mov     esi, r11d
+  000000014015ACC6  add     edx, ecx
+  000000014015ACC8  xor     esi, r12d
+  000000014015ACCB  mov     eax, r9d
+  000000014015ACCE  xor     esi, [rsp+340h+var_31C]
+  000000014015ACD2  xor     eax, r8d
+  000000014015ACD5  xor     esi, [rsp+340h+var_2F0]
+  000000014015ACD9  xor     eax, ebx
+  000000014015ACDB  add     eax, 0CA62C1D6h
+  000000014015ACE0  rol     esi, 1
+  000000014015ACE2  add     eax, r14d
+  000000014015ACE5  rol     r9d, 1Eh
+  000000014015ACE9  add     edx, eax
+  000000014015ACEB  mov     [rsp+340h+var_310], esi
+  000000014015ACEF  mov     eax, r10d
+  000000014015ACF2  mov     r11d, edx
+  000000014015ACF5  xor     eax, r9d
+  000000014015ACF8  rol     r10d, 1Eh
+  000000014015ACFC  xor     eax, r8d
+  000000014015ACFF  rol     r11d, 5
+  000000014015AD03  add     eax, 0CA62C1D6h
+  000000014015AD08  add     r11d, ebx
+  000000014015AD0B  add     eax, esi
+  000000014015AD0D  mov     r12d, r15d
+  000000014015AD10  xor     esi, [rsp+340h+var_304]
+  000000014015AD14  add     r11d, eax
+  000000014015AD17  xor     esi, [rsp+340h+var_2DC]
+  000000014015AD1B  xor     r12d, r13d
+  000000014015AD1E  xor     r12d, [rsp+340h+var_2EC]
+  000000014015AD23  mov     r13d, r14d
+  000000014015AD26  xor     r13d, [rsp+340h+var_30C]
+  000000014015AD2B  xor     r12d, edi
+  000000014015AD2E  xor     r13d, [rsp+340h+var_2E0]
+  000000014015AD33  mov     eax, edx
+  000000014015AD35  xor     r13d, [rsp+340h+var_31C]
+  000000014015AD3A  xor     eax, r10d
+  000000014015AD3D  xor     esi, [rsp+340h+var_2EC]
+  000000014015AD41  xor     eax, r9d
+  000000014015AD44  add     eax, 0CA62C1D6h
+  000000014015AD49  rol     r12d, 1
+  000000014015AD4C  add     eax, r12d
+  000000014015AD4F  rol     edx, 1Eh
+  000000014015AD52  rol     esi, 1
+  000000014015AD54  mov     edi, r11d
+  000000014015AD57  rol     edi, 5
+  000000014015AD5A  add     edi, r8d
+  000000014015AD5D  rol     r13d, 1
+  000000014015AD60  jmp     loc_14015B01C
+  000000014015AD65  db 41h, 8Dh, 14h
+  000000014015AD68  dq 3348247433D0030Bh, 8B44DE3345302474h, 0F0324024247433DBh
+  000000014015B018  db 4Dh, 0BDh, 2 dup(0FFh)
+  000000014015B01C  add     edi, eax
+  000000014015B01E  mov     [rsp+340h+var_300], esi
+  000000014015B022  mov     eax, r11d
+  000000014015B025  mov     r14d, edi
+  000000014015B028  xor     eax, edx
+  000000014015B02A  rol     r14d, 5
+  000000014015B02E  xor     eax, r10d
+  000000014015B031  rol     r11d, 1Eh
+  000000014015B035  add     eax, 0CA62C1D6h
+  000000014015B03A  add     r14d, r9d
+  000000014015B03D  add     eax, r13d
+  000000014015B040  add     r14d, eax
+  000000014015B043  mov     eax, edi
+  000000014015B045  xor     eax, r11d
+  000000014015B048  rol     edi, 1Eh
+  000000014015B04B  xor     eax, edx
+  000000014015B04D  mov     ebx, r14d
+  000000014015B050  add     eax, 0CA62C1D6h
+  000000014015B055  rol     ebx, 5
+  000000014015B058  add     ebx, r10d
+  000000014015B05B  add     eax, esi
+  000000014015B05D  add     ebx, eax
+  000000014015B05F  mov     r10d, r12d
+  000000014015B062  xor     r10d, [rsp+340h+var_318]
+  000000014015B067  mov     eax, r14d
+  000000014015B06A  xor     r10d, [rsp+340h+var_314]
+  000000014015B06F  xor     eax, edi
+  000000014015B071  xor     r10d, [rsp+340h+var_2E0]
+  000000014015B076  mov     r8d, ebx
+  000000014015B079  rol     r10d, 1
+  000000014015B07C  xor     eax, r11d
+  000000014015B07F  rol     r8d, 5
+  000000014015B083  add     eax, 0CA62C1D6h
+  000000014015B088  mov     [rsp+340h+var_2F0], r10d
+  000000014015B08D  add     eax, r10d
+  000000014015B090  rol     r14d, 1Eh
+  000000014015B094  add     r8d, edx
+  000000014015B097  mov     edx, r13d
+  000000014015B09A  xor     edx, [rsp+340h+var_320]
+  000000014015B09E  add     r8d, eax
+  000000014015B0A1  xor     edx, [rsp+340h+var_308]
+  000000014015B0A5  mov     eax, ebx
+  000000014015B0A7  xor     edx, [rsp+340h+var_2DC]
+  000000014015B0AB  xor     eax, r14d
+  000000014015B0AE  xor     eax, edi
+  000000014015B0B0  rol     ebx, 1Eh
+  000000014015B0B3  add     eax, 0CA62C1D6h
+  000000014015B0B8  rol     edx, 1
+  000000014015B0BA  add     eax, edx
+  000000014015B0BC  mov     [rsp+340h+var_2EC], edx
+  000000014015B0C0  jmp     loc_14015B23F
+  000000014015B0C5  db 33h, 0D2h, 48h
+  000000014015B0C8  dq 48000000007445C7h, 23016045C77C4D8Dh, 0CDAB896445C76745h
+  000000014015B238  db 0FFh, 0Fh, 8Fh, 0EFh, 0ACh, 2 dup(0FFh)
+  000000014015B23F  xor     edx, [rsp+340h+var_310]
+  000000014015B243  mov     r9d, r8d
+  000000014015B246  xor     edx, [rsp+340h+var_30C]
+  000000014015B24A  xor     edx, [rsp+340h+var_2F8]
+  000000014015B24E  rol     r9d, 5
+  000000014015B252  add     r9d, r11d
+  000000014015B255  rol     edx, 1
+  000000014015B257  add     r9d, eax
+  000000014015B25A  mov     r11d, esi
+  000000014015B25D  xor     r11d, r15d
+  000000014015B260  mov     eax, r8d
+  000000014015B263  xor     r11d, [rsp+340h+var_2F8]
+  000000014015B268  xor     eax, ebx
+  000000014015B26A  xor     r11d, [rsp+340h+var_314]
+  000000014015B26F  xor     eax, r14d
+  000000014015B272  rol     r11d, 1
+  000000014015B275  mov     r15d, r10d
+  000000014015B278  xor     r15d, [rsp+340h+var_2FC]
+  000000014015B27D  mov     esi, r9d
+  000000014015B280  xor     r15d, [rsp+340h+var_2F4]
+  000000014015B285  xor     r15d, [rsp+340h+var_308]
+  000000014015B28A  mov     [rsp+340h+var_31C], r11d
+  000000014015B28F  add     r11d, 0CA62C1D6h
+  000000014015B296  add     eax, r11d
+  000000014015B299  rol     esi, 5
+  000000014015B29C  add     esi, edi
+  000000014015B29E  rol     r8d, 1Eh
+  000000014015B2A2  add     esi, eax
+  000000014015B2A4  rol     r15d, 1
+  000000014015B2A7  mov     eax, r9d
+  000000014015B2AA  mov     r11d, esi
+  000000014015B2AD  xor     eax, r8d
+  000000014015B2B0  rol     r11d, 5
+  000000014015B2B4  xor     eax, ebx
+  000000014015B2B6  rol     r9d, 1Eh
+  000000014015B2BA  add     eax, 0CA62C1D6h
+  000000014015B2BF  add     ebx, 0CA62C1D6h
+  000000014015B2C5  add     eax, r15d
+  000000014015B2C8  add     r11d, r14d
+  000000014015B2CB  mov     r14d, [rsp+340h+var_31C]
+  000000014015B2D0  add     r11d, eax
+  000000014015B2D3  mov     eax, esi
+  000000014015B2D5  mov     r10d, r11d
+  000000014015B2D8  xor     eax, r9d
+  000000014015B2DB  rol     r10d, 5
+  000000014015B2DF  xor     eax, r8d
+  000000014015B2E2  rol     esi, 1Eh
+  000000014015B2E5  add     eax, ebx
+  000000014015B2E7  add     r10d, edx
+  000000014015B2EA  add     r10d, eax
+  000000014015B2ED  jmp     loc_14015B3E8
+  000000014015B2F2  dw 1BE8h, 0FE0Ah, 0FFFh
+  000000014015B2F8  dq 0DECEE8FFFEBD658Dh, 0FFFFFA00BE8FFF3h, 0DD9EE8FFFEBF7789h
+  000000014015B3E8  add     r8d, 0CA62C1D6h
+  000000014015B3EF  mov     eax, r11d
+  000000014015B3F2  mov     ebx, r14d
+  000000014015B3F5  xor     ebx, r12d
+  000000014015B3F8  xor     eax, esi
+  000000014015B3FA  xor     ebx, [rsp+340h+var_304]
+  000000014015B3FE  xor     eax, r9d
+  000000014015B401  xor     ebx, [rsp+340h+var_2F4]
+  000000014015B405  add     eax, r8d
+  000000014015B408  rol     ebx, 1
+  000000014015B40A  mov     edi, r10d
+  000000014015B40D  rol     edi, 5
+  000000014015B410  add     edi, ebx
+  000000014015B412  add     edi, eax
+  000000014015B414  rol     r11d, 1Eh
+  000000014015B418  mov     r12d, [rsp+340h+var_300]
+  000000014015B41D  xor     r15d, r13d
+  000000014015B420  xor     r12d, [rsp+340h+var_320]
+  000000014015B425  mov     ecx, edi
+  000000014015B427  xor     r12d, [rsp+340h+var_304]
+  000000014015B42C  mov     eax, r11d
+  000000014015B42F  xor     r15d, [rsp+340h+var_318]
+  000000014015B434  xor     eax, esi
+  000000014015B436  xor     r15d, [rsp+340h+var_30C]
+  000000014015B43B  xor     eax, r10d
+  000000014015B43E  xor     r14d, [rsp+340h+var_310]
+  000000014015B443  add     eax, r9d
+  000000014015B446  xor     r14d, [rsp+340h+var_2E8]
+  000000014015B44B  add     eax, 0CA62C1D6h
+  000000014015B450  rol     ecx, 5
+  000000014015B453  xor     r12d, edx
+  000000014015B456  rol     r12d, 1
+  000000014015B459  rol     r10d, 1Eh
+  000000014015B45D  rol     r15d, 1
+  000000014015B460  lea     r9d, [r15+rcx]
+  000000014015B464  add     r9d, eax
+  000000014015B467  mov     eax, r10d
+  000000014015B46A  xor     eax, r11d
+  000000014015B46D  mov     r8d, r9d
+  000000014015B470  xor     eax, edi
+  000000014015B472  rol     r8d, 5
+  000000014015B476  add     eax, 0CA62C1D6h
+  000000014015B47B  rol     edi, 1Eh
+  000000014015B47E  add     eax, esi
+  000000014015B480  add     r8d, r12d
+  000000014015B483  mov     esi, [rbp+240h+var_17C]
+  000000014015B489  add     r8d, eax
+  000000014015B48C  mov     eax, [rsp+340h+var_2F0]
+  000000014015B490  xor     r12d, r14d
+  000000014015B493  xor     eax, [rsp+340h+var_2E8]
+  000000014015B497  jmp     loc_14015B5F6
+  000000014015B49C  dd 0E95D5E41h
+  000000014015B4A0  dq 0F3DC57E8FFFE09A7h, 840FFFFE74ADE8FFh, 64247C89FFFE96C6h
+  000000014015B5F0  db 0Fh, 82h, 0C0h, 0FEh, 0FCh, 0FFh
+  000000014015B5F6  mov     ecx, edi
+  000000014015B5F8  xor     eax, [rsp+340h+var_318]
+  000000014015B5FC  xor     ecx, r10d
+  000000014015B5FF  xor     eax, ebx
+  000000014015B601  rol     r12d, 1
+  000000014015B604  rol     eax, 1
+  000000014015B606  xor     ecx, r9d
+  000000014015B609  add     eax, r11d
+  000000014015B60C  rol     r9d, 1Eh
+  000000014015B610  mov     r11d, [rbp+240h+var_178]
+  000000014015B617  add     ecx, 0CA62C1D6h
+  000000014015B61D  mov     ebx, r8d
+  000000014015B620  rol     ebx, 5
+  000000014015B623  add     ebx, eax
+  000000014015B625  mov     eax, [rsp+340h+var_2EC]
+  000000014015B629  xor     eax, [rsp+340h+var_2FC]
+  000000014015B62D  add     ebx, ecx
+  000000014015B62F  xor     eax, [rsp+340h+var_320]
+  000000014015B633  mov     edx, ebx
+  000000014015B635  xor     eax, r15d
+  000000014015B638  rol     edx, 5
+  000000014015B63B  rol     eax, 1
+  000000014015B63D  mov     ecx, r9d
+  000000014015B640  add     eax, r10d
+  000000014015B643  xor     ecx, edi
+  000000014015B645  add     edx, eax
+  000000014015B647  xor     ecx, r8d
+  000000014015B64A  add     ecx, 0CA62C1D6h
+  000000014015B650  rol     r8d, 1Eh
+  000000014015B654  add     ecx, edx
+  000000014015B656  add     edi, 0CA62C1D6h
+  000000014015B65C  add     esi, ecx
+  000000014015B65E  mov     eax, ecx
+  000000014015B660  rol     eax, 5
+  000000014015B663  add     r12d, eax
+  000000014015B666  mov     [rbp+240h+var_17C], esi
+  000000014015B66C  mov     eax, r8d
+  000000014015B66F  xor     eax, r9d
+  000000014015B672  xor     eax, ebx
+  000000014015B674  rol     ebx, 1Eh
+  000000014015B677  add     eax, edi
+  000000014015B679  add     eax, [rbp+240h+var_180]
+  000000014015B67F  add     r12d, eax
+  000000014015B682  add     r11d, ebx
+  000000014015B685  mov     [rbp+240h+var_180], r12d
+  000000014015B68C  mov     [rbp+240h+var_178], r11d
+  000000014015B693  mov     r14d, [rbp+240h+var_174]
+  000000014015B69A  mov     r15d, [rbp+240h+var_170]
+  000000014015B6A1  add     r14d, r8d
+  000000014015B6A4  mov     rax, [rbp+240h+var_290]
+  000000014015B6A8  jmp     loc_14015B731
+  000000014015B6AD  db 0E8h, 0A7h, 0B4h
+  000000014015B6B0  dq 0FFFF035D8C0FFFFDh, 0E9E38B495E415C41h, 8B540D9EFFFE3004h
+  000000014015B730  db 0FFh
+  000000014015B731  add     r15d, r9d
+  000000014015B734  mov     rdi, [rbp+240h+var_260]
+  000000014015B738  mov     [rbp+240h+var_174], r14d
+  000000014015B73F  mov     [rbp+240h+var_170], r15d
+  000000014015B746  lea     rcx, [rax+3Fh]
+  000000014015B74A  mov     [rbp+240h+var_280], rcx
+  000000014015B74E  cmp     rcx, rdi
+  000000014015B751  jnb     loc_14015EFE4
+  000000014015B757  jmp     loc_14015B8AC
+  000000014015B75C  dd 0F5CCEFE8h
+  000000014015B760  dq 5CFFFDD014850FFFh, 5751548F5B5D5E06h, 0B3F7FF5C9C0C5EB6h
+  000000014015B8A8  db 0DFh, 1Eh, 2 dup(0FFh)
+  000000014015B8AC  lea     rdx, [rsp+340h+var_2D0]
+  000000014015B8B1  sub     rdx, rax
+  000000014015B8B4  lea     rax, [rbp+240h+var_80]
+  000000014015B8BB  sub     rdx, rax
+  000000014015B8BE  sub     rdx, 2
+  000000014015B8C2  mov     [rbp-38h], rdx
+  000000014015B8C6  jmp     short loc_14015B922
+  000000014015B8C8  dq 0FF2527E95C415E41h, 8A0FFFF5CBA2E8FFh, 0F3D83FE8FFFFBBCBh
+  000000014015B920  db 0FCh, 0FFh
+  000000014015B922  lea     rbx, [rbp+rcx+240h+var_BD]
+  000000014015B92A  mov     r8d, 10h
+  000000014015B930  jmp     loc_14015BAB3
+  000000014015B935  db 48h, 81h, 0C4h
+  000000014015B938  dq 88598A0F000007A8h, 0FFFF3D8F1E8FFFDh, 0D846E8FFFDF70189h
+  000000014015BAB0  db 4Eh, 0FEh, 0FFh
+  000000014015BAB3  movzx   eax, byte ptr [rbx-1]
+  000000014015BAB7  movzx   ecx, byte ptr [rbx-2]
+  000000014015BABB  shl     ecx, 8
+  000000014015BABE  or      ecx, eax
+  000000014015BAC0  movzx   eax, byte ptr [rbx]
+  000000014015BAC3  shl     ecx, 8
+  000000014015BAC6  or      ecx, eax
+  000000014015BAC8  movzx   eax, byte ptr [rbx+1]
+  000000014015BACC  shl     ecx, 8
+  000000014015BACF  or      ecx, eax
+  000000014015BAD1  mov     [rbx+rdx], ecx
+  000000014015BAD4  lea     rbx, [rbx+4]
+  000000014015BAD8  sub     r8, 1
+  000000014015BADC  jnz     short loc_14015BAB3
+  000000014015BADE  jmp     loc_14015BD6A
+  000000014015BAE3  db 48h, 81h, 0C4h, 8, 3
+  000000014015BAE8  dq 0FFFD905F870F0000h, 0C3C18F1BBCDCC681h, 0D68B45C1FFC78B1Eh
+  000000014015BD68  db 0FCh, 0FFh
+  000000014015BD6A  mov     r13d, [rbp+240h+var_2BC]
+  000000014015BD6E  mov     r8d, r14d
+  000000014015BD71  xor     r8d, r11d
+  000000014015BD74  mov     eax, r12d
+  000000014015BD77  rol     eax, 5
+  000000014015BD7A  and     r8d, esi
+  000000014015BD7D  add     eax, 5A827999h
+  000000014015BD82  xor     r8d, r14d
+  000000014015BD85  add     eax, [rsp+340h+var_2D0]
+  000000014015BD89  add     r14d, 5A827999h
+  000000014015BD90  add     r8d, eax
+  000000014015BD93  mov     ebx, r12d
+  000000014015BD96  add     r8d, r15d
+  000000014015BD99  rol     ebx, 1Eh
+  000000014015BD9C  mov     r15d, [rsp+340h+var_2C4]
+  000000014015BDA1  mov     eax, r8d
+  000000014015BDA4  rol     eax, 5
+  000000014015BDA7  mov     r10d, ebx
+  000000014015BDAA  add     eax, [rsp+340h+var_2CC]
+  000000014015BDAE  mov     edx, esi
+  000000014015BDB0  rol     edx, 1Eh
+  000000014015BDB3  xor     r10d, edx
+  000000014015BDB6  mov     r9d, edx
+  000000014015BDB9  and     r10d, r8d
+  000000014015BDBC  xor     r9d, r11d
+  000000014015BDBF  and     r9d, r12d
+  000000014015BDC2  rol     r8d, 1Eh
+  000000014015BDC6  mov     r12d, [rbp+240h+var_2C0]
+  000000014015BDCA  xor     r10d, edx
+  000000014015BDCD  xor     r9d, r11d
+  000000014015BDD0  mov     ecx, r8d
+  000000014015BDD3  add     r9d, eax
+  000000014015BDD6  xor     ecx, ebx
+  000000014015BDD8  add     r9d, r14d
+  000000014015BDDB  mov     r14d, [rsp+340h+var_2C8]
+  000000014015BDE0  and     ecx, r9d
+  000000014015BDE3  mov     eax, r9d
+  000000014015BDE6  xor     ecx, ebx
+  000000014015BDE8  rol     eax, 5
+  000000014015BDEB  add     eax, 5A827999h
+  000000014015BDF0  rol     r9d, 1Eh
+  000000014015BDF4  add     eax, r14d
+  000000014015BDF7  add     r10d, eax
+  000000014015BDFA  add     r10d, r11d
+  000000014015BDFD  mov     eax, r10d
+  000000014015BE00  rol     eax, 5
+  000000014015BE03  add     eax, edx
+  000000014015BE05  lea     edx, [r15+5A827999h]
+  000000014015BE0C  add     ecx, eax
+  000000014015BE0E  add     edx, ecx
+  000000014015BE10  jmp     short loc_14015BE72
+  000000014015BE12  dw 7870h, 6102h, 0E910h
+  000000014015BE18  dq 95880F55FFFEF2E3h, 318D0F5641FFFE4Eh, 240A63844FFFDFFh
+  000000014015BE70  db 18h, 50h
+  000000014015BE72  mov     ecx, r9d
+  000000014015BE75  xor     ecx, r8d
+  000000014015BE78  mov     eax, edx
+  000000014015BE7A  and     ecx, r10d
+  000000014015BE7D  rol     eax, 5
+  000000014015BE80  xor     ecx, r8d
+  000000014015BE83  rol     r10d, 1Eh
+  000000014015BE87  add     eax, ebx
+  000000014015BE89  lea     ebx, [r12+5A827999h]
+  000000014015BE91  add     ecx, eax
+  000000014015BE93  add     ebx, ecx
+  000000014015BE95  mov     ecx, r10d
+  000000014015BE98  xor     ecx, r9d
+  000000014015BE9B  mov     eax, ebx
+  000000014015BE9D  and     ecx, edx
+  000000014015BE9F  rol     eax, 5
+  000000014015BEA2  xor     ecx, r9d
+  000000014015BEA5  rol     edx, 1Eh
+  000000014015BEA8  add     eax, r8d
+  000000014015BEAB  lea     r8d, [r13+5A827999h]
+  000000014015BEB2  add     ecx, eax
+  000000014015BEB4  add     r8d, ecx
+  000000014015BEB7  mov     ecx, edx
+  000000014015BEB9  xor     ecx, r10d
+  000000014015BEBC  mov     eax, r8d
+  000000014015BEBF  and     ecx, ebx
+  000000014015BEC1  rol     eax, 5
+  000000014015BEC4  add     eax, r9d
+  000000014015BEC7  xor     ecx, r10d
+  000000014015BECA  mov     r9d, [rbp+240h+var_2B8]
+  000000014015BECE  add     ecx, eax
+  000000014015BED0  rol     ebx, 1Eh
+  000000014015BED3  add     r9d, 5A827999h
+  000000014015BEDA  add     r9d, ecx
+  000000014015BEDD  mov     ecx, ebx
+  000000014015BEDF  xor     ecx, edx
+  000000014015BEE1  mov     eax, r9d
+  000000014015BEE4  and     ecx, r8d
+  000000014015BEE7  rol     eax, 5
+  000000014015BEEA  xor     ecx, edx
+  000000014015BEEC  rol     r8d, 1Eh
+  000000014015BEF0  add     eax, r10d
+  000000014015BEF3  mov     r10d, [rbp+240h+var_2B4]
+  000000014015BEF7  add     ecx, eax
+  000000014015BEF9  add     r10d, 5A827999h
+  000000014015BF00  add     r10d, ecx
+  000000014015BF03  mov     ecx, r8d
+  000000014015BF06  xor     ecx, ebx
+  000000014015BF08  mov     eax, r10d
+  000000014015BF0B  and     ecx, r9d
+  000000014015BF0E  jmp     loc_14015C182
+  000000014015BF13  db 41h, 5Eh, 49h, 8Bh, 0E3h
+  000000014015BF18  dq 857657FFFFC17EE9h, 9FA9675B7157C2E8h, 48BD457A7C5E525Ch
+  000000014015C180  db 0FDh, 0FFh
+  000000014015C182  rol     eax, 5
+  000000014015C185  xor     ecx, ebx
+  000000014015C187  rol     r9d, 1Eh
+  000000014015C18B  add     eax, edx
+  000000014015C18D  mov     edx, [rbp+240h+var_2B0]
+  000000014015C190  add     ecx, eax
+  000000014015C192  add     edx, 5A827999h
+  000000014015C198  add     edx, ecx
+  000000014015C19A  mov     ecx, r9d
+  000000014015C19D  xor     ecx, r8d
+  000000014015C1A0  mov     eax, edx
+  000000014015C1A2  and     ecx, r10d
+  000000014015C1A5  rol     eax, 5
+  000000014015C1A8  xor     ecx, r8d
+  000000014015C1AB  rol     r10d, 1Eh
+  000000014015C1AF  add     eax, ebx
+  000000014015C1B1  mov     ebx, [rbp+240h+var_2AC]
+  000000014015C1B4  add     ecx, eax
+  000000014015C1B6  add     ebx, 5A827999h
+  000000014015C1BC  add     ebx, ecx
+  000000014015C1BE  mov     ecx, r10d
+  000000014015C1C1  xor     ecx, r9d
+  000000014015C1C4  mov     eax, ebx
+  000000014015C1C6  and     ecx, edx
+  000000014015C1C8  rol     eax, 5
+  000000014015C1CB  xor     ecx, r9d
+  000000014015C1CE  rol     edx, 1Eh
+  000000014015C1D1  add     eax, r8d
+  000000014015C1D4  mov     r8d, [rbp+240h+var_2A8]
+  000000014015C1D8  add     ecx, eax
+  000000014015C1DA  add     r8d, 5A827999h
+  000000014015C1E1  add     r8d, ecx
+  000000014015C1E4  mov     ecx, r10d
+  000000014015C1E7  xor     ecx, edx
+  000000014015C1E9  mov     eax, r8d
+  000000014015C1EC  and     ecx, ebx
+  000000014015C1EE  rol     eax, 5
+  000000014015C1F1  xor     ecx, r10d
+  000000014015C1F4  rol     ebx, 1Eh
+  000000014015C1F7  add     eax, r9d
+  000000014015C1FA  mov     r9d, [rbp+240h+var_2A4]
+  000000014015C1FE  add     ecx, eax
+  000000014015C200  add     r9d, 5A827999h
+  000000014015C207  add     r9d, ecx
+  000000014015C20A  mov     ecx, ebx
+  000000014015C20C  xor     ecx, edx
+  000000014015C20E  mov     eax, r9d
+  000000014015C211  and     ecx, r8d
+  000000014015C214  rol     eax, 5
+  000000014015C217  add     eax, r10d
+  000000014015C21A  jmp     loc_14015C2B5
+  000000014015C21F  db 0E8h
+  000000014015C220  dq 0FCD0E1E8FFF3D02Ch, 0E8FFFEDE37800FFFh, 0E5D8860FFFF3D034h
+  000000014015C2B0  db 88h, 0FCh, 0B0h, 0FEh, 0FFh
+  000000014015C2B5  rol     r8d, 1Eh
+  000000014015C2B9  mov     r10d, [rbp+240h+var_2A0]
+  000000014015C2BD  xor     ecx, edx
+  000000014015C2BF  add     ecx, eax
+  000000014015C2C1  add     r10d, 5A827999h
+  000000014015C2C8  add     r10d, ecx
+  000000014015C2CB  mov     ecx, r8d
+  000000014015C2CE  xor     ecx, ebx
+  000000014015C2D0  mov     eax, r10d
+  000000014015C2D3  and     ecx, r9d
+  000000014015C2D6  rol     eax, 5
+  000000014015C2D9  xor     ecx, ebx
+  000000014015C2DB  add     eax, [rbp+240h+var_29C]
+  000000014015C2DE  lea     r11d, [rdx+5A827999h]
+  000000014015C2E5  add     ecx, eax
+  000000014015C2E7  rol     r9d, 1Eh
+  000000014015C2EB  add     r11d, ecx
+  000000014015C2EE  lea     edx, [rbx+5A827999h]
+  000000014015C2F4  lea     ebx, [r8+5A827999h]
+  000000014015C2FB  mov     ecx, r9d
+  000000014015C2FE  xor     ecx, r8d
+  000000014015C301  mov     eax, r11d
+  000000014015C304  and     ecx, r10d
+  000000014015C307  rol     eax, 5
+  000000014015C30A  add     eax, [rbp+240h+var_298]
+  000000014015C30D  xor     ecx, r8d
+  000000014015C310  add     ecx, eax
+  000000014015C312  mov     r8d, [rbp+240h+var_29C]
+  000000014015C316  xor     r8d, [rbp+240h+var_2B0]
+  000000014015C31A  add     edx, ecx
+  000000014015C31C  rol     r10d, 1Eh
+  000000014015C320  xor     r8d, r14d
+  000000014015C323  xor     r8d, [rsp+340h+var_2D0]
+  000000014015C328  mov     ecx, r10d
+  000000014015C32B  xor     ecx, r9d
+  000000014015C32E  rol     r8d, 1
+  000000014015C331  and     ecx, r11d
+  000000014015C334  mov     [rsp+340h+var_318], r8d
+  000000014015C339  xor     ecx, r9d
+  000000014015C33C  rol     r11d, 1Eh
+  000000014015C340  mov     eax, edx
+  000000014015C342  rol     eax, 5
+  000000014015C345  add     eax, [rbp+240h+var_294]
+  000000014015C348  add     ecx, eax
+  000000014015C34A  add     ebx, ecx
+  000000014015C34C  mov     ecx, r11d
+  000000014015C34F  xor     ecx, r10d
+  000000014015C352  mov     eax, ebx
+  000000014015C354  and     ecx, edx
+  000000014015C356  rol     eax, 5
+  000000014015C359  jmp     loc_14015C4B2
+  000000014015C35E  dw 8148h
+  000000014015C360  dq 0DD870F000002D8C4h, 0FFF5B1B8E8FFFEAEh, 5F41FFFF71338B0Fh
+  000000014015C4B0  db 77h, 94h
+  000000014015C4B2  xor     ecx, r10d
+  000000014015C4B5  rol     edx, 1Eh
+  000000014015C4B8  add     eax, r8d
+  000000014015C4BB  lea     r8d, [r9+5A827999h]
+  000000014015C4C2  mov     r9d, [rbp+240h+var_298]
+  000000014015C4C6  add     ecx, eax
+  000000014015C4C8  xor     r9d, [rbp+240h+var_2AC]
+  000000014015C4CC  add     r8d, ecx
+  000000014015C4CF  xor     r9d, r15d
+  000000014015C4D2  mov     eax, r8d
+  000000014015C4D5  xor     r9d, [rsp+340h+var_2CC]
+  000000014015C4DA  mov     ecx, edx
+  000000014015C4DC  xor     ecx, r11d
+  000000014015C4DF  rol     r9d, 1
+  000000014015C4E2  and     ecx, ebx
+  000000014015C4E4  rol     eax, 5
+  000000014015C4E7  xor     ecx, r11d
+  000000014015C4EA  mov     [rsp+340h+var_314], r9d
+  000000014015C4EF  add     eax, r9d
+  000000014015C4F2  rol     ebx, 1Eh
+  000000014015C4F5  add     ecx, eax
+  000000014015C4F7  lea     r9d, [r10+5A827999h]
+  000000014015C4FE  mov     r10d, [rbp+240h+var_294]
+  000000014015C502  add     r9d, ecx
+  000000014015C505  xor     r10d, [rbp+240h+var_2A8]
+  000000014015C509  mov     ecx, ebx
+  000000014015C50B  xor     r10d, r12d
+  000000014015C50E  xor     ecx, edx
+  000000014015C510  xor     r10d, r14d
+  000000014015C513  and     ecx, r8d
+  000000014015C516  rol     r10d, 1
+  000000014015C519  xor     ecx, edx
+  000000014015C51B  mov     [rsp+340h+var_308], r10d
+  000000014015C520  mov     eax, r9d
+  000000014015C523  rol     eax, 5
+  000000014015C526  add     eax, r10d
+  000000014015C529  rol     r8d, 1Eh
+  000000014015C52D  lea     r10d, [r11+5A827999h]
+  000000014015C534  add     ecx, eax
+  000000014015C536  mov     r11d, [rbp+240h+var_2A4]
+  000000014015C53A  add     r10d, ecx
+  000000014015C53D  xor     r11d, r13d
+  000000014015C540  xor     r11d, r15d
+  000000014015C543  xor     r11d, [rsp+340h+var_318]
+  000000014015C548  mov     eax, r10d
+  000000014015C54B  mov     r15d, [rbp+240h+var_2A0]
+  000000014015C54F  mov     ecx, r8d
+  000000014015C552  mov     r14d, [rbp+240h+var_298]
+  000000014015C556  xor     ecx, ebx
+  000000014015C558  xor     r14d, [rbp+240h+var_2B0]
+  000000014015C55C  jmp     loc_14015C6C5
+  000000014015C561  db 0E8h, 0DBh, 0D9h, 0FCh, 0FFh, 0Fh, 8Eh
+  000000014015C568  dq 0F5A80FE8FFFFCFB6h, 48FFFCD378820FFFh, 800F00000438C481h
+  000000014015C6C0  db 0E9h, 4Dh, 0A9h, 0FDh, 0FFh
+  000000014015C6C5  and     ecx, r9d
+  000000014015C6C8  xor     r14d, [rbp+240h+var_2B8]
+  000000014015C6CC  xor     ecx, ebx
+  000000014015C6CE  rol     eax, 5
+  000000014015C6D1  mov     edi, r15d
+  000000014015C6D4  xor     edi, [rbp+240h+var_2B8]
+  000000014015C6D7  add     eax, 5A827999h
+  000000014015C6DC  rol     r11d, 1
+  000000014015C6DF  xor     edi, r12d
+  000000014015C6E2  xor     edi, [rsp+340h+var_314]
+  000000014015C6E6  add     eax, r11d
+  000000014015C6E9  add     ecx, eax
+  000000014015C6EB  mov     r12d, [rbp+240h+var_29C]
+  000000014015C6EF  add     edx, ecx
+  000000014015C6F1  mov     [rsp+340h+var_320], r11d
+  000000014015C6F6  xor     r14d, r11d
+  000000014015C6F9  rol     r9d, 1Eh
+  000000014015C6FD  mov     r11d, [rbp+240h+var_294]
+  000000014015C701  mov     ecx, r10d
+  000000014015C704  xor     r11d, [rbp+240h+var_2AC]
+  000000014015C708  xor     ecx, r9d
+  000000014015C70B  xor     r11d, [rbp+240h+var_2B4]
+  000000014015C70F  xor     ecx, r8d
+  000000014015C712  rol     edi, 1
+  000000014015C714  mov     eax, edx
+  000000014015C716  rol     eax, 5
+  000000014015C719  xor     r11d, edi
+  000000014015C71C  add     eax, 6ED9EBA1h
+  000000014015C721  rol     r10d, 1Eh
+  000000014015C725  add     eax, edi
+  000000014015C727  rol     r11d, 1
+  000000014015C72A  add     ecx, eax
+  000000014015C72C  mov     [rsp+340h+var_304], r11d
+  000000014015C731  add     ebx, ecx
+  000000014015C733  rol     r14d, 1
+  000000014015C736  add     r11d, 6ED9EBA1h
+  000000014015C73D  mov     eax, ebx
+  000000014015C73F  rol     eax, 5
+  000000014015C742  mov     ecx, edx
+  000000014015C744  xor     ecx, r10d
+  000000014015C747  rol     edx, 1Eh
+  000000014015C74A  xor     ecx, r9d
+  000000014015C74D  add     eax, 6ED9EBA1h
+  000000014015C752  mov     esi, r12d
+  000000014015C755  xor     esi, [rbp+240h+var_2B4]
+  000000014015C758  xor     esi, r13d
+  000000014015C75B  mov     r13d, edi
+  000000014015C75E  xor     esi, [rsp+340h+var_308]
+  000000014015C762  rol     esi, 1
+  000000014015C764  add     eax, esi
+  000000014015C766  jmp     loc_14015C8F6
+  000000014015C76B  db 74h, 48h, 3Dh, 75h, 0FBh
+  000000014015C770  dq 7A709620488D48C4h, 74EBA028705A8D8Ch, 6A7D0577BC578B75h
+  000000014015C8F0  db 0Fh, 89h, 0DEh, 9Ah, 0FDh, 0FFh
+  000000014015C8F6  mov     [rsp+340h+var_2FC], esi
+  000000014015C8FA  add     ecx, eax
+  000000014015C8FC  add     r8d, ecx
+  000000014015C8FF  mov     ecx, ebx
+  000000014015C901  xor     ecx, edx
+  000000014015C903  rol     ebx, 1Eh
+  000000014015C906  xor     ecx, r10d
+  000000014015C909  mov     eax, r8d
+  000000014015C90C  rol     eax, 5
+  000000014015C90F  add     eax, 6ED9EBA1h
+  000000014015C914  add     eax, r14d
+  000000014015C917  add     ecx, eax
+  000000014015C919  add     r9d, ecx
+  000000014015C91C  mov     ecx, r8d
+  000000014015C91F  xor     ecx, ebx
+  000000014015C921  rol     r8d, 1Eh
+  000000014015C925  xor     ecx, edx
+  000000014015C927  mov     eax, r9d
+  000000014015C92A  rol     eax, 5
+  000000014015C92D  add     eax, r11d
+  000000014015C930  mov     r11d, [rbp+240h+var_2A8]
+  000000014015C934  add     ecx, eax
+  000000014015C936  add     r10d, ecx
+  000000014015C939  xor     r11d, [rbp+240h+var_2B0]
+  000000014015C93D  xor     r11d, esi
+  000000014015C940  mov     ecx, r9d
+  000000014015C943  xor     r11d, [rsp+340h+var_318]
+  000000014015C948  xor     ecx, r8d
+  000000014015C94B  mov     esi, [rbp+240h+var_298]
+  000000014015C94E  xor     ecx, ebx
+  000000014015C950  rol     r11d, 1
+  000000014015C953  xor     esi, r15d
+  000000014015C956  rol     r9d, 1Eh
+  000000014015C95A  mov     eax, r10d
+  000000014015C95D  rol     eax, 5
+  000000014015C960  add     eax, r11d
+  000000014015C963  mov     [rsp+340h+var_2F0], r11d
+  000000014015C968  add     ecx, eax
+  000000014015C96A  lea     r11d, [rdx+6ED9EBA1h]
+  000000014015C971  mov     edx, [rbp+240h+var_2A4]
+  000000014015C974  add     r11d, ecx
+  000000014015C977  xor     edx, [rbp+240h+var_2AC]
+  000000014015C97A  mov     eax, r11d
+  000000014015C97D  rol     eax, 5
+  000000014015C980  xor     edx, r14d
+  000000014015C983  xor     edx, [rsp+340h+var_314]
+  000000014015C987  mov     ecx, r10d
+  000000014015C98A  xor     ecx, r9d
+  000000014015C98D  rol     edx, 1
+  000000014015C98F  xor     ecx, r8d
+  000000014015C992  jmp     short loc_14015C9F1
+  000000014015C994  dd 43DC7802h
+  000000014015C998  dq 0FF3206E89AE75251h, 7BFFFF8E6F810FFFh, 718E5C777EFF7FAEh
+  000000014015C9F0  db 0FFh
+  000000014015C9F1  mov     [rsp+340h+var_31C], edx
+  000000014015C9F5  xor     esi, [rsp+340h+var_31C]
+  000000014015C9F9  add     eax, edx
+  000000014015C9FB  add     ecx, eax
+  000000014015C9FD  rol     r10d, 1Eh
+  000000014015CA01  lea     edx, [rbx+6ED9EBA1h]
+  000000014015CA07  xor     esi, edi
+  000000014015CA09  add     edx, ecx
+  000000014015CA0B  rol     esi, 1
+  000000014015CA0D  mov     ebx, r15d
+  000000014015CA10  mov     [rsp+340h+var_2F8], esi
+  000000014015CA14  xor     ebx, [rbp+240h+var_2A8]
+  000000014015CA17  mov     eax, edx
+  000000014015CA19  xor     ebx, [rsp+340h+var_304]
+  000000014015CA1D  mov     ecx, r11d
+  000000014015CA20  xor     ebx, [rsp+340h+var_308]
+  000000014015CA24  xor     ecx, r10d
+  000000014015CA27  mov     r15d, [rbp+240h+var_294]
+  000000014015CA2B  xor     ecx, r9d
+  000000014015CA2E  rol     eax, 5
+  000000014015CA31  xor     r15d, r12d
+  000000014015CA34  rol     ebx, 1
+  000000014015CA36  add     eax, ebx
+  000000014015CA38  mov     [rsp+340h+var_310], ebx
+  000000014015CA3C  add     ecx, eax
+  000000014015CA3E  rol     r11d, 1Eh
+  000000014015CA42  lea     ebx, [r8+6ED9EBA1h]
+  000000014015CA49  mov     r8d, r12d
+  000000014015CA4C  xor     r8d, [rbp+240h+var_2A4]
+  000000014015CA50  add     ebx, ecx
+  000000014015CA52  xor     r8d, [rsp+340h+var_2F0]
+  000000014015CA57  mov     eax, ebx
+  000000014015CA59  xor     r8d, [rsp+340h+var_320]
+  000000014015CA5E  mov     ecx, edx
+  000000014015CA60  xor     ecx, r11d
+  000000014015CA63  rol     r8d, 1
+  000000014015CA66  xor     ecx, r10d
+  000000014015CA69  rol     eax, 5
+  000000014015CA6C  add     eax, r8d
+  000000014015CA6F  mov     [rsp+340h+var_300], r8d
+  000000014015CA74  add     ecx, eax
+  000000014015CA76  rol     edx, 1Eh
+  000000014015CA79  lea     r8d, [r9+6ED9EBA1h]
+  000000014015CA80  add     r8d, ecx
+  000000014015CA83  lea     r9d, [r10+6ED9EBA1h]
+  000000014015CA8A  mov     ecx, ebx
+  000000014015CA8C  mov     eax, r8d
+  000000014015CA8F  xor     ecx, edx
+  000000014015CA91  rol     eax, 5
+  000000014015CA94  add     eax, esi
+  000000014015CA96  jmp     loc_14015CBF9
+  000000014015CA9B  db 0F3h, 7Eh, 0C0h, 0E8h, 0A2h
+  000000014015CAA0  dq 0E9788B8B56FFC77Eh, 0F3C687E8FFFE05FDh, 48FFFE9370870FFFh
+  000000014015CBF8  db 0FFh
+  000000014015CBF9  rol     ebx, 1Eh
+  000000014015CBFC  xor     ecx, r11d
+  000000014015CBFF  add     ecx, eax
+  000000014015CC01  add     r9d, ecx
+  000000014015CC04  xor     r15d, [rsp+340h+var_310]
+  000000014015CC09  mov     edi, [rsp+340h+var_2FC]
+  000000014015CC0D  lea     r10d, [r11+6ED9EBA1h]
+  000000014015CC14  mov     r11d, [rbp+240h+var_298]
+  000000014015CC18  mov     ecx, r8d
+  000000014015CC1B  xor     r11d, [rsp+340h+var_300]
+  000000014015CC20  xor     ecx, ebx
+  000000014015CC22  mov     r12d, [rsp+340h+var_320]
+  000000014015CC27  xor     ecx, edx
+  000000014015CC29  rol     r8d, 1Eh
+  000000014015CC2D  xor     r11d, r14d
+  000000014015CC30  xor     r11d, [rsp+340h+var_318]
+  000000014015CC35  xor     r15d, edi
+  000000014015CC38  rol     r11d, 1
+  000000014015CC3B  mov     eax, r9d
+  000000014015CC3E  rol     eax, 5
+  000000014015CC41  rol     r15d, 1
+  000000014015CC44  add     eax, r15d
+  000000014015CC47  mov     [rsp+340h+var_30C], r11d
+  000000014015CC4C  add     ecx, eax
+  000000014015CC4E  mov     [rsp+340h+var_2E8], r15d
+  000000014015CC53  add     r10d, ecx
+  000000014015CC56  mov     ecx, r9d
+  000000014015CC59  xor     ecx, r8d
+  000000014015CC5C  rol     r9d, 1Eh
+  000000014015CC60  xor     ecx, ebx
+  000000014015CC62  mov     eax, r10d
+  000000014015CC65  rol     eax, 5
+  000000014015CC68  add     eax, r11d
+  000000014015CC6B  lea     r11d, [rdx+6ED9EBA1h]
+  000000014015CC72  mov     edx, [rbp+240h+var_294]
+  000000014015CC75  add     ecx, eax
+  000000014015CC77  add     r11d, ecx
+  000000014015CC7A  xor     edx, esi
+  000000014015CC7C  mov     esi, [rsp+340h+var_304]
+  000000014015CC80  mov     eax, r11d
+  000000014015CC83  rol     eax, 5
+  000000014015CC86  xor     edx, esi
+  000000014015CC88  xor     edx, [rsp+340h+var_314]
+  000000014015CC8C  mov     ecx, r10d
+  000000014015CC8F  xor     ecx, r9d
+  000000014015CC92  rol     edx, 1
+  000000014015CC94  xor     ecx, r8d
+  000000014015CC97  mov     [rsp+340h+var_304], edx
+  000000014015CC9B  add     eax, edx
+  000000014015CC9D  rol     r10d, 1Eh
+  000000014015CCA1  jmp     loc_14015CDED
+  000000014015CCA6  dw 1270h
+  000000014015CCA8  dq 7956BFAAC32BD309h, 79346E5155560644h, 5EAE907ADAE81720h
+  000000014015CDE8  add     al, 0FFh
+  000000014015CDEA  dec     dword ptr [rdx-75h]
+  000000014015CDED  add     ecx, eax
+  000000014015CDEF  lea     edx, [rbx+6ED9EBA1h]
+  000000014015CDF5  add     edx, ecx
+  000000014015CDF7  mov     ebx, r15d
+  000000014015CDFA  mov     r15d, [rsp+340h+var_2F0]
+  000000014015CDFF  mov     eax, edx
+  000000014015CE01  xor     ebx, r15d
+  000000014015CE04  rol     eax, 5
+  000000014015CE07  xor     ebx, [rsp+340h+var_308]
+  000000014015CE0B  mov     ecx, r11d
+  000000014015CE0E  xor     ebx, [rsp+340h+var_318]
+  000000014015CE12  xor     ecx, r10d
+  000000014015CE15  xor     ecx, r9d
+  000000014015CE18  rol     ebx, 1
+  000000014015CE1A  add     eax, ebx
+  000000014015CE1C  mov     [rsp+340h+var_318], ebx
+  000000014015CE20  add     ecx, eax
+  000000014015CE22  rol     r11d, 1Eh
+  000000014015CE26  lea     ebx, [r8+6ED9EBA1h]
+  000000014015CE2D  mov     r8d, [rsp+340h+var_30C]
+  000000014015CE32  xor     r8d, [rsp+340h+var_31C]
+  000000014015CE37  add     ebx, ecx
+  000000014015CE39  xor     r8d, r12d
+  000000014015CE3C  mov     ecx, edx
+  000000014015CE3E  xor     r8d, [rsp+340h+var_314]
+  000000014015CE43  xor     ecx, r11d
+  000000014015CE46  rol     r8d, 1
+  000000014015CE49  xor     ecx, r10d
+  000000014015CE4C  mov     [rsp+340h+var_2FC], r8d
+  000000014015CE51  mov     eax, ebx
+  000000014015CE53  rol     eax, 5
+  000000014015CE56  add     eax, r8d
+  000000014015CE59  lea     r8d, [r9+6ED9EBA1h]
+  000000014015CE60  add     ecx, eax
+  000000014015CE62  add     r8d, ecx
+  000000014015CE65  rol     edx, 1Eh
+  000000014015CE68  mov     r9d, [rsp+340h+var_304]
+  000000014015CE6D  mov     eax, r8d
+  000000014015CE70  xor     r9d, [rsp+340h+var_310]
+  000000014015CE75  mov     ecx, ebx
+  000000014015CE77  xor     ecx, edx
+  000000014015CE79  rol     eax, 5
+  000000014015CE7C  xor     ecx, r11d
+  000000014015CE7F  rol     ebx, 1Eh
+  000000014015CE82  xor     r9d, r13d
+  000000014015CE85  xor     r9d, [rsp+340h+var_308]
+  000000014015CE8A  rol     r9d, 1
+  000000014015CE8D  add     eax, r9d
+  000000014015CE90  mov     [rsp+340h+var_320], r9d
+  000000014015CE95  add     ecx, eax
+  000000014015CE97  jmp     loc_14015CFF2
+  000000014015CE9C  dd 0A97FCF58h
+  000000014015CEA0  dq 8F0FFFF4F21EE84Ah, 0FC48B49FFFD64BCh, 0E43345FFFFDDF782h
+  000000014015CFF0  db 0FEh, 0FFh
+  000000014015CFF2  lea     r9d, [r10+6ED9EBA1h]
+  000000014015CFF9  mov     r10d, [rsp+340h+var_318]
+  000000014015CFFE  add     r9d, ecx
+  000000014015D001  xor     r10d, [rsp+340h+var_300]
+  000000014015D006  mov     ecx, r8d
+  000000014015D009  xor     ecx, ebx
+  000000014015D00B  rol     r8d, 1Eh
+  000000014015D00F  xor     ecx, edx
+  000000014015D011  xor     r10d, edi
+  000000014015D014  xor     r10d, r12d
+  000000014015D017  mov     eax, r9d
+  000000014015D01A  mov     r12d, [rsp+340h+var_2F8]
+  000000014015D01F  rol     eax, 5
+  000000014015D022  rol     r10d, 1
+  000000014015D025  add     eax, r10d
+  000000014015D028  mov     [rsp+340h+var_2EC], r10d
+  000000014015D02D  add     ecx, eax
+  000000014015D02F  lea     r10d, [r11+6ED9EBA1h]
+  000000014015D036  mov     r11d, [rsp+340h+var_2FC]
+  000000014015D03B  add     r10d, ecx
+  000000014015D03E  xor     r11d, r12d
+  000000014015D041  mov     eax, r10d
+  000000014015D044  rol     eax, 5
+  000000014015D047  xor     r11d, r14d
+  000000014015D04A  xor     r11d, r13d
+  000000014015D04D  mov     ecx, r9d
+  000000014015D050  mov     r13d, [rsp+340h+var_2E8]
+  000000014015D055  xor     ecx, r8d
+  000000014015D058  xor     ecx, ebx
+  000000014015D05A  rol     r11d, 1
+  000000014015D05D  add     eax, r11d
+  000000014015D060  rol     r9d, 1Eh
+  000000014015D064  add     ecx, eax
+  000000014015D066  mov     [rsp+340h+var_2DC], r11d
+  000000014015D06B  lea     r11d, [rdx+6ED9EBA1h]
+  000000014015D072  mov     edx, [rsp+340h+var_320]
+  000000014015D076  add     r11d, ecx
+  000000014015D079  xor     edx, r13d
+  000000014015D07C  xor     edx, esi
+  000000014015D07E  mov     ecx, r10d
+  000000014015D081  xor     edx, edi
+  000000014015D083  rol     r10d, 1Eh
+  000000014015D087  mov     edi, [rsp+340h+var_2EC]
+  000000014015D08B  xor     ecx, r9d
+  000000014015D08E  xor     edi, [rsp+340h+var_30C]
+  000000014015D092  xor     ecx, r8d
+  000000014015D095  xor     edi, r15d
+  000000014015D098  rol     edx, 1
+  000000014015D09A  xor     edi, r14d
+  000000014015D09D  mov     [rsp+340h+var_2F4], edx
+  000000014015D0A1  jmp     short loc_14015D119
+  000000014015D0A3  db 0E8h, 0, 8Eh, 0F5h, 0FFh
+  000000014015D0A8  dq 415DFFFF9D1D880Fh, 67E8FFFDCD0CE95Fh, 0FE68EC840FFFF3DFh
+  000000014015D118  db 0FFh
+  000000014015D119  rol     edi, 1
+  000000014015D11B  mov     eax, r11d
+  000000014015D11E  rol     eax, 5
+  000000014015D121  add     eax, 6ED9EBA1h
+  000000014015D126  mov     [rsp+340h+var_2E0], edi
+  000000014015D12A  add     eax, edx
+  000000014015D12C  add     edi, 6ED9EBA1h
+  000000014015D132  add     ecx, eax
+  000000014015D134  add     ebx, ecx
+  000000014015D136  mov     ecx, r11d
+  000000014015D139  xor     ecx, r10d
+  000000014015D13C  mov     eax, ebx
+  000000014015D13E  rol     eax, 5
+  000000014015D141  xor     ecx, r9d
+  000000014015D144  add     eax, edi
+  000000014015D146  add     ecx, eax
+  000000014015D148  add     r8d, ecx
+  000000014015D14B  mov     edi, [rsp+340h+var_31C]
+  000000014015D14F  mov     ecx, ebx
+  000000014015D151  mov     r14d, [rsp+340h+var_2DC]
+  000000014015D156  mov     eax, r8d
+  000000014015D159  xor     r14d, [rsp+340h+var_304]
+  000000014015D15E  rol     eax, 5
+  000000014015D161  xor     r14d, edi
+  000000014015D164  xor     r14d, esi
+  000000014015D167  rol     ebx, 1Eh
+  000000014015D16A  rol     r14d, 1
+  000000014015D16D  mov     [rsp+340h+var_314], r14d
+  000000014015D172  add     r14d, 6ED9EBA1h
+  000000014015D179  add     eax, r14d
+  000000014015D17C  rol     r11d, 1Eh
+  000000014015D180  xor     ecx, r11d
+  000000014015D183  mov     r14d, edx
+  000000014015D186  xor     r14d, [rsp+340h+var_318]
+  000000014015D18B  xor     ecx, r10d
+  000000014015D18E  add     ecx, eax
+  000000014015D190  xor     r14d, [rsp+340h+var_310]
+  000000014015D195  add     r9d, ecx
+  000000014015D198  mov     eax, ebx
+  000000014015D19A  and     eax, r11d
+  000000014015D19D  mov     ecx, ebx
+  000000014015D19F  or      ecx, r11d
+  000000014015D1A2  xor     r14d, r15d
+  000000014015D1A5  mov     r15d, [rsp+340h+var_2FC]
+  000000014015D1AA  and     ecx, r8d
+  000000014015D1AD  or      ecx, eax
+  000000014015D1AF  rol     r8d, 1Eh
+  000000014015D1B3  mov     eax, [rsp+340h+var_2E0]
+  000000014015D1B7  add     ecx, 8F1BBCDCh
+  000000014015D1BD  xor     eax, r15d
+  000000014015D1C0  jmp     short loc_14015D22E
+  000000014015D1C2  dw 1E8h, 0F5A9h, 0FFFh
+  000000014015D1C8  dq 415F41FFFD9B6B84h, 8DE8FFFEE8B5E95Ch, 0FFFD493BE8FFF3BFh
+  000000014015D228  db 0Fh, 80h, 0F0h, 0C2h, 0FCh, 0FFh
+  000000014015D22E  rol     r14d, 1
+  000000014015D231  xor     eax, [rsp+340h+var_300]
+  000000014015D235  add     ecx, r14d
+  000000014015D238  xor     eax, edi
+  000000014015D23A  mov     [rsp+340h+var_31C], r14d
+  000000014015D23F  rol     eax, 1
+  000000014015D241  mov     edx, r9d
+  000000014015D244  mov     [rsp+340h+var_308], eax
+  000000014015D248  mov     eax, r8d
+  000000014015D24B  mov     edi, [rsp+340h+var_308]
+  000000014015D24F  and     eax, ebx
+  000000014015D251  rol     edx, 5
+  000000014015D254  add     r10d, edx
+  000000014015D257  add     r10d, ecx
+  000000014015D25A  mov     ecx, r8d
+  000000014015D25D  or      ecx, ebx
+  000000014015D25F  mov     edx, r10d
+  000000014015D262  and     ecx, r9d
+  000000014015D265  rol     edx, 5
+  000000014015D268  or      ecx, eax
+  000000014015D26A  rol     r9d, 1Eh
+  000000014015D26E  mov     eax, [rsp+340h+var_314]
+  000000014015D272  add     ecx, 8F1BBCDCh
+  000000014015D278  xor     eax, [rsp+340h+var_320]
+  000000014015D27C  add     ecx, edi
+  000000014015D27E  xor     eax, r12d
+  000000014015D281  add     r11d, edx
+  000000014015D284  xor     eax, [rsp+340h+var_310]
+  000000014015D288  add     r11d, ecx
+  000000014015D28B  rol     eax, 1
+  000000014015D28D  mov     ecx, r9d
+  000000014015D290  mov     [rsp+340h+var_2F0], eax
+  000000014015D294  or      ecx, r8d
+  000000014015D297  and     ecx, r10d
+  000000014015D29A  mov     eax, r9d
+  000000014015D29D  and     eax, r8d
+  000000014015D2A0  rol     r10d, 1Eh
+  000000014015D2A4  or      ecx, eax
+  000000014015D2A6  mov     edx, r11d
+  000000014015D2A9  add     ecx, 8F1BBCDCh
+  000000014015D2AF  rol     edx, 5
+  000000014015D2B2  add     ecx, [rsp+340h+var_2F0]
+  000000014015D2B6  add     ebx, edx
+  000000014015D2B8  mov     eax, r14d
+  000000014015D2BB  add     ebx, ecx
+  000000014015D2BD  xor     eax, [rsp+340h+var_2EC]
+  000000014015D2C1  xor     eax, r13d
+  000000014015D2C4  xor     eax, [rsp+340h+var_300]
+  000000014015D2C8  xor     edi, [rsp+340h+var_2DC]
+  000000014015D2CC  mov     ecx, r10d
+  000000014015D2CF  jmp     loc_14015D355
+  000000014015D2D4  dd 0F3BEAFE8h
+  000000014015D2D8  dq 870FFFFD8E6BE8FFh, 5D415F41FFFDA595h, 5E41FFFF4CBDE95Dh
+  000000014015D350  mov     esi, 0AB797751h
+  000000014015D355  xor     edi, [rsp+340h+var_30C]
+  000000014015D359  or      ecx, r9d
+  000000014015D35C  and     ecx, r11d
+  000000014015D35F  rol     eax, 1
+  000000014015D361  xor     edi, r12d
+  000000014015D364  mov     [rsp+340h+var_2F8], eax
+  000000014015D368  mov     r12d, [rsp+340h+var_2F8]
+  000000014015D36D  mov     eax, r10d
+  000000014015D370  xor     r12d, [rsp+340h+var_2E0]
+  000000014015D375  and     eax, r9d
+  000000014015D378  or      ecx, eax
+  000000014015D37A  rol     edi, 1
+  000000014015D37C  add     ecx, 8F1BBCDCh
+  000000014015D382  mov     [rsp+340h+var_2E8], edi
+  000000014015D386  add     ecx, [rsp+340h+var_2F8]
+  000000014015D38A  add     edi, 8F1BBCDCh
+  000000014015D390  mov     esi, [rsp+340h+var_2E8]
+  000000014015D394  mov     edx, ebx
+  000000014015D396  xor     esi, [rsp+340h+var_314]
+  000000014015D39A  rol     edx, 5
+  000000014015D39D  xor     esi, r15d
+  000000014015D3A0  xor     esi, [rsp+340h+var_304]
+  000000014015D3A4  add     r8d, edx
+  000000014015D3A7  add     r8d, ecx
+  000000014015D3AA  rol     r11d, 1Eh
+  000000014015D3AE  mov     ecx, r11d
+  000000014015D3B1  rol     esi, 1
+  000000014015D3B3  or      ecx, r10d
+  000000014015D3B6  mov     eax, r11d
+  000000014015D3B9  and     ecx, ebx
+  000000014015D3BB  and     eax, r10d
+  000000014015D3BE  or      ecx, eax
+  000000014015D3C0  rol     ebx, 1Eh
+  000000014015D3C3  add     ecx, edi
+  000000014015D3C5  mov     edx, r8d
+  000000014015D3C8  mov     edi, [rsp+340h+var_2F0]
+  000000014015D3CC  mov     eax, ebx
+  000000014015D3CE  xor     edi, [rsp+340h+var_2F4]
+  000000014015D3D2  and     eax, r11d
+  000000014015D3D5  xor     edi, [rsp+340h+var_304]
+  000000014015D3D9  rol     edx, 5
+  000000014015D3DC  xor     edi, r13d
+  000000014015D3DF  add     r9d, edx
+  000000014015D3E2  rol     edi, 1
+  000000014015D3E4  add     r9d, ecx
+  000000014015D3E7  mov     [rsp+340h+var_310], edi
+  000000014015D3EB  add     edi, 8F1BBCDCh
+  000000014015D3F1  mov     edx, r9d
+  000000014015D3F4  rol     edx, 5
+  000000014015D3F7  mov     ecx, ebx
+  000000014015D3F9  jmp     loc_14015D5BF
+  000000014015D3FE  dw 25E8h
+  000000014015D400  dq 0FFFF5B37E8FFF3BCh, 8148FFFCE471890Fh, 99830F00000228C4h
+  000000014015D5B8  db 0FFh, 0Fh, 88h, 0B6h, 0D7h, 0FEh, 0FFh
+  000000014015D5BF  or      ecx, r11d
+  000000014015D5C2  add     r10d, edx
+  000000014015D5C5  and     ecx, r8d
+  000000014015D5C8  rol     r8d, 1Eh
+  000000014015D5CC  or      ecx, eax
+  000000014015D5CE  mov     eax, r8d
+  000000014015D5D1  add     ecx, edi
+  000000014015D5D3  and     eax, ebx
+  000000014015D5D5  mov     edi, [rsp+340h+var_318]
+  000000014015D5D9  add     r10d, ecx
+  000000014015D5DC  xor     r12d, edi
+  000000014015D5DF  mov     ecx, r8d
+  000000014015D5E2  xor     r12d, [rsp+340h+var_30C]
+  000000014015D5E7  or      ecx, ebx
+  000000014015D5E9  and     ecx, r9d
+  000000014015D5EC  rol     r12d, 1
+  000000014015D5EF  or      ecx, eax
+  000000014015D5F1  rol     r9d, 1Eh
+  000000014015D5F5  add     ecx, 8F1BBCDCh
+  000000014015D5FB  mov     [rsp+340h+var_318], r12d
+  000000014015D600  add     ecx, r12d
+  000000014015D603  mov     [rsp+340h+var_30C], esi
+  000000014015D607  mov     edx, r10d
+  000000014015D60A  rol     edx, 5
+  000000014015D60D  add     r11d, edx
+  000000014015D610  add     r11d, ecx
+  000000014015D613  mov     ecx, r9d
+  000000014015D616  mov     edx, r11d
+  000000014015D619  rol     edx, 5
+  000000014015D61C  xor     r12d, [rsp+340h+var_308]
+  000000014015D621  or      ecx, r8d
+  000000014015D624  xor     r12d, [rsp+340h+var_2EC]
+  000000014015D629  and     ecx, r10d
+  000000014015D62C  mov     r13d, [rsp+340h+var_310]
+  000000014015D631  add     ebx, edx
+  000000014015D633  xor     r13d, r14d
+  000000014015D636  rol     r10d, 1Eh
+  000000014015D63A  xor     r12d, r15d
+  000000014015D63D  mov     eax, r9d
+  000000014015D640  mov     r15d, [rsp+340h+var_30C]
+  000000014015D645  and     eax, r8d
+  000000014015D648  xor     r15d, [rsp+340h+var_2F0]
+  000000014015D64D  or      ecx, eax
+  000000014015D64F  xor     r15d, [rsp+340h+var_2DC]
+  000000014015D654  add     esi, 8F1BBCDCh
+  000000014015D65A  add     ecx, esi
+  000000014015D65C  rol     r12d, 1
+  000000014015D65F  mov     esi, [rsp+340h+var_320]
+  000000014015D663  add     ebx, ecx
+  000000014015D665  mov     ecx, r10d
+  000000014015D668  jmp     loc_14015D7CB
+  000000014015D66D  db 41h, 5Dh, 0E9h
+  000000014015D670  dq 8E0F5241FFFE73B7h, 0AC67D87DFFFD87E3h, 853A7C4F244C75F4h
+  000000014015D7C8  db 1Ah, 0FEh, 0FFh
+  000000014015D7CB  mov     [rsp+340h+var_320], r12d
+  000000014015D7D0  or      ecx, r9d
+  000000014015D7D3  mov     eax, r10d
+  000000014015D7D6  and     ecx, r11d
+  000000014015D7D9  and     eax, r9d
+  000000014015D7DC  or      ecx, eax
+  000000014015D7DE  rol     r11d, 1Eh
+  000000014015D7E2  add     ecx, 8F1BBCDCh
+  000000014015D7E8  xor     r13d, esi
+  000000014015D7EB  xor     r13d, edi
+  000000014015D7EE  mov     edx, ebx
+  000000014015D7F0  rol     edx, 5
+  000000014015D7F3  xor     r15d, esi
+  000000014015D7F6  add     r8d, edx
+  000000014015D7F9  rol     r13d, 1
+  000000014015D7FC  add     ecx, r13d
+  000000014015D7FF  rol     r15d, 1
+  000000014015D802  add     r8d, ecx
+  000000014015D805  mov     [rsp+340h+var_2FC], r13d
+  000000014015D80A  mov     edx, r8d
+  000000014015D80D  mov     [rsp+340h+var_300], r15d
+  000000014015D812  rol     edx, 5
+  000000014015D815  mov     ecx, r11d
+  000000014015D818  or      ecx, r10d
+  000000014015D81B  add     r9d, edx
+  000000014015D81E  and     ecx, ebx
+  000000014015D820  mov     eax, r11d
+  000000014015D823  and     eax, r10d
+  000000014015D826  rol     ebx, 1Eh
+  000000014015D829  or      ecx, eax
+  000000014015D82B  mov     r14d, r13d
+  000000014015D82E  xor     r14d, [rsp+340h+var_2F8]
+  000000014015D833  add     ecx, 8F1BBCDCh
+  000000014015D839  xor     r14d, [rsp+340h+var_2F4]
+  000000014015D83E  add     ecx, r12d
+  000000014015D841  xor     r14d, [rsp+340h+var_2EC]
+  000000014015D846  add     r9d, ecx
+  000000014015D849  rol     r14d, 1
+  000000014015D84C  mov     ecx, ebx
+  000000014015D84E  or      ecx, r11d
+  000000014015D851  mov     [rsp+340h+var_304], r14d
+  000000014015D856  and     ecx, r8d
+  000000014015D859  mov     eax, ebx
+  000000014015D85B  and     eax, r11d
+  000000014015D85E  rol     r8d, 1Eh
+  000000014015D862  or      ecx, eax
+  000000014015D864  mov     edx, r9d
+  000000014015D867  add     ecx, 8F1BBCDCh
+  000000014015D86D  rol     edx, 5
+  000000014015D870  add     ecx, r15d
+  000000014015D873  jmp     loc_14015DADB
+  000000014015D878  dq 0F8890FFFF3B88BE8h, 2850757759FFFF13h, 8B765A75D38BEA3Dh
+  000000014015DAD8  db 4Dh, 0FDh, 0FFh
+  000000014015DADB  add     r10d, edx
+  000000014015DADE  add     r10d, ecx
+  000000014015DAE1  mov     eax, r8d
+  000000014015DAE4  mov     ecx, r8d
+  000000014015DAE7  mov     edi, r10d
+  000000014015DAEA  or      ecx, ebx
+  000000014015DAEC  rol     edi, 5
+  000000014015DAEF  and     ecx, r9d
+  000000014015DAF2  and     eax, ebx
+  000000014015DAF4  or      ecx, eax
+  000000014015DAF6  mov     r13d, [rsp+340h+var_2E0]
+  000000014015DAFB  add     ecx, 8F1BBCDCh
+  000000014015DB01  add     ecx, r14d
+  000000014015DB04  rol     r9d, 1Eh
+  000000014015DB08  add     edi, r11d
+  000000014015DB0B  mov     eax, r9d
+  000000014015DB0E  add     edi, ecx
+  000000014015DB10  and     eax, r8d
+  000000014015DB13  mov     ecx, r9d
+  000000014015DB16  mov     r11d, r12d
+  000000014015DB19  xor     r11d, [rsp+340h+var_2E8]
+  000000014015DB1E  or      ecx, r8d
+  000000014015DB21  and     ecx, r10d
+  000000014015DB24  xor     r11d, r13d
+  000000014015DB27  xor     r11d, [rsp+340h+var_2DC]
+  000000014015DB2C  or      ecx, eax
+  000000014015DB2E  add     ecx, 8F1BBCDCh
+  000000014015DB34  rol     r11d, 1
+  000000014015DB37  add     ecx, r11d
+  000000014015DB3A  rol     r10d, 1Eh
+  000000014015DB3E  mov     r12d, r15d
+  000000014015DB41  mov     [rsp+340h+var_2EC], r11d
+  000000014015DB46  xor     r12d, [rsp+340h+var_310]
+  000000014015DB4B  mov     r15d, r14d
+  000000014015DB4E  xor     r12d, [rsp+340h+var_314]
+  000000014015DB53  mov     edx, edi
+  000000014015DB55  xor     r15d, [rsp+340h+var_318]
+  000000014015DB5A  mov     eax, r10d
+  000000014015DB5D  xor     r12d, [rsp+340h+var_2F4]
+  000000014015DB62  and     eax, r9d
+  000000014015DB65  rol     r12d, 1
+  000000014015DB68  rol     edx, 5
+  000000014015DB6B  add     ebx, edx
+  000000014015DB6D  mov     [rsp+340h+var_2E0], r12d
+  000000014015DB72  add     ebx, ecx
+  000000014015DB74  mov     ecx, r10d
+  000000014015DB77  or      ecx, r9d
+  000000014015DB7A  mov     esi, ebx
+  000000014015DB7C  and     ecx, edi
+  000000014015DB7E  rol     esi, 5
+  000000014015DB81  jmp     loc_14015DCC7
+  000000014015DB86  dw 0BDE8h
+  000000014015DB88  dq 0FE0E65870FFFF57Ch, 0FFF28D1CDF8193FFh, 7E8D55DB1169065Ch
+  000000014015DCC0  db 0FFh, 0Fh, 8Bh, 76h, 6Ch, 0FEh, 0FFh
+  000000014015DCC7  or      ecx, eax
+  000000014015DCC9  rol     edi, 1Eh
+  000000014015DCCC  add     ecx, 8F1BBCDCh
+  000000014015DCD2  add     esi, r8d
+  000000014015DCD5  mov     r8d, [rsp+340h+var_31C]
+  000000014015DCDA  add     ecx, r12d
+  000000014015DCDD  add     esi, ecx
+  000000014015DCDF  xor     r15d, r8d
+  000000014015DCE2  xor     r15d, r13d
+  000000014015DCE5  mov     ecx, edi
+  000000014015DCE7  or      ecx, r10d
+  000000014015DCEA  rol     r15d, 1
+  000000014015DCED  and     ecx, ebx
+  000000014015DCEF  mov     [rsp+340h+var_31C], r15d
+  000000014015DCF4  rol     ebx, 1Eh
+  000000014015DCF7  mov     eax, edi
+  000000014015DCF9  and     eax, r10d
+  000000014015DCFC  mov     r14d, esi
+  000000014015DCFF  or      ecx, eax
+  000000014015DD01  rol     r14d, 5
+  000000014015DD05  add     ecx, 8F1BBCDCh
+  000000014015DD0B  add     r14d, r9d
+  000000014015DD0E  add     ecx, r15d
+  000000014015DD11  mov     r9d, r11d
+  000000014015DD14  xor     r9d, [rsp+340h+var_30C]
+  000000014015DD19  add     r14d, ecx
+  000000014015DD1C  xor     r9d, [rsp+340h+var_308]
+  000000014015DD21  mov     ecx, ebx
+  000000014015DD23  xor     r9d, [rsp+340h+var_314]
+  000000014015DD28  or      ecx, edi
+  000000014015DD2A  and     ecx, esi
+  000000014015DD2C  rol     r9d, 1
+  000000014015DD2F  mov     eax, ebx
+  000000014015DD31  mov     [rsp+340h+var_314], r9d
+  000000014015DD36  and     eax, edi
+  000000014015DD38  mov     r11d, r14d
+  000000014015DD3B  or      ecx, eax
+  000000014015DD3D  rol     r11d, 5
+  000000014015DD41  add     ecx, 8F1BBCDCh
+  000000014015DD47  add     r11d, r10d
+  000000014015DD4A  add     ecx, r9d
+  000000014015DD4D  xor     r15d, [rsp+340h+var_320]
+  000000014015DD52  add     r11d, ecx
+  000000014015DD55  xor     r15d, [rsp+340h+var_2F8]
+  000000014015DD5A  mov     r13d, r12d
+  000000014015DD5D  xor     r13d, [rsp+340h+var_2FC]
+  000000014015DD62  mov     r12d, r9d
+  000000014015DD65  xor     r13d, [rsp+340h+var_2F0]
+  000000014015DD6A  xor     r12d, [rsp+340h+var_300]
+  000000014015DD6F  xor     r13d, r8d
+  000000014015DD72  jmp     short loc_14015DDEB
+  000000014015DD74  dd 0E95F415Dh
+  000000014015DD78  push    rcx
+  000000014015DD7A  std
+  000000014015DD7B  jmp     qword ptr [rdx-36EFCA1h]
+  000000014015DD81  db 39h, 5Ah, 7Dh, 1Bh, 0E8h, 75h, 0F4h
+  000000014015DD88  dq 0FFFEDC76800FFFFEh, 0FE73EE8E0FE10348h, 860FFFFFDF65E8FFh
+  000000014015DDE8  db 0FEh, 0FCh, 0FFh
+  000000014015DDEB  xor     r12d, [rsp+340h+var_2E8]
+  000000014015DDF0  mov     r8d, r11d
+  000000014015DDF3  xor     r12d, [rsp+340h+var_2F0]
+  000000014015DDF8  xor     r15d, [rsp+340h+var_308]
+  000000014015DDFD  rol     esi, 1Eh
+  000000014015DE00  rol     r13d, 1
+  000000014015DE03  mov     ecx, esi
+  000000014015DE05  or      ecx, ebx
+  000000014015DE07  rol     r8d, 5
+  000000014015DE0B  and     ecx, r14d
+  000000014015DE0E  rol     r15d, 1
+  000000014015DE11  add     r8d, edi
+  000000014015DE14  rol     r14d, 1Eh
+  000000014015DE18  mov     eax, esi
+  000000014015DE1A  rol     r12d, 1
+  000000014015DE1D  and     eax, ebx
+  000000014015DE1F  mov     [rsp+340h+var_2DC], r13d
+  000000014015DE24  or      ecx, eax
+  000000014015DE26  mov     [rsp+340h+var_2F4], r15d
+  000000014015DE2B  add     ecx, 8F1BBCDCh
+  000000014015DE31  mov     [rsp+340h+var_2F0], r12d
+  000000014015DE36  add     ecx, r13d
+  000000014015DE39  mov     edi, r13d
+  000000014015DE3C  xor     edi, [rsp+340h+var_304]
+  000000014015DE40  add     r8d, ecx
+  000000014015DE43  mov     r13d, [rsp+340h+var_310]
+  000000014015DE48  mov     r10d, r8d
+  000000014015DE4B  rol     r10d, 5
+  000000014015DE4F  xor     edi, r13d
+  000000014015DE52  xor     edi, [rsp+340h+var_2F8]
+  000000014015DE56  add     r10d, ebx
+  000000014015DE59  rol     edi, 1
+  000000014015DE5B  mov     ecx, r14d
+  000000014015DE5E  or      ecx, esi
+  000000014015DE60  mov     [rsp+340h+var_310], edi
+  000000014015DE64  and     ecx, r11d
+  000000014015DE67  mov     eax, r14d
+  000000014015DE6A  and     eax, esi
+  000000014015DE6C  rol     r11d, 1Eh
+  000000014015DE70  or      ecx, eax
+  000000014015DE72  mov     eax, r11d
+  000000014015DE75  add     ecx, 8F1BBCDCh
+  000000014015DE7B  and     eax, r14d
+  000000014015DE7E  add     ecx, r15d
+  000000014015DE81  add     r10d, ecx
+  000000014015DE84  mov     ecx, r11d
+  000000014015DE87  or      ecx, r14d
+  000000014015DE8A  mov     r9d, r10d
+  000000014015DE8D  and     ecx, r8d
+  000000014015DE90  rol     r9d, 5
+  000000014015DE94  jmp     loc_14015DF25
+  000000014015DE99  db 49h, 8Bh, 0E3h, 41h, 5Fh, 5Dh, 0E9h
+  000000014015DEA0  dq 0F3B257E8FFFD6C58h, 820FFFFCB670E8FFh, 23880F57FFFF4033h
+  000000014015DF20  db 8Ah, 5Dh, 8Eh, 2 dup(0FFh)
+  000000014015DF25  or      ecx, eax
+  000000014015DF27  rol     r8d, 1Eh
+  000000014015DF2B  add     ecx, 8F1BBCDCh
+  000000014015DF31  add     r9d, esi
+  000000014015DF34  add     ecx, r12d
+  000000014015DF37  mov     eax, r8d
+  000000014015DF3A  add     r9d, ecx
+  000000014015DF3D  and     eax, r11d
+  000000014015DF40  mov     ecx, r8d
+  000000014015DF43  mov     ebx, r9d
+  000000014015DF46  or      ecx, r11d
+  000000014015DF49  rol     ebx, 5
+  000000014015DF4C  and     ecx, r10d
+  000000014015DF4F  add     ebx, r14d
+  000000014015DF52  or      ecx, eax
+  000000014015DF54  rol     r10d, 1Eh
+  000000014015DF58  add     ecx, 8F1BBCDCh
+  000000014015DF5E  mov     esi, r15d
+  000000014015DF61  xor     esi, [rsp+340h+var_2EC]
+  000000014015DF65  add     ecx, edi
+  000000014015DF67  add     ebx, ecx
+  000000014015DF69  xor     esi, [rsp+340h+var_318]
+  000000014015DF6D  xor     esi, [rsp+340h+var_2E8]
+  000000014015DF71  mov     eax, r9d
+  000000014015DF74  xor     eax, r10d
+  000000014015DF77  rol     r9d, 1Eh
+  000000014015DF7B  xor     eax, r8d
+  000000014015DF7E  rol     esi, 1
+  000000014015DF80  add     eax, 0CA62C1D6h
+  000000014015DF85  mov     [rsp+340h+var_2F8], esi
+  000000014015DF89  add     eax, esi
+  000000014015DF8B  mov     edx, ebx
+  000000014015DF8D  rol     edx, 5
+  000000014015DF90  add     edx, r11d
+  000000014015DF93  mov     r11d, r12d
+  000000014015DF96  xor     r11d, [rsp+340h+var_2E0]
+  000000014015DF9B  add     edx, eax
+  000000014015DF9D  xor     r11d, [rsp+340h+var_30C]
+  000000014015DFA2  mov     eax, ebx
+  000000014015DFA4  xor     eax, r9d
+  000000014015DFA7  rol     ebx, 1Eh
+  000000014015DFAA  xor     eax, r10d
+  000000014015DFAD  xor     r11d, r13d
+  000000014015DFB0  add     eax, 0CA62C1D6h
+  000000014015DFB5  rol     r11d, 1
+  000000014015DFB8  add     eax, r11d
+  000000014015DFBB  mov     [rsp+340h+var_308], r11d
+  000000014015DFC0  mov     r13d, edi
+  000000014015DFC3  mov     ecx, edx
+  000000014015DFC5  xor     r13d, [rsp+340h+var_31C]
+  000000014015DFCA  jmp     loc_14015E12D
+  000000014015DFCF  db 0E8h
+  000000014015DFD0  dq 0FE17D1E8FFF3B0A4h, 49FFFF38FC800FFFh, 0FEC603E95F41E38Bh
+  000000014015E128  db 88h, 51h, 38h, 0FEh, 0FFh
+  000000014015E12D  mov     edi, esi
+  000000014015E12F  xor     edi, [rsp+340h+var_314]
+  000000014015E133  xor     edi, [rsp+340h+var_320]
+  000000014015E137  xor     edi, [rsp+340h+var_30C]
+  000000014015E13B  xor     r13d, [rsp+340h+var_2FC]
+  000000014015E140  xor     r13d, [rsp+340h+var_318]
+  000000014015E145  rol     edi, 1
+  000000014015E147  rol     ecx, 5
+  000000014015E14A  add     r8d, ecx
+  000000014015E14D  mov     [rsp+340h+var_318], edi
+  000000014015E151  add     r8d, eax
+  000000014015E154  rol     r13d, 1
+  000000014015E157  add     edi, 0CA62C1D6h
+  000000014015E15D  mov     [rsp+340h+var_2E8], r13d
+  000000014015E162  mov     eax, edx
+  000000014015E164  mov     ecx, r8d
+  000000014015E167  xor     eax, ebx
+  000000014015E169  rol     ecx, 5
+  000000014015E16C  xor     eax, r9d
+  000000014015E16F  rol     edx, 1Eh
+  000000014015E172  add     eax, 0CA62C1D6h
+  000000014015E177  add     r10d, ecx
+  000000014015E17A  add     eax, r13d
+  000000014015E17D  mov     r14d, r13d
+  000000014015E180  add     r10d, eax
+  000000014015E183  xor     r14d, r15d
+  000000014015E186  mov     eax, r8d
+  000000014015E189  mov     ecx, r10d
+  000000014015E18C  xor     eax, edx
+  000000014015E18E  rol     ecx, 5
+  000000014015E191  xor     eax, ebx
+  000000014015E193  rol     r8d, 1Eh
+  000000014015E197  add     eax, edi
+  000000014015E199  add     r9d, ecx
+  000000014015E19C  add     r9d, eax
+  000000014015E19F  mov     edi, r11d
+  000000014015E1A2  xor     edi, [rsp+340h+var_2DC]
+  000000014015E1A6  mov     eax, r10d
+  000000014015E1A9  xor     edi, [rsp+340h+var_300]
+  000000014015E1AD  xor     eax, r8d
+  000000014015E1B0  xor     edi, [rsp+340h+var_2FC]
+  000000014015E1B4  xor     eax, edx
+  000000014015E1B6  rol     edi, 1
+  000000014015E1B8  add     eax, 0CA62C1D6h
+  000000014015E1BD  add     eax, edi
+  000000014015E1BF  rol     r10d, 1Eh
+  000000014015E1C3  mov     r11d, r9d
+  000000014015E1C6  mov     [rsp+340h+var_2FC], edi
+  000000014015E1CA  rol     r11d, 5
+  000000014015E1CE  add     r11d, ebx
+  000000014015E1D1  jmp     loc_14015E323
+  000000014015E1D6  dw 584Eh
+  000000014015E1D8  dq 0E88D5F2E74D959FFh, 70515153586516F8h, 0C2987E1442536036h
+  000000014015E320  db 8Eh, 0FDh, 0FFh
+  000000014015E323  mov     [rsp+340h+var_2D0], edi
+  000000014015E327  add     r11d, eax
+  000000014015E32A  xor     r14d, [rsp+340h+var_304]
+  000000014015E32F  xor     r14d, [rsp+340h+var_320]
+  000000014015E334  mov     eax, r9d
+  000000014015E337  mov     r15d, [rsp+340h+var_318]
+  000000014015E33C  xor     eax, r10d
+  000000014015E33F  xor     eax, r8d
+  000000014015E342  rol     r14d, 1
+  000000014015E345  add     eax, edx
+  000000014015E347  rol     r9d, 1Eh
+  000000014015E34B  add     eax, 0CA62C1D6h
+  000000014015E350  mov     [rsp+340h+var_30C], r14d
+  000000014015E355  xor     r15d, r12d
+  000000014015E358  mov     [rsp+340h+var_2CC], r14d
+  000000014015E35D  xor     r15d, [rsp+340h+var_2EC]
+  000000014015E362  add     r8d, 0CA62C1D6h
+  000000014015E369  xor     r15d, [rsp+340h+var_300]
+  000000014015E36E  mov     r12d, edi
+  000000014015E371  xor     r12d, [rsp+340h+var_310]
+  000000014015E376  mov     edi, esi
+  000000014015E378  xor     edi, [rsp+340h+var_31C]
+  000000014015E37C  mov     ecx, r11d
+  000000014015E37F  xor     r12d, [rsp+340h+var_2E0]
+  000000014015E384  xor     edi, [rsp+340h+var_2EC]
+  000000014015E388  xor     r12d, [rsp+340h+var_304]
+  000000014015E38D  xor     edi, r14d
+  000000014015E390  mov     esi, [rsp+340h+var_308]
+  000000014015E394  xor     esi, [rsp+340h+var_314]
+  000000014015E398  xor     esi, [rsp+340h+var_2E0]
+  000000014015E39C  rol     ecx, 5
+  000000014015E39F  rol     r15d, 1
+  000000014015E3A2  rol     edi, 1
+  000000014015E3A4  xor     esi, r15d
+  000000014015E3A7  rol     esi, 1
+  000000014015E3A9  lea     edx, [r14+rcx]
+  000000014015E3AD  rol     r12d, 1
+  000000014015E3B0  add     edx, eax
+  000000014015E3B2  mov     [rsp+340h+var_2C8], r15d
+  000000014015E3B7  mov     eax, r9d
+  000000014015E3BA  mov     [rsp+340h+var_2C4], r12d
+  000000014015E3BF  xor     eax, r10d
+  000000014015E3C2  mov     [rsp+340h+var_320], edi
+  000000014015E3C6  xor     eax, r11d
+  000000014015E3C9  mov     [rbp+240h+var_2C0], edi
+  000000014015E3CC  add     eax, r8d
+  000000014015E3CF  rol     r11d, 1Eh
+  000000014015E3D3  mov     ebx, edx
+  000000014015E3D5  mov     [rsp+340h+var_300], esi
+  000000014015E3D9  rol     ebx, 5
+  000000014015E3DC  jmp     short loc_14015E447
+  000000014015E3DE  dw 5641h
+  000000014015E3E0  dq 5DE8FFFE15A38E0Fh, 0FD406F810FFFFD39h, 3498D05C37052FFh
+  000000014015E440  db 5Dh, 7Ch, 51h, 7Ah, 0AEh, 2Ch, 52h
+  000000014015E447  add     ebx, r15d
+  000000014015E44A  mov     [rbp+240h+var_2BC], esi
+  000000014015E44D  add     ebx, eax
+  000000014015E44F  mov     eax, edx
+  000000014015E451  xor     eax, r11d
+  000000014015E454  rol     edx, 1Eh
+  000000014015E457  xor     eax, r9d
+  000000014015E45A  mov     r8d, ebx
+  000000014015E45D  add     eax, 0CA62C1D6h
+  000000014015E462  rol     r8d, 5
+  000000014015E466  add     eax, r12d
+  000000014015E469  add     r8d, r10d
+  000000014015E46C  add     r8d, eax
+  000000014015E46F  mov     eax, ebx
+  000000014015E471  xor     eax, edx
+  000000014015E473  rol     ebx, 1Eh
+  000000014015E476  xor     eax, r11d
+  000000014015E479  mov     ecx, r8d
+  000000014015E47C  add     eax, 0CA62C1D6h
+  000000014015E481  rol     ecx, 5
+  000000014015E484  add     eax, edi
+  000000014015E486  add     r9d, ecx
+  000000014015E489  add     r9d, eax
+  000000014015E48C  mov     eax, r8d
+  000000014015E48F  xor     eax, ebx
+  000000014015E491  rol     r8d, 1Eh
+  000000014015E495  xor     eax, edx
+  000000014015E497  mov     r10d, r9d
+  000000014015E49A  rol     r10d, 5
+  000000014015E49E  add     eax, 0CA62C1D6h
+  000000014015E4A3  add     eax, esi
+  000000014015E4A5  add     r10d, r11d
+  000000014015E4A8  add     r10d, eax
+  000000014015E4AB  xor     r13d, [rsp+340h+var_2DC]
+  000000014015E4B0  xor     r13d, [rsp+340h+var_31C]
+  000000014015E4B5  mov     eax, r9d
+  000000014015E4B8  xor     eax, r8d
+  000000014015E4BB  rol     r9d, 1Eh
+  000000014015E4BF  xor     eax, ebx
+  000000014015E4C1  add     edx, 0CA62C1D6h
+  000000014015E4C7  add     eax, edx
+  000000014015E4C9  add     ebx, 0CA62C1D6h
+  000000014015E4CF  mov     edx, edi
+  000000014015E4D1  mov     r11d, r10d
+  000000014015E4D4  xor     edx, [rsp+340h+var_318]
+  000000014015E4D8  xor     r13d, r12d
+  000000014015E4DB  xor     edx, [rsp+340h+var_2F4]
+  000000014015E4DF  xor     edx, [rsp+340h+var_314]
+  000000014015E4E3  rol     edx, 1
+  000000014015E4E5  rol     r13d, 1
+  000000014015E4E8  jmp     loc_14015E737
+  000000014015E4ED  db 0E8h, 0F6h, 0ABh
+  000000014015E4F0  dq 0FFFFECBF0E8FFF3h, 0F5641FFFDDB5E84h, 648B44FFFF128989h
+  000000014015E730  db 41h, 5Fh, 0E9h, 6Eh, 68h, 0FEh, 0FFh
+  000000014015E737  rol     r11d, 5
+  000000014015E73B  add     r11d, r13d
+  000000014015E73E  mov     [rsp+340h+var_31C], edx
+  000000014015E742  add     r11d, eax
+  000000014015E745  mov     [rbp+240h+var_2B4], edx
+  000000014015E748  mov     eax, r9d
+  000000014015E74B  mov     [rbp+240h+var_2B8], r13d
+  000000014015E74F  xor     eax, r8d
+  000000014015E752  mov     edi, r11d
+  000000014015E755  xor     eax, r10d
+  000000014015E758  rol     edi, 5
+  000000014015E75B  add     eax, ebx
+  000000014015E75D  rol     r10d, 1Eh
+  000000014015E761  add     r8d, 0CA62C1D6h
+  000000014015E768  mov     ebx, esi
+  000000014015E76A  xor     ebx, [rsp+340h+var_2FC]
+  000000014015E76E  add     edi, edx
+  000000014015E770  xor     ebx, [rsp+340h+var_2F0]
+  000000014015E774  add     edi, eax
+  000000014015E776  xor     ebx, [rsp+340h+var_2DC]
+  000000014015E77A  mov     eax, r10d
+  000000014015E77D  xor     eax, r9d
+  000000014015E780  rol     ebx, 1
+  000000014015E782  xor     eax, r11d
+  000000014015E785  mov     [rbp+240h+var_2B0], ebx
+  000000014015E788  add     eax, r8d
+  000000014015E78B  rol     r11d, 1Eh
+  000000014015E78F  mov     r8d, [rsp+340h+var_310]
+  000000014015E794  add     r9d, 0CA62C1D6h
+  000000014015E79B  xor     r8d, [rsp+340h+var_2F4]
+  000000014015E7A0  mov     esi, edi
+  000000014015E7A2  xor     r8d, r14d
+  000000014015E7A5  rol     esi, 5
+  000000014015E7A8  add     esi, ebx
+  000000014015E7AA  xor     r8d, r13d
+  000000014015E7AD  add     esi, eax
+  000000014015E7AF  rol     r8d, 1
+  000000014015E7B2  mov     r14d, esi
+  000000014015E7B5  mov     [rbp+240h+var_2AC], r8d
+  000000014015E7B9  rol     r14d, 5
+  000000014015E7BD  mov     eax, r11d
+  000000014015E7C0  xor     eax, r10d
+  000000014015E7C3  add     r14d, r8d
+  000000014015E7C6  xor     eax, edi
+  000000014015E7C8  add     r10d, 0CA62C1D6h
+  000000014015E7CF  add     eax, r9d
+  000000014015E7D2  rol     edi, 1Eh
+  000000014015E7D5  mov     r9d, [rsp+340h+var_2F8]
+  000000014015E7DA  add     r14d, eax
+  000000014015E7DD  xor     r9d, [rsp+340h+var_2F0]
+  000000014015E7E2  jmp     short loc_14015E831
+  000000014015E7E4  mov     rsp, r11
+  000000014015E7E7  pop     r15
+  000000014015E7E9  pop     r13
+  000000014015E7EB  jmp     loc_14015B731
+  000000014015E7F0  dq 0A18F0FFFF57C7BE8h, 6C0C48148FFFFB0h, 0FFFE310A840F0000h
+  000000014015E830  db 0FFh
+  000000014015E831  mov     eax, edi
+  000000014015E833  xor     r9d, r15d
+  000000014015E836  xor     eax, r11d
+  000000014015E839  xor     r9d, edx
+  000000014015E83C  xor     eax, esi
+  000000014015E83E  mov     edx, [rsp+340h+var_308]
+  000000014015E842  add     eax, r10d
+  000000014015E845  rol     r9d, 1
+  000000014015E848  mov     r15d, r14d
+  000000014015E84B  rol     r15d, 5
+  000000014015E84F  add     r15d, r9d
+  000000014015E852  rol     esi, 1Eh
+  000000014015E855  add     r15d, eax
+  000000014015E858  mov     [rbp+240h+var_2A8], r9d
+  000000014015E85C  xor     edx, [rsp+340h+var_310]
+  000000014015E860  xor     edx, r12d
+  000000014015E863  add     r11d, 0CA62C1D6h
+  000000014015E86A  xor     edx, ebx
+  000000014015E86C  mov     eax, esi
+  000000014015E86E  mov     ebx, [rsp+340h+var_300]
+  000000014015E872  xor     eax, edi
+  000000014015E874  xor     eax, r14d
+  000000014015E877  rol     edx, 1
+  000000014015E879  add     eax, r11d
+  000000014015E87C  rol     r14d, 1Eh
+  000000014015E880  mov     r11d, [rsp+340h+var_320]
+  000000014015E885  add     edi, 0CA62C1D6h
+  000000014015E88B  xor     r11d, [rsp+340h+var_2E8]
+  000000014015E890  mov     r10d, r15d
+  000000014015E893  xor     r11d, [rsp+340h+var_2F8]
+  000000014015E898  xor     r11d, r8d
+  000000014015E89B  rol     r10d, 5
+  000000014015E89F  add     r10d, edx
+  000000014015E8A2  rol     r11d, 1
+  000000014015E8A5  add     r10d, eax
+  000000014015E8A8  mov     [rbp+240h+var_2A4], edx
+  000000014015E8AB  mov     eax, r14d
+  000000014015E8AE  mov     [rbp+240h+var_2A0], r11d
+  000000014015E8B2  xor     eax, esi
+  000000014015E8B4  mov     r8d, r10d
+  000000014015E8B7  xor     eax, r15d
+  000000014015E8BA  rol     r8d, 5
+  000000014015E8BE  add     eax, edi
+  000000014015E8C0  rol     r15d, 1Eh
+  000000014015E8C4  mov     edi, [rsp+340h+var_318]
+  000000014015E8C8  add     r8d, r11d
+  000000014015E8CB  add     r8d, eax
+  000000014015E8CE  xor     ebx, edi
+  000000014015E8D0  xor     ebx, [rsp+340h+var_308]
+  000000014015E8D4  xor     edi, r11d
+  000000014015E8D7  jmp     loc_14015ED30
+  000000014015E8DC  dd 0F5862FE8h
+  000000014015E8E0  dq 45FFFD1DB18C0FFFh, 41C38BD5F640FD33h, 0CA8B4105C0C1D6D2h
+  000000014015ED30  xor     edi, [rsp+340h+var_30C]
+  000000014015ED34  xor     ebx, r9d
+  000000014015ED37  xor     edi, [rsp+340h+var_31C]
+  000000014015ED3B  mov     ecx, r8d
+  000000014015ED3E  mov     r9d, [rsp+340h+var_2FC]
+  000000014015ED43  mov     eax, r15d
+  000000014015ED46  xor     r9d, [rsp+340h+var_2E8]
+  000000014015ED4B  xor     eax, r14d
+  000000014015ED4E  xor     eax, r10d
+  000000014015ED51  rol     ebx, 1
+  000000014015ED53  add     eax, 0CA62C1D6h
+  000000014015ED58  rol     r10d, 1Eh
+  000000014015ED5C  add     eax, esi
+  000000014015ED5E  rol     edi, 1
+  000000014015ED60  mov     esi, [rbp+240h+var_17C]
+  000000014015ED66  xor     r9d, edx
+  000000014015ED69  rol     ecx, 5
+  000000014015ED6C  xor     r9d, r13d
+  000000014015ED6F  rol     r9d, 1
+  000000014015ED72  add     r14d, 0CA62C1D6h
+  000000014015ED79  mov     [rbp+240h+var_29C], ebx
+  000000014015ED7C  add     ebx, ecx
+  000000014015ED7E  add     ebx, eax
+  000000014015ED80  mov     [rbp+240h+var_294], edi
+  000000014015ED83  add     edi, 0CA62C1D6h
+  000000014015ED89  mov     [rbp+240h+var_298], r9d
+  000000014015ED8D  mov     eax, r10d
+  000000014015ED90  mov     edx, ebx
+  000000014015ED92  xor     eax, r15d
+  000000014015ED95  rol     edx, 5
+  000000014015ED98  xor     eax, r8d
+  000000014015ED9B  add     edx, r9d
+  000000014015ED9E  add     eax, r14d
+  000000014015EDA1  rol     r8d, 1Eh
+  000000014015EDA5  add     edx, eax
+  000000014015EDA7  mov     eax, r8d
+  000000014015EDAA  xor     eax, r10d
+  000000014015EDAD  mov     r12d, edx
+  000000014015EDB0  xor     eax, ebx
+  000000014015EDB2  rol     r12d, 5
+  000000014015EDB6  add     eax, r15d
+  000000014015EDB9  add     eax, edi
+  000000014015EDBB  add     eax, [rbp+240h+var_180]
+  000000014015EDC1  add     r12d, eax
+  000000014015EDC4  mov     [rbp+240h+var_180], r12d
+  000000014015EDCB  add     esi, edx
+  000000014015EDCD  mov     r11d, [rbp+240h+var_178]
+  000000014015EDD4  mov     r14d, [rbp+240h+var_174]
+  000000014015EDDB  mov     r15d, [rbp+240h+var_170]
+  000000014015EDE2  add     r14d, r8d
+  000000014015EDE5  jmp     short loc_14015EE57
+  000000014015EDE7  db 0E8h
+  000000014015EDE8  dq 33D7800FFFF58854h, 0FFFF58E61E8FFFEh, 74DEE8FFFEFDD784h
+  000000014015EE50  db 0E5h, 0Fh, 85h, 1Ch, 2Eh, 0FEh, 0FFh
+  000000014015EE57  mov     rax, [rbp+240h+var_290]
+  000000014015EE5B  add     r15d, r10d
+  000000014015EE5E  mov     rdx, [rbp-38h]
+  000000014015EE62  add     rax, 40h ; '@'
+  000000014015EE66  mov     rcx, [rbp+240h+var_280]
+  000000014015EE6A  sub     rdx, 40h ; '@'
+  000000014015EE6E  mov     rdi, [rbp+240h+var_260]
+  000000014015EE72  add     rcx, 40h ; '@'
+  000000014015EE76  rol     ebx, 1Eh
+  000000014015EE79  add     r11d, ebx
+  000000014015EE7C  mov     [rbp+240h+var_17C], esi
+  000000014015EE82  mov     [rbp+240h+var_178], r11d
+  000000014015EE89  mov     [rbp+240h+var_174], r14d
+  000000014015EE90  mov     [rbp+240h+var_170], r15d
+  000000014015EE97  mov     [rbp+240h+var_290], rax
+  000000014015EE9B  mov     [rbp-38h], rdx
+  000000014015EE9F  mov     [rbp+240h+var_280], rcx
+  000000014015EEA3  cmp     rcx, rdi
+  000000014015EEA6  jb      loc_14015B922
+  000000014015EEAC  jmp     loc_14015EFE4
+  000000014015EEB1  db 48h, 8Dh, 5Ch, 0Ch, 7Bh, 41h, 0D1h
+  000000014015EEB8  dq 4100000010B841EAh, 0FE3ECF840FDCEC80h, 890FFFF37542E8FFh
+  000000014015EFE0  db 76h, 5Ch, 0FEh, 0FFh
+  000000014015EFE4  xor     r12d, r12d
+  000000014015EFE7  mov     ecx, r12d
+  000000014015EFEA  jmp     loc_14015F32A
+  000000014015EFEF  db 0E8h
+  000000014015EFF0  dq 60E3810FFFFE5E8Ah, 0FFFF3B829E8FFFDh, 5A77E8FFFF5B6680h
+  000000014015F168  mov     rax, r12
+  000000014015F16B  jmp     loc_14015F32A
+  000000014015F170  dq 55820FFFFD2508E8h, 0A93A935238FFFF92h, 3F5254562F785C7Fh
+  000000014015F328  db 0FEh, 0FFh
+  000000014015F32A  sub     rdi, rax
+  000000014015F32D  lea     rdx, [rbp+240h+var_80]
+  000000014015F334  add     rdx, rax
+  000000014015F337  mov     r8, rdi
+  000000014015F33A  lea     rax, [rbp+240h+var_164]
+  000000014015F341  add     rcx, rax
+  000000014015F344  jmp     loc_14015F4AE
+  000000014015F349  db 48h, 8Dh, 4Dh, 60h, 41h, 0D0h, 0F2h
+  000000014015F350  dq 1A4B6CBB6BDB848h, 0EAD241C83B480000h, 5174FFFD048C8B0Fh
+  000000014015F4A8  db 0Fh, 8Dh, 0FCh, 0C1h, 0FCh, 0FFh
+  000000014015F4AE  call    sub_140095E40
+  000000014015F4B3  jmp     loc_14015F751
+  000000014015F4B8  dq 8A04CCFD74EA5EB6h, 7F51147D0D2CF638h, 8CF9C7FA09570C65h
+  000000014015F750  db 0FFh
+  000000014015F751  xor     edx, edx
+  000000014015F753  mov     [rbp+240h+var_16C], 0
+  000000014015F75E  lea     rcx, [rbp+240h+var_164]
+  000000014015F765  mov     [rbp+240h+var_180], 67452301h
+  000000014015F76F  mov     [rbp+240h+var_17C], 0EFCDAB89h
+  000000014015F779  mov     [rbp+240h+var_178], 98BADCFEh
+  000000014015F783  lea     r8d, [rdx+40h]
+  000000014015F787  mov     [rbp+240h+var_174], 10325476h
+  000000014015F791  mov     [rbp+240h+var_170], 0C3D2E1F0h
+  000000014015F79B  jmp     loc_14015F84A
+  000000014015F7A0  dq 0FFFCF3DF8C0F5741h, 0FFFCCC458A0F5041h, 0FFFEB967890F5141h
+  000000014015F848  db 0FDh, 0FFh
+  000000014015F84A  call    sub_140096100
+  000000014015F84F  jmp     short loc_14015F8BF
+  000000014015F851  db 55h, 0Fh, 8Eh, 0F3h, 0C5h, 0FDh, 0FFh
+  000000014015F858  dq 0EFB8E8FFF39A33E8h, 0FFFD7C9C810FFFFCh, 0F000002F8C48148h
+  000000014015F8B8  db 90h
+  000000014015F8B9  db 8, 0C6h, 63h, 2Ah, 31h, 74h
+  000000014015F8BF  lea     rcx, [rbp+240h+var_180]
+  000000014015F8C6  mov     rax, 1A4B6CBB6C6h
+  000000014015F8D0  cmp     rcx, rax
+  000000014015F8D3  jnb     loc_14015FABD
+  000000014015F8D9  jmp     loc_14015F964
+  000000014015F8DE  mov     rsp, r11
+  000000014015F8E1  jmp     loc_1401523F4
+  000000014015F8E6  dw 2E8h
+  000000014015F8E8  dq 0FDEDD7850FFFFE49h, 0C84B441C686067FFh, 0B0C481487E5Dh
+  000000014015F960  db 0B1h, 0D3h, 0FCh, 0FFh
+  000000014015F964  nop
+  000000014015F965  jmp     short loc_14015F9C0
+  000000014015F967  db 50h
+  000000014015F968  dq 3E8FFFDEF7D8B0Fh, 0FCDCE28D0FFFF4CBh, 0FDEB43880F5241FFh
+  000000014015F9C0  call    sub_1401A96D1
+  000000014015F9C5  jmp     rax
+  000000014015F9C7  db 0E8h
+  000000014015F9C8  dq 659C800FFFF3A6A4h, 415D41E38B49FFFDh, 0F55FFFCF0E7E95Ch
+  000000014015FAB8  db 8Bh, 0D3h, 91h, 2 dup(0FFh)
+  000000014015FABD  mov     rsi, [rbp+240h+var_258]
+  000000014015FAC1  cmp     [rsi+100h], r12b
+  000000014015FAC8  jz      loc_14016005B
+  000000014015FACE  jmp     loc_14015FB65
+  000000014015FAD3  db 0E8h, 20h, 97h, 0F3h, 0FFh
+  000000014015FAD8  dq 87860FFFFE3EF0E8h, 415C415D41FFFECBh, 0FFFD43AEE95E415Fh
+  000000014015FB60  db 0E9h, 0AEh, 0D9h, 0FDh, 0FFh
+  000000014015FB65  mov     rbx, [rsi+108h]
+  000000014015FB6C  lea     r10, cs:1889576B6h
+  000000014015FB73  mov     rax, 5CD13199B566384h
+  000000014015FB7D  mov     r10d, r10d
+  000000014015FB80  imul    r10, rax
+  000000014015FB84  mov     rax, 8B39CA669019546h
+  000000014015FB8E  lea     rdi, cs:16F69C5BAh
+  000000014015FB95  mov     rcx, rbx
+  000000014015FB98  mov     edi, edi
+  000000014015FB9A  mov     rdx, 0BC5C8715A06122D7h
+  000000014015FBA4  mov     r9, r10
+  000000014015FBA7  xor     r9, 6EDB80F0h
+  000000014015FBAE  mov     r8, 2EE42A5A43880D54h
+  000000014015FBB8  imul    r9, rax
+  000000014015FBBC  mov     rax, 0B9A263336ACC708h
+  000000014015FBC6  imul    rdi, rax
+  000000014015FBCA  mov     rax, 0E92BDE581F3EFAB8h
+  000000014015FBD4  xor     rcx, rax
+  000000014015FBD7  mov     rax, 69A34B2657BBE1EEh
+  000000014015FBE1  imul    rcx, rax
+  000000014015FBE5  mov     rax, 9BEB525B3C0737EFh
+  000000014015FBEF  xor     rcx, rax
+  000000014015FBF2  mov     rax, 7EE4CB433970D1F8h
+  000000014015FBFC  add     rcx, rax
+  000000014015FBFF  lea     rax, cs:1BFF95042h
+  000000014015FC06  mov     eax, eax
+  000000014015FC08  imul    rax, rdx
+  000000014015FC0C  mov     rdx, 54BB9D1A6A6AEC58h
+  000000014015FC16  xor     rcx, rax
+  000000014015FC19  mov     rax, 5CD13199B56638h
+  000000014015FC23  imul    rcx, rax
+  000000014015FC27  mov     rax, r10
+  000000014015FC2A  imul    rax, rdx
+  000000014015FC2E  mov     rdx, 0FA20421D87A12463h
+  000000014015FC38  sub     rcx, rax
+  000000014015FC3B  add     rdx, rcx
+  000000014015FC3E  mov     rcx, 476F657B2616FC85h
+  000000014015FC48  mov     rax, rdx
+  000000014015FC4B  bswap   rax
+  000000014015FC4E  xor     rax, rcx
+  000000014015FC51  mov     rcx, 459BB11A1E5DA4A1h
+  000000014015FC5B  add     rcx, rax
+  000000014015FC5E  xor     rcx, r8
+  000000014015FC61  mov     r8, 8DE96BAD24DF1A71h
+  000000014015FC6B  imul    rcx, rax
+  000000014015FC6F  mov     rax, 483EBB26DB59B341h
+  000000014015FC79  add     rcx, rax
+  000000014015FC7C  ror     rcx, 7
+  000000014015FC80  mov     rax, rcx
+  000000014015FC83  not     rax
+  000000014015FC86  jmp     short loc_14015FCEA
+  000000014015FC88  dq 41FFFFD560E95C41h, 0E8FFFDA8DA850F50h, 0FD4B41E8FFF39404h
+  000000014015FCE8  db 0FDh, 0FFh
+  000000014015FCEA  imul    rax, rcx
+  000000014015FCEE  mov     rcx, 7679C9168D3FA577h
+  000000014015FCF8  xor     rax, rcx
+  000000014015FCFB  lea     ecx, [rax-20h]
+  000000014015FCFE  xor     rax, r8
+  000000014015FD01  xor     ecx, 0FFFFFFF0h
+  000000014015FD04  mov     r8, 0E0154ACA0BA5687Eh
+  000000014015FD0E  sub     ecx, 0Fh
+  000000014015FD11  and     ecx, 3Fh
+  000000014015FD14  rol     rax, cl
+  000000014015FD17  mov     rcx, rax
+  000000014015FD1A  ror     rcx, 20h
+  000000014015FD1E  xor     r8, rcx
+  000000014015FD21  add     r8, rax
+  000000014015FD24  mov     rax, r9
+  000000014015FD27  imul    r8, rdx
+  000000014015FD2B  shr     rax, 1
+  000000014015FD2E  xor     r8, rax
+  000000014015FD31  mov     rax, 2E6898CCDAB31Ch
+  000000014015FD3B  imul    r8, rax
+  000000014015FD3F  mov     rax, 305E58AF591FA320h
+  000000014015FD49  sub     r8, rax
+  000000014015FD4C  mov     rax, 0FAFC8C1DCAE8FF68h
+  000000014015FD56  imul    r8, rbx
+  000000014015FD5A  sub     r8, rdi
+  000000014015FD5D  add     r8, rax
+  000000014015FD60  mov     eax, 1
+  000000014015FD65  xor     ecx, ecx
+  000000014015FD67  cpuid  ; <<< CPUID: VM/hypervisor detection
+  000000014015FD69  mov     [rbp+240h+var_274], ebx
+  000000014015FD6C  mov     [rbp+240h+var_270], ecx
+  000000014015FD6F  mov     ebx, eax
+  000000014015FD71  lea     ecx, [r8+7]
+  000000014015FD75  and     ecx, 3Fh
+  000000014015FD78  mov     [rbp+240h+var_26C], edx
+  000000014015FD7B  mov     rax, rdi
+  000000014015FD7E  mov     rdx, 49EF86FAC852F52Eh
+  000000014015FD88  xor     rax, r10
+  000000014015FD8B  add     rax, r10
+  000000014015FD8E  imul    rax, r9
+  000000014015FD92  add     rdx, rax
+  000000014015FD95  mov     eax, ebx
+  000000014015FD97  xor     rax, r8
+  000000014015FD9A  add     rdx, rdi
+  000000014015FD9D  imul    rdx, rax
+  000000014015FDA1  mov     rax, 7538A2580858DE87h
+  000000014015FDAB  xor     rdx, rax
+  000000014015FDAE  lea     rax, cs:1BFFEC135h
+  000000014015FDB5  rol     rdx, cl
+  000000014015FDB8  mov     eax, eax
+  000000014015FDBA  jmp     loc_14015FF66
+  000000014015FDBF  db 0E8h
+  000000014015FDC0  mov     word ptr [rax-0Bh], fs
+  000000014015FDC3  dec     dword ptr [rdi]
+  000000014015FDC5  xchg    cl, [rsi]
+  000000014015FDC7  retf
+  000000014015FDC8  dq 0FFFFF4318E8FFFEh, 7D5A8DFFFE75F382h, 5A51C42B5B7B788Bh
+  000000014015FF60  db 0Fh, 80h, 5Eh, 59h, 0FDh, 0FFh
+  000000014015FF66  mov     rcx, rdx
+  000000014015FF69  not     rcx
+  000000014015FF6C  imul    rcx, rdx
+  000000014015FF70  mov     rdx, 0DEF903B75E3035C8h
+  000000014015FF7A  imul    rax, rdx
+  000000014015FF7E  xor     rcx, rax
+  000000014015FF81  mov     rax, 0C5F354BCFCD3FEABh
+  000000014015FF8B  xor     rcx, rax
+  000000014015FF8E  mov     rax, 7040947638EFFBA5h
+  000000014015FF98  sub     rcx, rax
+  000000014015FF9B  mov     rax, 0FD6FEE887A9A197Bh
+  000000014015FFA5  ror     rcx, 13h
+  000000014015FFA9  imul    rcx, rax
+  000000014015FFAD  mov     rax, 2AC6D20089DAC461h
+  000000014015FFB7  xor     rcx, rax
+  000000014015FFBA  mov     rax, 7B242007C394C679h
+  000000014015FFC4  bswap   rcx
+  000000014015FFC7  xor     rcx, rax
+  000000014015FFCA  mov     rax, 27F737F475D9DB90h
+  000000014015FFD4  bswap   rcx
+  000000014015FFD7  xor     rcx, rax
+  000000014015FFDA  mov     rax, 3DF86DF74DD6D4BFh
+  000000014015FFE4  add     rcx, rax
+  000000014015FFE7  mov     rax, 0C82312F36F24694Ah
+  000000014015FFF1  xor     rdi, rax
+  000000014015FFF4  ror     rcx, 3
+  000000014015FFF8  add     rdi, rbx
+  000000014015FFFB  lea     rax, [rcx+r8]
+  000000014015FFFF  imul    rdi, rax
+  0000000140160003  xor     rdi, [rsi+110h]
+  000000014016000A  jmp     loc_1401600CA
+  000000014016000F  db 0E8h
+  0000000140160010  dq 0FE47DBE8FFF3911Ch, 0E8FFFCDF4F890FFFh, 0EAB18F0FFFFF2B66h
+  0000000140160058  db 2Ah, 0FEh, 0FFh
+  000000014016005B  mov     rdi, r12
+  000000014016005E  jmp     short loc_1401600CA
+  0000000140160060  dq 9F1CE8FFF391DBE8h, 0FFFFB887890FFFFDh, 0FF8E0FFFF3A353E8h
+  00000001401600C8  db 2 dup(0FFh)
+  00000001401600CA  mov     ebx, 60h ; '`'
+  00000001401600CF  jmp     loc_140160357
+  00000001401600D4  dd 0F3913FE8h
+  00000001401600D8  dq 8C0FFFFEB7D3E8FFh, 0F38F57E8FFFEAE85h, 810FFFFFF78EE8FFh
+  0000000140160350  db 0C8h, 0Fh, 81h, 13h, 4Bh, 0FDh, 0FFh
+  0000000140160357  mov     rcx, [rbp+240h+var_288]
+  000000014016035B  mov     r8d, 1000h
+  0000000140160361  mov     rdx, [rdi+rbx-60h]
+  0000000140160366  mov     rcx, [rbx+rcx]
+  000000014016036A  jmp     short loc_1401603D2
+  000000014016036C  dd 5E415F41h
+  0000000140160370  dq 0E671E8FFFF0C12E9h, 0FFFC9F0F8E0FFFFDh, 0E8FFFDC3ADE95C41h
+  00000001401603D0  db 2 dup(0FFh)
+  00000001401603D2  call    sub_140095E40
+  00000001401603D7  jmp     loc_140160632
+  00000001401603DC  dd 0B0C48148h
+  00000001401603E0  dq 0FDF465800F000000h, 520C48148FFh, 0F50FFFFF4C9850Fh
+  0000000140160630  db 0FDh, 0FFh
+  0000000140160632  add     rbx, 8
+  0000000140160636  cmp     rbx, 1060h
+  000000014016063D  jb      loc_140160357
+  0000000140160643  jmp     loc_1401606E1
+  0000000140160648  dq 1D860FFFF5594BE8h, 0FFFD2F90E8FFFF54h, 8148FFFF7335800Fh
+  00000001401606E0  pop     rsi
+  00000001401606E1  mov     r14, [rbp+240h+var_288]
+  00000001401606E5  mov     r13, 2BADD00DDEADC0DEh
+  00000001401606EF  add     r14, 38h ; '8'
+  00000001401606F3  mov     r15, [r14]
+  00000001401606F6  cmp     [rsi+60h], r12b
+  00000001401606FA  jnz     loc_140160874
+  0000000140160700  jmp     loc_140160796
+  0000000140160705  db 41h, 52h, 0Fh
+  0000000140160708  dq 2770E8FFFDB82C86h, 0FFFD8FB3810FFFFDh, 8148FFFD673A800Fh
+  0000000140160790  db 0E3h, 0E9h, 9Ch, 75h, 0FEh, 0FFh
+  0000000140160796  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  0000000140160798  shl     rdx, 20h
+  000000014016079C  or      rax, rdx
+  000000014016079F  mov     rcx, rax
+  00000001401607A2  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  00000001401607A4  shl     rdx, 20h
+  00000001401607A8  or      rax, rdx
+  00000001401607AB  imul    rcx, rax
+  00000001401607AF  xor     rcx, r13
+  00000001401607B2  mov     [rsi+68h], rcx
+  00000001401607B6  mov     byte ptr [rsi+60h], 1
+  00000001401607BA  jmp     loc_140160874
+  00000001401607BF  db 0E8h
+  00000001401607C0  dq 0BF30820FFFFE62C0h, 0FFFF57551E8FFFDh, 8AA6E8FFFEA95784h
+  0000000140160870  db 32h, 0B1h, 0FCh, 0FFh
+  0000000140160874  mov     r9, [rsi+68h]
+  0000000140160878  lea     r11, cs:17489E841h
+  000000014016087F  mov     rdx, 9EF0B2DDD92C5255h
+  0000000140160889  mov     r11d, r11d
+  000000014016088C  mov     rax, 760A4DE67D66F0D3h
+  0000000140160896  lea     rdi, cs:17AFA4EB4h
+  000000014016089D  mov     rcx, r9
+  00000001401608A0  mov     edi, edi
+  00000001401608A2  not     rcx
+  00000001401608A5  sub     rcx, rax
+  00000001401608A8  mov     rax, 274017F1696E1A5Bh
+  00000001401608B2  ror     rcx, 3Ch
+  00000001401608B6  imul    rcx, rdx
+  00000001401608BA  xor     rcx, rax
+  00000001401608BD  mov     rax, 89628B45DD6C7566h
+  00000001401608C7  imul    r11, rax
+  00000001401608CB  lea     r8, [rcx+rdx]
+  00000001401608CF  mov     rax, 0CE13D0E8CC22B019h
+  00000001401608D9  mov     rdx, 0AA847B4B8B7DB35Ah
+  00000001401608E3  mov     r10, r11
+  00000001401608E6  xor     r8, rdx
+  00000001401608E9  xor     r10, 54538E8h
+  00000001401608F0  imul    r8, rcx
+  00000001401608F4  imul    r10, rax
+  00000001401608F8  mov     rcx, 0D31CE7F96EEDC485h
+  0000000140160902  lea     rdx, cs:1BFF3E0DFh
+  0000000140160909  add     r8, rcx
+  000000014016090C  mov     edx, edx
+  000000014016090E  mov     rax, 12C5168BBAD8EACCh
+  0000000140160918  mov     rbx, r11
+  000000014016091B  imul    rdi, rax
+  000000014016091F  mov     rax, 0DABA0B6EB09322E3h
+  0000000140160929  lea     ecx, [r8-8]
+  000000014016092D  xor     ecx, 0FFFFFFE4h
+  0000000140160930  imul    rbx, rax
+  0000000140160934  add     ecx, 1Fh
+  0000000140160937  mov     rax, 51C37041F7BDC43Dh
+  0000000140160941  imul    rdx, rax
+  0000000140160945  and     ecx, 3Fh
+  0000000140160948  mov     rax, 2AC8CDBF9D23E0DFh
+  0000000140160952  add     rax, r8
+  0000000140160955  xor     rdx, rax
+  0000000140160958  mov     rax, 0E120BAA090A35C50h
+  0000000140160962  ror     rdx, cl
+  0000000140160965  mov     rcx, 89628B45DD6C756h
+  000000014016096F  add     rbx, rdx
+  0000000140160972  mov     rdx, 0D88187E978009090h
+  000000014016097C  imul    rbx, rcx
+  0000000140160980  mov     rcx, 0B9CA9C89753910B5h
+  000000014016098A  add     rbx, rcx
+  000000014016098D  jmp     loc_140160A37
+  0000000140160992  dw 5341h, 890Fh, 0D427h
+  0000000140160998  dq 17D6890F5041FFFFh, 0FFDA7EE95F41FFFEh, 0FE9C438C0F5541FFh
+  0000000140160A30  db 41h, 5Ch, 0E9h, 60h, 11h, 0FEh, 0FFh
+  0000000140160A37  mov     rcx, rbx
+  0000000140160A3A  bswap   rcx
+  0000000140160A3D  xor     rcx, rax
+  0000000140160A40  mov     rax, 1C9A52D426E932FEh
+  0000000140160A4A  add     rax, rcx
+  0000000140160A4D  not     rcx
+  0000000140160A50  xor     rax, rdx
+  0000000140160A53  mov     rdx, 0F9156505605C1178h
+  0000000140160A5D  imul    rax, rcx
+  0000000140160A61  mov     rcx, 0CD1FE2DF431B6059h
+  0000000140160A6B  add     rax, rcx
+  0000000140160A6E  mov     rcx, 0C5F9A1DFFCA7831h
+  0000000140160A78  add     rcx, rax
+  0000000140160A7B  xor     rcx, rdx
+  0000000140160A7E  mov     rdx, 7E3E205F86D60C61h
+  0000000140160A88  imul    rcx, rax
+  0000000140160A8C  mov     rax, 45E242506F5FF807h
+  0000000140160A96  add     rcx, rax
+  0000000140160A99  mov     rax, 0AE9087F8A90EE3F2h
+  0000000140160AA3  ror     rcx, 11h
+  0000000140160AA7  xor     rcx, rax
+  0000000140160AAA  mov     rax, 22332F0B00000000h
+  0000000140160AB4  rol     rcx, 13h
+  0000000140160AB8  add     rdx, rcx
+  0000000140160ABB  shr     rdx, 20h
+  0000000140160ABF  xor     rdx, 5291D595h
+  0000000140160AC6  or      rdx, rax
+  0000000140160AC9  mov     rax, 82797D3698C36180h
+  0000000140160AD3  xor     rdx, rcx
+  0000000140160AD6  xor     rdx, rax
+  0000000140160AD9  imul    rdx, rbx
+  0000000140160ADD  xor     ecx, ecx
+  0000000140160ADF  mov     rax, r10
+  0000000140160AE2  shr     rax, 1
+  0000000140160AE5  xor     rdx, rax
+  0000000140160AE8  mov     rax, 44B145A2EEB63ABh
+  0000000140160AF2  imul    rdx, rax
+  0000000140160AF6  mov     rax, 2B94139FE2F5BA44h
+  0000000140160B00  add     rdx, rax
+  0000000140160B03  mov     rax, 0B7D735F7B023C03Bh
+  0000000140160B0D  imul    r9, rdx
+  0000000140160B11  sub     r9, rdi
+  0000000140160B14  add     r9, rax
+  0000000140160B17  mov     eax, 1
+  0000000140160B1C  cpuid  ; <<< CPUID: VM/hypervisor detection
+  0000000140160B1E  mov     r8d, eax
+  0000000140160B21  mov     rax, rdi
+  0000000140160B24  xor     rax, r11
+  0000000140160B27  mov     [rbp+240h+var_270], ecx
+  0000000140160B2A  add     rax, r11
+  0000000140160B2D  jmp     loc_140160BBA
+  0000000140160B32  dw 5C41h, 36E9h, 0FE94h
+  0000000140160B38  dq 6C08355774487DFFh, 0CBE95D03F48D7E14h, 57373755CFFFF54h
+  0000000140160BB8  db 7Ch, 0B6h
+  0000000140160BBA  mov     [rbp+240h+var_26C], edx
+  0000000140160BBD  imul    rax, r10
+  0000000140160BC1  mov     [rbp+240h+var_274], ebx
+  0000000140160BC4  mov     rdx, 485491213028F8CDh
+  0000000140160BCE  mov     rcx, 5701EE41F052F52Eh
+  0000000140160BD8  add     rcx, rax
+  0000000140160BDB  mov     eax, r8d
+  0000000140160BDE  add     rcx, rdi
+  0000000140160BE1  xor     rax, r9
+  0000000140160BE4  imul    rcx, rax
+  0000000140160BE8  mov     rax, 0AB523D93B0F0D2E4h
+  0000000140160BF2  xor     rcx, rdx
+  0000000140160BF5  add     rax, rcx
+  0000000140160BF8  lea     rcx, [rax+rdx]
+  0000000140160BFC  mov     edx, 8FE0C87Dh
+  0000000140160C01  shr     rcx, 20h
+  0000000140160C05  xor     rcx, rdx
+  0000000140160C08  mov     rdx, 0B528C1C000000000h
+  0000000140160C12  or      rcx, rdx
+  0000000140160C15  lea     rdx, cs:1BFF533EAh
+  0000000140160C1C  xor     rcx, rax
+  0000000140160C1F  mov     edx, edx
+  0000000140160C21  mov     rax, 0AD1DED1ADFBBC179h
+  0000000140160C2B  xor     rcx, rax
+  0000000140160C2E  mov     rax, 85480BDFA024FEFBh
+  0000000140160C38  bswap   rcx
+  0000000140160C3B  xor     rcx, rax
+  0000000140160C3E  mov     rax, rcx
+  0000000140160C41  not     rax
+  0000000140160C44  imul    rax, rcx
+  0000000140160C48  mov     rcx, 0A7B5CDC178F36060h
+  0000000140160C52  xor     rax, rcx
+  0000000140160C55  mov     rcx, 0D8D8855EE993F2E5h
+  0000000140160C5F  imul    rax, rcx
+  0000000140160C63  mov     rcx, 0E962678EED6D616Ch
+  0000000140160C6D  xor     rax, rcx
+  0000000140160C70  mov     rbx, rax
+  0000000140160C73  shr     rbx, 1
+  0000000140160C76  xor     rbx, rax
+  0000000140160C79  mov     rax, 965DD1CB288AE33h
+  0000000140160C83  sub     rbx, rax
+  0000000140160C86  mov     rax, 5E32997F454EB3D3h
+  0000000140160C90  imul    rdx, rax
+  0000000140160C94  ror     rbx, 27h
+  0000000140160C98  mov     rax, 0DC67EEE54D2533EAh
+  0000000140160CA2  add     rax, rbx
+  0000000140160CA5  xor     rdx, rax
+  0000000140160CA8  mov     rax, 83C7C4EA571DD23Fh
+  0000000140160CB2  xor     rdi, rax
+  0000000140160CB5  add     rdi, r8
+  0000000140160CB8  jmp     loc_140160E3E
+  0000000140160CBD  db 8Dh, 7Ch, 0F0h
+  0000000140160CC0  dq 788B692E56B17A29h, 5A557C8D5881E206h, 0E8F1B13750D18B8Bh
+  0000000140160E38  db 8Dh, 0E9h, 1Dh, 1Ch, 2 dup(0)
+  0000000140160E3E  lea     ecx, [rbx+0Ch]
+  0000000140160E41  xor     ecx, 4
+  0000000140160E44  sub     ecx, 16h
+  0000000140160E47  and     ecx, 3Fh
+  0000000140160E4A  ror     rdx, cl
+  0000000140160E4D  lea     rax, [rdx+r9]
+  0000000140160E51  imul    rdi, rax
+  0000000140160E55  mov     rax, 1A4B6CBB6C7h
+  0000000140160E5F  xor     rdi, r15
+  0000000140160E62  mov     [rsi+70h], rdi
+  0000000140160E66  cmp     r14, rax
+  0000000140160E69  jnb     loc_1401610ED
+  0000000140160E6F  jmp     loc_140160F14
+  0000000140160E74  dd 0FE00348h
+  0000000140160E78  dq 0FB0EE8FFFF659D85h, 0FFFE973C810FFFFDh, 84EDE8FFF381D3E8h
+  0000000140160F10  rcl     byte ptr [rdi+rdi*8], 0FFh
+  0000000140160F14  nop
+  0000000140160F15  jmp     loc_140160F9E
+  0000000140160F1A  dw 349h, 0FE7h, 0A38Dh
+  0000000140160F20  dq 13AB800F53FFFFE2h, 0FFFF574D1E8FFFEh, 56EEE8FFFD979485h
+  0000000140160F98  db 0Fh, 8Ch, 64h, 80h, 2 dup(0FFh)
+  0000000140160F9E  call    sub_140129084
+  0000000140160FA3  jmp     rax
+  0000000140160FA5  db 0E8h, 2 dup(88h)
+  0000000140160FA8  dq 0FFFCC9FA820FFFFDh, 7810FFFF5627BE8h, 0F09F8D0F50FFFF75h
+  00000001401610E8  sbb     dword ptr [rbx+rdi*2-1], 0FFFFFFFFh
+  00000001401610ED  mov     r14, [rbp+240h+var_288]
+  00000001401610F1  add     r14, 30h ; '0'
+  00000001401610F5  mov     r15, [r14]
+  00000001401610F8  cmp     [rsi+38h], r12b
+  00000001401610FC  jnz     loc_1401611EA
+  0000000140161102  jmp     short loc_140161173
+  0000000140161104  dd 0F55D17E8h
+  0000000140161108  dq 0E8FFFF1C99800FFFh, 0A546870FFFF5827Ch, 0FFFF56111E8FFFCh
+  0000000140161170  db 0E2h, 0FEh, 0FFh
+  0000000140161173  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  0000000140161175  shl     rdx, 20h
+  0000000140161179  or      rax, rdx
+  000000014016117C  mov     rcx, rax
+  000000014016117F  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  0000000140161181  shl     rdx, 20h
+  0000000140161185  or      rax, rdx
+  0000000140161188  imul    rcx, rax
+  000000014016118C  xor     rcx, r13
+  000000014016118F  mov     [rsi+40h], rcx
+  0000000140161193  mov     byte ptr [rsi+38h], 1
+  0000000140161197  jmp     short loc_1401611EA
+  0000000140161199  db 48h, 81h, 0C4h, 0E0h, 1, 2 dup(0)
+  00000001401611A0  dq 349FFFD230A8E0Fh, 55FFFFD2678B0FE1h, 8148FFFEBEA7880Fh
+  00000001401611E8  db 0FCh, 0FFh
+  00000001401611EA  mov     r8, [rsi+40h]
+  00000001401611EE  lea     rax, cs:1BFFDFA87h
+  00000001401611F5  mov     eax, eax
+  00000001401611F7  lea     r11, cs:17897C667h
+  00000001401611FE  mov     rcx, 0D7BF0226DFD42BEAh
+  0000000140161208  mov     r11d, r11d
+  000000014016120B  imul    rax, rcx
+  000000014016120F  mov     rdx, r8
+  0000000140161212  lea     rdi, cs:17B69C5BAh
+  0000000140161219  not     rdx
+  000000014016121C  mov     edi, edi
+  000000014016121E  bswap   rdx
+  0000000140161221  xor     rdx, rax
+  0000000140161224  mov     rax, 0B701C2B24CBD760Dh
+  000000014016122E  xor     rdx, rax
+  0000000140161231  mov     rax, 1926C23ED27024A6h
+  000000014016123B  lea     ecx, [rdx+10h]
+  000000014016123E  xor     rdx, rax
+  0000000140161241  xor     ecx, 0Ch
+  0000000140161244  mov     rax, 44C4644F5156658Ah
+  000000014016124E  imul    r11, rax
+  0000000140161252  sub     ecx, 1Ah
+  0000000140161255  mov     rax, 67269676FA01984Fh
+  000000014016125F  and     ecx, 3Fh
+  0000000140161262  mov     r10, r11
+  0000000140161265  rol     rdx, cl
+  0000000140161268  xor     r10, 651CDF58h
+  000000014016126F  imul    r10, rax
+  0000000140161273  mov     rbx, rdx
+  0000000140161276  mov     rax, 8988C89EA2ACCB14h
+  0000000140161280  imul    rdi, rax
+  0000000140161284  shr     rbx, 20h
+  0000000140161288  mov     rax, rdx
+  000000014016128B  shl     rax, 20h
+  000000014016128F  mov     rcx, 87CAD096B8510E64h
+  0000000140161299  imul    rbx, rax
+  000000014016129D  mov     rax, 3054495B2A95F33Fh
+  00000001401612A7  sub     rbx, rax
+  00000001401612AA  mov     rax, 44C4644F5156658h
+  00000001401612B4  or      rbx, rdx
+  00000001401612B7  mov     rdx, 0C66954D791E68FF8h
+  00000001401612C1  imul    rbx, rax
+  00000001401612C5  mov     rax, r11
+  00000001401612C8  imul    rax, rdx
+  00000001401612CC  mov     rdx, 33BEFFEEC2535336h
+  00000001401612D6  sub     rbx, rax
+  00000001401612D9  mov     rax, 0E8671DE0D6EF8D65h
+  00000001401612E3  add     rbx, rax
+  00000001401612E6  mov     rax, rbx
+  00000001401612E9  imul    rax, rcx
+  00000001401612ED  jmp     loc_1401613B5
+  00000001401612F2  dw 8D48h, 2454h, 4870h
+  00000001401612F8  dq 0C0858D48E92BD02Bh, 4800EC8341000001h, 0EA8348F81A40D02Bh
+  00000001401613B0  db 2 dup(0FFh), 0C4h, 0Fh, 48h
+  00000001401613B5  mov     rcx, 388A2DBA6F3A2C92h
+  00000001401613BF  xor     rax, rcx
+  00000001401613C2  mov     rcx, 2F5EEA514178815Dh
+  00000001401613CC  add     rax, rcx
+  00000001401613CF  mov     rcx, 1E08536F59AED615h
+  00000001401613D9  ror     rax, 0Ah
+  00000001401613DD  add     rcx, rax
+  00000001401613E0  mov     rax, 0A546AB717CE3E67Ah
+  00000001401613EA  ror     rcx, 34h
+  00000001401613EE  xor     rcx, rax
+  00000001401613F1  mov     rax, 96BFBCDB51B01EECh
+  00000001401613FB  rol     rcx, 1Dh
+  00000001401613FF  imul    rcx, rax
+  0000000140161403  xor     rcx, rdx
+  0000000140161406  lea     r9, [rcx+rax]
+  000000014016140A  mov     rax, 66B98C7D2B60C200h
+  0000000140161414  xor     r9, rax
+  0000000140161417  not     rcx
+  000000014016141A  imul    r9, rcx
+  000000014016141E  mov     rax, 48D2A7972A8A8E2Dh
+  0000000140161428  sub     r9, rax
+  000000014016142B  mov     rax, r10
+  000000014016142E  imul    r9, rbx
+  0000000140161432  shr     rax, 1
+  0000000140161435  xor     r9, rax
+  0000000140161438  mov     rax, 22623227A8AB32Ch
+  0000000140161442  imul    r9, rax
+  0000000140161446  mov     rax, 717DDA6837861C90h
+  0000000140161450  sub     r9, rax
+  0000000140161453  imul    r9, r8
+  0000000140161457  sub     r9, rdi
+  000000014016145A  xor     ecx, ecx
+  000000014016145C  mov     rax, 47E5E761674F3174h
+  0000000140161466  add     r9, rax
+  0000000140161469  mov     eax, 1
+  000000014016146E  cpuid  ; <<< CPUID: VM/hypervisor detection
+  0000000140161470  mov     r8d, eax
+  0000000140161473  mov     rax, rdi
+  0000000140161476  mov     [rbp+240h+var_270], ecx
+  0000000140161479  xor     rax, r11
+  000000014016147C  add     rax, r11
+  000000014016147F  mov     [rbp+240h+var_26C], edx
+  0000000140161482  imul    rax, r10
+  0000000140161486  mov     [rbp+240h+var_274], ebx
+  0000000140161489  mov     rdx, 7197DC638731962Fh
+  0000000140161493  mov     rcx, 0C9B39B5C8C52F52Eh
+  000000014016149D  add     rcx, rax
+  00000001401614A0  mov     rax, r9
+  00000001401614A3  add     rcx, rdi
+  00000001401614A6  xor     rax, r8
+  00000001401614A9  jmp     loc_1401615F1
+  00000001401614AE  dw 348h
+  00000001401614B0  dq 41FFFEDB1C820FE7h, 0F53FFFDD511E95Eh, 7D5EE8FFFDDD5C80h
+  00000001401615F0  db 0FFh
+  00000001401615F1  imul    rcx, rax
+  00000001401615F5  mov     rax, 0C9D9120BEAB56944h
+  00000001401615FF  xor     rcx, rdx
+  0000000140161602  add     rax, rcx
+  0000000140161605  lea     rcx, [rax+rdx]
+  0000000140161609  mov     rdx, 45BB214000000000h
+  0000000140161613  shr     rcx, 20h
+  0000000140161617  xor     rcx, 494AA21Ch
+  000000014016161E  or      rcx, rdx
+  0000000140161621  lea     rdx, cs:1BFF7E541h
+  0000000140161628  xor     rcx, rax
+  000000014016162B  mov     edx, edx
+  000000014016162D  mov     rax, 0D17153D92D852A8Fh
+  0000000140161637  xor     rcx, rax
+  000000014016163A  mov     rax, rcx
+  000000014016163D  not     rax
+  0000000140161640  imul    rax, rcx
+  0000000140161644  mov     rcx, 7BFD5E67C3349A5Eh
+  000000014016164E  xor     rax, rcx
+  0000000140161651  mov     rcx, 0A845C38482E40B7h
+  000000014016165B  add     rcx, rax
+  000000014016165E  mov     rbx, rcx
+  0000000140161661  mov     rax, rcx
+  0000000140161664  shl     rax, 20h
+  0000000140161668  shr     rbx, 20h
+  000000014016166C  imul    rbx, rax
+  0000000140161670  mov     rax, 7A81BC99475FE8C5h
+  000000014016167A  add     rbx, rax
+  000000014016167D  mov     rax, 4B22AE3A0DE8322Bh
+  0000000140161687  or      rbx, rcx
+  000000014016168A  imul    rdx, rax
+  000000014016168E  lea     ecx, [rbx+0Bh]
+  0000000140161691  mov     rax, 228690E926E7E541h
+  000000014016169B  xor     ecx, 0FFFFFFE4h
+  000000014016169E  add     rax, rbx
+  00000001401616A1  inc     ecx
+  00000001401616A3  xor     rdx, rax
+  00000001401616A6  and     ecx, 3Fh
+  00000001401616A9  ror     rdx, cl
+  00000001401616AC  mov     rcx, 466E7DDB433B862Eh
+  00000001401616B6  mov     rax, rdx
+  00000001401616B9  ror     rax, 20h
+  00000001401616BD  xor     rcx, rax
+  00000001401616C0  mov     rax, 179F227927463CB4h
+  00000001401616CA  add     rcx, rdx
+  00000001401616CD  mov     rdx, 55A3931D1D92B948h
+  00000001401616D7  add     rax, rcx
+  00000001401616DA  not     rcx
+  00000001401616DD  xor     rax, rdx
+  00000001401616E0  imul    rax, rcx
+  00000001401616E4  jmp     short loc_140161744
+  00000001401616E6  dw 5DE8h
+  00000001401616E8  dq 0FFD034870FFFF596h, 810FFFF56E6EE8FFh, 5E415D41FFFDCD0Bh
+  0000000140161740  db 84h, 0CFh, 0FDh, 0FFh
+  0000000140161744  mov     rcx, 0CA32C4D5E4B107EAh
+  000000014016174E  add     rcx, rax
+  0000000140161751  mov     rax, 447784B07624AF19h
+  000000014016175B  xor     rdi, rax
+  000000014016175E  add     rcx, r9
+  0000000140161761  add     rdi, r8
+  0000000140161764  mov     rax, 1A4B6CBB6C8h
+  000000014016176E  imul    rcx, rdi
+  0000000140161772  xor     rcx, r15
+  0000000140161775  mov     [rsi+48h], rcx
+  0000000140161779  cmp     r14, rax
+  000000014016177C  jnb     loc_140161B60
+  0000000140161782  jmp     loc_1401618EE
+  0000000140161787  db 5Dh
+  0000000140161788  dq 0E70349FFFE19A5E9h, 0C5E8FFFFFF5B800Fh, 0FD2501890FFFF548h
+  00000001401618E8  db 0Fh, 8Fh, 8Ah, 8, 0FEh, 0FFh
+  00000001401618EE  nop
+  00000001401618EF  jmp     short loc_14016194A
+  00000001401618F1  db 48h, 81h, 0C4h, 0E8h, 2, 2 dup(0)
+  00000001401618F8  dq 4DE8FFFF1B8E8B0Fh, 0FDABD7880FFFF54Dh, 2CE8FFF377D2E8FFh
+  0000000140161948  db 2 dup(0FFh)
+  000000014016194A  call    sub_140123C94
+  000000014016194F  jmp     rax
+  0000000140161951  db 48h, 3, 0E7h, 0Fh, 84h, 61h, 7Bh
+  0000000140161958  dq 8B495F415E41FFFEh, 0C141FFFEAA9AE9E3h, 8B41382474891EC3h
+  0000000140161AA0  db 89h, 0BEh, 19h, 2 dup(0FFh)
+  0000000140161AA5  nop
+  0000000140161AA6  nop
+  0000000140161AA7  nop
+  0000000140161AA8  nop
+  0000000140161AA9  nop
+  0000000140161AAA  nop
+  0000000140161AAB  jmp     loc_140161B60
+  0000000140161AB0  dq 0E8CDE8FFF3759BE8h, 0FFFE23898E0FFFFFh, 0DE5D5037EC5D77FAh
+  0000000140161B60  mov     rdi, [rbp+240h+var_288]
+  0000000140161B64  lea     r8, [rsi+130h]
+  0000000140161B6B  add     rdi, 58h ; 'X'
+  0000000140161B6F  mov     r14, [rdi]
+  0000000140161B72  cmp     [rsi+128h], r12b
+  0000000140161B79  jnz     loc_140161ED8
+  0000000140161B7F  jmp     loc_140161D3E
+  0000000140161B84  dd 5D415C41h
+  0000000140161B88  dq 7FA4E8FFFDB96FE9h, 0FFFE30CD830FFFFDh, 0FC77F48B0FE00349h
+  0000000140161D38  db 5Eh, 0E9h, 26h, 0A3h, 0FCh, 0FFh
+  0000000140161D3E  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  0000000140161D40  shl     rdx, 20h
+  0000000140161D44  or      rax, rdx
+  0000000140161D47  mov     rcx, rax
+  0000000140161D4A  rdtsc  ; <<< RDTSC: timing-based anti-debug
+  0000000140161D4C  shl     rdx, 20h
+  0000000140161D50  or      rax, rdx
+  0000000140161D53  imul    rcx, rax
+  0000000140161D57  xor     rcx, r13
+  0000000140161D5A  mov     [r8], rcx
+  0000000140161D5D  mov     byte ptr [rsi+128h], 1
+  0000000140161D64  jmp     loc_140161ED8
+  0000000140161D69  db 41h, 5Fh, 0E9h, 6Dh, 0DAh, 0FCh, 0FFh
+  0000000140161D70  dq 3B830FFFF4A6ABE8h, 0FFF34660E8FFFF65h, 1EE8FFFE5712800Fh
+  0000000140161ED8  mov     r8, [r8]
+  0000000140161EDB  lea     rax, cs:1BFF88D2Ch
+  0000000140161EE2  mov     eax, eax
+  0000000140161EE4  lea     r10, cs:1909576B6h
+  0000000140161EEB  mov     rcx, 12C1630462A96382h
+  0000000140161EF5  mov     r10d, r10d
+  0000000140161EF8  imul    rax, rcx
+  0000000140161EFC  mov     rcx, 3B278609ED67E5D7h
+  0000000140161F06  lea     r11, cs:16F4D43E2h
+  0000000140161F0D  xor     rax, r8
+  0000000140161F10  mov     r11d, r11d
+  0000000140161F13  xor     rax, rcx
+  0000000140161F16  mov     rdx, 8803BA1BFA85D700h
+  0000000140161F20  mov     rcx, 1D7795BCAEB1CA59h
+  0000000140161F2A  mov     rbx, 0B4A4AF792BE540DBh
+  0000000140161F34  sub     rax, rcx
+  0000000140161F37  mov     rcx, 2BE540DB00000000h
+  0000000140161F41  ror     rax, 27h
+  0000000140161F45  add     rdx, rax
+  0000000140161F48  shr     rdx, 20h
+  0000000140161F4C  xor     rdx, 416E4E9Eh
+  0000000140161F53  or      rdx, rcx
+  0000000140161F56  mov     rcx, 7F1B7DB2814D3EDh
+  0000000140161F60  xor     rdx, rax
+  0000000140161F63  mov     rax, 7B8C63406E09CBC6h
+  0000000140161F6D  xor     rdx, rax
+  0000000140161F70  mov     rax, 44C4644F6D6E8584h
+  0000000140161F7A  imul    r10, rax
+  0000000140161F7E  add     rbx, rdx
+  0000000140161F81  mov     eax, 8DEA78F0h
+  0000000140161F86  not     rdx
+  0000000140161F89  mov     r9, r10
+  0000000140161F8C  xor     r9, rax
+  0000000140161F8F  mov     rax, 672696772425C846h
+  0000000140161F99  imul    r9, rax
+  0000000140161F9D  mov     rax, 8988C89EDADD0B08h
+  0000000140161FA7  imul    r11, rax
+  0000000140161FAB  mov     rax, 5BB723126E1F8858h
+  0000000140161FB5  xor     rbx, rax
+  0000000140161FB8  mov     rax, 44C4644F6D6E858h
+  0000000140161FC2  imul    rbx, rdx
+  0000000140161FC6  mov     rdx, 3F776D1CAA0C49F8h
+  0000000140161FD0  imul    rbx, rax
+  0000000140161FD4  mov     rax, r10
+  0000000140161FD7  imul    rax, rdx
+  0000000140161FDB  mov     rdx, 1102E4A2F3CF5CD0h
+  0000000140161FE5  sub     rbx, rax
+  0000000140161FE8  mov     rax, 0C21BB014C8A753EDh
+  0000000140161FF2  add     rbx, rax
+  0000000140161FF5  mov     rax, rbx
+  0000000140161FF8  jmp     loc_140162161
+  0000000140161FFD  db 0E8h, 4Eh, 70h
+  0000000140162000  dq 0FFFFD134AE8FFF3h, 0C1C141FFFCC21283h, 41D53341C6D2411Eh
+  0000000140162160  db 0FFh
+  0000000140162161  imul    rax, rbx
+  0000000140162165  imul    rax, rbx
+  0000000140162169  sub     rax, rcx
+  000000014016216C  mov     rcx, 21812205C51D2387h
+  0000000140162176  xor     rax, rcx
+  0000000140162179  lea     rcx, cs:1BFF9198Fh
+  0000000140162180  rol     rax, 2Dh
+  0000000140162184  mov     ecx, ecx
+  0000000140162186  imul    rcx, rdx
+  000000014016218A  mov     rdx, 61E3BC0838FE4432h
+  0000000140162194  xor     rcx, rax
+  0000000140162197  mov     rax, 4D2107450F0FD968h
+  00000001401621A1  imul    rcx, rax
+  00000001401621A5  lea     rax, cs:1BFF6C53Fh
+  00000001401621AC  mov     eax, eax
+  00000001401621AE  imul    rax, rdx
+  00000001401621B2  xor     rcx, rax
+  00000001401621B5  mov     rax, 1314A8FD89A79BC0h
+  00000001401621BF  xor     rcx, rax
+  00000001401621C2  mov     rax, 8FD5E5EE25BC3087h
+  00000001401621CC  mov     rdx, rcx
+  00000001401621CF  ror     rdx, 20h
+  00000001401621D3  xor     rdx, rax
+  00000001401621D6  mov     rax, r9
+  00000001401621D9  shr     rax, 1
+  00000001401621DC  add     rdx, rcx
+  00000001401621DF  imul    rdx, rbx
+  00000001401621E3  xor     rdx, rax
+  00000001401621E6  mov     rax, 22623227B6B742Ch
+  00000001401621F0  imul    rdx, rax
+  00000001401621F4  mov     rax, 36FA4BC5C4AA7AA0h
+  00000001401621FE  sub     rdx, rax
+  0000000140162201  xor     ecx, ecx
+  0000000140162203  imul    r8, rdx
+  0000000140162207  mov     rax, 28CFAFA0232B2EC8h
+  0000000140162211  sub     r8, r11
+  0000000140162214  add     r8, rax
+  0000000140162217  mov     eax, 1
+  000000014016221C  cpuid  ; <<< CPUID: VM/hypervisor detection
+  000000014016221E  mov     [rbp+240h+var_270], ecx
+  0000000140162221  mov     [rbp+240h+var_26C], edx
+  0000000140162224  mov     rdx, 0C9B39B5C8C52F52Eh
+  000000014016222E  mov     [rbp+240h+var_274], ebx
+  0000000140162231  lea     ecx, [r8-0Dh]
+  0000000140162235  mov     ebx, eax
+  0000000140162237  and     ecx, 3Fh
+  000000014016223A  mov     rax, r11
+  000000014016223D  xor     rax, r10
+  0000000140162240  add     rax, r10
+  0000000140162243  imul    rax, r9
+  0000000140162247  jmp     short loc_140162293
+  0000000140162249  db 49h, 8Bh, 0E3h, 0E9h, 65h, 0D5h, 0FEh
+  0000000140162250  dq 840FFFF49F5AE8FFh, 0F49E63E8FFFEA262h, 0E8FFFD05728C0FFFh
+  0000000140162290  db 18h, 2 dup(0FFh)
+  0000000140162293  add     rdx, rax
+  0000000140162296  mov     rax, r8
+  0000000140162299  xor     rax, rbx
+  000000014016229C  add     rdx, r11
+  000000014016229F  imul    rdx, rax
+  00000001401622A3  mov     rax, 84302F59CB4692F3h
+  00000001401622AD  xor     rdx, rax
+  00000001401622B0  mov     rax, 0F459631000000000h
+  00000001401622BA  rol     rdx, cl
+  00000001401622BD  mov     rcx, 761FF1DC47567D82h
+  00000001401622C7  add     rcx, rdx
+  00000001401622CA  shr     rcx, 20h
+  00000001401622CE  xor     rcx, 519CF7D2h
+  00000001401622D5  or      rcx, rax
+  00000001401622D8  mov     rax, 0CC07588CEFB52511h
+  00000001401622E2  xor     rcx, rdx
+  00000001401622E5  mov     rdx, 0C70EDD180AE7440Ah
+  00000001401622EF  xor     rcx, rax
+  00000001401622F2  mov     rax, 5839874172CF0570h
+  00000001401622FC  bswap   rcx
+  00000001401622FF  xor     rcx, rax
+  0000000140162302  mov     rax, 0C1A8C0D8537CE4Ah
+  000000014016230C  add     rax, rcx
+  000000014016230F  not     rcx
+  0000000140162312  xor     rax, rdx
+  0000000140162315  imul    rax, rcx
+  0000000140162319  mov     rcx, 3D0935B943881545h
+  0000000140162323  add     rax, rcx
+  0000000140162326  mov     rcx, 0F516282A26375495h
+  0000000140162330  xor     rax, rcx
+  0000000140162333  mov     rcx, 3086718AC2C78D5h
+  000000014016233D  add     rax, rcx
+  0000000140162340  mov     rcx, 39AC9D21B3359AD7h
+  000000014016234A  mov     rdx, rax
+  000000014016234D  shr     rdx, 1
+  0000000140162350  xor     rdx, rax
+  0000000140162353  mov     rax, 5A5E1F73C7AC7AEh
+  000000014016235D  add     rdx, rax
+  0000000140162360  mov     rax, rdx
+  0000000140162363  ror     rax, 20h
+  0000000140162367  xor     rcx, rax
+  000000014016236A  mov     rax, 8C6211BDD494B8B5h
+  0000000140162374  add     rcx, rdx
+  0000000140162377  mov     rdx, 0EE17909B2B914258h
+  0000000140162381  add     rax, rcx
+  0000000140162384  xor     rax, rdx
+  0000000140162387  imul    rax, rcx
+  000000014016238B  mov     rcx, 97CDF245342FE185h
+  0000000140162395  add     rcx, rax
+  0000000140162398  mov     rax, 447784B43F64FE4Ah
+  00000001401623A2  jmp     loc_140162526
+  00000001401623A7  db 5Dh
+  00000001401623A8  dq 0E20348FFFF3C59E9h, 7DE8FFFE3E94860Fh, 0FFFD2AAAE8FFF36Ch
+  0000000140162520  db 0Fh, 87h, 53h, 0A9h, 0FCh, 0FFh
+  0000000140162526  xor     r11, rax
+  0000000140162529  add     rcx, r8
+  000000014016252C  add     r11, rbx
+  000000014016252F  mov     rax, 1A4B6CBB6C9h
+  0000000140162539  imul    rcx, r11
+  000000014016253D  xor     rcx, r14
+  0000000140162540  mov     [rsi+138h], rcx
+  0000000140162547  cmp     rdi, rax
+  000000014016254A  jnb     loc_14016291C
+  0000000140162550  jmp     loc_1401627A9
+  0000000140162555  db 55h, 0Fh, 85h
+  0000000140162558  dq 8B44C603FFFD71A0h, 44D80344F824244Ch, 0C28B41C5FF41CF33h
+  00000001401627A8  db 0FFh
+  00000001401627A9  nop
+  00000001401627AA  jmp     short loc_140162807
+  00000001401627AC  dd 0F45A8FE8h
+  00000001401627B0  dq 41FFFD0295800FFFh, 0BCE95C415F415D5Eh, 0FFF369D8E8FFFC90h
+  0000000140162800  db 41h, 5Ch, 0E9h, 95h, 0D8h, 2 dup(0FFh)
+  0000000140162807  call    sub_1401DD638
+  000000014016280C  jmp     rax
+  000000014016280E  dw 8B49h
+  0000000140162810  dq 9885E95D415F41E3h, 620C48148FFFDh, 57FFFE051B830F00h
+  0000000140162898  db 80h, 0E8h, 0B4h, 2 dup(0FFh)
+  000000014016289D  nop
+  000000014016289E  nop
+  000000014016289F  nop
+  00000001401628A0  nop
+  00000001401628A1  nop
+  00000001401628A2  nop
+  00000001401628A3  jmp     short loc_14016291C
+  00000001401628A5  db 49h, 3, 0E7h
+  00000001401628A8  dq 0F55FFFF93388F0Fh, 495D41FFFC802787h, 49FFFE9576E9E38Bh
+  0000000140162918  db 10h, 0B0h, 0FDh, 0FFh
+  000000014016291C  mov     rax, [rbp+240h+var_288]
+  0000000140162920  lock inc dword ptr [rax+2Ch]
+  0000000140162924  jmp     loc_140162AEB
+  0000000140162929  db 0E8h, 4Bh, 41h, 0FEh, 0FFh, 0Fh, 84h
+  0000000140162930  dq 0F37E27E8FFFF94DEh, 0E8FFFE4A09820FFFh, 0FE9AD3E8FFF366BCh
+  00000001401629B8  db 0FEh, 0FFh
+  00000001401629BA  pause
+  00000001401629BC  jmp     loc_140162A5B
+  00000001401629C1  db 0E9h, 13h, 0EEh, 0FCh, 0FFh, 0E8h, 75h
+  00000001401629C8  dq 0FF429B810FFFF534h, 735828545E7379FFh, 495D5D41E7E9408Ch
+  0000000140162A58  retn
+  0000000140162A59  db 2 dup(0FFh)
+  0000000140162A5B  mov     rcx, [rbp+240h+var_288]
+  0000000140162A5F  xor     eax, eax
+  0000000140162A61  lock cmpxchg [rcx+2Ch], r12d
+  0000000140162A67  jz      loc_1401629BA
+  0000000140162A6D  jmp     short loc_140162AEB
+  0000000140162A6F  db 51h
+  0000000140162A70  dq 348FFFF0DB18F0Fh, 49FFFEB47E8B0FE7h, 0FFFF202E8A0FE603h
+  0000000140162AE8  db 0A7h, 2 dup(0FFh)
+  0000000140162AEB  xor     eax, eax
+  0000000140162AED  mov     rcx, [rbp+240h+var_30]
+  0000000140162AF4  xor     rcx, rsp; StackCookie
+  0000000140162AF7  jmp     loc_140162C53
+  0000000140162AFC  dd 5E415C41h
+  0000000140162B00  dq 860F57FFFC9F3AE9h, 18C48148FFFD11C3h, 0FC7A5F870F000005h
+  0000000140162C50  db 0CEh, 2 dup(0FFh)
+  0000000140162C53  call    __security_check_cookie
+  0000000140162C58  jmp     loc_140162CFB
+  0000000140162C5D  db 0E8h, 25h, 8Ah
+  0000000140162C60  dq 0FFFE47D18D0FFFFCh, 83FEE8FFF36553E8h, 0FFFE8C558E0FFFFCh
+  0000000140162CF8  db 0A6h, 0FEh, 0FFh
+  0000000140162CFB  lea     r11, [rsp+340h+var_20]
+  0000000140162D03  mov     rbx, [r11+38h]
+  0000000140162D07  mov     rsi, [r11+40h]
+  0000000140162D0B  mov     rdi, [r11+48h]
+  0000000140162D0F  jmp     loc_140162E74
+  0000000140162D14  dd 0C7840F50h
+  0000000140162D18  dq 756E7645E8FFFDDEh, 56375D7E7CC4ED72h, 41FFFE0F09E96687h
+  0000000140162E70  db 16h, 5Ah, 0FEh, 0FFh
+  0000000140162E74  mov     rsp, r11
+  0000000140162E77  pop     r15
+  0000000140162E79  pop     r14
+  0000000140162E7B  pop     r13
+  0000000140162E7D  pop     r12
+  0000000140162E7F  pop     rbp
+  0000000140162E80  retn
+  0000000140162E81  db 0E8h, 6Bh, 0CAh, 2 dup(0FFh), 0Fh, 88h
+  0000000140162E88  dq 5241F682FFFF0716h, 0F53FFFE779E850Fh, 0C48148FFFD58D385h
+  00000001401630B0  db 3 dup(0)
+

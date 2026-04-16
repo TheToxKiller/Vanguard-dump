@@ -1,0 +1,161 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_14026C30C                          ║
+// ║  VA        : 0x14026C30C                            ║
+// ║  RVA       : 0x26C30C                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (26) ──
+//   0x14026C313  sub_14026C30C
+//   0x14026C31B  sub_14026C30C
+//   0x14026C320  sub_14026C30C
+//   0x14026C328  sub_14026C30C
+//   0x14026C32D  sub_14026C30C
+//   0x14026C335  sub_14026C30C
+//   0x14026C33A  sub_14026C30C
+//   0x14026C342  sub_14026C30C
+//   0x14026C347  sub_14026C30C
+//   0x14026C34F  sub_14026C30C
+//   0x14026C354  sub_14026C30C
+//   0x14026C35C  sub_14026C30C
+//   0x14026C361  sub_14026C30C
+//   0x14026C369  sub_14026C30C
+//   0x14026C371  sub_14026C30C
+//   0x14026C379  sub_14026C30C
+//   0x14026C381  sub_14026C30C
+//   0x14026C389  sub_14026C30C
+//   0x14026C391  sub_14026C30C
+//   0x14026C396  sub_14026C30C
+//   0x14026C39E  sub_14026C30C
+//   0x14026C3A3  sub_14026C30C
+//   0x14026C3A5  sub_14026C30C
+//   0x14026C3AD  sub_14026C30C
+//   0x14026C3B4  sub_14026C30C
+//   0x1426DCA18  sub_1426DCA18
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_14026C30C(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        __int64 a10,
+        __int64 a11,
+        __int64 (__fastcall *a12)(__int64, _QWORD, unsigned __int64, __int64, unsigned __int64, unsigned __int64, unsigned __int64, unsigned __int64),
+        int a13,
+        __int64 a14,
+        int a15,
+        char a16,
+        int a17,
+        int a18,
+        int a19,
+        __int64 a20,
+        __int64 a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        __int64 a26,
+        int a27,
+        int a28,
+        int a29,
+        __int64 a30,
+        int a31,
+        int a32,
+        int a33,
+        int a34,
+        int a35,
+        int a36,
+        int a37,
+        int a38,
+        __int64 a39,
+        int a40,
+        __int64 a41,
+        int a42,
+        __int64 a43,
+        int a44,
+        int a45,
+        int a46,
+        int a47,
+        int a48,
+        int a49,
+        int a50,
+        int a51,
+        int a52,
+        int a53,
+        __int64 a54,
+        int a55,
+        __int64 a56)
+{
+  int v56; // eax
+  int v57; // edx
+  int v58; // ecx
+  int v59; // r8d
+  int v60; // r9d
+
+  v56 = a12(a54, a12, STACK[0x258], a30, STACK[0x290], STACK[0x298], STACK[0x2A0], STACK[0x2A8]);
+  sub_1426DCA18(
+    v58,
+    v57,
+    v59,
+    v60,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    (_DWORD)a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39,
+    a40,
+    a41,
+    a42,
+    v56,
+    a44,
+    a45,
+    a46,
+    a47,
+    a48,
+    a49,
+    a50,
+    a51,
+    a52,
+    a53,
+    a54,
+    a55,
+    a56);
+}
+

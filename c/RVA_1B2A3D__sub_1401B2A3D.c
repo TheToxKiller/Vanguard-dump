@@ -1,0 +1,105 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1401B2A3D                          ║
+// ║  VA        : 0x1401B2A3D                            ║
+// ║  RVA       : 0x1B2A3D                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLED BY (1) ──
+//   0x14020C261  sub_14020C25E
+//
+// ── CALLS TO (2) ──
+//   0x1401B2A44  sub_1401B2A3D
+//   0x1421D65CC  sub_1421D65CC
+//
+// ───────────────────────────────────────────────────────
+
+// positive sp value has been detected, the output may be wrong!
+void __fastcall __noreturn sub_1401B2A3D(
+        int a1,
+        int a2,
+        int a3,
+        int a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        int a13,
+        int a14,
+        int a15,
+        int a16,
+        __int64 a17,
+        __int64 a18,
+        int a19,
+        int a20,
+        int a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        int a26,
+        int a27,
+        int a28,
+        int a29,
+        int a30,
+        int a31,
+        __int64 a32,
+        int a33,
+        int a34,
+        int a35,
+        __int64 a36,
+        int a37,
+        int a38,
+        int a39,
+        __int64 a40)
+{
+  unsigned __int64 v40; // [rsp-8h] [rbp-8h]
+
+  STACK[0x228] = v40;
+  sub_1421D65CC(
+    a1,
+    a2,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39,
+    a40);
+}
+

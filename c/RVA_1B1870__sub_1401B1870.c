@@ -1,0 +1,134 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1401B1870                          ║
+// ║  VA        : 0x1401B1870                            ║
+// ║  RVA       : 0x1B1870                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (22) ──
+//   0x1401B1877  sub_1401B1870
+//   0x1401B187F  sub_1401B1870
+//   0x1401B1887  sub_1401B1870
+//   0x1401B188F  sub_1401B1870
+//   0x1401B1897  sub_1401B1870
+//   0x1401B189F  sub_1401B1870
+//   0x1401B18A7  sub_1401B1870
+//   0x1401B18AC  sub_1401B1870
+//   0x1401B18B4  sub_1401B1870
+//   0x1401B18B9  sub_1401B1870
+//   0x1401B18C1  sub_1401B1870
+//   0x1401B18C6  sub_1401B1870
+//   0x1401B18CE  sub_1401B1870
+//   0x1401B18D3  sub_1401B1870
+//   0x1401B18DB  sub_1401B1870
+//   0x1401B18E0  sub_1401B1870
+//   0x1401B18E8  sub_1401B1870
+//   0x1401B18ED  sub_1401B1870
+//   0x1401B18EF  sub_1401B1870
+//   0x1401B18F7  sub_1401B1870
+//   0x1401B18FE  sub_1401B1870
+//   0x14190BE5E  sub_14190BE5E
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_1401B1870(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        __int64 a12,
+        int a13,
+        __int64 a14,
+        int a15,
+        __int64 a16,
+        int a17,
+        int a18,
+        int a19,
+        int a20,
+        int a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        __int64 a26,
+        int a27,
+        __int64 a28,
+        void (__fastcall *a29)(__int64, _QWORD, __int64, __int64, unsigned __int64, unsigned __int64),
+        __int64 a30,
+        int a31,
+        int a32,
+        int a33,
+        __int64 a34,
+        int a35,
+        int a36,
+        int a37,
+        int a38,
+        int a39,
+        int a40,
+        int a41,
+        int a42,
+        __int64 a43,
+        __int64 a44,
+        __int64 a45,
+        __int64 a46,
+        __int64 a47)
+{
+  int v47; // edx
+  int v48; // ecx
+  int v49; // r8d
+  int v50; // r9d
+
+  a29(a14, a29, a47, a26, STACK[0x280], STACK[0x288]);
+  sub_14190BE5E(
+    v48,
+    v47,
+    v49,
+    v50,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    (_DWORD)a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39,
+    a40,
+    a41,
+    a42,
+    a43);
+}
+

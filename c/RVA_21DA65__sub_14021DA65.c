@@ -1,0 +1,144 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_14021DA65                          ║
+// ║  VA        : 0x14021DA65                            ║
+// ║  RVA       : 0x21DA65                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ⚠ SUSPICIOUS PATTERNS DETECTED:
+//   [0x14021DA75] cpuid  --  CPUID: VM/hypervisor detection
+//
+// ── CALLS TO (8) ──
+//   0x14021DA6D  sub_14021DA65
+//   0x14021DA75  sub_14021DA65
+//   0x14021DA77  sub_14021DA65
+//   0x14021DA7F  sub_14021DA65
+//   0x14021DA84  sub_14021DA65
+//   0x14021DA8C  sub_14021DA65
+//   0x14021DA94  sub_14021DA65
+//   0x1428DDCD8  sub_1428DDCD8
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_14021DA65(
+        __int64 a1,
+        __int64 a2,
+        int a3,
+        int a4,
+        __int64 a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        int a13,
+        __int64 a14,
+        int a15,
+        int a16,
+        int a17,
+        int a18,
+        int a19,
+        __int64 a20,
+        int a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        int a26,
+        __int64 a27,
+        __int64 a28,
+        int a29,
+        __int64 a30,
+        int a31,
+        int a32,
+        int a33,
+        int a34,
+        int a35,
+        int a36,
+        int a37,
+        int a38,
+        int a39,
+        int a40,
+        int a41,
+        int a42,
+        int a43,
+        int a44,
+        int a45,
+        int a46,
+        int a47,
+        int a48,
+        int a49,
+        int a50,
+        int a51,
+        int a52,
+        int a53,
+        int a54,
+        int a55,
+        int a56,
+        __int64 a57)
+{
+  _RAX = a28;
+  __asm { cpuid }
+  STACK[0x208] = _RCX;
+  sub_1428DDCD8(
+    _RCX,
+    _RDX,
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    _RDX,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    _RAX,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    _RBX,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39,
+    a40,
+    a41,
+    a42,
+    a43,
+    a44,
+    a45,
+    a46,
+    a47,
+    a48,
+    a49,
+    a50,
+    a51,
+    a52,
+    a53,
+    a54,
+    a55,
+    a56,
+    a57);
+}
+

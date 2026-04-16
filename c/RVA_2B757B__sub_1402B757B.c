@@ -1,0 +1,105 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1402B757B                          ║
+// ║  VA        : 0x1402B757B                            ║
+// ║  RVA       : 0x2B757B                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (19) ──
+//   0x1402B7582  sub_1402B757B
+//   0x1402B758A  sub_1402B757B
+//   0x1402B758F  sub_1402B757B
+//   0x1402B7597  sub_1402B757B
+//   0x1402B759C  sub_1402B757B
+//   0x1402B75A4  sub_1402B757B
+//   0x1402B75A9  sub_1402B757B
+//   0x1402B75B1  sub_1402B757B
+//   0x1402B75B6  sub_1402B757B
+//   0x1402B75BE  sub_1402B757B
+//   0x1402B75C6  sub_1402B757B
+//   0x1402B75CE  sub_1402B757B
+//   0x1402B75D6  sub_1402B757B
+//   0x1402B75DE  sub_1402B757B
+//   0x1402B75E3  sub_1402B757B
+//   0x1400087A0  sub_14020C096
+//   0x1402B75EB  sub_1402B757B
+//   0x1402B75F2  sub_1402B757B
+//   0x142851ED0  sub_142851ED0
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_1402B757B(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        int a5,
+        int a6,
+        int a7,
+        __int64 a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        int a13,
+        __int64 a14,
+        int a15,
+        int a16,
+        __int64 a17,
+        int a18,
+        int a19,
+        int a20,
+        int a21,
+        __int64 a22,
+        __int64 a23,
+        __int64 a24,
+        __int64 a25,
+        __int64 a26,
+        __int64 a27,
+        __int64 a28,
+        __int64 a29,
+        __int64 a30,
+        __int64 a31,
+        __int64 a32,
+        __int64 a33,
+        __int64 a34,
+        __int64 a35,
+        __int64 a36,
+        __int64 a37,
+        __int64 a38,
+        __int64 a39,
+        __int64 a40,
+        __int64 a41,
+        __int64 a42,
+        __int64 a43,
+        __int64 a44,
+        __int64 a45,
+        __int64 a46,
+        __int64 a47,
+        __int64 a48,
+        __int64 a49,
+        __int64 a50,
+        __int64 a51,
+        __int64 a52,
+        __int64 a53,
+        __int64 a54,
+        __int64 a55,
+        __int64 a56,
+        __int64 a57,
+        __int64 a58,
+        __int64 a59,
+        __int64 a60,
+        __int64 a61,
+        __int64 a62,
+        __int64 a63)
+{
+  __int64 a64; // [rsp+220h] [rbp+200h]
+  int v64; // edx
+  int v65; // ecx
+  int v66; // r8d
+  int v67; // r9d
+
+  ((void (__fastcall *)(__int64, __int64, __int64, __int64))loc_1400087A0)(a45, a53, a23, a64);
+  sub_142851ED0(v65, v64, v66, v67, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22);
+}
+

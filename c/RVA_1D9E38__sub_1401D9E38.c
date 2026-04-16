@@ -1,0 +1,135 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1401D9E38                          ║
+// ║  VA        : 0x1401D9E38                            ║
+// ║  RVA       : 0x1D9E38                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (30) ──
+//   0x1401D9E3F  sub_1401D9E38
+//   0x1401D9E47  sub_1401D9E38
+//   0x1401D9E4C  sub_1401D9E38
+//   0x1401D9E54  sub_1401D9E38
+//   0x1401D9E59  sub_1401D9E38
+//   0x1401D9E61  sub_1401D9E38
+//   0x1401D9E66  sub_1401D9E38
+//   0x1401D9E6E  sub_1401D9E38
+//   0x1401D9E73  sub_1401D9E38
+//   0x1401D9E7B  sub_1401D9E38
+//   0x1401D9E80  sub_1401D9E38
+//   0x1401D9E88  sub_1401D9E38
+//   0x1401D9E8D  sub_1401D9E38
+//   0x1401D9E95  sub_1401D9E38
+//   0x1401D9E9A  sub_1401D9E38
+//   0x1401D9EA2  sub_1401D9E38
+//   0x1401D9EAA  sub_1401D9E38
+//   0x1401D9EB2  sub_1401D9E38
+//   0x1401D9EBA  sub_1401D9E38
+//   0x1401D9EC2  sub_1401D9E38
+//   0x1401D9ECA  sub_1401D9E38
+//   0x1401D9ECF  sub_1401D9E38
+//   0x1401D9ED7  sub_1401D9E38
+//   0x1401D9EDC  sub_1401D9E38
+//   0x1401D9EE4  sub_1401D9E38
+//   0x1401D9EE9  sub_1401D9E38
+//   0x1401D9EEF  sub_1401D9E38
+//   0x140099160  ZwFlushBuffersFile
+//   0x1401D9EF7  sub_1401D9E38
+//   0x1401D9EFE  sub_1401D9E38
+//
+// ── IMPORTED API CALLS (1) ──
+//   ZwFlushBuffersFile
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_1401D9E38(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        HANDLE FileHandle,
+        int a11,
+        int a12,
+        int a13,
+        __int64 a14,
+        int a15,
+        int a16,
+        int a17,
+        int a18,
+        int a19,
+        int a20,
+        __int64 a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        int a26,
+        int a27,
+        int a28,
+        int a29,
+        int a30,
+        struct _IO_STATUS_BLOCK *IoStatusBlock,
+        int a32,
+        int a33,
+        int a34,
+        int a35,
+        int a36,
+        int a37,
+        int a38,
+        int a39,
+        __int64 a40)
+{
+  int v40; // edx
+  int v41; // ecx
+  int v42; // r8d
+  int v43; // r9d
+
+  ZwFlushBuffersFile(FileHandle, IoStatusBlock);
+  sub_1419547CA(
+    v41,
+    v40,
+    v42,
+    v43,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    (__int64)FileHandle,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    (_DWORD)IoStatusBlock,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39,
+    a40);
+}
+

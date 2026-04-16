@@ -1,0 +1,153 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1402459C9                          ║
+// ║  VA        : 0x1402459C9                            ║
+// ║  RVA       : 0x2459C9                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (27) ──
+//   0x1402459D0  sub_1402459C9
+//   0x1402459D8  sub_1402459C9
+//   0x1402459DD  sub_1402459C9
+//   0x1402459E5  sub_1402459C9
+//   0x1402459EA  sub_1402459C9
+//   0x1402459F2  sub_1402459C9
+//   0x1402459F7  sub_1402459C9
+//   0x1402459FF  sub_1402459C9
+//   0x140245A04  sub_1402459C9
+//   0x140245A0C  sub_1402459C9
+//   0x140245A14  sub_1402459C9
+//   0x140245A1C  sub_1402459C9
+//   0x140245A24  sub_1402459C9
+//   0x140245A2C  sub_1402459C9
+//   0x140245A34  sub_1402459C9
+//   0x140245A39  sub_1402459C9
+//   0x140245A41  sub_1402459C9
+//   0x140245A46  sub_1402459C9
+//   0x140245A4E  sub_1402459C9
+//   0x140245A53  sub_1402459C9
+//   0x140245A5B  sub_1402459C9
+//   0x140245A60  sub_1402459C9
+//   0x140245A65  sub_1402459C9
+//   0x140095DC0  __security_check_cookie
+//   0x140245A6D  sub_1402459C9
+//   0x140245A74  sub_1402459C9
+//   0x141ECAA34  sub_141ECAA34
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_1402459C9(
+        int a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        char a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        __int64 a13,
+        int a14,
+        __int64 a15,
+        int a16,
+        int a17,
+        int a18,
+        __int64 a19,
+        __int64 a20,
+        int a21,
+        char a22,
+        char a23,
+        int a24,
+        int a25,
+        __int64 a26,
+        int a27,
+        int a28,
+        int a29,
+        __int64 a30,
+        int a31,
+        int a32,
+        int a33,
+        int a34,
+        int a35,
+        int a36,
+        int a37,
+        int StackCookie,
+        int a39,
+        int a40,
+        int a41,
+        __int64 a42,
+        int a43,
+        __int64 a44,
+        int a45,
+        int a46,
+        __int64 a47,
+        __int64 a48,
+        __int64 a49,
+        __int64 a50,
+        __int64 a51,
+        __int64 a52,
+        __int64 a53,
+        __int64 a54,
+        __int64 a55,
+        __int64 a56,
+        __int64 a57,
+        __int64 a58,
+        __int64 a59,
+        __int64 a60,
+        int a61,
+        __int64 a62,
+        int a63)
+{
+  sub_141ECAA34(
+    a1,
+    a63,
+    a61,
+    STACK[0x260],
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    StackCookie,
+    a39,
+    a40,
+    a41,
+    a42,
+    a43,
+    a44,
+    a45,
+    a46,
+    a47);
+}
+

@@ -1,0 +1,119 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_1402A210A                          ║
+// ║  VA        : 0x1402A210A                            ║
+// ║  RVA       : 0x2A210A                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ── CALLS TO (19) ──
+//   0x1402A2111  sub_1402A210A
+//   0x1402A2119  sub_1402A210A
+//   0x1402A211E  sub_1402A210A
+//   0x1402A2126  sub_1402A210A
+//   0x1402A212E  sub_1402A210A
+//   0x1402A2136  sub_1402A210A
+//   0x1402A213E  sub_1402A210A
+//   0x1402A2146  sub_1402A210A
+//   0x1402A214E  sub_1402A210A
+//   0x1402A2153  sub_1402A210A
+//   0x1402A215B  sub_1402A210A
+//   0x1402A2160  sub_1402A210A
+//   0x1402A2168  sub_1402A210A
+//   0x1402A216D  sub_1402A210A
+//   0x1402A2172  sub_1402A210A
+//   0x14007B8F4  sub_140227241
+//   0x1402A217A  sub_1402A210A
+//   0x1402A2181  sub_1402A210A
+//   0x14203BBC8  sub_14203BBC8
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_1402A210A(
+        __int64 a1,
+        __int64 a2,
+        __int64 a3,
+        __int64 a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        __int64 a12,
+        int a13,
+        int a14,
+        __int64 a15,
+        int a16,
+        int a17,
+        __int64 a18,
+        int a19,
+        int a20,
+        int a21,
+        int a22,
+        __int64 a23,
+        __int64 a24,
+        int a25,
+        int a26,
+        int a27,
+        __int64 a28,
+        int a29,
+        __int64 a30,
+        int a31,
+        int a32,
+        __int64 a33,
+        int a34,
+        int a35,
+        __int64 a36,
+        int a37,
+        int a38,
+        __int64 a39)
+{
+  int v39; // edx
+  int v40; // ecx
+  int v41; // r8d
+  int v42; // r9d
+
+  ((void (__fastcall *)(__int64, __int64, __int64, __int64))loc_14007B8F4)(a18, a33, a23, a15);
+  sub_14203BBC8(
+    v40,
+    v39,
+    v41,
+    v42,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    a36,
+    a37,
+    a38,
+    a39);
+}
+

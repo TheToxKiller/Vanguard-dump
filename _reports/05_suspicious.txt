@@ -1,0 +1,2515 @@
+SUSPICIOUS FUNCTIONS REPORT
+======================================================================
+Functions with anti-debug, VM-detection, or privileged instructions
+
+
+[sub_1400947E4] 0x1400947E4  (24 patterns)
+  0x140094862  cpuid                                     CPUID: VM/hypervisor detection
+  0x14009487F  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094881  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094892  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094902  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094922  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094924  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094969  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094986  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094988  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094999  rdtsc                                     RDTSC: timing-based anti-debug
+  0x1400949F2  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094A12  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094A14  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094A25  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094AEA  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094B03  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094B05  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094B16  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094B66  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094B7F  cpuid                                     CPUID: VM/hypervisor detection
+  0x140094B81  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094B92  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140094C63  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140129154] 0x140129154  (12 patterns)
+  0x1401298B9  cpuid                                     CPUID: VM/hypervisor detection
+  0x14013A462  cpuid                                     CPUID: VM/hypervisor detection
+  0x14015FD67  cpuid                                     CPUID: VM/hypervisor detection
+  0x140160796  rdtsc                                     RDTSC: timing-based anti-debug
+  0x1401607A2  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140160B1C  cpuid                                     CPUID: VM/hypervisor detection
+  0x140161173  rdtsc                                     RDTSC: timing-based anti-debug
+  0x14016117F  rdtsc                                     RDTSC: timing-based anti-debug
+  0x14016146E  cpuid                                     CPUID: VM/hypervisor detection
+  0x140161D3E  rdtsc                                     RDTSC: timing-based anti-debug
+  0x140161D4A  rdtsc                                     RDTSC: timing-based anti-debug
+  0x14016221C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140164D3A] 0x140164D3A  (7 patterns)
+  0x140167413  in      eax, 0C3h; DMA controller, 8237A-5.  IN: I/O port read (anti-VM)
+  0x14016EBB8  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401755A4  cpuid                                     CPUID: VM/hypervisor detection
+  0x140176998  cpuid                                     CPUID: VM/hypervisor detection
+  0x140188C92  cpuid                                     CPUID: VM/hypervisor detection
+  0x14018B065  cpuid                                     CPUID: VM/hypervisor detection
+  0x14018BA3F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14008DD74] 0x14008DD74  (5 patterns)
+  0x14008DE29  cpuid                                     CPUID: VM/hypervisor detection
+  0x14008DE5B  rdmsr                                     RDMSR: read model-specific register
+  0x14008DE8E  rdmsr                                     RDMSR: read model-specific register
+  0x14008DEB6  rdmsr                                     RDMSR: read model-specific register
+  0x14008DEFC  rdmsr                                     RDMSR: read model-specific register
+
+[sub_140001000] 0x140001000  (4 patterns)
+  0x14000100A  cpuid                                     CPUID: VM/hypervisor detection
+  0x14000100C  rdtsc                                     RDTSC: timing-based anti-debug
+  0x14000101D  cpuid                                     CPUID: VM/hypervisor detection
+  0x14000101F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140086374] 0x140086374  (4 patterns)
+  0x14008637E  cpuid                                     CPUID: VM/hypervisor detection
+  0x14008638D  cpuid                                     CPUID: VM/hypervisor detection
+  0x1400863B7  xgetbv                                    XGETBV: check hypervisor extended state
+  0x1400863DE  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14008D08C] 0x14008D08C  (4 patterns)
+  0x14008D15C  rdmsr                                     RDMSR: read model-specific register
+  0x14008D170  rdmsr                                     RDMSR: read model-specific register
+  0x14008DD05  rdmsr                                     RDMSR: read model-specific register
+  0x14008DD19  wrmsr                                     WRMSR: write model-specific register
+
+[sub_140015440] 0x140015440  (3 patterns)
+  0x14001565C  cpuid                                     CPUID: VM/hypervisor detection
+  0x140015998  cpuid                                     CPUID: VM/hypervisor detection
+  0x140015AEC  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1400010AC] 0x1400010AC  (2 patterns)
+  0x1400010B5  rdtsc                                     RDTSC: timing-based anti-debug
+  0x1400010B8  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14001A73C] 0x14001A73C  (2 patterns)
+  0x14001A957  cpuid                                     CPUID: VM/hypervisor detection
+  0x14001AC93  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140115014] 0x140115014  (2 patterns)
+  0x14011501B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140115072  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140117A23] 0x140117A23  (2 patterns)
+  0x140117A2A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140117B62  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140117BA3] 0x140117BA3  (2 patterns)
+  0x140117BAA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140117BBD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140118CAD] 0x140118CAD  (2 patterns)
+  0x140118CB4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140118CC0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C155] 0x14011C155  (2 patterns)
+  0x14011C15C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C1AB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C1EF] 0x14011C1EF  (2 patterns)
+  0x14011C1F6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C202  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C2D6] 0x14011C2D6  (2 patterns)
+  0x14011C2DD  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C347  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C354] 0x14011C354  (2 patterns)
+  0x14011C35B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C396  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C45B] 0x14011C45B  (2 patterns)
+  0x14011C462  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C4D9  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011C911] 0x14011C911  (2 patterns)
+  0x14011C918  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011C928  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14011D8AF] 0x14011D8AF  (2 patterns)
+  0x14011D8B6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14011D8D4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14012219B] 0x14012219B  (2 patterns)
+  0x1401221A2  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140122205  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140123691] 0x140123691  (2 patterns)
+  0x140123695  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401236C8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401237CA] 0x1401237CA  (2 patterns)
+  0x1401237D1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401237F1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401244FF] 0x1401244FF  (2 patterns)
+  0x140124506  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140124554  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401258FC] 0x1401258FC  (2 patterns)
+  0x140125900  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140125953  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140125960] 0x140125960  (2 patterns)
+  0x140125967  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140125988  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14012813A] 0x14012813A  (2 patterns)
+  0x140128141  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140128178  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140128316] 0x140128316  (2 patterns)
+  0x14012831A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140128349  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140128F12] 0x140128F12  (2 patterns)
+  0x140128F19  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140129077  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140163BB6] 0x140163BB6  (2 patterns)
+  0x140163BBD  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140163BC9  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14019F127] 0x14019F127  (2 patterns)
+  0x14019F12E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14019F185  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14019FEFC] 0x14019FEFC  (2 patterns)
+  0x14019FF00  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14019FF0C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14019FFD3] 0x14019FFD3  (2 patterns)
+  0x14019FFDA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A002B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A1B35] 0x1401A1B35  (2 patterns)
+  0x1401A1B3C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A1B52  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A1C37] 0x1401A1C37  (2 patterns)
+  0x1401A1C3E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A1DBA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A69F3] 0x1401A69F3  (2 patterns)
+  0x1401A69FA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A6A2E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A6BEC] 0x1401A6BEC  (2 patterns)
+  0x1401A6BF3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A6C14  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A734E] 0x1401A734E  (2 patterns)
+  0x1401A7355  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A735D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A930B] 0x1401A930B  (2 patterns)
+  0x1401A9312  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A9320  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401A96F3] 0x1401A96F3  (2 patterns)
+  0x1401A96FA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401A980F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AA611] 0x1401AA611  (2 patterns)
+  0x1401AA618  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AA624  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AAFAE] 0x1401AAFAE  (2 patterns)
+  0x1401AAFB5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AAFE8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AC255] 0x1401AC255  (2 patterns)
+  0x1401AC259  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AC2C2  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AC2CF] 0x1401AC2CF  (2 patterns)
+  0x1401AC2D6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AC43C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401ACBDE] 0x1401ACBDE  (2 patterns)
+  0x1401ACBE5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401ACBF9  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AD1D4] 0x1401AD1D4  (2 patterns)
+  0x1401AD1DB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AD1EF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AD99C] 0x1401AD99C  (2 patterns)
+  0x1401AD9A3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AD9AC  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401AE2FF] 0x1401AE2FF  (2 patterns)
+  0x1401AE306  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401AE378  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B161A] 0x1401B161A  (2 patterns)
+  0x1401B1621  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B1779  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B2D42] 0x1401B2D42  (2 patterns)
+  0x1401B2D49  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B2D6A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B2FEB] 0x1401B2FEB  (2 patterns)
+  0x1401B2FEF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B3006  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B3A6B] 0x1401B3A6B  (2 patterns)
+  0x1401B3A6F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B3ACB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B511C] 0x1401B511C  (2 patterns)
+  0x1401B517D  in      eax, 2Bh                          IN: I/O port read (anti-VM)
+  0x1401B51B9  in      al, dx                            IN: I/O port read (anti-VM)
+
+[sub_1401B5343] 0x1401B5343  (2 patterns)
+  0x1401B534A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B54A6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B56CD] 0x1401B56CD  (2 patterns)
+  0x1401B56D4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B5831  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B5A54] 0x1401B5A54  (2 patterns)
+  0x1401B5A5B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B5A77  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B77E6] 0x1401B77E6  (2 patterns)
+  0x1401B77ED  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B796A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401B8102] 0x1401B8102  (2 patterns)
+  0x1401B8109  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401B8268  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401D9CCA] 0x1401D9CCA  (2 patterns)
+  0x1401D9CD1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401D9CE1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DA25D] 0x1401DA25D  (2 patterns)
+  0x1401DA264  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DA274  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DA281] 0x1401DA281  (2 patterns)
+  0x1401DA288  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DA29C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DAC5A] 0x1401DAC5A  (2 patterns)
+  0x1401DAC61  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DAC6F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DBAA9] 0x1401DBAA9  (2 patterns)
+  0x1401DBAB0  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DBAC8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DBBF7] 0x1401DBBF7  (2 patterns)
+  0x1401DBBFE  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DBD2D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DC421] 0x1401DC421  (2 patterns)
+  0x1401DC428  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DC4D0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DC68D] 0x1401DC68D  (2 patterns)
+  0x1401DC694  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DC7AF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DC835] 0x1401DC835  (2 patterns)
+  0x1401DC83C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DC864  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DD822] 0x1401DD822  (2 patterns)
+  0x1401DD829  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DD856  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DE7B1] 0x1401DE7B1  (2 patterns)
+  0x1401DE7B8  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401DE7C1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401DFFFB] 0x1401DFFFB  (2 patterns)
+  0x1401E0002  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E000E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E14F2] 0x1401E14F2  (2 patterns)
+  0x1401E14F6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E1502  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E159D] 0x1401E159D  (2 patterns)
+  0x1401E15A1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E15CE  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E1EA8] 0x1401E1EA8  (2 patterns)
+  0x1401E1EAF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E1ED0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E30B3] 0x1401E30B3  (2 patterns)
+  0x1401E30BA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E30CA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E3448] 0x1401E3448  (2 patterns)
+  0x1401E344F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E34AC  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E75E4] 0x1401E75E4  (2 patterns)
+  0x1401E75EB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E764A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E999D] 0x1401E999D  (2 patterns)
+  0x1401E99A4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401E99C2  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EA08B] 0x1401EA08B  (2 patterns)
+  0x1401EA08F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EA0A3  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EA573] 0x1401EA573  (2 patterns)
+  0x1401EA57A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EA59C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EB7F0] 0x1401EB7F0  (2 patterns)
+  0x1401EB7F7  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EB82B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EC5D4] 0x1401EC5D4  (2 patterns)
+  0x1401EC5DB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EC5E7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EC6C5] 0x1401EC6C5  (2 patterns)
+  0x1401EC6C9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EC743  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EC879] 0x1401EC879  (2 patterns)
+  0x1401EC880  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EC89E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401ED8B2] 0x1401ED8B2  (2 patterns)
+  0x1401ED8B9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401ED9D7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EDFB4] 0x1401EDFB4  (2 patterns)
+  0x1401EDFBB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EDFD1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EE768] 0x1401EE768  (2 patterns)
+  0x1401EE76F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EE790  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401EEA12] 0x1401EEA12  (2 patterns)
+  0x1401EEA19  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401EEA37  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F0877] 0x1401F0877  (2 patterns)
+  0x1401F087E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F08B0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F0DDA] 0x1401F0DDA  (2 patterns)
+  0x1401F0DDE  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F0E06  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F30AA] 0x1401F30AA  (2 patterns)
+  0x1401F30B1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F31E8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F3F6B] 0x1401F3F6B  (2 patterns)
+  0x1401F3F72  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F3F93  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F4849] 0x1401F4849  (2 patterns)
+  0x1401F4850  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F488C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F496A] 0x1401F496A  (2 patterns)
+  0x1401F4971  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F4AFA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F4C66] 0x1401F4C66  (2 patterns)
+  0x1401F4C6D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F4D21  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F5D81] 0x1401F5D81  (2 patterns)
+  0x1401F5D85  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F5DD6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F6436] 0x1401F6436  (2 patterns)
+  0x1401F643D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F6474  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401F696B] 0x1401F696B  (2 patterns)
+  0x1401F6972  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401F6A11  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FDB33] 0x1401FDB33  (2 patterns)
+  0x1401FDB3A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FDB75  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FDC3C] 0x1401FDC3C  (2 patterns)
+  0x1401FDC43  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FDDB1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FDFA4] 0x1401FDFA4  (2 patterns)
+  0x1401FDFAB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FE05F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FE06C] 0x1401FE06C  (2 patterns)
+  0x1401FE073  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FE075  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FE39D] 0x1401FE39D  (2 patterns)
+  0x1401FE3A4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FE3A5  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FEA26] 0x1401FEA26  (2 patterns)
+  0x1401FEA2D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FEA60  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401FFF38] 0x1401FFF38  (2 patterns)
+  0x1401FFF3F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1401FFFF4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140202A3A] 0x140202A3A  (2 patterns)
+  0x140202A41  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140202A62  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140205159] 0x140205159  (2 patterns)
+  0x14020515D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020515F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140205AFF] 0x140205AFF  (2 patterns)
+  0x140205B06  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140205B39  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140206F6B] 0x140206F6B  (2 patterns)
+  0x140206F72  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140206F99  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140208303] 0x140208303  (2 patterns)
+  0x14020830A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140208387  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140208E5C] 0x140208E5C  (2 patterns)
+  0x140208E63  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140208E85  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140209C4C] 0x140209C4C  (2 patterns)
+  0x140209C53  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140209D1E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14020A22F] 0x14020A22F  (2 patterns)
+  0x14020A233  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020A246  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14020D56D] 0x14020D56D  (2 patterns)
+  0x14020D571  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020D592  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14020D851] 0x14020D851  (2 patterns)
+  0x14020D858  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020D884  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14020E7EF] 0x14020E7EF  (2 patterns)
+  0x14020E7F6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020E8E5  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14020F99E] 0x14020F99E  (2 patterns)
+  0x14020F9A5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14020F9D0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402102D0] 0x1402102D0  (2 patterns)
+  0x1402102D7  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402102E0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140212BD6] 0x140212BD6  (2 patterns)
+  0x140212BDD  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140212C37  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140213997] 0x140213997  (2 patterns)
+  0x14021399E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402139AA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140214B0B] 0x140214B0B  (2 patterns)
+  0x140214B12  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140214B14  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140215C60] 0x140215C60  (2 patterns)
+  0x140215C67  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140215C88  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140215F0F] 0x140215F0F  (2 patterns)
+  0x140215F16  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140215F34  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140216BDB] 0x140216BDB  (2 patterns)
+  0x140216BE2  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140216BEF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140216C95] 0x140216C95  (2 patterns)
+  0x140216C99  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140216CA1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402176F8] 0x1402176F8  (2 patterns)
+  0x1402176FF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021773E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140217E9C] 0x140217E9C  (2 patterns)
+  0x140217EA3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140217ED8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021A7D0] 0x14021A7D0  (2 patterns)
+  0x14021A7D7  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021A917  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021AEA2] 0x14021AEA2  (2 patterns)
+  0x14021AEA9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021AEB2  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021AEBF] 0x14021AEBF  (2 patterns)
+  0x14021AEC6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021B03A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021B437] 0x14021B437  (2 patterns)
+  0x14021B43E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021B49D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021B6EE] 0x14021B6EE  (2 patterns)
+  0x14021B6F2  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021B6FB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021B845] 0x14021B845  (2 patterns)
+  0x14021B84C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021B858  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021C1B6] 0x14021C1B6  (2 patterns)
+  0x14021C1BD  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021C1D1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021C352] 0x14021C352  (2 patterns)
+  0x14021C359  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021C37A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021D2D0] 0x14021D2D0  (2 patterns)
+  0x14021D2D7  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021D31A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14021E24A] 0x14021E24A  (2 patterns)
+  0x14021E24E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14021E278  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140220E45] 0x140220E45  (2 patterns)
+  0x140220E4C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140220E6D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140222507] 0x140222507  (2 patterns)
+  0x14022250E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022252F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140225573] 0x140225573  (2 patterns)
+  0x14022557A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402255BB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402255DC] 0x1402255DC  (2 patterns)
+  0x1402255E3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140225624  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402256FF] 0x1402256FF  (2 patterns)
+  0x140225706  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140225712  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022587D] 0x14022587D  (2 patterns)
+  0x140225884  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140225985  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022837C] 0x14022837C  (2 patterns)
+  0x140228383  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402283A4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140228762] 0x140228762  (2 patterns)
+  0x140228769  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140228787  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402290A3] 0x1402290A3  (2 patterns)
+  0x1402290AA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402290DD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140229781] 0x140229781  (2 patterns)
+  0x140229788  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140229812  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402299B2] 0x1402299B2  (2 patterns)
+  0x1402299B9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140229A03  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022AAFE] 0x14022AAFE  (2 patterns)
+  0x14022AB05  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022AB11  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022AF41] 0x14022AF41  (2 patterns)
+  0x14022AF48  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022AFAE  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022B08C] 0x14022B08C  (2 patterns)
+  0x14022B093  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022B119  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022B610] 0x14022B610  (2 patterns)
+  0x14022B617  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022B633  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022D8FD] 0x14022D8FD  (2 patterns)
+  0x14022D904  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022D921  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14022ED7E] 0x14022ED7E  (2 patterns)
+  0x14022ED85  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14022ED9E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140234F39] 0x140234F39  (2 patterns)
+  0x140234F40  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140234F57  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023558D] 0x14023558D  (2 patterns)
+  0x140235594  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402355A9  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140236A24] 0x140236A24  (2 patterns)
+  0x140236A2B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140236A51  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140237A7A] 0x140237A7A  (2 patterns)
+  0x140237A81  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140237A8D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402380EA] 0x1402380EA  (2 patterns)
+  0x1402380F1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023818B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402383E5] 0x1402383E5  (2 patterns)
+  0x1402383EC  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402383F8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140239787] 0x140239787  (2 patterns)
+  0x14023978E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402397C6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140239FF8] 0x140239FF8  (2 patterns)
+  0x140239FFF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023A032  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023AEEC] 0x14023AEEC  (2 patterns)
+  0x14023AEF3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023AF14  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023BB7B] 0x14023BB7B  (2 patterns)
+  0x14023BB82  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023BBCD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023CFCE] 0x14023CFCE  (2 patterns)
+  0x14023CFD5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023CFDD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023D1E6] 0x14023D1E6  (2 patterns)
+  0x14023D1ED  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023D1EF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023F8DA] 0x14023F8DA  (2 patterns)
+  0x14023F8E1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023F900  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14023FB90] 0x14023FB90  (2 patterns)
+  0x14023FB97  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14023FC30  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024294A] 0x14024294A  (2 patterns)
+  0x140242951  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140242972  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140245181] 0x140245181  (2 patterns)
+  0x140245188  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024519E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140246642] 0x140246642  (2 patterns)
+  0x140246646  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024665E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402467BD] 0x1402467BD  (2 patterns)
+  0x1402467C4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140246852  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402469EF] 0x1402469EF  (2 patterns)
+  0x1402469F6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140246A17  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140246FA2] 0x140246FA2  (2 patterns)
+  0x140246FA6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140246FE3  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140248EDE] 0x140248EDE  (2 patterns)
+  0x140248EE5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024902F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024B10A] 0x14024B10A  (2 patterns)
+  0x14024B10E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024B12B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024C598] 0x14024C598  (2 patterns)
+  0x14024C59F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024C5B0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024D04F] 0x14024D04F  (2 patterns)
+  0x14024D056  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024D062  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024DB1B] 0x14024DB1B  (2 patterns)
+  0x14024DB22  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024DC6F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024E23B] 0x14024E23B  (2 patterns)
+  0x14024E242  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024E263  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14024E754] 0x14024E754  (2 patterns)
+  0x14024E75B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14024E799  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402526CA] 0x1402526CA  (2 patterns)
+  0x1402526D1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140252807  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025377F] 0x14025377F  (2 patterns)
+  0x140253786  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402537B6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140253F88] 0x140253F88  (2 patterns)
+  0x140253F8F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140253FB1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140255E1C] 0x140255E1C  (2 patterns)
+  0x140255E23  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140255F9C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140256AA4] 0x140256AA4  (2 patterns)
+  0x140256AAB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140256ACD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140257FFD] 0x140257FFD  (2 patterns)
+  0x140258004  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140258022  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402589F7] 0x1402589F7  (2 patterns)
+  0x1402589FE  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402589FF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140258EA4] 0x140258EA4  (2 patterns)
+  0x140258EAB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140258EBD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140259DB0] 0x140259DB0  (2 patterns)
+  0x140259DB4  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140259E32  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140259EDB] 0x140259EDB  (2 patterns)
+  0x140259EDF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140259EFC  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140259F09] 0x140259F09  (2 patterns)
+  0x140259F0D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025A097  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025A405] 0x14025A405  (2 patterns)
+  0x14025A40C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025A441  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025A667] 0x14025A667  (2 patterns)
+  0x14025A66E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025A67A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025AA6F] 0x14025AA6F  (2 patterns)
+  0x14025AA76  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025AA7E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025AC69] 0x14025AC69  (2 patterns)
+  0x14025AC70  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025ACA4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025B78A] 0x14025B78A  (2 patterns)
+  0x14025B791  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025B7C4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025D4BC] 0x14025D4BC  (2 patterns)
+  0x14025D4C3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025D5DA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025D874] 0x14025D874  (2 patterns)
+  0x14025D878  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025D8AB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025DA2E] 0x14025DA2E  (2 patterns)
+  0x14025DA35  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025DA56  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025E04A] 0x14025E04A  (2 patterns)
+  0x14025E051  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025E064  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025E6F3] 0x14025E6F3  (2 patterns)
+  0x14025E6FA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025E726  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025E8B6] 0x14025E8B6  (2 patterns)
+  0x14025E8BD  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025E8C9  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14025ECD4] 0x14025ECD4  (2 patterns)
+  0x14025ECDB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14025ED4D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140264951] 0x140264951  (2 patterns)
+  0x140264958  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402649A5  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402649B2] 0x1402649B2  (2 patterns)
+  0x1402649B6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402649D4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026572F] 0x14026572F  (2 patterns)
+  0x140265736  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140265769  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140265862] 0x140265862  (2 patterns)
+  0x140265869  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026599F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402664D7] 0x1402664D7  (2 patterns)
+  0x1402664DE  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402664F2  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140266505] 0x140266505  (2 patterns)
+  0x14026650C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140266564  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402666E3] 0x1402666E3  (2 patterns)
+  0x1402666EA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140266712  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402668DF] 0x1402668DF  (2 patterns)
+  0x1402668E6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140266919  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140266926] 0x140266926  (2 patterns)
+  0x14026692A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140266962  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140267775] 0x140267775  (2 patterns)
+  0x14026777C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402678AE  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140268FA2] 0x140268FA2  (2 patterns)
+  0x140268FA9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402690D3  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026A8AE] 0x14026A8AE  (2 patterns)
+  0x14026A8B5  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026A8D6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026D948] 0x14026D948  (2 patterns)
+  0x14026D94F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026D95B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026E737] 0x14026E737  (2 patterns)
+  0x14026E73E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026E879  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026F393] 0x14026F393  (2 patterns)
+  0x14026F39A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026F39C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14026F5B5] 0x14026F5B5  (2 patterns)
+  0x14026F5BC  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14026F5FB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027032C] 0x14027032C  (2 patterns)
+  0x140270333  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402704A1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140270AFC] 0x140270AFC  (2 patterns)
+  0x140270B03  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140270B1E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140271062] 0x140271062  (2 patterns)
+  0x140271069  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402710C7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140271E86] 0x140271E86  (2 patterns)
+  0x140271E8A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140271EAB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140274C10] 0x140274C10  (2 patterns)
+  0x140274C17  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140274C25  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140277E98] 0x140277E98  (2 patterns)
+  0x140277E9F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140277EBE  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140277ECB] 0x140277ECB  (2 patterns)
+  0x140277ED2  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140277EF4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140278154] 0x140278154  (2 patterns)
+  0x14027815B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027818B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140278198] 0x140278198  (2 patterns)
+  0x14027819F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402781CF  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402781E2] 0x1402781E2  (2 patterns)
+  0x1402781E9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027820A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027926D] 0x14027926D  (2 patterns)
+  0x140279274  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027928F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140279EC7] 0x140279EC7  (2 patterns)
+  0x140279ECB  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140279F0C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027A15D] 0x14027A15D  (2 patterns)
+  0x14027A164  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027A1AB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027A40B] 0x14027A40B  (2 patterns)
+  0x14027A412  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027A56A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027AB5F] 0x14027AB5F  (2 patterns)
+  0x14027AB63  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027AC17  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14027B51D] 0x14027B51D  (2 patterns)
+  0x14027B524  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14027B549  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028081C] 0x14028081C  (2 patterns)
+  0x140280823  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140280838  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140280BD2] 0x140280BD2  (2 patterns)
+  0x140280BD6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140280BF1  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140282736] 0x140282736  (2 patterns)
+  0x14028273D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402828A4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140282B21] 0x140282B21  (2 patterns)
+  0x140282B28  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140282CA4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028346C] 0x14028346C  (2 patterns)
+  0x140283473  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028348C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028353B] 0x14028353B  (2 patterns)
+  0x140283542  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028354B  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402838F8] 0x1402838F8  (2 patterns)
+  0x1402838FF  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140283977  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140286813] 0x140286813  (2 patterns)
+  0x14028681A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140286830  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140286D04] 0x140286D04  (2 patterns)
+  0x140286D0B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140286DED  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140287A66] 0x140287A66  (2 patterns)
+  0x140287A6D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140287A93  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028976A] 0x14028976A  (2 patterns)
+  0x140289771  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402898D5  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028B076] 0x14028B076  (2 patterns)
+  0x14028B07D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028B07F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028CCBD] 0x14028CCBD  (2 patterns)
+  0x14028CCC1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028CCE2  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028E2B2] 0x14028E2B2  (2 patterns)
+  0x14028E2B9  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028E2DA  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028E5EF] 0x14028E5EF  (2 patterns)
+  0x14028E5F3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028E623  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028EB5A] 0x14028EB5A  (2 patterns)
+  0x14028EB61  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028EB8E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028EBA3] 0x14028EBA3  (2 patterns)
+  0x14028EBAA  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028EBB3  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028EBD4] 0x14028EBD4  (2 patterns)
+  0x14028EBD8  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028EBE4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028F3A1] 0x14028F3A1  (2 patterns)
+  0x14028F3A8  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028F3B4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14028FB94] 0x14028FB94  (2 patterns)
+  0x14028FB9B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14028FCCE  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029077E] 0x14029077E  (2 patterns)
+  0x140290785  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029079D  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029090D] 0x14029090D  (2 patterns)
+  0x140290914  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140290942  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140290A40] 0x140290A40  (2 patterns)
+  0x140290A47  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140290A55  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140291268] 0x140291268  (2 patterns)
+  0x14029126F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140291278  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140294CCF] 0x140294CCF  (2 patterns)
+  0x140294CD6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140294E56  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140295357] 0x140295357  (2 patterns)
+  0x14029535E  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029537F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140296A45] 0x140296A45  (2 patterns)
+  0x140296A4C  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140296A5C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_140299AA1] 0x140299AA1  (2 patterns)
+  0x140299AA8  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x140299BEC  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029A16D] 0x14029A16D  (2 patterns)
+  0x14029A174  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029A1A7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029A601] 0x14029A601  (2 patterns)
+  0x14029A608  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029A63F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029A96B] 0x14029A96B  (2 patterns)
+  0x14029A96F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029A978  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029CF63] 0x14029CF63  (2 patterns)
+  0x14029CF67  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029CF73  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029D4F9] 0x14029D4F9  (2 patterns)
+  0x14029D500  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029D52C  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029D9BF] 0x14029D9BF  (2 patterns)
+  0x14029D9C6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029DA12  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14029FED8] 0x14029FED8  (2 patterns)
+  0x14029FEDC  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x14029FF24  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A0409] 0x1402A0409  (2 patterns)
+  0x1402A0410  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A042E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A2E60] 0x1402A2E60  (2 patterns)
+  0x1402A2E67  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A2E88  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A334C] 0x1402A334C  (2 patterns)
+  0x1402A3353  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A3360  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A5966] 0x1402A5966  (2 patterns)
+  0x1402A596D  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A59C7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A6D3F] 0x1402A6D3F  (2 patterns)
+  0x1402A6D46  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A6D4F  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A73BC] 0x1402A73BC  (2 patterns)
+  0x1402A73C3  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A73E4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A7402] 0x1402A7402  (2 patterns)
+  0x1402A7409  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A7422  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A7C1F] 0x1402A7C1F  (2 patterns)
+  0x1402A7C26  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A7C45  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402A897B] 0x1402A897B  (2 patterns)
+  0x1402A897F  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402A89A6  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402ABE25] 0x1402ABE25  (2 patterns)
+  0x1402ABE29  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402ABE42  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402ADD30] 0x1402ADD30  (2 patterns)
+  0x1402ADD37  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402ADD43  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402AF82A] 0x1402AF82A  (2 patterns)
+  0x1402AF831  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402AF899  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402AFA5E] 0x1402AFA5E  (2 patterns)
+  0x1402AFA65  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402AFAB8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402AFB41] 0x1402AFB41  (2 patterns)
+  0x1402AFB48  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402AFC98  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B0425] 0x1402B0425  (2 patterns)
+  0x1402B0429  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B0437  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B0553] 0x1402B0553  (2 patterns)
+  0x1402B055A  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B057A  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B2591] 0x1402B2591  (2 patterns)
+  0x1402B2598  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B25DD  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B3FEA] 0x1402B3FEA  (2 patterns)
+  0x1402B3FF1  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B4066  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B49CF] 0x1402B49CF  (2 patterns)
+  0x1402B49D6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B49E8  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B4ADF] 0x1402B4ADF  (2 patterns)
+  0x1402B4AE6  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B4B07  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B508E] 0x1402B508E  (2 patterns)
+  0x1402B5095  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B50DB  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B656D] 0x1402B656D  (2 patterns)
+  0x1402B6574  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B6580  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B6D5B] 0x1402B6D5B  (2 patterns)
+  0x1402B6D62  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B6EB7  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1402B7514] 0x1402B7514  (2 patterns)
+  0x1402B751B  popfq                                     POPFQ: restore flags (TF trap flag check)
+  0x1402B754E  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1400010C0] 0x1400010C0  (1 patterns)
+  0x1400010C4  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_14001A3F4] 0x14001A3F4  (1 patterns)
+  0x14001A5DF  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140058CBC] 0x140058CBC  (1 patterns)
+  0x140058CDA  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140097000] 0x140097000  (1 patterns)
+  0x14009703B  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1400D0FB0] 0x1400D0FB0  (1 patterns)
+  0x1400D0FC0  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1400D6A64] 0x1400D6A64  (1 patterns)
+  0x1400D6A6B  popfq                                     POPFQ: restore flags (TF trap flag check)
+
+[sub_14011630A] 0x14011630A  (1 patterns)
+  0x14011630A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140117674] 0x140117674  (1 patterns)
+  0x140117674  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401178B2] 0x1401178B2  (1 patterns)
+  0x1401178C2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14011817F] 0x14011817F  (1 patterns)
+  0x14011818A  in      al, dx                            IN: I/O port read (anti-VM)
+
+[sub_140118AC7] 0x140118AC7  (1 patterns)
+  0x140118AD4  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140119136] 0x140119136  (1 patterns)
+  0x140119146  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401192D1] 0x1401192D1  (1 patterns)
+  0x1401192D1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14011B05A] 0x14011B05A  (1 patterns)
+  0x14011B067  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14011C946] 0x14011C946  (1 patterns)
+  0x14011C946  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14011CAAE] 0x14011CAAE  (1 patterns)
+  0x14011CAAE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14011CE83] 0x14011CE83  (1 patterns)
+  0x14011CE83  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14011D006] 0x14011D006  (1 patterns)
+  0x14011D006  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140123CD0] 0x140123CD0  (1 patterns)
+  0x140123CE0  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401244E0] 0x1401244E0  (1 patterns)
+  0x1401244F0  in      ax, dx                            IN: I/O port read (anti-VM)
+
+[sub_14012790A] 0x14012790A  (1 patterns)
+  0x14012790A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140127DE0] 0x140127DE0  (1 patterns)
+  0x140127DED  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140128803] 0x140128803  (1 patterns)
+  0x140128803  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401633B3] 0x1401633B3  (1 patterns)
+  0x1401633B3  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140163B9B] 0x140163B9B  (1 patterns)
+  0x140163BAB  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_140164122] 0x140164122  (1 patterns)
+  0x14016412A  invlpg  byte ptr [rdx]                    INVLPG: invalidate TLB entry
+
+[sub_140164347] 0x140164347  (1 patterns)
+  0x140164357  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140164A83] 0x140164A83  (1 patterns)
+  0x140164A93  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14019F0B8] 0x14019F0B8  (1 patterns)
+  0x14019F0C8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14019F505] 0x14019F505  (1 patterns)
+  0x14019F512  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14019FEA2] 0x14019FEA2  (1 patterns)
+  0x14019FEB2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401A069D] 0x1401A069D  (1 patterns)
+  0x1401A06AD  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401A07CA] 0x1401A07CA  (1 patterns)
+  0x1401A07CA  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A133C] 0x1401A133C  (1 patterns)
+  0x1401A133C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A181C] 0x1401A181C  (1 patterns)
+  0x1401A182C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401A1B70] 0x1401A1B70  (1 patterns)
+  0x1401A1B70  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A2584] 0x1401A2584  (1 patterns)
+  0x1401A2594  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401A3061] 0x1401A3061  (1 patterns)
+  0x1401A3066  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1401A3F70] 0x1401A3F70  (1 patterns)
+  0x1401A3F70  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A4E1B] 0x1401A4E1B  (1 patterns)
+  0x1401A4E1B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A530F] 0x1401A530F  (1 patterns)
+  0x1401A530F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A54A4] 0x1401A54A4  (1 patterns)
+  0x1401A54A4  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A68E4] 0x1401A68E4  (1 patterns)
+  0x1401A68EC  invlpg  byte ptr [rdi]                    INVLPG: invalidate TLB entry
+
+[sub_1401A69DF] 0x1401A69DF  (1 patterns)
+  0x1401A69DF  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A6A3B] 0x1401A6A3B  (1 patterns)
+  0x1401A6A3B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A731D] 0x1401A731D  (1 patterns)
+  0x1401A732A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401A92BD] 0x1401A92BD  (1 patterns)
+  0x1401A92BD  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A99A4] 0x1401A99A4  (1 patterns)
+  0x1401A99A4  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401A9F43] 0x1401A9F43  (1 patterns)
+  0x1401A9F43  invlpg  cs:byte_1400C2000                 INVLPG: invalidate TLB entry
+
+[sub_1401AA563] 0x1401AA563  (1 patterns)
+  0x1401AA563  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AA6FD] 0x1401AA6FD  (1 patterns)
+  0x1401AA70D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401AB360] 0x1401AB360  (1 patterns)
+  0x1401AB370  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401AB80D] 0x1401AB80D  (1 patterns)
+  0x1401AB817  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401ABBE6] 0x1401ABBE6  (1 patterns)
+  0x1401ABBE6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401ABC88] 0x1401ABC88  (1 patterns)
+  0x1401ABC88  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AC094] 0x1401AC094  (1 patterns)
+  0x1401AC0A4  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401AC836] 0x1401AC836  (1 patterns)
+  0x1401AC83E  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1401AC867] 0x1401AC867  (1 patterns)
+  0x1401AC86F  invlpg  byte ptr [rbp+0]                  INVLPG: invalidate TLB entry
+
+[sub_1401AD7BB] 0x1401AD7BB  (1 patterns)
+  0x1401AD7BB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AE024] 0x1401AE024  (1 patterns)
+  0x1401AE031  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401AE166] 0x1401AE166  (1 patterns)
+  0x1401AE176  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401AE995] 0x1401AE995  (1 patterns)
+  0x1401AE995  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AEDE7] 0x1401AEDE7  (1 patterns)
+  0x1401AEDE7  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AF892] 0x1401AF892  (1 patterns)
+  0x1401AF898  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_1401AF96B] 0x1401AF96B  (1 patterns)
+  0x1401AF96B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401AFE05] 0x1401AFE05  (1 patterns)
+  0x1401AFE05  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401B1ED5] 0x1401B1ED5  (1 patterns)
+  0x1401B1EE5  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401B1F27] 0x1401B1F27  (1 patterns)
+  0x1401B1F27  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401B1FBA] 0x1401B1FBA  (1 patterns)
+  0x1401B1FC2  invlpg  byte ptr [r15]                    INVLPG: invalidate TLB entry
+
+[sub_1401B5864] 0x1401B5864  (1 patterns)
+  0x1401B5874  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401B5F1E] 0x1401B5F1E  (1 patterns)
+  0x1401B5F2E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401B61BC] 0x1401B61BC  (1 patterns)
+  0x1401B61BC  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401B7CC1] 0x1401B7CC1  (1 patterns)
+  0x1401B7CC1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401B8284] 0x1401B8284  (1 patterns)
+  0x1401B828E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401D7E9E] 0x1401D7E9E  (1 patterns)
+  0x1401D7E9E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401D8622] 0x1401D8622  (1 patterns)
+  0x1401D862F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401D9B07] 0x1401D9B07  (1 patterns)
+  0x1401D9B14  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401D9B3B] 0x1401D9B3B  (1 patterns)
+  0x1401D9B3B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DA105] 0x1401DA105  (1 patterns)
+  0x1401DA105  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DA20F] 0x1401DA20F  (1 patterns)
+  0x1401DA21F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401DA246] 0x1401DA246  (1 patterns)
+  0x1401DA246  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DA538] 0x1401DA538  (1 patterns)
+  0x1401DA538  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DA696] 0x1401DA696  (1 patterns)
+  0x1401DA6A3  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401DAD06] 0x1401DAD06  (1 patterns)
+  0x1401DAD06  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DB122] 0x1401DB122  (1 patterns)
+  0x1401DB12A  invlpg  byte ptr [r12]                    INVLPG: invalidate TLB entry
+
+[sub_1401DB9E4] 0x1401DB9E4  (1 patterns)
+  0x1401DB9E4  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DBD4E] 0x1401DBD4E  (1 patterns)
+  0x1401DBD4E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DC05A] 0x1401DC05A  (1 patterns)
+  0x1401DC05A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DC4EE] 0x1401DC4EE  (1 patterns)
+  0x1401DC4FE  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401DCC8A] 0x1401DCC8A  (1 patterns)
+  0x1401DCC8A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DCF3C] 0x1401DCF3C  (1 patterns)
+  0x1401DCF3C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DDCC9] 0x1401DDCC9  (1 patterns)
+  0x1401DDCC9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401DE1DD] 0x1401DE1DD  (1 patterns)
+  0x1401DE1EA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401DE313] 0x1401DE313  (1 patterns)
+  0x1401DE31B  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1401DE340] 0x1401DE340  (1 patterns)
+  0x1401DE350  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401DE44C] 0x1401DE44C  (1 patterns)
+  0x1401DE44C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401E13FE] 0x1401E13FE  (1 patterns)
+  0x1401E140E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E1524] 0x1401E1524  (1 patterns)
+  0x1401E1534  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E155B] 0x1401E155B  (1 patterns)
+  0x1401E1565  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E2292] 0x1401E2292  (1 patterns)
+  0x1401E2292  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401E2DFD] 0x1401E2DFD  (1 patterns)
+  0x1401E2E0A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E3F26] 0x1401E3F26  (1 patterns)
+  0x1401E3F33  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E4305] 0x1401E4305  (1 patterns)
+  0x1401E4390  pushfq                                    PUSHFQ: save flags (TF trap flag check)
+
+[sub_1401E75B3] 0x1401E75B3  (1 patterns)
+  0x1401E75C0  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401E97F8] 0x1401E97F8  (1 patterns)
+  0x1401E9808  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401EABAC] 0x1401EABAC  (1 patterns)
+  0x1401EABAC  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EAEA2] 0x1401EAEA2  (1 patterns)
+  0x1401EAEB2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401EB799] 0x1401EB799  (1 patterns)
+  0x1401EB799  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EB7BF] 0x1401EB7BF  (1 patterns)
+  0x1401EB7CC  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401EC0A3] 0x1401EC0A3  (1 patterns)
+  0x1401EC0B3  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401EC761] 0x1401EC761  (1 patterns)
+  0x1401EC761  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EC8AB] 0x1401EC8AB  (1 patterns)
+  0x1401EC8AB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EE47C] 0x1401EE47C  (1 patterns)
+  0x1401EE47C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EF149] 0x1401EF149  (1 patterns)
+  0x1401EF149  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401EF9F0] 0x1401EF9F0  (1 patterns)
+  0x1401EF9F0  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401F04C7] 0x1401F04C7  (1 patterns)
+  0x1401F04C7  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401F05AA] 0x1401F05AA  (1 patterns)
+  0x1401F05BA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401F39A0] 0x1401F39A0  (1 patterns)
+  0x1401F39B0  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_1401F3C50] 0x1401F3C50  (1 patterns)
+  0x1401F3C60  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1401F60D1] 0x1401F60D1  (1 patterns)
+  0x1401F60E0  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_1401F6817] 0x1401F6817  (1 patterns)
+  0x1401F6817  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401F8581] 0x1401F8581  (1 patterns)
+  0x1401F8581  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401F8595] 0x1401F8595  (1 patterns)
+  0x1401F8595  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401FD692] 0x1401FD692  (1 patterns)
+  0x1401FD69A  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1401FDAA6] 0x1401FDAA6  (1 patterns)
+  0x1401FDAA6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401FE480] 0x1401FE480  (1 patterns)
+  0x1401FE488  in      eax, 3Bh                          IN: I/O port read (anti-VM)
+
+[sub_1401FE8D6] 0x1401FE8D6  (1 patterns)
+  0x1401FE8DE  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1401FEBA7] 0x1401FEBA7  (1 patterns)
+  0x1401FEBA7  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1401FF5BA] 0x1401FF5BA  (1 patterns)
+  0x1401FF5BA  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140200165] 0x140200165  (1 patterns)
+  0x140200165  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402020A9] 0x1402020A9  (1 patterns)
+  0x1402020B9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140202B49] 0x140202B49  (1 patterns)
+  0x140202B56  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140202B91] 0x140202B91  (1 patterns)
+  0x140202B9E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140205393] 0x140205393  (1 patterns)
+  0x140205393  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402058D7] 0x1402058D7  (1 patterns)
+  0x1402058E7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140206224] 0x140206224  (1 patterns)
+  0x14020622C  invlpg  byte ptr [rbx]                    INVLPG: invalidate TLB entry
+
+[sub_1402065F2] 0x1402065F2  (1 patterns)
+  0x140206602  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140206638] 0x140206638  (1 patterns)
+  0x140206638  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14020664F] 0x14020664F  (1 patterns)
+  0x14020664F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140206666] 0x140206666  (1 patterns)
+  0x140206666  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140207886] 0x140207886  (1 patterns)
+  0x14020789B  wrmsr                                     WRMSR: write model-specific register
+
+[sub_140207A5E] 0x140207A5E  (1 patterns)
+  0x140207A5E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140207DA8] 0x140207DA8  (1 patterns)
+  0x140207DA8  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140207DF1] 0x140207DF1  (1 patterns)
+  0x140207DF1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14020823C] 0x14020823C  (1 patterns)
+  0x14020823C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402082CC] 0x1402082CC  (1 patterns)
+  0x1402082DC  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140208967] 0x140208967  (1 patterns)
+  0x140208977  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140208B53] 0x140208B53  (1 patterns)
+  0x140208B5B  invlpg  byte ptr [rbp+0]                  INVLPG: invalidate TLB entry
+
+[sub_140208F4C] 0x140208F4C  (1 patterns)
+  0x140208F54  rdmsr                                     RDMSR: read model-specific register
+
+[sub_14020939F] 0x14020939F  (1 patterns)
+  0x1402093AC  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402095A2] 0x1402095A2  (1 patterns)
+  0x1402095A2  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402099CC] 0x1402099CC  (1 patterns)
+  0x1402099D9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140209E26] 0x140209E26  (1 patterns)
+  0x140209E26  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140209F13] 0x140209F13  (1 patterns)
+  0x140209F13  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14020BD8C] 0x14020BD8C  (1 patterns)
+  0x14020BD8C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14020D891] 0x14020D891  (1 patterns)
+  0x14020D899  in      al, 26h                           IN: I/O port read (anti-VM)
+
+[sub_14020E9BA] 0x14020E9BA  (1 patterns)
+  0x14020E9C7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14020EAA8] 0x14020EAA8  (1 patterns)
+  0x14020EAB8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14020F7F2] 0x14020F7F2  (1 patterns)
+  0x14020F802  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14020F9DD] 0x14020F9DD  (1 patterns)
+  0x14020F9DD  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140210645] 0x140210645  (1 patterns)
+  0x140210655  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140210824] 0x140210824  (1 patterns)
+  0x140210824  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14021306C] 0x14021306C  (1 patterns)
+  0x14021306C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140213097] 0x140213097  (1 patterns)
+  0x14021309F  invlpg  byte ptr [rax]                    INVLPG: invalidate TLB entry
+
+[sub_140213644] 0x140213644  (1 patterns)
+  0x140213644  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402139E0] 0x1402139E0  (1 patterns)
+  0x1402139F0  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140214788] 0x140214788  (1 patterns)
+  0x140214788  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140214AD4] 0x140214AD4  (1 patterns)
+  0x140214AE4  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140214D84] 0x140214D84  (1 patterns)
+  0x140214D84  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140214E74] 0x140214E74  (1 patterns)
+  0x140214E79  in      al, 8Bh; DMA page register 74LS612:  IN: I/O port read (anti-VM)
+
+[sub_140215412] 0x140215412  (1 patterns)
+  0x140215412  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402157E6] 0x1402157E6  (1 patterns)
+  0x1402157E6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140215F52] 0x140215F52  (1 patterns)
+  0x140215F5A  invlpg  byte ptr [rax]                    INVLPG: invalidate TLB entry
+
+[sub_140216191] 0x140216191  (1 patterns)
+  0x14021619E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021627F] 0x14021627F  (1 patterns)
+  0x14021628F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140216496] 0x140216496  (1 patterns)
+  0x14021649E  rdmsr                                     RDMSR: read model-specific register
+
+[sub_140216707] 0x140216707  (1 patterns)
+  0x140216714  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140216E7D] 0x140216E7D  (1 patterns)
+  0x140216E7D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140217B8C] 0x140217B8C  (1 patterns)
+  0x140217B8C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140217DF8] 0x140217DF8  (1 patterns)
+  0x140217DF8  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140218021] 0x140218021  (1 patterns)
+  0x140218030  in      al, 0CCh; DMA controller, 8237A-5.  IN: I/O port read (anti-VM)
+
+[sub_1402187B6] 0x1402187B6  (1 patterns)
+  0x1402187B6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140218A4A] 0x140218A4A  (1 patterns)
+  0x140218A4A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140218CE6] 0x140218CE6  (1 patterns)
+  0x140218CF3  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140219419] 0x140219419  (1 patterns)
+  0x140219429  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140219450] 0x140219450  (1 patterns)
+  0x14021945D  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_14021ABD2] 0x14021ABD2  (1 patterns)
+  0x14021ABD2  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14021B140] 0x14021B140  (1 patterns)
+  0x14021B140  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14021B25F] 0x14021B25F  (1 patterns)
+  0x14021B26F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021C590] 0x14021C590  (1 patterns)
+  0x14021C59D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021CFC9] 0x14021CFC9  (1 patterns)
+  0x14021CFD9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021D4A9] 0x14021D4A9  (1 patterns)
+  0x14021D4A9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14021DA65] 0x14021DA65  (1 patterns)
+  0x14021DA75  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021DFA6] 0x14021DFA6  (1 patterns)
+  0x14021DFAB  invlpg  byte ptr [rbx]                    INVLPG: invalidate TLB entry
+
+[sub_14021E0BB] 0x14021E0BB  (1 patterns)
+  0x14021E0BB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14021E490] 0x14021E490  (1 patterns)
+  0x14021E4A0  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021EE42] 0x14021EE42  (1 patterns)
+  0x14021EE4F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021F1BE] 0x14021F1BE  (1 patterns)
+  0x14021F1CE  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021FDFA] 0x14021FDFA  (1 patterns)
+  0x14021FE0A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14021FF8A] 0x14021FF8A  (1 patterns)
+  0x14021FF97  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402209C7] 0x1402209C7  (1 patterns)
+  0x1402209C7  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140220CA2] 0x140220CA2  (1 patterns)
+  0x140220CB2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14022116A] 0x14022116A  (1 patterns)
+  0x14022117A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140221DBC] 0x140221DBC  (1 patterns)
+  0x140221DBC  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022207E] 0x14022207E  (1 patterns)
+  0x14022207E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402226AA] 0x1402226AA  (1 patterns)
+  0x1402226BA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402237EE] 0x1402237EE  (1 patterns)
+  0x1402237EE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140223805] 0x140223805  (1 patterns)
+  0x140223805  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022381C] 0x14022381C  (1 patterns)
+  0x140223829  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140223D7A] 0x140223D7A  (1 patterns)
+  0x140223D87  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140224932] 0x140224932  (1 patterns)
+  0x140224932  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402262C6] 0x1402262C6  (1 patterns)
+  0x1402262D6  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402268D9] 0x1402268D9  (1 patterns)
+  0x1402268DD  popfq                                     POPFQ: restore flags (TF trap flag check)
+
+[sub_1402273E7] 0x1402273E7  (1 patterns)
+  0x1402273F7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140227A2E] 0x140227A2E  (1 patterns)
+  0x140227AFC  in      eax, 0DAh                         IN: I/O port read (anti-VM)
+
+[sub_140227F4D] 0x140227F4D  (1 patterns)
+  0x140227F4D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140228166] 0x140228166  (1 patterns)
+  0x140228176  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14022854D] 0x14022854D  (1 patterns)
+  0x140228555  invlpg  byte ptr [rax]                    INVLPG: invalidate TLB entry
+
+[sub_1402286A1] 0x1402286A1  (1 patterns)
+  0x1402286A1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402294A0] 0x1402294A0  (1 patterns)
+  0x1402294B0  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_1402298D6] 0x1402298D6  (1 patterns)
+  0x1402298D6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022A15D] 0x14022A15D  (1 patterns)
+  0x14022A16D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14022A1A2] 0x14022A1A2  (1 patterns)
+  0x14022A1A2  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022ABD9] 0x14022ABD9  (1 patterns)
+  0x14022ABD9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022ABF0] 0x14022ABF0  (1 patterns)
+  0x14022ABF0  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022AE6C] 0x14022AE6C  (1 patterns)
+  0x14022AE74  invlpg  byte ptr [rdi]                    INVLPG: invalidate TLB entry
+
+[sub_14022EEC9] 0x14022EEC9  (1 patterns)
+  0x14022EED0  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_14022EFA1] 0x14022EFA1  (1 patterns)
+  0x14022EFA1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14022F8F7] 0x14022F8F7  (1 patterns)
+  0x14022F8FF  invlpg  byte ptr [rbx]                    INVLPG: invalidate TLB entry
+
+[sub_14022F907] 0x14022F907  (1 patterns)
+  0x14022F917  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_14022F951] 0x14022F951  (1 patterns)
+  0x14022F951  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140234433] 0x140234433  (1 patterns)
+  0x140234433  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023473F] 0x14023473F  (1 patterns)
+  0x14023474C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140234EF4] 0x140234EF4  (1 patterns)
+  0x140234F01  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402361CD] 0x1402361CD  (1 patterns)
+  0x1402361DD  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140236E58] 0x140236E58  (1 patterns)
+  0x140236E58  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023772A] 0x14023772A  (1 patterns)
+  0x14023772A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140237C43] 0x140237C43  (1 patterns)
+  0x140237C53  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140238998] 0x140238998  (1 patterns)
+  0x140238998  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140239C66] 0x140239C66  (1 patterns)
+  0x140239C66  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023BAA0] 0x14023BAA0  (1 patterns)
+  0x14023BAA8  invlpg  byte ptr [rdx]                    INVLPG: invalidate TLB entry
+
+[sub_14023BD6A] 0x14023BD6A  (1 patterns)
+  0x14023BD6A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023C6BA] 0x14023C6BA  (1 patterns)
+  0x14023C6CA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14023C6EB] 0x14023C6EB  (1 patterns)
+  0x14023C6EB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023C702] 0x14023C702  (1 patterns)
+  0x14023C70A  invlpg  byte ptr [rdx]                    INVLPG: invalidate TLB entry
+
+[sub_14023CC0D] 0x14023CC0D  (1 patterns)
+  0x14023CC1D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14023CD0C] 0x14023CD0C  (1 patterns)
+  0x14023CD0C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023F87D] 0x14023F87D  (1 patterns)
+  0x14023F87D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14023F927] 0x14023F927  (1 patterns)
+  0x14023F937  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14023FC43] 0x14023FC43  (1 patterns)
+  0x14023FC53  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402411B0] 0x1402411B0  (1 patterns)
+  0x1402411B0  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024154E] 0x14024154E  (1 patterns)
+  0x14024155E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140243C3D] 0x140243C3D  (1 patterns)
+  0x140243C3D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140243EB9] 0x140243EB9  (1 patterns)
+  0x140243EC9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402451AB] 0x1402451AB  (1 patterns)
+  0x1402451AB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024542D] 0x14024542D  (1 patterns)
+  0x140245442  wrmsr                                     WRMSR: write model-specific register
+
+[sub_1402459B2] 0x1402459B2  (1 patterns)
+  0x1402459B2  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024690B] 0x14024690B  (1 patterns)
+  0x14024690B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140247004] 0x140247004  (1 patterns)
+  0x140247004  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140247951] 0x140247951  (1 patterns)
+  0x140247961  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140247988] 0x140247988  (1 patterns)
+  0x140247988  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140248873] 0x140248873  (1 patterns)
+  0x1402488AB  popfq                                     POPFQ: restore flags (TF trap flag check)
+
+[sub_14024AB4E] 0x14024AB4E  (1 patterns)
+  0x14024AB4E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024B0DD] 0x14024B0DD  (1 patterns)
+  0x14024B0DD  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024B3F4] 0x14024B3F4  (1 patterns)
+  0x14024B404  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14024C757] 0x14024C757  (1 patterns)
+  0x14024C757  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024D3B9] 0x14024D3B9  (1 patterns)
+  0x14024D3C9  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_14024DF9F] 0x14024DF9F  (1 patterns)
+  0x14024DF9F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14024DFB6] 0x14024DFB6  (1 patterns)
+  0x14024DFC6  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14024E331] 0x14024E331  (1 patterns)
+  0x14024E341  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14024E8DA] 0x14024E8DA  (1 patterns)
+  0x14024E8E7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14024F805] 0x14024F805  (1 patterns)
+  0x14024F812  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402519BB] 0x1402519BB  (1 patterns)
+  0x1402519BB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402519D2] 0x1402519D2  (1 patterns)
+  0x1402519DF  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140252C44] 0x140252C44  (1 patterns)
+  0x140252C51  in      al, dx                            IN: I/O port read (anti-VM)
+
+[sub_140254EEB] 0x140254EEB  (1 patterns)
+  0x140254EEB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140255C6C] 0x140255C6C  (1 patterns)
+  0x140255C7C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14025671D] 0x14025671D  (1 patterns)
+  0x14025672D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402568AB] 0x1402568AB  (1 patterns)
+  0x1402568BB  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402568DC] 0x1402568DC  (1 patterns)
+  0x1402568EC  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140256913] 0x140256913  (1 patterns)
+  0x140256923  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140257F35] 0x140257F35  (1 patterns)
+  0x140257FE8  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_140258593] 0x140258593  (1 patterns)
+  0x1402585F8  in      eax, 0FFh                         IN: I/O port read (anti-VM)
+
+[sub_1402587AA] 0x1402587AA  (1 patterns)
+  0x1402587AA  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140258A0F] 0x140258A0F  (1 patterns)
+  0x140258A0F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025A546] 0x14025A546  (1 patterns)
+  0x14025A546  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025A687] 0x14025A687  (1 patterns)
+  0x14025A697  in      eax, dx                           IN: I/O port read (anti-VM)
+
+[sub_14025ACC3] 0x14025ACC3  (1 patterns)
+  0x14025ACC3  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025ACD7] 0x14025ACD7  (1 patterns)
+  0x14025ACE4  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14025AE76] 0x14025AE76  (1 patterns)
+  0x14025AE76  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025B50A] 0x14025B50A  (1 patterns)
+  0x14025B50A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025BDB9] 0x14025BDB9  (1 patterns)
+  0x14025BDB9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025BE87] 0x14025BE87  (1 patterns)
+  0x14025BE87  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025DB35] 0x14025DB35  (1 patterns)
+  0x14025DB35  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025E455] 0x14025E455  (1 patterns)
+  0x14025E465  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14025E6CE] 0x14025E6CE  (1 patterns)
+  0x14025E6CE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025EA62] 0x14025EA62  (1 patterns)
+  0x14025EA72  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14025F409] 0x14025F409  (1 patterns)
+  0x14025F419  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14025F4DB] 0x14025F4DB  (1 patterns)
+  0x14025F4DB  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025F731] 0x14025F731  (1 patterns)
+  0x14025F731  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14025F9CD] 0x14025F9CD  (1 patterns)
+  0x14025F9DD  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026023C] 0x14026023C  (1 patterns)
+  0x14026023C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140260515] 0x140260515  (1 patterns)
+  0x140260522  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140264F92] 0x140264F92  (1 patterns)
+  0x140264F92  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140265776] 0x140265776  (1 patterns)
+  0x140265776  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402665AA] 0x1402665AA  (1 patterns)
+  0x1402665B7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140266722] 0x140266722  (1 patterns)
+  0x140266722  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026702B] 0x14026702B  (1 patterns)
+  0x140267066  popfq                                     POPFQ: restore flags (TF trap flag check)
+
+[sub_140269190] 0x140269190  (1 patterns)
+  0x140269190  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026926B] 0x14026926B  (1 patterns)
+  0x14026926B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140269557] 0x140269557  (1 patterns)
+  0x140269567  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402698AE] 0x1402698AE  (1 patterns)
+  0x1402698AE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026A597] 0x14026A597  (1 patterns)
+  0x14026A597  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026B6DA] 0x14026B6DA  (1 patterns)
+  0x14026B6EA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026B7ED] 0x14026B7ED  (1 patterns)
+  0x14026B7F5  rdmsr                                     RDMSR: read model-specific register
+
+[sub_14026BE22] 0x14026BE22  (1 patterns)
+  0x14026BE2F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026C2D8] 0x14026C2D8  (1 patterns)
+  0x14026C2E8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026C3B9] 0x14026C3B9  (1 patterns)
+  0x14026C3C9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026C710] 0x14026C710  (1 patterns)
+  0x14026C720  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026CBF3] 0x14026CBF3  (1 patterns)
+  0x14026CBF3  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026CCE8] 0x14026CCE8  (1 patterns)
+  0x14026CCF5  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026DBF0] 0x14026DBF0  (1 patterns)
+  0x14026DBF8  invlpg  byte ptr [r13+0]                  INVLPG: invalidate TLB entry
+
+[sub_14026DC89] 0x14026DC89  (1 patterns)
+  0x14026DC89  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026EE05] 0x14026EE05  (1 patterns)
+  0x14026EE05  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026F2B4] 0x14026F2B4  (1 patterns)
+  0x14026F2B4  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026F59E] 0x14026F59E  (1 patterns)
+  0x14026F59E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026F608] 0x14026F608  (1 patterns)
+  0x14026F615  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14026FEDF] 0x14026FEDF  (1 patterns)
+  0x14026FEDF  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14026FF0A] 0x14026FF0A  (1 patterns)
+  0x14026FF0A  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027060E] 0x14027060E  (1 patterns)
+  0x14027060E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027073C] 0x14027073C  (1 patterns)
+  0x140270744  invlpg  byte ptr [rdx]                    INVLPG: invalidate TLB entry
+
+[sub_140270BC7] 0x140270BC7  (1 patterns)
+  0x140270BC7  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140274D6A] 0x140274D6A  (1 patterns)
+  0x140274D7A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140275182] 0x140275182  (1 patterns)
+  0x140275192  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140275FB9] 0x140275FB9  (1 patterns)
+  0x140275FC9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140276DF3] 0x140276DF3  (1 patterns)
+  0x140276E03  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140276EBD] 0x140276EBD  (1 patterns)
+  0x140276EBD  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140276F9D] 0x140276F9D  (1 patterns)
+  0x140276F9D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027806D] 0x14027806D  (1 patterns)
+  0x14027807D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140279099] 0x140279099  (1 patterns)
+  0x140279099  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027956E] 0x14027956E  (1 patterns)
+  0x14027957E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140279DF9] 0x140279DF9  (1 patterns)
+  0x140279DF9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027A577] 0x14027A577  (1 patterns)
+  0x14027A587  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14027A728] 0x14027A728  (1 patterns)
+  0x14027A728  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14027ACC2] 0x14027ACC2  (1 patterns)
+  0x14027ACC9  in      eax, 0AAh; Interrupt Controller #2, 8259A  IN: I/O port read (anti-VM)
+
+[sub_14027B841] 0x14027B841  (1 patterns)
+  0x14027B84E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14027B8EB] 0x14027B8EB  (1 patterns)
+  0x14027B8F8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140281BD3] 0x140281BD3  (1 patterns)
+  0x140281BD3  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140283353] 0x140283353  (1 patterns)
+  0x140283363  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140283998] 0x140283998  (1 patterns)
+  0x1402839A8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140284ED6] 0x140284ED6  (1 patterns)
+  0x140284EE6  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140284FBE] 0x140284FBE  (1 patterns)
+  0x140284FCE  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140285A6F] 0x140285A6F  (1 patterns)
+  0x140285A7F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140286044] 0x140286044  (1 patterns)
+  0x140286054  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14028641D] 0x14028641D  (1 patterns)
+  0x14028641D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140286434] 0x140286434  (1 patterns)
+  0x140286444  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140286C1D] 0x140286C1D  (1 patterns)
+  0x140286C1D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140286E2D] 0x140286E2D  (1 patterns)
+  0x140286E2D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140288475] 0x140288475  (1 patterns)
+  0x140288485  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402890F5] 0x1402890F5  (1 patterns)
+  0x1402890FA  invlpg  byte ptr [rbx]                    INVLPG: invalidate TLB entry
+
+[sub_140289A5B] 0x140289A5B  (1 patterns)
+  0x140289A5B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140289C38] 0x140289C38  (1 patterns)
+  0x140289C48  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140289FCB] 0x140289FCB  (1 patterns)
+  0x140289FD8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14028A0D8] 0x14028A0D8  (1 patterns)
+  0x14028A0E8  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14028A5C6] 0x14028A5C6  (1 patterns)
+  0x14028A5C6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14028BB39] 0x14028BB39  (1 patterns)
+  0x14028BB39  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14028D986] 0x14028D986  (1 patterns)
+  0x14028D986  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14028D99D] 0x14028D99D  (1 patterns)
+  0x14028D99D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14028E630] 0x14028E630  (1 patterns)
+  0x14028E630  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14028F002] 0x14028F002  (1 patterns)
+  0x14028F012  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402908C2] 0x1402908C2  (1 patterns)
+  0x1402908D2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140290A0F] 0x140290A0F  (1 patterns)
+  0x140290A1C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140290D1C] 0x140290D1C  (1 patterns)
+  0x140290D1C  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140294B28] 0x140294B28  (1 patterns)
+  0x140294B35  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140295C42] 0x140295C42  (1 patterns)
+  0x140295C42  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140296B9E] 0x140296B9E  (1 patterns)
+  0x140296B9E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140297696] 0x140297696  (1 patterns)
+  0x140297696  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402983A5] 0x1402983A5  (1 patterns)
+  0x1402983B2  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140298461] 0x140298461  (1 patterns)
+  0x14029846E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_140299655] 0x140299655  (1 patterns)
+  0x140299655  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_140299BF9] 0x140299BF9  (1 patterns)
+  0x140299C06  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14029A43D] 0x14029A43D  (1 patterns)
+  0x14029A43D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14029A476] 0x14029A476  (1 patterns)
+  0x14029A476  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14029CABA] 0x14029CABA  (1 patterns)
+  0x14029CABA  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14029CACE] 0x14029CACE  (1 patterns)
+  0x14029CACE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_14029CAFC] 0x14029CAFC  (1 patterns)
+  0x14029CB0C  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14029DA1F] 0x14029DA1F  (1 patterns)
+  0x14029DA2F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14029E2A9] 0x14029E2A9  (1 patterns)
+  0x14029E2B9  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14029E2DD] 0x14029E2DD  (1 patterns)
+  0x14029E2ED  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_14029FF59] 0x14029FF59  (1 patterns)
+  0x14029FF59  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A0138] 0x1402A0138  (1 patterns)
+  0x1402A0148  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402A025E] 0x1402A025E  (1 patterns)
+  0x1402A026E  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402A07F6] 0x1402A07F6  (1 patterns)
+  0x1402A07F6  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A1055] 0x1402A1055  (1 patterns)
+  0x1402A1055  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A1120] 0x1402A1120  (1 patterns)
+  0x1402A1120  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A1C40] 0x1402A1C40  (1 patterns)
+  0x1402A1C40  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A3AAD] 0x1402A3AAD  (1 patterns)
+  0x1402A3ABA  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402A5F6D] 0x1402A5F6D  (1 patterns)
+  0x1402A5F6D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A61F3] 0x1402A61F3  (1 patterns)
+  0x1402A61FB  invlpg  byte ptr [rdx]                    INVLPG: invalidate TLB entry
+
+[sub_1402A6A2E] 0x1402A6A2E  (1 patterns)
+  0x1402A6A2E  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A7BE5] 0x1402A7BE5  (1 patterns)
+  0x1402A7BEA  invlpg  byte ptr [rbx]                    INVLPG: invalidate TLB entry
+
+[sub_1402A7C64] 0x1402A7C64  (1 patterns)
+  0x1402A7C64  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A8420] 0x1402A8420  (1 patterns)
+  0x1402A842D  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402A8451] 0x1402A8451  (1 patterns)
+  0x1402A8461  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402A9667] 0x1402A9667  (1 patterns)
+  0x1402A9667  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402A997F] 0x1402A997F  (1 patterns)
+  0x1402A997F  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402AA0BA] 0x1402AA0BA  (1 patterns)
+  0x1402AA0C7  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402AB987] 0x1402AB987  (1 patterns)
+  0x1402AB987  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402ABDF7] 0x1402ABDF7  (1 patterns)
+  0x1402ABDFF  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1402ABE60] 0x1402ABE60  (1 patterns)
+  0x1402ABE60  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402ADE31] 0x1402ADE31  (1 patterns)
+  0x1402ADE31  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402AE728] 0x1402AE728  (1 patterns)
+  0x1402AE728  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402AF94B] 0x1402AF94B  (1 patterns)
+  0x1402AF94B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402AF95F] 0x1402AF95F  (1 patterns)
+  0x1402AF96F  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402B0259] 0x1402B0259  (1 patterns)
+  0x1402B0269  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402B0FA1] 0x1402B0FA1  (1 patterns)
+  0x1402B0FA1  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B0FC9] 0x1402B0FC9  (1 patterns)
+  0x1402B0FD1  rdmsr                                     RDMSR: read model-specific register
+
+[sub_1402B0FE5] 0x1402B0FE5  (1 patterns)
+  0x1402B0FE5  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B165A] 0x1402B165A  (1 patterns)
+  0x1402B166A  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402B1742] 0x1402B1742  (1 patterns)
+  0x1402B1752  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402B2AE9] 0x1402B2AE9  (1 patterns)
+  0x1402B2AE9  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B322D] 0x1402B322D  (1 patterns)
+  0x1402B322D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B4D9C] 0x1402B4D9C  (1 patterns)
+  0x1402B4DAC  cpuid                                     CPUID: VM/hypervisor detection
+
+[sub_1402B5077] 0x1402B5077  (1 patterns)
+  0x1402B5077  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B623B] 0x1402B623B  (1 patterns)
+  0x1402B623B  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B670D] 0x1402B670D  (1 patterns)
+  0x1402B670D  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B6FEE] 0x1402B6FEE  (1 patterns)
+  0x1402B6FEE  rdtsc                                     RDTSC: timing-based anti-debug
+
+[sub_1402B7002] 0x1402B7002  (1 patterns)
+  0x1402B700A  invlpg  byte ptr [rax]                    INVLPG: invalidate TLB entry

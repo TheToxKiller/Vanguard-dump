@@ -1,0 +1,406 @@
+IMPORTED API USAGE MAP
+======================================================================
+
+ExFreePoolWithTag (10 callers)
+  - sub_140006F40
+  - sub_14008D08C
+  - sub_140118034
+  - sub_1401A525E
+  - sub_14022B24A
+  - sub_1402425FD
+  - sub_14024E440
+  - sub_14028F19C
+  - sub_140295500
+  - sub_1402AA555
+
+KeInitializeSpinLock (8 callers)
+  - sub_14008DD74
+  - sub_140164D3A
+  - sub_1401B32CE
+  - sub_1401E9CEB
+  - sub_1401FD18F
+  - sub_14023B941
+  - sub_14024F847
+  - sub_1402A1399
+
+wcslen (8 callers)
+  - sub_1401153C9
+  - sub_1401A2BB3
+  - sub_140205711
+  - sub_140223072
+  - sub_140223260
+  - sub_14028BB50
+  - sub_14028E39C
+  - sub_1402AC4CD
+
+ObfDereferenceObject (7 callers)
+  - sub_1401B0FE1
+  - sub_1401E798C
+  - sub_14020DE5E
+  - sub_140226E2C
+  - sub_140248A77
+  - sub_14026702B
+  - sub_1402A2025
+
+strchr (7 callers)
+  - sub_1401B467F
+  - sub_1401E4BA3
+  - sub_140214D95
+  - sub_140227A2E
+  - sub_14028BC38
+  - sub_1402ACAE1
+  - sub_1402ACEE5
+
+_snprintf_s (6 callers)
+  - sub_140076500
+  - sub_140118034
+  - sub_1401E4305
+  - sub_1402AC79B
+  - sub_1402ACE5F
+  - sub_1402ACEE5
+
+ExAllocatePoolWithTag (6 callers)
+  - sub_1401A14BA
+  - sub_140220A9B
+  - sub_140227A2E
+  - sub_14025803D
+  - sub_1402599FA
+  - sub_140266B7C
+
+KeReleaseMutex (6 callers)
+  - sub_1401D88B7
+  - sub_140214314
+  - sub_140235CB8
+  - sub_140243D5B
+  - sub_140265BFE
+  - sub_1402B3464
+
+vsprintf_s (5 callers)
+  - sub_140002C20
+  - sub_140117BCA
+  - sub_1401B41AA
+  - sub_1402270B8
+  - sub_140227241
+
+vswprintf_s (5 callers)
+  - sub_140058D78
+  - sub_140058DA4
+  - sub_140117D44
+  - sub_1401D9236
+  - sub_1402209DB
+
+BCryptHashData (5 callers)
+  - sub_140076500
+  - sub_1401B4342
+  - sub_1401E418E
+  - sub_140214D95
+  - sub_1402AC9EE
+
+ZwWriteFile (5 callers)
+  - sub_1401AF7B3
+  - sub_1401FD84B
+  - sub_14020CC3F
+  - sub_140254CD0
+  - sub_140278561
+
+ZwQueryDirectoryObject (5 callers)
+  - sub_1401D9140
+  - sub_1401E482D
+  - sub_140252619
+  - sub_14026C586
+  - sub_1402A2656
+
+MmAllocatePagesForMdl (5 callers)
+  - sub_1402150AD
+  - sub_1402151BA
+  - sub_1402231C1
+  - sub_1402AC79B
+  - sub_1402ACF9C
+
+strncpy_s (4 callers)
+  - sub_140053AB8
+  - sub_140053BC0
+  - sub_1402151BA
+  - sub_1402AC558
+
+BCryptCloseAlgorithmProvider (4 callers)
+  - sub_140075CE4
+  - sub_140076500
+  - sub_1401D91E7
+  - sub_140226DCB
+
+strcmp (4 callers)
+  - sub_140076500
+  - sub_14026702B
+  - sub_1402AC730
+  - sub_1402ACB7C
+
+BCryptGetProperty (4 callers)
+  - sub_140076500
+  - sub_1401B4185
+  - sub_140248873
+  - sub_1402AC51B
+
+KeGetCurrentIrql (4 callers)
+  - sub_140117C78
+  - sub_140117D19
+  - sub_1402582B1
+  - sub_14025B39B
+
+KeAcquireSpinLockAtDpcLevel (4 callers)
+  - sub_140117DAC
+  - sub_14011B194
+  - sub_1401B4844
+  - sub_1402488F8
+
+KeSetTimer (4 callers)
+  - sub_140117F15
+  - sub_1401B45CE
+  - sub_140209F2A
+  - sub_140223072
+
+ZwQuerySystemInformation (4 callers)
+  - sub_140117F15
+  - sub_1401B4746
+  - sub_14022B7FD
+  - sub_140259ABC
+
+KeAcquireSpinLockRaiseToDpc (4 callers)
+  - sub_140126AD4
+  - sub_140129154
+  - sub_1401E45F0
+  - sub_14028BDC9
+
+ZwClose (4 callers)
+  - sub_140163FC0
+  - sub_140215429
+  - sub_1402233FB
+  - sub_1402486F5
+
+KeInitializeTimer (4 callers)
+  - sub_1401B1251
+  - sub_140214D95
+  - sub_1402270B8
+  - sub_1402AD02B
+
+RtlTimeToTimeFields (4 callers)
+  - sub_1401B4342
+  - sub_1402231C1
+  - sub_140269663
+  - sub_14028BF42
+
+ObReferenceObjectByHandle (4 callers)
+  - sub_1401B82E3
+  - sub_1401E4B66
+  - sub_1402AC4AB
+  - sub_1402ACE5F
+
+RtlDuplicateUnicodeString (4 callers)
+  - sub_1402270B8
+  - sub_14024B5F0
+  - sub_14026F6E9
+  - sub_1402AC53B
+
+ProbeForRead (3 callers)
+  - sub_14004FAB4
+  - sub_140117D54
+  - sub_1402209DB
+
+IoGetCurrentProcess (3 callers)
+  - sub_140050D84
+  - sub_140050F28
+  - sub_14005266C
+
+BCryptFinishHash (3 callers)
+  - sub_140076500
+  - sub_140227241
+  - sub_140227911
+
+BCryptDestroyHash (3 callers)
+  - sub_140076500
+  - sub_1401E43B5
+  - sub_1401E495D
+
+KeQuerySystemTimePrecise (3 callers)
+  - sub_14008D08C
+  - sub_140117C78
+  - sub_1402151BA
+
+KeReleaseSpinLockFromDpcLevel (3 callers)
+  - sub_140117C68
+  - sub_1401A99BB
+  - sub_14028BD9E
+
+IoFileObjectType (3 callers)
+  - sub_140117D00
+  - sub_1401B45C2
+  - sub_140227A2E
+
+KeBugCheckEx (3 callers)
+  - sub_14011BB70
+  - sub_140245276
+  - sub_1402582B1
+
+KfRaiseIrql (3 callers)
+  - sub_14011CCFB
+  - sub_1401E4235
+  - sub_140248873
+
+ExSystemTimeToLocalTime (3 callers)
+  - sub_140127E0E
+  - sub_140129154
+  - sub_140164D3A
+
+ZwFlushBuffersFile (3 callers)
+  - sub_1401B511C
+  - sub_1401D9E38
+  - sub_140283387
+
+KeInsertQueueApc (3 callers)
+  - sub_1401D9418
+  - sub_14028BD60
+  - sub_1402AC742
+
+wcscat_s (3 callers)
+  - sub_1401DB7D3
+  - sub_1402150AD
+  - sub_14021B72D
+
+KeReleaseSpinLock (3 callers)
+  - sub_1401E482D
+  - sub_14020F1DE
+  - sub_1402839C9
+
+KeDeregisterBugCheckReasonCallback (3 callers)
+  - sub_14020C2A2
+  - sub_1402150AD
+  - sub_1402A9852
+
+KeQueryPerformanceCounter (3 callers)
+  - sub_140214FF0
+  - sub_140227717
+  - sub_1402AD02B
+
+IoFreeMdl (3 callers)
+  - sub_140214FF0
+  - sub_1402AB455
+  - sub_1402AC79B
+
+IoQueryFileInformation (3 callers)
+  - sub_1402231B5
+  - sub_14025F041
+  - sub_1402AC5BF
+
+ZwOpenDirectoryObject (3 callers)
+  - sub_140226F8F
+  - sub_1402581D8
+  - sub_14026D43C
+
+ZwTerminateProcess (3 callers)
+  - sub_140227A2E
+  - sub_14026C85F
+  - sub_1402AC5BF
+
+KeInitializeDpc (3 callers)
+  - sub_140252B23
+  - sub_140279F1C
+  - sub_14028BC38
+
+_vsnwprintf (2 callers)
+  - sub_14005A0AC
+  - sub_1401E46CC
+
+BCryptOpenAlgorithmProvider (2 callers)
+  - sub_140076500
+  - sub_1401B405C
+
+BCryptCreateHash (2 callers)
+  - sub_140076500
+  - sub_140248976
+
+BCryptVerifySignature (2 callers)
+  - sub_140076500
+  - sub_140248839
+
+KeInitializeMutant (2 callers)
+  - sub_140118034
+  - sub_1401B43D8
+
+KeNumberProcessors (2 callers)
+  - sub_1401B405C
+  - sub_1401E41FC
+
+IoInitializeWorkItem (2 callers)
+  - sub_140223423
+  - sub_1402839C9
+
+KeAreAllApcsDisabled (2 callers)
+  - sub_140226806
+  - sub_1402AD1C6
+
+MmHighestUserAddress (2 callers)
+  - sub_140226C08
+  - sub_14028BD3E
+
+MmFreePagesFromMdl (2 callers)
+  - sub_140226F8F
+  - sub_1402AB6F5
+
+swprintf_s (2 callers)
+  - sub_140227717
+  - sub_14024E281
+
+MmMapLockedPagesSpecifyCache (2 callers)
+  - sub_140227A2E
+  - sub_1402839C9
+
+KeInitializeApc (2 callers)
+  - sub_140227A2E
+  - sub_14028BF42
+
+wcscpy_s (2 callers)
+  - sub_14024C63F
+  - sub_1402ACC05
+
+KeRegisterBugCheckReasonCallback (2 callers)
+  - sub_140286901
+  - sub_1402AC371
+
+BCryptImportKeyPair (1 callers)
+  - sub_140076500
+
+KeInitializeMutex (1 callers)
+  - sub_1401AA1B5
+
+IoCreateFileEx (1 callers)
+  - sub_1401B511C
+
+KeIpiGenericCall (1 callers)
+  - sub_1401DB8FF
+
+strlen (1 callers)
+  - sub_140226C34
+
+MmUnmapLockedPages (1 callers)
+  - sub_140226F8F
+
+RtlMultiByteToUnicodeN (1 callers)
+  - sub_14022707E
+
+IoAllocateWorkItem (1 callers)
+  - sub_1402487C5
+
+ZwReadFile (1 callers)
+  - sub_140253E64
+
+RtlInitUnicodeString (1 callers)
+  - sub_1402582B1
+
+KeLowerIrql (1 callers)
+  - sub_1402713E7
+
+RtlPrefixUnicodeString (1 callers)
+  - sub_14027B91C
+
+strnlen (1 callers)
+  - sub_1402814A5

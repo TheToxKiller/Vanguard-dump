@@ -1,0 +1,847 @@
+ANTI-DEBUG / ANTI-VM FUNCTIONS
+======================================================================
+Critical functions for bypass research
+
+0x140001000  sub_140001000
+  -> 0x14000100A  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14000100C  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x14000101D  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14000101F  rdtsc  [RDTSC: timing-based anti-debug]
+0x1400010AC  sub_1400010AC
+  -> 0x1400010B5  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x1400010B8  rdtsc  [RDTSC: timing-based anti-debug]
+0x140015440  sub_140015440
+  -> 0x14001565C  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140015998  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140015AEC  rdtsc  [RDTSC: timing-based anti-debug]
+0x14001A3F4  sub_14001A3F4
+  -> 0x14001A5DF  cpuid  [CPUID: VM/hypervisor detection]
+0x14001A73C  sub_14001A73C
+  -> 0x14001A957  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14001AC93  cpuid  [CPUID: VM/hypervisor detection]
+0x140058CBC  sub_140058CBC
+  -> 0x140058CDA  rdtsc  [RDTSC: timing-based anti-debug]
+0x140086374  sub_140086374
+  -> 0x14008637E  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14008638D  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x1400863DE  cpuid  [CPUID: VM/hypervisor detection]
+0x14008DD74  sub_14008DD74
+  -> 0x14008DE29  cpuid  [CPUID: VM/hypervisor detection]
+0x1400947E4  sub_1400947E4
+  -> 0x140094862  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14009487F  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094881  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094892  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094902  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094922  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094924  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094969  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094986  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094988  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094999  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x1400949F2  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094A12  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094A14  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094A25  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094AEA  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094B03  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094B05  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094B16  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094B66  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094B7F  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140094B81  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094B92  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140094C63  rdtsc  [RDTSC: timing-based anti-debug]
+0x140097000  sub_140097000
+  -> 0x14009703B  cpuid  [CPUID: VM/hypervisor detection]
+0x14011630A  sub_14011630A
+  -> 0x14011630A  rdtsc  [RDTSC: timing-based anti-debug]
+0x140117674  sub_140117674
+  -> 0x140117674  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401178B2  sub_1401178B2
+  -> 0x1401178C2  cpuid  [CPUID: VM/hypervisor detection]
+0x14011817F  sub_14011817F
+  -> 0x14011818A  in      al, dx  [IN: I/O port read (anti-VM)]
+0x140118AC7  sub_140118AC7
+  -> 0x140118AD4  cpuid  [CPUID: VM/hypervisor detection]
+0x140119136  sub_140119136
+  -> 0x140119146  cpuid  [CPUID: VM/hypervisor detection]
+0x1401192D1  sub_1401192D1
+  -> 0x1401192D1  rdtsc  [RDTSC: timing-based anti-debug]
+0x14011B05A  sub_14011B05A
+  -> 0x14011B067  cpuid  [CPUID: VM/hypervisor detection]
+0x14011C946  sub_14011C946
+  -> 0x14011C946  rdtsc  [RDTSC: timing-based anti-debug]
+0x14011CAAE  sub_14011CAAE
+  -> 0x14011CAAE  rdtsc  [RDTSC: timing-based anti-debug]
+0x14011CE83  sub_14011CE83
+  -> 0x14011CE83  rdtsc  [RDTSC: timing-based anti-debug]
+0x14011D006  sub_14011D006
+  -> 0x14011D006  rdtsc  [RDTSC: timing-based anti-debug]
+0x140123CD0  sub_140123CD0
+  -> 0x140123CE0  cpuid  [CPUID: VM/hypervisor detection]
+0x1401244E0  sub_1401244E0
+  -> 0x1401244F0  in      ax, dx  [IN: I/O port read (anti-VM)]
+0x14012790A  sub_14012790A
+  -> 0x14012790A  rdtsc  [RDTSC: timing-based anti-debug]
+0x140127DE0  sub_140127DE0
+  -> 0x140127DED  cpuid  [CPUID: VM/hypervisor detection]
+0x140128803  sub_140128803
+  -> 0x140128803  rdtsc  [RDTSC: timing-based anti-debug]
+0x140129154  sub_140129154
+  -> 0x1401298B9  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14013A462  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14015FD67  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140160796  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x1401607A2  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140160B1C  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140161173  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x14016117F  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x14016146E  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140161D3E  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x140161D4A  rdtsc  [RDTSC: timing-based anti-debug]
+  -> 0x14016221C  cpuid  [CPUID: VM/hypervisor detection]
+0x1401633B3  sub_1401633B3
+  -> 0x1401633B3  rdtsc  [RDTSC: timing-based anti-debug]
+0x140163B9B  sub_140163B9B
+  -> 0x140163BAB  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x140164347  sub_140164347
+  -> 0x140164357  cpuid  [CPUID: VM/hypervisor detection]
+0x140164A83  sub_140164A83
+  -> 0x140164A93  cpuid  [CPUID: VM/hypervisor detection]
+0x140164D3A  sub_140164D3A
+  -> 0x140167413  in      eax, 0C3h; DMA controller, 8237A-5.  [IN: I/O port read (anti-VM)]
+  -> 0x1401755A4  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140176998  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x140188C92  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14018B065  cpuid  [CPUID: VM/hypervisor detection]
+  -> 0x14018BA3F  rdtsc  [RDTSC: timing-based anti-debug]
+0x14019F0B8  sub_14019F0B8
+  -> 0x14019F0C8  cpuid  [CPUID: VM/hypervisor detection]
+0x14019F505  sub_14019F505
+  -> 0x14019F512  cpuid  [CPUID: VM/hypervisor detection]
+0x14019FEA2  sub_14019FEA2
+  -> 0x14019FEB2  cpuid  [CPUID: VM/hypervisor detection]
+0x1401A069D  sub_1401A069D
+  -> 0x1401A06AD  cpuid  [CPUID: VM/hypervisor detection]
+0x1401A07CA  sub_1401A07CA
+  -> 0x1401A07CA  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A133C  sub_1401A133C
+  -> 0x1401A133C  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A181C  sub_1401A181C
+  -> 0x1401A182C  cpuid  [CPUID: VM/hypervisor detection]
+0x1401A1B70  sub_1401A1B70
+  -> 0x1401A1B70  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A2584  sub_1401A2584
+  -> 0x1401A2594  cpuid  [CPUID: VM/hypervisor detection]
+0x1401A3F70  sub_1401A3F70
+  -> 0x1401A3F70  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A4E1B  sub_1401A4E1B
+  -> 0x1401A4E1B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A530F  sub_1401A530F
+  -> 0x1401A530F  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A54A4  sub_1401A54A4
+  -> 0x1401A54A4  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A69DF  sub_1401A69DF
+  -> 0x1401A69DF  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A6A3B  sub_1401A6A3B
+  -> 0x1401A6A3B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A731D  sub_1401A731D
+  -> 0x1401A732A  cpuid  [CPUID: VM/hypervisor detection]
+0x1401A92BD  sub_1401A92BD
+  -> 0x1401A92BD  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401A99A4  sub_1401A99A4
+  -> 0x1401A99A4  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AA563  sub_1401AA563
+  -> 0x1401AA563  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AA6FD  sub_1401AA6FD
+  -> 0x1401AA70D  cpuid  [CPUID: VM/hypervisor detection]
+0x1401AB360  sub_1401AB360
+  -> 0x1401AB370  cpuid  [CPUID: VM/hypervisor detection]
+0x1401AB80D  sub_1401AB80D
+  -> 0x1401AB817  cpuid  [CPUID: VM/hypervisor detection]
+0x1401ABBE6  sub_1401ABBE6
+  -> 0x1401ABBE6  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401ABC88  sub_1401ABC88
+  -> 0x1401ABC88  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AC094  sub_1401AC094
+  -> 0x1401AC0A4  cpuid  [CPUID: VM/hypervisor detection]
+0x1401AD7BB  sub_1401AD7BB
+  -> 0x1401AD7BB  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AE024  sub_1401AE024
+  -> 0x1401AE031  cpuid  [CPUID: VM/hypervisor detection]
+0x1401AE166  sub_1401AE166
+  -> 0x1401AE176  cpuid  [CPUID: VM/hypervisor detection]
+0x1401AE995  sub_1401AE995
+  -> 0x1401AE995  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AEDE7  sub_1401AEDE7
+  -> 0x1401AEDE7  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AF892  sub_1401AF892
+  -> 0x1401AF898  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x1401AF96B  sub_1401AF96B
+  -> 0x1401AF96B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401AFE05  sub_1401AFE05
+  -> 0x1401AFE05  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401B1ED5  sub_1401B1ED5
+  -> 0x1401B1EE5  cpuid  [CPUID: VM/hypervisor detection]
+0x1401B1F27  sub_1401B1F27
+  -> 0x1401B1F27  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401B511C  sub_1401B511C
+  -> 0x1401B517D  in      eax, 2Bh  [IN: I/O port read (anti-VM)]
+  -> 0x1401B51B9  in      al, dx  [IN: I/O port read (anti-VM)]
+0x1401B5864  sub_1401B5864
+  -> 0x1401B5874  cpuid  [CPUID: VM/hypervisor detection]
+0x1401B5F1E  sub_1401B5F1E
+  -> 0x1401B5F2E  cpuid  [CPUID: VM/hypervisor detection]
+0x1401B61BC  sub_1401B61BC
+  -> 0x1401B61BC  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401B7CC1  sub_1401B7CC1
+  -> 0x1401B7CC1  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401B8284  sub_1401B8284
+  -> 0x1401B828E  cpuid  [CPUID: VM/hypervisor detection]
+0x1401D7E9E  sub_1401D7E9E
+  -> 0x1401D7E9E  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401D8622  sub_1401D8622
+  -> 0x1401D862F  cpuid  [CPUID: VM/hypervisor detection]
+0x1401D9B07  sub_1401D9B07
+  -> 0x1401D9B14  cpuid  [CPUID: VM/hypervisor detection]
+0x1401D9B3B  sub_1401D9B3B
+  -> 0x1401D9B3B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DA105  sub_1401DA105
+  -> 0x1401DA105  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DA20F  sub_1401DA20F
+  -> 0x1401DA21F  cpuid  [CPUID: VM/hypervisor detection]
+0x1401DA246  sub_1401DA246
+  -> 0x1401DA246  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DA538  sub_1401DA538
+  -> 0x1401DA538  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DA696  sub_1401DA696
+  -> 0x1401DA6A3  cpuid  [CPUID: VM/hypervisor detection]
+0x1401DAD06  sub_1401DAD06
+  -> 0x1401DAD06  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DB9E4  sub_1401DB9E4
+  -> 0x1401DB9E4  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DBD4E  sub_1401DBD4E
+  -> 0x1401DBD4E  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DC05A  sub_1401DC05A
+  -> 0x1401DC05A  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DC4EE  sub_1401DC4EE
+  -> 0x1401DC4FE  cpuid  [CPUID: VM/hypervisor detection]
+0x1401DCC8A  sub_1401DCC8A
+  -> 0x1401DCC8A  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DCF3C  sub_1401DCF3C
+  -> 0x1401DCF3C  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DDCC9  sub_1401DDCC9
+  -> 0x1401DDCC9  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401DE1DD  sub_1401DE1DD
+  -> 0x1401DE1EA  cpuid  [CPUID: VM/hypervisor detection]
+0x1401DE340  sub_1401DE340
+  -> 0x1401DE350  cpuid  [CPUID: VM/hypervisor detection]
+0x1401DE44C  sub_1401DE44C
+  -> 0x1401DE44C  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401E13FE  sub_1401E13FE
+  -> 0x1401E140E  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E1524  sub_1401E1524
+  -> 0x1401E1534  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E155B  sub_1401E155B
+  -> 0x1401E1565  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E2292  sub_1401E2292
+  -> 0x1401E2292  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401E2DFD  sub_1401E2DFD
+  -> 0x1401E2E0A  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E3F26  sub_1401E3F26
+  -> 0x1401E3F33  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E75B3  sub_1401E75B3
+  -> 0x1401E75C0  cpuid  [CPUID: VM/hypervisor detection]
+0x1401E97F8  sub_1401E97F8
+  -> 0x1401E9808  cpuid  [CPUID: VM/hypervisor detection]
+0x1401EABAC  sub_1401EABAC
+  -> 0x1401EABAC  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EAEA2  sub_1401EAEA2
+  -> 0x1401EAEB2  cpuid  [CPUID: VM/hypervisor detection]
+0x1401EB799  sub_1401EB799
+  -> 0x1401EB799  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EB7BF  sub_1401EB7BF
+  -> 0x1401EB7CC  cpuid  [CPUID: VM/hypervisor detection]
+0x1401EC0A3  sub_1401EC0A3
+  -> 0x1401EC0B3  cpuid  [CPUID: VM/hypervisor detection]
+0x1401EC761  sub_1401EC761
+  -> 0x1401EC761  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EC8AB  sub_1401EC8AB
+  -> 0x1401EC8AB  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EE47C  sub_1401EE47C
+  -> 0x1401EE47C  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EF149  sub_1401EF149
+  -> 0x1401EF149  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401EF9F0  sub_1401EF9F0
+  -> 0x1401EF9F0  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401F04C7  sub_1401F04C7
+  -> 0x1401F04C7  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401F05AA  sub_1401F05AA
+  -> 0x1401F05BA  cpuid  [CPUID: VM/hypervisor detection]
+0x1401F39A0  sub_1401F39A0
+  -> 0x1401F39B0  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x1401F3C50  sub_1401F3C50
+  -> 0x1401F3C60  cpuid  [CPUID: VM/hypervisor detection]
+0x1401F60D1  sub_1401F60D1
+  -> 0x1401F60E0  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x1401F6817  sub_1401F6817
+  -> 0x1401F6817  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401F8581  sub_1401F8581
+  -> 0x1401F8581  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401F8595  sub_1401F8595
+  -> 0x1401F8595  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401FDAA6  sub_1401FDAA6
+  -> 0x1401FDAA6  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401FE480  sub_1401FE480
+  -> 0x1401FE488  in      eax, 3Bh  [IN: I/O port read (anti-VM)]
+0x1401FEBA7  sub_1401FEBA7
+  -> 0x1401FEBA7  rdtsc  [RDTSC: timing-based anti-debug]
+0x1401FF5BA  sub_1401FF5BA
+  -> 0x1401FF5BA  rdtsc  [RDTSC: timing-based anti-debug]
+0x140200165  sub_140200165
+  -> 0x140200165  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402020A9  sub_1402020A9
+  -> 0x1402020B9  cpuid  [CPUID: VM/hypervisor detection]
+0x140202B49  sub_140202B49
+  -> 0x140202B56  cpuid  [CPUID: VM/hypervisor detection]
+0x140202B91  sub_140202B91
+  -> 0x140202B9E  cpuid  [CPUID: VM/hypervisor detection]
+0x140205393  sub_140205393
+  -> 0x140205393  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402058D7  sub_1402058D7
+  -> 0x1402058E7  cpuid  [CPUID: VM/hypervisor detection]
+0x1402065F2  sub_1402065F2
+  -> 0x140206602  cpuid  [CPUID: VM/hypervisor detection]
+0x140206638  sub_140206638
+  -> 0x140206638  rdtsc  [RDTSC: timing-based anti-debug]
+0x14020664F  sub_14020664F
+  -> 0x14020664F  rdtsc  [RDTSC: timing-based anti-debug]
+0x140206666  sub_140206666
+  -> 0x140206666  rdtsc  [RDTSC: timing-based anti-debug]
+0x140207A5E  sub_140207A5E
+  -> 0x140207A5E  rdtsc  [RDTSC: timing-based anti-debug]
+0x140207DA8  sub_140207DA8
+  -> 0x140207DA8  rdtsc  [RDTSC: timing-based anti-debug]
+0x140207DF1  sub_140207DF1
+  -> 0x140207DF1  rdtsc  [RDTSC: timing-based anti-debug]
+0x14020823C  sub_14020823C
+  -> 0x14020823C  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402082CC  sub_1402082CC
+  -> 0x1402082DC  cpuid  [CPUID: VM/hypervisor detection]
+0x140208967  sub_140208967
+  -> 0x140208977  cpuid  [CPUID: VM/hypervisor detection]
+0x14020939F  sub_14020939F
+  -> 0x1402093AC  cpuid  [CPUID: VM/hypervisor detection]
+0x1402095A2  sub_1402095A2
+  -> 0x1402095A2  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402099CC  sub_1402099CC
+  -> 0x1402099D9  cpuid  [CPUID: VM/hypervisor detection]
+0x140209E26  sub_140209E26
+  -> 0x140209E26  rdtsc  [RDTSC: timing-based anti-debug]
+0x140209F13  sub_140209F13
+  -> 0x140209F13  rdtsc  [RDTSC: timing-based anti-debug]
+0x14020BD8C  sub_14020BD8C
+  -> 0x14020BD8C  rdtsc  [RDTSC: timing-based anti-debug]
+0x14020D891  sub_14020D891
+  -> 0x14020D899  in      al, 26h  [IN: I/O port read (anti-VM)]
+0x14020E9BA  sub_14020E9BA
+  -> 0x14020E9C7  cpuid  [CPUID: VM/hypervisor detection]
+0x14020EAA8  sub_14020EAA8
+  -> 0x14020EAB8  cpuid  [CPUID: VM/hypervisor detection]
+0x14020F7F2  sub_14020F7F2
+  -> 0x14020F802  cpuid  [CPUID: VM/hypervisor detection]
+0x14020F9DD  sub_14020F9DD
+  -> 0x14020F9DD  rdtsc  [RDTSC: timing-based anti-debug]
+0x140210645  sub_140210645
+  -> 0x140210655  cpuid  [CPUID: VM/hypervisor detection]
+0x140210824  sub_140210824
+  -> 0x140210824  rdtsc  [RDTSC: timing-based anti-debug]
+0x14021306C  sub_14021306C
+  -> 0x14021306C  rdtsc  [RDTSC: timing-based anti-debug]
+0x140213644  sub_140213644
+  -> 0x140213644  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402139E0  sub_1402139E0
+  -> 0x1402139F0  cpuid  [CPUID: VM/hypervisor detection]
+0x140214788  sub_140214788
+  -> 0x140214788  rdtsc  [RDTSC: timing-based anti-debug]
+0x140214AD4  sub_140214AD4
+  -> 0x140214AE4  cpuid  [CPUID: VM/hypervisor detection]
+0x140214D84  sub_140214D84
+  -> 0x140214D84  rdtsc  [RDTSC: timing-based anti-debug]
+0x140214E74  sub_140214E74
+  -> 0x140214E79  in      al, 8Bh; DMA page register 74LS612:  [IN: I/O port read (anti-VM)]
+0x140215412  sub_140215412
+  -> 0x140215412  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402157E6  sub_1402157E6
+  -> 0x1402157E6  rdtsc  [RDTSC: timing-based anti-debug]
+0x140216191  sub_140216191
+  -> 0x14021619E  cpuid  [CPUID: VM/hypervisor detection]
+0x14021627F  sub_14021627F
+  -> 0x14021628F  cpuid  [CPUID: VM/hypervisor detection]
+0x140216707  sub_140216707
+  -> 0x140216714  cpuid  [CPUID: VM/hypervisor detection]
+0x140216E7D  sub_140216E7D
+  -> 0x140216E7D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140217B8C  sub_140217B8C
+  -> 0x140217B8C  rdtsc  [RDTSC: timing-based anti-debug]
+0x140217DF8  sub_140217DF8
+  -> 0x140217DF8  rdtsc  [RDTSC: timing-based anti-debug]
+0x140218021  sub_140218021
+  -> 0x140218030  in      al, 0CCh; DMA controller, 8237A-5.  [IN: I/O port read (anti-VM)]
+0x1402187B6  sub_1402187B6
+  -> 0x1402187B6  rdtsc  [RDTSC: timing-based anti-debug]
+0x140218A4A  sub_140218A4A
+  -> 0x140218A4A  rdtsc  [RDTSC: timing-based anti-debug]
+0x140218CE6  sub_140218CE6
+  -> 0x140218CF3  cpuid  [CPUID: VM/hypervisor detection]
+0x140219419  sub_140219419
+  -> 0x140219429  cpuid  [CPUID: VM/hypervisor detection]
+0x140219450  sub_140219450
+  -> 0x14021945D  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x14021ABD2  sub_14021ABD2
+  -> 0x14021ABD2  rdtsc  [RDTSC: timing-based anti-debug]
+0x14021B140  sub_14021B140
+  -> 0x14021B140  rdtsc  [RDTSC: timing-based anti-debug]
+0x14021B25F  sub_14021B25F
+  -> 0x14021B26F  cpuid  [CPUID: VM/hypervisor detection]
+0x14021C590  sub_14021C590
+  -> 0x14021C59D  cpuid  [CPUID: VM/hypervisor detection]
+0x14021CFC9  sub_14021CFC9
+  -> 0x14021CFD9  cpuid  [CPUID: VM/hypervisor detection]
+0x14021D4A9  sub_14021D4A9
+  -> 0x14021D4A9  rdtsc  [RDTSC: timing-based anti-debug]
+0x14021DA65  sub_14021DA65
+  -> 0x14021DA75  cpuid  [CPUID: VM/hypervisor detection]
+0x14021E0BB  sub_14021E0BB
+  -> 0x14021E0BB  rdtsc  [RDTSC: timing-based anti-debug]
+0x14021E490  sub_14021E490
+  -> 0x14021E4A0  cpuid  [CPUID: VM/hypervisor detection]
+0x14021EE42  sub_14021EE42
+  -> 0x14021EE4F  cpuid  [CPUID: VM/hypervisor detection]
+0x14021F1BE  sub_14021F1BE
+  -> 0x14021F1CE  cpuid  [CPUID: VM/hypervisor detection]
+0x14021FDFA  sub_14021FDFA
+  -> 0x14021FE0A  cpuid  [CPUID: VM/hypervisor detection]
+0x14021FF8A  sub_14021FF8A
+  -> 0x14021FF97  cpuid  [CPUID: VM/hypervisor detection]
+0x1402209C7  sub_1402209C7
+  -> 0x1402209C7  rdtsc  [RDTSC: timing-based anti-debug]
+0x140220CA2  sub_140220CA2
+  -> 0x140220CB2  cpuid  [CPUID: VM/hypervisor detection]
+0x14022116A  sub_14022116A
+  -> 0x14022117A  cpuid  [CPUID: VM/hypervisor detection]
+0x140221DBC  sub_140221DBC
+  -> 0x140221DBC  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022207E  sub_14022207E
+  -> 0x14022207E  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402226AA  sub_1402226AA
+  -> 0x1402226BA  cpuid  [CPUID: VM/hypervisor detection]
+0x1402237EE  sub_1402237EE
+  -> 0x1402237EE  rdtsc  [RDTSC: timing-based anti-debug]
+0x140223805  sub_140223805
+  -> 0x140223805  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022381C  sub_14022381C
+  -> 0x140223829  cpuid  [CPUID: VM/hypervisor detection]
+0x140223D7A  sub_140223D7A
+  -> 0x140223D87  cpuid  [CPUID: VM/hypervisor detection]
+0x140224932  sub_140224932
+  -> 0x140224932  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402262C6  sub_1402262C6
+  -> 0x1402262D6  cpuid  [CPUID: VM/hypervisor detection]
+0x1402273E7  sub_1402273E7
+  -> 0x1402273F7  cpuid  [CPUID: VM/hypervisor detection]
+0x140227A2E  sub_140227A2E
+  -> 0x140227AFC  in      eax, 0DAh  [IN: I/O port read (anti-VM)]
+0x140227F4D  sub_140227F4D
+  -> 0x140227F4D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140228166  sub_140228166
+  -> 0x140228176  cpuid  [CPUID: VM/hypervisor detection]
+0x1402286A1  sub_1402286A1
+  -> 0x1402286A1  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402294A0  sub_1402294A0
+  -> 0x1402294B0  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x1402298D6  sub_1402298D6
+  -> 0x1402298D6  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022A15D  sub_14022A15D
+  -> 0x14022A16D  cpuid  [CPUID: VM/hypervisor detection]
+0x14022A1A2  sub_14022A1A2
+  -> 0x14022A1A2  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022ABD9  sub_14022ABD9
+  -> 0x14022ABD9  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022ABF0  sub_14022ABF0
+  -> 0x14022ABF0  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022EEC9  sub_14022EEC9
+  -> 0x14022EED0  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x14022EFA1  sub_14022EFA1
+  -> 0x14022EFA1  rdtsc  [RDTSC: timing-based anti-debug]
+0x14022F907  sub_14022F907
+  -> 0x14022F917  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x14022F951  sub_14022F951
+  -> 0x14022F951  rdtsc  [RDTSC: timing-based anti-debug]
+0x140234433  sub_140234433
+  -> 0x140234433  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023473F  sub_14023473F
+  -> 0x14023474C  cpuid  [CPUID: VM/hypervisor detection]
+0x140234EF4  sub_140234EF4
+  -> 0x140234F01  cpuid  [CPUID: VM/hypervisor detection]
+0x1402361CD  sub_1402361CD
+  -> 0x1402361DD  cpuid  [CPUID: VM/hypervisor detection]
+0x140236E58  sub_140236E58
+  -> 0x140236E58  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023772A  sub_14023772A
+  -> 0x14023772A  rdtsc  [RDTSC: timing-based anti-debug]
+0x140237C43  sub_140237C43
+  -> 0x140237C53  cpuid  [CPUID: VM/hypervisor detection]
+0x140238998  sub_140238998
+  -> 0x140238998  rdtsc  [RDTSC: timing-based anti-debug]
+0x140239C66  sub_140239C66
+  -> 0x140239C66  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023BD6A  sub_14023BD6A
+  -> 0x14023BD6A  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023C6BA  sub_14023C6BA
+  -> 0x14023C6CA  cpuid  [CPUID: VM/hypervisor detection]
+0x14023C6EB  sub_14023C6EB
+  -> 0x14023C6EB  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023CC0D  sub_14023CC0D
+  -> 0x14023CC1D  cpuid  [CPUID: VM/hypervisor detection]
+0x14023CD0C  sub_14023CD0C
+  -> 0x14023CD0C  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023F87D  sub_14023F87D
+  -> 0x14023F87D  rdtsc  [RDTSC: timing-based anti-debug]
+0x14023F927  sub_14023F927
+  -> 0x14023F937  cpuid  [CPUID: VM/hypervisor detection]
+0x14023FC43  sub_14023FC43
+  -> 0x14023FC53  cpuid  [CPUID: VM/hypervisor detection]
+0x1402411B0  sub_1402411B0
+  -> 0x1402411B0  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024154E  sub_14024154E
+  -> 0x14024155E  cpuid  [CPUID: VM/hypervisor detection]
+0x140243C3D  sub_140243C3D
+  -> 0x140243C3D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140243EB9  sub_140243EB9
+  -> 0x140243EC9  cpuid  [CPUID: VM/hypervisor detection]
+0x1402451AB  sub_1402451AB
+  -> 0x1402451AB  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402459B2  sub_1402459B2
+  -> 0x1402459B2  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024690B  sub_14024690B
+  -> 0x14024690B  rdtsc  [RDTSC: timing-based anti-debug]
+0x140247004  sub_140247004
+  -> 0x140247004  rdtsc  [RDTSC: timing-based anti-debug]
+0x140247951  sub_140247951
+  -> 0x140247961  cpuid  [CPUID: VM/hypervisor detection]
+0x140247988  sub_140247988
+  -> 0x140247988  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024AB4E  sub_14024AB4E
+  -> 0x14024AB4E  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024B0DD  sub_14024B0DD
+  -> 0x14024B0DD  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024B3F4  sub_14024B3F4
+  -> 0x14024B404  cpuid  [CPUID: VM/hypervisor detection]
+0x14024C757  sub_14024C757
+  -> 0x14024C757  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024D3B9  sub_14024D3B9
+  -> 0x14024D3C9  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x14024DF9F  sub_14024DF9F
+  -> 0x14024DF9F  rdtsc  [RDTSC: timing-based anti-debug]
+0x14024DFB6  sub_14024DFB6
+  -> 0x14024DFC6  cpuid  [CPUID: VM/hypervisor detection]
+0x14024E331  sub_14024E331
+  -> 0x14024E341  cpuid  [CPUID: VM/hypervisor detection]
+0x14024E8DA  sub_14024E8DA
+  -> 0x14024E8E7  cpuid  [CPUID: VM/hypervisor detection]
+0x14024F805  sub_14024F805
+  -> 0x14024F812  cpuid  [CPUID: VM/hypervisor detection]
+0x1402519BB  sub_1402519BB
+  -> 0x1402519BB  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402519D2  sub_1402519D2
+  -> 0x1402519DF  cpuid  [CPUID: VM/hypervisor detection]
+0x140252C44  sub_140252C44
+  -> 0x140252C51  in      al, dx  [IN: I/O port read (anti-VM)]
+0x140254EEB  sub_140254EEB
+  -> 0x140254EEB  rdtsc  [RDTSC: timing-based anti-debug]
+0x140255C6C  sub_140255C6C
+  -> 0x140255C7C  cpuid  [CPUID: VM/hypervisor detection]
+0x14025671D  sub_14025671D
+  -> 0x14025672D  cpuid  [CPUID: VM/hypervisor detection]
+0x1402568AB  sub_1402568AB
+  -> 0x1402568BB  cpuid  [CPUID: VM/hypervisor detection]
+0x1402568DC  sub_1402568DC
+  -> 0x1402568EC  cpuid  [CPUID: VM/hypervisor detection]
+0x140256913  sub_140256913
+  -> 0x140256923  cpuid  [CPUID: VM/hypervisor detection]
+0x140257F35  sub_140257F35
+  -> 0x140257FE8  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x140258593  sub_140258593
+  -> 0x1402585F8  in      eax, 0FFh  [IN: I/O port read (anti-VM)]
+0x1402587AA  sub_1402587AA
+  -> 0x1402587AA  rdtsc  [RDTSC: timing-based anti-debug]
+0x140258A0F  sub_140258A0F
+  -> 0x140258A0F  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025A546  sub_14025A546
+  -> 0x14025A546  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025A687  sub_14025A687
+  -> 0x14025A697  in      eax, dx  [IN: I/O port read (anti-VM)]
+0x14025ACC3  sub_14025ACC3
+  -> 0x14025ACC3  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025ACD7  sub_14025ACD7
+  -> 0x14025ACE4  cpuid  [CPUID: VM/hypervisor detection]
+0x14025AE76  sub_14025AE76
+  -> 0x14025AE76  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025B50A  sub_14025B50A
+  -> 0x14025B50A  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025BDB9  sub_14025BDB9
+  -> 0x14025BDB9  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025BE87  sub_14025BE87
+  -> 0x14025BE87  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025DB35  sub_14025DB35
+  -> 0x14025DB35  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025E455  sub_14025E455
+  -> 0x14025E465  cpuid  [CPUID: VM/hypervisor detection]
+0x14025E6CE  sub_14025E6CE
+  -> 0x14025E6CE  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025EA62  sub_14025EA62
+  -> 0x14025EA72  cpuid  [CPUID: VM/hypervisor detection]
+0x14025F409  sub_14025F409
+  -> 0x14025F419  cpuid  [CPUID: VM/hypervisor detection]
+0x14025F4DB  sub_14025F4DB
+  -> 0x14025F4DB  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025F731  sub_14025F731
+  -> 0x14025F731  rdtsc  [RDTSC: timing-based anti-debug]
+0x14025F9CD  sub_14025F9CD
+  -> 0x14025F9DD  cpuid  [CPUID: VM/hypervisor detection]
+0x14026023C  sub_14026023C
+  -> 0x14026023C  rdtsc  [RDTSC: timing-based anti-debug]
+0x140260515  sub_140260515
+  -> 0x140260522  cpuid  [CPUID: VM/hypervisor detection]
+0x140264F92  sub_140264F92
+  -> 0x140264F92  rdtsc  [RDTSC: timing-based anti-debug]
+0x140265776  sub_140265776
+  -> 0x140265776  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402665AA  sub_1402665AA
+  -> 0x1402665B7  cpuid  [CPUID: VM/hypervisor detection]
+0x140266722  sub_140266722
+  -> 0x140266722  rdtsc  [RDTSC: timing-based anti-debug]
+0x140269190  sub_140269190
+  -> 0x140269190  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026926B  sub_14026926B
+  -> 0x14026926B  rdtsc  [RDTSC: timing-based anti-debug]
+0x140269557  sub_140269557
+  -> 0x140269567  cpuid  [CPUID: VM/hypervisor detection]
+0x1402698AE  sub_1402698AE
+  -> 0x1402698AE  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026A597  sub_14026A597
+  -> 0x14026A597  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026B6DA  sub_14026B6DA
+  -> 0x14026B6EA  cpuid  [CPUID: VM/hypervisor detection]
+0x14026BE22  sub_14026BE22
+  -> 0x14026BE2F  cpuid  [CPUID: VM/hypervisor detection]
+0x14026C2D8  sub_14026C2D8
+  -> 0x14026C2E8  cpuid  [CPUID: VM/hypervisor detection]
+0x14026C3B9  sub_14026C3B9
+  -> 0x14026C3C9  cpuid  [CPUID: VM/hypervisor detection]
+0x14026C710  sub_14026C710
+  -> 0x14026C720  cpuid  [CPUID: VM/hypervisor detection]
+0x14026CBF3  sub_14026CBF3
+  -> 0x14026CBF3  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026CCE8  sub_14026CCE8
+  -> 0x14026CCF5  cpuid  [CPUID: VM/hypervisor detection]
+0x14026DC89  sub_14026DC89
+  -> 0x14026DC89  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026EE05  sub_14026EE05
+  -> 0x14026EE05  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026F2B4  sub_14026F2B4
+  -> 0x14026F2B4  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026F59E  sub_14026F59E
+  -> 0x14026F59E  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026F608  sub_14026F608
+  -> 0x14026F615  cpuid  [CPUID: VM/hypervisor detection]
+0x14026FEDF  sub_14026FEDF
+  -> 0x14026FEDF  rdtsc  [RDTSC: timing-based anti-debug]
+0x14026FF0A  sub_14026FF0A
+  -> 0x14026FF0A  rdtsc  [RDTSC: timing-based anti-debug]
+0x14027060E  sub_14027060E
+  -> 0x14027060E  rdtsc  [RDTSC: timing-based anti-debug]
+0x140270BC7  sub_140270BC7
+  -> 0x140270BC7  rdtsc  [RDTSC: timing-based anti-debug]
+0x140274D6A  sub_140274D6A
+  -> 0x140274D7A  cpuid  [CPUID: VM/hypervisor detection]
+0x140275182  sub_140275182
+  -> 0x140275192  cpuid  [CPUID: VM/hypervisor detection]
+0x140275FB9  sub_140275FB9
+  -> 0x140275FC9  cpuid  [CPUID: VM/hypervisor detection]
+0x140276DF3  sub_140276DF3
+  -> 0x140276E03  cpuid  [CPUID: VM/hypervisor detection]
+0x140276EBD  sub_140276EBD
+  -> 0x140276EBD  rdtsc  [RDTSC: timing-based anti-debug]
+0x140276F9D  sub_140276F9D
+  -> 0x140276F9D  rdtsc  [RDTSC: timing-based anti-debug]
+0x14027806D  sub_14027806D
+  -> 0x14027807D  cpuid  [CPUID: VM/hypervisor detection]
+0x140279099  sub_140279099
+  -> 0x140279099  rdtsc  [RDTSC: timing-based anti-debug]
+0x14027956E  sub_14027956E
+  -> 0x14027957E  cpuid  [CPUID: VM/hypervisor detection]
+0x140279DF9  sub_140279DF9
+  -> 0x140279DF9  rdtsc  [RDTSC: timing-based anti-debug]
+0x14027A577  sub_14027A577
+  -> 0x14027A587  cpuid  [CPUID: VM/hypervisor detection]
+0x14027A728  sub_14027A728
+  -> 0x14027A728  rdtsc  [RDTSC: timing-based anti-debug]
+0x14027ACC2  sub_14027ACC2
+  -> 0x14027ACC9  in      eax, 0AAh; Interrupt Controller #2, 8259A  [IN: I/O port read (anti-VM)]
+0x14027B841  sub_14027B841
+  -> 0x14027B84E  cpuid  [CPUID: VM/hypervisor detection]
+0x14027B8EB  sub_14027B8EB
+  -> 0x14027B8F8  cpuid  [CPUID: VM/hypervisor detection]
+0x140281BD3  sub_140281BD3
+  -> 0x140281BD3  rdtsc  [RDTSC: timing-based anti-debug]
+0x140283353  sub_140283353
+  -> 0x140283363  cpuid  [CPUID: VM/hypervisor detection]
+0x140283998  sub_140283998
+  -> 0x1402839A8  cpuid  [CPUID: VM/hypervisor detection]
+0x140284ED6  sub_140284ED6
+  -> 0x140284EE6  cpuid  [CPUID: VM/hypervisor detection]
+0x140284FBE  sub_140284FBE
+  -> 0x140284FCE  cpuid  [CPUID: VM/hypervisor detection]
+0x140285A6F  sub_140285A6F
+  -> 0x140285A7F  cpuid  [CPUID: VM/hypervisor detection]
+0x140286044  sub_140286044
+  -> 0x140286054  cpuid  [CPUID: VM/hypervisor detection]
+0x14028641D  sub_14028641D
+  -> 0x14028641D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140286434  sub_140286434
+  -> 0x140286444  cpuid  [CPUID: VM/hypervisor detection]
+0x140286C1D  sub_140286C1D
+  -> 0x140286C1D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140286E2D  sub_140286E2D
+  -> 0x140286E2D  rdtsc  [RDTSC: timing-based anti-debug]
+0x140288475  sub_140288475
+  -> 0x140288485  cpuid  [CPUID: VM/hypervisor detection]
+0x140289A5B  sub_140289A5B
+  -> 0x140289A5B  rdtsc  [RDTSC: timing-based anti-debug]
+0x140289C38  sub_140289C38
+  -> 0x140289C48  cpuid  [CPUID: VM/hypervisor detection]
+0x140289FCB  sub_140289FCB
+  -> 0x140289FD8  cpuid  [CPUID: VM/hypervisor detection]
+0x14028A0D8  sub_14028A0D8
+  -> 0x14028A0E8  cpuid  [CPUID: VM/hypervisor detection]
+0x14028A5C6  sub_14028A5C6
+  -> 0x14028A5C6  rdtsc  [RDTSC: timing-based anti-debug]
+0x14028BB39  sub_14028BB39
+  -> 0x14028BB39  rdtsc  [RDTSC: timing-based anti-debug]
+0x14028D986  sub_14028D986
+  -> 0x14028D986  rdtsc  [RDTSC: timing-based anti-debug]
+0x14028D99D  sub_14028D99D
+  -> 0x14028D99D  rdtsc  [RDTSC: timing-based anti-debug]
+0x14028E630  sub_14028E630
+  -> 0x14028E630  rdtsc  [RDTSC: timing-based anti-debug]
+0x14028F002  sub_14028F002
+  -> 0x14028F012  cpuid  [CPUID: VM/hypervisor detection]
+0x1402908C2  sub_1402908C2
+  -> 0x1402908D2  cpuid  [CPUID: VM/hypervisor detection]
+0x140290A0F  sub_140290A0F
+  -> 0x140290A1C  cpuid  [CPUID: VM/hypervisor detection]
+0x140290D1C  sub_140290D1C
+  -> 0x140290D1C  rdtsc  [RDTSC: timing-based anti-debug]
+0x140294B28  sub_140294B28
+  -> 0x140294B35  cpuid  [CPUID: VM/hypervisor detection]
+0x140295C42  sub_140295C42
+  -> 0x140295C42  rdtsc  [RDTSC: timing-based anti-debug]
+0x140296B9E  sub_140296B9E
+  -> 0x140296B9E  rdtsc  [RDTSC: timing-based anti-debug]
+0x140297696  sub_140297696
+  -> 0x140297696  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402983A5  sub_1402983A5
+  -> 0x1402983B2  cpuid  [CPUID: VM/hypervisor detection]
+0x140298461  sub_140298461
+  -> 0x14029846E  cpuid  [CPUID: VM/hypervisor detection]
+0x140299655  sub_140299655
+  -> 0x140299655  rdtsc  [RDTSC: timing-based anti-debug]
+0x140299BF9  sub_140299BF9
+  -> 0x140299C06  cpuid  [CPUID: VM/hypervisor detection]
+0x14029A43D  sub_14029A43D
+  -> 0x14029A43D  rdtsc  [RDTSC: timing-based anti-debug]
+0x14029A476  sub_14029A476
+  -> 0x14029A476  rdtsc  [RDTSC: timing-based anti-debug]
+0x14029CABA  sub_14029CABA
+  -> 0x14029CABA  rdtsc  [RDTSC: timing-based anti-debug]
+0x14029CACE  sub_14029CACE
+  -> 0x14029CACE  rdtsc  [RDTSC: timing-based anti-debug]
+0x14029CAFC  sub_14029CAFC
+  -> 0x14029CB0C  cpuid  [CPUID: VM/hypervisor detection]
+0x14029DA1F  sub_14029DA1F
+  -> 0x14029DA2F  cpuid  [CPUID: VM/hypervisor detection]
+0x14029E2A9  sub_14029E2A9
+  -> 0x14029E2B9  cpuid  [CPUID: VM/hypervisor detection]
+0x14029E2DD  sub_14029E2DD
+  -> 0x14029E2ED  cpuid  [CPUID: VM/hypervisor detection]
+0x14029FF59  sub_14029FF59
+  -> 0x14029FF59  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A0138  sub_1402A0138
+  -> 0x1402A0148  cpuid  [CPUID: VM/hypervisor detection]
+0x1402A025E  sub_1402A025E
+  -> 0x1402A026E  cpuid  [CPUID: VM/hypervisor detection]
+0x1402A07F6  sub_1402A07F6
+  -> 0x1402A07F6  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A1055  sub_1402A1055
+  -> 0x1402A1055  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A1120  sub_1402A1120
+  -> 0x1402A1120  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A1C40  sub_1402A1C40
+  -> 0x1402A1C40  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A3AAD  sub_1402A3AAD
+  -> 0x1402A3ABA  cpuid  [CPUID: VM/hypervisor detection]
+0x1402A5F6D  sub_1402A5F6D
+  -> 0x1402A5F6D  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A6A2E  sub_1402A6A2E
+  -> 0x1402A6A2E  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A7C64  sub_1402A7C64
+  -> 0x1402A7C64  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A8420  sub_1402A8420
+  -> 0x1402A842D  cpuid  [CPUID: VM/hypervisor detection]
+0x1402A8451  sub_1402A8451
+  -> 0x1402A8461  cpuid  [CPUID: VM/hypervisor detection]
+0x1402A9667  sub_1402A9667
+  -> 0x1402A9667  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402A997F  sub_1402A997F
+  -> 0x1402A997F  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402AA0BA  sub_1402AA0BA
+  -> 0x1402AA0C7  cpuid  [CPUID: VM/hypervisor detection]
+0x1402AB987  sub_1402AB987
+  -> 0x1402AB987  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402ABE60  sub_1402ABE60
+  -> 0x1402ABE60  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402ADE31  sub_1402ADE31
+  -> 0x1402ADE31  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402AE728  sub_1402AE728
+  -> 0x1402AE728  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402AF94B  sub_1402AF94B
+  -> 0x1402AF94B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402AF95F  sub_1402AF95F
+  -> 0x1402AF96F  cpuid  [CPUID: VM/hypervisor detection]
+0x1402B0259  sub_1402B0259
+  -> 0x1402B0269  cpuid  [CPUID: VM/hypervisor detection]
+0x1402B0FA1  sub_1402B0FA1
+  -> 0x1402B0FA1  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B0FE5  sub_1402B0FE5
+  -> 0x1402B0FE5  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B165A  sub_1402B165A
+  -> 0x1402B166A  cpuid  [CPUID: VM/hypervisor detection]
+0x1402B1742  sub_1402B1742
+  -> 0x1402B1752  cpuid  [CPUID: VM/hypervisor detection]
+0x1402B2AE9  sub_1402B2AE9
+  -> 0x1402B2AE9  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B322D  sub_1402B322D
+  -> 0x1402B322D  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B4D9C  sub_1402B4D9C
+  -> 0x1402B4DAC  cpuid  [CPUID: VM/hypervisor detection]
+0x1402B5077  sub_1402B5077
+  -> 0x1402B5077  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B623B  sub_1402B623B
+  -> 0x1402B623B  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B670D  sub_1402B670D
+  -> 0x1402B670D  rdtsc  [RDTSC: timing-based anti-debug]
+0x1402B6FEE  sub_1402B6FEE
+  -> 0x1402B6FEE  rdtsc  [RDTSC: timing-based anti-debug]

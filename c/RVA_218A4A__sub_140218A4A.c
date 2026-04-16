@@ -1,0 +1,116 @@
+// ╔══════════════════════════════════════════════════════╗
+// ║  Function  : sub_140218A4A                          ║
+// ║  VA        : 0x140218A4A                            ║
+// ║  RVA       : 0x218A4A                               ║
+// ║  Type      : Hex-Rays C                             ║
+// ╚══════════════════════════════════════════════════════╝
+
+// ⚠ SUSPICIOUS PATTERNS DETECTED:
+//   [0x140218A4A] rdtsc  --  RDTSC: timing-based anti-debug
+//
+// ── CALLED BY (1) ──
+//   0x140218A48  sub_140218996
+//
+// ── CALLS TO (4) ──
+//   0x140218A4C  sub_140218A4A
+//   0x140218A54  sub_140218A4A
+//   0x140218A5C  sub_140218A4A
+//   0x141226AB3  sub_141226AB3
+//
+// ───────────────────────────────────────────────────────
+
+void __fastcall __noreturn sub_140218A4A(
+        int a1,
+        __int64 a2,
+        int a3,
+        int a4,
+        int a5,
+        __int64 a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        int a13,
+        __int64 a14,
+        __int64 a15,
+        int a16,
+        int a17,
+        int a18,
+        __int64 a19,
+        int a20,
+        int a21,
+        int a22,
+        int a23,
+        int a24,
+        int a25,
+        __int64 a26,
+        int a27,
+        int a28,
+        int a29,
+        int a30,
+        int a31,
+        int a32,
+        int a33,
+        int a34,
+        int a35,
+        __int64 a36,
+        __int64 a37,
+        int a38,
+        int a39,
+        int a40,
+        int a41,
+        int a42,
+        __int64 a43)
+{
+  unsigned __int64 v43; // rax
+
+  v43 = __rdtsc();
+  STACK[0x210] = HIDWORD(v43);
+  sub_141226AB3(
+    a1,
+    HIDWORD(v43),
+    a3,
+    a4,
+    a5,
+    a6,
+    a7,
+    a8,
+    a9,
+    a10,
+    a11,
+    a12,
+    a13,
+    a14,
+    a15,
+    a16,
+    a17,
+    a18,
+    a19,
+    a20,
+    a21,
+    a22,
+    a23,
+    a24,
+    a25,
+    a26,
+    a27,
+    a28,
+    a29,
+    a30,
+    a31,
+    a32,
+    a33,
+    a34,
+    a35,
+    v43,
+    a37,
+    a38,
+    a39,
+    a40,
+    a41,
+    a42,
+    a43);
+}
+

@@ -1,0 +1,119 @@
+REFERENCED STRINGS
+======================================================================
+
+[1]
+  "%p ; %S ; %p ; %S ; %X ; %X
+"
+  Used in:
+    - sub_140004D0C
+
+[1]
+  "%p ; %S ; %p ; %Iu ; %p ; %S ; %X ; %X
+"
+  Used in:
+    - sub_140004D0C
+
+[1]
+  "%u ; %08x ; %08x
+"
+  Used in:
+    - sub_140008A68
+
+[1]
+  "%d
+"
+  Used in:
+    - sub_14004E8EC
+
+[1]
+  "%d ; %08x ; 0x%p ; %S
+"
+  Used in:
+    - sub_140050B58
+
+[1]
+  "%08x
+"
+  Used in:
+    - sub_14005266C
+
+[1]
+  "Microsoft Primitive Provider"
+  Used in:
+    - sub_140076500
+
+[1]
+  "RSA"
+  Used in:
+    - sub_140076500
+
+[1]
+  "RSAPUBLICBLOB"
+  Used in:
+    - sub_140076500
+
+[1]
+  "%d.%d"
+  Used in:
+    - sub_140076500
+
+[1]
+  ".%u"
+  Used in:
+    - sub_140076500
+
+[1]
+  "1.2.840.113549.1.1.5"
+  Used in:
+    - sub_140076500
+
+[1]
+  "1.2.840.113549.1.1.11"
+  Used in:
+    - sub_140076500
+
+[1]
+  "1.2.840.113549.1.1.12"
+  Used in:
+    - sub_140076500
+
+[1]
+  "1.2.840.113549.1.1.13"
+  Used in:
+    - sub_140076500
+
+[1]
+  "SHA1"
+  Used in:
+    - sub_140076500
+
+[1]
+  "ObjectLength"
+  Used in:
+    - sub_140076500
+
+[1]
+  "SHA256"
+  Used in:
+    - sub_140076500
+
+[1]
+  "SHA384"
+  Used in:
+    - sub_140076500
+
+[1]
+  "SHA512"
+  Used in:
+    - sub_140076500
+
+[1]
+  "SysDispAffinity"
+  Used in:
+    - sub_140082DCC
+
+[1]
+  "%d ; %08x
+"
+  Used in:
+    - sub_14008D08C
